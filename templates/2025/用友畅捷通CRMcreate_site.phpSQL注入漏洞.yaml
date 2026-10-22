@@ -1,0 +1,23 @@
+id: poc-b23ceeee746643f24e13
+info:
+  name: 用友畅捷通CRMcreate_site.phpSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b23ceeee746643f24e135921b217994b
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b23ceeee746643f24e135921b217994b
+    fofa: + hunter`web.icon=="223dcd70f982801e9177078a818a9b59"`
+http:
+- raw:
+  - 'GET /webservice/create_site.php?site_id=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

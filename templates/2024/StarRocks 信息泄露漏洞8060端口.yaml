@@ -1,0 +1,34 @@
+id: poc-tqpn44pnirrpb45g
+info:
+  name: StarRocks 信息泄露漏洞8060端口
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tqpn44pnirrpb45g'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tqpn44pnirrpb45g
+    fofa: '"StarRocks" && port="8060"'
+http:
+- raw:
+  - 'GET /status HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

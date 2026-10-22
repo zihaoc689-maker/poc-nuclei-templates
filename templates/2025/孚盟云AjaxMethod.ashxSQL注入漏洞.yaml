@@ -1,0 +1,23 @@
+id: poc-cefee064f4584fec282c
+info:
+  name: 孚盟云AjaxMethod.ashxSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cefee064f4584fec282c970db62c1444
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cefee064f4584fec282c970db62c1444
+    fofa: + hunter`app.name="孚盟云 CRM"`
+http:
+- raw:
+  - 'GET /Ajax/AjaxMethod.ashx?action=getEmpByname&Name=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

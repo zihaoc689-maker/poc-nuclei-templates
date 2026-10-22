@@ -1,0 +1,23 @@
+id: poc-3700a75d9571393a1696
+info:
+  name: Jenkins未授权远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3700a75d9571393a169610339f86c815
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 3700a75d9571393a169610339f86c815
+    fofa: + hunter`app.name="Jenkins Dashboard"`
+http:
+- raw:
+  - 'GET /script HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

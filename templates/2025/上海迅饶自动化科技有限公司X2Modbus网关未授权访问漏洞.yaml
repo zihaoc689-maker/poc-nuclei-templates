@@ -1,0 +1,23 @@
+id: poc-761d3d2fbfa541b14ed6
+info:
+  name: 上海迅饶自动化科技有限公司X2Modbus网关未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/761d3d2fbfa541b14ed69eb9bfcbee65
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 761d3d2fbfa541b14ed69eb9bfcbee65
+    fofa: + fofa`server="SunFull-Webs" || icon_hash="-1384370370"`
+http:
+- raw:
+  - 'GET /index.html HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

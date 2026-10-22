@@ -1,0 +1,34 @@
+id: poc-bsalhtod8vrshagp
+info:
+  name: Spring_jolokia_realm_jndi_rce
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bsalhtod8vrshagp'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bsalhtod8vrshagp
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /jolokia/list HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?(?:MBeanFactory|createJNDIRealm)).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

