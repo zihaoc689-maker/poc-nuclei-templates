@@ -3,12 +3,8 @@ info:
   name: 正方移动信息服务管理系统Mobile_fjUploadByType.html文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lotwxzlsbugkuisd'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lotwxzlsbugkuisd
-    fofa: body="正方软件股份有限公司"
 http:
 - raw:
   - 'POST /zftal-mobile/oaMobile/oaMobile_fjUploadByType.html HTTP/1.1

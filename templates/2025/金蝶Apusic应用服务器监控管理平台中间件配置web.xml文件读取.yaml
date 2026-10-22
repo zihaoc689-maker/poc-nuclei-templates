@@ -3,12 +3,8 @@ info:
   name: 金蝶Apusic应用服务器监控管理平台中间件配置web.xml文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gocbbek48ppgazro'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gocbbek48ppgazro
-    fofa: server="Apusic"
 http:
 - raw:
   - GET /WEB-INF/web.xml HTTP/1.1

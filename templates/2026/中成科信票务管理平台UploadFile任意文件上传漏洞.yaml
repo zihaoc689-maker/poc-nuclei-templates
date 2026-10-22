@@ -3,12 +3,8 @@ info:
   name: 中成科信票务管理平台UploadFile任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dl9yqkk0s7zlcelm'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dl9yqkk0s7zlcelm
-    fofa: body="SystemManager/SoftwareLicense.htm"
 http:
 - raw:
   - 'POST /api/File/UploadFile HTTP/1.1

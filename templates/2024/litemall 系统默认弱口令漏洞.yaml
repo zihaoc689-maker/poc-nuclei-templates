@@ -3,12 +3,8 @@ info:
   name: litemall 系统默认弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dyhy1ukrawo6v8uk'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dyhy1ukrawo6v8uk
-    fofa: title="litemall"
 http:
 - raw:
   - 'POST /admin/auth/login HTTP/1.1
@@ -45,8 +41,6 @@ http:
 
 
     Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
-
-
 
 
     {"username":"admin123","password":"admin123"}

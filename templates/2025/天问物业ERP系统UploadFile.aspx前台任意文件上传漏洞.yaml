@@ -3,14 +3,8 @@ info:
   name: 天问物业ERP系统UploadFile.aspx前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/50868f66780e4a8ad82d4a8472f62f1b
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 50868f66780e4a8ad82d4a8472f62f1b
-    fofa: + fofa`body="国家版权局软著登字第1205328号"`
 http:
 - raw:
   - 'POST /HM/M_Main/IntroductionManage/UploadFile.aspx HTTP/1.1

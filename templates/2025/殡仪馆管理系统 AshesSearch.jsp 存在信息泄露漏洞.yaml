@@ -3,12 +3,8 @@ info:
   name: 殡仪馆管理系统 AshesSearch.jsp 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iut0sf8t89douq1r'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iut0sf8t89douq1r
-    fofa: web.icon=="0d1a8dfb0a11c6c31599b83f05e90dfc"||body="defaultCRMB.jsp"||body="defaultCRMLogin.jsp"||body="defaultCRM.jsp"
 http:
 - raw:
   - 'GET /com/byg/ashes/AshesSearch.jsp HTTP/1.1

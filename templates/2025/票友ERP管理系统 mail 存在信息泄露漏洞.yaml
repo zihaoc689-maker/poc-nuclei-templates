@@ -3,12 +3,8 @@ info:
   name: 票友ERP管理系统 mail 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tb0g7nzrtffhlqtn'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tb0g7nzrtffhlqtn
-    fofa: (body="css/sexybuttons.css" && body="Ajax/confirm.ashx") || title="票友ERP" || body="tickets/intCity.css"
 http:
 - raw:
   - 'GET /Parmset/mail.aspx HTTP/1.1

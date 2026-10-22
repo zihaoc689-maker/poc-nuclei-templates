@@ -3,12 +3,8 @@ info:
   name: gradio gradio存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oxsgb68qsumqry11'
+  description: ''
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oxsgb68qsumqry11
-    fofa: title="gradio" || body="__gradio_mode__"
 http:
 - raw:
   - 'POST /queue/join? HTTP/1.1

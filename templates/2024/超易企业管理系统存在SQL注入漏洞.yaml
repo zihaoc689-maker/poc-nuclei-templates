@@ -3,12 +3,8 @@ info:
   name: 超易企业管理系统存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oyygn0mzv0gyyld1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oyygn0mzv0gyyld1
-    fofa: '"超易企业管理系统"'
 http:
 - raw:
   - 'POST /ajax/Login.ashx?Date=%271721821198459%27 HTTP/1.1

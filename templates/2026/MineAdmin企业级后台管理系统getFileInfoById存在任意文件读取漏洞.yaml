@@ -3,12 +3,8 @@ info:
   name: MineAdmin企业级后台管理系统getFileInfoById存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ivapatyykyouxgn4'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ivapatyykyouxgn4
-    fofa: body="MineAdmin"
 http:
 - raw:
   - 'GET /system/getFileInfoById?id=43 HTTP/1.1

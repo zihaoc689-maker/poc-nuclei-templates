@@ -3,12 +3,8 @@ info:
   name: MM-Wiki 文档管理器未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/opgb0q5ilde96iwg'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: opgb0q5ilde96iwg
-    fofa: header="mmwikissid"
 http:
 - raw:
   - 'GET /page/display?document_id=1 HTTP/1.1

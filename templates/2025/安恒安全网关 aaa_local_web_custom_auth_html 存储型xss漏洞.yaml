@@ -3,12 +3,8 @@ info:
   name: 安恒安全网关 aaa_local_web_custom_auth_html 存储型xss漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/woufhhcsweeg5gx0'
+  description: ''
   tags: xss,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: woufhhcsweeg5gx0
-    fofa: title="明御安全网关"
 http:
 - raw:
   - '上传xss文件

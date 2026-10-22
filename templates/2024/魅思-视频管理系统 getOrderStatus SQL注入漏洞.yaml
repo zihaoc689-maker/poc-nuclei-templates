@@ -3,12 +3,8 @@ info:
   name: 魅思-视频管理系统 getOrderStatus SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kol6epqvo0g6uws8'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kol6epqvo0g6uws8
-    fofa: app="魅思-视频管理系统"
 http:
 - raw:
   - 'POST /api/getOrderStatus HTTP/1.1

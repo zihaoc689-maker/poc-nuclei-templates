@@ -3,12 +3,8 @@ info:
   name: 迅饶科技 GetUserList信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cq72m8v9azuwkrke'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cq72m8v9azuwkrke
-    fofa: server="SunFull-Webs"
 http:
 - raw:
   - 'GET /soap/GetUserList HTTP/1.1

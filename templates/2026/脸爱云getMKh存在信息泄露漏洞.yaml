@@ -3,12 +3,8 @@ info:
   name: 脸爱云getMKh存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kgiyi32ry1ozorcs'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kgiyi32ry1ozorcs
-    fofa: body="View/UserReserved/UserReservedTest.aspx"
 http:
 - raw:
   - 'GET /getMKh.ashx?TyName=Inyt HTTP/1.1

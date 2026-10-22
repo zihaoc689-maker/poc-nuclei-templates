@@ -3,12 +3,8 @@ info:
   name: 锐捷RG-UAC统一上网行为管理与审计系统管理员密码泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zs4xk4ossg13zikm'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zs4xk4ossg13zikm
-    fofa: title="RG-UAC登录页面" && body="admin"
 http:
 - raw:
   - 'GET / HTTP/1.1

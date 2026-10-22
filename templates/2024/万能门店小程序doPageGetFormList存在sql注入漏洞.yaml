@@ -3,12 +3,8 @@ info:
   name: 万能门店小程序doPageGetFormList存在sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ue1g7fus6977al2n'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ue1g7fus6977al2n
-    fofa: '"/comhome/cases/index.html"'
 http:
 - raw:
   - 'POST /api/wxapps/doPageGetFormList HTTP/1.1

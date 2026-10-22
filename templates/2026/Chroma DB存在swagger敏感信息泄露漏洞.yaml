@@ -3,12 +3,8 @@ info:
   name: Chroma DB存在swagger敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc7pgzwukdzr7sgo'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qc7pgzwukdzr7sgo
-    fofa: Chroma
 http:
 - raw:
   - GET /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1

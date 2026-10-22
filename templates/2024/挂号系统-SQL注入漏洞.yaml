@@ -3,14 +3,8 @@ info:
   name: 挂号系统-SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bb8uxi8pxlsr04ms
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bb8uxi8pxlsr04ms
-    fofa: body="res/img/ht_box_back.gif" || body="/res/img/ht_box_top.gif" || body="/res/img/ht_box_bottom.gif" || body="dom_loaded.load(init);"
 http:
 - raw:
   - 'POST /m/login.php?op=login HTTP/1.1

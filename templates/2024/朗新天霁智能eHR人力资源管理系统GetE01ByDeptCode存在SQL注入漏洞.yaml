@@ -3,12 +3,8 @@ info:
   name: 朗新天霁智能eHR人力资源管理系统GetE01ByDeptCode存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nlas308gn9cnagxo'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nlas308gn9cnagxo
-    fofa: body="divRememberPwd"
 http:
 - raw:
   - 'POST /api/Com/GetE01ByDeptCode HTTP/1.1

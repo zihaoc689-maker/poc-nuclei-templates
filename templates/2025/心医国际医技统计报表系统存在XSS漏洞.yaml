@@ -3,13 +3,8 @@ info:
   name: 心医国际医技统计报表系统存在XSS漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9b8a4528cc82a5f351267065fc08a4c8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: xss,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9b8a4528cc82a5f351267065fc08a4c8
 http:
 - raw:
   - 'POST /EasyReport/login.do?method=handleRequestInternal HTTP/1.1

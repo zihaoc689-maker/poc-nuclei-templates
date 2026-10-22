@@ -3,12 +3,8 @@ info:
   name: 金斗云 HKMP智慧商业软件 任意用户创建漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sxuhdcg6eu4a8xs3'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sxuhdcg6eu4a8xs3
-    fofa: body="金斗云 Copyright"
 http:
 - raw:
   - 'POST /admin/user/add HTTP/1.1

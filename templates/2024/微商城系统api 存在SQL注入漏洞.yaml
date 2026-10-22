@@ -3,12 +3,8 @@ info:
   name: 微商城系统api 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dy0qvfdzenecs19f'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dy0qvfdzenecs19f
-    fofa: body="/Mao_Public/js/jquery-2.1.1.min.js"
 http:
 - raw:
   - 'GET /api/data.php?mod=list&lx=2&search=123 HTTP/1.1

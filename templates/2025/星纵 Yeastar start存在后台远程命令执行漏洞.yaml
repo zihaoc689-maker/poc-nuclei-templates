@@ -3,12 +3,8 @@ info:
   name: 星纵 Yeastar start存在后台远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nsq3f9wrgczgv8kl'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nsq3f9wrgczgv8kl
-    fofa: app="Yeastar-VOIP"
 http:
 - raw:
   - '使用admin/password登录系统获取cookie

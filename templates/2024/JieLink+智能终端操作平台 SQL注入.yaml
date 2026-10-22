@@ -3,12 +3,8 @@ info:
   name: JieLink+智能终端操作平台 SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ue5yygx0u8gnd5iv'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ue5yygx0u8gnd5iv
-    fofa: title=="JieLink+智能终端操作平台"
 http:
 - raw:
   - 'POST /mobile/Remote/GetParkController HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Connection: close
-
-
 
 
     deviceId=1

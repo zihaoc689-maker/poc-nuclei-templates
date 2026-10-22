@@ -3,12 +3,8 @@ info:
   name: SimpleMachinesForum存在源码泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hwoig6ikd5fl6qnh'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hwoig6ikd5fl6qnh
-    fofa: product="Simple_Machines-产品"
 http:
 - raw:
   - 'GET /index.php~ HTTP/1.1

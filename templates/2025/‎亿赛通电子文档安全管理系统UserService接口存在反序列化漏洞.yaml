@@ -3,12 +3,8 @@ info:
   name: ‎亿赛通电子文档安全管理系统UserService接口存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cmye7qgdeksfracp'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cmye7qgdeksfracp
-    fofa: body="/CDGServer3/index.jsp" || app="亿赛通-电子文档安全管理系统"
 http:
 - raw:
   - 'POST /CDGServer3/GetValidateLoginUserService HTTP/1.1

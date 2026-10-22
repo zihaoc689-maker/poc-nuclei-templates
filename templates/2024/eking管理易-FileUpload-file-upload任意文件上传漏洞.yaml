@@ -3,12 +3,8 @@ info:
   name: eking管理易-FileUpload-file-upload任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zu7og2le4xvregtn'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zu7og2le4xvregtn
-    fofa: app="EKing-管理易"
 http:
 - raw:
   - '上传文件：

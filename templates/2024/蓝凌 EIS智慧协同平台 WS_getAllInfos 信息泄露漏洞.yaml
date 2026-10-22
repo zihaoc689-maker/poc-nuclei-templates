@@ -3,12 +3,8 @@ info:
   name: 蓝凌 EIS智慧协同平台 WS_getAllInfos 信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sobtmhvoffrnxwte'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sobtmhvoffrnxwte
-    fofa: app="Landray-EIS智慧协同平台"
 http:
 - raw:
   - 'POST /WS/Basic/Basic.asmx HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Content-Type: text/xml;charset=UTF-8
-
-
 
 
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">

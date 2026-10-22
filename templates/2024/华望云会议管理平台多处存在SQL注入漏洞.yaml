@@ -3,12 +3,8 @@ info:
   name: 华望云会议管理平台多处存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oo3nr1ia44r4mofy'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oo3nr1ia44r4mofy
-    fofa: "title=\"\t华望云会议管理平台\t\""
 http:
 - raw:
   - 'POST /ajax/userlogin HTTP/1.1

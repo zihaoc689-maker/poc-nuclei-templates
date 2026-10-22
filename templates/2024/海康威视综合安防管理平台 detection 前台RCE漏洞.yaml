@@ -3,12 +3,8 @@ info:
   name: 海康威视综合安防管理平台 detection 前台RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgcuyl5d7vd0y43t'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cgcuyl5d7vd0y43t
-    fofa: app="HIKVISION-iSecure-Center"
 http:
 - raw:
   - 'POST /center/api/installation/detection HTTP/1.1
@@ -32,9 +28,7 @@ http:
 
     验证url
 
-    /vms/static/1.txt
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1722244161590-a44fc5bf-e75b-4b88-9ea9-0e49d40b585e.png)'
+    /vms/static/1.txt'
   redirects: false
   matchers:
   - status:

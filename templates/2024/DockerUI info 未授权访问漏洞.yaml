@@ -3,12 +3,8 @@ info:
   name: DockerUI info 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kuu5h1bdq816f9e8'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kuu5h1bdq816f9e8
-    fofa: '"static/common/js/ui.js"'
 http:
 - raw:
   - 'GET /docker-api-stream/info HTTP/1.1

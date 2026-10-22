@@ -3,12 +3,8 @@ info:
   name: 安科瑞智能环保云平台GetDates存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/puo5z0l8ibutxgny'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: puo5z0l8ibutxgny
-    fofa: body="myCss/phone.css" || body="/signInIcon/iconfont.css" || (body="环保用电监管云平台" && body="Acrel") || body="var ecloginname = $(\"#LoginName\").val();" || title="安科瑞环保用电"
 http:
 - raw:
   - 'POST /MainMonitor/GetEnterpriseInfoMapByDate/GetDates HTTP/1.1

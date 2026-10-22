@@ -3,12 +3,8 @@ info:
   name: 微信活码系统updateInfos前台未授权任意用户密码修改
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/splbchep9d0nzuys'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: splbchep9d0nzuys
-    fofa: body=".qn-user-login"
 http:
 - raw:
   - '默认管理员用户名为admin且uid为1

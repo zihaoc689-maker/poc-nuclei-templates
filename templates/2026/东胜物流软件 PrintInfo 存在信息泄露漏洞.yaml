@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件 PrintInfo 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cuf2lq7dmc97in5l'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cuf2lq7dmc97in5l
-    fofa: (body="FeeCodes/CompanysAdapter.aspx" || body="dhtmlxcombo_whp.js" || body="dongshengsoft" || body="theme/dhtmlxcombo.css") && body="东胜"
 http:
 - raw:
   - 'POST /CommMng/Print/GetPrintInfo HTTP/1.1

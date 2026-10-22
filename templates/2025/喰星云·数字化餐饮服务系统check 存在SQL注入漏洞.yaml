@@ -3,12 +3,8 @@ info:
   name: 喰星云·数字化餐饮服务系统check 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oq3dnfceb6fk5h4b'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oq3dnfceb6fk5h4b
-    fofa: body="tmp_md5_pwd"
 http:
 - raw:
   - 'POST /chainsales/mobile/home/check HTTP/1.1

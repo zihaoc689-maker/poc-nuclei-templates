@@ -3,12 +3,8 @@ info:
   name: 装盟科技-家装ERP管理系统 Budget.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vh165cn0232ga0ix'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vh165cn0232ga0ix
-    fofa: app="装盟科技-家装ERP管理系统"
 http:
 - raw:
   - 'POST /WEB_SERVICE/Budget.asmx/getFixedBaseInfo HTTP/1.1

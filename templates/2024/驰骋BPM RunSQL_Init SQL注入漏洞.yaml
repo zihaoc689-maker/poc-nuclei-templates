@@ -3,12 +3,8 @@ info:
   name: 驰骋BPM RunSQL_Init SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wmh5gmnv86uogqgs'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wmh5gmnv86uogqgs
-    fofa: icon_hash="-1564380241" || body="正在登录流程&表单引擎设计器,请稍候"
 http:
 - raw:
   - 'POST /WF/Comm/Handler.ashx?DoType=RunSQL_Init HTTP/1.1

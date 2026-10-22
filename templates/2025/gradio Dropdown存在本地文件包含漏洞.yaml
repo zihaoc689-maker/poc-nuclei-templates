@@ -3,12 +3,8 @@ info:
   name: gradio Dropdown存在本地文件包含漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wb8bk805mvvqx6xl'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wb8bk805mvvqx6xl
-    fofa: title="gradio" || body="__gradio_mode__"
 http:
 - raw:
   - '前提条件：

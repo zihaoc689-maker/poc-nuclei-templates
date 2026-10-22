@@ -3,12 +3,8 @@ info:
   name: WordPress Cloudflare Image Resizing 插件存在前台代码执行漏洞(RCE)
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qx6kua5buo8qr29g'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qx6kua5buo8qr29g
-    fofa: 暂无
 http:
 - raw:
   - 'POST /wp-json/wp/v2/settings/ HTTP/1.1

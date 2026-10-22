@@ -3,12 +3,8 @@ info:
   name: 泛微 E-office v9.0 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rup22b7509m9d11b'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rup22b7509m9d11b
-    fofa: 暂无
 http:
 - raw:
   - 'GET /UserSelect/ HTTP/1.1

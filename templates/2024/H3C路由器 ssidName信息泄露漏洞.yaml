@@ -3,12 +3,8 @@ info:
   name: H3C路由器 ssidName信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkgq31zp6r7yf426'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rkgq31zp6r7yf426
-    fofa: body="/grwizard/h3c.ico"
 http:
 - raw:
   - 'GET /h3c/local/ssidName HTTP/1.1

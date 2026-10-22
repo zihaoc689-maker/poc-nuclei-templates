@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统多个接口存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zis25taov3p67dpk'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zis25taov3p67dpk
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - 'getConfigValues.do、findAuditors.do、statWxApiRecord.do、findAllUser.do、findDeptPage.do、findAllDept.do、tdSysFindDepartmentTree.do、findOnlineUserForPage.do、extconftabledata 存在敏感信息泄露漏洞

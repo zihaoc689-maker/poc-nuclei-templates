@@ -3,12 +3,8 @@ info:
   name: Ymnets.net框架 upload文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mkhutmkf9g5i10kw'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mkhutmkf9g5i10kw
-    fofa: body="/Core/verify_code.ashx"
 http:
 - raw:
   - 'POST /SysHelper/Upload HTTP/1.1

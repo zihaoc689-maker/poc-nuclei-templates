@@ -3,12 +3,8 @@ info:
   name: verna快速开发框架listPage 存在SQL注⼊漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nt98fqi56y5i30w0'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nt98fqi56y5i30w0
-    fofa: icon_hash="790525601"
 http:
 - raw:
   - 'POST /demo/dealer/listPage HTTP/1.1

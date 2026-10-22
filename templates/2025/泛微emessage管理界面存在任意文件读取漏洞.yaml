@@ -3,14 +3,8 @@ info:
   name: 泛微emessage管理界面存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/36dade3ff45b0007d82f2e2b6bcd869d
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 36dade3ff45b0007d82f2e2b6bcd869d
-    fofa: + hunter`app.name=="emessage"`
 http:
 - raw:
   - 'POST / HTTP/1.1

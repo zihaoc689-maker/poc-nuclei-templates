@@ -3,12 +3,8 @@ info:
   name: 企业信息发送平台 getLicenceDetail 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/axlxgk1kel8s1rrm'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: axlxgk1kel8s1rrm
-    fofa: fid="G+ad9wy/zlkrmbSKJo9x+Q=="
 http:
 - raw:
   - 'POST /getLicenceDetail HTTP/1.1

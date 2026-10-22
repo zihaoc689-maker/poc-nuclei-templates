@@ -3,12 +3,8 @@ info:
   name: 用友U8Cloud nc.bs.pf.pub.MailApproveServlet存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ilm7glnhgb661xdn'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ilm7glnhgb661xdn
-    fofa: title=="U8C"
 http:
 - raw:
   - 'POST /service/~uap/nc.bs.pf.pub.MailApproveServlet HTTP/1.1

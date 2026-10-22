@@ -3,12 +3,8 @@ info:
   name: 电信网关 upload_channels.php任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rvwg1zagb2e017zi'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rvwg1zagb2e017zi
-    fofa: body="a:link{text-decoration:none;color:orange;}"
 http:
 - raw:
   - 'POST /bak_manager/upload_channels.php HTTP/1.1

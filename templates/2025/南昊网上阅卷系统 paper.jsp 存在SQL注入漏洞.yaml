@@ -3,12 +3,8 @@ info:
   name: 南昊网上阅卷系统 paper.jsp 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wr7mvpfydwbzl787'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wr7mvpfydwbzl787
-    fofa: app="南昊网上阅卷系统"
 http:
 - raw:
   - 'POST /exam/admin/chaxun/biaozhi_paper.jsp?paper_id=100004&&actionid=1 HTTP/1.1

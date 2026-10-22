@@ -3,12 +3,8 @@ info:
   name: 亿赛通CDG WorkFlowAction存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xvk13huiz5bat63d'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xvk13huiz5bat63d
-    fofa: app="亿赛通-电子文档安全管理系统" || app="亿赛通-DLP"
 http:
 - raw:
   - 'POST /CDGServer3/3g/WorkFlowAction;Servicelogin HTTP/1.1

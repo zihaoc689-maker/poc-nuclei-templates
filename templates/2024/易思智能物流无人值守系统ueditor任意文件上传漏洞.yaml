@@ -3,12 +3,8 @@ info:
   name: 易思智能物流无人值守系统ueditor任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zfnvddbuaccsp38q'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zfnvddbuaccsp38q
-    fofa: '"智能物流无人值守系统"'
 http:
 - raw:
   - '1.新建文件1.png

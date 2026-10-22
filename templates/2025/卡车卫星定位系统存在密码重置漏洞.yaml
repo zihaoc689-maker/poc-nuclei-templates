@@ -3,14 +3,8 @@ info:
   name: 卡车卫星定位系统存在密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7f509618200bf261ad790cba529446ee
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 7f509618200bf261ad790cba529446ee
-    fofa: + fofa`icon_hash="1553867732"`
 http:
 - raw:
   - 'GET /user/1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 浮盟云AjaxOrderManage存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eiiy2fdee8no8iy5'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eiiy2fdee8no8iy5
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'POST /m/Dingding/Ajax/AjaxOrderManage.ashx HTTP/1.1

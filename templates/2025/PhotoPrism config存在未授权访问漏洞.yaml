@@ -3,12 +3,8 @@ info:
   name: PhotoPrism config存在未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xhynntd1z9086a9e'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xhynntd1z9086a9e
-    fofa: title="PhotoPrism"
 http:
 - raw:
   - GET /api/v1/config HTTP/1.1

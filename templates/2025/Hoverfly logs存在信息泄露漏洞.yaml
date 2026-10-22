@@ -3,18 +3,11 @@ info:
   name: Hoverfly logs存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vz2rza8swauoqua1'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vz2rza8swauoqua1
-    fofa: (title="Hoverfly Dashboard" && fid="kq7OPmsJgQHfdO+2tB7kPw==") || icon_hash="1357234275"
 http:
 - raw:
   - 'wscat -c ws://your-ip:port/api/v2/ws/logs
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455490610-558e8314-c7f4-4398-b912-826ca51cfb48.png)
 
 
     建立ws连接后
@@ -34,9 +27,7 @@ http:
 
     Sec-WebSocket-Version: 13
 
-    Upgrade: websocket
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455490839-11c279d3-9761-46c5-b8dd-d76ddfb3f23a.png)'
+    Upgrade: websocket'
   redirects: false
   matchers:
   - status:

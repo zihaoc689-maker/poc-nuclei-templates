@@ -3,12 +3,8 @@ info:
   name: 上讯信息 InforCube运维管理审计系统 RepeatSend 前台RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pio9z2gmti5w99tw'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pio9z2gmti5w99tw
-    fofa: body="default/getloginhtml"
 http:
 - raw:
   - 'POST /emailapply/RepeatSend HTTP/1.1

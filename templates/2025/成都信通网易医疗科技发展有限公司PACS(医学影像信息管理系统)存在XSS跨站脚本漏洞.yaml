@@ -3,13 +3,8 @@ info:
   name: 成都信通网易医疗科技发展有限公司PACS(医学影像信息管理系统)存在XSS跨站脚本漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f30f5b31e9e3e5c3e3828b8153f28c31
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: xss,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: f30f5b31e9e3e5c3e3828b8153f28c31
 http:
 - raw:
   - 'GET /JcbgForYsz/Show_Jcbg_Ysz.asp HTTP/1.1

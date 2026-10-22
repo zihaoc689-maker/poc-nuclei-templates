@@ -3,12 +3,8 @@ info:
   name: LightPicture 图床系统upload存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uhuroqwgv09p7g20'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uhuroqwgv09p7g20
-    fofa: title="LightPicture" || icon_hash="91344513"
 http:
 - raw:
   - 'POST /api/upload HTTP/1.1

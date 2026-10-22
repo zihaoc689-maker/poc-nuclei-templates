@@ -3,12 +3,8 @@ info:
   name: 金慧综合管理信息系统LoginBegin存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kuraueiquoyskypo'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kuraueiquoyskypo
-    fofa: 暂无
 http:
 - raw:
   - 'POST /Portal/LoginBegin.aspx HTTP/1.1

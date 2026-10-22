@@ -3,12 +3,8 @@ info:
   name: iDS联网数字标牌管理系统services存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nyxxtnyd14nn5esd'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nyxxtnyd14nn5esd
-    fofa: 暂无
 http:
 - raw:
   - 'GET /services/TaskLoad?wsdl HTTP/1.1

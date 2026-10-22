@@ -3,12 +3,8 @@ info:
   name: 亿赛通 logincontroller存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yu2ndg8xr0oprycv'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yu2ndg8xr0oprycv
-    fofa: app="亿赛通-电子文档安全管理系统"
 http:
 - raw:
   - '账号/密码:
@@ -59,11 +55,7 @@ http:
     Connection: close
 
 
-    command=Login&forward=frame.jsp&csrfmiddlewaretoken=1729242573777&name=LogAdmin&mima=l3sR9FHlwxCv53Xh%2BRmzVQ%3D%3D
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347155980-eba22108-dafc-48ec-a9ab-c0a2ff5f355b.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347156232-93e56f07-a3b9-4077-8fad-d2bdf063fc6b.png)'
+    command=Login&forward=frame.jsp&csrfmiddlewaretoken=1729242573777&name=LogAdmin&mima=l3sR9FHlwxCv53Xh%2BRmzVQ%3D%3D'
   redirects: false
   matchers:
   - status:

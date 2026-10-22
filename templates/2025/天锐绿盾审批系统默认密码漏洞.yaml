@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统默认密码漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nxccf2lggasix0rm'
+  description: ''
   tags: default-login,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nxccf2lggasix0rm
-    fofa: body="location.href=location.href+\"trwfe\";"||body="天锐绿盾"
 http:
 - raw:
   - 'POST /trwfe/user/logon.do HTTP/1.1

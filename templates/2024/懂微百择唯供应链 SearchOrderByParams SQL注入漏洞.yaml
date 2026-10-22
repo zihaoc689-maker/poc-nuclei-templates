@@ -3,12 +3,8 @@ info:
   name: 懂微百择唯供应链 SearchOrderByParams SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sfg5z66khgdhga0p'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sfg5z66khgdhga0p
-    fofa: body="/Content/Css/_SiteCss/"
 http:
 - raw:
   - 'POST /M/SearchOrderByParams HTTP/1.1

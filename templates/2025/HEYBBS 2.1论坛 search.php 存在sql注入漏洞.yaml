@@ -3,12 +3,8 @@ info:
   name: HEYBBS 2.1论坛 search.php 存在sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgc1oazuy7zc9o7o'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wgc1oazuy7zc9o7o
-    fofa: Body="微社区, 微论坛, 微博客"
 http:
 - raw:
   - '登录论坛账号然后发送下面POC进行测试

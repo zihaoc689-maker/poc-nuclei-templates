@@ -3,12 +3,8 @@ info:
   name: 秒优科技供应链管理系统doAction存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kl1iozudgz0y9l0a'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kl1iozudgz0y9l0a
-    fofa: app="秒优科技-供应链管理系统"
 http:
 - raw:
   - 'POST /zh/login/doAction HTTP/1.1

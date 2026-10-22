@@ -3,12 +3,8 @@ info:
   name: 亿赛通submitLogin 默认口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fxzzu5dp9tdk4k44'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fxzzu5dp9tdk4k44
-    fofa: app="亿赛通-电子文档安全管理系统"
 http:
 - raw:
   - 'POST /CDGServer3/druid/submitLogin HTTP/1.1

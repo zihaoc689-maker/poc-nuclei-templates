@@ -3,12 +3,8 @@ info:
   name: Netis路由器漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/twe50q380y85rmgl'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: twe50q380y85rmgl
-    fofa: 暂无
 http:
 - raw:
   - 'POST /cgi-bin/skk_get.cgi HTTP/1.1

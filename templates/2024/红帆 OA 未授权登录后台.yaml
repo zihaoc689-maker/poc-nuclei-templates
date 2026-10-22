@@ -3,12 +3,8 @@ info:
   name: 红帆 OA 未授权登录后台
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ie8b7owacgv8lm6b'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ie8b7owacgv8lm6b
-    fofa: 暂无
 http:
 - raw:
   - 'GET /iOffice/prg/interface/iologin215host.aspx HTTP/1.1

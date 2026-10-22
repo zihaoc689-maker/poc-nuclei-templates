@@ -3,12 +3,8 @@ info:
   name: 英飞达软件（上海）有限公司Upload.asmx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mfqvrpo21q1g8wwn'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mfqvrpo21q1g8wwn
-    fofa: '"INFINITT" && (icon_hash="1474455751" || icon_hash="702238928")'
 http:
 - raw:
   - 'POST /webservices/Upload.asmx HTTP/1.1

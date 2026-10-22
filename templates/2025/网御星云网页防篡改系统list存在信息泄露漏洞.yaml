@@ -3,12 +3,8 @@ info:
   name: 网御星云网页防篡改系统list存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lg6g6sz5cgmonvxt'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lg6g6sz5cgmonvxt
-    fofa: title="网御安全网关"
 http:
 - raw:
   - 'GET /API/user/list HTTP/1.1

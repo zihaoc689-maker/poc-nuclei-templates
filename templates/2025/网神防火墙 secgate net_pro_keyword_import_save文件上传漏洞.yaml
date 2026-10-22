@@ -3,12 +3,8 @@ info:
   name: 网神防火墙 secgate net_pro_keyword_import_save文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aqgev3k259buqrh4'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aqgev3k259buqrh4
-    fofa: title="网神SecGate 3600防火墙"
 http:
 - raw:
   - 'GET / HTTP/1.1

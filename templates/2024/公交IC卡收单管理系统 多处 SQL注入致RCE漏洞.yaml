@@ -3,14 +3,8 @@ info:
   name: 公交IC卡收单管理系统 多处 SQL注入致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gy15sz5v40bwq1ey
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gy15sz5v40bwq1ey
-    fofa: app="公交IC卡收单管理系统"
 http:
 - raw:
   - 'POST /login HTTP/1.1
@@ -33,7 +27,6 @@ http:
 
     username=admin&password=e10adc3949ba59abbe56e057f20f883e
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413433850-a8b529a7-29ef-4729-b78d-0cd5f8658fa6.png)
 
     **填入Cookie插入Payload延时5秒 **
 

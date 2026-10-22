@@ -3,14 +3,8 @@ info:
   name: ArrisTR3300路由器basic_sett存在未授权信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dde8ef8f2397b8944392dba02a115e4f
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dde8ef8f2397b8944392dba02a115e4f
-    fofa: + fofa`body="base64encode(document.tF.pws.value)" || body="ARRIS TR3300"`
 http:
 - raw:
   - 'GET /basic_sett.html HTTP/1.1

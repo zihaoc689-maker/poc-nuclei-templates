@@ -3,14 +3,8 @@ info:
   name: Everlab-CatalogUploadApi存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1b408d6e19cc469db66a2316e12f1b19
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 1b408d6e19cc469db66a2316e12f1b19
-    fofa: + Hunter`web.body="Everlab-Catalog"`
 http:
 - raw:
   - 'POST /Util/UploadApi HTTP/1.1

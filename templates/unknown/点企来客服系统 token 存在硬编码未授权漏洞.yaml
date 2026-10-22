@@ -3,12 +3,8 @@ info:
   name: 点企来客服系统 token 存在硬编码未授权漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: info-leak,unauth,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="layui-form-item" && body="/admin/login/check.html"
 http:
 - raw:
   - 'GET /admin/custom/index.html HTTP/1.1

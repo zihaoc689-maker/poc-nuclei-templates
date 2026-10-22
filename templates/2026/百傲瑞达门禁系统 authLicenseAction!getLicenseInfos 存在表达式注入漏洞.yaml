@@ -3,12 +3,8 @@ info:
   name: 百傲瑞达门禁系统 authLicenseAction!getLicenseInfos 存在表达式注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ul0g6labhc35ugtg'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ul0g6labhc35ugtg
-    fofa: body="authLicenseAction"
 http:
 - raw:
   - 'POST /authLicenseAction!getLicenseInfo.do HTTP/1.1

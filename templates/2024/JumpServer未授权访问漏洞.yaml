@@ -3,12 +3,8 @@ info:
   name: JumpServer未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iq7x0fh8fp4apq1r'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iq7x0fh8fp4apq1r
-    fofa: 暂无
 http:
 - raw:
   - 'GET /api/v1/terminal/sessions/ HTTP/1.1

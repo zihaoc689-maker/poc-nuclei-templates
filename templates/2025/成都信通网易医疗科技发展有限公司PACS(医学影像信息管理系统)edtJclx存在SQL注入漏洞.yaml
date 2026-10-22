@@ -3,13 +3,8 @@ info:
   name: 成都信通网易医疗科技发展有限公司PACS(医学影像信息管理系统)edtJclx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/308eee9c5b2bcc614a1dff6f98652806
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 308eee9c5b2bcc614a1dff6f98652806
 http:
 - raw:
   - 'POST /JcbgForYsz/Show_Jcbg_Ysz.asp HTTP/1.1

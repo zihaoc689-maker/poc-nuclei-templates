@@ -3,12 +3,8 @@ info:
   name: F-logic DataCube3 未授权信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgg1zgpzpv62a8yo'
+  description: ''
   tags: info-leak,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vgg1zgpzpv62a8yo
-    fofa: title=="DataCube3"
 http:
 - raw:
   - 'GET /admin/config_all.php HTTP/1.1

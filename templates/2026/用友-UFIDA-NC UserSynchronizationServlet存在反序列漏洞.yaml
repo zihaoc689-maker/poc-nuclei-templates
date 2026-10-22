@@ -3,12 +3,8 @@ info:
   name: 用友-UFIDA-NC UserSynchronizationServlet存在反序列漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gqgekewb8rhq9nug'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gqgekewb8rhq9nug
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /servlet/UserSynchronizationServlet?pageId=login HTTP/1.1

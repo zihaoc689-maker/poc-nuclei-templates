@@ -3,12 +3,8 @@ info:
   name: HIKVISION iSecure Center综合安防管理平台信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ia198f5vkuwycl25'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ia198f5vkuwycl25
-    fofa: 暂无
 http:
 - raw:
   - 'GET /portal/conf/config.properties HTTP/1.1

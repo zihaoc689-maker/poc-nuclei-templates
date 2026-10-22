@@ -3,12 +3,8 @@ info:
   name: 方正畅享全媒体新闻采编系统 imageProxy.do 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/suaonuuregsughol'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: suaonuuregsughol
-    fofa: app="FOUNDER-全媒体采编系统"
 http:
 - raw:
   - 'POST /newsedit/outerfotobase/imageProxy.do HTTP/1.1

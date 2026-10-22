@@ -3,12 +3,8 @@ info:
   name: 用友NC importCombo存在XML注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gff1str7l6hpya81'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gff1str7l6hpya81
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /portal/pt/portalcombo/importCombo?pageId=login HTTP/1.1

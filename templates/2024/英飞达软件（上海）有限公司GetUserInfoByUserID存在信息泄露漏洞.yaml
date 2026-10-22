@@ -3,12 +3,8 @@ info:
   name: 英飞达软件（上海）有限公司GetUserInfoByUserID存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rism321syr4bg3sk'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rism321syr4bg3sk
-    fofa: body="./scripts/library/bluebird.min.js"
 http:
 - raw:
   - 'GET /webservices/WebUserLogin.asmx/GetUserInfoByUserID?userID=admin HTTP/1.1

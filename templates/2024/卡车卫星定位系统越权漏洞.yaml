@@ -3,12 +3,8 @@ info:
   name: 卡车卫星定位系统越权漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cwbhlrh392y6wrb7'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cwbhlrh392y6wrb7
-    fofa: fofa:icon_hash="1553867732"
 http:
 - raw:
   - 'GET /user/1 HTTP/1.1

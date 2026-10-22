@@ -3,12 +3,8 @@ info:
   name: 政企即时通讯门户系统route存在目录遍历漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qd33ivkkpffq5izh'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qd33ivkkpffq5izh
-    fofa: icon_hash="561018561"
 http:
 - raw:
   - 'POST /route.lua HTTP/1.1

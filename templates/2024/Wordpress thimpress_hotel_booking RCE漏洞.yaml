@@ -3,12 +3,8 @@ info:
   name: Wordpress thimpress_hotel_booking RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/soysn6gioig52gg5'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: soysn6gioig52gg5
-    fofa: body="wp-content/plugins/wp-hotel-booking"
 http:
 - raw:
   - 'GET / HTTP/1.1

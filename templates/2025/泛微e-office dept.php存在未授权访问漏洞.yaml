@@ -3,12 +3,8 @@ info:
   name: 泛微e-office dept.php存在未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xhk0kaq3mosgltq4'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xhk0kaq3mosgltq4
-    fofa: body="eoffice_loading_tip" || body="/eoffice10/client/web/" || ((header="general/login/index.php" || body="/general/login/view//images/updateLoad.gif" || (body="szFeatures" && body="eoffice") || heade
 http:
 - raw:
   - 'GET /E-mobile/App/System/UserSelect/dept.php HTTP/1.1

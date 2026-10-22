@@ -3,12 +3,8 @@ info:
   name: 青岛雨诺网络信息股份有限公司雨诺调度客户端GetUserList 存在信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hevlyd09ae8lh2fz'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hevlyd09ae8lh2fz
-    fofa: body="/Captcha/Index" && body="layadmin-user-login-codeimg11"
 http:
 - raw:
   - 'GET /Api/GetUserList HTTP/1.1

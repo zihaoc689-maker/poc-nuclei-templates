@@ -3,19 +3,14 @@ info:
   name: 天锐绿盾审批系统updateFilePrintParamsD.do存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ntqdgwq1qpzt5g9u'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ntqdgwq1qpzt5g9u
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - 'fastjson的版本1.2.7版本，非最新版，则存在反序列化rce漏洞的。
 
     再看updateFilePrintParamsD.do 的实现部分
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766319349187-a219f83e-ac36-4c77-8129-06e94f23ed60.png)
 
     params参数被直接用于JSONObject.parseObject进行反序列化操作，非常明显的fastjson反序列化漏洞没啥好分析的。
 

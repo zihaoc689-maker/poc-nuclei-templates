@@ -3,12 +3,8 @@ info:
   name: 易思智能物流无人值守系统 ExportReport SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gbxxq17laz16rxnn'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gbxxq17laz16rxnn
-    fofa: body="/api/SingleLogin"
 http:
 - raw:
   - 'POST /Sys_ReportFile/ExportReport HTTP/1.1

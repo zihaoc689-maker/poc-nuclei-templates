@@ -3,12 +3,8 @@ info:
   name: QCData 品质数据管理专家GetSelectData存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aatnl6wt17oy2adw'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aatnl6wt17oy2adw
-    fofa: icon_hash="2029937574" || title="QCData 品质数据管理专家"
 http:
 - raw:
   - 'GET /BasicData/UserMap/GetTableData?page=1&limit=10&keyword=111* HTTP/1.1

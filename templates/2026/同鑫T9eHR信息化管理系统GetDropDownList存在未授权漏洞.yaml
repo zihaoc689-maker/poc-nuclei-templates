@@ -3,12 +3,8 @@ info:
   name: 同鑫T9eHR信息化管理系统GetDropDownList存在未授权漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yky2zwko6b209hof'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yky2zwko6b209hof
-    fofa: body="T9eHR"
 http:
 - raw:
   - 'POST /Common/GetDropDownList HTTP/1.1

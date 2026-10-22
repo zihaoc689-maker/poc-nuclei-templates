@@ -3,14 +3,8 @@ info:
   name: 用友NCuploadControl任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5fa05a4d79d2fe028046645d8865ba71
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 5fa05a4d79d2fe028046645d8865ba71
-    fofa: + huiter：`app.name=="用友 UAP"`
 http:
 - raw:
   - 'GET /mp/loginxietong?username=admin HTTP/1.1

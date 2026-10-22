@@ -3,12 +3,8 @@ info:
   name: FLIR-AX8热成像仪debug_database存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rbbrdr4hvx77umf1'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rbbrdr4hvx77umf1
-    fofa: web.icon=="f4370ff0b4763e18159cd7cdf36a4542"
 http:
 - raw:
   - GET /tools/debug_database.php HTTP/1.1

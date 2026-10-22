@@ -3,12 +3,8 @@ info:
   name: 中科网威anysec安全网关arping存在后台远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rf0tcemzfy6mbo04'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rf0tcemzfy6mbo04
-    fofa: app="中科网威-anysec"
 http:
 - raw:
   - '使用弱口令admin/anysec登录系统

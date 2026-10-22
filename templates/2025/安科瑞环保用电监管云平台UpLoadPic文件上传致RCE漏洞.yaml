@@ -3,12 +3,8 @@ info:
   name: 安科瑞环保用电监管云平台UpLoadPic文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qg7u9rfgor1u0gyv'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qg7u9rfgor1u0gyv
-    fofa: body="myCss/phone.css"
 http:
 - raw:
   - 'POST /Enterprise/UpLoadPic HTTP/1.1

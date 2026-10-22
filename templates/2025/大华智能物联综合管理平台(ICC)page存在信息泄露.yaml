@@ -3,14 +3,8 @@ info:
   name: 大华智能物联综合管理平台(ICC)page存在信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3e3d80d6c34ea372e9ac8b7ac1a9fe4d
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3e3d80d6c34ea372e9ac8b7ac1a9fe4d
-    fofa: + hunter`web.body="*客户端会小于800*"`
 http:
 - raw:
   - 'GET /evo-apigw/evo-face/personInfo/page?pageSize=10 HTTP/1.1

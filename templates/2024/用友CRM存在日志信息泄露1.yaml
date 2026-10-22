@@ -3,12 +3,8 @@ info:
   name: 用友CRM存在日志信息泄露1
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wrxuexqnxktr68qc'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wrxuexqnxktr68qc
-    fofa: title:"用友U8CRM"
 http:
 - raw:
   - 'GET /datacache/solr.log HTTP/1.1

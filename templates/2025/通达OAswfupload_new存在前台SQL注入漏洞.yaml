@@ -3,14 +3,8 @@ info:
   name: 通达OAswfupload_new存在前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bba650d4d4b6c7c8e99b788e83f0af8d
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bba650d4d4b6c7c8e99b788e83f0af8d
-    fofa: + hunter`app.name="通达 OA"`
 http:
 - raw:
   - 'POST /general/file_folder/swfupload_new.php HTTP/1.1

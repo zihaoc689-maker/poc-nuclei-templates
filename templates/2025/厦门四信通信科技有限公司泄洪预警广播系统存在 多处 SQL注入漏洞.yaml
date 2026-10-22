@@ -3,12 +3,8 @@ info:
   name: 厦门四信通信科技有限公司泄洪预警广播系统存在 多处 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fafqg4uyg4ns8dm1'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fafqg4uyg4ns8dm1
-    fofa: icon_hash="-30177135"
 http:
 - raw:
   - 'POST /devicetask/listPage.do HTTP/1.1

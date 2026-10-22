@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA erp_data.jsp存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xa3d56dh55z7rwwm'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xa3d56dh55z7rwwm
-    fofa: app="Landray-OA系统"
 http:
 - raw:
   - 'POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1

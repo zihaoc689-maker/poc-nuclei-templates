@@ -3,14 +3,8 @@ info:
   name: 王道汽车4S企业管理系统 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pu5x5n0al5vaguv0
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pu5x5n0al5vaguv0
-    fofa: body="PixelsPerInch" && body="AxBorderStyle" && body="DropTarget"
 http:
 - raw:
   - 'body="PixelsPerInch" && body="AxBorderStyle" && body="DropTarget"

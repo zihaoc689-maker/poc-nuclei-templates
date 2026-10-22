@@ -3,14 +3,8 @@ info:
   name: 泛微E-office_E-mobile_App_System_UserSelect_index.php未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a0640c6323756322941480598db2bcb4
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a0640c6323756322941480598db2bcb4
-    fofa: + hunter`app.name="泛微 e-office OA"`
 http:
 - raw:
   - 'GET /E-mobile/App/System/UserSelect/index.php HTTP/1.1

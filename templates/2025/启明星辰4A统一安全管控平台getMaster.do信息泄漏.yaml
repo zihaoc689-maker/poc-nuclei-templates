@@ -3,14 +3,8 @@ info:
   name: 启明星辰4A统一安全管控平台getMaster.do信息泄漏
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/69668c2cf456d9558c02a8d5442d486c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 69668c2cf456d9558c02a8d5442d486c
-    fofa: + hunter`web.icon=="fcae06c9415a39c361780b5c0e46ab89"&&web.title="4A"`
 http:
 - raw:
   - 'GET /accountApi/getMaster.do HTTP/2

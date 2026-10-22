@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA Basic存在未授权信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gsz75hd3so81kyzt'
+  description: ''
   tags: info-leak,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gsz75hd3so81kyzt
-    fofa: app="Landray-EIS智慧协同平台"
 http:
 - raw:
   - 'POST /WS/Basic/Basic.asmx HTTP/1.1

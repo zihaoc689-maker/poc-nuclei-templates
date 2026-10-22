@@ -3,12 +3,8 @@ info:
   name: 致远M3移动智能办公平台 mobile_portal 信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/veyniv6s1wg7k7gv'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: veyniv6s1wg7k7gv
-    fofa: 暂无
 http:
 - raw:
   - 'GET /mobile_portal/logs/autoLogin.log HTTP/1.1

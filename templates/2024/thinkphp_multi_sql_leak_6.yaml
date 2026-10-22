@@ -3,14 +3,8 @@ info:
   name: thinkphp_multi_sql_leak_6
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fd09se2tdol1gkqn
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fd09se2tdol1gkqn
-    fofa: 暂无
 http:
 - raw:
   - 'GET /index.php?s=/home/order/complete/id/1%27 HTTP/1.1

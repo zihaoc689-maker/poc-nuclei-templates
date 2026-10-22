@@ -3,12 +3,8 @@ info:
   name: 广州图创图书馆集群管理系统未授权访问
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qosgm4wdryksuke4'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qosgm4wdryksuke4
-    fofa: 暂无
 http:
 - raw:
   - 'GET /interlib/common/SSOServlet? HTTP/1.1

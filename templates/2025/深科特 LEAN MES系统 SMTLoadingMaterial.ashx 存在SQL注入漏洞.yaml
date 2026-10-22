@@ -3,12 +3,8 @@ info:
   name: 深科特 LEAN MES系统 SMTLoadingMaterial.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vymeft6b6ew6km4y'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vymeft6b6ew6km4y
-    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
 http:
 - raw:
   - 'POST /handler/SMTLoadingMaterial.ashx HTTP/1.1

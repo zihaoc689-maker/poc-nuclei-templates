@@ -3,12 +3,8 @@ info:
   name: 中科存储矿机云算力矿机系统video 存在前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tg8nbnisob8x65ru'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tg8nbnisob8x65ru
-    fofa: 暂无
 http:
 - raw:
   - 'POST /index/img/video HTTP/1.1

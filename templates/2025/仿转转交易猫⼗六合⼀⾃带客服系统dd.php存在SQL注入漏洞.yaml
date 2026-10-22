@@ -3,12 +3,8 @@ info:
   name: 仿转转交易猫⼗六合⼀⾃带客服系统dd.php存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wahdgh4pbbg872b8'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wahdgh4pbbg872b8
-    fofa: 'header="Location: [http://www.baidu.com"](http://www.baidu.com%22) && header="Cache-Control: no-store, no'
 http:
 - raw:
   - 'GET /dlmm/dl.php HTTP/1.1

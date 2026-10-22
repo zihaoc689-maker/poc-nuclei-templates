@@ -3,12 +3,8 @@ info:
   name: 北大医疗信息技术有限公司运营管理与决策支持系统AjaxLogIn存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cnxnq9qnbnvp5xit'
+  description: ''
   tags: default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cnxnq9qnbnvp5xit
-    fofa: body="/hospital/beijing/BeiDaYiXin/login/iconfont/style.css"
 http:
 - raw:
   - 'admin/Founder123

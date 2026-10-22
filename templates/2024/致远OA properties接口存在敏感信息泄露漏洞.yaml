@@ -3,17 +3,11 @@ info:
   name: 致远OA properties接口存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/of2g04glhfocespt'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: of2g04glhfocespt
-    fofa: app="致远互联-OA"
 http:
 - raw:
-  - 'GET /seeyon/rest/m3/common/system/properties HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728368364677-73ca5367-c4ff-4d1c-b4b9-66c79e768ac5.png)'
+  - GET /seeyon/rest/m3/common/system/properties HTTP/1.1
   redirects: false
   matchers:
   - status:

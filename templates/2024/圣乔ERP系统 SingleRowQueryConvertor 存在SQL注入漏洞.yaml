@@ -3,12 +3,8 @@ info:
   name: 圣乔ERP系统 SingleRowQueryConvertor 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xsws4xxyukmugr0z'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xsws4xxyukmugr0z
-    fofa: title="圣乔ERP系统"
 http:
 - raw:
   - 'POST /erp/dwr/call/plaincall/SingleRowQueryConvertor.queryForString.dwr HTTP/1.1

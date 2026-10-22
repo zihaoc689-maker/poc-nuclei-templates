@@ -3,12 +3,8 @@ info:
   name: PEPM系统Cookie请求头存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tbmcl13etr1it2ez'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tbmcl13etr1it2ez
-    fofa: header="pepm"
 http:
 - raw:
   - 'GET / HTTP/1.1

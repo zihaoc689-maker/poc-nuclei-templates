@@ -3,12 +3,8 @@ info:
   name: 中科商软云连ERP管理系统 getClsItem 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/soeql96l6032aege'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: soeql96l6032aege
-    fofa: title="Powered By chaosZ"
 http:
 - raw:
   - 'POST /gateway/user_defined_cls!getClsItem.action HTTP/1.1

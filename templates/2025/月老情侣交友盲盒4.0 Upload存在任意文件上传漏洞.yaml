@@ -3,12 +3,8 @@ info:
   name: 月老情侣交友盲盒4.0 Upload存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ph738uvybtwbynq3'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ph738uvybtwbynq3
-    fofa: 暂无
 http:
 - raw:
   - 'POST /app/upload/upload HTTP/1.1

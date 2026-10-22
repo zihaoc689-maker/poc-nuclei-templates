@@ -3,12 +3,8 @@ info:
   name: ipTIME未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bnc8wydv7hfv47ln'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bnc8wydv7hfv47ln
-    fofa: title="ipTIME"
 http:
 - raw:
   - 'GET /login/hostinfo.cgi HTTP/1.1
@@ -17,7 +13,6 @@ http:
 
     Host: {{Hostname}}
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742997217980-850f7b5d-837d-4391-a1ad-215e54bd1090.png)
 
     **CVE-2024-54764**'
   redirects: false
@@ -30,9 +25,7 @@ http:
 
     Content-Type: application/json
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742997218211-6d2a55d6-8a81-4d46-bd62-4b94d5b17d45.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

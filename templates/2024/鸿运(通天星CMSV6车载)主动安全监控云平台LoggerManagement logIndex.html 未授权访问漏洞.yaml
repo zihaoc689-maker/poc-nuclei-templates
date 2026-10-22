@@ -3,12 +3,8 @@ info:
   name: 鸿运(通天星CMSV6车载)主动安全监控云平台LoggerManagement logIndex.html 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pyc6adxpzgebb3su'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pyc6adxpzgebb3su
-    fofa: body="./open/webApi.html"||body="/808gps/"
 http:
 - raw:
   - 'GET /808gps/LoggerManagement/logIndex.html HTTP/1.1

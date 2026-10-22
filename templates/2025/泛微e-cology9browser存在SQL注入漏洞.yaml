@@ -3,14 +3,8 @@ info:
   name: 泛微e-cology9browser存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5df011055e057accf983a9f0ae8ec710
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 5df011055e057accf983a9f0ae8ec710
-    fofa: + hunter`app.name=="泛微 e-cology 9.0 OA"`
 http:
 - raw:
   - 'POST /mobile/%20/plugin/browser.jsp HTTP/1.1

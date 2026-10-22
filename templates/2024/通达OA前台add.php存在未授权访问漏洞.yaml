@@ -3,12 +3,8 @@ info:
   name: 通达OA前台add.php存在未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zh8sguqqpq13czr6'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zh8sguqqpq13czr6
-    fofa: app="TDXK-通达OA" && icon_hash="-759108386"
 http:
 - raw:
   - 'GET /general/hr/setting/attendance/newLeave/add.html HTTP/1.1

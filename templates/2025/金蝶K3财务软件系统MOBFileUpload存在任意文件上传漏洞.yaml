@@ -3,12 +3,8 @@ info:
   name: 金蝶K3财务软件系统MOBFileUpload存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nlvgaxv39hw5n7gs'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nlvgaxv39hw5n7gs
-    fofa: body="HTML5/content/themes/kdcss.min.css"||body="kdcss.min.css" || body="k3Cloud" || body="kingdee" || body="kdUtils.min.js"
 http:
 - raw:
   - 'POST /k3cloud/FIleUplloadServices/MOBFileUpload.ashx HTTP/1.1

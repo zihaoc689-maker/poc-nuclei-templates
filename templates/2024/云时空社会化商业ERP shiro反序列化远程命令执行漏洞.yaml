@@ -3,12 +3,8 @@ info:
   name: 云时空社会化商业ERP shiro反序列化远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hsrauaug9etulcnf'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hsrauaug9etulcnf
-    fofa: title="云时空社会化商业ERP系统"
 http:
 - raw:
   - 'GET /static/js/public.js HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 叮叮演示版某涉案系统public_list存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nt2x3vkfmsgxzzwa'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nt2x3vkfmsgxzzwa
-    fofa: 'header="Access-Control-Allow-Headers: x-requested-with,content-type,x-csrf'
 http:
 - raw:
   - 'POST /api/friend/public_list HTTP/1.1

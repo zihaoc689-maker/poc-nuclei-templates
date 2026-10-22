@@ -3,14 +3,8 @@ info:
   name: 金蝶云星空ScpSupRegHandler存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e1669a952088d6eecac8e70955c232b4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e1669a952088d6eecac8e70955c232b4
-    fofa: + hunter：`app.name="Kingdee 金蝶云星空"`
 http:
 - raw:
   - 'POST /k3cloud/SRM/ScpSupRegHandler HTTP/1.1

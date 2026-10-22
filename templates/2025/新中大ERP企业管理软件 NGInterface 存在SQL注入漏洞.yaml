@@ -3,12 +3,8 @@ info:
   name: 新中大ERP企业管理软件 NGInterface 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cpqgsovv91ym0wfr'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cpqgsovv91ym0wfr
-    fofa: body="Resource/pic/product_btn.png" || body="/login/SSOValidation.html"
 http:
 - raw:
   - 'POST /filesrv/NGInterface/Index HTTP/1.1

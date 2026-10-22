@@ -3,12 +3,8 @@ info:
   name: 紫光电子档案管理系统 uploadscan 存在Sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sr8rzn8uomuva903'
+  description: ''
   tags: sqli,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sr8rzn8uomuva903
-    fofa: body="www.unissoft.com"
 http:
 - raw:
   - 'POST /Archive/ErecordManage/uploadScan HTTP/1.1

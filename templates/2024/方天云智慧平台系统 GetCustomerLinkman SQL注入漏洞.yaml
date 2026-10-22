@@ -3,12 +3,8 @@ info:
   name: 方天云智慧平台系统 GetCustomerLinkman SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bfnf0tsg4gxg0543'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bfnf0tsg4gxg0543
-    fofa: body="AjaxMethods.asmx/GetCompanyItem"
 http:
 - raw:
   - 'POST /WXAPI.asmx/GetCustomerLinkman HTTP/1.1

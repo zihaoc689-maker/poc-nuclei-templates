@@ -3,12 +3,8 @@ info:
   name: circutor login存在默认口令登录漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yg5itm08g52plgbg'
+  description: ''
   tags: default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yg5itm08g52plgbg
-    fofa: body="Line-TCPRS1"
 http:
 - raw:
   - 'POST /api/v1/login HTTP/1.1

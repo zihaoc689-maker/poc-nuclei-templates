@@ -3,14 +3,8 @@ info:
   name: 云安宝-云匣子config存在fastjson远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3dea536ad7a0dbe756eabd45beb8ab7f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3dea536ad7a0dbe756eabd45beb8ab7f
-    fofa: + hunter`app.name="云安宝·云匣子"`
 http:
 - raw:
   - 'POST /3.0/authService/config HTTP/2

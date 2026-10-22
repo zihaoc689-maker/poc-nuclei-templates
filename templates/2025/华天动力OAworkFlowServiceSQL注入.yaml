@@ -3,14 +3,8 @@ info:
   name: 华天动力OAworkFlowServiceSQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/86bd90eea98e161859baee46468c0c3b
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 86bd90eea98e161859baee46468c0c3b
-    fofa: + hunter`app.name="华天软件 OA"`
 http:
 - raw:
   - 'POST /OAapp/bfapp/buffalo/workFlowService HTTP/1.1

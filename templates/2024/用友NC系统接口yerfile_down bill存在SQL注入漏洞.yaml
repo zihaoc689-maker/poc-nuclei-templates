@@ -3,12 +3,8 @@ info:
   name: 用友NC系统接口yerfile_down bill存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/thmh824ui6ehls42'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: thmh824ui6ehls42
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /portal/pt/yerfile/down/bill?pageId=login HTTP/1.1

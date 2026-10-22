@@ -3,12 +3,8 @@ info:
   name: 仿抖音短视频网站系统index存在前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yk8nlmwf861xvwbl'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yk8nlmwf861xvwbl
-    fofa: '"/public/index/images/new_logo.png"'
 http:
 - raw:
   - 'POST /index.php?g=appapi&m=auth&a=success HTTP/1.1

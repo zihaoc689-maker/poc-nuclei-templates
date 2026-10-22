@@ -3,12 +3,8 @@ info:
   name: 科立讯通信有限公司指挥调度管理平台 upload.php 任意上传漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/buy0dmk5zxc7pm88'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: buy0dmk5zxc7pm88
-    fofa: body="指挥调度管理平台"
 http:
 - raw:
   - 'POST /api/client/upload.php HTTP/1.1
@@ -32,8 +28,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundarySwvD8hSn3Z0sHfMu
 
 
@@ -41,8 +35,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     dudesuite

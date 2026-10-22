@@ -3,12 +3,8 @@ info:
   name: 泛微OA E-cology plugin.xml存在未授权访问
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tmg7sreeuv8v6qbg'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tmg7sreeuv8v6qbg
-    fofa: body = "/wui/common/css/w7OVFont_wev8.css" || header="testBanCookie" || body="/wui/common/css/w7OVFont.css" || body="/js/ecology8" || body="alert('高效源于协同')" || body="wui/common/css/w7OVFont_wev8.css"|
 http:
 - raw:
   - 'GET /mobile/plugin/plugin.xml HTTP/1.1

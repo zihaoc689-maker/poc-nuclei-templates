@@ -3,12 +3,8 @@ info:
   name: 致远OA systemlogsmanage存在任意⽂件读取漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nfxa4oqoy1gvpcxo'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nfxa4oqoy1gvpcxo
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - '需要先登录进后台（可以看先前发的登录绕过漏洞）

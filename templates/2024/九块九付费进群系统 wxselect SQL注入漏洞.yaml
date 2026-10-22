@@ -3,12 +3,8 @@ info:
   name: 九块九付费进群系统 wxselect SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/apraoc5nq4euoes1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: apraoc5nq4euoes1
-    fofa: body="/website/index/login.html"
 http:
 - raw:
   - 'POST /group/index/wxselect HTTP/1.1

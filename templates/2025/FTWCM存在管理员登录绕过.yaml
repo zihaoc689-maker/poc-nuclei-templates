@@ -3,12 +3,8 @@ info:
   name: FTWCM存在管理员登录绕过
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lwnhx23ebuohwk3s'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lwnhx23ebuohwk3s
-    fofa: title="ftwcm"
 http:
 - raw:
   - 'token计算: md5("1/qiiadmin/从URL中提取IP地址/logincheck/subdomain")

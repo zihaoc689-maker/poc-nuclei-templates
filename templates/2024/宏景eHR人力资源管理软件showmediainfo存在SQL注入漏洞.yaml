@@ -3,14 +3,8 @@ info:
   name: 宏景eHR人力资源管理软件showmediainfo存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gk4rfq1okgdgmvub
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gk4rfq1okgdgmvub
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'GET /workbench/duty/showmediainfo?kind=0&usernumber=[加密后的恶意SQL]&planid=1&objectid=1 HTTP/1.1

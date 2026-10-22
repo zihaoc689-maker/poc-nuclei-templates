@@ -3,12 +3,8 @@ info:
   name: 众诚网上订单系统o_sa_order.ashx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bngcondhp0pze814'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bngcondhp0pze814
-    fofa: title="欢迎使用众诚网上订单系统"
 http:
 - raw:
   - 'POST /ajax/o_sa_order.ashx HTTP/1.1

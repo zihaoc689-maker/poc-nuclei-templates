@@ -3,12 +3,8 @@ info:
   name: 杭州三汇 SMG网关管理软件 changelogo.php 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/durqk8aktkuf7kcy'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: durqk8aktkuf7kcy
-    fofa: body="text ml10 mr20" && (title="网关管理软件" || title="Gateway Management")
 http:
 - raw:
   - 'POST /changelogo.php HTTP/1.1
@@ -51,7 +47,6 @@ http:
     -----------------------------136689467536665089023051840895
 
     Content-Disposition: form-data; name="OEMContent"
-
 
 
     -----------------------------136689467536665089023051840895

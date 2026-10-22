@@ -3,12 +3,8 @@ info:
   name: 西部数码 NAS elephant_drive.php 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gh90y8immyg3x6ee'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gh90y8immyg3x6ee
-    fofa: 'icon_hash="-1074357885" && header="X-Powered-By: PHP/5.4.16"'
 http:
 - raw:
   - 'POST /web/backups/elephant_drive.php HTTP/1.1

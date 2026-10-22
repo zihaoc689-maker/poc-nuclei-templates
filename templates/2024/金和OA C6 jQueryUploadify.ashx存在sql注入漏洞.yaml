@@ -3,12 +3,8 @@ info:
   name: 金和OA C6 jQueryUploadify.ashx存在sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ozbmfcazusogtqo1'
+  description: ''
   tags: sqli,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ozbmfcazusogtqo1
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /C6/JQueryUpload/AjaxFile/jQueryUploadify.ashx  HTTP/1.1

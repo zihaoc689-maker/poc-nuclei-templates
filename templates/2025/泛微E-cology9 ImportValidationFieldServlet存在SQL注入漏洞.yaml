@@ -3,12 +3,8 @@ info:
   name: 泛微E-cology9 ImportValidationFieldServlet存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aktnp41sydez4zmg'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aktnp41sydez4zmg
-    fofa: app="泛微-OA（e-cology）"
 http:
 - raw:
   - 'POST /weaver/weaver.formmode.setup.ImportValidationFieldServlet/login HTTP/1.1

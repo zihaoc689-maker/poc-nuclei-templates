@@ -3,12 +3,8 @@ info:
   name: OLLAMA tags 存在未授权访问漏洞（CNVD-2025-04094）
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ikpq5re2i1egr2uz'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ikpq5re2i1egr2uz
-    fofa: app="Ollama"
 http:
 - raw:
   - 'GET /api/tags HTTP/1.1

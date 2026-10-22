@@ -3,12 +3,8 @@ info:
   name: 全新优客API接口管理系统 doc 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hcsb8f8ooaaverpr'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hcsb8f8ooaaverpr
-    fofa: body="public/static/index/css/flaghome.css"
 http:
 - raw:
   - 'POST /index/index/doc HTTP/1.1

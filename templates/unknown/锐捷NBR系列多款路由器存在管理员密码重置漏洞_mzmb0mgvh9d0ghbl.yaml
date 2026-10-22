@@ -3,14 +3,8 @@ info:
   name: 锐捷NBR系列多款路由器存在管理员密码重置漏洞_mzmb0mgvh9d0ghbl
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="上层网络出现异常，请检查外网线路或联系ISP运营商协助排查"
 http:
 - raw:
   - '1.重置密码

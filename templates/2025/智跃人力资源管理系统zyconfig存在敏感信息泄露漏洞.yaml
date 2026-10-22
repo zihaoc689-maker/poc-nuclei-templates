@@ -3,12 +3,8 @@ info:
   name: 智跃人力资源管理系统zyconfig存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzxp1u2bfht8kexr'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gzxp1u2bfht8kexr
-    fofa: body="ZY.LOGO.64.png"
 http:
 - raw:
   - 'GET /resource/servs/file/zyconfig.txt HTTP/1.1

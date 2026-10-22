@@ -3,12 +3,8 @@ info:
   name: 金和JC6 ActionDataSet 存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eusfxrp52duytuv9'
+  description: ''
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eusfxrp52duytuv9
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /jc6/servlet/ActionDataSet HTTP/1.1

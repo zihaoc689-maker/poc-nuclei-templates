@@ -3,12 +3,8 @@ info:
   name: 郑州时空-TMS运输管理系统 GetDataBase存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/giu1buug6lgkp122'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: giu1buug6lgkp122
-    fofa: body="/Images/ManLogin/name.png"
 http:
 - raw:
   - 'GET /ManLogin/GetDataBase HTTP/1.1

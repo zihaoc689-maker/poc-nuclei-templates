@@ -3,12 +3,8 @@ info:
   name: 润申信息企业标准化管理系统 PdcaUserStdListHandler.ashx 存在SQL注入漏洞_pz4zomfqrpgg4on1
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="PDCA/js/_publicCom.js"
 http:
 - raw:
   - 'POST /PDCA/ashx/PdcaUserStdListHandler.ashx?action=GetDataBy HTTP/1.1

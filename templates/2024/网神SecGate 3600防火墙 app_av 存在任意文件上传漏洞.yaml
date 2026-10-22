@@ -3,12 +3,8 @@ info:
   name: 网神SecGate 3600防火墙 app_av 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yoavxxc7rzy2eqhz'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yoavxxc7rzy2eqhz
-    fofa: fid="1Lh1LHi6yfkhiO83I59AYg=="
 http:
 - raw:
   - 'POST /?g=app_av HTTP/1.1
@@ -69,9 +65,7 @@ http:
 
     file
 
-    ------WebKitFormBoundaryJpMyThWnAxbcBBQc--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077472700-22ebf560-4444-42c6-95d1-7e5a75d3c658.png)'
+    ------WebKitFormBoundaryJpMyThWnAxbcBBQc--'
   redirects: false
   matchers:
   - status:
@@ -108,9 +102,7 @@ http:
 
     Priority: u=1, i
 
-    Connection: close
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077472969-fea9a3c0-8c5f-412c-8790-3c98a9215f30.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

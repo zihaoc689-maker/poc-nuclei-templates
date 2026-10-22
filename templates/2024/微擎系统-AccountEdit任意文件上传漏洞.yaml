@@ -3,14 +3,8 @@ info:
   name: 微擎系统-AccountEdit任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kuc30u070ahswwf6
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kuc30u070ahswwf6
-    fofa: body="/Widgets/WidgetCollection/"
 http:
 - raw:
   - '前端方式：
@@ -70,11 +64,9 @@ http:
     Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$txtLastName"
 
 
-
     -----------------------------8448979704593935221298734076
 
     Content-Disposition: form-data; name="ctl00$MyContentPlaceHolder$ctl00$txtEmail"
-
 
 
     -----------------------------8448979704593935221298734076--

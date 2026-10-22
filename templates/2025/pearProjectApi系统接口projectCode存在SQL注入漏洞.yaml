@@ -3,12 +3,8 @@ info:
   name: pearProjectApi系统接口projectCode存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/agmab822kesh6lv3'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: agmab822kesh6lv3
-    fofa: 暂无
 http:
 - raw:
   - 'POST /index.php/project/project/getLogBySelfProject HTTP/2

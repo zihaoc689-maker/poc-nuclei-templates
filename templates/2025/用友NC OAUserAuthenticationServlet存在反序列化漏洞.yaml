@@ -3,12 +3,8 @@ info:
   name: 用友NC OAUserAuthenticationServlet存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibxlihvrot13kg3v'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ibxlihvrot13kg3v
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - '使用[Commons Collections3中的ChainedTransformer链](http://www.baidu.com/link?url=d27E9ON6cKUeKU6Ttray9CcQu7RlB0ZIswpQ0SnN01yvJwrWyL8eaqzrr44ozvdKiT0MLZ9hn7yTo6GdY-iH8iDGdmC0emLqcren9q_KpPK)
@@ -34,7 +30,6 @@ http:
 
 
     {{file(C:\path\path\payload.ser)}}
-
 
 
     我用夸克网盘给你分享了「用友NC OAUserAuthenticationServlet-反序列化Payloadser.zip」，点击链接或复制整段内容，打开「夸克APP」即可获取。

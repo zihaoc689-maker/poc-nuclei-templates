@@ -3,12 +3,8 @@ info:
   name: 亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ymiryrfvvuigk9nh'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ymiryrfvvuigk9nh
-    fofa: body="/CDGServer3/index.jsp"
 http:
 - raw:
   - 'POST /CDGServer3/openapi/getAllUsers HTTP/1.1

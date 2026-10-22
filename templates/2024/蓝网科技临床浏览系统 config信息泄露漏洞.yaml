@@ -3,12 +3,8 @@ info:
   name: 蓝网科技临床浏览系统 config信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zxd10rvgdkibnkv2'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zxd10rvgdkibnkv2
-    fofa: body="蓝网科技股份有限公司" && title="临床浏览"
 http:
 - raw:
   - 'GET /config/config%20bak.txt HTTP/1.1

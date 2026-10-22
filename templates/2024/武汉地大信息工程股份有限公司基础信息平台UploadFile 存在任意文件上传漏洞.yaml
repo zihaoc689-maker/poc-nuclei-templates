@@ -3,12 +3,8 @@ info:
   name: 武汉地大信息工程股份有限公司基础信息平台UploadFile 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fda8fxuevi7hargz'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fda8fxuevi7hargz
-    fofa: body="/SystemManage/BaseProject"
 http:
 - raw:
   - 'POST /SystemManage/BaseProject/UploadFile HTTP/1.1
@@ -36,10 +32,7 @@ http:
     ------WebKitFormBoundary3eAFYzQhNgj7Q4xh--
 
 
-
-    上传定位：/Content/images/projectImage/test.aspx
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727416147505-4bf495ab-24ca-42b3-8b75-9d297b12525b.png)'
+    上传定位：/Content/images/projectImage/test.aspx'
   redirects: false
   matchers:
   - status:

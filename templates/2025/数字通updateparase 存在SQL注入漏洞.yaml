@@ -3,12 +3,8 @@ info:
   name: 数字通updateparase 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uxg73xa42vcg5s5h'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uxg73xa42vcg5s5h
-    fofa: body="static/templates/default/skins/" || body="portal/default/login" || body="K1mToken.K1_mTokenGetLastError" || body="assets/8cca19ff/css/bootstrap-yii.css"
 http:
 - raw:
   - 'POST /mobile/document/updateparase HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: SMF 系统存在源码泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dxrg08orhgn7a8sb'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dxrg08orhgn7a8sb
-    fofa: body="Powered by SMF 1.1.21"
 http:
 - raw:
   - 'GET /index.php~ HTTP/1.1

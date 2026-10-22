@@ -3,12 +3,8 @@ info:
   name: AliSentinel login存在默认口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ana8gfgyi0bx6y7r'
+  description: ''
   tags: default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ana8gfgyi0bx6y7r
-    fofa: body="Sentinel 控制台"
 http:
 - raw:
   - 'POST /auth/login?password=sentinel&username=sentinel HTTP/1.1

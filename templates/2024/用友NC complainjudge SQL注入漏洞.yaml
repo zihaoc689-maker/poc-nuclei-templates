@@ -3,12 +3,8 @@ info:
   name: 用友NC complainjudge SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wi5x9sd93ohyte7c'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wi5x9sd93ohyte7c
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /ebvp/advorappcoll/complainjudge HTTP/1.1

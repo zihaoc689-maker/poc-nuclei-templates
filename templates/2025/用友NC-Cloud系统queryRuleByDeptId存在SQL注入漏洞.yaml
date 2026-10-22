@@ -3,14 +3,8 @@ info:
   name: 用友NC-Cloud系统queryRuleByDeptId存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/790ed9bbf0c14373e11177dbf293da50
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 790ed9bbf0c14373e11177dbf293da50
-    fofa: + fofa`app="用友-NC-Cloud"`
 http:
 - raw:
   - 'GET /ncchr/attendcalendar/queryRuleByDeptId?orgId=1 HTTP/1.1

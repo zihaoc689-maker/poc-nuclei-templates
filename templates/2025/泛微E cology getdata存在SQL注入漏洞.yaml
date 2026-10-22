@@ -3,12 +3,8 @@ info:
   name: 泛微E cology getdata存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cgiwxukh1ys70hhb'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cgiwxukh1ys70hhb
-    fofa: app="泛微-OA（e-cology）"
 http:
 - raw:
   - '路由：

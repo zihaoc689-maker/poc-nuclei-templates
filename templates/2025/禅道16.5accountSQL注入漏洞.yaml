@@ -3,14 +3,8 @@ info:
   name: 禅道16.5accountSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/13876ccb89ee97663af2913fec53b28c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 13876ccb89ee97663af2913fec53b28c
-    fofa: + hunter`app.name="ZenTao 禅道"`
 http:
 - raw:
   - 'POST /zentao/user-login.html HTTP/1.1

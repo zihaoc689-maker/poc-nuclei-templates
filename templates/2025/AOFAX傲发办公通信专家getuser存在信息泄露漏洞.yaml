@@ -3,12 +3,8 @@ info:
   name: AOFAX傲发办公通信专家getuser存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/za8lz0bbvmvzgnko'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: za8lz0bbvmvzgnko
-    fofa: body="getincommingcall"
 http:
 - raw:
   - 'GET /handle/user.ashx?type=getuser HTTP/1.1

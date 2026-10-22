@@ -3,12 +3,8 @@ info:
   name: 金和OAC6 CompanyBudgetCollectEdit存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mua9gxh5wsaxc95l'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mua9gxh5wsaxc95l
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/JHSoft.Web.CostControl/Collect/CompanyBudgetCollectEdit.aspx/ HTTP/1.1

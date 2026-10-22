@@ -3,14 +3,8 @@ info:
   name: Zkteco百傲瑞达安防管理系统平台存在shiro反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4fb991be41dae4a27eef176942cc5232
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4fb991be41dae4a27eef176942cc5232
-    fofa: + fofa`app="ZKTECO-百傲瑞达安防管理系统平台" && title!="TimeTec Cloud AWDMS" && region="Sichuan"`
 http:
 - raw:
   - 'GET / HTTP/1.1

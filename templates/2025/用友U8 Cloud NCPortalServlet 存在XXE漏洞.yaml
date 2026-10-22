@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud NCPortalServlet 存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dgisnf6484ci1geu'
+  description: ''
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dgisnf6484ci1geu
-    fofa: title="U8C"
 http:
 - raw:
   - 'POST /jc6/servlet/ActionDataSet HTTP/1.1

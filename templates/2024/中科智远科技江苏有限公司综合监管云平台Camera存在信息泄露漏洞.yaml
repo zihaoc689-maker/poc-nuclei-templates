@@ -3,12 +3,8 @@ info:
   name: 中科智远科技江苏有限公司综合监管云平台Camera存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gylxghrwfhdgau0a'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gylxghrwfhdgau0a
-    fofa: body="技术支持：中科智远科技江苏有限公司" || body="/Download/DownFile?fileName=SetUp.exe"
 http:
 - raw:
   - 'GET /Authencate/Camera HTTP/1.1

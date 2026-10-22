@@ -3,12 +3,8 @@ info:
   name: C-MOR 视频监控存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bu6g29e0f5x02xas'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bu6g29e0f5x02xas
-    fofa: 暂无
 http:
 - raw:
   - 'POST /download-bkf.pml HTTP/1.1

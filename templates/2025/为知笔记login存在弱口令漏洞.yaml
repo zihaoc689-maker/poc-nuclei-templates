@@ -3,12 +3,8 @@ info:
   name: 为知笔记login存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yggbhvspe76kec85'
+  description: ''
   tags: default-login,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yggbhvspe76kec85
-    fofa: title="WizNote"
 http:
 - raw:
   - 'POST /as/user/login?clientType=web&clientVersion=4.0&lang=zh-cn HTTP/1.1

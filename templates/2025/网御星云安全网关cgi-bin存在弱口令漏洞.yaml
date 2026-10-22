@@ -3,12 +3,8 @@ info:
   name: 网御星云安全网关cgi-bin存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ain42a50lt7xi4zg'
+  description: ''
   tags: default-login,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ain42a50lt7xi4zg
-    fofa: title="网御安全网关"
 http:
 - raw:
   - 'POST /cgi-bin/webui?op=pcm_login HTTP/1.1

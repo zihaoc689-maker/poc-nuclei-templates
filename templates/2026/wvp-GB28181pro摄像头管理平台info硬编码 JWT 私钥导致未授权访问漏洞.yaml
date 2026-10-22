@@ -3,12 +3,8 @@ info:
   name: wvp-GB28181pro摄像头管理平台info硬编码 JWT 私钥导致未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ysye9ndd3a7qvk74'
+  description: ''
   tags: info-leak,unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ysye9ndd3a7qvk74
-    fofa: app="phpVMS"
 http:
 - raw:
   - 'GET /api/server/info HTTP/1.1

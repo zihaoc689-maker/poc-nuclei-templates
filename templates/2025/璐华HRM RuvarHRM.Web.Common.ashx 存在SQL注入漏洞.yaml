@@ -3,12 +3,8 @@ info:
   name: 璐华HRM RuvarHRM.Web.Common.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hrghv95uuh091f15'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hrghv95uuh091f15
-    fofa: '"RuvarHRM/web_login/login.aspx"'
 http:
 - raw:
   - 'POST /ajaxpro/RuvarHRM.Web.Common.get_account_by_tree,RuvarHRM.Web.Common.ashx HTTP/1.1

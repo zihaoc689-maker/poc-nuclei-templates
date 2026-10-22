@@ -3,12 +3,8 @@ info:
   name: 孚盟云CRM GetDropDownListContent.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dg167ob1q7tufec4'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dg167ob1q7tufec4
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'POST /Ajax/GetDropDownListContent.ashx HTTP/1.1

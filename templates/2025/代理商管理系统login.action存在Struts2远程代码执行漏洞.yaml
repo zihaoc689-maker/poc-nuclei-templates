@@ -3,12 +3,8 @@ info:
   name: 代理商管理系统login.action存在Struts2远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ponq0fsc1gqo9knu'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ponq0fsc1gqo9knu
-    fofa: body="AgentSyste代理商管理系统"
 http:
 - raw:
   - 'POST /login.action HTTP/1.1

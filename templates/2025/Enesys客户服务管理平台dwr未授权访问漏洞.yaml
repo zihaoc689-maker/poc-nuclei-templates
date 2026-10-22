@@ -3,12 +3,8 @@ info:
   name: Enesys客户服务管理平台dwr未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gg3omdczic3iqnbb'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gg3omdczic3iqnbb
-    fofa: body="/dwr/interface/WebContextUtil.js"
 http:
 - raw:
   - GET /dwr/index.html HTTP/1.1

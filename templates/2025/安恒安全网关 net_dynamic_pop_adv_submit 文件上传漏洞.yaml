@@ -3,12 +3,8 @@ info:
   name: 安恒安全网关 net_dynamic_pop_adv_submit 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/do4outmr6k00di16'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: do4outmr6k00di16
-    fofa: title="明御安全网关"
 http:
 - raw:
   - '1.上传文件
@@ -42,9 +38,7 @@ http:
     --qqobiandqgawlxodfiisporjwravxtvd--
 
 
-    2.文件会以时间戳md5的方式存储在/adv/image/md5(时间戳).php
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741864620082-570010eb-a21c-49c7-9a94-d703e86ccf2b.png)'
+    2.文件会以时间戳md5的方式存储在/adv/image/md5(时间戳).php'
   redirects: false
   matchers:
   - status:

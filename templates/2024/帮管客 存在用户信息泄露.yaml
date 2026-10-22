@@ -3,12 +3,8 @@ info:
   name: 帮管客 存在用户信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzwggklmg4oq3uly'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gzwggklmg4oq3uly
-    fofa: ZoomEye语法：app:"帮管客CRM"
 http:
 - raw:
   - 'GET /index.php/chat/init HTTP/1.1

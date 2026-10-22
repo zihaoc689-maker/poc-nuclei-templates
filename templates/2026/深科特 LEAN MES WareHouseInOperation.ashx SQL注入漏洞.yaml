@@ -3,12 +3,8 @@ info:
   name: 深科特 LEAN MES WareHouseInOperation.ashx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibdckg0ht6gkoy2i'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ibdckg0ht6gkoy2i
-    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
 http:
 - raw:
   - 'POST /Handler/WareHouseInOperation.ashx HTTP/1.1

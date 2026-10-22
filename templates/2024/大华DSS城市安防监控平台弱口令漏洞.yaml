@@ -3,12 +3,8 @@ info:
   name: 大华DSS城市安防监控平台弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkbsbrvpdgg4hc5y'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rkbsbrvpdgg4hc5y
-    fofa: app="dahua-DSS"
 http:
 - raw:
   - 'POST /config/user_login.action?nowTime=1714373664321 HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Cookie: JSESSIONID=C5723636787E1ACB687D6206ECCD071F
-
-
 
 
     userBean.loginName=admin&userBean.loginPass=dc0134141ec9319b6b4a00a75fc6a6f5

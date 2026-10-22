@@ -3,12 +3,8 @@ info:
   name: LimeSurvey login存在默认口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcyv7oy1tl6vxaq4'
+  description: ''
   tags: default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcyv7oy1tl6vxaq4
-    fofa: title="LimeSurvey"
 http:
 - raw:
   - 'GET /index.php/admin/authentication/sa/login HTTP/1.1

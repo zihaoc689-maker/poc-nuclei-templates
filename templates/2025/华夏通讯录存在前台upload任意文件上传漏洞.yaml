@@ -3,17 +3,12 @@ info:
   name: 华夏通讯录存在前台upload任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qr0h64nc763znmeh'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qr0h64nc763znmeh
-    fofa: icon_hash="1403225079" && ":) APPV1"
 http:
 - raw:
   - '默认后台 /admin
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741000558185-07a25b0b-8f16-4e3d-8e2e-0a87be58c8b1.png)
 
     POST /admin/common/upload HTTP/1.1
 

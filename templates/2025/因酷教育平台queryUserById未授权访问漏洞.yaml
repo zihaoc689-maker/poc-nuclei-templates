@@ -3,12 +3,8 @@ info:
   name: 因酷教育平台queryUserById未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hnn7hozfltc6f8sh'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hnn7hozfltc6f8sh
-    fofa: body="/image/keupload?" && body="uploadSimpleUrl"
 http:
 - raw:
   - 'GET /webapp/queryUserById?id=2 HTTP/1.1

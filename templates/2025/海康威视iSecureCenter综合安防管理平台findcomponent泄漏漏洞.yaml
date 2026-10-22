@@ -3,14 +3,8 @@ info:
   name: 海康威视iSecureCenter综合安防管理平台findcomponent泄漏漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c45637a56cce59d2db7e4a6e46bd883e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: c45637a56cce59d2db7e4a6e46bd883e
-    fofa: '**hunter查询语法：**'
 http:
 - raw:
   - 'GET /bic/caService/v1/certificate/machine/component HTTP/1.1

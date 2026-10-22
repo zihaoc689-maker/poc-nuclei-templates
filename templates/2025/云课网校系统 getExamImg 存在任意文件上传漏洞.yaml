@@ -3,12 +3,8 @@ info:
   name: 云课网校系统 getExamImg 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lnvcnsvlkai1adlu'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lnvcnsvlkai1adlu
-    fofa: body="/static/libs/common/jquery.stickyNavbar.min.js"
 http:
 - raw:
   - 'POST /index/Exam/getExamImg HTTP/1.1

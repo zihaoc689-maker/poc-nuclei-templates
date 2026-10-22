@@ -3,12 +3,8 @@ info:
   name: 亿华考勤管理系统unloadfile.ashx存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bt08ifrcsvuno2yr'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bt08ifrcsvuno2yr
-    fofa: body="亿华人力资源管理系统"
 http:
 - raw:
   - 'POST /handle/unloadfile.ashx HTTP/1.1

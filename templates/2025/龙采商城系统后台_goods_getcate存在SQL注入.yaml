@@ -3,14 +3,8 @@ info:
   name: 龙采商城系统后台_goods_getcate存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e5b09977bba8aacfa411fd1a44976f4a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e5b09977bba8aacfa411fd1a44976f4a
-    fofa: FOFA：body="'url':'/pc2.0/index/index'"
 http:
 - raw:
   - 'POST /goods/getCate HTTP/2

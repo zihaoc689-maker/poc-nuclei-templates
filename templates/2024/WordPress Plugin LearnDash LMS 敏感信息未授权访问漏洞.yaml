@@ -3,12 +3,8 @@ info:
   name: WordPress Plugin LearnDash LMS 敏感信息未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bv36nixoa3ng0gg4'
+  description: ''
   tags: info-leak,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bv36nixoa3ng0gg4
-    fofa: google:inurl:"/wp-content/plugins/sfwd-lms"
 http:
 - raw:
   - 'GET /wp-json/ldlms/v1/sfwd-quiz HTTP/1.1

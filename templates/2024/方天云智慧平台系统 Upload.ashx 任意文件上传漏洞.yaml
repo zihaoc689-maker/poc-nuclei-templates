@@ -3,12 +3,8 @@ info:
   name: 方天云智慧平台系统 Upload.ashx 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wkvnqw63uox61q97'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wkvnqw63uox61q97
-    fofa: body="AjaxMethods.asmx/GetCompanyItem"
 http:
 - raw:
   - 'POST /Upload.ashx HTTP/1.1

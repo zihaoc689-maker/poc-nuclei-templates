@@ -3,12 +3,8 @@ info:
   name: 安科瑞环保用电监管云平台 uploadAttachment 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: rce,file-upload,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="myCss/phone.css"
 http:
 - raw:
   - 'POST /api/APP/uploadAttachment HTTP/1.1

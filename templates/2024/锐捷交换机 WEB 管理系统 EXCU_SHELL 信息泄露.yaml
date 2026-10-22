@@ -3,14 +3,8 @@ info:
   name: 锐捷交换机 WEB 管理系统 EXCU_SHELL 信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yexl31b0l97hrgv6
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yexl31b0l97hrgv6
-    fofa: 暂无
 http:
 - raw:
   - 'GET /EXCU_SHELL HTTP/1.1

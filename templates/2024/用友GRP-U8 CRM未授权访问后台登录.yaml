@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 CRM未授权访问后台登录
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/agf1vu5a5vlllewk'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: agf1vu5a5vlllewk
-    fofa: app.name="用友 CRM"
 http:
 - raw:
   - 'GET /background/reservationcomplete.php?ID=1 HTTP/1.1

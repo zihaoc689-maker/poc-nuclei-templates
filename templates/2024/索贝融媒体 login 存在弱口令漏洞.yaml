@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体 login 存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ai31qpzterhmsbxt'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ai31qpzterhmsbxt
-    fofa: body="/Sc-TaskMonitoring/" || header="Sobey"
 http:
 - raw:
   - 'POST /portal//Login/login HTTP/1.1

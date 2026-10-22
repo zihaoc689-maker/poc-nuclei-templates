@@ -3,12 +3,8 @@ info:
   name: 科汛新职教网校系统 checkPayStatus 存在SQL注入漏洞_ud7p7nmfxqdey1o7
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: (body="/KS_Inc/static/edu") || (body="/tp/PC/skin05" && body="class-type fl type-poster")
 http:
 - raw:
   - 'POST /Webapi/Common/checkPayStatus HTTP/1.1

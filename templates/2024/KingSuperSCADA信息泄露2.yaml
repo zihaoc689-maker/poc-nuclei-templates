@@ -3,12 +3,8 @@ info:
   name: KingSuperSCADA信息泄露2
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vmht5buy400ymd45'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vmht5buy400ymd45
-    fofa: 暂无
 http:
 - raw:
   - 'GET /file/getMainConfigProject HTTP/1.1

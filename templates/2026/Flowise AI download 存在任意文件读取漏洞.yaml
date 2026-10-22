@@ -3,12 +3,8 @@ info:
   name: Flowise AI download 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qby79y3zgyg1icp3'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qby79y3zgyg1icp3
-    fofa: app="FlowiseAI"
 http:
 - raw:
   - 'POST /api/v1/vector/upsert/ HTTP/1.1
@@ -37,10 +33,7 @@ http:
     Content-Type: text/plain
 
 
-
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1790606399850-bf06dbef-c4e8-4ec2-80b0-594f4378f502.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:

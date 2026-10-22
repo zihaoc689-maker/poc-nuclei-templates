@@ -3,12 +3,8 @@ info:
   name: 安友固定资产管理系统 ImportForFy存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qplug52y0vv25sim'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qplug52y0vv25sim
-    fofa: body="style/v2/layuiadmin/lib/"
 http:
 - raw:
   - 'POST /Ams/Asset/ImportForFy HTTP/1.1
@@ -63,7 +59,6 @@ http:
 
     ------WebKitFormBoundary--
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1784558843033-edbbba97-a665-463c-b2eb-2fd4999e1d98.png)
 
     去遍历当前日期格式的文件，比如现在是下午5点21分，则去遍历'
   redirects: false

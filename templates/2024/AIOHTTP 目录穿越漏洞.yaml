@@ -3,12 +3,8 @@ info:
   name: AIOHTTP 目录穿越漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ogckdqp34ewre7wp'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ogckdqp34ewre7wp
-    fofa: 暂无
 http:
 - raw:
   - 'GET /static/../../../../etc/passwd HTTP/1.1

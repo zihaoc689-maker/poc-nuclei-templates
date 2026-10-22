@@ -3,12 +3,8 @@ info:
   name: 亿赛通电子文档安全管理系统SecureUsbService存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xcb8zw4vhhngh3q3'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xcb8zw4vhhngh3q3
-    fofa: app="亿赛通-DLP"
 http:
 - raw:
   - 'POST /CDGServer3/device/SecureUsbService;login HTTP/1.1

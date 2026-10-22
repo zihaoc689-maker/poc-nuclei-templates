@@ -3,12 +3,8 @@ info:
   name: 方正畅享全媒体新闻采编系统getRemotePapers.do存在权限绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ridxvwblhq3qyuf6'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ridxvwblhq3qyuf6
-    fofa: body="e5.utils.getCookie" || body="/newsedit/newsedit/"
 http:
 - raw:
   - 'POST /newsedit/api/stub/getRemotePapers.do?siteCode=1 HTTP/1.1

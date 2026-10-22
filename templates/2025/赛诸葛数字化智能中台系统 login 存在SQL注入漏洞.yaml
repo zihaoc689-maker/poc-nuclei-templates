@@ -3,12 +3,8 @@ info:
   name: 赛诸葛数字化智能中台系统 login 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nymatsun7wsgvgp2'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nymatsun7wsgvgp2
-    fofa: body="static/index/image/login_left.png" || icon_hash="1056416905"
 http:
 - raw:
   - 'POST /login HTTP/1.1

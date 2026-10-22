@@ -3,12 +3,8 @@ info:
   name: 智慧校园(安校易)管理系统 SysMenuScheme.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/el5r6hdxx63khov9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: el5r6hdxx63khov9
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /Module/Kernel/Controller/SysMenuScheme.ashx HTTP/1.1

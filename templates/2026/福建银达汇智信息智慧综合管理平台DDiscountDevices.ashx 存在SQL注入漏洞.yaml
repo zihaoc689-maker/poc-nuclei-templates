@@ -3,12 +3,8 @@ info:
   name: 福建银达汇智信息智慧综合管理平台DDiscountDevices.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/as8g9iggricn2nfx'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: as8g9iggricn2nfx
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /Module/SBXX/Controller/DDiscountDevices.ashx HTTP/1.1

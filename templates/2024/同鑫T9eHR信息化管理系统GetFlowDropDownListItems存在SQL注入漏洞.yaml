@@ -3,12 +3,8 @@ info:
   name: 同鑫T9eHR信息化管理系统GetFlowDropDownListItems存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cagmu9zg7brd4948'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cagmu9zg7brd4948
-    fofa: body="T9eHR"
 http:
 - raw:
   - 'POST /Common/GetFlowDropDownListItems HTTP/1.1

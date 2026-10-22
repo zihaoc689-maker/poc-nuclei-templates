@@ -3,12 +3,8 @@ info:
   name: WordPress Web Directory Free插件本地包含漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kddob4wbg75gr2sf'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kddob4wbg75gr2sf
-    fofa: body="/wp-content/plugins/web-directory-free"
 http:
 - raw:
   - 'POST /wp-admin/admin-ajax.php HTTP/1.1

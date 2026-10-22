@@ -3,12 +3,8 @@ info:
   name: 世邦通信股份有限公司 videobacktrackpush.php函数任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zaz5bfvlecglqe91'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zaz5bfvlecglqe91
-    fofa: icon_hash=-1830859634
 http:
 - raw:
   - 'POST /php/videobacktrackpush.php HTTP/1.1

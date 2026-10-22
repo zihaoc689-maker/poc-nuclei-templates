@@ -3,12 +3,8 @@ info:
   name: KingPortal开发系统 userList信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ohg5swzhme0u42km'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ohg5swzhme0u42km
-    fofa: title="KingPortal"
 http:
 - raw:
   - 'GET /api/v1/userList HTTP/1.1

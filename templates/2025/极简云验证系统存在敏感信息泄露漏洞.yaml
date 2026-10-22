@@ -3,14 +3,8 @@ info:
   name: 极简云验证系统存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4b64fcfe80e712d949c621911da3fd90
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4b64fcfe80e712d949c621911da3fd90
-    fofa: + fofa`body="/js/lib/slimscroll.js"`
 http:
 - raw:
   - 'GET /%E6%95%B0%E6%8D%AE%E5%BA%93.sql HTTP/1.1

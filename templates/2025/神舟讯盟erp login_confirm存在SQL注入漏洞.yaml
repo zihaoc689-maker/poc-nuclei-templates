@@ -3,12 +3,8 @@ info:
   name: 神舟讯盟erp login_confirm存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mgbgbnpzowvkh8q9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mgbgbnpzowvkh8q9
-    fofa: title=”神州讯盟芯管家”
 http:
 - raw:
   - 'POST /login_confirm.jsp HTTP/1.1

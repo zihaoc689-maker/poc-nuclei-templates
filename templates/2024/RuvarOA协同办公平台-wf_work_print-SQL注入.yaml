@@ -3,12 +3,8 @@ info:
   name: RuvarOA协同办公平台-wf_work_print-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gglk83cs9hlm704m'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gglk83cs9hlm704m
-    fofa: body="txt_admin_key"
 http:
 - raw:
   - 'GET /WorkFlow/wf_work_print.aspx?idlist=@@version HTTP/1.1

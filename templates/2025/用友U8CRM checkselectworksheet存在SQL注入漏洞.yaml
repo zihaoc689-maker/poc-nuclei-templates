@@ -3,12 +3,8 @@ info:
   name: 用友U8CRM checkselectworksheet存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/grmh8kuf618l6hu2'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: grmh8kuf618l6hu2
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /servicequotation/checkselectworksheet.php?DontCheckLogin=1 HTTP/1.1

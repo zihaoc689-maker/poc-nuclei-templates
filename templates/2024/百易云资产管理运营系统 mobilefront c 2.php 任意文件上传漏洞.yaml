@@ -3,11 +3,8 @@ info:
   name: 百易云资产管理运营系统 mobilefront c 2.php 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pp584wytkogbcdk3'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pp584wytkogbcdk3
 http:
 - raw:
   - 'POST /mobilefront/c/2.php HTTP/1.1
@@ -36,13 +33,10 @@ http:
 
     -----------------------------289666258334735365651210512949--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732599997081-b5da587c-e82b-4d12-a837-5fb16975cc70.png)
 
     上传地址：
 
-    /mobilefront/c/images2/时间戳+文件名.php
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732599997358-c77cc250-b676-4a61-ada8-85a9065f395f.png)'
+    /mobilefront/c/images2/时间戳+文件名.php'
   redirects: false
   matchers:
   - status:

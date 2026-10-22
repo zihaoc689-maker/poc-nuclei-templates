@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台 validate 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/frhhnuexg4xwq5xc'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: frhhnuexg4xwq5xc
-    fofa: body="/Scripts/jquery.landray.dialog.js"
 http:
 - raw:
   - 'POST /Global/KK5/validate.aspx HTTP/1.1

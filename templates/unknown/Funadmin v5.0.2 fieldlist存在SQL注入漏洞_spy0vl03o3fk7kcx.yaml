@@ -3,12 +3,8 @@ info:
   name: Funadmin v5.0.2 fieldlist存在SQL注入漏洞_spy0vl03o3fk7kcx
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: '"FunAdmin"'
 http:
 - raw:
   - 'GET /curd/table/fieldlist?id=fun_test* HTTP/1.1

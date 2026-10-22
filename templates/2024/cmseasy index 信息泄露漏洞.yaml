@@ -3,12 +3,8 @@ info:
   name: cmseasy index 信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/avenq4bpuggindgk'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: avenq4bpuggindgk
-    fofa: app="CmsEasy"
 http:
 - raw:
   - 'POST /index.php?case=admin&act=remotelogin&args=aaa&admin_dir=admin&site=default HTTP/1.1

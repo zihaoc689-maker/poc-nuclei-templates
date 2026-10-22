@@ -3,12 +3,8 @@ info:
   name: 东北师大理想软件股份有限公司智慧教育云平台存在任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/srkfye8q2rli0ywu'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: srkfye8q2rli0ywu
-    fofa: 暂无
 http:
 - raw:
   - 'GET /Account/LoginUserPersonType?userId=1 HTTP/1.1

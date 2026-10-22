@@ -3,12 +3,8 @@ info:
   name: HCM智能人力资源系统DingDingConfigNew 存在信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kfzg5k13ygxzrlbx'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kfzg5k13ygxzrlbx
-    fofa: '"/js/Comm/loadingsmall.js" && icon_hash="1772087922"'
 http:
 - raw:
   - GET /Mobile/Account/DingDingConfigNew HTTP/1.1

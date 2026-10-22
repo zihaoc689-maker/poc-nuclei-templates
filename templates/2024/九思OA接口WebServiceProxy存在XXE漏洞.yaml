@@ -3,12 +3,8 @@ info:
   name: 九思OA接口WebServiceProxy存在XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/idyu9mbgkchr86df'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: idyu9mbgkchr86df
-    fofa: app="九思软件-OA"
 http:
 - raw:
   - 'POST /jsoa/WebServiceProxy HTTP/1.1

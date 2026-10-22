@@ -3,12 +3,8 @@ info:
   name: 用友政务系统 selectMaUser 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/szg26pz1wwgzxiao'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: szg26pz1wwgzxiao
-    fofa: (body="eyeclose.png" && body="用友") || body="/df/access/public/pf/portal" || body="/pf/portal/login/css/foundation-datepicker.css" || body="/df/portal/getYearRgcode.do"
 http:
 - raw:
   - 'POST /ma/api/selectMaUser HTTP/1.1

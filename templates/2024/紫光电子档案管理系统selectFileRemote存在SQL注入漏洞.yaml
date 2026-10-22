@@ -3,12 +3,8 @@ info:
   name: 紫光电子档案管理系统selectFileRemote存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fisawn8e2zl2e4f2'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fisawn8e2zl2e4f2
-    fofa: body="www.unissoft.com"
 http:
 - raw:
   - 'POST /Archive/ErecordManage/selectFileRemote HTTP/1.1

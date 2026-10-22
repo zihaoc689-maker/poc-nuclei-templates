@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud u8 uapbd.costsubj.assign 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qhf2r04wlxtkei75'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qhf2r04wlxtkei75
-    fofa: title=="U8C" || body="开启U8 cloud云端之旅" || (body="UFIDA" && body="logo/images/") || body="logo/images/ufida_nc.png" || body="uclient.yonyou.com" || body="nccloud"|| banner="U8C" || body="/u8sl/Login.asp
 http:
 - raw:
   - 'GET /u8cloud/api/uapbd.costsubj.assign HTTP/1.1

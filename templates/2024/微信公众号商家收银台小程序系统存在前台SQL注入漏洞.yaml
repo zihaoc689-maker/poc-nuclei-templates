@@ -3,12 +3,8 @@ info:
   name: 微信公众号商家收银台小程序系统存在前台SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aoww4vy20v7qiiyq'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aoww4vy20v7qiiyq
-    fofa: '"/index.php?s=platform/index/captcha"'
 http:
 - raw:
   - 'POST /index.php?s=platform/index/api_login_check HTTP/2

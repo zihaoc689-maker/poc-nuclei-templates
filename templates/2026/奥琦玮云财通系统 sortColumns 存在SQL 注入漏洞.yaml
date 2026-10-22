@@ -3,12 +3,8 @@ info:
   name: 奥琦玮云财通系统 sortColumns 存在SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/akqdxkgqlbvr6gfe'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: akqdxkgqlbvr6gfe
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /cloudfi/admin HTTP/1.1

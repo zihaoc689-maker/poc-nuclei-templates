@@ -3,14 +3,8 @@ info:
   name: 亿华人力资源管理系统filemanage存在目录遍历漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d09c0bcaac15f9fd63b1527a8451753d
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: d09c0bcaac15f9fd63b1527a8451753d
-    fofa: + hunter`web.body="亿华人力资源管理系统"`
 http:
 - raw:
   - 'GET /filemanage/file/default.aspx HTTP/1.1

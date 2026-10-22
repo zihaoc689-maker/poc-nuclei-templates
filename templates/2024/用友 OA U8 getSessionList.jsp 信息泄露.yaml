@@ -3,12 +3,8 @@ info:
   name: 用友 OA U8 getSessionList.jsp 信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nuglouxbr3eb64gr'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nuglouxbr3eb64gr
-    fofa: 暂无
 http:
 - raw:
   - 'GET /yyoa/ext/https/getSessionList.jsp?cmd=getAll HTTP/1.1

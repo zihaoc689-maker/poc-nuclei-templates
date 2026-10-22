@@ -3,12 +3,8 @@ info:
   name: Nacos-Sync-未授权访问后台
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qqm71ve4wqiheh55'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qqm71ve4wqiheh55
-    fofa: 暂无
 http:
 - raw:
   - 'GET /#/serviceSync HTTP/1.1

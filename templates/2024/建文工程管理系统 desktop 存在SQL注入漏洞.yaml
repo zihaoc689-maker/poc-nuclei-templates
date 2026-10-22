@@ -3,12 +3,8 @@ info:
   name: 建文工程管理系统 desktop 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/abgzxgt210duyz7x'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: abgzxgt210duyz7x
-    fofa: body="Login/QRLogin.ashx"
 http:
 - raw:
   - 'POST /SysFrame4/Desktop.ashx HTTP/1.1

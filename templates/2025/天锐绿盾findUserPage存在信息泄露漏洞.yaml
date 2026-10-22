@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾findUserPage存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qntztazk5ukyznt8'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qntztazk5ukyznt8
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - 'POST /trwfe/user/findUserPage.do HTTP/1.1

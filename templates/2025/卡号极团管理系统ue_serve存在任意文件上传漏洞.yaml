@@ -3,14 +3,8 @@ info:
   name: 卡号极团管理系统ue_serve存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/96153d426cb7e5141c6c1257e4148ae5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 96153d426cb7e5141c6c1257e4148ae5
-    fofa: + fofa`icon_hash="-795291075"`
 http:
 - raw:
   - 'POST /admin/controller/ue_serve.php?action=image&encode=utf-8 HTTP/2

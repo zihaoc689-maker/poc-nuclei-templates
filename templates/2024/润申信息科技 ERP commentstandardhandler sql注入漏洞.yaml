@@ -3,12 +3,8 @@ info:
   name: 润申信息科技 ERP commentstandardhandler sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aq21u1kb1vgquyg0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aq21u1kb1vgquyg0
-    fofa: body="PDCA/js/_publicCom.js"
 http:
 - raw:
   - 'POST /PDCA/ashx/CommentStandardHandler.ashx HTTP/1.1

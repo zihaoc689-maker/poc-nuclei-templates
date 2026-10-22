@@ -3,12 +3,8 @@ info:
   name: SRM智联云采系统 submitlogin 弱口令
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hf2hxnzomdreagcm'
+  description: ''
   tags: default-login,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hf2hxnzomdreagcm
-    fofa: title=="SRM 2.0"
 http:
 - raw:
   - 'POST /adpweb/druid/submitLogin HTTP/1.1

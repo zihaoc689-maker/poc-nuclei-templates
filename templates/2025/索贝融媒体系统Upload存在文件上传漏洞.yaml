@@ -3,12 +3,8 @@ info:
   name: 索贝融媒体系统Upload存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yb2xs827b1lf63sc'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yb2xs827b1lf63sc
-    fofa: body="/Sc-TaskMonitoring/" || header="Sobey"
 http:
 - raw:
   - 'POST /sobey-mchEditor/watermark/upload HTTP/1.1
@@ -41,7 +37,6 @@ http:
 
     ------WebKitFormBoundary2MPk8DnbXZiTAx15--
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762078880990-b056eb84-4e75-4fff-bf2e-7eb36116c680.png)
 
     **访问**'
   redirects: false
@@ -54,7 +49,7 @@ http:
 
     Host: {{Hostname}}
 
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1762078881457-74bfdf38-17ca-48f2-a252-194fa0a9c574.png)'
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
   redirects: false
   matchers:
   - status:

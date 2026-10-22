@@ -3,12 +3,8 @@ info:
   name: Palo Alto Networks PAN-OS GlobalProtect 命令注入漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mehaazeexu61lgsm'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mehaazeexu61lgsm
-    fofa: icon_hash="-631559155"
 http:
 - raw:
   - 'GET /global-protect/login.esp HTTP/1.1

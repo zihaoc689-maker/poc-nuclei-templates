@@ -3,13 +3,8 @@ info:
   name: 成都信通网易医疗科技发展有限公司PACS(医学影像信息管理系统)存在未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/645ac18089895f05ee62aff177e641fc
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 645ac18089895f05ee62aff177e641fc
 http:
 - raw:
   - 'GET /JcbgForYsz/Show_Jcbg_Ysz.asp HTTP/1.1

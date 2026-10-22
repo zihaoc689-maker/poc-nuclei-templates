@@ -3,12 +3,8 @@ info:
   name: 指挥调度管理平台db_backup_download存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xdpltdy0kkcggaea'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xdpltdy0kkcggaea
-    fofa: body="app/structure/departments.php" || title=="指挥调度管理平台"
 http:
 - raw:
   - 'GET /app/dbtool/db_backup_download.php?backup_id=1 HTTP/1.1

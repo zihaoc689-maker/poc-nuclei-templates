@@ -3,12 +3,8 @@ info:
   name: MCPHub Dashboard存在JWT硬编码身份认证绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ie4wtyz2fcg1zggn'
+  description: ''
   tags: info-leak,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ie4wtyz2fcg1zggn
-    fofa: title="MCP Hub Dashboard"
 http:
 - raw:
   - 'GET /api/auth/user HTTP/1.1

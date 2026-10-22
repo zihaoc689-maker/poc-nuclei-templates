@@ -3,12 +3,8 @@ info:
   name: Joomla未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/irx8u0sdg7kl8nov'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: irx8u0sdg7kl8nov
-    fofa: icon_hash="1627330242"
 http:
 - raw:
   - 'GET /api/index.php/v1/config/application?public=true HTTP/1.1

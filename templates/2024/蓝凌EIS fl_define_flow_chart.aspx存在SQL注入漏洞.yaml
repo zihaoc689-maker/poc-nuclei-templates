@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS fl_define_flow_chart.aspx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mp46cqtygnwg4xg0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mp46cqtygnwg4xg0
-    fofa: app="Landray-EIS智慧协同平台"
 http:
 - raw:
   - 'GET /flow/fl_define_flow_chart.aspx?ID=1-1 HTTP/1.1

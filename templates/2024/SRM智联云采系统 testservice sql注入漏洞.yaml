@@ -3,12 +3,8 @@ info:
   name: SRM智联云采系统 testservice sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ec8vpqbw2znczsir'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ec8vpqbw2znczsir
-    fofa: body="assets/js/jweixin"
 http:
 - raw:
   - 'POST /adpweb/a/ica/api/testService HTTP/1.1

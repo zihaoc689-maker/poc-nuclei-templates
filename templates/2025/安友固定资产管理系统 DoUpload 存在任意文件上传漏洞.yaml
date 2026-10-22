@@ -3,12 +3,8 @@ info:
   name: 安友固定资产管理系统 DoUpload 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sx4bbk9pqsnolvdm'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sx4bbk9pqsnolvdm
-    fofa: body="style/v2/layuiadmin/lib/"
 http:
 - raw:
   - 'POST /manage/Attachment/DoUpload?bocode=1 HTTP/1.1

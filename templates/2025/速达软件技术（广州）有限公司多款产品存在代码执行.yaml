@@ -3,14 +3,8 @@ info:
   name: 速达软件技术（广州）有限公司多款产品存在代码执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fd10a1b827aba0d57b7f68a7222f4f6f
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fd10a1b827aba0d57b7f68a7222f4f6f
-    fofa: + hunter`web.body="速达软件技术（广州）有限公司"`
 http:
 - raw:
   - 'GET /home HTTP/1.1

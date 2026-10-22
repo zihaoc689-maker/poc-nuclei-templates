@@ -3,12 +3,8 @@ info:
   name: 时尚企业管理系统Redis未授权访问
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gg711qnmhw9gb2xw'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gg711qnmhw9gb2xw
-    fofa: body="/XiTong/Index/W_IndexPbForm.win.js"
 http:
 - raw:
   - 'POST /XiTong/Redis.aspx HTTP/1.1

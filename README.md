@@ -1,6 +1,6 @@
 # poc-nuclei-templates
 
-> 由语雀漏洞知识库 [hacktwo/dtdx2v](https://www.yuque.com/hacktwo/dtdx2v/) 中 5316 篇漏洞 PoC 笔记自动转换生成的 **Nuclei 漏扫模板**。
+> 由个人漏洞 PoC 知识库 5316 篇笔记自动转换生成的 **Nuclei 漏扫模板**。
 
 ## 规模
 
@@ -35,7 +35,6 @@ nuclei -t templates/2025/ -u https://target -tags sqli
 - **常规请求**：使用「响应代码特征」中的状态码（缺失时推断为 200）作为命中条件
 - **时间盲注类**（payload 含 SLEEP/WAITFOR/BENCHMARK 等）：推断为 `dsl: status_code == 200 && duration >= 5`
 - **无 HTTP 方法的裸路径**：推断为 GET 请求
-- 每个模板的 `metadata.fofa` 保留了原文的 Fofa/Hunter/Zoomeye 测绘语法，可用于资产圈定
 
 ## 免责声明
 

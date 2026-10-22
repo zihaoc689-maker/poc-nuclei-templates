@@ -3,12 +3,8 @@ info:
   name: 泛微 e-office 10 schema_mysql.sql敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sk5i3mue9gsrzfss'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sk5i3mue9gsrzfss
-    fofa: app="泛微-EOffice" || body="eoffice_loading_tip" && body="eoffice10"
 http:
 - raw:
   - 'GET /eoffice10/empty_scene/db/schema_mysql.sql HTTP/1.1

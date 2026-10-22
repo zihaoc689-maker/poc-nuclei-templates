@@ -3,12 +3,8 @@ info:
   name: 用友NC ActivityNotice_doSingUp 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rxhx22p0wsqx1cm1'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rxhx22p0wsqx1cm1
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /portal/pt/ActivityNotice/doSingUp HTTP/1.1

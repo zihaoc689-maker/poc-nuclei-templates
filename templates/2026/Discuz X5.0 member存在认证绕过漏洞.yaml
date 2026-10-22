@@ -3,12 +3,8 @@ info:
   name: Discuz X5.0 member存在认证绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pk0er79zbsxhfrea'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pk0er79zbsxhfrea
-    fofa: app="Discuz!" and app.version=="X5.0"
 http:
 - raw:
   - 'POST /member.php?mod=logging&action=login&loginsubmit=yes HTTP/1.1

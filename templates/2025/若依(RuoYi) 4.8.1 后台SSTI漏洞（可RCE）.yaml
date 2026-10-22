@@ -3,12 +3,8 @@ info:
   name: 若依(RuoYi) 4.8.1 后台SSTI漏洞（可RCE）
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc98f0k1cbg92vtn'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qc98f0k1cbg92vtn
-    fofa: ((icon_hash="706913071" || icon_hash="-1231872293")) && country="JP"
 http:
 - raw:
   - '攻击流程：

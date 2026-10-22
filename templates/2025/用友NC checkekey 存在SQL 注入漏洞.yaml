@@ -3,12 +3,8 @@ info:
   name: 用友NC checkekey 存在SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yk8znfak1c2hfqi9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yk8znfak1c2hfqi9
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /portal/pt/office/checkekey?pageId=login HTTP/1.1

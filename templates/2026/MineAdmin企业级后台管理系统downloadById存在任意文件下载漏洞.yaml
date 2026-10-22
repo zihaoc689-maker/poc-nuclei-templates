@@ -3,12 +3,8 @@ info:
   name: MineAdmin企业级后台管理系统downloadById存在任意文件下载漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yourzdrpcdsh8mwu'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yourzdrpcdsh8mwu
-    fofa: body="MineAdmin"
 http:
 - raw:
   - 'GET /system/downloadById?id=3 HTTP/1.1

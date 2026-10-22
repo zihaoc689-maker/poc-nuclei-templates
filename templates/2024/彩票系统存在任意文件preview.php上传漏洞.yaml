@@ -3,12 +3,8 @@ info:
   name: 彩票系统存在任意文件preview.php上传漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vtemea5avq2gx468'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vtemea5avq2gx468
-    fofa: body="main.e5ee9b2df05fc2d310734b11cc8c911e.css"
 http:
 - raw:
   - 'POST /statics/admin/webuploader/0.1.5/server/preview.php HTTP/2

@@ -3,12 +3,8 @@ info:
   name: ChatGPT-Next-Web SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ab5d760uf7lgi2oe'
+  description: ''
   tags: ssrf,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ab5d760uf7lgi2oe
-    fofa: app="ChatGPT-Next-Web"
 http:
 - raw:
   - 'GET /api/cors/http:%2f%2www.baidu.com%23 HTTP/1.1

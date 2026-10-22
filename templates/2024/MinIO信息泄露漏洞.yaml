@@ -3,12 +3,8 @@ info:
   name: MinIO信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/azf67m150qh8sfg4'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: azf67m150qh8sfg4
-    fofa: 暂无
 http:
 - raw:
   - 'POST /minio/bootstrap/v1/verify HTTP/1.1

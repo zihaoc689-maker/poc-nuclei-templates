@@ -3,12 +3,8 @@ info:
   name: NVMS-1000网络监控视频管理系统存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ipdg81b4ytr8z27h'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ipdg81b4ytr8z27h
-    fofa: app="TVT-NVMS-1000
 http:
 - raw:
   - 'GET ../../../../windows/win.ini HTTP/1.1

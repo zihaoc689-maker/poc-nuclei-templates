@@ -3,12 +3,8 @@ info:
   name: 智慧校园(安校易)管理系统 ADTag_Info.ashxSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vbmdn6etuvgkgzcm'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vbmdn6etuvgkgzcm
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'POST /Module/BPCJ/AD_Tag/Controller/ADTag_Info.ashx HTTP/1.1

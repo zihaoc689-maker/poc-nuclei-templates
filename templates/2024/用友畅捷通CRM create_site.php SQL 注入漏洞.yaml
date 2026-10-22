@@ -3,12 +3,8 @@ info:
   name: 用友畅捷通CRM create_site.php SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fnnq8qsd614683gq'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fnnq8qsd614683gq
-    fofa: 鹰图：web.icon=="223dcd70f982801e9177078a818a9b59"
 http:
 - raw:
   - 'GET /webservice/create_site.php?site_id=1 HTTP/1.1

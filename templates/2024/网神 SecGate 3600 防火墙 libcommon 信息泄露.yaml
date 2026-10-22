@@ -3,12 +3,8 @@ info:
   name: 网神 SecGate 3600 防火墙 libcommon 信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/moekdd871bgmcs82'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: moekdd871bgmcs82
-    fofa: app="网神SecGate3600-防火墙"
 http:
 - raw:
   - 'GET /attachements/libcommon.log HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友U9 transwebservice 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zbwntgn3tmhqcuua'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zbwntgn3tmhqcuua
-    fofa: body="logo-u9.png"
 http:
 - raw:
   - GET /U9Supplier/CS/Office/TransWebService.asmx HTTP/1.1

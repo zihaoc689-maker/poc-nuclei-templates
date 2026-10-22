@@ -3,14 +3,8 @@ info:
   name: 上海迅饶自动化科技有限公司X2Modbus网关任意用户添加漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c1f253681d673ffc98b9029878ce17d9
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: c1f253681d673ffc98b9029878ce17d9
-    fofa: + fofa`server="SunFull-Webs" || icon_hash="-1384370370"`
 http:
 - raw:
   - 'POST /soap/AddUser HTTP/1.1

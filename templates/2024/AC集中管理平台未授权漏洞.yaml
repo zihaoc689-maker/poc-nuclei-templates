@@ -3,12 +3,8 @@ info:
   name: AC集中管理平台未授权漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/edoz2fg1zowtcoln'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: edoz2fg1zowtcoln
-    fofa: header="HTTPD_ac 1.0"
 http:
 - raw:
   - 'GET /actpt.data HTTP/1.1

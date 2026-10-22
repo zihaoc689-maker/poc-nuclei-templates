@@ -3,12 +3,8 @@ info:
   name: 龙采商城系统auditing存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sgfo13nqfc12qd67'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sgfo13nqfc12qd67
-    fofa: body="'url':'/pc2.0/index/index'"
 http:
 - raw:
   - 'POST /coupon/auditing HTTP/1.1

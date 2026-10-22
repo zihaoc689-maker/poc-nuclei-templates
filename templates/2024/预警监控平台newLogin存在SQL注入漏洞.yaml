@@ -3,12 +3,8 @@ info:
   name: 预警监控平台newLogin存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ip5n55178opbdxo5'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ip5n55178opbdxo5
-    fofa: '"myCss/phone.css"'
 http:
 - raw:
   - 'POST /Home/newLogin HTTP/1.1

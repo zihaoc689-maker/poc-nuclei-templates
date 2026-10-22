@@ -3,12 +3,8 @@ info:
   name: 瑞格智慧心理服务平台NPreenManage接口存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/egw7iqsnssse44rc'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: egw7iqsnssse44rc
-    fofa: icon_hash="927574327"
 http:
 - raw:
   - "POST /NPreenManage/NPreenSMSList.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"RuiGe.WebUi.NPreenSMS/Seach\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Seach xmlns=\"RuiGe.WebUi.NPreenSMS\">\n      <sqlwhere>string注入点</sqlwhere>\n    </Seach>\n  </soap:Body>\n</soap:Envelope>"

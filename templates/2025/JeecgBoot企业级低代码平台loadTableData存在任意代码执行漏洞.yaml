@@ -3,14 +3,8 @@ info:
   name: JeecgBoot企业级低代码平台loadTableData存在任意代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/25af8054c4377badd92a0fa28edade9f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 25af8054c4377badd92a0fa28edade9f
-    fofa: + fofa`app="JeecgBoot-企业级低代码平台"`
 http:
 - raw:
   - 'POST /jeecg-boot/jmreport/loadTableData HTTP/1.1

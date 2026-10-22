@@ -3,14 +3,8 @@ info:
   name: 泛微E-Mobile6.0client.do存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aa3295bc2f5557bf64794a4345ab7e8c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aa3295bc2f5557bf64794a4345ab7e8c
-    fofa: + hunter：`app.name=="泛微 e-mobile OA"`
 http:
 - raw:
   - 'POST /client.do HTTP/1.1

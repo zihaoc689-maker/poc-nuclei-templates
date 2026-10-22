@@ -3,12 +3,8 @@ info:
   name: XXL-JOB默认accessToken身份绕过漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qtfs5sheedb5n14c'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qtfs5sheedb5n14c
-    fofa: 暂无
 http:
 - raw:
   - 'POST /run HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     {

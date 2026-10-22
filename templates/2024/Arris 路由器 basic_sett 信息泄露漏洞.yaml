@@ -3,12 +3,8 @@ info:
   name: Arris 路由器 basic_sett 信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/epfb8lihdane4d5t'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: epfb8lihdane4d5t
-    fofa: body="base64encode(document.tF.pws.value)" || body="ARRIS TR3300"
 http:
 - raw:
   - 'GET /basic_sett.html HTTP/1.1

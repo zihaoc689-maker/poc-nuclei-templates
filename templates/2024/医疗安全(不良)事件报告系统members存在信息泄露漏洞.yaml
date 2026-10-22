@@ -3,12 +3,8 @@ info:
   name: 医疗安全(不良)事件报告系统members存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tem3w6xfncerk149'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tem3w6xfncerk149
-    fofa: body="koma.Application"
 http:
 - raw:
   - 'POST /services/members HTTP/1.1

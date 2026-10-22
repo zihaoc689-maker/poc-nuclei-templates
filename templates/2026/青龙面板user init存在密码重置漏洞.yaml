@@ -3,12 +3,8 @@ info:
   name: 青龙面板user init存在密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fk8n7022k5x9ptul'
+  description: ''
   tags: other,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fk8n7022k5x9ptul
-    fofa: app="青龙-定时任务管理面板"
 http:
 - raw:
   - 'PUT /open/user/init HTTP/1.1

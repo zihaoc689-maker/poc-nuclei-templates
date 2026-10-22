@@ -3,12 +3,8 @@ info:
   name: QCData 品质数据管理专家UserLogin存在弱口令漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vkdiokgo5uh1s7gt'
+  description: ''
   tags: default-login,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vkdiokgo5uh1s7gt
-    fofa: icon_hash="2029937574"
 http:
 - raw:
   - 'admin/admin

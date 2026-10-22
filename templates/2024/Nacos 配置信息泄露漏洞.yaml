@@ -3,12 +3,8 @@ info:
   name: Nacos 配置信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/egbchk7q5om6cn8q'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: egbchk7q5om6cn8q
-    fofa: app="nacos"
 http:
 - raw:
   - 'GET /nacos/v1/cs/configs?search=accurate&dataId=&group=&pageNo=1&pageSize=99 HTTP/1.1

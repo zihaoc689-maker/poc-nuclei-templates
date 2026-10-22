@@ -3,12 +3,8 @@ info:
   name: FOG敏感信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ngmstbb8qatptfrh'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ngmstbb8qatptfrh
-    fofa: body="FOG Project"
 http:
 - raw:
   - 'GET /fog/service/hostnameloop.php?host=dGVzdGhvc3Q= HTTP/1.1

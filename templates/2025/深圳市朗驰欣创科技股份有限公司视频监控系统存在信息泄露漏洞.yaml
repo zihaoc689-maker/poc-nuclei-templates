@@ -3,14 +3,8 @@ info:
   name: 深圳市朗驰欣创科技股份有限公司视频监控系统存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/73b4b328b0b9fdcf5b2b50d1b1ed6baf
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 73b4b328b0b9fdcf5b2b50d1b1ed6baf
-    fofa: product="朗驰欣创-视频监控"
 http:
 - raw:
   - 'GET /content/network.asp HTTP/1.1

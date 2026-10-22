@@ -3,12 +3,8 @@ info:
   name: 用友-U8C-Cloud approveservlet sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dn1xa2yompke49hl'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dn1xa2yompke49hl
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /service/approveservlet?oracle HTTP/1.1

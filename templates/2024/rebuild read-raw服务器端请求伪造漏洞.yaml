@@ -3,12 +3,8 @@ info:
   name: rebuild read-raw服务器端请求伪造漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oksf92rgvnmq7lyp'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oksf92rgvnmq7lyp
-    fofa: icon_hash="871154672"
 http:
 - raw:
   - 'GET /filex/read-raw?url=http%3A%2F%2Fwww.baidu.com HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 泛微 OA 数据库账号密码泄露
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gdlggzw0np5ok43n'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gdlggzw0np5ok43n
-    fofa: app="泛微-EOffice"
 http:
 - raw:
   - 'GET /building/backmgr/urlpage/mobileurl/configfile/jx2_config.ini HTTP/1.1

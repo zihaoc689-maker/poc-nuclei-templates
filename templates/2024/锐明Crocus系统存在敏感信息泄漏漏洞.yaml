@@ -3,12 +3,8 @@ info:
   name: 锐明Crocus系统存在敏感信息泄漏漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rqrnlnnf24hf81vv'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rqrnlnnf24hf81vv
-    fofa: body="inp_verification"
 http:
 - raw:
   - 'GET /Home.do?Action=GetUserInfo&Type=Get&Guid=1724206435273 HTTP/1.1

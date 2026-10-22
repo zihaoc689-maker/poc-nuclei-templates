@@ -3,12 +3,8 @@ info:
   name: 满客宝智慧食堂系统 selectUserByOrgId 未授权访问漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wfnt5w6b2o3if7n5'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wfnt5w6b2o3if7n5
-    fofa: icon_hash="-409875651"
 http:
 - raw:
   - 'GET /yuding/selectUserByOrgId.action?record= HTTP/1.1

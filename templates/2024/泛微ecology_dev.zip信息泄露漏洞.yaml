@@ -3,12 +3,8 @@ info:
   name: 泛微ecology_dev.zip信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wwldn0uuv228daaq'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wwldn0uuv228daaq
-    fofa: app="泛微-E-Weaver"
 http:
 - raw:
   - 'GET /cloudstore/ecode/setup/ecology_dev.zip HTTP/1.1

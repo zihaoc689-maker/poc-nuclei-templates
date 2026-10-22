@@ -3,12 +3,8 @@ info:
   name: 世邦通信 SPON IP网络对讲广播系统 addmediadata.php 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vs7urggp4m7f3pn4'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vs7urggp4m7f3pn4
-    fofa: icon_hash="-1830859634"
 http:
 - raw:
   - 'POST /php/addmediadata.php HTTP/1.1

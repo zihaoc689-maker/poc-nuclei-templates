@@ -3,12 +3,8 @@ info:
   name: 华夏ERP敏感信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ur2p231x8rb9400c'
+  description: ''
   tags: info-leak,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ur2p231x8rb9400c
-    fofa: 暂无
 http:
 - raw:
   - 'GET /jshERP-boot/user/getAllList;.ico HTTP/1.1

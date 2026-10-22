@@ -3,14 +3,8 @@ info:
   name: 亿赛通电子文档安全管理系统offlineApp存在xstream反序列化漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/171c515646a21f1b965f3108b55cab0a
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 171c515646a21f1b965f3108b55cab0a
-    fofa: + hunter`app.name="ESAFENET 亿赛通文档安全管理系统"`
 http:
 - raw:
   - 'POST /CDGServer3/offlineApp HTTP/1.1

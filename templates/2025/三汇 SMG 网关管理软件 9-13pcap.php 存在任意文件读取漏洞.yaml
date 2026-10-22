@@ -3,12 +3,8 @@ info:
   name: 三汇 SMG 网关管理软件 9-13pcap.php 存在任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kg1kcuw7lu9arqf1'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kg1kcuw7lu9arqf1
-    fofa: body="text ml10 mr20" && (title="网关管理软件" || title="Gateway Management")
 http:
 - raw:
   - 'POST /en/9-13pcap.php HTTP/1.1

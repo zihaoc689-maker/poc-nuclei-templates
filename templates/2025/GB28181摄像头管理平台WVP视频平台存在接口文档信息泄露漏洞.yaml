@@ -3,14 +3,8 @@ info:
   name: GB28181摄像头管理平台WVP视频平台存在接口文档信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/c0246b78eee6846661239cd7c3fd5168
-
-    [!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200; 原文未标注HTTP方法, 推断为GET请求。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: c0246b78eee6846661239cd7c3fd5168
-    fofa: body="国标28181"
 http:
 - raw:
   - 'GET /doc.html HTTP/1.1

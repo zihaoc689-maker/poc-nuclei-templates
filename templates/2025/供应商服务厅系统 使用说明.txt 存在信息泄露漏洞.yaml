@@ -3,12 +3,8 @@ info:
   name: 供应商服务厅系统 使用说明.txt 存在信息泄露漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/esa4qqp9ultb4gk0'
+  description: ''
   tags: info-leak,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: esa4qqp9ultb4gk0
-    fofa: body="深圳市智百威科技发展有限公司" && header="ASP.NET"
 http:
 - raw:
   - 'GET /%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.txt HTTP/1.1

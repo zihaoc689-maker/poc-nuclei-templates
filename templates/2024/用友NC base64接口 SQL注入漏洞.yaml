@@ -3,12 +3,8 @@ info:
   name: 用友NC base64接口 SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/zam5ibvplvy49zm0'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: zam5ibvplvy49zm0
-    fofa: body="UClient.dmg"||app="用友-U8-Cloud"
 http:
 - raw:
   - 'GET /u8cloud/api/file/upload/base64 HTTP/1.1

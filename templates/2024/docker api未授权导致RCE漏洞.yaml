@@ -3,11 +3,8 @@ info:
   name: docker api未授权导致RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kliqwa4rp2rw4o1p'
+  description: ''
   tags: rce,unauth,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kliqwa4rp2rw4o1p
 http:
 - raw:
   - 'GET /containers/json HTTP/1.1

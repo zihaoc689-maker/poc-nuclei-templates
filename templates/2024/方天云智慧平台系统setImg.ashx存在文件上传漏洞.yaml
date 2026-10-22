@@ -3,12 +3,8 @@ info:
   name: 方天云智慧平台系统setImg.ashx存在文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/cxwptd4rzv2vidpn'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: cxwptd4rzv2vidpn
-    fofa: body="AjaxMethods.asmx/GetCompanyItem"
 http:
 - raw:
   - 'POST /Data/setImg.ashx HTTP/1.1

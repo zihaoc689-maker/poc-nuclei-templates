@@ -3,13 +3,8 @@ info:
   name: 联奕统一身份认证平台 getDataSource 未授权访问_xas8g9frman6mg5x
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,unauth,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
 http:
 - raw:
   - 'POST /api/bd-mdp/serviceManager/outInterface/getDataSource HTTP/1.1
@@ -31,9 +26,6 @@ http:
 
 
     Connection: close
-
-
-    ![](https://cdn.nlark.com/yuque/0/2024/png/43110909/1717058842443-718244a5-99ea-4005-8464-5372357c59c1.png)
 
 
     ## 修复建议

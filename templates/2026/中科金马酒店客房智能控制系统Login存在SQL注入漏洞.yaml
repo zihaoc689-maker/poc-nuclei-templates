@@ -3,12 +3,8 @@ info:
   name: 中科金马酒店客房智能控制系统Login存在SQL注入漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/btk4whqi4po36ckv'
+  description: ''
   tags: sqli,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: btk4whqi4po36ckv
-    fofa: body="login.aspx/Get_usertype"
 http:
 - raw:
   - 'POST /login.aspx/Login HTTP/1.1

